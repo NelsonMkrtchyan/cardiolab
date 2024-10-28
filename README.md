@@ -2,8 +2,9 @@
 
 ## ToDo
 
-- [ ] Deploy it on vercel
-- [ ] Set up the database
+- [x] Deploy it on vercel
+- [x] Set some params in build process
+- [x] Set up the database
 - [ ] Implement the langing page basic ui  structure
 - [ ] Routing
 - [ ] Error Managment (w/ Sentry)
