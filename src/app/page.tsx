@@ -1,25 +1,41 @@
-import Link from "next/link";
 import { db } from "~/server/db";
+import React from "react";
+import SectionPlaceholder from "~/app/_components/SectionPlaceholder";
+import { Video } from "~/app/_components/Video";
+import { SectionTitle } from "~/app/_components/SectionTitle";
+import { benefitOne, Benefits, benefitTwo } from "~/app/_components/Benefits";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const posts = await db.query.posts.findMany();
-  console.log('posts', posts);
+  console.log("posts", posts);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-        <span className="text-[hsl(280,100%,70%)]">Cardiolab Landing Page</span>
-      </h1>
-      <div>
-        {posts.map((post, index) => {
-          return(
-            <div key={`${post.id}-${index}`}>
-              <span>{post.name}</span>
-            </div>
-          );
-        })}
-      </div>
-    </main>
+    <>
+      <SectionPlaceholder />
+
+      {/*#############*/}
+      <SectionTitle
+        preTitle="Watch a video"
+        title="Learn how to fullfil your needs"
+      >
+        This section is to highlight a promo or demo video of your product.
+        Analysts says a landing page with video has 3% more conversion rate. So,
+        don&apos;t forget to add one. Just like this.
+      </SectionTitle>
+      <Video videoId={"znyBJC7NDOk?si=X5dZoiD2cHbFcXdT"} />
+
+      {/*#############*/}
+
+      {/*#############*/}
+      <Benefits data={benefitOne} />
+
+      <Benefits imgPos="right" data={benefitTwo} />
+
+      {/*#############*/}
+
+      <SectionPlaceholder />
+    </>
   );
 }
