@@ -2,7 +2,7 @@ import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
-  // content: ["./src/**/*.tsx"],
+  // content: ["./src/**/*.tsx"],// Template config
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -34,27 +34,45 @@ export default {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      backgroundImage: {
+        "custom-linear": "linear-gradient(90deg, #1034A6, #69ba31)", // Example linear gradient
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
-        black: "#121723",
-        dark: "#1D2430",
-        primary: "#4A6CF7",
-        yellow: "#FBB040",
-        "bg-color-dark": "#171C28",
+
+        black: "#121723", // Template color
+        dark: "#1D2430", // Template color
+
+        // primary: "#4A6CF7", // Template color
+        // bgColor: "#FFFFFF", // Template color
+
+        primary: "#1034A6",
+        lime: "#69ba31",
+
+        bgColor: "#e1e1e1",
+        bgColorDark: "#333333",
+        bgColorDarker: "#262626",
+
+        "bg-color-dark": "#171C28", // Template color
+
         "body-color": {
           DEFAULT: "#788293",
           dark: "#959CB1",
         },
+
         stroke: {
           stroke: "#E3E8EF",
           dark: "#353943",
         },
+
         gray: {
-          // ...colors.gray,
-          dark: "#1E232E",
-          light: "#F0F2F9",
+          // dark: "#1E232E", // Template color
+          // light: "#F0F2F9", // Template color
+          dark: "#323232",
+          Spanish: "#989898",
+          light: "#D3D3D3",
         },
       },
       fontFamily: {

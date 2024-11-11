@@ -1,7 +1,9 @@
+import SectionPlaceholder from "~/app/_components/SectionPlaceholder";
+
 const About = () => {
   return (
     <>
-      <h1>about page</h1>
+      <SectionPlaceholder title={"About Us"} />
     </>
   );
 };

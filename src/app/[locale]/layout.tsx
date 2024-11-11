@@ -5,7 +5,7 @@ import { type Metadata } from "next";
 import React from "react";
 import ScrollToTop from "~/app/_components/ScrollToTop";
 import NavigationBar from "~/app/_components/NavigationBar";
-import { Providers } from "~/app/providers";
+import { Providers } from "~/app/[locale]/providers";
 import Footer from "~/app/_components/Footer";
 
 import { NextIntlClientProvider } from "next-intl";
@@ -42,7 +42,7 @@ export default async function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`bg-[#FCFCFC] dark:bg-black ${GeistSans.variable} flex flex-col`}
+        className={`bg-bgColor dark:bg-bgColorDark ${GeistSans.variable} flex flex-col`}
       >
         <Providers>
           <NextIntlClientProvider messages={messages}>

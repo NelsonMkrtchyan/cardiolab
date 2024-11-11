@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 import { Container } from "~/app/_components/Container";
-import { svg_1, svg_2 } from "~/app/_components/svgs";
+import { svg_1, svg_2 } from "~/app/_components/TemporaryComponents/svgs";
 
 export const benefitOne = {
   title: "Highlight your benefits",

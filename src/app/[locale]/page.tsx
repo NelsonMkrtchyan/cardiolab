@@ -1,9 +1,13 @@
 import { db } from "~/server/db";
 import React from "react";
 import SectionPlaceholder from "~/app/_components/SectionPlaceholder";
-import { Video } from "~/app/_components/Video";
-import { SectionTitle } from "~/app/_components/SectionTitle";
-import { benefitOne, Benefits, benefitTwo } from "~/app/_components/Benefits";
+import { Video } from "~/app/_components/TemporaryComponents/Video";
+import { SectionTitle } from "~/app/_components/TemporaryComponents/SectionTitle";
+import {
+  benefitOne,
+  Benefits,
+  benefitTwo,
+} from "~/app/_components/TemporaryComponents/Benefits";
 
 export const dynamic = "force-dynamic";
 
@@ -13,7 +17,7 @@ const HomePage = async () => {
 
   return (
     <>
-      <SectionPlaceholder />
+      <SectionPlaceholder title={"Landing First Section"} />
 
       {/*#############*/}
       <SectionTitle
@@ -35,7 +39,7 @@ const HomePage = async () => {
 
       {/*#############*/}
 
-      <SectionPlaceholder />
+      <SectionPlaceholder title={"Some Section"} />
     </>
   );
 };
