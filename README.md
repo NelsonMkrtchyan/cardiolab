@@ -5,8 +5,10 @@
 - [x] Deploy it on vercel
 - [x] Set some params in build process
 - [x] Set up the database
-- [ ] Implement the langing page basic ui  structure
+- [x] Integrate i18
+- [x] Config routing to handle locales
 - [ ] Routing
+- [ ] Implement the landing page basic ui structure
 - [ ] Error Managment (w/ Sentry)
 - [ ] Analytics (posthog)
 - [ ] Implement other pages with rough ui structure
