@@ -51,11 +51,16 @@ export default {
         primary: "#1034A6",
         lime: "#69ba31",
 
-        bgColor: "#e1e1e1",
+        bgColor: "#eaeaea",
         bgColorDark: "#333333",
         bgColorDarker: "#262626",
 
         "bg-color-dark": "#171C28", // Template color
+
+        font: {
+          dark: "#FFFFFF",
+          light: "#788293",
+        },
 
         "body-color": {
           DEFAULT: "#788293",

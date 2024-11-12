@@ -7,7 +7,8 @@
 - [x] Set up the database
 - [x] Integrate i18
 - [x] Config routing to handle locales
-- [ ] Routing
+- [x] Routing
+- [x] Implement About Us draft UI
 - [ ] Implement the landing page basic ui structure
 - [ ] Error Managment (w/ Sentry)
 - [ ] Analytics (posthog)
