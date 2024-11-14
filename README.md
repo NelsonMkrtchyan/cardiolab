@@ -8,6 +8,7 @@
 - [x] Integrate i18
 - [x] Config routing to handle locales
 - [x] Routing
+- [x] implement styles from "Disin" template
 - [x] Implement About Us draft UI
 - [ ] Implement the landing page basic ui structure
 - [ ] Error Managment (w/ Sentry)

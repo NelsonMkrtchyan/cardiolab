@@ -1,18 +1,38 @@
-import "~/styles/globals.css";
+// import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
+// Styles from Disin
+import "~/styles/bootstrap.min.css";
+import "~/styles/animate.css";
+import "~/styles/icofont.min.css";
+import "~/styles/meanmenu.css";
+import "react-tabs/style/react-tabs.css";
+import "react-accessible-accordion/dist/fancy-example.css";
+import "swiper/css";
+import "swiper/css/bundle";
+
+// Global Styles from Disin
+import "~/styles/style.scss";
+import "~/styles/responsive.scss";
+
 import { type Metadata } from "next";
 import React from "react";
-import ScrollToTop from "~/app/_components/ScrollToTop";
-import NavigationBar from "~/app/_components/NavigationBar";
 import { Providers } from "~/app/[locale]/providers";
-import Footer from "~/app/_components/Footer";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 import { notFound } from "next/navigation";
 import { routing } from "~/i18n/routing";
+
+import { Poppins } from "next/font/google";
+import Navbar from "~/app/_Disin_components/layout/Navbar";
+import TopHeader from "~/app/_Disin_components/layout/TopHeader";
+
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "CardioLab",
@@ -31,7 +51,6 @@ export default async function RootLayout({
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   if (!routing.locales.includes(locale)) {
-    console.log("Should be not found");
     notFound();
   }
 
@@ -40,18 +59,13 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html suppressHydrationWarning lang="en">
-      <body
-        className={`bg-bgColor dark:bg-bgColorDark ${GeistSans.variable} flex flex-col`}
-      >
+    <html suppressHydrationWarning lang="am">
+      <body className={poppins.className}>
         <Providers>
           <NextIntlClientProvider messages={messages}>
-            <div className="flex h-screen w-full flex-col justify-between">
-              <NavigationBar />
-              <div className="w-full">{children}</div>
-              <Footer />
-              <ScrollToTop />
-            </div>
+            <TopHeader />
+            <Navbar />
+            <div className="w-full">{children}</div>
           </NextIntlClientProvider>
         </Providers>
       </body>

@@ -1,12 +1,24 @@
 {
+  "Menu": {
+    "Home": "Home",
+    "AboutUs": "About Us",
+    "News": "News",
+    "Gallery": "Gallery",
+    "OurStuff": "Our Stuff",
+    "OurServices": "Our Services",
+    "PatientGuide": "Patient Guide",
+    "DoctorGuide": "Doctor Guide",
+    "ContactUs": "Contact Us"
+  },
   "Common": {
     "slogan": "The Art of Heart Care"
   },
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "HeroSlider": {
+    "titleOne": "CardioLab",
+    "descriptionOne": "The Art of Heart Care"
   },
-  "Header": {
+  "HomePage": {
+    "title": "Hello world!"
   },
   "Footer": {
   }

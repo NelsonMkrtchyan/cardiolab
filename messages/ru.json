@@ -1,9 +1,23 @@
 {
+  "Menu": {
+    "Home": "Главная",
+    "AboutUs": "О нас",
+    "News": "Новости",
+    "Gallery": "Галерея",
+    "OurStuff": "Наш персонал",
+    "OurServices": "Наши услуги",
+    "PatientGuide": "Руководство для пациента",
+    "DoctorGuide": "Руководство для врача",
+    "ContactUs": "Контакты"
+  },
+  "HeroSlider": {
+    "titleOne": "КардиоЛаб",
+    "descriptionOne": "Искусство ухода за сердцем"
+  },
   "Common": {
     "slogan": "Искусство заботы о сердце"
   },
   "HomePage": {
-    "title": "RUSSIAN",
-    "about": "RUSSIAN about"
+    "title": "RUSSIAN"
   }
 }

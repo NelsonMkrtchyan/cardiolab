@@ -1,9 +1,23 @@
 {
+  "Menu": {
+    "Home": "Գլխավոր",
+    "AboutUs": "Մեր Մասին",
+    "News": "Նորություններ",
+    "Gallery": "Պատկերասրահ",
+    "OurStuff": "Մեր Մասնագետները",
+    "OurServices": "Մեր Ծառայությունները",
+    "PatientGuide": "Պացիենտի Համար.",
+    "DoctorGuide": "Բուժաշխատողի Համար",
+    "ContactUs": "Հետադարձ Կապ"
+  },
+  "HeroSlider": {
+    "titleOne": "ԿարդիոԼաբ",
+    "descriptionOne": "Սրտի խնամքի արվեստը"
+  },
   "Common": {
     "slogan": "Սրտի խնամքի արվեստը"
   },
   "HomePage": {
-    "title": "ARMENIAN",
-    "about": "ARMENIAN about"
+    "title": "ARMENIAN"
   }
 }
