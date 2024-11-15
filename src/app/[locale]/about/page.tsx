@@ -1,41 +1,35 @@
 import React from "react";
-// import TopHeader from "../../components/Layouts/TopHeader";
-// import Navbar from "../../components/Layouts/Navbar";
-// import PageBanner from "../../components/Common/PageBanner";
-// import Footer from "../../components/Layouts/Footer";
-// import OurExpertise from "../../components/HomeTwo/OurExpertise";
-// import Services from "../../components/HomeOne/Services";
-// import TestimonialSlider from "../../components/Common/TestimonialSlider";
-// import LatestBlogPost from "../../components/Common/LatestBlogPost";
-// import FunFacts from "../../components/Common/FunFacts";
-// import AboutContent from "../../components/About/AboutContent";
+import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import AboutContent from "~/app/[locale]/about/_components/AboutContent";
+import { useTranslations } from "next-intl";
+import FunFacts from "~/app/_Disin_components/common/FunFacts";
+import OurExpertise from "~/app/_Disin_components/common/OurExpertise";
+import Services from "~/app/_Disin_components/common/Services";
 
 export default function About() {
+  const tMenu = useTranslations("Menu");
+
   return (
     <>
-      {/*<TopHeader />*/}
+      <PageBanner
+        pageTitle={tMenu("AboutUs")}
+        homePageUrl="/"
+        homePageText={tMenu("Home")}
+        activePageText={tMenu("AboutUs")}
+        bgImage="/images/page-banner1.jpg"
+      />
 
-      {/*<PageBanner*/}
-      {/*  pageTitle="About"*/}
-      {/*  homePageUrl="/"*/}
-      {/*  homePageText="Home"*/}
-      {/*  activePageText="About"*/}
-      {/*  bgImage="/images/page-banner1.jpg"*/}
-      {/*/>*/}
+      <AboutContent />
 
-      {/*<AboutContent />*/}
+      <FunFacts />
 
-      {/*<FunFacts />*/}
+      <OurExpertise />
 
-      {/*<OurExpertise />*/}
-
-      {/*<Services />*/}
+      <Services />
 
       {/*<TestimonialSlider />*/}
 
       {/*<LatestBlogPost />*/}
-
-      {/*<Footer />*/}
     </>
   );
 }

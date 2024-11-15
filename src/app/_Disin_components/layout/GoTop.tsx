@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { FaArrowUp } from "react-icons/fa";
 
 const GoTop: React.FC = () => {
   // The back-to-top button is hidden at the beginning
@@ -34,7 +35,7 @@ const GoTop: React.FC = () => {
     <>
       {showButton && (
         <div onClick={scrollToTop} className="go-top">
-          <i className="icofont-hand-drawn-up"></i>
+          <FaArrowUp className="icon" />
         </div>
       )}
     </>

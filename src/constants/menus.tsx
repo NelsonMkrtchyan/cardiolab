@@ -7,10 +7,10 @@ export const Menus = () => {
       label: `${t("Home")}`,
       link: "/",
     },
-    // {
-    //   label: `${t("AboutUs")}`,
-    //   link: "/aboutus",
-    // },
+    {
+      label: `${t("AboutUs")}`,
+      link: "/about",
+    },
     // {
     //   label: `${t("News")}`,
     //   link: "/news",
@@ -21,11 +21,11 @@ export const Menus = () => {
     // },
     // {
     //   label: `${t("OurStuff")}`,
-    //   link: "/ourstuff",
+    //   link: "/stuff",
     // },
     // {
     //   label: `${t("OurServices")}`,
-    //   link: "/ourservices",
+    //   link: "/services",
     // },
     // {
     //   label: `${t("PatientGuide")}`,

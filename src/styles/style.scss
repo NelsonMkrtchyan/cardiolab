@@ -651,6 +651,7 @@ button {
 
   p {
     margin-bottom: 25px;
+    font-size: 18px;
   }
 
   ul {
@@ -1353,7 +1354,7 @@ footer {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: #0843aa;
+  background-color: $main-color;
   position: relative;
 }
 
@@ -1780,10 +1781,23 @@ footer {
     padding: 35px;
     margin-bottom: 30px;
 
+    text-align: justify;
+
+    .icon {
+      opacity: 0.8;
+    }
+
     &:hover {
+      box-shadow: 0 0 20px 0 $main-color;
+
       i {
         color: $white-color;
         background-color: #6096fd;
+      }
+
+      .icon {
+        //color: $second-color;
+        opacity: 1;
       }
     }
 
@@ -1809,6 +1823,11 @@ footer {
 
     p {
       margin-bottom: 0;
+      font-size: 18px;
+    }
+
+    li {
+      font-size: 18px;
     }
   }
 }
@@ -4103,6 +4122,7 @@ footer {
   bottom: 25px;
   //transition: .5s;
   cursor: pointer;
+  //background-color: $main-color;
   background-color: $main-color;
   color: $white-color;
   height: 50px;
@@ -4114,6 +4134,13 @@ footer {
   transition: $transition;
   margin-right: 28px;
   box-shadow: 0 0 14px 0 $main-color;
+  z-index: 100;
+
+  .icon {
+    color: $white-color;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 
   &:hover {
     background-color: $black-color;
@@ -4653,6 +4680,10 @@ footer {
 
 .large-icon-size {
   font-size: 30px;
+}
+
+.largest-icon-size {
+  font-size: 40px;
 }
 
 .footer-icon {

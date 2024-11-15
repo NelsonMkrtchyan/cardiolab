@@ -10,6 +10,7 @@
 - [x] Routing
 - [x] implement styles from "Disin" template
 - [x] Implement Contact Us UI without config of forms
+- [x] Implement About Us UI, draft
 - [ ] Implement the landing page basic ui structure
 - [ ] Error Managment (w/ Sentry)
 - [ ] Analytics (posthog)
