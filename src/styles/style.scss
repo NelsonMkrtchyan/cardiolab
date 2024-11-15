@@ -1374,13 +1374,16 @@ footer {
 
       li {
         list-style-type: none;
-        display: block;
+        //display: block;
+        display: flex;
+        flex-wrap: nowrap;
         color: $white-color;
         font-weight: 500;
         font-size: $all-size;
-        padding-left: 60px;
+        //padding-left: 60px;
         position: relative;
         margin-bottom: 30px;
+        //text-align: center;
 
         &:last-child {
           margin-bottom: 0;
@@ -1415,6 +1418,16 @@ footer {
           left: 0;
           font-size: 42px;
           transition: $transition;
+        }
+
+        .footer-text-container {
+          display: flex;
+          width: 100%;
+          text-align: start;
+          justify-content: start;
+          align-items: center;
+          padding: 0 0 0 10px;
+
         }
       }
     }
@@ -1818,8 +1831,13 @@ footer {
     bottom: 20px;
     left: -70px;
     background-color: $main-color;
-    padding: 30px 295px 25px 40px;;
+    padding: 30px 40px 15px 40px;
     border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
 
     .speciality-icon {
       width: 45px;
@@ -1842,23 +1860,34 @@ footer {
       }
     }
 
-    h3 {
-      font-weight: 500;
-      color: $white-color;
-      font-size: 24px;
-      margin-bottom: 8px;
-      position: absolute;
-      top: 23px;
-      right: 70px;
+    .speciality-content {
+
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-weight: 500;
+        color: $white-color;
+        font-size: 24px;
+        //margin-bottom: 8px;
+        //position: absolute;
+        //top: 23px;
+        //right: 70px;
+      }
+
+      p {
+        //margin-bottom: 0;
+        color: $white-color;
+        //position: absolute;
+        //right: 142px;
+        //top: 56px;
+      }
     }
 
-    p {
-      margin-bottom: 0;
-      color: $white-color;
-      position: absolute;
-      right: 142px;
-      top: 56px;
-    }
+
   }
 }
 
@@ -3383,6 +3412,7 @@ footer {
     text-align: center;
     border: 1px solid #eee;
     padding: 30px 15px;
+    height: 100%;
 
     i {
       display: inline-block;
@@ -4619,6 +4649,14 @@ footer {
 .icon {
   margin: 5px;
   color: $main-color;
+}
+
+.large-icon-size {
+  font-size: 30px;
+}
+
+.footer-icon {
+  color: $white-color;
 }
 
 .languageFlagIcon {

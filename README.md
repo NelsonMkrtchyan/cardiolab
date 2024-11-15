@@ -9,7 +9,7 @@
 - [x] Config routing to handle locales
 - [x] Routing
 - [x] implement styles from "Disin" template
-- [x] Implement About Us draft UI
+- [x] Implement Contact Us UI without config of forms
 - [ ] Implement the landing page basic ui structure
 - [ ] Error Managment (w/ Sentry)
 - [ ] Analytics (posthog)
@@ -17,3 +17,5 @@
 - [ ] Integrate shadcn/ui components in general components
 - [ ] Set up general ui configs
 - [ ] implement each page one by one
+
+## Add images

@@ -35,10 +35,10 @@ export const Menus = () => {
     //   label: `${t("DoctorGuide")}`,
     //   link: "/doctorguide",
     // },
-    // {
-    //   label: `${t("ContactUs")}`,
-    //   link: "/contactus",
-    // },
+    {
+      label: `${t("ContactUs")}`,
+      link: "/contact",
+    },
   ];
 };
 

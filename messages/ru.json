@@ -1,4 +1,52 @@
 {
+  "General": {
+    "Phone": "Телефон",
+    "Email": "Электронная почта",
+    "Address": "Адрес",
+    "ContactForm": {
+      "title": "Оставьте сообщение для получения информации или вопроса",
+      "placeholders": {
+        "name": "Ваше имя",
+        "email": "Ваш email",
+        "phone": "Ваш телефон",
+        "subject": "Ваша тема",
+        "message": "Ваше сообщение ..."
+      },
+      "sendMessage": "Отправить сообщение",
+      "callNote": "Позвонить"
+    },
+    "Footer": {
+      "QuickLinks": {
+        "QuickLinksText": "Быстрые ссылки",
+        "Links": {
+          "Blog": "Блог",
+          "AboutUs": "О нас",
+          "ContactUs": "Связаться с нами",
+          "Doctors": "Врачи",
+          "OurExpertise": "Наш опыт",
+          "Faq": "Часто задаваемые вопросы"
+        }
+      },
+      "OurServices": {
+        "OurServicesText": "Наши услуги",
+        "Links": {
+          "DentalCare": "Стоматология",
+          "Cardiology": "Кардиология",
+          "HijamaTherapy": "Хиджама-терапия",
+          "MassageTherapy": "Массажная терапия",
+          "AmbluanceSevices": "Скорая помощь",
+          "Medicine": "Медицина"
+        }
+      },
+      "Form": {
+        "Feedback": "Обратная связь",
+        "NamePlaceholder": "Имя",
+        "PhonePlaceholder": "Телефон",
+        "MessagePlaceholder": "Сообщение",
+        "Submit": "Отправить"
+      }
+    }
+  },
   "Menu": {
     "Home": "Главная",
     "AboutUs": "О нас",

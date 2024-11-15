@@ -1,4 +1,52 @@
 {
+  "General": {
+    "Phone": "Phone",
+    "Email": "Email",
+    "Address": "Address",
+    "ContactForm": {
+      "title": "Drop your message for any info or question",
+      "placeholders": {
+        "name": "Your name",
+        "email": "Your email",
+        "phone": "Your phone",
+        "subject": "Your subject",
+        "message": "Your message ..."
+      },
+      "sendMessage": "Send Message",
+      "callNote": "Call"
+    },
+    "Footer": {
+      "QuickLinks": {
+        "QuickLinksText": "Quick Links",
+        "Links": {
+          "Blog": "Blog",
+          "AboutUs": "About Us",
+          "ContactUs": "Contact Us",
+          "Doctors": "Doctors",
+          "OurExpertise": "Our Expertise",
+          "Faq": "Faq"
+        }
+      },
+      "OurServices": {
+        "OurServicesText": "Our Services",
+        "Links": {
+          "DentalCare": "Dental Care",
+          "Cardiology": "Cardiology",
+          "HijamaTherapy": "Hijama Therapy",
+          "MassageTherapy": "Massage Therapy",
+          "AmbluanceSevices": "Ambluance Sevices",
+          "Medicine": "Medicine"
+        }
+      },
+      "Form": {
+        "Feedback": "Feedback",
+        "NamePlaceholder": "Name",
+        "PhonePlaceholder": "Phone",
+        "MessagePlaceholder": "Message",
+        "Submit": "Submit"
+      }
+    }
+  },
   "Menu": {
     "Home": "Home",
     "AboutUs": "About Us",

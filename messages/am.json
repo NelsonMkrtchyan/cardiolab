@@ -1,4 +1,52 @@
 {
+  "General": {
+    "Phone": "Հեռախոս",
+    "Email": "Էլ. փոստ",
+    "Address": "Հասցե",
+    "ContactForm": {
+      "title": "Ուղարկեք ձեր հաղորդագրությունը՝ ցանկացած տեղեկության կամ հարցի համար",
+      "placeholders": {
+        "name": "Ձեր անունը",
+        "email": "Ձեր էլ. հասցեն",
+        "phone": "Ձեր հեռախոսահամարը",
+        "subject": "Ձեր թեման",
+        "message": "Ձեր հաղորդագրությունը ..."
+      },
+      "sendMessage": "Ուղարկել հաղորդագրություն",
+      "callNote": "Զանգահարել"
+    },
+    "Footer": {
+      "QuickLinks": {
+        "QuickLinksText": "Արագ հղումներ",
+        "Links": {
+          "Blog": "Բլոգ",
+          "AboutUs": "Մեր մասին",
+          "ContactUs": "Կապ մեզ հետ",
+          "Doctors": "Բժիշկներ",
+          "OurExpertise": "Մեր փորձառությունը",
+          "Faq": "Հաճախակի հարցեր"
+        }
+      },
+      "OurServices": {
+        "OurServicesText": "Մեր ծառայությունները",
+        "Links": {
+          "DentalCare": "Ատամնաբուժություն",
+          "Cardiology": "Կարդիոլոգիա",
+          "HijamaTherapy": "Հիջամայի թերապիա",
+          "MassageTherapy": "Մերսման թերապիա",
+          "AmbluanceSevices": "Շտապ օգնության ծառայություններ",
+          "Medicine": "Դեղամիջոցներ"
+        }
+      },
+      "Form": {
+        "Feedback": "Հետադարձ կապ",
+        "NamePlaceholder": "Անուն",
+        "PhonePlaceholder": "Հեռախոս",
+        "MessagePlaceholder": "Հաղորդագրություն",
+        "Submit": "Հաստատել"
+      }
+    }
+  },
   "Menu": {
     "Home": "Գլխավոր",
     "AboutUs": "Մեր Մասին",

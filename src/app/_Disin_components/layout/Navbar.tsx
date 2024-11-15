@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import MenuItem from "./MenuItem";
 import { Menus } from "~/constants/menus";
 import Image from "next/image";
 import LanguageSwitcher from "~/app/_Disin_components/layout/LanguageSwitcher";
+import { Link } from "~/i18n/routing";
 
 const Navbar: React.FC = () => {
   const [menu, setMenu] = useState(true);
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
         <div className="main-nav">
           <div className="container">
             <nav className="navbar navbar-expand-md navbar-light">
-              <Link href="/public" className="navbar-brand">
+              <Link href="/" className="navbar-brand">
                 <Image
                   src="https://utfs.io/f/kPqN7718CWluI8zwgwEmOVFpZEU45sKoR6bt7NDSv82hyxfg"
                   alt="logo"

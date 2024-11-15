@@ -23,8 +23,8 @@ const LanguageSwitcher = () => {
   return (
     <>
       <div className="language-nav">
-        <div className={"container"}>
-          <div className={"wrapper"}>
+        <div className="container p-0">
+          <div className="wrapper">
             {/*Active locale*/}
             <div
               className="currentLanguage nav-link dropdown-toggle"
