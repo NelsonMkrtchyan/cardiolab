@@ -714,13 +714,17 @@ $black-color: #111111;
 
     .speciality-emergency {
       left: 15px;
-      padding: 25px 40px 10px 30px;
-      width: 50%;
+      padding: 15px 30px 10px 30px;
+      width: 60%;
 
       .speciality-icon {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+
+        .large-icon-size {
+          font-size: 20px;
+        }
 
         i {
           font-size: 18px;
@@ -729,7 +733,7 @@ $black-color: #111111;
 
       .speciality-content {
         h3 {
-          font-size: 18px;
+          font-size: 16px;
           //right: 45px;
         }
 
@@ -1985,6 +1989,21 @@ $black-color: #111111;
   }
   /*-- End Header Top --*/
 
+  /*-- Header Top --*/
+  .main-nav {
+    nav {
+      .navbar-nav {
+        .nav-item {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  /*-- End Header Top --*/
+
+
   /*-- Home Slider --*/
   .slider-item {
     height: 100%;
@@ -2620,8 +2639,8 @@ $black-color: #111111;
 
     .speciality-emergency {
       left: 15px;
-      padding: 30px 40px 15px 40px;
-      width: 50%;
+      padding: 30px 20px 15px 20px;
+      width: 60%;
 
       h3 {
         font-size: 22px;
