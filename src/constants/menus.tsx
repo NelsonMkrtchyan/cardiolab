@@ -20,13 +20,13 @@ export const Menus = () => {
     //   link: "/gallery",
     // },
     // {
-    //   label: `${t("OurStuff")}`,
+    //   label: `${t("Stuff")}`,
     //   link: "/stuff",
     // },
-    // {
-    //   label: `${t("OurServices")}`,
-    //   link: "/services",
-    // },
+    {
+      label: `${t("Services")}`,
+      link: "/services",
+    },
     // {
     //   label: `${t("PatientGuide")}`,
     //   link: "/patientguide",

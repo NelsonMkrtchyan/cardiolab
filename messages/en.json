@@ -52,8 +52,9 @@
     "AboutUs": "About Us",
     "News": "News",
     "Gallery": "Gallery",
-    "OurStuff": "Our Stuff",
-    "OurServices": "Our Services",
+    "Stuff": "Our Stuff",
+    "Services": "Our Services",
+    "ServiceDetails": "Service Details",
     "PatientGuide": "Patient Guide",
     "DoctorGuide": "Doctor Guide",
     "ContactUs": "Contact Us"

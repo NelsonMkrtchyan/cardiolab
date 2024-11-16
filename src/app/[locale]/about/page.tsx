@@ -16,7 +16,7 @@ export default function About() {
         homePageUrl="/"
         homePageText={tMenu("Home")}
         activePageText={tMenu("AboutUs")}
-        bgImage="/images/page-banner1.jpg"
+        bgImage="/images/page-banner2.jpg"
       />
 
       <AboutContent />

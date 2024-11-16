@@ -3,14 +3,17 @@
 import FeedbackForm from "./FeedbackForm";
 import { Link } from "~/i18n/routing";
 import { CardioLabInfo } from "~/constants/menus";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { IoCall, IoLocation, IoMail } from "react-icons/io5";
+import { services } from "~/constants/services";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const tMenu = useTranslations("Menu");
   const tGeneral = useTranslations("General");
 
+  const locale: string = useLocale();
+  const localisedServices = services[locale as "en" | "ru" | "am"];
   return (
     <>
       <footer
@@ -67,7 +70,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/about">
+                      <Link href="/news">
                         {tGeneral("Footer.QuickLinks.Links.Blog")}
                       </Link>
                     </li>
@@ -100,36 +103,17 @@ const Footer = () => {
                 <div className="footer-quick">
                   <h3>{tGeneral("Footer.OurServices.OurServicesText")}</h3>
                   <ul>
-                    <li>
-                      <Link href="/services/details">
-                        {tGeneral("Footer.OurServices.Links.DentalCare")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">
-                        {tGeneral("Footer.OurServices.Links.Cardiology")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">
-                        {tGeneral("Footer.OurServices.Links.HijamaTherapy")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">
-                        {tGeneral("Footer.OurServices.Links.MassageTherapy")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">
-                        {tGeneral("Footer.OurServices.Links.AmbluanceSevices")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">
-                        {tGeneral("Footer.OurServices.Links.Medicine")}
-                      </Link>
-                    </li>
+                    {localisedServices.slice(0, 5).map((service) => {
+                      return (
+                        <>
+                          <li>
+                            <Link href={`/services/details/${service.id}`}>
+                              {service.title}
+                            </Link>
+                          </li>
+                        </>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>

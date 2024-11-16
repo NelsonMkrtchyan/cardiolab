@@ -52,8 +52,9 @@
     "AboutUs": "О нас",
     "News": "Новости",
     "Gallery": "Галерея",
-    "OurStuff": "Наш персонал",
-    "OurServices": "Наши услуги",
+    "Stuff": "Наш персонал",
+    "Services": "Наши услуги",
+    "ServiceDetails": "Подробности услуги",
     "PatientGuide": "Руководство для пациента",
     "DoctorGuide": "Руководство для врача",
     "ContactUs": "Контакты"
