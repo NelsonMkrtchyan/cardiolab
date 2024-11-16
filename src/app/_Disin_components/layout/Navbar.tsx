@@ -5,13 +5,14 @@ import MenuItem from "./MenuItem";
 import { Menus } from "~/constants/menus";
 import Image from "next/image";
 import LanguageSwitcher from "~/app/_Disin_components/layout/LanguageSwitcher";
-import { Link } from "~/i18n/routing";
+import { Link, usePathname } from "~/i18n/routing";
 
 const Navbar: React.FC = () => {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState<boolean>(true);
   const toggleNavbar = () => {
     setMenu(!menu);
   };
+  const pathname = usePathname();
 
   useEffect(() => {
     const elementId = document.getElementById("navbar");
@@ -23,6 +24,11 @@ const Navbar: React.FC = () => {
       }
     });
   });
+
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    !menu && toggleNavbar();
+  }, [pathname]);
 
   const classOne = menu
     ? "collapse navbar-collapse mean-menu"

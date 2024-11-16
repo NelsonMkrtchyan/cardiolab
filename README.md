@@ -11,6 +11,8 @@
 - [x] implement styles from "Disin" template
 - [x] Implement Contact Us UI without config of forms
 - [x] Implement About Us UI, draft
+- [x] Implement Services page UI
+- [x] Implement Doctors and Doctor Detail page UI
 - [ ] Implement the landing page basic ui structure
 - [ ] Error Managment (w/ Sentry)
 - [ ] Analytics (posthog)

@@ -19,10 +19,10 @@ export const Menus = () => {
     //   label: `${t("Gallery")}`,
     //   link: "/gallery",
     // },
-    // {
-    //   label: `${t("Stuff")}`,
-    //   link: "/stuff",
-    // },
+    {
+      label: `${t("Stuff")}`,
+      link: "/stuff",
+    },
     {
       label: `${t("Services")}`,
       link: "/services",

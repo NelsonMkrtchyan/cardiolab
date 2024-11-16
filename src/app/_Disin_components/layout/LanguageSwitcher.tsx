@@ -4,7 +4,7 @@ import { excludeKeys, Languages } from "~/constants/general";
 import { usePathname, useRouter } from "~/i18n/routing";
 
 const LanguageSwitcher = () => {
-  const locale = useLocale();
+  const locale: string = useLocale();
   const [isVisible, setIsVisible] = useState(false);
   const [otherFlags, setOtherFlags] = useState(
     excludeKeys(Languages, [locale]),
@@ -33,7 +33,7 @@ const LanguageSwitcher = () => {
                 setIsVisible(!isVisible);
               }}
             >
-              {Languages[`${locale}`].icon}
+              {Languages[`${locale as "en" | "ru" | "am"}`].icon}
 
               <ul className="language-dropdown-menu">
                 {Object.keys(otherFlags).map((flagKey) => {
@@ -46,7 +46,7 @@ const LanguageSwitcher = () => {
                           changeLocale(flagKey);
                         }}
                       >
-                        {Languages[`${flagKey}`].icon}
+                        {Languages[`${flagKey as "en" | "ru" | "am"}`].icon}
                       </div>
                     </li>
                   );
