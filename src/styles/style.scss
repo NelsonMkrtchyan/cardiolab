@@ -3025,9 +3025,15 @@ footer {
   margin-bottom: 30px;
 
   .blog-details-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
     img {
-      width: 100%;
+      width: 50%;
       margin-bottom: 30px;
+      align-self: center;
     }
 
     h2 {
@@ -3045,8 +3051,8 @@ footer {
 
       li {
         list-style-type: none;
-        display: inline-block;
-        color: #3a5ed3;
+        //display: inline-block;
+        //color: #3a5ed3;
         font-size: 16px;
         margin-right: 50px;
 
@@ -4705,6 +4711,7 @@ footer {
 
 .languageSwitcherContainer {
   justify-content: end;
+  padding-left: 10px;
 
   .language-nav {
 

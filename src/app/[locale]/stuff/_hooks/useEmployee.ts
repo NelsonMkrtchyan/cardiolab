@@ -5,6 +5,7 @@ import { stuff } from "~/constants/stuff";
 const useEmployee = () => {
   const locale: string = useLocale();
   const { slug } = useParams();
+  
   const currentEmployee =
     stuff[locale as "en" | "ru" | "am"].find(
       (employee) => employee.id === Number(slug),

@@ -3,6 +3,9 @@
     "Phone": "Phone",
     "Email": "Email",
     "Address": "Address",
+    "ReadMore": "Read More",
+    "Next": "Next",
+    "Previous": "Previous",
     "ContactForm": {
       "title": "Drop your message for any info or question",
       "placeholders": {
@@ -51,6 +54,7 @@
     "Home": "Home",
     "AboutUs": "About Us",
     "News": "News",
+    "NewsDetails": "News Details",
     "Gallery": "Gallery",
     "Stuff": "Our Stuff",
     "EmployeeDetails": "Employee Details",
@@ -79,6 +83,19 @@
       "one": "Clinical cardiovascular medicine.",
       "two": "Research and scientific activities.",
       "three": "Raising patient awareness."
+    }
+  },
+  "News": {
+    "Form": {
+      "DropComment": "Drop your comment",
+      "PostComment": "Post A Comment",
+      "Placeholders": {
+        "YourComment": "Your Comment",
+        "Name": "Name",
+        "Phone": "Phone",
+        "Email": "Email",
+        "Subject": "Subject"
+      }
     }
   }
 }

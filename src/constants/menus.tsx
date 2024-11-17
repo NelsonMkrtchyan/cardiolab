@@ -11,10 +11,10 @@ export const Menus = () => {
       label: `${t("AboutUs")}`,
       link: "/about",
     },
-    // {
-    //   label: `${t("News")}`,
-    //   link: "/news",
-    // },
+    {
+      label: `${t("News")}`,
+      link: "/news",
+    },
     // {
     //   label: `${t("Gallery")}`,
     //   link: "/gallery",
