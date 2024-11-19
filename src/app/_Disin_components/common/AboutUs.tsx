@@ -5,8 +5,11 @@ import Image from "next/image";
 import { TbCertificate } from "react-icons/tb";
 import { IoIosPeople } from "react-icons/io";
 import { GiTechnoHeart } from "react-icons/gi";
+import { useTranslations } from "next-intl";
 
 const AboutUs: React.FC = () => {
+  const tComponents = useTranslations("Components");
+
   return (
     <>
       <div className="welcome-area ptb-100">
@@ -30,7 +33,7 @@ const AboutUs: React.FC = () => {
               <div className="welcome-item welcome-right">
                 <div className="section-title-two">
                   {/*<span>About Us</span>*/}
-                  <h2>Welcome to Disin Hospital We have...</h2>
+                  <h2>{tComponents("Landing.AboutUs.title")}</h2>
                 </div>
 
                 <ul>
@@ -39,7 +42,7 @@ const AboutUs: React.FC = () => {
                       <TbCertificate className="icon largest-icon-size" />
                     </div>
                     <div className="welcome-inner">
-                      <h3>Certified Doctors</h3>
+                      <h3>{tComponents("Landing.AboutUs.one")}</h3>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit.consectetur adipiscing elit.
@@ -52,7 +55,7 @@ const AboutUs: React.FC = () => {
                       <IoIosPeople className="icon largest-icon-size" />
                     </div>
                     <div className="welcome-inner">
-                      <h3>Patient-Centered Care</h3>
+                      <h3>{tComponents("Landing.AboutUs.two")}</h3>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit.consectetur adipiscing elit.
@@ -65,7 +68,7 @@ const AboutUs: React.FC = () => {
                       <GiTechnoHeart className="icon largest-icon-size" />
                     </div>
                     <div className="welcome-inner">
-                      <h3>Modern Technologey</h3>
+                      <h3>{tComponents("Landing.AboutUs.three")}</h3>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit.consectetur adipiscing elit.

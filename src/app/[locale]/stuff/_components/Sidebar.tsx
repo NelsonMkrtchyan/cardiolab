@@ -25,7 +25,7 @@ const Sidebar = ({ employee }: SidebarI) => {
             </li>
             <li>
               <IoIosMail className="icon medium-icon-size" />
-              hello@disin.com
+              hello@cardiolab.com
             </li>
             <li>
               <FaLocationDot className="icon medium-icon-size" />

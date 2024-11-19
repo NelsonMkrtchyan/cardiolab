@@ -3,19 +3,19 @@
 import { useTranslations } from "next-intl";
 
 const FeedbackForm = () => {
-  const tGeneral = useTranslations("General");
+  const tFooter = useTranslations("Footer");
 
   return (
     <>
       <div className="footer-feedback">
-        <h3>{tGeneral("Footer.Form.Feedback")}</h3>
+        <h3>{tFooter("Form.Feedback")}</h3>
 
         <form>
           <div className="form-group">
             <input
               type="text"
               className="form-control"
-              placeholder={tGeneral("Footer.Form.NamePlaceholder")}
+              placeholder={tFooter("Form.NamePlaceholder")}
             />
           </div>
 
@@ -23,7 +23,7 @@ const FeedbackForm = () => {
             <input
               type="text"
               className="form-control"
-              placeholder={tGeneral("Footer.Form.PhonePlaceholder")}
+              placeholder={tFooter("Form.PhonePlaceholder")}
             />
           </div>
 
@@ -32,13 +32,13 @@ const FeedbackForm = () => {
               className="form-control"
               id="your_message"
               rows={3}
-              placeholder={tGeneral("Footer.Form.MessagePlaceholder")}
+              placeholder={tFooter("Form.MessagePlaceholder")}
             ></textarea>
           </div>
 
           <div className="text-left">
             <button type="submit" className="btn feedback-btn">
-              {tGeneral("Footer.Form.Submit")}
+              {tFooter("Form.Submit")}
             </button>
           </div>
         </form>

@@ -15,9 +15,9 @@ export default function Page() {
     <>
       <PageBanner
         pageTitle={currentNews?.title ?? tMenu("EmployeeDetails")}
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Blog Details"
+        homePageUrl="/news"
+        homePageText={tMenu("News")}
+        activePageText={tMenu("News")}
         bgImage="/images/page-banner4.jpg"
       />
 

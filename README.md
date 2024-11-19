@@ -8,7 +8,7 @@
 - [x] Integrate i18
 - [x] Config routing to handle locales
 - [x] Routing
-- [x] implement styles from "Disin" template
+- [x] implement styles from template
 - [x] Implement Contact Us UI without config of forms
 - [x] Implement About Us UI, draft
 - [x] Implement Services page UI

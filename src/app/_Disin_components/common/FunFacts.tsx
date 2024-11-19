@@ -4,8 +4,11 @@ import React from "react";
 import { FaClinicMedical } from "react-icons/fa";
 import { FaPeopleGroup, FaUserDoctor } from "react-icons/fa6";
 import { GiAchievement } from "react-icons/gi";
+import { useTranslations } from "next-intl";
 
 const FunFacts: React.FC = () => {
+  const tGeneral = useTranslations("General");
+
   return (
     <>
       <div
@@ -21,7 +24,7 @@ const FunFacts: React.FC = () => {
                   <FaClinicMedical className="icon largest-icon-size mb-4" />
                 </div>
                 <h3 className="counter">1</h3>
-                <p>Clinics</p>
+                <p>{tGeneral("Stats.one")}</p>
               </div>
             </div>
 
@@ -33,7 +36,7 @@ const FunFacts: React.FC = () => {
                 <h3>
                   <span className="counter">25000</span>+
                 </h3>
-                <p>Happy Patients</p>
+                <p>{tGeneral("Stats.two")}</p>
               </div>
             </div>
 
@@ -42,7 +45,7 @@ const FunFacts: React.FC = () => {
                 <FaUserDoctor className="icon largest-icon-size mb-4" />
 
                 <h3 className="counter">13</h3>
-                <p>Doctors & Nurse</p>
+                <p>{tGeneral("Stats.three")}</p>
               </div>
             </div>
 
@@ -50,7 +53,7 @@ const FunFacts: React.FC = () => {
               <div className="counter-item">
                 <GiAchievement className="icon largest-icon-size mb-4" />
                 <h3 className="counter">1</h3>
-                <p>Year Experience</p>
+                <p>{tGeneral("Stats.four")}</p>
               </div>
             </div>
           </div>

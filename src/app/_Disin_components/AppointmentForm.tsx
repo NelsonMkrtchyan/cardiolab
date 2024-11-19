@@ -171,7 +171,7 @@ const AppointmentForm: React.FC = () => {
                 style={{ backgroundImage: `url(/images/appointment1.jpg)` }}
               >
                 <div className="appointment-item-content">
-                  <h2>Working Hours</h2>
+                  <h2>{tGeneral("WorkingHours")}</h2>
                   <ul>
                     <li>
                       {tGeneral("Weekdays.Monday")}

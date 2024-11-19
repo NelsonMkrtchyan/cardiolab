@@ -13,14 +13,14 @@ const TopHeader = () => {
                 <div className="header-top-left">
                   <ul>
                     <li>
-                      <a href="tel:+07554332322">
+                      <a href={`tel:${CardioLabInfo.phone}`}>
                         {/*<i className="icofont-ui-call"></i>*/}
                         <IoCall className="icon" />
                         Call : {CardioLabInfo.phone}
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:hello@disin.com">
+                      <a href={`mailto:${CardioLabInfo.email}`}>
                         {/*<i className="icofont-ui-message"></i>*/}
                         <IoMail className="icon" />
                         {CardioLabInfo.email}

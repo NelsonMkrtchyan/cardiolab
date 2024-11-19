@@ -23,7 +23,7 @@ const OurExpertise: React.FC = () => {
                     <div className="col-sm-6 col-lg-8">
                       <div className="speciality-inner">
                         <FaRegCheckCircle className="icon largest-icon-size mb-4" />
-                        <h3>Our vision</h3>
+                        <h3>{tAbout("Titles.Vision")}</h3>
                         <p>{tAbout("Vision")}</p>
                       </div>
                     </div>
@@ -31,7 +31,7 @@ const OurExpertise: React.FC = () => {
                     <div className="col-sm-6 col-lg-8 right ms-auto">
                       <div className="speciality-inner">
                         <FaRegCheckCircle className="icon largest-icon-size mb-4" />
-                        <h3>Our mission</h3>
+                        <h3>{tAbout("Titles.Mission")}</h3>
                         <p>{tAbout("Mission")}</p>
                       </div>
                     </div>
@@ -39,7 +39,7 @@ const OurExpertise: React.FC = () => {
                     <div className="col-sm-6 col-lg-8">
                       <div className="speciality-inner">
                         <FaRegCheckCircle className="icon largest-icon-size mb-4" />
-                        <h3>Our values</h3>
+                        <h3>{tAbout("Titles.Values")}</h3>
                         <p>{tAbout("Values")}</p>
                       </div>
                     </div>
@@ -47,7 +47,7 @@ const OurExpertise: React.FC = () => {
                     <div className="col-sm-6 col-lg-8 right ms-auto">
                       <div className="speciality-inner">
                         <FaRegCheckCircle className="icon largest-icon-size mb-4" />
-                        <h3>Our strategic directions</h3>
+                        <h3>{tAbout("Titles.OurStrategicDirections")}</h3>
                         <ul>
                           <li> {tAbout("OurStrategicDirections.one")}</li>
                           <li> {tAbout("OurStrategicDirections.two")}</li>

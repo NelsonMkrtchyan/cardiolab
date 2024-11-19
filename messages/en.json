@@ -10,6 +10,7 @@
     "OurNews": "Our News",
     "OurServices": "Our Services",
     "MeetOurStuff": "Meet Our Stuff",
+    "WorkingHours": "Working Hours",
     "Weekdays": {
       "Monday": "Monday",
       "Tuesday": "Tuesday",
@@ -17,6 +18,12 @@
       "Thursday": "Thursday",
       "Friday": "Friday",
       "Saturday": "Saturday"
+    },
+    "Stats": {
+      "one": "Clinics",
+      "two": "Happy Patients",
+      "three": "Doctors & Nurse",
+      "four": "Year Experience"
     }
   },
   "Menu": {
@@ -37,6 +44,14 @@
     "slogan": "The Art of Heart Care"
   },
   "Components": {
+    "Landing": {
+      "AboutUs": {
+        "title": "Welcome to CardioLab.  We have...",
+        "one": "Certified Doctors",
+        "two": "Patient-Centered Care",
+        "three": "Modern Technology"
+      }
+    },
     "ContactForm": {
       "title": "Drop your message for any info or question",
       "placeholders": {
@@ -85,6 +100,12 @@
     "AboutContent": {
       "title": "About CardioLab",
       "description": "'CardioLab' Medical Clinic, founded in 2024,\nspecializes in modern heart care that prioritizes your well-being. We\nprovide a range of services for adults and children, from cardiovascular\nconsultations and heart screenings to comprehensive health checks and\nadvanced monitoring solutions."
+    },
+    "Titles": {
+      "Vision": "Vision",
+      "Values": "Values",
+      "Mission": "Mission",
+      "OurStrategicDirections": "Our Strategic Directions"
     },
     "Vision": "Our vision is to provide the highest quality cardiovascular care in Armenia through innovative approaches, holistic care, and comprehensive solutions.",
     "Values": "Quality, professionalism, innovation, patient-centered approach, compassion, personalized care, collaboration and teamwork, responsibility, integrity, inclusivity, knowledge, and continuous professional development.",
