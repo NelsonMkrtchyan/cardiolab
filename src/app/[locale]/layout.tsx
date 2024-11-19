@@ -24,16 +24,22 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "~/i18n/routing";
 
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
+
 import Navbar from "~/app/_Disin_components/layout/Navbar";
 import TopHeader from "~/app/_Disin_components/layout/TopHeader";
 import Footer from "~/app/_Disin_components/layout/Footer/Footer";
 import GoTop from "~/app/_Disin_components/layout/GoTop";
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+// const poppins = Poppins({
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+//   subsets: ["latin"],
+//   display: "swap",
+// });
+const montserrat = Montserrat({
   subsets: ["latin"],
-  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // Adjust weights as needed
+  style: ["normal", "italic"], // Optional: specify styles
 });
 
 export const metadata: Metadata = {
@@ -62,7 +68,7 @@ export default async function RootLayout({
 
   return (
     <html suppressHydrationWarning lang="am">
-      <body className={poppins.className}>
+      <body className={montserrat.className}>
         <Providers>
           <NextIntlClientProvider messages={messages}>
             <TopHeader />
