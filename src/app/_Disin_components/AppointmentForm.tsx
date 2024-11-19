@@ -2,14 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
-import { GiAchievement } from "react-icons/gi";
 import { FaUserDoctor, FaUserTie } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { LiaHospital } from "react-icons/lia";
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
+import { useTranslations } from "next-intl";
 
 const AppointmentForm: React.FC = () => {
+  const tComponents = useTranslations("Components");
+  const tGeneral = useTranslations("General");
   return (
     <>
       <div className="appointment-area-two ptb-100">
@@ -26,8 +28,8 @@ const AppointmentForm: React.FC = () => {
                   />
                 </div>
 
-                <h2>Book your appointment</h2>
-                <span>We will confirm your appointment within 2 hours</span>
+                <h2>{tComponents("Appointments.title")}</h2>
+                <span>{tComponents("Appointments.description")}</span>
 
                 <div className="appointment-form">
                   <form>
@@ -37,11 +39,15 @@ const AppointmentForm: React.FC = () => {
                           <div className="icon-container">
                             <FaUserTie className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>Name</label>
+                          <label>
+                            {tComponents("Appointments.labels.name")}
+                          </label>
                           <input
                             type="text"
                             className="form-control"
-                            placeholder="Enter Your Name"
+                            placeholder={tComponents(
+                              "Appointments.placeholders.name",
+                            )}
                           />
                         </div>
                       </div>
@@ -51,11 +57,15 @@ const AppointmentForm: React.FC = () => {
                           <div className="icon-container">
                             <MdEmail className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>Email</label>
+                          <label>
+                            {tComponents("Appointments.labels.email")}
+                          </label>
                           <input
                             type="email"
                             className="form-control"
-                            placeholder="Enter Your Email"
+                            placeholder={tComponents(
+                              "Appointments.placeholders.email",
+                            )}
                           />
                         </div>
                       </div>
@@ -65,11 +75,15 @@ const AppointmentForm: React.FC = () => {
                           <div className="icon-container">
                             <FaPhoneAlt className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>Phone</label>
+                          <label>
+                            {tComponents("Appointments.labels.phone")}
+                          </label>
                           <input
                             type="text"
                             className="form-control"
-                            placeholder="Enter Your Number"
+                            placeholder={tComponents(
+                              "Appointments.placeholders.phone",
+                            )}
                           />
                         </div>
                       </div>
@@ -79,12 +93,18 @@ const AppointmentForm: React.FC = () => {
                           <div className="icon-container">
                             <LiaHospital className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>Services</label>
+                          <label>
+                            {tComponents("Appointments.labels.services")}
+                          </label>
                           <select
                             className="form-control"
                             id="exampleFormControlSelect1"
                           >
-                            <option>Dental Care</option>
+                            <option>
+                              {tComponents(
+                                "Appointments.placeholders.services",
+                              )}
+                            </option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
@@ -98,12 +118,17 @@ const AppointmentForm: React.FC = () => {
                           <div className="icon-container">
                             <FaUserDoctor className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>Doctor</label>
+                          <label>
+                            {tComponents("Appointments.labels.doctors")}
+                          </label>
                           <select
                             className="form-control"
                             id="exampleFormControlSelect2"
                           >
-                            <option>Choose Your Doctor</option>
+                            <option>
+                              {" "}
+                              {tComponents("Appointments.placeholders.doctors")}
+                            </option>
                             <option>John Smith</option>
                             <option>Sarah Taylor</option>
                             <option>Stevn King</option>
@@ -116,11 +141,15 @@ const AppointmentForm: React.FC = () => {
                           <div className="icon-container">
                             <CiUser className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>Age</label>
+                          <label>
+                            {tComponents("Appointments.labels.age")}
+                          </label>
                           <input
                             type="text"
                             className="form-control"
-                            placeholder="Your Age"
+                            placeholder={tComponents(
+                              "Appointments.placeholders.age",
+                            )}
                           />
                         </div>
                       </div>
@@ -128,7 +157,7 @@ const AppointmentForm: React.FC = () => {
 
                     <div className="text-center">
                       <button type="submit" className="btn appointment-btn">
-                        Submit
+                        {tComponents("Appointments.actions.submit")}
                       </button>
                     </div>
                   </form>
@@ -145,22 +174,28 @@ const AppointmentForm: React.FC = () => {
                   <h2>Working Hours</h2>
                   <ul>
                     <li>
-                      Monday <span>9:00 AM - 8:00 PM</span>
+                      {tGeneral("Weekdays.Monday")}
+                      <span>9:00 AM - 8:00 PM</span>
                     </li>
                     <li>
-                      Tuesday <span>9:00 AM - 8:00 PM</span>
+                      {tGeneral("Weekdays.Tuesday")}
+                      <span>9:00 AM - 8:00 PM</span>
                     </li>
                     <li>
-                      Wednesday <span>9:00 AM - 8:00 PM</span>
+                      {tGeneral("Weekdays.Wednesday")}
+                      <span>9:00 AM - 8:00 PM</span>
                     </li>
                     <li>
-                      Thursday <span>9:00 AM - 8:00 PM</span>
+                      {tGeneral("Weekdays.Thursday")}
+                      <span>9:00 AM - 8:00 PM</span>
                     </li>
                     <li>
-                      Friday <span>9:00 AM - 8:00 PM</span>
+                      {tGeneral("Weekdays.Friday")}
+                      <span>9:00 AM - 8:00 PM</span>
                     </li>
                     <li>
-                      Saturday <span>9:00 AM - 8:00 PM</span>
+                      {tGeneral("Weekdays.Saturday")}
+                      <span>9:00 AM - 8:00 PM</span>
                     </li>
                   </ul>
                 </div>

@@ -10,48 +10,13 @@
     "OurNews": "Наши новости",
     "OurServices": "Наши услуги",
     "MeetOurStuff": "Познакомьтесь с нашим персоналом",
-    "ContactForm": {
-      "title": "Оставьте сообщение для получения информации или вопроса",
-      "placeholders": {
-        "name": "Ваше имя",
-        "email": "Ваш email",
-        "phone": "Ваш телефон",
-        "subject": "Ваша тема",
-        "message": "Ваше сообщение ..."
-      },
-      "sendMessage": "Отправить сообщение",
-      "callNote": "Позвонить"
-    },
-    "Footer": {
-      "QuickLinks": {
-        "QuickLinksText": "Быстрые ссылки",
-        "Links": {
-          "News": "Новости",
-          "AboutUs": "О нас",
-          "ContactUs": "Связаться с нами",
-          "Doctors": "Врачи",
-          "Services": "Наши услуги",
-          "Faq": "Часто задаваемые вопросы"
-        }
-      },
-      "OurServices": {
-        "OurServicesText": "Наши услуги",
-        "Links": {
-          "DentalCare": "Стоматология",
-          "Cardiology": "Кардиология",
-          "HijamaTherapy": "Хиджама-терапия",
-          "MassageTherapy": "Массажная терапия",
-          "AmbluanceSevices": "Скорая помощь",
-          "Medicine": "Медицина"
-        }
-      },
-      "Form": {
-        "Feedback": "Обратная связь",
-        "NamePlaceholder": "Имя",
-        "PhonePlaceholder": "Телефон",
-        "MessagePlaceholder": "Сообщение",
-        "Submit": "Отправить"
-      }
+    "Weekdays": {
+      "Monday": "Понедельник",
+      "Tuesday": "Вторник",
+      "Wednesday": "Среда",
+      "Thursday": "Четверг",
+      "Friday": "Пятница",
+      "Saturday": "Суббота"
     }
   },
   "Menu": {
@@ -70,6 +35,47 @@
   },
   "Common": {
     "slogan": "Искусство заботы о сердце"
+  },
+  "Components": {
+    "ContactForm": {
+      "title": "Оставьте сообщение для получения информации или вопроса",
+      "placeholders": {
+        "name": "Ваше имя",
+        "email": "Ваш email",
+        "phone": "Ваш телефон",
+        "subject": "Ваша тема",
+        "message": "Ваше сообщение ..."
+      },
+      "sendMessage": "Отправить сообщение",
+      "callNote": "Позвонить"
+    },
+    "Appointments": {
+      "title": "Запишитесь на прием",
+      "description": "Мы подтвердим вашу запись в течение 2 часов",
+      "labels": {
+        "name": "Имя",
+        "email": "Электронная почта",
+        "phone": "Телефон",
+        "services": "Услуги",
+        "doctors": "Врачи",
+        "age": "Возраст"
+      },
+      "placeholders": {
+        "name": "Введите ваше имя",
+        "email": "Введите вашу электронную почту",
+        "phone": "Введите ваш номер телефона",
+        "services": "Кардио",
+        "doctors": "Выберите своего врача",
+        "age": "Ваш возраст"
+      },
+      "actions": {
+        "submit": "Отправить"
+      }
+    },
+    "VideoSection": {
+      "title": "Введение в CardioLab",
+      "description": "Добро пожаловать в CardioLab, где ваше сердечное здоровье является нашим приоритетом. В этом введении мы расскажем о миссии нашей клиники, услугах и передовых технологиях, созданных для кардиологической помощи. Узнайте больше о нашей команде опытных специалистов, нашем подходе к персонализированному лечению и о том, как мы стремимся улучшить ваше самочувствие с помощью инновационных и заботливых медицинских решений."
+    }
   },
   "HeroSlider": {
     "titleOne": "КардиоЛаб",
@@ -100,6 +106,37 @@
         "Email": "Электронная почта",
         "Subject": "Тема"
       }
+    }
+  },
+  "Footer": {
+    "QuickLinks": {
+      "QuickLinksText": "Быстрые ссылки",
+      "Links": {
+        "News": "Новости",
+        "AboutUs": "О нас",
+        "ContactUs": "Связаться с нами",
+        "Doctors": "Врачи",
+        "Services": "Наши услуги",
+        "Faq": "Часто задаваемые вопросы"
+      }
+    },
+    "OurServices": {
+      "OurServicesText": "Наши услуги",
+      "Links": {
+        "DentalCare": "Стоматология",
+        "Cardiology": "Кардиология",
+        "HijamaTherapy": "Хиджама-терапия",
+        "MassageTherapy": "Массажная терапия",
+        "AmbluanceSevices": "Скорая помощь",
+        "Medicine": "Медицина"
+      }
+    },
+    "Form": {
+      "Feedback": "Обратная связь",
+      "NamePlaceholder": "Имя",
+      "PhonePlaceholder": "Телефон",
+      "MessagePlaceholder": "Сообщение",
+      "Submit": "Отправить"
     }
   }
 }

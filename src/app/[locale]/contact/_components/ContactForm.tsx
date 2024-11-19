@@ -6,7 +6,7 @@ import { CardioLabInfo } from "~/constants/menus";
 import { IoCall } from "react-icons/io5";
 
 const ContactForm = () => {
-  const tGeneral = useTranslations("General");
+  const tComponents = useTranslations("Components");
 
   return (
     <>
@@ -21,7 +21,7 @@ const ContactForm = () => {
                 }}
               >
                 <div className="drop-left">
-                  <h2>{tGeneral("ContactForm.title")}</h2>
+                  <h2>{tComponents("ContactForm.title")}</h2>
 
                   <form>
                     <div className="row">
@@ -31,7 +31,7 @@ const ContactForm = () => {
                             type="text"
                             name="name"
                             className="form-control"
-                            placeholder={tGeneral(
+                            placeholder={tComponents(
                               "ContactForm.placeholders.name",
                             )}
                             required
@@ -45,7 +45,7 @@ const ContactForm = () => {
                             type="text"
                             name="email"
                             className="form-control"
-                            placeholder={tGeneral(
+                            placeholder={tComponents(
                               "ContactForm.placeholders.email",
                             )}
                             required
@@ -59,7 +59,7 @@ const ContactForm = () => {
                             type="text"
                             name="number"
                             className="form-control"
-                            placeholder={tGeneral(
+                            placeholder={tComponents(
                               "ContactForm.placeholders.phone",
                             )}
                             required
@@ -73,7 +73,7 @@ const ContactForm = () => {
                             type="text"
                             name="subject"
                             className="form-control"
-                            placeholder={tGeneral(
+                            placeholder={tComponents(
                               "ContactForm.placeholders.subject",
                             )}
                             required
@@ -88,7 +88,7 @@ const ContactForm = () => {
                             cols={30}
                             rows={6}
                             className="form-control"
-                            placeholder={tGeneral(
+                            placeholder={tComponents(
                               "ContactForm.placeholders.message",
                             )}
                             required
@@ -98,7 +98,7 @@ const ContactForm = () => {
 
                       <div className="col-lg-12 col-md-12 col-sm-12">
                         <button type="submit" className="drop-btn">
-                          {tGeneral("ContactForm.sendMessage")}
+                          {tComponents("ContactForm.sendMessage")}
                         </button>
                       </div>
                     </div>
@@ -124,7 +124,7 @@ const ContactForm = () => {
                     <IoCall className="icon large-icon-size" />
                   </div>
                   <div className="speciality-content">
-                    <h3>{tGeneral("ContactForm.callNote")}</h3>
+                    <h3>{tComponents("ContactForm.callNote")}</h3>
                     <p>{CardioLabInfo.phone}</p>
                   </div>
                 </div>

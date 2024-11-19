@@ -10,7 +10,7 @@ import { services } from "~/constants/services";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const tMenu = useTranslations("Menu");
-  const tGeneral = useTranslations("General");
+  const tFooter = useTranslations("Footer");
 
   const locale: string = useLocale();
   const localisedServices = services[locale as "en" | "ru" | "am"];
@@ -62,36 +62,34 @@ const Footer = () => {
             <div className="col-sm-6 col-lg-2">
               <div className="footer-item">
                 <div className="footer-quick">
-                  <h3>{tGeneral("Footer.QuickLinks.QuickLinksText")}</h3>
+                  <h3>{tFooter("QuickLinks.QuickLinksText")}</h3>
                   <ul>
                     <li>
                       <Link href="/about">
-                        {tGeneral("Footer.QuickLinks.Links.AboutUs")}
+                        {tFooter("QuickLinks.Links.AboutUs")}
                       </Link>
                     </li>
                     <li>
                       <Link href="/news">
-                        {tGeneral("Footer.QuickLinks.Links.News")}
+                        {tFooter("QuickLinks.Links.News")}
                       </Link>
                     </li>
                     <li>
                       <Link href="/services">
-                        {tGeneral("Footer.QuickLinks.Links.Services")}
+                        {tFooter("QuickLinks.Links.Services")}
                       </Link>
                     </li>
                     <li>
                       <Link href="/stuff">
-                        {tGeneral("Footer.QuickLinks.Links.Doctors")}
+                        {tFooter("QuickLinks.Links.Doctors")}
                       </Link>
                     </li>
                     <li>
-                      <Link href="/faq">
-                        {tGeneral("Footer.QuickLinks.Links.Faq")}
-                      </Link>
+                      <Link href="/faq">{tFooter("QuickLinks.Links.Faq")}</Link>
                     </li>
                     <li>
                       <Link href="/contact">
-                        {tGeneral("Footer.QuickLinks.Links.ContactUs")}
+                        {tFooter("QuickLinks.Links.ContactUs")}
                       </Link>
                     </li>
                   </ul>
@@ -101,7 +99,7 @@ const Footer = () => {
             <div className="col-sm-6 col-lg-3">
               <div className="footer-item">
                 <div className="footer-quick">
-                  <h3>{tGeneral("Footer.OurServices.OurServicesText")}</h3>
+                  <h3>{tFooter("OurServices.OurServicesText")}</h3>
                   <ul>
                     {localisedServices.slice(0, 5).map((service) => {
                       return (

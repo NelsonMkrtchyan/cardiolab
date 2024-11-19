@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import { Tabs, TabPanel } from "react-tabs";
 import { FaPlay } from "react-icons/fa6";
+import { useTranslations } from "next-intl";
 
 const VideoIntro: React.FC = () => {
   const [toggler, setToggler] = useState(false);
+  const tComponents = useTranslations("Components");
 
   return (
     <>
@@ -38,14 +40,8 @@ const VideoIntro: React.FC = () => {
                       </div>
 
                       <div className="video-content">
-                        <h3>CardioLab Introduction</h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Quis ipsum suspendisse ultrices
-                          gravida. Risus commodo viverra maecenas accumsan lacus
-                          vel facilisis.{" "}
-                        </p>
+                        <h3>{tComponents("VideoSection.title")}</h3>
+                        <p>{tComponents("VideoSection.description")}</p>
                       </div>
                     </div>
                   </div>
