@@ -4,6 +4,7 @@ import React from "react";
 import NewsCard from "~/app/[locale]/news/_components/NewsCard";
 import { useLocale, useTranslations } from "next-intl";
 import { news } from "~/constants/news";
+import { Link } from "~/i18n/routing";
 
 const LatestBlogPost: React.FC = () => {
   const locale: string = useLocale();
@@ -26,6 +27,9 @@ const LatestBlogPost: React.FC = () => {
                 </>
               );
             })}
+          </div>
+          <div className="doctor-btn">
+            <Link href="/news">{tGeneral("SeeAll")}</Link>
           </div>
         </div>
       </div>

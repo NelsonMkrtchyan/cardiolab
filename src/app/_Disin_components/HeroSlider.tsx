@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 const HeroSlider = () => {
   const t = useTranslations("HeroSlider");
+  const tAbout = useTranslations("About");
 
   return (
     <>
@@ -39,8 +40,8 @@ const HeroSlider = () => {
                       {/*/>*/}
                     </div>
 
-                    <h1>{t("titleOne")}</h1>
-                    <p>{t("descriptionOne")}</p>
+                    <h1>{t("descriptionOne")}</h1>
+                    <p>{tAbout("Mission")}</p>
 
                     <div className="common-btn">
                       {/*<Link href="/appointment">Get Appointment</Link>*/}

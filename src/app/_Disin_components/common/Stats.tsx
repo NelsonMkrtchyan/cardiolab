@@ -5,23 +5,22 @@ import { FaClinicMedical } from "react-icons/fa";
 import { FaPeopleGroup, FaUserDoctor } from "react-icons/fa6";
 import { GiAchievement } from "react-icons/gi";
 
-const FunFacts: React.FC = () => {
+const Stats: React.FC = () => {
   return (
     <>
-      <div
-        className="counter-area counter-bg counter-area-four"
-        style={{ backgroundImage: `url(/images/map-bg.png)` }}
-      >
+      <div className="counter-area counter-area-two">
         <div className="container">
-          <div className="row justify-content-center">
+          <div
+            className="row counter-bg"
+            style={{ backgroundImage: `url(/images/map-bg.png)` }}
+          >
             <div className="col-sm-6 col-lg-3">
               <div className="counter-item">
-                {/*<i className="icofont-patient-bed"></i>*/}
                 <div>
                   <FaClinicMedical className="icon largest-icon-size mb-4" />
                 </div>
-                <h3 className="counter">1</h3>
-                <p>Clinics</p>
+                <h3 className="counter">850</h3>
+                <p>Technologies</p>
               </div>
             </div>
 
@@ -39,17 +38,20 @@ const FunFacts: React.FC = () => {
 
             <div className="col-sm-6 col-lg-3">
               <div className="counter-item">
-                <FaUserDoctor className="icon largest-icon-size mb-4" />
-
-                <h3 className="counter">13</h3>
+                <div>
+                  <FaUserDoctor className="icon largest-icon-size mb-4" />
+                </div>
+                <h3 className="counter">750</h3>
                 <p>Doctors & Nurse</p>
               </div>
             </div>
 
             <div className="col-sm-6 col-lg-3">
               <div className="counter-item">
-                <GiAchievement className="icon largest-icon-size mb-4" />
-                <h3 className="counter">1</h3>
+                <div>
+                  <GiAchievement className="icon largest-icon-size mb-4" />
+                </div>
+                <h3 className="counter">18</h3>
                 <p>Year Experience</p>
               </div>
             </div>
@@ -60,4 +62,4 @@ const FunFacts: React.FC = () => {
   );
 };
 
-export default FunFacts;
+export default Stats;

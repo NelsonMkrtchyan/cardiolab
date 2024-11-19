@@ -71,21 +71,21 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link href="/news">
-                        {tGeneral("Footer.QuickLinks.Links.Blog")}
+                        {tGeneral("Footer.QuickLinks.Links.News")}
                       </Link>
                     </li>
                     <li>
-                      <Link href="/blog/details">
-                        {tGeneral("Footer.QuickLinks.Links.OurExpertise")}
+                      <Link href="/services">
+                        {tGeneral("Footer.QuickLinks.Links.Services")}
                       </Link>
                     </li>
                     <li>
-                      <Link href="/faq">
+                      <Link href="/stuff">
                         {tGeneral("Footer.QuickLinks.Links.Doctors")}
                       </Link>
                     </li>
                     <li>
-                      <Link href="/doctor">
+                      <Link href="/faq">
                         {tGeneral("Footer.QuickLinks.Links.Faq")}
                       </Link>
                     </li>

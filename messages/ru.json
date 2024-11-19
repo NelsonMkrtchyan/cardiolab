@@ -26,11 +26,11 @@
       "QuickLinks": {
         "QuickLinksText": "Быстрые ссылки",
         "Links": {
-          "Blog": "Блог",
+          "News": "Новости",
           "AboutUs": "О нас",
           "ContactUs": "Связаться с нами",
           "Doctors": "Врачи",
-          "OurExpertise": "Наш опыт",
+          "Services": "Наши услуги",
           "Faq": "Часто задаваемые вопросы"
         }
       },

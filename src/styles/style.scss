@@ -447,7 +447,7 @@ button {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 730px;
+  height: 500px;
   position: relative;
 
   .slider-shape {
@@ -490,7 +490,7 @@ button {
 
   .slider-text {
     position: relative;
-    margin-top: -160px;
+    //margin-top: -160px;
     z-index: 5;
 
     h1 {
@@ -1707,7 +1707,7 @@ footer {
         margin-bottom: 0;
       }
 
-      i {
+      .icon-wrapper {
         display: inline-block;
         position: absolute;
         top: 9px;
@@ -1953,6 +1953,9 @@ footer {
 
 /*-- Counter --*/
 .counter-area-two {
+  padding: 100px;
+  background-color: $main-color;
+
   .counter-bg {
     margin-top: 0;
     bottom: 0;
@@ -2000,7 +2003,7 @@ footer {
       position: relative;
       margin-bottom: 60px;
 
-      i {
+      .icon-container {
         display: inline-block;
         color: $main-color;
         position: absolute;
@@ -2803,6 +2806,7 @@ footer {
   .appointment-item-content {
     background-color: #f6f6f6;
     padding: 95px 40px 100px;
+    //padding: 35px 10px 30px;
     margin: 0 40px;
     border-radius: 10px;
 
@@ -3414,17 +3418,17 @@ footer {
 /*-- Blog --*/
 .blog-area-two {
   .section-title {
-    margin-bottom: 0;
+    //margin-bottom: 0;
 
     h2 {
-      font-weight: 600;
-      font-size: 22px;
-      margin-bottom: 30px;
-      padding-bottom: 0;
-
-      &:before {
-        display: none;
-      }
+      //font-weight: 600;
+      //font-size: 22px;
+      //margin-bottom: 30px;
+      //padding-bottom: 0;
+      //
+      //&:before {
+      //  display: none;
+      //}
     }
   }
 }
