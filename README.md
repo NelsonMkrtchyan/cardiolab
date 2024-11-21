@@ -8,7 +8,11 @@
 - [x] Integrate i18
 - [x] Config routing to handle locales
 - [x] Routing
-- [x] Implement About Us draft UI
+- [x] implement styles from template
+- [x] Implement Contact Us UI without config of forms
+- [x] Implement About Us UI, draft
+- [x] Implement Services page UI
+- [x] Implement Doctors and Doctor Detail page UI
 - [ ] Implement the landing page basic ui structure
 - [ ] Error Managment (w/ Sentry)
 - [ ] Analytics (posthog)
@@ -16,3 +20,5 @@
 - [ ] Integrate shadcn/ui components in general components
 - [ ] Set up general ui configs
 - [ ] implement each page one by one
+
+## Add images
