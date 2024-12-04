@@ -5,7 +5,7 @@ import Card from "~/app/[locale]/services/_components/Card";
 import { services } from "~/constants/services";
 import { useLocale } from "next-intl";
 
-const ServicesCard: React.FC = () => {
+const ServicesCards: React.FC = () => {
   const locale: string = useLocale();
   const localisedServices = services[locale as "en" | "ru" | "am"];
   return (
@@ -27,4 +27,4 @@ const ServicesCard: React.FC = () => {
   );
 };
 
-export default ServicesCard;
+export default ServicesCards;

@@ -7,6 +7,8 @@
     "Next": "Далее",
     "Previous": "Предыдущий",
     "SeeAll": "Посмотреть все",
+    "KnowMore": "Узнать больше",
+    "ContactUs": "Контакты",
     "OurNews": "Наши новости",
     "OurServices": "Наши услуги",
     "MeetOurStuff": "Познакомьтесь с нашим персоналом",
@@ -32,13 +34,14 @@
     "News": "Новости",
     "NewsDetails": "Детали новости",
     "Gallery": "Галерея",
-    "Stuff": "Наш персонал",
+    "Stuff": "Персонал",
     "EmployeeDetails": "Детали сотрудника",
-    "Services": "Наши услуги",
+    "Services": "Услуги",
     "ServiceDetails": "Подробности услуги",
     "PatientGuide": "Руководство для пациента",
     "DoctorGuide": "Руководство для врача",
-    "ContactUs": "Контакты"
+    "ContactUs": "Контакты",
+    "Podcasts": "Подкасты"
   },
   "Common": {
     "slogan": "Искусство заботы о сердце"

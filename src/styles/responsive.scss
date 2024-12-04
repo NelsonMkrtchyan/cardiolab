@@ -27,6 +27,16 @@ $black-color: #111111;
     padding-bottom: 50px;
   }
 
+  /*-- Buttons  --*/
+  .button-type-1 {
+    a {
+      margin-top: 5px;
+      font-size: 16px;
+      padding: 12px 35px;
+    }
+  }
+  /*-- End Buttons --*/
+
   /*----- Home Page One -----*/
   /*-- Header Top --*/
   .header-top {
@@ -402,13 +412,6 @@ $black-color: #111111;
       }
     }
   }
-  .doctor-btn {
-    a {
-      margin-top: 5px;
-      font-size: 16px;
-      padding: 12px 35px;
-    }
-  }
   /*-- End Doctors --*/
 
   /*-- Blog --*/
@@ -617,7 +620,10 @@ $black-color: #111111;
   /*-- Welcome --*/
   .welcome-left {
     height: auto;
-    background-image: unset;
+    background-image: unset !important;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 
     img {
       display: inline-block;
@@ -693,11 +699,8 @@ $black-color: #111111;
   /*-- End Welcome --*/
 
   /*-- Speciality --*/
-  .speciality-area {
-    .section-title-two {
-      padding-top: 0;
-      padding-left: 15px;
-    }
+  .speciality-area services {
+
   }
   .speciality-item {
     .speciality-inner {
@@ -1986,6 +1989,16 @@ $black-color: #111111;
     padding-bottom: 70px;
   }
 
+  /*-- Buttons  --*/
+  .button-type-1 {
+    a {
+      margin-top: 5px;
+      font-size: 16px;
+      padding: 12px 35px;
+    }
+  }
+  /*-- End Buttons --*/
+
   /*----- Home Page One -----*/
   /*-- Header Top --*/
   .header-top-item {
@@ -2351,13 +2364,6 @@ $black-color: #111111;
       }
     }
   }
-  .doctor-btn {
-    a {
-      margin-top: 20px;
-      font-size: 16px;
-      padding: 15px 50px;
-    }
-  }
   /*-- End Doctors --*/
 
   /*-- Blog --*/
@@ -2600,13 +2606,14 @@ $black-color: #111111;
   }
   .welcome-left {
     height: auto;
-    background-image: unset;
+    background-image: unset !important;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 
     img {
       display: inline-block;
     }
-
-
   }
   .welcome-right {
     padding-left: 25px;
@@ -2642,12 +2649,6 @@ $black-color: #111111;
   /*-- End Welcome --*/
 
   /*-- Speciality --*/
-  .speciality-area {
-    .section-title-two {
-      padding-top: 0;
-      padding-left: 15px;
-    }
-  }
   .speciality-item {
     .speciality-inner {
       padding-top: 25px;

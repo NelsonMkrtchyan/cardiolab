@@ -1,6 +1,5 @@
 "use client";
 
-import FeedbackForm from "./FeedbackForm";
 import { Link } from "~/i18n/routing";
 import { CardioLabInfo } from "~/constants/menus";
 import { useLocale, useTranslations } from "next-intl";
@@ -22,7 +21,7 @@ const Footer = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-sm-6 col-lg-4">
+            <div className="col-sm-5 col-lg-5">
               <div className="footer-item">
                 <div className="footer-contact pe-2">
                   <h3>{tMenu("ContactUs")}</h3>
@@ -59,7 +58,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-lg-2">
+            <div className="col-sm-3 col-lg-3">
               <div className="footer-item">
                 <div className="footer-quick">
                   <h3>{tFooter("QuickLinks.QuickLinksText")}</h3>
@@ -96,7 +95,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-lg-3">
+            <div className="col-sm-4 col-lg-4">
               <div className="footer-item">
                 <div className="footer-quick">
                   <h3>{tFooter("OurServices.OurServicesText")}</h3>
@@ -114,11 +113,6 @@ const Footer = () => {
                     })}
                   </ul>
                 </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-3">
-              <div className="footer-item">
-                <FeedbackForm />
               </div>
             </div>
           </div>

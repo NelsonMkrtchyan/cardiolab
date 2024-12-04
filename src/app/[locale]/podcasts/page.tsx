@@ -1,6 +1,6 @@
 import React from "react";
 import PageBanner from "~/app/_Disin_components/common/PageBanner";
-import ServicesCards from "~/app/[locale]/services/_components/ServicesCards";
+import PodcastsCards from "~/app/[locale]/podcasts/_components/PodcastsCards";
 import { useTranslations } from "next-intl";
 
 export default function Page() {
@@ -9,13 +9,13 @@ export default function Page() {
   return (
     <>
       <PageBanner
-        pageTitle={tMenu("Services")}
+        pageTitle={tMenu("Podcasts")}
         homePageUrl="/"
         homePageText={tMenu("Home")}
-        activePageText={tMenu("Services")}
+        activePageText={tMenu("Podcasts")}
         bgImage="/images/page-banner3.jpg"
       />
-      <ServicesCards />
+      <PodcastsCards />
     </>
   );
 }

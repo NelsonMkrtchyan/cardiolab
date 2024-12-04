@@ -34,123 +34,63 @@ const AppointmentForm: React.FC = () => {
                 <div className="appointment-form">
                   <form>
                     <div className="row">
-                      <div className="col-lg-6">
+                      <div className="col-lg-12">
                         <div className="form-group">
+                          <div className="input-container">
+                            <label>
+                              {tComponents("Appointments.labels.name")}
+                            </label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder={tComponents(
+                                "Appointments.placeholders.name",
+                              )}
+                            />
+                          </div>
                           <div className="icon-container">
                             <FaUserTie className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>
-                            {tComponents("Appointments.labels.name")}
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder={tComponents(
-                              "Appointments.placeholders.name",
-                            )}
-                          />
                         </div>
                       </div>
 
-                      <div className="col-lg-6">
+                      <div className="col-lg-12">
                         <div className="form-group">
+                          <div className="input-container">
+                            <label>
+                              {tComponents("Appointments.labels.email")}
+                            </label>
+                            <input
+                              type="email"
+                              className="form-control"
+                              placeholder={tComponents(
+                                "Appointments.placeholders.email",
+                              )}
+                            />
+                          </div>
                           <div className="icon-container">
                             <MdEmail className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>
-                            {tComponents("Appointments.labels.email")}
-                          </label>
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder={tComponents(
-                              "Appointments.placeholders.email",
-                            )}
-                          />
                         </div>
                       </div>
 
-                      <div className="col-lg-6">
+                      <div className="col-lg-12">
                         <div className="form-group">
+                          <div className="input-container">
+                            <label>
+                              {tComponents("Appointments.labels.phone")}
+                            </label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder={tComponents(
+                                "Appointments.placeholders.phone",
+                              )}
+                            />
+                          </div>
                           <div className="icon-container">
                             <FaPhoneAlt className="icon largest-icon-size mb-4" />
                           </div>
-                          <label>
-                            {tComponents("Appointments.labels.phone")}
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder={tComponents(
-                              "Appointments.placeholders.phone",
-                            )}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <div className="icon-container">
-                            <LiaHospital className="icon largest-icon-size mb-4" />
-                          </div>
-                          <label>
-                            {tComponents("Appointments.labels.services")}
-                          </label>
-                          <select
-                            className="form-control"
-                            id="exampleFormControlSelect1"
-                          >
-                            <option>
-                              {tComponents(
-                                "Appointments.placeholders.services",
-                              )}
-                            </option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <div className="icon-container">
-                            <FaUserDoctor className="icon largest-icon-size mb-4" />
-                          </div>
-                          <label>
-                            {tComponents("Appointments.labels.doctors")}
-                          </label>
-                          <select
-                            className="form-control"
-                            id="exampleFormControlSelect2"
-                          >
-                            <option>
-                              {" "}
-                              {tComponents("Appointments.placeholders.doctors")}
-                            </option>
-                            <option>John Smith</option>
-                            <option>Sarah Taylor</option>
-                            <option>Stevn King</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <div className="icon-container">
-                            <CiUser className="icon largest-icon-size mb-4" />
-                          </div>
-                          <label>
-                            {tComponents("Appointments.labels.age")}
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder={tComponents(
-                              "Appointments.placeholders.age",
-                            )}
-                          />
                         </div>
                       </div>
                     </div>

@@ -13,20 +13,6 @@ const MeetOurStuff = () => {
 
   return (
     <>
-      {/*<div className="doctors-area doctors-area-two pt-100 pb-70">*/}
-      {/*  <div className="container">*/}
-      {/*    <div className="row justify-content-center">*/}
-      {/*      {localisedStuff.slice(0, 3).map((employee) => {*/}
-      {/*        return (*/}
-      {/*          <>*/}
-      {/*            <Card employee={employee} />*/}
-      {/*          </>*/}
-      {/*        );*/}
-      {/*      })}*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
-
       <div className="doctors-area ptb-100">
         <div className="container">
           <div className="section-title">
@@ -43,7 +29,7 @@ const MeetOurStuff = () => {
             })}
           </div>
 
-          <div className="doctor-btn">
+          <div className="button-type-1">
             <Link href="/stuff">{tGeneral("SeeAll")}</Link>
           </div>
         </div>

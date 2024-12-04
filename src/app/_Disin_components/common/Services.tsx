@@ -29,7 +29,7 @@ const Services: React.FC = () => {
             })}
           </div>
           <div>
-            <div className="doctor-btn">
+            <div className="button-type-1">
               <Link href="/services">{tGeneral("SeeAll")}</Link>
             </div>
           </div>

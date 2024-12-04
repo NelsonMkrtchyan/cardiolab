@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import CommentForm from "./CommentForm";
 import Image from "next/image";
 import { type NewsI } from "~/constants/news";
 import { FaRegCalendarAlt } from "react-icons/fa";
@@ -71,11 +70,6 @@ const BlogDetailsContent = ({
                   <h2>{title}</h2>
 
                   <ul>
-                    {/*<li>*/}
-                    {/*  <Link href="/blog">*/}
-                    {/*    <i className="icofont-businessman"></i> Admin*/}
-                    {/*  </Link>*/}
-                    {/*</li>*/}
                     <li>
                       <FaRegCalendarAlt className="icon" />
                       {formattedDate}
@@ -101,9 +95,10 @@ const BlogDetailsContent = ({
                     </ul>
                   </div>
                 </div>
+                <div className="button-type-1">
+                  <Link href="/contact">{tGeneral("ContactUs")}</Link>
+                </div>
               </div>
-
-              <CommentForm />
             </div>
           </div>
         </div>

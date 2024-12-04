@@ -7,6 +7,8 @@
     "Next": "Next",
     "Previous": "Previous",
     "SeeAll": "See All",
+    "KnowMore": "Know More",
+    "ContactUs": "Contact Us",
     "OurNews": "Our News",
     "OurServices": "Our Services",
     "MeetOurStuff": "Meet Our Stuff",
@@ -32,13 +34,14 @@
     "News": "News",
     "NewsDetails": "News Details",
     "Gallery": "Gallery",
-    "Stuff": "Our Stuff",
+    "Stuff": "Stuff",
     "EmployeeDetails": "Employee Details",
-    "Services": "Our Services",
+    "Services": "Services",
     "ServiceDetails": "Service Details",
     "PatientGuide": "Patient Guide",
     "DoctorGuide": "Doctor Guide",
-    "ContactUs": "Contact Us"
+    "ContactUs": "Contact Us",
+    "Podcasts": "Podcasts"
   },
   "Common": {
     "slogan": "The Art of Heart Care"
