@@ -3,10 +3,10 @@ import { useTranslations } from "next-intl";
 export const Menus = () => {
   const t = useTranslations("Menu");
   return [
-    {
-      label: `${t("Home")}`,
-      link: "/",
-    },
+    // {
+    //   label: `${t("Home")}`,
+    //   link: "/",
+    // },
     {
       label: `${t("AboutUs")}`,
       link: "/about",
@@ -15,10 +15,10 @@ export const Menus = () => {
       label: `${t("News")}`,
       link: "/news",
     },
-    // {
-    //   label: `${t("Gallery")}`,
-    //   link: "/gallery",
-    // },
+    {
+      label: `${t("Gallery")}`,
+      link: "/gallery",
+    },
     {
       label: `${t("Stuff")}`,
       link: "/stuff",
@@ -35,6 +35,10 @@ export const Menus = () => {
     //   label: `${t("DoctorGuide")}`,
     //   link: "/doctorguide",
     // },
+    {
+      label: `${t("Podcasts")}`,
+      link: "/podcasts",
+    },
     {
       label: `${t("ContactUs")}`,
       link: "/contact",

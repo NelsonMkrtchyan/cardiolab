@@ -6,27 +6,16 @@ import React from "react";
 import { FaLongArrowAltRight, FaRegCalendarAlt } from "react-icons/fa";
 import { type NewsCardI } from "~/constants/news";
 import { useLocale, useTranslations } from "next-intl";
-import dayjs from "dayjs";
 
 import "dayjs/locale/ru"; // Import the Russian locale
-import "dayjs/locale/hy-am"; // Import the Armenian locale
+import "dayjs/locale/hy-am";
+
+import { formattingDate } from "~/utils/workingWithDates"; // Import the Armenian locale
 
 const NewsCard = ({ news }: NewsCardI) => {
   const locale: string = useLocale();
   const { id, title, date, media } = news;
   const tGeneral = useTranslations("General");
-
-  const getLocale = (locale: string) => {
-    if (locale === "am") {
-      return "hy-AM";
-    }
-    return locale;
-  };
-
-  const formattedDate = dayjs(date)
-    .locale(getLocale(locale))
-    .format("MMM DD, YYYY");
-
   return (
     <>
       <div className="col-md-6 col-lg-4">
@@ -54,7 +43,7 @@ const NewsCard = ({ news }: NewsCardI) => {
                 </li>
                 <li>
                   <FaRegCalendarAlt className="icon" />
-                  {formattedDate}
+                  {formattingDate({ date, locale })}
                 </li>
               </ul>
             </div>

@@ -1,5 +1,10 @@
 import { IoCall, IoLocation, IoMail } from "react-icons/io5";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa6";
 import { CardioLabInfo } from "~/constants/menus";
 
 const TopHeader = () => {
@@ -62,6 +67,14 @@ const TopHeader = () => {
                         target="_blank"
                       >
                         <FaYoutube className="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/company/cardiolab-armenia"
+                        target="_blank"
+                      >
+                        <FaLinkedinIn className="" />
                       </a>
                     </li>
                   </ul>
