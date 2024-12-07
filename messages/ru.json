@@ -39,10 +39,17 @@
     "EmployeeDetails": "Детали сотрудника",
     "Services": "Услуги",
     "ServiceDetails": "Подробности услуги",
+    "Guide": "Руководство",
     "PatientGuide": "Руководство для пациента",
     "DoctorGuide": "Руководство для врача",
     "ContactUs": "Контакты",
-    "Podcasts": "Подкасты"
+    "Podcasts": "Подкасты",
+    "InsuranceInformation": "Страховая информация",
+    "HealthLibrary": "Библиотека здоровья",
+    "UsefulMaterials": "Полезные материалы",
+    "Accredited Trainings": "Аккредитованные Тренинги",
+    "Seminars": "Семинары",
+    "JobOpenings": "Вакансии"
   },
   "Common": {
     "slogan": "Искусство заботы о сердце"

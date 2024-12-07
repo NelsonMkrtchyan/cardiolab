@@ -39,10 +39,17 @@
     "EmployeeDetails": "Employee Details",
     "Services": "Services",
     "ServiceDetails": "Service Details",
+    "Guide": "Guides",
     "PatientGuide": "Patient Guide",
     "DoctorGuide": "Doctor Guide",
     "ContactUs": "Contact Us",
-    "Podcasts": "Podcasts"
+    "Podcasts": "Podcasts",
+    "InsuranceInformation": "Insurance Information",
+    "HealthLibrary": "Health Library",
+    "UsefulMaterials": "Useful Materials",
+    "AccreditedTrainings": "Accredited Trainings",
+    "Seminars": "Seminars",
+    "JobOpenings": "Job Openings"
   },
   "Common": {
     "slogan": "The Art of Heart Care"

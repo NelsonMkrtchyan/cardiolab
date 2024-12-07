@@ -16,7 +16,7 @@ const Footer = () => {
                 <div className="">
                   <div className="flex text-center">
                     {/*NOTE: Do something with logo border*/}
-                    <Link href="/" className="mb-8 inline-block">
+                    <Link href="/public" className="mb-8 inline-block">
                       <Image
                         src="https://utfs.io/f/kPqN7718CWluI8zwgwEmOVFpZEU45sKoR6bt7NDSv82hyxfg"
                         alt="logo"
@@ -27,7 +27,7 @@ const Footer = () => {
                       <Image
                         src="https://utfs.io/f/kPqN7718CWluI8zwgwEmOVFpZEU45sKoR6bt7NDSv82hyxfg"
                         alt="logo"
-                        className="dark:border-lime hidden w-full border-2 dark:block"
+                        className="hidden w-full border-2 dark:block dark:border-lime"
                         width={140}
                         height={30}
                       />
@@ -39,11 +39,11 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center">
                   <a
-                    href="/"
+                    href="/public"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="dark:hover:text-lime mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                   >
                     <svg
                       width="18"
@@ -59,11 +59,11 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="/public"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="dark:hover:text-lime mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                   >
                     <svg
                       width="18"
@@ -81,11 +81,11 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="/public"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="dark:hover:text-lime mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                   >
                     <svg
                       width="18"
@@ -97,11 +97,11 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="/public"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="dark:hover:text-lime text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                   >
                     <svg
                       width="17"
@@ -125,15 +125,15 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/blog"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       Blog
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      href="/public"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       Pricing
                     </Link>
@@ -141,7 +141,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       About
                     </Link>
@@ -158,24 +158,24 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      href="/public"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       TOS
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      href="/public"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       Privacy Policy
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      href="/public"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       Refund Policy
                     </Link>
@@ -193,15 +193,15 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       Open Support Ticket
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      href="/public"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       Terms of Use
                     </Link>
@@ -209,7 +209,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about"
-                      className="dark:hover:text-lime mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-lime"
                     >
                       About
                     </Link>

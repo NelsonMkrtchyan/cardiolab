@@ -1822,8 +1822,8 @@ $black-color: #111111;
     height: 65px;
     line-height: 65px;
     position: absolute;
-    top: 42%;
-    left: 20%;
+    //top: 42%;
+    //left: 20%;
     font-size: 25px;
   }
   .faq-area-two .accordion a:after {
@@ -1945,17 +1945,6 @@ $black-color: #111111;
   }
 
   .faq-area-two {
-    .faq-shape {
-      img {
-        &:nth-child(1) {
-          width: 50px;
-        }
-
-        &:nth-child(2) {
-          width: 50px;
-        }
-      }
-    }
   }
 
   .page-title-area {
@@ -3607,8 +3596,8 @@ $black-color: #111111;
     height: 65px;
     line-height: 65px;
     position: absolute;
-    top: 45%;
-    left: 65px;
+    //top: 45%;
+    //left: 65px;
     font-size: 25px;
   }
   /*----- End Home Four CSS -----*/
@@ -3688,17 +3677,6 @@ $black-color: #111111;
   }
 
   .faq-area-two {
-    .faq-shape {
-      img {
-        &:nth-child(1) {
-          width: 70px;
-        }
-
-        &:nth-child(2) {
-          width: 70px;
-        }
-      }
-    }
   }
 }
 
@@ -3967,17 +3945,6 @@ $black-color: #111111;
   }
 
   .faq-area-two {
-    .faq-shape {
-      img {
-        &:nth-child(1) {
-          width: 150px;
-        }
-
-        &:nth-child(2) {
-          width: 150px;
-        }
-      }
-    }
   }
 }
 

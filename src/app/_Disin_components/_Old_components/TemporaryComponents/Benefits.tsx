@@ -8,8 +8,11 @@ import {
   SunIcon,
 } from "@heroicons/react/24/solid";
 
-import { Container } from "~/app/_Old_components/Container";
-import { svg_1, svg_2 } from "~/app/_Old_components/TemporaryComponents/svgs";
+import { Container } from "~/app/_Disin_components/_Old_components/Container";
+import {
+  svg_1,
+  svg_2,
+} from "~/app/_Disin_components/_Old_components/TemporaryComponents/svgs";
 
 export const benefitOne = {
   title: "Highlight your benefits",

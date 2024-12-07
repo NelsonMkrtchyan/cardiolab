@@ -39,10 +39,17 @@
     "EmployeeDetails": "Աշխատակցի մանրամասներ",
     "Services": "Ծառայություններ",
     "ServiceDetails": "Ծառայության մանրամասներ",
-    "PatientGuide": "Պացիենտի Համար.",
+    "Guide": "Ձեռնարկ",
+    "PatientGuide": "Պացիենտի Համար",
     "DoctorGuide": "Բուժաշխատողի Համար",
     "ContactUs": "Հետադարձ Կապ",
-    "Podcasts": "Պոդքասթներ"
+    "Podcasts": "Պոդքասթներ",
+    "InsuranceInformation": "Ապահովագրական տեղեկատվություն",
+    "HealthLibrary": "Առողջության գրադարան",
+    "UsefulMaterials": "Օգտակար նյութեր",
+    "Accredited Trainings": "Կրեդիտավորված Վերապատրաստումներ",
+    "Seminars": "Սեմինարներ",
+    "JobOpenings": "Թափուր հաստիքներ"
   },
   "Common": {
     "slogan": "Սրտի խնամքի արվեստը"

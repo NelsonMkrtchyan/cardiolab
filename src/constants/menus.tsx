@@ -20,6 +20,10 @@ export const Menus = () => {
       link: "/gallery",
     },
     {
+      label: `${t("Podcasts")}`,
+      link: "/podcasts",
+    },
+    {
       label: `${t("Stuff")}`,
       link: "/stuff",
     },
@@ -36,8 +40,18 @@ export const Menus = () => {
     //   link: "/doctorguide",
     // },
     {
-      label: `${t("Podcasts")}`,
-      link: "/podcasts",
+      label: `${t("Guide")}`,
+      link: "#",
+      submenu: [
+        {
+          label: `${t("DoctorGuide")}`,
+          link: "/doctorGuide",
+        },
+        {
+          label: `${t("PatientGuide")}`,
+          link: "/patientGuide",
+        },
+      ],
     },
     {
       label: `${t("ContactUs")}`,

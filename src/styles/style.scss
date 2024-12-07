@@ -65,6 +65,10 @@ This files table contents are outlined below>>>>>
 $main-color: #1034A6;
 $second-color: #69ba31; // rgba(105, 186, 49, 0.9);
 $white-color: #ffffff;
+$dark-grey: #323232;
+$spanish-grey: #989898;
+$light-grey: #D3D3D3;
+
 $grey-color: #344c5d;
 $black-color: #111111;
 $transition: .5s all ease;
@@ -170,7 +174,6 @@ button {
 
 /*-- End Buttons --*/
 
-
 /*-- End Default CSS --*/
 
 /*-- Page Title --*/
@@ -254,7 +257,6 @@ button {
 
 /*-- End Page Title --*/
 
-
 /*----- Sections -----*/
 .section-title {
   margin-bottom: 50px;
@@ -303,6 +305,7 @@ button {
 }
 
 /*-- End Section --*/
+
 /*----- Home Page One -----*/
 /*-- Header Top --*/
 .header-top {
@@ -452,9 +455,11 @@ button {
             a {
               color: #344c5d;
               font-size: 14px;
+              border-bottom: 2px solid transparent;
 
               &:hover, &:focus, &.active {
                 color: $main-color;
+                border-bottom: 2px solid $second-color;
               }
             }
 
@@ -1181,6 +1186,7 @@ button {
       margin-bottom: 0;
     }
   }
+
 }
 
 .video-wrap {
@@ -4235,81 +4241,6 @@ button {
   }
 }
 
-.faq-area-two {
-  background-color: #4f87fb;
-  position: relative;
-
-  .faq-shape {
-    img {
-      position: absolute;
-
-      &:nth-child(1) {
-        top: 0;
-        right: 0;
-      }
-
-      &:nth-child(2) {
-        left: 0;
-        bottom: 0;
-      }
-    }
-  }
-
-  .section-title {
-    text-align: center;
-
-    h2 {
-      color: $white-color;
-      display: inline-block;
-
-      &:before {
-        background-color: #fff;
-      }
-    }
-  }
-
-  .faq-img {
-    margin-bottom: 30px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    position: relative;
-
-    img {
-      width: 100%;
-      display: none;
-    }
-
-    .popup-youtube {
-      display: inline-block;
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
-      border-radius: 50%;
-      color: #fff;
-      background-color: #4f87fb;
-      position: absolute;
-      top: 50%;
-      left: 20%;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 1;
-      text-align: center;
-      transform: translateY(-50%) translateX(-50%);
-
-      &:hover {
-        background-color: #232323;
-      }
-    }
-  }
-}
-
 .accordion {
   border: none !important;
 
@@ -4560,6 +4491,8 @@ button {
   }
 }
 
+/*----- FAQ -----*/
+
 .faq-content {
   margin-bottom: 50px;
 
@@ -4609,6 +4542,8 @@ button {
     }
   }
 }
+
+/*----- End FAQ -----*/
 
 /*----- Icons styles -----*/
 .icon {
@@ -4692,6 +4627,7 @@ button {
   }
 }
 
+/*----- End Icons styles -----*/
 
 /*-- Podcasts --*/
 .podcasts-area {
@@ -4751,6 +4687,8 @@ button {
     }
   }
 }
+
+/*-- End Podcasts --*/
 
 
 /*-- Gallery --*/
@@ -4979,7 +4917,252 @@ button {
 
 }
 
-/*-- End Podcasts --*/
+/*-- End Gallery --*/
+
+
+/*-- Patient Guid section --*/
+.expertise-item {
+  text-align: center;
+
+  a {
+    color: #fff;
+  }
+
+  .expertise-inner {
+    background-color: $main-color;
+    padding: 42px 25px 35px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: $transition;
+
+    .icon {
+      color: $white-color;
+      width: 70px;
+      height: 70px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      padding: 10px;
+      margin-bottom: 35px;
+      box-shadow: none;
+      //box-shadow: 0 0 0 7px #ffffffa6;
+      transition: $transition;
+      position: relative;
+      top: 8px;
+    }
+
+    h3 {
+      color: $white-color;
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 14px;
+      transition: $transition;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: $white-color;
+      transition: $transition;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .icon {
+        //box-shadow: 0 0 0 7px $second-color;
+        //box-shadow: 0 0 0 7px #ffffffa6;
+        box-shadow: 0 0 0 7px $light-grey;
+        //color: $second-color;
+      }
+
+    }
+  }
+
+}
+
+/*-- End Patient Guid --*/
+
+/*-- Faq section --*/
+.faq-area-two {
+  //background-color: $second-color;
+  //background-color: $dark-grey;
+  position: relative;
+
+  .section-title {
+    h2 {
+      //color: $white-color;
+      //color: $main-color;
+      display: inline-block;
+
+      &:before {
+        //background-color: #fff;
+        background-color: $second-color;
+      }
+    }
+  }
+
+  .faq-img {
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+
+    img {
+      width: 100%;
+      display: none;
+    }
+
+    .popup-youtube {
+      //display: inline-block;
+      position: absolute;
+      top: calc(50% - 40px);
+      left: calc(50% - 40px);
+      width: 80px;
+      height: 80px;
+      line-height: 75px;
+      border-radius: 50%;
+      color: $second-color;
+      font-size: 30px;
+      background-color: $white-color;
+      cursor: pointer;
+      transition: $transition;
+
+      .icon {
+        margin-left: 10px;
+        color: $second-color;
+      }
+
+      &:hover {
+        color: $white-color;
+        //background-color: $black-color;
+        background-color: $second-color;
+
+        .icon {
+          color: $white-color;
+          //color: $second-color;
+        }
+      }
+    }
+
+  }
+
+  .accordion {
+    border: none !important;
+
+    .accordion__item {
+      -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+      box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+      //background: transparent;
+      //background: $dark-grey;
+      background: $second-color;
+      //background: $second-color;
+      margin-bottom: 10px;
+      position: relative;
+      border: none;
+      border-radius: 8px 8px 0 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .accordion__button {
+      //border-bottom: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 15px 35px 15px 18px;
+      margin: 0;
+      text-decoration: none;
+      transition: 0.5s;
+      position: relative;
+      font-size: 15px;
+      font-weight: 700;
+      //background: transparent;
+      background-color: $main-color;
+      border: 1px solid #ffffff;
+      border-radius: 8px 8px 0 0;
+
+      &:hover, &[aria-expanded="true"] {
+        //background-color: $main-color;
+        background-color: $second-color;
+        color: #fff;
+        border: 1px solid $second-color;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      span {
+        &::before {
+          position: absolute;
+          height: 100%;
+          width: 40px;
+          content: '';
+          right: 0;
+          top: 0;
+          z-index: 0;
+        }
+      }
+
+      &:before {
+        margin-right: 0;
+        border-bottom: 3px solid #fff;
+        border-right: none;
+        transform: rotate(0deg);
+        height: 13px;
+        width: 13px;
+        position: absolute;
+        right: 15px;
+        top: 25%;
+        z-index: 1;
+      }
+
+      &::after {
+        content: '';
+        margin-right: 0;
+        border-right: 3px solid #fff;
+        transform: rotate(0deg);
+        margin-top: 5px;
+        height: 13px;
+        width: 13px;
+        position: absolute;
+        right: 20px;
+        top: 25%;
+        z-index: 1;
+      }
+
+      &[aria-expanded='true']::after, &[aria-selected='true']::after {
+        display: none;
+      }
+
+      &[aria-expanded='true']::before, &[aria-selected='true']::before {
+        transform: rotate(0deg);
+      }
+    }
+
+    .accordion__panel {
+      padding: 15px;
+
+      p {
+        color: #fff;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+  }
+
+}
+
+/*-- End Faq section --*/
 
 
 /*-- Footer --*/

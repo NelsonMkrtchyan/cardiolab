@@ -51,7 +51,7 @@ const NavigationBar = () => {
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
-                href="/"
+                href="/public"
                 className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"} `}
               >
                 <Image
@@ -66,7 +66,7 @@ const NavigationBar = () => {
                   alt="logo"
                   width={140}
                   height={30}
-                  className="dark:border-lime hidden w-full border-2 dark:block"
+                  className="hidden w-full border-2 dark:block dark:border-lime"
                 />
               </Link>
             </div>
@@ -96,7 +96,7 @@ const NavigationBar = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar dark:bg-bgColorDarker absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-bgColorDarker lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -110,8 +110,8 @@ const NavigationBar = () => {
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
-                                ? "dark:text-lime text-primary"
-                                : "dark:hover:text-lime text-dark hover:text-primary dark:text-white/70"
+                                ? "text-primary dark:text-lime"
+                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-lime"
                             }`}
                           >
                             {menuItem.title}
@@ -135,7 +135,7 @@ const NavigationBar = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu dark:bg-bgColorDarker relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-bgColorDarker lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
@@ -143,7 +143,7 @@ const NavigationBar = () => {
                                 <Link
                                   href={submenuItem.path ?? ""}
                                   key={index}
-                                  className="dark:hover:text-lime block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 lg:px-3"
+                                  className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-lime lg:px-3"
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -165,7 +165,7 @@ const NavigationBar = () => {
                 </Link>
                 <Link
                   href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover dark:bg-lime dark:hover:bg-lime/80 hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 dark:bg-lime dark:hover:bg-lime/80 md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Sign Up
                 </Link>
