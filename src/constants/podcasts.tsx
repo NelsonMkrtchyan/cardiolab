@@ -8,6 +8,7 @@ export interface PodcastI {
   icon: React.ReactNode;
   url: string;
   posterUrl: string;
+  date: Date;
 }
 
 export interface CardI {
@@ -31,6 +32,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=ksAkHj7KceI&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=12&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab01.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 2,
@@ -39,6 +41,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=-s4Y53WylRw&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=11&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab02.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 3,
@@ -47,6 +50,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=i34WMaQ4iFk&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=10&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab03.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 4,
@@ -55,6 +59,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=IwYVsFNAFzc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=9&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab04.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 5,
@@ -63,6 +68,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=TomwbYICxaw&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=8&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab05.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 6,
@@ -71,6 +77,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=09zmigrWKoQ&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=7&ab_channel=CardioLab",
       posterUrl: "url(/images/feedback-bg.jpg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 7,
@@ -79,6 +86,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=fBIsPXOJBic&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=6&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab07.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 9,
@@ -87,6 +95,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=dNM2pEcR81A&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=5&t=1s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab09.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 10,
@@ -95,6 +104,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=wB09BIkGlDc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=4&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab10.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 11,
@@ -103,6 +113,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=mNVvxlsCe10&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=3&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab11.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 12,
@@ -112,6 +123,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=OD9Ni0_I3Tc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=2&t=7s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab12.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 13,
@@ -121,6 +133,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=M_rJ3aL2BEA&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=1&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab13.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 14,
@@ -130,6 +143,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=2AiH_Ys3zCI&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=14&t=3s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab14.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
   ],
   am: [
@@ -140,6 +154,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=ksAkHj7KceI&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=12&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab01.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 2,
@@ -148,6 +163,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=-s4Y53WylRw&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=11&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab02.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 3,
@@ -157,6 +173,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=i34WMaQ4iFk&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=10&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab03.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 4,
@@ -166,6 +183,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=IwYVsFNAFzc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=9&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab04.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 5,
@@ -174,6 +192,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=TomwbYICxaw&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=8&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab05.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 6,
@@ -183,6 +202,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=09zmigrWKoQ&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=7&ab_channel=CardioLab",
       posterUrl: "url(/images/feedback-bg.jpg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 7,
@@ -192,6 +212,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=fBIsPXOJBic&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=6&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab07.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 9,
@@ -200,6 +221,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=dNM2pEcR81A&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=5&t=1s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab09.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 10,
@@ -209,6 +231,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=wB09BIkGlDc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=4&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab10.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 11,
@@ -217,6 +240,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=mNVvxlsCe10&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=3&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab11.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 12,
@@ -226,6 +250,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=OD9Ni0_I3Tc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=2&t=7s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab12.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 13,
@@ -235,6 +260,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=M_rJ3aL2BEA&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=1&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab13.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 14,
@@ -244,6 +270,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=2AiH_Ys3zCI&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=14&t=3s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab14.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
   ],
   ru: [
@@ -254,6 +281,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=ksAkHj7KceI&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=12&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab01.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 2,
@@ -262,6 +290,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=-s4Y53WylRw&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=11&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab02.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 3,
@@ -270,6 +299,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=i34WMaQ4iFk&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=10&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab03.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 4,
@@ -278,6 +308,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=IwYVsFNAFzc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=9&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab04.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 5,
@@ -286,6 +317,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=TomwbYICxaw&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=8&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab05.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 6,
@@ -295,6 +327,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=09zmigrWKoQ&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=7&ab_channel=CardioLab",
       posterUrl: "url(/images/feedback-bg.jpg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 7,
@@ -304,6 +337,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=fBIsPXOJBic&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=6&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab07.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 9,
@@ -312,6 +346,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=dNM2pEcR81A&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=5&t=1s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab09.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 10,
@@ -321,6 +356,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=wB09BIkGlDc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=4&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab10.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 11,
@@ -329,6 +365,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=mNVvxlsCe10&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=3&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab11.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 12,
@@ -338,6 +375,7 @@ export const podcasts: PodcastsI = {
       icon: <FaDiagnoses className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=OD9Ni0_I3Tc&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=2&t=7s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab12.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 13,
@@ -347,6 +385,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=M_rJ3aL2BEA&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=1&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab13.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
     {
       id: 14,
@@ -356,6 +395,7 @@ export const podcasts: PodcastsI = {
       icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
       url: "https://www.youtube.com/watch?v=2AiH_Ys3zCI&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=14&t=3s&ab_channel=CardioLab",
       posterUrl: "url(/images/podcasts/lab14.jpeg)",
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
   ],
 };

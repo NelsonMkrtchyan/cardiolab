@@ -294,46 +294,32 @@ $black-color: #111111;
   }
   /*-- End Services --*/
 
-  /*-- Expertise --*/
-  .expertise-item {
-    .expertise-inner {
-      padding-top: 35px;
-      padding-bottom: 30px;
+  /*-- Cards --*/
+  .blue-card {
+    .blue-card-item {
+      .blue-card-item-inner {
+        padding-top: 35px;
+        padding-bottom: 30px;
 
-      i {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 26px;
-        margin-bottom: 22px;
-        box-shadow: 0 0 0 5px #ffffffa6;
+        i {
+          width: 60px;
+          height: 60px;
+          line-height: 60px;
+          font-size: 26px;
+          margin-bottom: 22px;
+          box-shadow: 0 0 0 5px #ffffffa6;
+        }
+
+        h3 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
       }
 
-      h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
-    }
-
-    .expertise-right {
-      padding-left: 0;
-      margin-bottom: 30px;
-
-      &:before {
-        display: none;
-      }
-
-      &:after {
-        display: none;
-      }
-
-      img {
-        width: 100%;
-        z-index: 1;
-      }
     }
   }
-  /*-- End Expertise --*/
+  /*-- End Cards --*/
+
 
   /*-- Video --*/
   .video-area {
@@ -2241,45 +2227,37 @@ $black-color: #111111;
   }
   /*-- End Services --*/
 
-  /*-- Expertise --*/
-  .expertise-item {
-    .expertise-inner {
-      padding-top: 36px;
-      padding-bottom: 26px;
+  /*-- Cards --*/
+  .blue-card {
+    .blue-card-item {
+      .blue-card-item-inner {
+        padding-top: 36px;
+        padding-bottom: 26px;
 
-      i {
-        width: 65px;
-        height: 65px;
-        line-height: 65px;
-        font-size: 28px;
-        margin-bottom: 35px;
+        i {
+          width: 65px;
+          height: 65px;
+          line-height: 65px;
+          font-size: 28px;
+          margin-bottom: 35px;
+        }
+
+        h3 {
+          font-size: 20px;
+          margin-bottom: 14px;
+        }
+
+        p {
+          margin-bottom: 0;
+          color: $white-color;
+          padding-right: 25px;
+          padding-left: 25px;
+        }
       }
 
-      h3 {
-        font-size: 20px;
-        margin-bottom: 14px;
-      }
-
-      p {
-        margin-bottom: 0;
-        color: $white-color;
-        padding-right: 25px;
-        padding-left: 25px;
-      }
-    }
-
-    .expertise-right {
-      padding-left: 0;
-      margin-bottom: 40px;
-
-      &:before {
-        top: -15px;
-        left: -10px;
-      }
     }
   }
-  /*-- End Expertise --*/
-
+  /*-- End Cards --*/
   /*-- Video --*/
   .video-area {
     height: 500px;
@@ -3736,27 +3714,6 @@ $black-color: #111111;
   }
   /*-- End Video --*/
 
-  /*-- Expertise --*/
-  .expertise-item {
-    .expertise-right {
-      &:before {
-        width: 395px;
-        height: 355px;
-      }
-
-      &:after {
-        width: 395px;
-        height: 355px;
-      }
-
-      img {
-        width: 100%;
-        z-index: 1;
-      }
-    }
-  }
-  /*-- End Expertise --*/
-
   /*-- Blog --*/
   .blog-item {
     .blog-bottom {
@@ -3843,6 +3800,21 @@ $black-color: #111111;
   }
   /*-- End Blog Details --*/
 
+  /*-- Cards --*/
+
+  .blue-card {
+    .blue-card-item {
+      .blue-card-item-inner {
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+    }
+  }
+
+  /*-- End Cards --*/
+
   .banner-item {
     .banner-right {
       img {
@@ -3876,9 +3848,6 @@ $black-color: #111111;
     }
   }
 
-  .expertise-item .expertise-inner h3 {
-    font-size: 18px;
-  }
   .slider-item-two .slider-shape img {
     top: 0;
     max-width: 365px;

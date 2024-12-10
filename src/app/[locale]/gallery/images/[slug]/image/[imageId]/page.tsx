@@ -1,14 +1,16 @@
 "use client";
 
 import React from "react";
-import Carousel from "~/app/[locale]/gallery/_components/Carousel";
 import { useParams } from "next/navigation";
 import { gallery } from "~/constants/Gallery";
 import { type NextPage } from "next";
+import Carousel from "~/app/[locale]/gallery/images/_components/Carousel";
 
 const Page: NextPage = () => {
   const { slug, imageId } = useParams();
-  const galleryFolder = gallery.find((folder) => folder.id === Number(slug));
+  const galleryFolder = gallery.images.find(
+    (folder) => folder.id === Number(slug),
+  );
   const index = galleryFolder.images.findIndex(
     (obj) => obj.id === Number(imageId),
   );

@@ -1,22 +1,28 @@
 "use client";
 
-import PatientGuideChapterCard from "~/app/[locale]/patientGuide/_components/PatientGuideChapterCard";
 import { useLocale } from "next-intl";
 import { patientGuides } from "~/constants/patientGuide";
+import BlueCard from "~/app/_Disin_components/cards/BlueCard";
 
-const PatientGuideChapters = () => {
+const PatientGuideCards = () => {
   const locale: string = useLocale();
   const localisedPatientGuides = patientGuides[locale as "en" | "ru" | "am"];
   return (
     <>
       <div className="services-area pt-100 pb-70">
-        <div className="container">
-          <div className="expertise-item">
+        <div className="blue-card container">
+          <div className="blue-card-item">
             <div className="row">
               {localisedPatientGuides.map((guide) => {
+                const { title, description, icon, path } = guide;
                 return (
                   <>
-                    <PatientGuideChapterCard guide={guide} />
+                    <BlueCard
+                      icon={icon}
+                      path={`/patientGuide${path}`}
+                      title={title}
+                      description={description}
+                    />
                   </>
                 );
               })}
@@ -28,4 +34,4 @@ const PatientGuideChapters = () => {
   );
 };
 
-export default PatientGuideChapters;
+export default PatientGuideCards;

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { type ImageProps } from "~/types";
-import SharedModal from "~/app/[locale]/gallery/_components/SharedModal";
 import { useRouter } from "~/i18n/routing";
 import { useParams } from "next/navigation";
 import { useLastViewedPhoto } from "~/app/[locale]/gallery/_hooks/useLastViewedPhoto";
 import { gallery } from "~/constants/Gallery";
+import SharedModal from "~/app/[locale]/gallery/images/_components/SharedModal";
 
 const Carousel = ({
   index,
@@ -15,18 +15,22 @@ const Carousel = ({
 }) => {
   const router = useRouter();
   const { slug, imageId } = useParams();
-  const images = gallery.find((folder) => folder.id === Number(slug)).images;
+  const images = gallery.images.find(
+    (folder) => folder.id === Number(slug),
+  ).images;
   const [, setLastViewedPhoto] = useLastViewedPhoto();
 
   function closeModal() {
     setLastViewedPhoto(currentPhoto.id);
-    router.push(`/gallery/${slug as string}`, undefined, { shallow: true });
+    router.push(`/gallery/images/${slug as string}`, undefined, {
+      shallow: true,
+    });
   }
 
   function changePhotoId(newVal: number) {
     if (newVal >= 0 && newVal < images.length) {
       router.push(
-        `/gallery/${slug as string}/image/${images[newVal].id}`,
+        `/gallery/images/${slug as string}/image/${images[newVal].id}`,
         undefined,
         { shallow: true },
       );

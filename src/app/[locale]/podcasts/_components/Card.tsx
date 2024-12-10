@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import { type CardI } from "~/constants/podcasts";
 import FsLightbox from "fslightbox-react";
+import { formattingDate } from "~/utils/workingWithDates";
+import { useLocale } from "next-intl";
 
 const Card = ({ podcast }: CardI) => {
-  const { id, title, description, icon, url, posterUrl } = podcast;
-  console.log("url", url);
+  const locale: string = useLocale();
+  const { id, title, description, icon, url, posterUrl, date } = podcast;
   const [toggler, setToggler] = useState(false);
 
   return (
@@ -24,6 +26,11 @@ const Card = ({ podcast }: CardI) => {
             </div>
           </div>
           <div className="video-area" style={{ backgroundImage: posterUrl }} />
+          <div className="podcast-item">
+            <div className="podcast-front">
+              <p>{formattingDate({ date, locale })}</p>
+            </div>
+          </div>
         </div>
       </div>
     </>

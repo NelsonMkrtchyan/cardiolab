@@ -16,8 +16,18 @@ export const Menus = () => {
       link: "/news",
     },
     {
-      label: `${t("Gallery")}`,
+      label: `${t("Gallery.Gallery")}`,
       link: "/gallery",
+      submenu: [
+        {
+          label: `${t("Gallery.Images")}`,
+          link: "/gallery/images",
+        },
+        {
+          label: `${t("Gallery.Videos")}`,
+          link: "/gallery/videos",
+        },
+      ],
     },
     {
       label: `${t("Podcasts")}`,

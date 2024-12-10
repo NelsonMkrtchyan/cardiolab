@@ -33,8 +33,12 @@
     "AboutUs": "О нас",
     "News": "Новости",
     "NewsDetails": "Детали новости",
-    "Gallery": "Галерея",
-    "GalleryFolder": "Папка",
+    "Gallery": {
+      "Gallery": "Галерея",
+      "Folder": "Папка",
+      "Images": "Изображения",
+      "Videos": "Видео"
+    },
     "Stuff": "Персонал",
     "EmployeeDetails": "Детали сотрудника",
     "Services": "Услуги",

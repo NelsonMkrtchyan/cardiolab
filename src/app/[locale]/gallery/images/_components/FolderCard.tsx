@@ -18,7 +18,7 @@ const FolderCard = ({ folder }: FolderCardI) => {
     <>
       <div className="col-sm-6 col-lg-4 gallery-card">
         <div className="gallery-card-content-container">
-          <Link href={`/gallery/${id}`}>
+          <Link href={`/gallery/images/${id}`}>
             <div className="gallery-item">
               <div className="gallery-text-wrapper">
                 <h3>{getLocalisedName({ object: name, locale })}</h3>

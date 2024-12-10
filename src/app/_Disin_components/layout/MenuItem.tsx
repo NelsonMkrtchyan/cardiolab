@@ -16,13 +16,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, link, submenu }) => {
   if (submenu) {
     return (
       <li className="nav-item" key={label}>
-        <Link
-          href={link}
-          className="nav-link dropdown-toggle"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
-        >
+        <Link href={link} className="nav-link dropdown-toggle">
           {label}
         </Link>
 

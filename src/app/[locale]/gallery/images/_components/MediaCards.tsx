@@ -6,7 +6,9 @@ import { gallery } from "~/constants/Gallery";
 
 const MediaCards = () => {
   const { slug, imageId } = useParams();
-  const galleryFolder = gallery.find((folder) => folder.id === Number(slug));
+  const galleryFolder = gallery.images.find(
+    (folder) => folder.id === Number(slug),
+  );
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();
 
   const lastViewedPhotoRef = useRef<HTMLAnchorElement>(null);
@@ -31,7 +33,7 @@ const MediaCards = () => {
               return (
                 <div key={id} className="col-sm-6 col-lg-3 media-container">
                   <Link
-                    href={`/gallery/${slug as string}/image/${id}`}
+                    href={`/gallery/images/${slug as string}/image/${id}`}
                     ref={
                       id === Number(lastViewedPhoto) ? lastViewedPhotoRef : null
                     }

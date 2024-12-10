@@ -1,7 +1,7 @@
 import React from "react";
 import PageBanner from "~/app/_Disin_components/common/PageBanner";
 import { useTranslations } from "next-intl";
-import GalleryCards from "~/app/[locale]/gallery/_components/GalleryCards";
+import GalleryFoldersCard from "~/app/[locale]/gallery/images/_components/GalleryFoldersCard";
 
 export default function Page() {
   const tMenu = useTranslations("Menu");
@@ -9,13 +9,13 @@ export default function Page() {
   return (
     <>
       <PageBanner
-        pageTitle={tMenu("Gallery.Gallery")}
-        homePageUrl="/"
-        homePageText={tMenu("Home")}
-        activePageText={tMenu("Gallery.Gallery")}
+        pageTitle={tMenu("Gallery.Images")}
+        homePageUrl="/gallery"
+        homePageText={tMenu("Gallery.Gallery")}
+        activePageText={tMenu("Gallery.Images")}
         bgImage="/images/page-banner3.jpg"
       />
-      <GalleryCards />
+      <GalleryFoldersCard />
     </>
   );
 }

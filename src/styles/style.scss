@@ -1013,111 +1013,6 @@ button {
   }
 }
 
-/*-- End Services --*/
-
-/*-- Expertise --*/
-.expertise-item {
-  text-align: center;
-
-  a {
-    color: #fff;
-  }
-
-  .expertise-inner {
-    background-color: $main-color;
-    padding: 42px 25px 35px 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-
-    &:hover {
-      i {
-        box-shadow: none;
-      }
-    }
-
-    i {
-      display: block;
-      width: 70px;
-      height: 70px;
-      line-height: 70px;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 50%;
-      color: $main-color;
-      font-size: 30px;
-      margin-bottom: 35px;
-      box-shadow: 0 0 0 7px #ffffffa6;
-      background-color: $white-color;
-      transition: $transition;
-      position: relative;
-      top: 8px;
-    }
-
-    h3 {
-      color: $white-color;
-      font-weight: 600;
-      font-size: 22px;
-      margin-bottom: 14px;
-    }
-
-    p {
-      margin-bottom: 0;
-      color: $white-color;
-    }
-  }
-
-  .expertise-right {
-    padding-left: 80px;
-    position: relative;
-
-    &:before {
-      position: absolute;
-      content: '';
-      top: -10px;
-      left: 70px;
-      width: 430px;
-      height: 380px;
-      z-index: -1;
-      border-radius: 10px;
-      animation: a-one 5s infinite linear;
-      background-color: $main-color;
-    }
-
-    &:after {
-      position: absolute;
-      content: '';
-      bottom: -10px;
-      right: -10px;
-      width: 430px;
-      height: 380px;
-      z-index: -1;
-      border-radius: 10px;
-      animation: a-two 5s infinite linear;
-      background-color: $main-color;
-    }
-
-    img {
-      width: 100%;
-      z-index: 1;
-      animation: a-seven 10s infinite linear;
-    }
-  }
-}
-
-@keyframes a-seven {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/*-- End Expertise --*/
-
 /*-- Video --*/
 .video-area {
   background-size: cover;
@@ -4921,65 +4816,6 @@ button {
 
 
 /*-- Patient Guid section --*/
-.expertise-item {
-  text-align: center;
-
-  a {
-    color: #fff;
-  }
-
-  .expertise-inner {
-    background-color: $main-color;
-    padding: 42px 25px 35px 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    transition: $transition;
-
-    .icon {
-      color: $white-color;
-      width: 70px;
-      height: 70px;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 50%;
-      padding: 10px;
-      margin-bottom: 35px;
-      box-shadow: none;
-      //box-shadow: 0 0 0 7px #ffffffa6;
-      transition: $transition;
-      position: relative;
-      top: 8px;
-    }
-
-    h3 {
-      color: $white-color;
-      font-weight: 600;
-      font-size: 22px;
-      margin-bottom: 14px;
-      transition: $transition;
-    }
-
-    p {
-      margin-bottom: 0;
-      color: $white-color;
-      transition: $transition;
-    }
-
-    &:hover {
-      cursor: pointer;
-
-      .icon {
-        //box-shadow: 0 0 0 7px $second-color;
-        //box-shadow: 0 0 0 7px #ffffffa6;
-        box-shadow: 0 0 0 7px $light-grey;
-        //color: $second-color;
-      }
-
-    }
-  }
-
-}
-
 /*-- End Patient Guid --*/
 
 /*-- Faq section --*/
@@ -5163,6 +4999,73 @@ button {
 }
 
 /*-- End Faq section --*/
+
+
+/*-- Blue Cards section --*/
+
+.blue-card {
+  .blue-card-item {
+
+    text-align: center;
+
+    a {
+      color: #fff;
+    }
+
+    .blue-card-item-inner {
+      background-color: $main-color;
+      padding: 42px 25px 35px 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      transition: $transition;
+
+      .icon {
+        color: $white-color;
+        width: 70px;
+        height: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        padding: 10px;
+        margin-bottom: 35px;
+        box-shadow: none;
+        //box-shadow: 0 0 0 7px #ffffffa6;
+        transition: $transition;
+        position: relative;
+        top: 8px;
+      }
+
+      h3 {
+        color: $white-color;
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 14px;
+        transition: $transition;
+      }
+
+      p {
+        margin-bottom: 0;
+        color: $white-color;
+        transition: $transition;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .icon {
+          //box-shadow: 0 0 0 7px $second-color;
+          //box-shadow: 0 0 0 7px #ffffffa6;
+          box-shadow: 0 0 0 7px $light-grey;
+          //color: $second-color;
+        }
+
+      }
+    }
+
+  }
+}
+
+/*-- End Blue Cards section --*/
 
 
 /*-- Footer --*/

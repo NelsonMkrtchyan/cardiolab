@@ -4,7 +4,7 @@ import PageBanner from "~/app/_Disin_components/common/PageBanner";
 import React from "react";
 import { useTranslations } from "next-intl";
 import FaqSection from "~/app/_Disin_components/common/FaqSection";
-import PatientGuideChapters from "~/app/[locale]/patientGuide/_components/PatientGuideChapters";
+import PatientGuideCards from "~/app/[locale]/patientGuide/_components/PatientGuideCards";
 
 const Page = () => {
   const tMenu = useTranslations("Menu");
@@ -18,8 +18,8 @@ const Page = () => {
         activePageText={tMenu("PatientGuide")}
         bgImage="/images/page-banner2.jpg"
       />
-      
-      <PatientGuideChapters />
+
+      <PatientGuideCards />
 
       <FaqSection />
     </>

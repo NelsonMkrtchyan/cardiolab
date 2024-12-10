@@ -84,29 +84,58 @@ export interface FolderCardI {
   folder: FolderI;
 }
 
-export type GalleryI = FolderI[];
+export type GalleryI = {
+  images: FolderI[];
+  videos: FolderI[];
+};
 
-export const gallery: GalleryI = [
-  {
-    id: 1,
-    name: {
-      en: "First Folder",
-      am: "Առաջին թղթապանակ",
-      ru: "Первая папка",
+export const gallery: GalleryI = {
+  images: [
+    {
+      id: 1,
+      name: {
+        en: "First Image Folder",
+        am: "Առաջին թղթապանակ",
+        ru: "Первая папка",
+      },
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
+      bannerUrl: "url(/images/login-bg.jpg)",
+      images,
     },
-    date: new Date(new Date().setDate(new Date().getDate() - 2)),
-    bannerUrl: "url(/images/login-bg.jpg)",
-    images,
-  },
-  {
-    id: 2,
-    name: {
-      en: "Second Folder",
-      am: "Երկրորդ թղթապանակ",
-      ru: "Вторая папка",
+    {
+      id: 2,
+      name: {
+        en: "Second Image Folder",
+        am: "Երկրորդ թղթապանակ",
+        ru: "Вторая папка",
+      },
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
+      bannerUrl: "url(/images/about3.jpg)",
+      images,
     },
-    date: new Date(new Date().setDate(new Date().getDate() - 2)),
-    bannerUrl: "url(/images/about2.jpg)",
-    images,
-  },
-];
+  ],
+  videos: [
+    {
+      id: 1,
+      name: {
+        en: "First Video Folder",
+        am: "Առաջին թղթապանակ",
+        ru: "Первая папка",
+      },
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
+      bannerUrl: "url(/images/login-bg.jpg)",
+      images,
+    },
+    {
+      id: 2,
+      name: {
+        en: "Second Video Folder",
+        am: "Երկրորդ թղթապանակ",
+        ru: "Вторая папка",
+      },
+      date: new Date(new Date().setDate(new Date().getDate() - 2)),
+      bannerUrl: "url(/images/about1.jpg)",
+      images,
+    },
+  ],
+};

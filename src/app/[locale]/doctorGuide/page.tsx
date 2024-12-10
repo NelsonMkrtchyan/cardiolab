@@ -3,7 +3,7 @@
 import PageBanner from "~/app/_Disin_components/common/PageBanner";
 import React from "react";
 import { useTranslations } from "next-intl";
-import DoctorGuideChapters from "~/app/[locale]/doctorGuide/_components/PatientGuideChapters";
+import DoctorGuideCards from "~/app/[locale]/doctorGuide/_components/DoctorGuideCards";
 
 const Page = () => {
   const tMenu = useTranslations("Menu");
@@ -18,7 +18,7 @@ const Page = () => {
         bgImage="/images/page-banner1.jpg"
       />
 
-      <DoctorGuideChapters />
+      <DoctorGuideCards />
     </>
   );
 };

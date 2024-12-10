@@ -8,8 +8,11 @@ const useGallery = () => {
 
   // const currentNewsList = news[locale as "en" | "ru" | "am"];
 
-  const currentFolder =
-    gallery.find((item) => item.id === Number(slug)) ?? null;
+  const currentImageFolders =
+    gallery.images.find((item) => item.id === Number(slug)) ?? null;
+
+  const currentVideoFolders =
+    gallery.videos.find((item) => item.id === Number(slug)) ?? null;
 
   // function getAllIds(arr: NewsI[]) {
   //   return arr.map((item) => item.id);
@@ -17,7 +20,7 @@ const useGallery = () => {
   //
   // const ids = getAllIds(currentNewsList);
 
-  return { currentFolder };
+  return { currentImageFolders, currentVideoFolders };
 };
 
 export default useGallery;
