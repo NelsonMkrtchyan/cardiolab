@@ -27,11 +27,11 @@ export const Menus = () => {
           label: `${t("Gallery.Videos")}`,
           link: "/gallery/videos",
         },
+        {
+          label: `${t("Podcasts")}`,
+          link: "/podcasts",
+        },
       ],
-    },
-    {
-      label: `${t("Podcasts")}`,
-      link: "/podcasts",
     },
     {
       label: `${t("Stuff")}`,
@@ -41,14 +41,6 @@ export const Menus = () => {
       label: `${t("Services")}`,
       link: "/services",
     },
-    // {
-    //   label: `${t("PatientGuide")}`,
-    //   link: "/patientguide",
-    // },
-    // {
-    //   label: `${t("DoctorGuide")}`,
-    //   link: "/doctorguide",
-    // },
     {
       label: `${t("Guide")}`,
       link: "#",

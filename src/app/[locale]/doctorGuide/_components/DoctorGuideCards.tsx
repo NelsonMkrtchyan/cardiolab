@@ -20,7 +20,7 @@ const DoctorGuideCards = () => {
                   <>
                     <BlueCard
                       icon={icon}
-                      path={`/patientGuide${path}`}
+                      path={`/doctorGuide${path}`}
                       title={title}
                       description={description}
                     />

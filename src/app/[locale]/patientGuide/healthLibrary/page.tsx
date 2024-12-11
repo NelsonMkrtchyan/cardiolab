@@ -1,12 +1,14 @@
 "use client";
 
-import ServiceDetailsContent from "~/app/[locale]/services/_components/ServiceDetailsContent";
 import React from "react";
 import PageBanner from "~/app/_Disin_components/common/PageBanner";
 import { useTranslations } from "next-intl";
+import GuideDetails from "~/app/[locale]/doctorGuide/_components/GuideDetails";
+import usePatientGuides from "~/app/[locale]/patientGuide/_hooks/usePatientGuides";
 
 const Page = () => {
   const tMenu = useTranslations("Menu");
+  const { currentPatientGuide } = usePatientGuides();
 
   return (
     <>
@@ -17,7 +19,9 @@ const Page = () => {
         activePageText={tMenu("HealthLibrary")}
         bgImage="/images/page-banner4.jpg"
       />
-      <ServiceDetailsContent />
+      {currentPatientGuide && (
+        <GuideDetails currentGuide={currentPatientGuide} />
+      )}
     </>
   );
 };

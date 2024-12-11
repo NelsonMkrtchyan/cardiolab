@@ -1,13 +1,15 @@
 "use client";
 
-import ServiceDetailsContent from "~/app/[locale]/services/_components/ServiceDetailsContent";
 import React from "react";
 import PageBanner from "~/app/_Disin_components/common/PageBanner";
 import { useTranslations } from "next-intl";
+import useDoctorGuides from "~/app/[locale]/doctorGuide/_hooks/useDoctorGuides";
+import GuideDetails from "~/app/[locale]/doctorGuide/_components/GuideDetails";
 
 const Page = () => {
   const tMenu = useTranslations("Menu");
 
+  const { currentDoctorGuide } = useDoctorGuides();
   return (
     <>
       <PageBanner
@@ -17,7 +19,7 @@ const Page = () => {
         activePageText={tMenu("AccreditedTrainings")}
         bgImage="/images/page-banner2.jpg"
       />
-      <ServiceDetailsContent />
+      {currentDoctorGuide && <GuideDetails currentGuide={currentDoctorGuide} />}
     </>
   );
 };

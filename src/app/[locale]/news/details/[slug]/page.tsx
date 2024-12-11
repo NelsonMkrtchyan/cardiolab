@@ -9,8 +9,8 @@ import LatestBlogPost from "~/app/_Disin_components/common/LatestBlogPost";
 
 export default function Page() {
   const tMenu = useTranslations("Menu");
-  const { currentNews, availableNewsIds } = useNews();
-  console.log("currentNews", currentNews);
+  const { currentNews, availableNewsIds } = useNews({});
+
   return (
     <>
       <PageBanner
