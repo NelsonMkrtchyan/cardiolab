@@ -13,6 +13,7 @@ const Footer = () => {
 
   const locale: string = useLocale();
   const localisedServices = services[locale as "en" | "ru" | "am"];
+  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
   return (
     <>
       <footer
@@ -31,8 +32,8 @@ const Footer = () => {
                         <IoMail className="icon footer-icon large-icon-size" />
                       </div>
                       <div className="footer-text-container">
-                        <a href={`mailto:${CardioLabInfo.email}`}>
-                          {CardioLabInfo.email}
+                        <a href={`mailto:${localisedCardioLabInfo.email}`}>
+                          {localisedCardioLabInfo.email}
                         </a>
                       </div>
                     </li>
@@ -41,8 +42,8 @@ const Footer = () => {
                         <IoCall className="icon footer-icon large-icon-size" />
                       </div>
                       <div className="footer-text-container">
-                        <a href={`tel:${CardioLabInfo.phone}`}>
-                          Call: {CardioLabInfo.phone}
+                        <a href={`tel:${localisedCardioLabInfo.phone}`}>
+                          {localisedCardioLabInfo.phone}
                         </a>
                       </div>
                     </li>
@@ -51,7 +52,7 @@ const Footer = () => {
                         <IoLocation className="icon footer-icon large-icon-size" />
                       </div>
                       <div className="footer-text-container">
-                        <p>{CardioLabInfo.address}</p>
+                        <p>{localisedCardioLabInfo.address}</p>
                       </div>
                     </li>
                   </ul>

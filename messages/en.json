@@ -3,15 +3,15 @@
     "Phone": "Phone",
     "Email": "Email",
     "Address": "Address",
-    "ReadMore": "Read More",
+    "ReadMore": "Read more",
     "Next": "Next",
     "Previous": "Previous",
-    "SeeAll": "See All",
+    "SeeAll": "See all",
     "KnowMore": "Know More",
-    "ContactUs": "Contact Us",
-    "OurNews": "Our News",
-    "OurServices": "Our Services",
-    "MeetOurStuff": "Meet Our Stuff",
+    "ContactUs": "Contact us",
+    "OurNews": "Our news",
+    "OurServices": "Our services",
+    "MeetOurStuff": "Meet our stuff",
     "WorkingHours": "Working Hours",
     "Weekdays": {
       "Monday": "Monday",
@@ -25,38 +25,35 @@
       "one": "Clinics",
       "two": "Happy Patients",
       "three": "Doctors & Nurse",
-      "four": "Year Experience"
+      "four": "Year experience"
     }
   },
   "Menu": {
     "Home": "Home",
-    "AboutUs": "About Us",
+    "AboutUs": "About us",
+    "Stuff": "Stuff",
+    "Services": "Services",
+    "Guide": "Manuals",
+    "DoctorGuide": "Doctor manual",
+    "PatientGuide": "Patient manual",
     "News": "News",
     "NewsDetails": "News Details",
     "Gallery": {
       "Gallery": "Gallery",
       "Folder": "Folder",
-      "Images": "Images",
+      "Images": "Photos",
       "Videos": "Videos"
     },
-    "Stuff": "Stuff",
-    "EmployeeDetails": "Employee Details",
-    "Services": "Services",
-    "ServiceDetails": "Service Details",
-    "Guide": "Guides",
-    "PatientGuide": "Patient Guide",
-    "DoctorGuide": "Doctor Guide",
-    "ContactUs": "Contact Us",
-    "Podcasts": "Podcasts",
-    "InsuranceInformation": "Insurance Information",
-    "HealthLibrary": "Health Library",
-    "UsefulMaterials": "Useful Materials",
-    "AccreditedTrainings": "Accredited Trainings",
+    "ContactUs": "Contact us",
+    "EmployeeDetails": "Employee details",
+    "ServiceDetails": "Service details",
+    "Podcasts": "'CardioLab' Podcasts",
+    "InsuranceInformation": "Insurance information",
+    "HealthLibrary": "Health library",
+    "UsefulMaterials": "Useful materials",
+    "AccreditedTrainings": "Accredited trainings",
     "Seminars": "Seminars",
-    "JobOpenings": "Job Openings"
-  },
-  "Common": {
-    "slogan": "The Art of Heart Care"
+    "JobOpenings": "Job openings"
   },
   "Components": {
     "Landing": {
@@ -81,7 +78,7 @@
     },
     "Appointments": {
       "title": "Book your appointment",
-      "description": "We will confirm your appointment within 2 hours",
+      "description": "Our specialist will confirm your visit within 1 hour.",
       "labels": {
         "name": "Name",
         "email": "Email",
@@ -103,7 +100,7 @@
       }
     },
     "VideoSection": {
-      "title": "CardioLab Introduction",
+      "title": "CardioLab introduction",
       "description": "Welcome to CardioLab, where your heart health is our priority. In this introduction, we provide an overview of our clinic's mission, services, and state-of-the-art technology designed to support cardiovascular care. Learn about our team of experienced specialists, our approach to personalized treatments, and how we aim to improve your well-being with innovative and compassionate healthcare solutions."
     }
   },
@@ -146,18 +143,18 @@
   },
   "Footer": {
     "QuickLinks": {
-      "QuickLinksText": "Quick Links",
+      "QuickLinksText": "Quick links",
       "Links": {
         "News": "News",
-        "AboutUs": "About Us",
-        "ContactUs": "Contact Us",
+        "AboutUs": "About us",
+        "ContactUs": "Contact us",
         "Doctors": "Doctors",
         "Services": "Services",
         "Faq": "Faq"
       }
     },
     "OurServices": {
-      "OurServicesText": "Our Services",
+      "OurServicesText": "Our services",
       "Links": {
         "DentalCare": "Dental Care",
         "Cardiology": "Cardiology",

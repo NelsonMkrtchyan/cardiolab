@@ -1,12 +1,73 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { CardioLabInfo } from "~/constants/menus";
 import { IoCall } from "react-icons/io5";
+import { type ChangeEvent, type FormEvent, useState } from "react";
+
+interface FormData {
+  name: string;
+  email: string;
+  number: string;
+  subject: string;
+  message: string;
+}
 
 const ContactForm = () => {
+  const locale: string = useLocale();
+  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
   const tComponents = useTranslations("Components");
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    number: "",
+    subject: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setStatus("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus(tComponents("ContactForm.successMessage"));
+        setFormData({
+          name: "",
+          email: "",
+          number: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        const { error } = await response.json();
+        setStatus(error || tComponents("ContactForm.errorMessage"));
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus(tComponents("ContactForm.errorMessage"));
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -23,7 +84,7 @@ const ContactForm = () => {
                 <div className="drop-left">
                   <h2>{tComponents("ContactForm.title")}</h2>
 
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="row">
                       <div className="col-lg-6 col-md-6">
                         <div className="form-group">
@@ -35,6 +96,8 @@ const ContactForm = () => {
                               "ContactForm.placeholders.name",
                             )}
                             required
+                            value={formData.name}
+                            onChange={handleInputChange}
                           />
                         </div>
                       </div>
@@ -49,6 +112,8 @@ const ContactForm = () => {
                               "ContactForm.placeholders.email",
                             )}
                             required
+                            value={formData.email}
+                            onChange={handleInputChange}
                           />
                         </div>
                       </div>
@@ -63,6 +128,8 @@ const ContactForm = () => {
                               "ContactForm.placeholders.phone",
                             )}
                             required
+                            value={formData.number}
+                            onChange={handleInputChange}
                           />
                         </div>
                       </div>
@@ -77,6 +144,8 @@ const ContactForm = () => {
                               "ContactForm.placeholders.subject",
                             )}
                             required
+                            value={formData.subject}
+                            onChange={handleInputChange}
                           />
                         </div>
                       </div>
@@ -84,7 +153,7 @@ const ContactForm = () => {
                       <div className="col-lg-12 col-md-12 col-sm-12">
                         <div className="form-group">
                           <textarea
-                            name="text"
+                            name="message"
                             cols={30}
                             rows={6}
                             className="form-control"
@@ -92,14 +161,24 @@ const ContactForm = () => {
                               "ContactForm.placeholders.message",
                             )}
                             required
+                            value={formData.message}
+                            onChange={handleInputChange}
                           ></textarea>
                         </div>
                       </div>
 
                       <div className="col-lg-12 col-md-12 col-sm-12">
-                        <button type="submit" className="drop-btn">
+                        <button
+                          type="submit"
+                          className="drop-btn"
+                          disabled={isLoading}
+                        >
                           {tComponents("ContactForm.sendMessage")}
+                          {isLoading
+                            ? tComponents("ContactForm.sending")
+                            : tComponents("ContactForm.sendMessage")}
                         </button>
+                        {/*{status && <p>{status}</p>}*/}
                       </div>
                     </div>
                   </form>
@@ -125,7 +204,7 @@ const ContactForm = () => {
                   </div>
                   <div className="speciality-content">
                     <h3>{tComponents("ContactForm.callNote")}</h3>
-                    <p>{CardioLabInfo.phone}</p>
+                    <p>{localisedCardioLabInfo.phone}</p>
                   </div>
                 </div>
               </div>

@@ -6,8 +6,11 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import { CardioLabInfo } from "~/constants/menus";
+import { useLocale } from "next-intl";
 
 const TopHeader = () => {
+  const locale: string = useLocale();
+  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
   return (
     <>
       <div className="header-top">
@@ -18,23 +21,20 @@ const TopHeader = () => {
                 <div className="header-top-left">
                   <ul>
                     <li>
-                      <a href={`tel:${CardioLabInfo.phone}`}>
-                        {/*<i className="icofont-ui-call"></i>*/}
+                      <a href={`tel:${localisedCardioLabInfo.phone}`}>
                         <IoCall className="icon" />
-                        Call : {CardioLabInfo.phone}
+                        {localisedCardioLabInfo.phone}
                       </a>
                     </li>
                     <li>
-                      <a href={`mailto:${CardioLabInfo.email}`}>
-                        {/*<i className="icofont-ui-message"></i>*/}
+                      <a href={`mailto:${localisedCardioLabInfo.email}`}>
                         <IoMail className="icon" />
-                        {CardioLabInfo.email}
+                        {localisedCardioLabInfo.email}
                       </a>
                     </li>
                     <li>
-                      {/*<i className="icofont-location-pin"></i>*/}
                       <IoLocation className="icon" />
-                      {CardioLabInfo.address}
+                      {localisedCardioLabInfo.address}
                     </li>
                   </ul>
                 </div>

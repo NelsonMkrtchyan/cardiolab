@@ -9,8 +9,8 @@
     "SeeAll": "Посмотреть все",
     "KnowMore": "Узнать больше",
     "ContactUs": "Контакты",
-    "OurNews": "Наши новости",
-    "OurServices": "Наши услуги",
+    "OurNews": "Новости",
+    "OurServices": "Услуги",
     "MeetOurStuff": "Познакомьтесь с нашим персоналом",
     "WorkingHours": "Рабочие часы",
     "Weekdays": {
@@ -31,27 +31,27 @@
   "Menu": {
     "Home": "Главная",
     "AboutUs": "О нас",
+    "Stuff": "Персонал",
+    "Services": "Услуги",
+    "ServiceDetails": "Подробности услуги",
+    "Guide": "Руководства",
+    "DoctorGuide": "Руководство для врачей ",
+    "PatientGuide": "Руководство для пациентов",
     "News": "Новости",
     "NewsDetails": "Детали новости",
     "Gallery": {
       "Gallery": "Галерея",
+      "Images": "Фотографии",
       "Folder": "Папка",
-      "Images": "Изображения",
       "Videos": "Видео"
     },
-    "Stuff": "Персонал",
     "EmployeeDetails": "Детали сотрудника",
-    "Services": "Услуги",
-    "ServiceDetails": "Подробности услуги",
-    "Guide": "Руководство",
-    "PatientGuide": "Руководство для пациента",
-    "DoctorGuide": "Руководство для врача",
     "ContactUs": "Контакты",
-    "Podcasts": "Подкасты",
+    "Podcasts": "Подкаст: «CardioLab»",
     "InsuranceInformation": "Страховая информация",
     "HealthLibrary": "Библиотека здоровья",
     "UsefulMaterials": "Полезные материалы",
-    "AccreditedTrainings": "Аккредитованные Тренинги",
+    "AccreditedTrainings": "Аккредитованные тренинги",
     "Seminars": "Семинары",
     "JobOpenings": "Вакансии"
   },
@@ -81,7 +81,7 @@
     },
     "Appointments": {
       "title": "Запишитесь на прием",
-      "description": "Мы подтвердим вашу запись в течение 2 часов",
+      "description": "Наш специалист подтвердит ваш визит в течение 1 часа",
       "labels": {
         "name": "Имя",
         "email": "Электронная почта",
@@ -152,12 +152,12 @@
         "AboutUs": "О нас",
         "ContactUs": "Связаться с нами",
         "Doctors": "Врачи",
-        "Services": "Наши услуги",
+        "Services": "Услуги",
         "Faq": "Часто задаваемые вопросы"
       }
     },
     "OurServices": {
-      "OurServicesText": "Наши услуги",
+      "OurServicesText": "Услуги",
       "Links": {
         "DentalCare": "Стоматология",
         "Cardiology": "Кардиология",

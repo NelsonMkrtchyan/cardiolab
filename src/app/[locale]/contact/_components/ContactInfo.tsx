@@ -2,11 +2,12 @@
 import { CardioLabInfo } from "~/constants/menus";
 
 import { IoCall, IoLocation, IoMail } from "react-icons/io5";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const ContactInfo = () => {
   const tGeneral = useTranslations("General");
-
+  const locale: string = useLocale();
+  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
   return (
     <>
       <div className="location-area pt-100 pb-70">
@@ -16,7 +17,7 @@ const ContactInfo = () => {
               <div className="location-item">
                 <IoLocation className="icon large-icon-size mb-4 mt-2" />
                 <h3>{tGeneral("Address")}</h3>
-                <p>{CardioLabInfo.address}</p>
+                <p>{localisedCardioLabInfo.address}</p>
               </div>
             </div>
 
@@ -24,7 +25,7 @@ const ContactInfo = () => {
               <div className="location-item">
                 <IoMail className="icon large-icon-size mb-4 mt-2" />
                 <h3>{tGeneral("Email")}</h3>
-                <p>{CardioLabInfo.email}</p>
+                <p>{localisedCardioLabInfo.email}</p>
               </div>
             </div>
 
@@ -32,7 +33,7 @@ const ContactInfo = () => {
               <div className="location-item">
                 <IoCall className="icon large-icon-size mb-4 mt-2" />
                 <h3>{tGeneral("Phone")}</h3>
-                <p>{CardioLabInfo.phone}</p>
+                <p>{localisedCardioLabInfo.phone}</p>
               </div>
             </div>
           </div>

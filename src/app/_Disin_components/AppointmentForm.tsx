@@ -1,17 +1,71 @@
 "use client";
 
-import React from "react";
+import React, { type ChangeEvent, type FormEvent, useState } from "react";
 import Image from "next/image";
-import { FaUserDoctor, FaUserTie } from "react-icons/fa6";
+import { FaUserTie } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { LiaHospital } from "react-icons/lia";
 import { FaPhoneAlt } from "react-icons/fa";
-import { CiUser } from "react-icons/ci";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { WorkingHours } from "~/constants/menus";
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+}
 
 const AppointmentForm: React.FC = () => {
   const tComponents = useTranslations("Components");
   const tGeneral = useTranslations("General");
+  const locale: string = useLocale();
+  const localisedWorkingHours = WorkingHours[locale as "en" | "ru" | "am"];
+
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const [status, setStatus] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setStatus("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus(tComponents("ContactForm.successMessage"));
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+        });
+      } else {
+        const { error } = await response.json();
+        setStatus(error || tComponents("ContactForm.errorMessage"));
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus(tComponents("ContactForm.errorMessage"));
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
       <div className="appointment-area-two ptb-100">
@@ -32,7 +86,7 @@ const AppointmentForm: React.FC = () => {
                 <span>{tComponents("Appointments.description")}</span>
 
                 <div className="appointment-form">
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="form-group">
@@ -42,10 +96,14 @@ const AppointmentForm: React.FC = () => {
                             </label>
                             <input
                               type="text"
+                              name="name"
                               className="form-control"
+                              required
                               placeholder={tComponents(
                                 "Appointments.placeholders.name",
                               )}
+                              value={formData.name}
+                              onChange={handleInputChange}
                             />
                           </div>
                           <div className="icon-container">
@@ -61,11 +119,15 @@ const AppointmentForm: React.FC = () => {
                               {tComponents("Appointments.labels.email")}
                             </label>
                             <input
-                              type="email"
+                              type="text"
+                              name="email"
                               className="form-control"
                               placeholder={tComponents(
                                 "Appointments.placeholders.email",
                               )}
+                              required
+                              value={formData.email}
+                              onChange={handleInputChange}
                             />
                           </div>
                           <div className="icon-container">
@@ -82,10 +144,14 @@ const AppointmentForm: React.FC = () => {
                             </label>
                             <input
                               type="text"
+                              name="phone"
                               className="form-control"
                               placeholder={tComponents(
                                 "Appointments.placeholders.phone",
                               )}
+                              required
+                              value={formData.phone}
+                              onChange={handleInputChange}
                             />
                           </div>
                           <div className="icon-container">
@@ -96,7 +162,11 @@ const AppointmentForm: React.FC = () => {
                     </div>
 
                     <div className="text-center">
-                      <button type="submit" className="btn appointment-btn">
+                      <button
+                        type="submit"
+                        className="btn appointment-btn"
+                        disabled={isLoading}
+                      >
                         {tComponents("Appointments.actions.submit")}
                       </button>
                     </div>
@@ -115,27 +185,27 @@ const AppointmentForm: React.FC = () => {
                   <ul>
                     <li>
                       {tGeneral("Weekdays.Monday")}
-                      <span>9:00 AM - 8:00 PM</span>
+                      <span>{localisedWorkingHours.Monday}</span>
                     </li>
                     <li>
                       {tGeneral("Weekdays.Tuesday")}
-                      <span>9:00 AM - 8:00 PM</span>
+                      <span>{localisedWorkingHours.Tuesday}</span>
                     </li>
                     <li>
                       {tGeneral("Weekdays.Wednesday")}
-                      <span>9:00 AM - 8:00 PM</span>
+                      <span>{localisedWorkingHours.Wednesday}</span>
                     </li>
                     <li>
                       {tGeneral("Weekdays.Thursday")}
-                      <span>9:00 AM - 8:00 PM</span>
+                      <span>{localisedWorkingHours.Thursday}</span>
                     </li>
                     <li>
                       {tGeneral("Weekdays.Friday")}
-                      <span>9:00 AM - 8:00 PM</span>
+                      <span>{localisedWorkingHours.Friday}</span>
                     </li>
                     <li>
                       {tGeneral("Weekdays.Saturday")}
-                      <span>9:00 AM - 8:00 PM</span>
+                      <span>{localisedWorkingHours.Saturday}</span>
                     </li>
                   </ul>
                 </div>
