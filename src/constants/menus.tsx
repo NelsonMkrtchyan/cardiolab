@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-
+// TODO change all stuff to staff
 export const Menus = () => {
   const t = useTranslations("Menu");
   return [
