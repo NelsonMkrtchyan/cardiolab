@@ -36,7 +36,7 @@ export const doctorGuides: DGuidesI = {
   en: [
     {
       id: 1,
-      title: "Useful Materials",
+      title: "Useful materials",
       description: "",
       path: "/usefulMaterials",
       icon: <FaInfo className="icon largest-icon-size" />,
@@ -68,7 +68,7 @@ export const doctorGuides: DGuidesI = {
     },
     {
       id: 2,
-      title: "Accredited Trainings",
+      title: "Accredited trainings",
       description: "",
       path: "/accreditedTrainings",
       icon: <GrWorkshop className="icon largest-icon-size" />,
@@ -130,7 +130,7 @@ export const doctorGuides: DGuidesI = {
     },
     {
       id: 4,
-      title: "Job Openings",
+      title: "Job openings",
       description: "",
       path: "/jobOpenings",
       icon: <TfiWrite className="icon largest-icon-size" />,
@@ -197,7 +197,7 @@ export const doctorGuides: DGuidesI = {
     },
     {
       id: 2,
-      title: "Կրեդիտավորված Վերապատրաստումներ",
+      title: "Կրեդիտավորված վերապատրաստումներ",
       description: "",
       path: "/accreditedTrainings",
       icon: <GrWorkshop className="icon largest-icon-size" />,
@@ -338,7 +338,7 @@ export const doctorGuides: DGuidesI = {
     },
     {
       id: 2,
-      title: "Аккредитованные Тренинги",
+      title: "Аккредитованные тренинги",
       description: "",
       path: "/accreditedTrainings",
       icon: <GrWorkshop className="icon largest-icon-size" />,

@@ -173,7 +173,6 @@ const ContactForm = () => {
                           className="drop-btn"
                           disabled={isLoading}
                         >
-                          {tComponents("ContactForm.sendMessage")}
                           {isLoading
                             ? tComponents("ContactForm.sending")
                             : tComponents("ContactForm.sendMessage")}

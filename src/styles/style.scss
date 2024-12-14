@@ -479,7 +479,8 @@ button {
           font-weight: 500;
           font-size: 15px;
           color: #344c5d;
-          text-transform: capitalize;
+          //text-transform: capitalize;
+          text-transform: unset;
 
           border-bottom: 2px solid transparent;
 
