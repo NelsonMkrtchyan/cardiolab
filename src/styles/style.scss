@@ -317,6 +317,7 @@ button {
 }
 
 .header-top-item {
+  //TODO: Same ase other phone ul and li styles
   .header-top-left {
     ul {
       margin: 0;
@@ -1782,6 +1783,46 @@ button {
     }
 
     .speciality-content {
+      //TODO: Same ase other phone ul and li styles
+      ul {
+        li {
+          display: inline-block;
+          list-style-type: none;
+          font-weight: 500;
+          font-size: 14px;
+          color: $white-color;
+          margin-right: 25px;
+
+          i {
+            color: $white-color;
+            font-size: 18px;
+            position: relative;
+            top: 2px;
+            margin-right: 6px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            display: inline-block;
+            color: $white-color;
+
+            &:hover {
+              color: $white-color;
+            }
+
+            i {
+              color: $white-color;
+              font-size: 18px;
+              position: relative;
+              top: 2px;
+              margin-right: 6px;
+            }
+          }
+        }
+      }
 
       width: 100%;
       display: flex;
@@ -3281,6 +3322,50 @@ button {
 
 /*-- Location --*/
 .location-wrap {
+  //TODO: Same ase other phone ul and li styles
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+      font-weight: 500;
+      font-size: 14px;
+      color: $grey-color;
+      margin-right: 25px;
+
+      i {
+        color: $main-color;
+        font-size: 18px;
+        position: relative;
+        top: 2px;
+        margin-right: 6px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        display: inline-block;
+        color: #4a6f8a;
+
+        &:hover {
+          color: $main-color;
+        }
+
+        i {
+          color: $main-color;
+          font-size: 18px;
+          position: relative;
+          top: 2px;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
   .location-item {
     margin-bottom: 30px;
     text-align: center;
@@ -5157,6 +5242,13 @@ footer {
           align-items: center;
           padding: 0 0 0 10px;
 
+          div {
+            margin-right: 5px;
+
+            &:last-child {
+              margin: 0;
+            }
+          }
         }
       }
     }

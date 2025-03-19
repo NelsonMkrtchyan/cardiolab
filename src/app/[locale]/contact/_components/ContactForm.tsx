@@ -203,7 +203,16 @@ const ContactForm = () => {
                   </div>
                   <div className="speciality-content">
                     <h3>{tComponents("ContactForm.callNote")}</h3>
-                    <p>{localisedCardioLabInfo.phone}</p>
+                    <ul>
+                      {localisedCardioLabInfo.phone.map((phone: string) => (
+                        <li key={phone}>
+                          <a href={`tel:${phone}`}>
+                            <IoCall className="icon" color={"white"} />
+                            {phone}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>

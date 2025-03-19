@@ -33,7 +33,16 @@ const ContactInfo = () => {
               <div className="location-item">
                 <IoCall className="icon large-icon-size mb-4 mt-2" />
                 <h3>{tGeneral("Phone")}</h3>
-                <p>{localisedCardioLabInfo.phone}</p>
+                <ul>
+                  {localisedCardioLabInfo.phone.map((phone: string) => (
+                    <li key={phone}>
+                      <a href={`tel:${phone}`}>
+                        <IoCall className="icon" />
+                        {phone}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

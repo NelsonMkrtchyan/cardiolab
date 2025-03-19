@@ -42,9 +42,11 @@ const Footer = () => {
                         <IoCall className="icon footer-icon large-icon-size" />
                       </div>
                       <div className="footer-text-container">
-                        <a href={`tel:${localisedCardioLabInfo.phone}`}>
-                          {localisedCardioLabInfo.phone}
-                        </a>
+                        {localisedCardioLabInfo.phone.map((phone: string) => (
+                          <div key={phone}>
+                            <a href={`tel:${phone}`}>{phone}</a>
+                          </div>
+                        ))}
                       </div>
                     </li>
                     <li>

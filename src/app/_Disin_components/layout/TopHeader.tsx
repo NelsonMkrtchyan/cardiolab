@@ -4,7 +4,11 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
+  FaViber,
+  FaWhatsapp,
 } from "react-icons/fa6";
+import { ImWhatsapp } from "react-icons/im";
+
 import { CardioLabInfo } from "~/constants/menus";
 import { useLocale } from "next-intl";
 
@@ -21,10 +25,16 @@ const TopHeader = () => {
                 <div className="header-top-left">
                   <ul>
                     <li>
-                      <a href={`tel:${localisedCardioLabInfo.phone}`}>
-                        <IoCall className="icon" />
-                        {localisedCardioLabInfo.phone}
-                      </a>
+                      <ul>
+                        {localisedCardioLabInfo.phone.map((phone: string) => (
+                          <li key={phone}>
+                            <a href={`tel:${phone}`}>
+                              <IoCall className="icon" />
+                              {phone}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
                     </li>
                     <li>
                       <a href={`mailto:${localisedCardioLabInfo.email}`}>
@@ -75,6 +85,19 @@ const TopHeader = () => {
                         target="_blank"
                       >
                         <FaLinkedinIn className="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="viber://chat?number=+374 44991188"
+                        target="_blank"
+                      >
+                        <FaViber className="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://wa.me/+374 44991188" target="_blank">
+                        <FaWhatsapp className="" />
                       </a>
                     </li>
                   </ul>

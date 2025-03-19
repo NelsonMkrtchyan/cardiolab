@@ -66,19 +66,19 @@ export const CardioLabInfo = {
   en: {
     name: "CardioLab",
     address: "Tsitsernakaberd Highway, ½, 303 , Yerevan, Armenia 0082",
-    phone: "+37491773025",
+    phone: ["+374 11991180", "+374 33991188", "+374 44991188"],
     email: "info@cardiolab.am",
   },
   am: {
     name: "CardioLab",
     address: "Ծիծեռնակաբերդի խճուղի ½, 303, Երևան, 0082, Հայաստան",
-    phone: "+37491773025",
+    phone: ["+374 11991180", "+374 33991188", "+374 44991188"],
     email: "info@cardiolab.am",
   },
   ru: {
     name: "CardioLab",
     address: "Цицернакабердское шоссе, ½, 303, Ереван, 0082, Армения",
-    phone: "+37491773025",
+    phone: ["+374 11991180", "+374 33991188", "+374 44991188"],
     email: "info@cardiolab.am",
   },
 };
