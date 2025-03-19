@@ -21,11 +21,7 @@ const MeetOurStuff = () => {
 
           <div className="row justify-content-center">
             {localisedStuff.slice(0, 3).map((employee) => {
-              return (
-                <>
-                  <Card employee={employee} />
-                </>
-              );
+              return <Card key={employee.id} employee={employee} />;
             })}
           </div>
 

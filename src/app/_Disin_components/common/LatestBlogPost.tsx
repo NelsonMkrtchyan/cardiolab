@@ -21,11 +21,7 @@ const LatestBlogPost: React.FC = () => {
 
           <div className="row">
             {localisedNews.slice(0, 3).map((news) => {
-              return (
-                <>
-                  <NewsCard news={news} />
-                </>
-              );
+              return <NewsCard key={news.id} news={news} />;
             })}
           </div>
           <div className="button-type-1">
