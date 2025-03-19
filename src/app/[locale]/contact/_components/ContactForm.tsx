@@ -58,7 +58,9 @@ const ContactForm = () => {
           message: "",
         });
       } else {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { error } = await response.json();
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         setStatus(error || tComponents("ContactForm.errorMessage"));
       }
     } catch (error) {
