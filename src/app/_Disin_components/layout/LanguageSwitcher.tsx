@@ -27,31 +27,33 @@ const LanguageSwitcher = () => {
           <div className="wrapper">
             {/*Active locale*/}
             <div
-              className="currentLanguage nav-link dropdown-toggle"
+              // className="currentLanguage nav-link dropdown-toggle"
+              className="currentLanguage nav-link"
               onClick={() => {
                 console.log(pathname);
                 setIsVisible(!isVisible);
               }}
             >
-              {Languages[`${locale as "en" | "ru" | "am"}`].icon}
+              {/*{Languages[`${locale as "en" | "ru" | "am"}`].icon}*/}
+              {Languages[`${locale as "am"}`].icon}
 
-              <ul className="language-dropdown-menu">
-                {Object.keys(otherFlags).map((flagKey) => {
-                  return (
-                    <li className="language" key={flagKey}>
-                      <div
-                        className={"nav-link"}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          changeLocale(flagKey);
-                        }}
-                      >
-                        {Languages[`${flagKey as "en" | "ru" | "am"}`].icon}
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
+              {/*<ul className="language-dropdown-menu">*/}
+              {/*  {Object.keys(otherFlags).map((flagKey) => {*/}
+              {/*    return (*/}
+              {/*      <li className="language" key={flagKey}>*/}
+              {/*        <div*/}
+              {/*          className={"nav-link"}*/}
+              {/*          onClick={(e) => {*/}
+              {/*            e.preventDefault();*/}
+              {/*            changeLocale(flagKey);*/}
+              {/*          }}*/}
+              {/*        >*/}
+              {/*          {Languages[`${flagKey as "en" | "ru" | "am"}`].icon}*/}
+              {/*        </div>*/}
+              {/*      </li>*/}
+              {/*    );*/}
+              {/*  })}*/}
+              {/*</ul>*/}
             </div>
           </div>
         </div>

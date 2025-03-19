@@ -1,7 +1,7 @@
 export interface nameWithTranslations {
+  am: string;
   en: string;
   ru: string;
-  am: string;
 }
 
 // #############################################
