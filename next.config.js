@@ -19,6 +19,9 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  sassOptions: {
+    implementation: "sass-embedded",
+  },
 };
 
 export default withNextIntl(config);

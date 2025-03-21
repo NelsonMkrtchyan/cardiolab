@@ -1,13 +1,175 @@
 {
-  "Common": {
-    "slogan": "The Art of Heart Care"
+  "General": {
+    "Phone": "Phone",
+    "Email": "Email",
+    "Address": "Address",
+    "ReadMore": "Read more",
+    "Next": "Next",
+    "Previous": "Previous",
+    "SeeAll": "See all",
+    "KnowMore": "Read more",
+    "ContactUs": "Contact us",
+    "OurNews": "Our news",
+    "OurServices": "Our services",
+    "MeetOurStuff": "Meet our staff",
+    "WorkingHours": "Working Hours",
+    "Weekdays": {
+      "Monday": "Monday",
+      "Tuesday": "Tuesday",
+      "Wednesday": "Wednesday",
+      "Thursday": "Thursday",
+      "Friday": "Friday",
+      "Saturday": "Saturday"
+    },
+    "Stats": {
+      "one": "Clinics",
+      "two": "Happy Patients",
+      "three": "Doctors & Nurse",
+      "four": "Year experience"
+    }
   },
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "Menu": {
+    "Home": "Home",
+    "AboutUs": "About us",
+    "Stuff": "Staff",
+    "Services": "Services",
+    "Guide": "Manuals",
+    "DoctorGuide": "Doctor manual",
+    "PatientGuide": "Patient manual",
+    "News": "News",
+    "NewsDetails": "News Details",
+    "Gallery": {
+      "Gallery": "Gallery",
+      "Folder": "Folder",
+      "Images": "Photos",
+      "Videos": "Videos"
+    },
+    "ContactUs": "Contact us",
+    "EmployeeDetails": "Employee details",
+    "ServiceDetails": "Service details",
+    "Podcasts": "'CardioLab' podcasts",
+    "InsuranceInformation": "Insurance information",
+    "HealthLibrary": "Health library",
+    "UsefulMaterials": "Useful materials",
+    "AccreditedTrainings": "Accredited trainings",
+    "Seminars": "Seminars",
+    "JobOpenings": "Job openings"
   },
-  "Header": {
+  "Components": {
+    "Landing": {
+      "AboutUs": {
+        "title": "Welcome to CardioLab.  We have...",
+        "one": "Certified Doctors",
+        "two": "Patient-Centered Care",
+        "three": "Modern Technology"
+      }
+    },
+    "ContactForm": {
+      "title": "Drop your message for any info or question",
+      "placeholders": {
+        "name": "Your name",
+        "email": "Your email",
+        "phone": "Your phone",
+        "subject": "Your subject",
+        "message": "Your message ..."
+      },
+      "sendMessage": "Send Message",
+      "callNote": "Call"
+    },
+    "Appointments": {
+      "title": "Book your appointment",
+      "description": "Our specialist will confirm your visit within 1 hour.",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "services": "Services",
+        "doctors": "Doctors",
+        "age": "Age"
+      },
+      "placeholders": {
+        "name": "Enter Your Name",
+        "email": "Enter Your Email",
+        "phone": "Enter Your Number",
+        "services": "Cardio",
+        "doctors": "Choose Your Doctor",
+        "age": "Your Age"
+      },
+      "actions": {
+        "submit": "submit"
+      }
+    },
+    "VideoSection": {
+      "title": "CardioLab introduction",
+      "description": "Welcome to CardioLab, where your heart health is our priority. In this introduction, we provide an overview of our clinic's mission, services, and state-of-the-art technology designed to support cardiovascular care. Learn about our team of experienced specialists, our approach to personalized treatments, and how we aim to improve your well-being with innovative and compassionate healthcare solutions."
+    }
+  },
+  "HeroSlider": {
+    "titleOne": "CardioLab",
+    "descriptionOne": "The Art of Heart Care"
+  },
+  "About": {
+    "AboutContent": {
+      "title": "About CardioLab",
+      "description": "'CardioLab' Medical Clinic, founded in 2024,\nspecializes in modern heart care that prioritizes your well-being. We\nprovide a range of services for adults and children, from cardiovascular\nconsultations and heart screenings to comprehensive health checks and\nadvanced monitoring solutions."
+    },
+    "Titles": {
+      "Vision": "Vision",
+      "Values": "Values",
+      "Mission": "Mission",
+      "OurStrategicDirections": "Our Strategic Directions"
+    },
+    "Vision": "Our vision is to provide the highest quality cardiovascular care in Armenia through innovative approaches, holistic care, and comprehensive solutions.",
+    "Values": "Quality, professionalism, innovation, patient-centered approach, compassion, personalized care, collaboration and teamwork, responsibility, integrity, inclusivity, knowledge, and continuous professional development.",
+    "Mission": "Our mission is to offer innovative, evidence-based, and personalized care to all patients with cardiovascular diseases. We strive to improve each patient's treatment journey by providing compassionate care, raising awareness, and contributing to reducing the burden of cardiovascular diseases in Armenia.",
+    "OurStrategicDirections": {
+      "one": "Clinical cardiovascular medicine.",
+      "two": "Research and scientific activities.",
+      "three": "Raising patient awareness."
+    }
+  },
+  "News": {
+    "Form": {
+      "DropComment": "Drop your comment",
+      "PostComment": "Post A Comment",
+      "Placeholders": {
+        "YourComment": "Your Comment",
+        "Name": "Name",
+        "Phone": "Phone",
+        "Email": "Email",
+        "Subject": "Subject"
+      }
+    }
   },
   "Footer": {
+    "QuickLinks": {
+      "QuickLinksText": "Quick links",
+      "Links": {
+        "News": "News",
+        "AboutUs": "About us",
+        "ContactUs": "Contact us",
+        "Doctors": "Doctors",
+        "Services": "Services",
+        "Faq": "Faq"
+      }
+    },
+    "OurServices": {
+      "OurServicesText": "Our services",
+      "Links": {
+        "DentalCare": "Dental Care",
+        "Cardiology": "Cardiology",
+        "HijamaTherapy": "Hijama Therapy",
+        "MassageTherapy": "Massage Therapy",
+        "AmbluanceSevices": "Ambluance Sevices",
+        "Medicine": "Medicine"
+      }
+    },
+    "Form": {
+      "Feedback": "Feedback",
+      "NamePlaceholder": "Name",
+      "PhonePlaceholder": "Phone",
+      "MessagePlaceholder": "Message",
+      "Submit": "Submit"
+    }
   }
 }
