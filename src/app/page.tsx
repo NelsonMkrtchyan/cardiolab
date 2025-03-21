@@ -2,5 +2,5 @@
 import { redirect } from "~/i18n/routing";
 
 export default function RootPage() {
-  redirect({ href: "./", locale: "en" });
+  redirect({ href: "./", locale: "am" });
 }
