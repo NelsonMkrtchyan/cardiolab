@@ -1,14 +1,14 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { stuff } from "~/constants/stuff";
-import Card from "~/app/[locale]/stuff/_components/Card";
+import { staff } from "~/constants/staff";
+import Card from "~/app/[locale]/staff/_components/Card";
 import React from "react";
 import { Link } from "~/i18n/routing";
 
-const MeetOurStuff = () => {
+const MeetOurStaff = () => {
   const locale: string = useLocale();
-  const localisedStuff = stuff[locale as "en" | "ru" | "am"];
+  const localisedStaff = staff[locale as "en" | "ru" | "am"];
   const tGeneral = useTranslations("General");
 
   return (
@@ -16,17 +16,17 @@ const MeetOurStuff = () => {
       <div className="doctors-area ptb-100">
         <div className="container">
           <div className="section-title">
-            <h2>{tGeneral("MeetOurStuff")}</h2>
+            <h2>{tGeneral("MeetOurStaff")}</h2>
           </div>
 
           <div className="row justify-content-center">
-            {localisedStuff.slice(0, 3).map((employee) => {
+            {localisedStaff.slice(0, 3).map((employee) => {
               return <Card key={employee.id} employee={employee} />;
             })}
           </div>
 
           <div className="button-type-1">
-            <Link href="/stuff">{tGeneral("SeeAll")}</Link>
+            <Link href="/staff">{tGeneral("SeeAll")}</Link>
           </div>
         </div>
       </div>
@@ -34,4 +34,4 @@ const MeetOurStuff = () => {
   );
 };
 
-export default MeetOurStuff;
+export default MeetOurStaff;

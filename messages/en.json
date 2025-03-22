@@ -11,7 +11,7 @@
     "ContactUs": "Contact us",
     "OurNews": "Our news",
     "OurServices": "Our services",
-    "MeetOurStuff": "Meet our staff",
+    "MeetOurStaff": "Meet our staff",
     "WorkingHours": "Working Hours",
     "Weekdays": {
       "Monday": "Monday",
@@ -31,7 +31,7 @@
   "Menu": {
     "Home": "Home",
     "AboutUs": "About us",
-    "Stuff": "Staff",
+    "Staff": "Staff",
     "Services": "Services",
     "Guide": "Manuals",
     "DoctorGuide": "Doctor manual",

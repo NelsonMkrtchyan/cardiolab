@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import type { employeeI } from "~/constants/stuff";
+import type { employeeI } from "~/constants/staff";
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 
