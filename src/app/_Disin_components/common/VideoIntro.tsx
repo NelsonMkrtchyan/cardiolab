@@ -15,9 +15,8 @@ const VideoIntro: React.FC = () => {
       <FsLightbox
         toggler={toggler}
         sources={[
+          "https://www.youtube.com/watch?v=5g0QUIsHiP8&ab_channel=CardioLab",
           "https://www.youtube.com/watch?v=znyBJC7NDOk&ab_channel=CardioLab&autoplay=1",
-          "https://www.youtube.com/watch?v=ksAkHj7KceI&ab_channel=CardioLab",
-          "https://www.youtube.com/watch?v=OD9Ni0_I3Tc&ab_channel=CardioLab",
         ]}
       />
 
@@ -26,11 +25,15 @@ const VideoIntro: React.FC = () => {
           <TabPanel>
             <div
               className="video-area"
-              style={{ backgroundImage: `url(/images/intro-video-bg.jpg)` }}
+              style={{
+                // backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWludIY24tPMTpgRZJcf6019kl5PLQv3SueECwxo)`,
+                backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlun2PT6Vz8iXtIHULns6k3RoJDbzQgEqF9Vf7m)`,
+              }}
             >
               <div className="d-table">
                 <div className="d-table-cell">
                   <div className="container">
+                    {/*<div className="video-item-wrapper">*/}
                     <div className="video-item">
                       <div
                         onClick={() => setToggler(!toggler)}
@@ -44,6 +47,7 @@ const VideoIntro: React.FC = () => {
                         <p>{tComponents("VideoSection.description")}</p>
                       </div>
                     </div>
+                    {/*</div>*/}
                   </div>
                 </div>
               </div>

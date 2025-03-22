@@ -323,7 +323,7 @@ $black-color: #111111;
 
   /*-- Video --*/
   .video-area {
-    height: 490px;
+    height: 550px;
   }
   .video-item {
     a {
@@ -605,8 +605,9 @@ $black-color: #111111;
 
   /*-- Welcome --*/
   .welcome-left {
-    height: auto;
-    background-image: unset !important;
+    //height: auto;
+    //background-image: unset !important;
+    height: 600px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -2572,15 +2573,10 @@ $black-color: #111111;
     }
   }
   .welcome-left {
-    height: auto;
-    background-image: unset !important;
+    height: 600px;
     display: flex;
     width: 100%;
     justify-content: center;
-
-    img {
-      display: inline-block;
-    }
   }
   .welcome-right {
     padding-left: 25px;
@@ -2603,7 +2599,7 @@ $black-color: #111111;
 
   }
   .section-title-two {
-    max-width: 100%;
+    max-width: 90%;
 
     span {
       font-size: $all-size;
@@ -3915,6 +3911,22 @@ $black-color: #111111;
 
   .faq-area-two {
   }
+
+  /*-- Welcome --*/
+  .section-title-two {
+    margin-bottom: 30px;
+    max-width: 95%;
+
+    span {
+      font-size: 12px;
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 1.2;
+    }
+  }
+  /*-- End Welcome --*/
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
