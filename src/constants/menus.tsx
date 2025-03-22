@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-// TODO change all stuff to staff
+// TODO change all staff to staff
 export const Menus = () => {
   const t = useTranslations("Menu");
   return [
@@ -12,8 +12,8 @@ export const Menus = () => {
       link: "/about",
     },
     {
-      label: `${t("Stuff")}`,
-      link: "/stuff",
+      label: `${t("Staff")}`,
+      link: "/staff",
     },
     {
       label: `${t("Services")}`,

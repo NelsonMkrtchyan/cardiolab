@@ -82,7 +82,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/stuff">
+                      <Link href="/staff">
                         {tFooter("QuickLinks.Links.Doctors")}
                       </Link>
                     </li>

@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSlider from "~/app/_Disin_components/HeroSlider";
 import LatestBlogPost from "~/app/_Disin_components/common/LatestBlogPost";
-import MeetOurStuff from "~/app/_Disin_components/common/MeetOurStuff";
+import MeetOurStaff from "~/app/_Disin_components/common/MeetOurStaff";
 import VideoIntro from "~/app/_Disin_components/common/VideoIntro";
 import AboutUsSection from "~/app/_Disin_components/common/AboutUsSection";
 import AppointmentForm from "~/app/_Disin_components/AppointmentForm";
@@ -17,7 +17,7 @@ const HomePage = async () => {
 
       <VideoIntro />
 
-      <MeetOurStuff />
+      <MeetOurStaff />
 
       <AppointmentForm />
 

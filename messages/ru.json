@@ -11,7 +11,7 @@
     "ContactUs": "Контакты",
     "OurNews": "Новости",
     "OurServices": "Услуги",
-    "MeetOurStuff": "Познакомьтесь с нашим персоналом",
+    "MeetOurStaff": "Познакомьтесь с нашим персоналом",
     "WorkingHours": "Рабочие часы",
     "Weekdays": {
       "Monday": "Понедельник",
@@ -31,7 +31,7 @@
   "Menu": {
     "Home": "Главная",
     "AboutUs": "О нас",
-    "Stuff": "Персонал",
+    "Staff": "Персонал",
     "Services": "Услуги",
     "ServiceDetails": "Подробности услуги",
     "Guide": "Руководства",

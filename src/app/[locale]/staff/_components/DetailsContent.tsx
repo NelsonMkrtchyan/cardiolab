@@ -2,7 +2,7 @@
 
 import React from "react";
 import Sidebar from "./Sidebar";
-import { type employeeI } from "~/constants/stuff";
+import { type employeeI } from "~/constants/staff";
 
 interface DetailsContentI {
   employee: employeeI;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { type CardI } from "~/constants/stuff";
+import { type CardI } from "~/constants/staff";
 // import { Link } from "~/i18n/routing";
 
 const Card = ({ employee }: CardI) => {
@@ -13,7 +13,7 @@ const Card = ({ employee }: CardI) => {
   return (
     <>
       <div className="col-sm-6 col-lg-4">
-        {/*<Link href={`/stuff/details/${id}`}>*/}
+        {/*<Link href={`/staff/details/${id}`}>*/}
         <div className="doctor-item">
           <div className="doctor-top">
             <Image src={image} alt="Doctor" width={364} height={393} />
@@ -22,7 +22,7 @@ const Card = ({ employee }: CardI) => {
           </div>
           <div className="doctor-bottom">
             <h3>
-              {/*<Link href={`/stuff/details/${id}`}>{name}</Link>*/}
+              {/*<Link href={`/staff/details/${id}`}>{name}</Link>*/}
               {name}
             </h3>
             <span>{position}</span>

@@ -1,13 +1,13 @@
 import { useLocale } from "next-intl";
 import { useParams } from "next/navigation";
-import { stuff } from "~/constants/stuff";
+import { staff } from "~/constants/staff";
 
 const useEmployee = () => {
   const locale: string = useLocale();
   const { slug } = useParams();
-  
+
   const currentEmployee =
-    stuff[locale as "en" | "ru" | "am"].find(
+    staff[locale as "en" | "ru" | "am"].find(
       (employee) => employee.id === Number(slug),
     ) ?? null;
 

@@ -9,13 +9,13 @@ export interface CardI {
   employee: employeeI;
 }
 
-interface StuffI {
+interface StaffI {
   en: employeeI[];
   am: employeeI[];
   ru: employeeI[];
 }
 
-export const stuff: StuffI = {
+export const staff: StaffI = {
   am: [
     {
       id: 1,

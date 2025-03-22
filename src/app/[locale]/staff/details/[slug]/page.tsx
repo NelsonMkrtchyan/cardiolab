@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import PageBanner from "~/app/_Disin_components/common/PageBanner";
-import DetailsContent from "~/app/[locale]/stuff/_components/DetailsContent";
+import DetailsContent from "~/app/[locale]/staff/_components/DetailsContent";
 import { useTranslations } from "next-intl";
-import useEmployee from "~/app/[locale]/stuff/_hooks/useEmployee";
+import useEmployee from "~/app/[locale]/staff/_hooks/useEmployee";
 import NotFound from "~/app/[locale]/not-found";
 
 export default function Page() {
@@ -14,7 +14,7 @@ export default function Page() {
       <PageBanner
         pageTitle={currentEmployee?.name ?? tMenu("EmployeeDetails")}
         homePageUrl="/"
-        homePageText={tMenu("Stuff")}
+        homePageText={tMenu("Staff")}
         activePageText={tMenu("EmployeeDetails")}
         bgImage="/images/page-banner2.jpg"
       />
