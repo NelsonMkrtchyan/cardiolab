@@ -7,6 +7,7 @@ export interface employeeI {
 
 export interface CardI {
   employee: employeeI;
+  disabled?: boolean;
 }
 
 interface StaffI {
@@ -19,87 +20,164 @@ export const staff: StaffI = {
   am: [
     {
       id: 1,
-      name: "Հովհաննես Աբրահամյան",
-      image: "/images/doctors/doctor1.jpg",
-      position: "Ադմինիստրատոր",
+      name: "Տաթևիկ Հովակիմյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubYgYkMldCU4c8A1oViQtsIJW2aZEXeySMgu3",
+      position: "Սրտաբան-Առիթմոլոգ",
     },
     {
       id: 2,
-      name: "Ալիսա Սարգսյան",
-      image: "/images/doctors/doctor2.jpg",
-      position: "Ադմինիստրատոր",
+      name: "Կարեն Զոհրաբյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2Fagk13aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+      position: "Մանկական Ինտերվենցիոն Սրտաբան",
     },
     {
       id: 3,
-      name: "Միքայել Հովհաննիսյան",
-      image: "/images/doctors/doctor3.jpg",
-      position: "Կարդիոլոգ",
+      name: "Կատարինե Վարդանյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+      position: "Ինտենսիվ Սրտաբան",
     },
     {
       id: 4,
-      name: "Էմմա Պետրոսյան",
-      image: "/images/doctors/doctor4.jpg",
-      position: "Կարդիոլոգ",
+      name: "Մարիամ Մինասյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluxRiCLFfVspCYkb9tWP0X6eLDhnRHOl7fTjaE",
+      position: "Սրտաբան, Էխո-Սգ Մասնագետ, Սրտի Մռտ Մասնագետ",
     },
     {
       id: 5,
-      name: "Անդրանիկ Մարտիրոսյան",
-      image: "/images/doctors/doctor5.jpg",
-      position: "Կարդիոլոգ",
+      name: "Տաթևիկ Սիմոնյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluLUcM1UFM9GPald3WK8xTLcn5eompzqNkuiFI",
+      position: "Մանկական Եվ Պերինատալ Սրտաբան",
     },
     {
       id: 6,
-      name: "Սոֆիա Կարապետյան",
-      image: "/images/doctors/doctor6.jpg",
-      position: "Կարդիոլոգ",
+      name: "Անահիտ Գևորգյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluYgysYQo17ZsjS0g8pKl2JFLv4rURaVyuX3wt",
+      position: "Սրտաբան",
     },
     {
       id: 7,
-      name: "Ալեքսանդր Հովակիմյան",
-      image: "/images/doctors/doctor7.jpg",
-      position: "Կարդիոլոգ",
+      name: "Գևորգ Պետրոսյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluuGPZnJcGiQfWnFY4hBNrq8zcsHID6ePwJvag",
+      position: "Սրտաբան",
     },
     {
       id: 8,
-      name: "Գևորգ Միքայելյան",
-      image: "/images/doctors/doctor8.jpg",
-      position: "Քույր",
+      name: "Տաթևիկ Գաբրիելյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluEdASraJSpZQ36u72Hw8kvD5PiIMdXj9xVnB0",
+      position: "Սրտաբան-Առիթմոլոգ",
     },
     {
       id: 9,
-      name: "Մարիա Բաբայան",
-      image: "/images/doctors/doctor9.jpg",
-      position: "Քույր",
+      name: "Իզաբելլա Բարեկյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluv7GAuykBOredpWR2N9YyhZbqVn4KCwD15mIt",
+      position: "Սրտաբան",
     },
     {
       id: 10,
-      name: "Նարեկ Մարտիրոսյան",
-      image: "/images/doctors/doctor1.jpg",
-      position: "Քույր",
+      name: "Մարիամ Հովակիմյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubWNG7CldCU4c8A1oViQtsIJW2aZEXeySMgu3",
+      position: "Սրտաբան",
     },
     {
       id: 11,
-      name: "Սիրանուշ Հարությունյան",
-      image: "/images/doctors/doctor2.jpg",
-      position: "Քույր",
+      name: "Քնարիկ Բադեյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlui7rlk8UMdgQAzE8HpcawsFuGDr9USml2KXOR",
+      position: "Ներզատաբան",
     },
     {
       id: 12,
-      name: "Էլիզա Հովհաննիսյան",
-      image: "/images/doctors/doctor3.jpg",
-      position: "Քույր",
+      name: "Անահիտ Ոսկանյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu24lCbw3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+      position: "Նյարդաբան",
     },
     {
       id: 13,
-      name: "Գագիկ Վարդանյան",
-      image: "/images/doctors/doctor4.jpg",
-      position: "Հիմնադիր",
+      name: "Արփինե Սիմոնյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu1zx6nI2GN8X3FsiITKCzR9wVM5lohEmPqWDv",
+      position: "Թերապևտ, Գաստրոէնտերոլոգ",
     },
     {
       id: 14,
-      name: "Անահիտ Գրիգորյան",
-      image: "/images/doctors/doctor5.jpg",
-      position: "Հիմնադիր",
+      name: "Կարինե Մկրտչյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluX1HaqkOa6TkeElYqHKS8hzy4uf7mr9tC0MBv",
+      position: "Բժիշկ-Ռադիոլոգ",
+    },
+    {
+      id: 15,
+      name: "Ասղտիկ Ավետիքյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluq8n8oBlhOjyngHXWhEmI6MSGorCe32TBAusL",
+      position: "Ռադիոլոգ-Դուպլեքսի Մասնագետ",
+    },
+    {
+      id: 16,
+      name: "Աղունիկ Զաքարյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluhRKhXws9fbejvdio1cKYPT0D5OHW2CzGgBFZ",
+      position: "Անոթաբան",
+    },
+    {
+      id: 17,
+      name: "Թամարա Սիմոնյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluRij2QmpwtAKyZqujExl659riehkFnU7WadXQ",
+      position: "Հոգեբան",
+    },
+    {
+      id: 18,
+      name: "Մոնիկա Մկրտչյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSPS720nEW7pyXzGrTZQb21kmdgPfAOJ8h3NC",
+      position: "Բուժքույր",
+    },
+    {
+      id: 19,
+      name: "Քնարիկ Զաքարյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu17fAqMV2GN8X3FsiITKCzR9wVM5lohEmPqWD",
+      position: "Բուժքույր",
+    },
+    {
+      id: 20,
+      name: "Քնարիկ Առաքելյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluuWuZA3cGiQfWnFY4hBNrq8zcsHID6ePwJvag",
+      position: "Հասարակայնության Հետ Կապերի Եվ Հաղորդակցության Պատասխանատու",
+    },
+    {
+      id: 21,
+      name: "Մարիաննա Հովհաննիսյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu7Wff0hxTDGf3YpRJEC1nwk6tWHeNq5xSbUvu",
+      position: "Դիզայներ",
+    },
+    {
+      id: 22,
+      name: "Անահիտ Իսաջանյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJBBuhMgHJqI5EuVZFjgRGzykmXKNTw4WcSeQ",
+      position: "Ադմինիստրատոր",
+    },
+    {
+      id: 23,
+      name: "Քրիստինա Մկրտչյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2m54Bt3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+      position: "Ադմինիստրատոր",
     },
   ],
   en: [
@@ -109,84 +187,6 @@ export const staff: StaffI = {
       image: "/images/doctors/doctor1.jpg",
       position: "Admin",
     },
-    {
-      id: 2,
-      name: "Alisa Sargsyan",
-      image: "/images/doctors/doctor2.jpg",
-      position: "Admin",
-    },
-    {
-      id: 3,
-      name: "Mikayel Hovhannisyan",
-      image: "/images/doctors/doctor3.jpg",
-      position: "Cardiologist",
-    },
-    {
-      id: 4,
-      name: "Emma Petrosyan",
-      image: "/images/doctors/doctor4.jpg",
-      position: "Cardiologist",
-    },
-    {
-      id: 5,
-      name: "Andranik Martirosyan",
-      image: "/images/doctors/doctor5.jpg",
-      position: "Cardiologist",
-    },
-    {
-      id: 6,
-      name: "Sofia Karapetyan",
-      image: "/images/doctors/doctor6.jpg",
-      position: "Cardiologist",
-    },
-    {
-      id: 7,
-      name: "Aleksandr Hovakimyan",
-      image: "/images/doctors/doctor7.jpg",
-      position: "Cardiologist",
-    },
-    {
-      id: 8,
-      name: "Gevorg Mikayelyan",
-      image: "/images/doctors/doctor8.jpg",
-      position: "Nurse",
-    },
-    {
-      id: 9,
-      name: "Maria Babayan",
-      image: "/images/doctors/doctor9.jpg",
-      position: "Nurse",
-    },
-    {
-      id: 10,
-      name: "Narek Martirosyan",
-      image: "/images/doctors/doctor1.jpg",
-      position: "Nurse",
-    },
-    {
-      id: 11,
-      name: "Siranush Harutyunyan",
-      image: "/images/doctors/doctor2.jpg",
-      position: "Nurse",
-    },
-    {
-      id: 12,
-      name: "Eliza Hovhannisyan",
-      image: "/images/doctors/doctor3.jpg",
-      position: "Nurse",
-    },
-    {
-      id: 13,
-      name: "Gagik Vardanyan",
-      image: "/images/doctors/doctor4.jpg",
-      position: "Founder",
-    },
-    {
-      id: 14,
-      name: "Anahit Grigoryan",
-      image: "/images/doctors/doctor5.jpg",
-      position: "Founder",
-    },
   ],
   ru: [
     {
@@ -194,84 +194,6 @@ export const staff: StaffI = {
       name: "Ованес Абраамян",
       image: "/images/doctors/doctor1.jpg",
       position: "Администратор",
-    },
-    {
-      id: 2,
-      name: "Алиса Саргсян",
-      image: "/images/doctors/doctor2.jpg",
-      position: "Администратор",
-    },
-    {
-      id: 3,
-      name: "Микаэл Ованисян",
-      image: "/images/doctors/doctor3.jpg",
-      position: "Кардиолог",
-    },
-    {
-      id: 4,
-      name: "Эмма Петросян",
-      image: "/images/doctors/doctor4.jpg",
-      position: "Кардиолог",
-    },
-    {
-      id: 5,
-      name: "Андраник Мартиросян",
-      image: "/images/doctors/doctor5.jpg",
-      position: "Кардиолог",
-    },
-    {
-      id: 6,
-      name: "София Карапетян",
-      image: "/images/doctors/doctor6.jpg",
-      position: "Кардиолог",
-    },
-    {
-      id: 7,
-      name: "Александр Овакимян",
-      image: "/images/doctors/doctor7.jpg",
-      position: "Кардиолог",
-    },
-    {
-      id: 8,
-      name: "Геворг Микаелян",
-      image: "/images/doctors/doctor8.jpg",
-      position: "Медсестра",
-    },
-    {
-      id: 9,
-      name: "Мария Бабаян",
-      image: "/images/doctors/doctor9.jpg",
-      position: "Медсестра",
-    },
-    {
-      id: 10,
-      name: "Нарек Мартиросян",
-      image: "/images/doctors/doctor1.jpg",
-      position: "Медсестра",
-    },
-    {
-      id: 11,
-      name: "Сирануш Арутюнян",
-      image: "/images/doctors/doctor2.jpg",
-      position: "Медсестра",
-    },
-    {
-      id: 12,
-      name: "Элиза Ованисян",
-      image: "/images/doctors/doctor3.jpg",
-      position: "Медсестра",
-    },
-    {
-      id: 13,
-      name: "Гагик Варданян",
-      image: "/images/doctors/doctor4.jpg",
-      position: "Основатель",
-    },
-    {
-      id: 14,
-      name: "Анахит Григорян",
-      image: "/images/doctors/doctor5.jpg",
-      position: "Основатель",
     },
   ],
 };

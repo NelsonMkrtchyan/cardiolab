@@ -1160,6 +1160,7 @@ button {
   .doctor-top {
     position: relative;
     border-radius: 10px;
+    aspect-ratio: 4/5;
 
     a {
       display: inline-block;
@@ -1187,12 +1188,12 @@ button {
     img {
       width: 100%;
       border-radius: 10px;
+      object-fit: cover;
     }
   }
 
   .doctor-bottom {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 10px;
 
     h3 {
       //TODO: Delete in the future START
