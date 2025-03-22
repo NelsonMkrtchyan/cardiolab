@@ -16,7 +16,7 @@ const AboutContent: React.FC = () => {
               <div className="about-item">
                 <div className="about-left">
                   <Image
-                    src="/images/about1.jpg"
+                    src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubD8SFgldCU4c8A1oViQtsIJW2aZEXeySMgu3"
                     alt="About"
                     width={626}
                     height={552}
