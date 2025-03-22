@@ -5,10 +5,11 @@ import { Link } from "~/i18n/routing";
 import { services } from "~/constants/services";
 import { useLocale, useTranslations } from "next-intl";
 import Card from "~/app/[locale]/services/_components/Card";
+import { type LocaleT } from "~/types";
 
 const Services: React.FC = () => {
   const locale: string = useLocale();
-  const localisedServices = services[locale as "en" | "ru" | "am"];
+  const localisedServices = services[locale as LocaleT];
   const tGeneral = useTranslations("General");
 
   return (

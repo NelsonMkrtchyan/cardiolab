@@ -1,12 +1,13 @@
 // import { useLocale } from "next-intl";
 import { useParams } from "next/navigation";
 import { gallery } from "~/constants/Gallery";
+// import {LocaleT} from "~/types";
 
 const useGallery = () => {
   // const locale: string = useLocale();
   const { slug } = useParams();
 
-  // const currentNewsList = news[locale as "en" | "ru" | "am"];
+  // const currentNewsList = news[locale as LocaleT];
 
   const currentImageFolders =
     gallery.images.find((item) => item.id === Number(slug)) ?? null;

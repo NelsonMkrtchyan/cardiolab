@@ -5,6 +5,7 @@ import { CardioLabInfo } from "~/constants/menus";
 import { useLocale, useTranslations } from "next-intl";
 import { IoCall, IoLocation, IoMail } from "react-icons/io5";
 import { services } from "~/constants/services";
+import { type LocaleT } from "~/types";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,8 +13,8 @@ const Footer = () => {
   const tFooter = useTranslations("Footer");
 
   const locale: string = useLocale();
-  const localisedServices = services[locale as "en" | "ru" | "am"];
-  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
+  const localisedServices = services[locale as LocaleT];
+  const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
   return (
     <>
       <footer

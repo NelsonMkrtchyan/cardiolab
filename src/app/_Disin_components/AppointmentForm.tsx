@@ -7,6 +7,7 @@ import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
 import { WorkingHours } from "~/constants/menus";
+import { type LocaleT } from "~/types";
 
 interface FormData {
   name: string;
@@ -18,7 +19,7 @@ const AppointmentForm: React.FC = () => {
   const tComponents = useTranslations("Components");
   const tGeneral = useTranslations("General");
   const locale: string = useLocale();
-  const localisedWorkingHours = WorkingHours[locale as "en" | "ru" | "am"];
+  const localisedWorkingHours = WorkingHours[locale as LocaleT];
 
   const [formData, setFormData] = useState<FormData>({
     name: "",

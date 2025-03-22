@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocale } from "next-intl";
 import { excludeKeys, Languages } from "~/constants/general";
 import { usePathname, useRouter } from "~/i18n/routing";
+import { LocaleT } from "~/types";
 
 const LanguageSwitcher = () => {
   const locale: string = useLocale();
@@ -34,7 +35,7 @@ const LanguageSwitcher = () => {
                 setIsVisible(!isVisible);
               }}
             >
-              {/*{Languages[`${locale as "en" | "ru" | "am"}`].icon}*/}
+              {/*{Languages[`${locale as LocaleT}`].icon}*/}
               {Languages[`${locale as "am"}`].icon}
 
               {/*<ul className="language-dropdown-menu">*/}
@@ -48,7 +49,7 @@ const LanguageSwitcher = () => {
               {/*            changeLocale(flagKey);*/}
               {/*          }}*/}
               {/*        >*/}
-              {/*          {Languages[`${flagKey as "en" | "ru" | "am"}`].icon}*/}
+              {/*          {Languages[`${flagKey as LocaleT}`].icon}*/}
               {/*        </div>*/}
               {/*      </li>*/}
               {/*    );*/}

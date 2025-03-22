@@ -8,13 +8,14 @@ import {
   FaWhatsapp,
 } from "react-icons/fa6";
 import { ImWhatsapp } from "react-icons/im";
+import { type LocaleT } from "~/types";
 
 import { CardioLabInfo } from "~/constants/menus";
 import { useLocale } from "next-intl";
 
 const TopHeader = () => {
   const locale: string = useLocale();
-  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
+  const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
   return (
     <>
       <div className="header-top">

@@ -5,10 +5,11 @@ import { staff } from "~/constants/staff";
 import Card from "~/app/[locale]/staff/_components/Card";
 import React from "react";
 import { Link } from "~/i18n/routing";
+import { type LocaleT } from "~/types";
 
 const MeetOurStaff = () => {
   const locale: string = useLocale();
-  const localisedStaff = staff[locale as "en" | "ru" | "am"];
+  const localisedStaff = staff[locale as LocaleT];
   const tGeneral = useTranslations("General");
 
   return (

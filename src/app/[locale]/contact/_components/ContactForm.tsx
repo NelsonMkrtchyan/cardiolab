@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { CardioLabInfo } from "~/constants/menus";
 import { IoCall } from "react-icons/io5";
 import { type ChangeEvent, type FormEvent, useState } from "react";
+import { type LocaleT } from "~/types";
 
 interface FormData {
   name: string;
@@ -16,7 +17,7 @@ interface FormData {
 
 const ContactForm = () => {
   const locale: string = useLocale();
-  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
+  const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
   const tComponents = useTranslations("Components");
   const [formData, setFormData] = useState<FormData>({
     name: "",
