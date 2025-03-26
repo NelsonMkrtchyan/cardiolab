@@ -50,6 +50,7 @@
     "Podcasts": "'CardioLab' podcasts",
     "InsuranceInformation": "Insurance information",
     "HealthLibrary": "Health library",
+    "Pricelist": "Price List",
     "UsefulMaterials": "Useful materials",
     "AccreditedTrainings": "Accredited trainings",
     "Seminars": "Seminars",
@@ -172,5 +173,13 @@
       "MessagePlaceholder": "Message",
       "Submit": "Submit"
     }
+  },
+  "PriceList": {
+    "title": "Our Services and Prices",
+    "description": "Find detailed information about our cardiology services and their prices. Prices are subject to change, please contact us for the most up-to-date information.",
+    "serviceInfo": "* \"ԿԱՐԴԻՈԼԱԲՈՒՄ\" ամբուլատոր քննությունների տեսակները և կատարման ժամկետները որոշվում են պացիենտի վարող բժշկի կողմից: \n♥Քննության վճարն ուժի մեջ է մեկ ամիս ժամկետով և այդ ընթացքում քննությունը կրկնելու անհրաժեշտության դեպքում դրա դիմաց գումար չի գանձվում:",
+    "serviceName": "Service",
+    "price": "Price",
+    "downloadButton": "Download Price List"
   }
 }
