@@ -9,29 +9,29 @@ const Card = ({ employee, disabled }: CardI) => {
   return (
     <>
       <div className="col-sm-6 col-lg-4">
-        <Link
-          href={`/staff/details/${id}`}
-          onClick={(e) => disabled && e.preventDefault()}
-        >
-          <div className="doctor-item">
-            <div className="doctor-top">
-              <Image src={image} alt="Doctor" fill />
-              {/*TODO: Uncomment in the future*/}
-              {/*<Link href="/appointment">Get Appointment</Link>*/}
-            </div>
-            <div className="doctor-bottom">
-              <h3>
-                <Link
-                  href={`/staff/details/${id}`}
-                  onClick={(e) => disabled && e.preventDefault()}
-                >
-                  {name}
-                </Link>
-              </h3>
-              <span>{position}</span>
-            </div>
+        {/*<Link*/}
+        {/*  href={`/staff/details/${id}`}*/}
+        {/*  onClick={(e) => disabled && e.preventDefault()}*/}
+        {/*>*/}
+        <div className="doctor-item">
+          <div className="doctor-top">
+            <Image src={image} alt="Doctor" fill />
+            {/*TODO: Uncomment in the future*/}
+            {/*<Link href="/appointment">Get Appointment</Link>*/}
           </div>
-        </Link>
+          <div className="doctor-bottom">
+            <h3>
+              {/*<Link*/}
+              {/*  href={`/staff/details/${id}`}*/}
+              {/*  onClick={(e) => disabled && e.preventDefault()}*/}
+              {/*>*/}
+              {name}
+              {/*</Link>*/}
+            </h3>
+            <span>{position}</span>
+          </div>
+        </div>
+        {/*</Link>*/}
       </div>
     </>
   );
