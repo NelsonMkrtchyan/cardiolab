@@ -4,10 +4,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import { useTranslations } from "next-intl";
+// import { Link } from "~/i18n/routing";
 
 const HeroSlider = () => {
-  const t = useTranslations("HeroSlider");
-  const tAbout = useTranslations("About");
+  // const t = useTranslations("HeroSlider");
+  // const tAbout = useTranslations("About");
 
   return (
     <>
@@ -41,8 +42,8 @@ const HeroSlider = () => {
                     {/*  />*/}
                     {/*</div>*/}
 
-                    <h1>{t("descriptionOne")}</h1>
-                    <p>{tAbout("Mission")}</p>
+                    {/*<h1>{t("descriptionOne")}</h1>*/}
+                    {/*<p>{tAbout("Mission")}</p>*/}
 
                     {/*TODO: From template, not using now*/}
                     {/*<div className="common-btn">*/}
@@ -58,38 +59,37 @@ const HeroSlider = () => {
           </div>
         </SwiperSlide>
 
-        {/*TODO: From template, not using now*/}
+        {/*/!*TODO: From template, not using now*!/*/}
         {/*<SwiperSlide>*/}
         {/*  <div*/}
         {/*    className="slider-item"*/}
         {/*    style={{*/}
-        {/*      backgroundImage: `url(/images/home-one/home-slider-bg.jpg)`,*/}
+        {/*      backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlun2PT6Vz8iXtIHULns6k3RoJDbzQgEqF9Vf7m)`,*/}
         {/*    }}*/}
         {/*  >*/}
         {/*    <div className="d-table">*/}
         {/*      <div className="d-table-cell">*/}
         {/*        <div className="container">*/}
         {/*          <div className="slider-text">*/}
-        {/*            <div className="slider-shape-two">*/}
-        {/*              <img*/}
-        {/*                src="/images/home-one/home-slider2.png"*/}
-        {/*                alt="Shape"*/}
-        {/*                width={730}*/}
-        {/*                height={500}*/}
-        {/*              />*/}
-        {/*            </div>*/}
-        {/*            <h1>Caring Health is Important Than All</h1>*/}
-        {/*            <p>*/}
-        {/*              Lorem ipsum dolor sit amet, consectetur adipiscing elit,*/}
-        {/*              sed do eiusmod tempor incididunt ut labore et dolore magna*/}
-        {/*              aliqua. Quis ipsum suspendisse ultrices gravida.*/}
-        {/*            </p>*/}
+        {/*            /!*TODO: From template, not using now*!/*/}
+        {/*            /!*<div className="slider-shape">*!/*/}
+        {/*            /!*  <img*!/*/}
+        {/*            /!*    src="/images/home-one/home-slider1.png"*!/*/}
+        {/*            /!*    alt="Shape"*!/*/}
+        {/*            /!*    width={730}*!/*/}
+        {/*            /!*    height={500}*!/*/}
+        {/*            /!*  />*!/*/}
+        {/*            /!*</div>*!/*/}
 
+        {/*            /!*<h1>{t("descriptionOne")}</h1>*!/*/}
+        {/*            /!*<p>{tAbout("Mission")}</p>*!/*/}
+
+        {/*            /!*TODO: From template, not using now*!/*/}
         {/*            <div className="common-btn">*/}
-        {/*              /!*<Link href="/appointment">Get Appointment</Link>*!/*/}
-        {/*              /!*<Link href="/about" className="cmn-btn-right">*!/*/}
-        {/*              /!*  Learn More*!/*/}
-        {/*              /!*</Link>*!/*/}
+        {/*              <Link href="/appointment">Get Appointment</Link>*/}
+        {/*              <Link href="/about" className="cmn-btn-right">*/}
+        {/*                Learn More*/}
+        {/*              </Link>*/}
         {/*            </div>*/}
         {/*          </div>*/}
         {/*        </div>*/}

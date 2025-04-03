@@ -19,7 +19,9 @@ const FaqSection: React.FC = () => {
     <>
       <FsLightbox
         toggler={toggler}
-        sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
+        sources={[
+          "https://www.youtube.com/watch?v=5g0QUIsHiP8&ab_channel=CardioLab",
+        ]}
       />
 
       <div className="faq-area-two ptb-100">
@@ -32,15 +34,10 @@ const FaqSection: React.FC = () => {
             <div className="col-lg-6">
               <div
                 className="faq-img"
-                style={{ backgroundImage: `url(/images/faq-main.jpg)` }}
+                style={{
+                  backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlun2PT6Vz8iXtIHULns6k3RoJDbzQgEqF9Vf7m)`,
+                }}
               >
-                <Image
-                  src="/images/faq-main.jpg"
-                  alt="Faq"
-                  width={750}
-                  height={500}
-                />
-
                 <div
                   onClick={() => setToggler(!toggler)}
                   className="popup-youtube"
