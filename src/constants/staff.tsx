@@ -85,7 +85,7 @@ export const staff: StaffI = {
       id: 10,
       name: "Մարիամ Հովակիմյան",
       image:
-        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubWNG7CldCU4c8A1oViQtsIJW2aZEXeySMgu3",
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluMxGKMRSmxf0AaeIb7tJwXUHG2sKPOWnoQLik",
       position: "Սրտաբան",
     },
     {
@@ -178,6 +178,13 @@ export const staff: StaffI = {
       image:
         "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2m54Bt3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
       position: "Ադմինիստրատոր",
+    },
+    {
+      id: 24,
+      name: "Հրաչյա Թումանյան",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluhQAJC9s9fbejvdio1cKYPT0D5OHW2CzGgBFZ",
+      position: "Մենեջեր",
     },
   ],
   en: [
