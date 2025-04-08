@@ -28,7 +28,7 @@ const Card = ({ employee, disabled }: CardI) => {
               {name}
               {/*</Link>*/}
             </h3>
-            <span>{position}</span>
+            <span>{position.toLowerCase()}</span>
           </div>
         </div>
         {/*</Link>*/}
