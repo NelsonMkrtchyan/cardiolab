@@ -191,7 +191,10 @@ const ContactForm = () => {
             <div className="col-lg-5 p-0">
               <div
                 className="speciality-item speciality-right speciality-right-two speciality-right-three"
-                style={{ backgroundImage: `url(/images/about4.jpg)` }}
+                // style={{ backgroundImage: `url(/images/about4.jpg)` }}
+                style={{
+                  backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJBBuhMgHJqI5EuVZFjgRGzykmXKNTw4WcSeQ)`,
+                }}
               >
                 <Image
                   src="/images/about4.jpg"

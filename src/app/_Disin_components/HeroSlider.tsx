@@ -9,6 +9,7 @@ import { Link } from "~/i18n/routing";
 const HeroSlider = () => {
   const t = useTranslations("HeroSlider");
   const tAbout = useTranslations("About");
+  const tGeneral = useTranslations("General");
 
   return (
     <>
@@ -76,7 +77,7 @@ const HeroSlider = () => {
                       href="/patientGuide/pricelist"
                       className="cmn-btn-right"
                     >
-                      Learn More
+                      {tGeneral("KnowMore")}
                     </Link>
                   </div>
                 </div>
