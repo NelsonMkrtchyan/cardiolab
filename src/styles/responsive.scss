@@ -68,8 +68,10 @@ $black-color: #111111;
   /*-- Home Slider --*/
   .slider-item {
     height: 100%;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    //padding-top: 80px;
+    padding-top: 120px;
+    //padding-bottom: 80px;
+    padding-bottom: 120px;
     text-align: center;
 
     .slider-shape {
@@ -2006,6 +2008,15 @@ $black-color: #111111;
         }
       }
     }
+
+    .logoContainer {
+      margin-right: 10px;
+
+      a {
+        margin-right: 2rem;
+        //font-size: 2rem;
+      }
+    }
   }
   /*-- End Header Top --*/
 
@@ -2013,8 +2024,10 @@ $black-color: #111111;
   /*-- Home Slider --*/
   .slider-item {
     height: 100%;
-    padding-top: 140px;
-    padding-bottom: 140px;
+    //padding-top: 140px;
+    padding-top: 180px;
+    //padding-bottom: 140px;
+    padding-bottom: 180px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -3872,6 +3885,14 @@ $black-color: #111111;
             margin-left: 12px;
             margin-right: 12px;
           }
+        }
+      }
+    }
+
+    .logoContainer {
+      a {
+        img {
+          width: 40px;
         }
       }
     }

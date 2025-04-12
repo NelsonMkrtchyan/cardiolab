@@ -207,14 +207,16 @@ const ContactForm = () => {
                   <div className="speciality-content">
                     <h3>{tComponents("ContactForm.callNote")}</h3>
                     <ul>
-                      {localisedCardioLabInfo.phone.map((phone: string) => (
-                        <li key={phone}>
-                          <a href={`tel:${phone}`}>
-                            <IoCall className="icon" color={"white"} />
-                            {phone}
-                          </a>
-                        </li>
-                      ))}
+                      {
+                        localisedCardioLabInfo.phone.map((phone: string) => (
+                          <li key={phone}>
+                            <a href={`tel:${phone}`}>
+                              <IoCall className="icon" color={"white"} />
+                              {phone}
+                            </a>
+                          </li>
+                        ))[0]
+                      }
                     </ul>
                   </div>
                 </div>

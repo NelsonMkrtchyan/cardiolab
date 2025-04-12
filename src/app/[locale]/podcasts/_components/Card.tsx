@@ -25,7 +25,10 @@ const Card = ({ podcast }: CardI) => {
               <p>{description}</p>
             </div>
           </div>
-          <div className="video-area" style={{ backgroundImage: posterUrl }} />
+          <div
+            className="video-area card-video"
+            style={{ backgroundImage: posterUrl }}
+          />
           <div className="podcast-item">
             <div className="podcast-front">
               <p>{formattingDate({ date, locale })}</p>
