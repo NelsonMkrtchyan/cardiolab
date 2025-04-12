@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import { Link } from "~/i18n/routing";
 
@@ -18,7 +18,12 @@ const HeroSlider = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination, Navigation]}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        modules={[Pagination, Navigation, Autoplay]}
         className="home-slider"
       >
         <SwiperSlide>
