@@ -98,7 +98,11 @@ const Navbar: React.FC = () => {
               <div className={classOne} id="navbarSupportedContent">
                 <ul className="navbar-nav">
                   {Menus().map((menuItem) => (
-                    <MenuItem key={menuItem.label} {...menuItem} />
+                    <MenuItem 
+                      key={menuItem.label} 
+                      {...menuItem} 
+                      closeMenu={toggleNavbar}
+                    />
                   ))}
                 </ul>
               </div>
