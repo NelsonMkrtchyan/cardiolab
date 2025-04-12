@@ -74,6 +74,45 @@ $black-color: #111111;
 $transition: .5s all ease;
 $all-size: 15px;
 
+
+/* Import Armenian handwriting font */
+@font-face {
+  font-family: 'Tumanian';
+  src: url('/fonts/ArTar_TumanianDzeragir_U.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poqrik';
+  src: url('/fonts/poqrik.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Import Caveat font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
+/* Armenian handwriting signature styles */
+.handwriting-signature {
+  /* English text with handwriting style */
+  .english {
+    font-family: 'Caveat', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
+  }
+
+  p {
+    font-family: 'Poqrik', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
+    //font-family: 'Tumanian', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
+    font-size: 26px !important;
+    white-space: normal !important;
+
+  }
+}
+
+
 /*-- Default CSS --*/
 body {
   color: $grey-color;
@@ -1645,7 +1684,7 @@ button {
 
 .welcome-left {
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 25%;
   background-repeat: no-repeat;
   border-radius: 0 10px 10px 0;
   margin-bottom: 30px;

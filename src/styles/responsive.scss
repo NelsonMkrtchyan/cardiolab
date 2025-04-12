@@ -240,6 +240,8 @@ $black-color: #111111;
   }
   .about-left img {
     animation: unset;
+    max-height: 500px;
+    object-position: top;
   }
   /*-- End About --*/
 

@@ -35,6 +35,15 @@ const AboutContent: React.FC = () => {
                 />
                 <h2>{tAbout("AboutContent.title")}</h2>
                 <p>{tAbout("AboutContent.description")}</p>
+                <div className="handwriting-signature">
+                  <p>
+                    <span> {tAbout("AboutContent.signature1")}</span>
+                    <span className="english">
+                      {tAbout("AboutContent.signature2")}
+                    </span>
+                    <span> {tAbout("AboutContent.signature3")}</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

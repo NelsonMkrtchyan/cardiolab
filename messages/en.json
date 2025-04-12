@@ -110,7 +110,10 @@
   "About": {
     "AboutContent": {
       "title": "About CardioLab",
-      "description": "'CardioLab' Medical Clinic, founded in 2024,\nspecializes in modern heart care that prioritizes your well-being. We\nprovide a range of services for adults and children, from cardiovascular\nconsultations and heart screenings to comprehensive health checks and\nadvanced monitoring solutions."
+      "description": "'CardioLab' Medical Clinic, founded in 2024,\nspecializes in modern heart care that prioritizes your well-being. We\nprovide a range of services for adults and children, from cardiovascular\nconsultations and heart screenings to comprehensive health checks and\nadvanced monitoring solutions.",
+      "signature1": "\n\n Տաթևիկ Հովակիմյան",
+      "signature2": "\n«CardioLab»",
+      "signature3": " բժշկական կենտրոնի համահիմնադիր տնօրեն, սրատաբան-առիթմոլոգ\n"
     },
     "Titles": {
       "Vision": "Vision",
