@@ -7,6 +7,7 @@ import { Link } from "~/i18n/routing";
 const AboutUsSection: React.FC = () => {
   const tComponents = useTranslations("Components");
   const tGeneral = useTranslations("General");
+  const tAbout = useTranslations("About");
 
   return (
     <>
@@ -30,6 +31,15 @@ const AboutUsSection: React.FC = () => {
 
                 <div className="section-title-two">
                   <p>{tComponents("Landing.AboutUs.description")}</p>
+                </div>
+                <div className="handwriting-signature">
+                  <p>
+                    <span> {tAbout("AboutContent.signature1")}</span>
+                    <span className="english">
+                      {tAbout("AboutContent.signature2")}
+                    </span>
+                    <span> {tAbout("AboutContent.signature3")}</span>
+                  </p>
                 </div>
 
                 <div className="button-type-1">
