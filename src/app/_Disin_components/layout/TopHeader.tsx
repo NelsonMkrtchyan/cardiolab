@@ -90,14 +90,14 @@ const TopHeader = () => {
                     </li>
                     <li>
                       <a
-                        href="viber://chat?number=+374 44991188"
+                        href="viber://chat?number=+37444991188"
                         target="_blank"
                       >
                         <FaViber className="" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://wa.me/+374 44991188" target="_blank">
+                      <a href="https://wa.me/+37444991188" target="_blank">
                         <FaWhatsapp className="" />
                       </a>
                     </li>
