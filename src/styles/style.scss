@@ -1065,6 +1065,10 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
 
     h3 {
       font-weight: 600;

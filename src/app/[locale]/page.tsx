@@ -21,7 +21,7 @@ const HomePage = async () => {
 
       <AppointmentForm />
 
-      <LatestBlogPost />
+      {/*<LatestBlogPost />*/}
     </>
   );
 };
