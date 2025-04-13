@@ -170,6 +170,7 @@ const AppointmentForm: React.FC = () => {
                       >
                         {tComponents("Appointments.actions.submit")}
                       </button>
+                      {/*{status && <p>{status}</p>}*/}
                     </div>
                   </form>
                 </div>

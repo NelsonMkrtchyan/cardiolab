@@ -197,7 +197,7 @@ const ContactForm = () => {
                 }}
               >
                 <Image
-                  src="/images/about4.jpg"
+                  src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJBBuhMgHJqI5EuVZFjgRGzykmXKNTw4WcSeQ"
                   alt="Contact"
                   width={845}
                   height={850}

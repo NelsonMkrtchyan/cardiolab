@@ -73,7 +73,9 @@
         "message": "Your message ..."
       },
       "sendMessage": "Send Message",
-      "callNote": "Call"
+      "sending": "Ուղարկվում է ...",
+      "callNote": "Call",
+      "successMessage": "Էլ․ նամակը հաջողությամբ ուղարկվել է"
     },
     "Appointments": {
       "title": "Book your appointment",
