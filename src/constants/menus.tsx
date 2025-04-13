@@ -20,23 +20,27 @@ export const Menus = () => {
       link: "/services",
     },
     {
-      label: `${t("Guide")}`,
-      link: "#",
-      submenu: [
-        {
-          label: `${t("DoctorGuide")}`,
-          link: "/doctorGuide",
-        },
-        {
-          label: `${t("PatientGuide")}`,
-          link: "/patientGuide",
-        },
-      ],
+      label: `${t("Pricelist")}`,
+      link: "/patientGuide/pricelist",
     },
-    {
-      label: `${t("News")}`,
-      link: "/news",
-    },
+    // {
+    //   label: `${t("Guide")}`,
+    //   link: "#",
+    //   submenu: [
+    //     {
+    //       label: `${t("DoctorGuide")}`,
+    //       link: "/doctorGuide",
+    //     },
+    //     {
+    //       label: `${t("PatientGuide")}`,
+    //       link: "/patientGuide",
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: `${t("News")}`,
+    //   link: "/news",
+    // },
     {
       label: `${t("Gallery.Gallery")}`,
       link: "/gallery",
@@ -45,10 +49,10 @@ export const Menus = () => {
           label: `${t("Gallery.Images")}`,
           link: "/gallery/images",
         },
-        {
-          label: `${t("Gallery.Videos")}`,
-          link: "/gallery/videos",
-        },
+        // {
+        //   label: `${t("Gallery.Videos")}`,
+        //   link: "/gallery/videos",
+        // },
         {
           label: `${t("Podcasts")}`,
           link: "/podcasts",

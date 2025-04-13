@@ -72,11 +72,11 @@ const Footer = () => {
                         {tFooter("QuickLinks.Links.AboutUs")}
                       </Link>
                     </li>
-                    <li>
-                      <Link href="/news">
-                        {tFooter("QuickLinks.Links.News")}
-                      </Link>
-                    </li>
+                    {/*<li>*/}
+                    {/*  <Link href="/news">*/}
+                    {/*    {tFooter("QuickLinks.Links.News")}*/}
+                    {/*  </Link>*/}
+                    {/*</li>*/}
                     <li>
                       <Link href="/services">
                         {tFooter("QuickLinks.Links.Services")}
@@ -87,8 +87,13 @@ const Footer = () => {
                         {tFooter("QuickLinks.Links.Doctors")}
                       </Link>
                     </li>
+                    {/*<li>*/}
+                    {/*  <Link href="/faq">{tFooter("QuickLinks.Links.Faq")}</Link>*/}
+                    {/*</li>*/}
                     <li>
-                      <Link href="/faq">{tFooter("QuickLinks.Links.Faq")}</Link>
+                      <Link href="/patientGuide/pricelist">
+                        {tMenu("Pricelist")}
+                      </Link>
                     </li>
                     <li>
                       <Link href="/contact">
