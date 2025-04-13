@@ -12,7 +12,7 @@ import { type LocaleT } from "~/types";
 interface FormData {
   name: string;
   email: string;
-  phone: string;
+  number: string;
 }
 
 const AppointmentForm: React.FC = () => {
@@ -24,7 +24,7 @@ const AppointmentForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    phone: "",
+    number: "",
   });
   const [status, setStatus] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -53,7 +53,7 @@ const AppointmentForm: React.FC = () => {
         setFormData({
           name: "",
           email: "",
-          phone: "",
+          number: "",
         });
       } else {
         const { error } = await response.json();
@@ -145,13 +145,13 @@ const AppointmentForm: React.FC = () => {
                             </label>
                             <input
                               type="text"
-                              name="phone"
+                              name="number"
                               className="form-control"
                               placeholder={tComponents(
                                 "Appointments.placeholders.phone",
                               )}
                               required
-                              value={formData.phone}
+                              value={formData.number}
                               onChange={handleInputChange}
                             />
                           </div>
