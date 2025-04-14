@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { type CardI } from "~/constants/staff";
 import { Link } from "~/i18n/routing";
+import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
 const Card = ({ employee, disabled }: CardI) => {
   const { id, name, image, position } = employee;
@@ -15,7 +16,8 @@ const Card = ({ employee, disabled }: CardI) => {
         {/*>*/}
         <div className="doctor-item">
           <div className="doctor-top">
-            <Image src={image} alt="Doctor" fill />
+            <ImageWithLoader src={image} alt="Doctor" />
+            {/*<Image src={image} alt="Doctor" fill />*/}
             {/*TODO: Uncomment in the future*/}
             {/*<Link href="/appointment">Get Appointment</Link>*/}
           </div>

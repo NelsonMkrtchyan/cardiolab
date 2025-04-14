@@ -154,7 +154,8 @@ export const staff: StaffI = {
     {
       id: 24,
       name: "Գայանե Բաղդասարյան",
-      image: "",
+      image:
+        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlupG8vuW69E0NFskLoCO7QfyXM4AIan2bKlp6J",
       position: "Առողջության և Առողջ Ապրելակերպի Մասնագետ",
     },
     {
