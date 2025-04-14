@@ -128,7 +128,7 @@ export const staff: StaffI = {
       name: "Աղունիկ Զաքարյան",
       image:
         "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluhRKhXws9fbejvdio1cKYPT0D5OHW2CzGgBFZ",
-      position: "Անոթաբան",
+      position: "Անոթային վիրաբույժ",
     },
     {
       id: 17,
@@ -144,19 +144,25 @@ export const staff: StaffI = {
         "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSPS720nEW7pyXzGrTZQb21kmdgPfAOJ8h3NC",
       position: "Բուժքույր",
     },
+    // {
+    //   id: 19,
+    //   name: "Քնարիկ Զաքարյան",
+    //   image:
+    //     "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu17fAqMV2GN8X3FsiITKCzR9wVM5lohEmPqWD",
+    //   position: "Բուժքույր",
+    // },
     {
-      id: 19,
-      name: "Քնարիկ Զաքարյան",
-      image:
-        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu17fAqMV2GN8X3FsiITKCzR9wVM5lohEmPqWD",
-      position: "Բուժքույր",
+      id: 24,
+      name: "Գայանե Բաղդասարյան",
+      image: "",
+      position: "Առողջության և Առողջ Ապրելակերպի Մասնագետ",
     },
     {
       id: 20,
       name: "Քնարիկ Առաքելյան",
       image:
         "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluuWuZA3cGiQfWnFY4hBNrq8zcsHID6ePwJvag",
-      position: "Հասարակայնության Հետ Կապերի Եվ Հաղորդակցության Պատասխանատու",
+      position: "Հասարակայնության Հետ Կապերի և Հաղորդակցության Պատասխանատու",
     },
     {
       id: 21,
@@ -179,13 +185,13 @@ export const staff: StaffI = {
         "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2m54Bt3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
       position: "Ադմինիստրատոր",
     },
-    {
-      id: 24,
-      name: "Հրաչյա Թումանյան",
-      image:
-        "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluhQAJC9s9fbejvdio1cKYPT0D5OHW2CzGgBFZ",
-      position: "Մենեջեր",
-    },
+    // {
+    //   id: 24,
+    //   name: "Հրաչյա Թումանյան",
+    //   image:
+    //     "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluhQAJC9s9fbejvdio1cKYPT0D5OHW2CzGgBFZ",
+    //   position: "Մենեջեր",
+    // },
   ],
   en: [
     {

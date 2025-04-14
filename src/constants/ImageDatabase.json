@@ -1,0 +1,32 @@
+{
+  "Landing": {
+    "Slider": {
+      "slide_one": "",
+      "slide_two": ""
+    },
+    "AboutUsSection": {
+      "image": ""
+    },
+    "VideoSection": {
+      "image": ""
+    }
+  },
+  "AboutUsPage": {
+    "IntroSection": {
+      "image": ""
+    }
+  },
+  "StaffPage": {
+  },
+  "ServicesPage": {},
+  "PriceListPage": {},
+  "GalleryPage": {},
+  "ContactUsPage": {},
+  "AbstractImages": {
+    "abstract_one": "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluksTbIS18CWlutzVsAX5GYHg2UMFhrJwcpLD1",
+    "abstract_two": "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlui0dOInUMdgQAzE8HpcawsFuGDr9USml2KXOR",
+    "abstract_three": "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluz5nGPbCJcmH7QjURruLeMoFslfS6nVvkpdNb",
+    "abstract_four": "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluKWZHxMRdDYjSWptezyXaocLl2MNEinROhP1C",
+    "abstract_five": "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluI6zTKNEmOVFpZEU45sKoR6bt7NDSv82hyxfg"
+  }
+}

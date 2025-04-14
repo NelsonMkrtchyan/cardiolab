@@ -112,12 +112,15 @@ export const patientGuides: PGuidesI = {
         content: (
           <>
             <p>
-              At CardioLab, we are committed to providing transparent pricing for all our services. 
-              Our price list includes consultation fees, diagnostic tests, and advanced procedures.
+              At CardioLab, we are committed to providing transparent pricing
+              for all our services. Our price list includes consultation fees,
+              diagnostic tests, and advanced procedures.
             </p>
             <p>
-              Please note that prices may vary based on individual patient needs and specific requirements.
-              For the most accurate pricing information, we recommend scheduling a consultation with our specialists.
+              Please note that prices may vary based on individual patient needs
+              and specific requirements. For the most accurate pricing
+              information, we recommend scheduling a consultation with our
+              specialists.
             </p>
           </>
         ),
@@ -203,19 +206,21 @@ export const patientGuides: PGuidesI = {
       path: "/pricelist",
       icon: <FaRegMoneyBillAlt className="icon largest-icon-size" />,
       details: {
-        title: "Մեր ծառայությունները և գները",
+        title: "Մեր ծառայությունները և գնացուցակը",
         date: new Date(new Date().setDate(new Date().getDate() - 1)),
         media: { image: "/images/blog/blog3.jpg", video: "" },
         content: (
           <>
             <p>
-              CardioLab-ում մենք նվիրված ենք մեր բոլոր ծառայությունների թափանցիկ գնագոյացմանը: 
-              Մեր գնացուցակը ներառում է խորհրդատվության վճարներ, ախտորոշիչ թեստեր և առաջադեմ միջամտություններ:
+              CardioLab-ում մենք նվիրված ենք մեր բոլոր ծառայությունների թափանցիկ
+              գնագոյացմանը: Մեր գնացուցակը ներառում է խորհրդատվության վճարներ,
+              ախտորոշիչ թեստեր և առաջադեմ միջամտություններ:
             </p>
             <p>
-              Խնդրում ենք նկատի ունենալ, որ գները կարող են տարբերվել՝ կախված հիվանդի անհատական կարիքներից և 
-              հատուկ պահանջներից: Առավել ճշգրիտ գնային տեղեկությունների համար խորհուրդ ենք տալիս 
-              պայմանավորվել խորհրդատվություն մեր մասնագետների հետ:
+              Խնդրում ենք նկատի ունենալ, որ գները կարող են տարբերվել՝ կախված
+              հիվանդի անհատական կարիքներից և հատուկ պահանջներից: Առավել ճշգրիտ
+              գնային տեղեկությունների համար խորհուրդ ենք տալիս պայմանավորվել
+              խորհրդատվություն մեր մասնագետների հետ:
             </p>
           </>
         ),
@@ -304,13 +309,15 @@ export const patientGuides: PGuidesI = {
         content: (
           <>
             <p>
-              В CardioLab мы стремимся обеспечить прозрачное ценообразование на все наши услуги. 
-              Наш прайс-лист включает стоимость консультаций, диагностических тестов и современных процедур.
+              В CardioLab мы стремимся обеспечить прозрачное ценообразование на
+              все наши услуги. Наш прайс-лист включает стоимость консультаций,
+              диагностических тестов и современных процедур.
             </p>
             <p>
-              Пожалуйста, обратите внимание, что цены могут варьироваться в зависимости от индивидуальных 
-              потребностей пациента и конкретных требований. Для получения наиболее точной информации о ценах 
-              мы рекомендуем записаться на консультацию к нашим специалистам.
+              Пожалуйста, обратите внимание, что цены могут варьироваться в
+              зависимости от индивидуальных потребностей пациента и конкретных
+              требований. Для получения наиболее точной информации о ценах мы
+              рекомендуем записаться на консультацию к нашим специалистам.
             </p>
           </>
         ),

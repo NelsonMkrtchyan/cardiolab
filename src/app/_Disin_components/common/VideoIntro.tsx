@@ -26,9 +26,7 @@ const VideoIntro: React.FC = () => {
             <div
               className="video-area"
               style={{
-                // backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWludIY24tPMTpgRZJcf6019kl5PLQv3SueECwxo)`,
-                // backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlun2PT6Vz8iXtIHULns6k3RoJDbzQgEqF9Vf7m)`,
-                backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlug1GfgkVviePapmd4fjRNBXFSt1CEhgvq2b0r)`,
+                backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTJfPUDEIO67xl130tYVbZmnvuKAkc2dHC9gh)`,
               }}
             >
               <div className="d-table">
