@@ -16,7 +16,11 @@ const Card = ({ employee, disabled }: CardI) => {
         {/*>*/}
         <div className="doctor-item">
           <div className="doctor-top">
-            <ImageWithLoader src={image} alt="Doctor" />
+            <ImageWithLoader
+              src={image}
+              alt="Doctor"
+              className="object-fit-cover"
+            />
             {/*<Image src={image} alt="Doctor" fill />*/}
             {/*TODO: Uncomment in the future*/}
             {/*<Link href="/appointment">Get Appointment</Link>*/}

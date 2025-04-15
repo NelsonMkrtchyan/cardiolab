@@ -8,6 +8,9 @@ interface ImageWithLoaderProps {
   className?: string;
   width?: number;
   height?: number;
+  fill?: boolean;
+  priority?: boolean;
+  onLoad?: () => void;
 }
 
 export default function ImageWithLoader({
@@ -16,6 +19,8 @@ export default function ImageWithLoader({
   width,
   height,
   className = "",
+  priority,
+  onLoad,
 }: ImageWithLoaderProps) {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -36,8 +41,12 @@ export default function ImageWithLoader({
         width={width}
         height={height}
         fill={!width}
-        onLoad={() => setIsLoading(false)}
-        className={`object-fit-cover transition-opacity ${isLoading ? "opacity-0" : "opacity-100"} ${className}`}
+        priority={priority}
+        onLoad={() => {
+          setIsLoading(false);
+          if (onLoad) onLoad();
+        }}
+        className={`transition-opacity ${isLoading ? "opacity-0" : "opacity-100"} ${className} object-fit-contain`}
         style={{ transition: "opacity 0.5s" }}
       />
     </>
