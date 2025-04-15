@@ -9,6 +9,7 @@ import { getLocalisedName } from "~/utils/helpers";
 import "dayjs/locale/ru"; // Import the Russian locale
 import "dayjs/locale/hy-am";
 import { Link } from "~/i18n/routing";
+import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
 const FolderCard = ({ folder }: FolderCardI) => {
   const locale: string = useLocale();
@@ -23,7 +24,14 @@ const FolderCard = ({ folder }: FolderCardI) => {
               <div className="gallery-text-wrapper">
                 <h3>{getLocalisedName({ object: name, locale })}</h3>
               </div>
-              <div className="banner" style={{ backgroundImage: bannerUrl }} />
+              <div className="banner" style={{ position: "relative", width: "100%", aspectRatio: "16/9", overflow: "hidden", borderRadius: "8px" }}>
+                <ImageWithLoader
+                  src={bannerUrl.replace('url(', '').replace(')', '').replace(/["']/g, '')}
+                  alt={getLocalisedName({ object: name, locale })}
+                  fill={true}
+                  className="object-fit-cover"
+                />
+              </div>
               <div className="gallery-text-wrapper">
                 <p>{formattingDate({ date, locale })}</p>
               </div>
