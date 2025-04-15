@@ -5,17 +5,22 @@ import { useState } from "react";
 interface ImageWithLoaderProps {
   src: string;
   alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
 }
 
-export default function ImageWithLoader({ src, alt }: ImageWithLoaderProps) {
+export default function ImageWithLoader({
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+}: ImageWithLoaderProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
     <>
-      {/*<div*/}
-      {/*  className="position-relative"*/}
-      {/*  style={{ width: "500px", height: "300px" }}*/}
-      {/*>*/}
       {isLoading && (
         <div
           className="position-absolute w-100 h-100 d-flex justify-content-center align-items-center bg-light start-0 top-0"
@@ -28,12 +33,13 @@ export default function ImageWithLoader({ src, alt }: ImageWithLoaderProps) {
       <Image
         src={src}
         alt={alt}
-        fill
+        width={width}
+        height={height}
+        fill={!width}
         onLoad={() => setIsLoading(false)}
-        className={`object-fit-cover transition-opacity ${isLoading ? "opacity-0" : "opacity-100"}`}
+        className={`object-fit-cover transition-opacity ${isLoading ? "opacity-0" : "opacity-100"} ${className}`}
         style={{ transition: "opacity 0.5s" }}
       />
-      {/*</div>*/}
     </>
   );
 }

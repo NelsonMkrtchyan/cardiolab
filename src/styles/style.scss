@@ -1878,7 +1878,7 @@ button {
   height: 100%;
 
   img {
-    display: none;
+    //display: none;
   }
 
   .speciality-emergency {
@@ -1888,6 +1888,7 @@ button {
     background-color: $main-color;
     padding: 30px 40px 15px 40px;
     border-radius: 10px;
+    z-index: 10;
 
     display: flex;
     justify-content: space-between;
