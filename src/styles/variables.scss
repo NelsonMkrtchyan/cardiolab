@@ -1,0 +1,35 @@
+// NOTE: Custom variables
+$main-color: #1034A6;
+$second-color: #69ba31; // rgba(105, 186, 49, 0.9);
+$white-color: #ffffff;
+$dark-grey: #323232;
+$spanish-grey: #989898;
+$light-grey: #D3D3D3;
+
+$grey-color: #344c5d;
+$black-color: #111111;
+$transition: .5s all ease;
+$all-size: 15px;
+
+
+$white-color: #fff;
+$grey-color: #4a6f8a;
+$blue-color: #0046c0;
+$black-color: #111111;
+
+/* Import Armenian handwriting font */
+@font-face {
+  font-family: 'Tumanian';
+  src: url('/fonts/ArTar_TumanianDzeragir_U.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poqrik';
+  src: url('/fonts/poqrik.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

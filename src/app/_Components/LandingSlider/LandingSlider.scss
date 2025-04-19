@@ -1,0 +1,652 @@
+@import '~/styles/variables';
+
+/*-- Home Slider --*/
+
+.home-slider {
+  .swiper-button-prev, .swiper-button-next {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    background-color: #2459b8;
+    transition: $transition;
+
+    &::after {
+      color: $white-color;
+      font-size: 28px;
+    }
+
+    &:hover {
+      color: $white-color;
+      background-color: $black-color;
+    }
+  }
+
+  .swiper-pagination {
+    //bottom: 150px;
+
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 5px;
+      margin: 5px 4px;
+      background-color: $main-color;
+      transition: $transition;
+      opacity: 1;
+      border-radius: 30px;
+
+      &.swiper-pagination-bullet-active, &:hover {
+        background: $white-color;
+        width: 30px;
+      }
+    }
+  }
+}
+
+
+.slider-item {
+  background-size: cover;
+  background-position: 80% 25%;
+  background-repeat: no-repeat;
+  height: 600px;
+  position: relative;
+
+  .slider-shape {
+    img {
+      position: absolute;
+      top: -9px;
+      right: -90px;
+      max-width: 730px;
+    }
+  }
+
+  .slider-shape-two {
+    img {
+      position: absolute;
+      top: 20px;
+      right: -60px;
+      max-width: 730px;
+    }
+  }
+
+  .slider-shape-three {
+    img {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      max-width: 730px;
+    }
+  }
+
+  &::before {
+    display: none;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $main-color;
+    opacity: .80;
+  }
+
+  .slider-text {
+    position: relative;
+    //margin-top: -160px;
+    z-index: 5;
+
+    h1 {
+      font-weight: 700;
+      font-size: 46px;
+      color: $white-color;
+      margin-bottom: 25px;
+      max-width: 600px;
+      margin-left: 0;
+      line-height: 1.4;
+    }
+
+    p {
+      color: $white-color;
+      margin-bottom: 40px;
+      max-width: 575px;
+      margin-left: 0;
+    }
+  }
+
+  &.blur {
+    filter: blur(5px);
+  }
+}
+
+.slider-item-content-alternative {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: none;
+
+  .slider-text {
+    position: relative;
+    //margin-top: -160px;
+    z-index: 5;
+
+    h1 {
+      font-weight: 700;
+      font-size: 46px;
+      color: $white-color;
+      margin-bottom: 25px;
+      max-width: 600px;
+      margin-left: 0;
+      line-height: 1.4;
+    }
+
+    p {
+      color: $white-color;
+      margin-bottom: 40px;
+      max-width: 575px;
+      margin-left: 0;
+    }
+  }
+
+}
+
+.common-btn {
+  a {
+    display: inline-block;
+    color: $main-color;
+    background-color: $white-color;
+    font-size: $all-size;
+    font-weight: 500;
+    padding: 12px 18px;
+    border-radius: 5px;
+    margin-right: 20px;
+    border: 2px solid transparent;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $white-color;
+      color: $white-color;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .cmn-btn-right {
+    background-color: transparent;
+    color: $white-color;
+    border: 2px solid $white-color;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    &:hover {
+      color: $main-color;
+      background-color: $white-color;
+    }
+  }
+}
+
+
+.home-slider-five {
+  .swiper-pagination {
+    bottom: 30px;
+  }
+}
+
+/*-- End Home Slider --*/
+
+
+/*-- ---------------------------------------- RESPONSIVE ---------------------------------------- --*/
+
+@media only screen and (max-width: 767px) {
+  /*-- Home Slider --*/
+  .slider-item, .slider-item-content-alternative {
+    height: 100%;
+    //padding-top: 80px;
+    padding-top: 120px;
+    //padding-bottom: 80px;
+    padding-bottom: 120px;
+    text-align: center;
+
+    .slider-shape {
+      img {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 290px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .slider-shape-two {
+      img {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 290px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .slider-shape-three {
+      img {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 290px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: $blue-color;
+      opacity: .80;
+    }
+
+    .slider-text {
+      margin-top: 0px;
+
+      h1 {
+        font-size: 26px;
+        margin-bottom: 18px;
+        max-width: 100%;
+      }
+
+      p {
+        margin-bottom: 30px;
+        max-width: 100%;
+      }
+    }
+  }
+  .slider-item-content-alternative {
+    top: -75px;
+
+    &:before {
+      display: none;
+    }
+  }
+  .common-btn {
+    a {
+      font-size: 13px;
+      padding: 13px 14px 12px;
+      border-radius: 5px;
+      margin-right: 8px;
+    }
+  }
+  .home-slider {
+    .swiper-button-prev, .swiper-button-next {
+      display: none;
+    }
+
+    .swiper-pagination {
+      bottom: 20px;
+    }
+  }
+  /*-- End Home Slider --*/
+
+
+  //  MAYBE DELETE
+
+  /*----- Home Page Two -----*/
+  /*-- Home Slider --*/
+  .home-slider-two {
+    .slider-item {
+      height: 100%;
+      padding-top: 160px;
+      padding-bottom: 150px;
+      position: relative;
+
+      &::before {
+        background-color: #fff;
+      }
+
+      .slider-text {
+        h1 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  /*-- End Home Slider --*/
+
+  /*----- Home Four CSS -----*/
+  .slider-item-two {
+    .slider-shape {
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .slider-text {
+      h1 {
+        line-height: 40px;
+        font-size: 25px;
+      }
+    }
+  }
+  /*----- End Home Four CSS -----*/
+
+
+  /*----- Home Five CSS -----*/
+  .slider-item-three {
+    .slider-text {
+      h1 {
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      ul {
+        margin-bottom: 35px;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .slider-shape {
+      img {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  /*----- End Home Five CSS -----*/
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*-- Home Slider --*/
+  .slider-item {
+    height: 100%;
+    //padding-top: 140px;
+    padding-top: 180px;
+    //padding-bottom: 140px;
+    padding-bottom: 180px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    .slider-shape {
+      img {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 550px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .slider-shape-two {
+      img {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 550px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .slider-shape-three {
+      img {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 550px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .slider-text {
+      margin-top: 0;
+
+      h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      p {
+        margin-bottom: 35px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  .slider-item-content-alternative {
+    left: 30px
+  }
+  .common-btn {
+    a {
+      font-size: $all-size;
+      padding: 14px 18px;
+    }
+
+    .cmn-btn-right {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .home-slider {
+    .swiper-pagination {
+      bottom: 30px;
+    }
+  }
+  /*-- End Home Slider --*/
+
+
+  //  MAYBE DELETE
+
+  /*----- Home Page Two -----*/
+  /*-- Home Slider --*/
+  .home-slider-two {
+    .slider-item {
+      height: 100%;
+
+      .slider-shape {
+        img {
+          position: absolute;
+          top: -160px;
+          left: 0;
+          width: 525px;
+          animation: a-three 5s infinite linear;
+        }
+      }
+
+      &:before {
+        background-color: #fff;
+      }
+
+      .slider-text {
+        h1 {
+          color: #232323;
+        }
+
+        p {
+          color: #616263;
+        }
+
+        .common-btn {
+          a {
+            border: 2px solid $blue-color;
+            color: $white-color;
+            background-color: $blue-color;
+            position: relative;
+
+            &:hover {
+              color: $blue-color;
+              background-color: transparent;
+            }
+          }
+
+          .cmn-btn-right {
+            background-color: transparent;
+            color: $blue-color;
+
+            &:hover {
+              color: $white-color;
+              background-color: $blue-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*-- End Home Slider --*/
+
+  /*----- Home Four CSS -----*/
+  .slider-item-two {
+    .slider-shape {
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .slider-text {
+      h1 {
+        line-height: 40px;
+        font-size: 28px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  /*----- End Home Four CSS -----*/
+
+
+  /*----- Home Five CSS -----*/
+  .slider-item-three {
+    .slider-text {
+      h1 {
+        margin-bottom: 25px;
+        font-size: 45px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      ul {
+        margin-bottom: 35px;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .slider-shape {
+      img {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  /*----- End Home Five CSS -----*/
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .home-slider {
+    .swiper-button-prev, .swiper-button-next {
+      width: 40px;
+      height: 40px;
+
+      &::after {
+        font-size: 20px;
+      }
+    }
+  }
+
+  /*-- Home Slider --*/
+  .slider-item {
+    .slider-shape {
+      img {
+        top: 115px;
+        right: 0;
+        max-width: 520px;
+      }
+    }
+
+    .slider-shape-two {
+      img {
+        top: 135px;
+        max-width: 520px;
+        right: 0;
+      }
+    }
+
+    .slider-shape-three {
+      img {
+        top: 150px;
+        max-width: 500px;
+      }
+    }
+  }
+
+  .slider-item-content-alternative {
+    left: 30px
+  }
+
+  .common-btn {
+    a {
+      padding: 16px 22px;
+    }
+  }
+  /*-- End Home Slider --*/
+
+
+  .slider-item-two .slider-shape img {
+    top: 0;
+    max-width: 365px;
+  }
+  .slider-item-three .slider-shape img {
+    top: 0;
+    max-width: 395px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .home-slider {
+    .swiper-button-prev, .swiper-button-next {
+      width: 40px;
+      height: 40px;
+
+      &::after {
+        font-size: 20px;
+      }
+    }
+  }
+}

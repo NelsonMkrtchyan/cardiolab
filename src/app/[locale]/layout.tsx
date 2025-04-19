@@ -12,6 +12,8 @@ import "swiper/css/bundle";
 
 // Global Styles from Disin
 import "~/styles/style.scss";
+import "~/app/_Components/FeedbackSlider/FeedbackSlider.scss";
+import "~/app/_Components/LandingSlider/LandingSlider.scss";
 import "~/styles/responsive.scss";
 
 import { type Metadata } from "next";

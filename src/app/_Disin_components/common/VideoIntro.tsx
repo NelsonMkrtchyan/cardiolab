@@ -43,7 +43,7 @@ const VideoIntro: React.FC = () => {
 
                       <div className="video-content">
                         <h3>{tComponents("VideoSection.title")}</h3>
-                        <p>{tComponents("VideoSection.description")}</p>
+                        {/*<p>{tComponents("VideoSection.description")}</p>*/}
                       </div>
                     </div>
                     {/*</div>*/}
