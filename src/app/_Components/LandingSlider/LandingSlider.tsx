@@ -11,6 +11,7 @@ type SliderDataItemType = {
   title?: string;
   description?: string;
   imageUrl: string;
+  haveBlur?: boolean;
   link?: {
     buttonLinkUrl: string;
     buttonText: string;
@@ -21,7 +22,6 @@ type SliderDataType = SliderDataItemType[];
 
 const LandingSlider = () => {
   const t = useTranslations("HeroSlider");
-  const tAbout = useTranslations("About");
   const tGeneral = useTranslations("General");
 
   const sliderData: SliderDataType = [
@@ -39,6 +39,7 @@ const LandingSlider = () => {
         buttonLinkUrl: "/patientGuide/pricelist",
         buttonText: tGeneral("KnowMore"),
       },
+      haveBlur: true,
     },
   ];
 
@@ -60,30 +61,30 @@ const LandingSlider = () => {
       >
         {sliderData.map((item, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="slider-item"
-              style={{
-                backgroundImage: `url(${item.imageUrl})`,
-              }}
-            >
-              <div className="d-table">
-                <div className="d-table-cell">
-                  <div className="container">
-                    <div className="slider-text">
-                      {item.title && <h1>{item.title}</h1>}
-                      {item.description && <p>{item.description}</p>}
+            <div className={`slider-item`}>
+              <div
+                className={`slider-item-background ${item.haveBlur ? "blur" : ""}`}
+                style={{ backgroundImage: `url(${item.imageUrl})` }}
+              />
+              <div className={`slider-item-content`}>
+                <div className={`d-table`}>
+                  <div className="d-table-cell">
+                    <div className="container">
+                      <div className="slider-text">
+                        {item.title && <h1>{item.title}</h1>}
+                        {item.description && <p>{item.description}</p>}
 
-                      {item.link && (
-                        <div className="common-btn">
-                          {/*<Link href="/appointment">Get Appointment</Link>*/}
-                          <Link
-                            href={item.link.buttonLinkUrl}
-                            className="cmn-btn-right"
-                          >
-                            {item.link.buttonText}
-                          </Link>
-                        </div>
-                      )}
+                        {item.link && (
+                          <div className="common-btn">
+                            <Link
+                              href={item.link.buttonLinkUrl}
+                              className="cmn-btn-right"
+                            >
+                              {item.link.buttonText}
+                            </Link>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>

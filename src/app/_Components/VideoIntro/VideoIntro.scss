@@ -1,0 +1,378 @@
+@import '~/styles/variables';
+
+
+/*-- Video --*/
+.video-area {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 650px;
+  text-align: center;
+  position: relative;
+
+  &:before {
+    //display: none;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: $main-color;
+    //background-color: $second-color;
+    opacity: 0.5;
+  }
+
+}
+
+.card-video {
+  &:before {
+    display: none;
+  }
+}
+
+//.video-item-wrapper {
+//  position: relative;
+//  width: 100%;
+//  padding: 20px;
+//
+//  &:before {
+//    display: none;
+//    position: absolute;
+//    content: '';
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    border-radius: 10px;
+//    background-color: $main-color;
+//    //background-color: $second-color;
+//    opacity: 0.8;
+//  }
+//}
+
+.video-item {
+  //display: flex;
+  //flex-direction: row-reverse;
+  //justify-content: space-around;
+  //align-items: center;
+
+  .popup-youtube {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    margin-top: 90px;
+    line-height: 105px;
+    border-radius: 50%;
+    color: $main-color;
+    font-size: 35px;
+    background-color: $white-color;
+    cursor: pointer;
+    transition: $transition;
+
+    .icon {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: $white-color;
+      //background-color: $black-color;
+      background-color: $second-color;
+
+      .icon {
+        color: $white-color;
+        //color: $second-color;
+      }
+    }
+  }
+
+  .video-content {
+    margin-top: 90px;
+    text-align: left;
+    padding-left: 30px;
+    position: relative;
+    max-width: 745px;
+    margin-left: 0;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 9px;
+      left: 0;
+      width: 5px;
+      //height: 130px;
+      height: 30px;
+      background-color: $white-color;
+    }
+
+    h3 {
+      color: $white-color;
+      font-weight: 600;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $white-color;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.video-wrap {
+  .react-tabs__tab-list {
+    background-color: $white-color;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 15px 0 #ddd;
+    margin: 0;
+    border: none;
+
+    .react-tabs__tab {
+      display: inline-block;
+      color: $main-color;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: transparent;
+      padding: 25px 49.4px 22px 49.3px;
+      border-radius: 0;
+      border: none;
+      bottom: 0;
+
+      &.react-tabs__tab--selected {
+        background-color: $main-color;
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+/*-- End Video --*/
+
+
+/*-- Video --*/
+.video-wrap-two {
+  .video-nav {
+    .video-nav-item {
+      a {
+        padding-left: 49.7px;
+        padding-right: 49px;
+      }
+    }
+  }
+
+  .video-item {
+    a {
+      color: $main-color;
+    }
+  }
+
+  .nav-pills .nav-link, .nav-pills .show > .nav-link {
+    border-top: 0;
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    border-top: 0;
+    background-color: $main-color;
+    color: $white-color;
+  }
+}
+
+/*-- End Video --*/
+
+
+//*-- ---------------------------------------- RESPONSIVE ---------------------------------------- --*/
+
+@media only screen and (max-width: 767px) {
+  /*-- Video --*/
+  .video-area {
+    height: 550px;
+  }
+  .video-item {
+    a {
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      font-size: 25px;
+      position: relative;
+      top: -40px;
+    }
+
+    .video-content {
+      margin-top: 30px;
+      padding-left: 25px;
+
+      &:before {
+        top: 5px;
+        width: 4px;
+        height: 25px;
+      }
+
+      h3 {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .video-wrap .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
+    border-top: 2px solid #4d93e9;
+  }
+  .video-wrap {
+    .video-nav {
+      .video-nav-item {
+        display: block;
+
+        a {
+          font-size: 15px;
+          padding-bottom: 18px;
+          padding-top: 14px;
+          border-bottom: 1px solid #4d93e959;
+          border-top: 2px solid transparent;
+        }
+      }
+    }
+  }
+  /*-- End Video --*/
+  /*-- Video --*/
+  .video-wrap-two .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
+    border-top: 0
+  }
+  .video-wrap-two {
+    .video-nav {
+      .video-nav-item {
+        a {
+          border-top: 0;
+        }
+      }
+    }
+  }
+  /*-- End Video --*/
+
+
+  .video-item {
+    .popup-youtube {
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      font-size: 25px;
+    }
+  }
+
+  .video-wrap {
+    .react-tabs__tab-list {
+      .react-tabs__tab {
+        font-size: 15px;
+        padding: 15px 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*-- Video --*/
+  .video-area {
+    height: 500px;
+  }
+  .video-item {
+    a {
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
+      font-size: 25px;
+      position: relative;
+      top: -45px;
+    }
+
+    .video-content {
+      margin-top: 30px;
+
+      &:before {
+        top: 5px;
+        left: 0;
+        width: 4px;
+        height: 30px;
+      }
+
+      h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .video-wrap {
+    .video-nav {
+      .video-nav-item {
+        display: block;
+
+        a {
+          font-size: 15px;
+          padding-bottom: 15px;
+          padding-top: 15px;
+          border-bottom: 1px solid #4d93e959;
+          border-top: 3px solid transparent;
+        }
+      }
+    }
+  }
+  .video-wrap .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
+    border-top: 3px solid #4d93e9;
+  }
+  /*-- End Video --*/
+
+  /*-- Video --*/
+  .video-wrap-two .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
+    border-top: 0;
+  }
+  .video-wrap-two {
+    .video-nav {
+      .video-nav-item {
+        a {
+          padding-left: 20px;
+          padding-right: 20px;
+          border-top: 0;
+        }
+      }
+    }
+  }
+  /*-- End Video --*/
+
+  .video-wrap {
+    .react-tabs__tab-list {
+      .react-tabs__tab {
+        font-size: 15px;
+        padding: 15px 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /*-- Video --*/
+  .video-wrap {
+    .video-nav {
+      .video-nav-item {
+        a {
+          font-size: 16px;
+          padding: 12px 55.4px 12px 56.3px;
+        }
+      }
+    }
+  }
+  /*-- End Video --*/
+
+  .video-wrap {
+    .react-tabs__tab-list {
+      .react-tabs__tab {
+        font-size: 15px;
+        padding: 15px 25px;
+      }
+    }
+  }
+
+}
+
+

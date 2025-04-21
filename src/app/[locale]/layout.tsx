@@ -14,6 +14,7 @@ import "swiper/css/bundle";
 import "~/styles/style.scss";
 import "~/app/_Components/FeedbackSlider/FeedbackSlider.scss";
 import "~/app/_Components/LandingSlider/LandingSlider.scss";
+import "~/app/_Components/VideoIntro/VideoIntro.scss";
 import "~/styles/responsive.scss";
 
 import { type Metadata } from "next";
