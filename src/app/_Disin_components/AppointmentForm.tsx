@@ -6,7 +6,7 @@ import { FaUserTie } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
-import { WorkingHours } from "~/constants/menus";
+import { WorkingHours, type WorkingHoursType } from "~/constants/menus";
 import { type LocaleT } from "~/types";
 
 interface FormData {
@@ -19,7 +19,8 @@ const AppointmentForm: React.FC = () => {
   const tComponents = useTranslations("Components");
   const tGeneral = useTranslations("General");
   const locale: string = useLocale();
-  const localisedWorkingHours = WorkingHours[locale as LocaleT];
+  const localisedWorkingHours: WorkingHoursType[0] | undefined =
+    WorkingHours[locale as LocaleT];
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -56,7 +57,9 @@ const AppointmentForm: React.FC = () => {
           number: "",
         });
       } else {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { error } = await response.json();
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-argument
         setStatus(error || tComponents("ContactForm.errorMessage"));
       }
     } catch (error) {
@@ -185,30 +188,16 @@ const AppointmentForm: React.FC = () => {
                 <div className="appointment-item-content">
                   <h2>{tGeneral("WorkingHours")}</h2>
                   <ul>
-                    <li>
-                      {tGeneral("Weekdays.Monday")}
-                      <span>{localisedWorkingHours.Monday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Tuesday")}
-                      <span>{localisedWorkingHours.Tuesday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Wednesday")}
-                      <span>{localisedWorkingHours.Wednesday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Thursday")}
-                      <span>{localisedWorkingHours.Thursday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Friday")}
-                      <span>{localisedWorkingHours.Friday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Saturday")}
-                      <span>{localisedWorkingHours.Saturday}</span>
-                    </li>
+                    {localisedWorkingHours &&
+                      Object.keys(localisedWorkingHours).map((key, index) => {
+                        return (
+                          <li key={index}>
+                            {tGeneral(`Weekdays.${key}`)}
+                            {/* @ts-ignore*/}
+                            <span>{localisedWorkingHours[key]}</span>
+                          </li>
+                        );
+                      })}
                   </ul>
                 </div>
               </div>

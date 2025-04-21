@@ -6,25 +6,25 @@ import { useLocale } from "next-intl";
 import { flatPriceListData } from "~/constants/priceList";
 import { type LocaleT } from "~/types";
 import { type ServiceI } from "~/constants/priceList";
-import { FaDownload } from "react-icons/fa";
+// import { FaDownload } from "react-icons/fa";
 
 const PriceList = () => {
   const locale: string = useLocale();
   const t = useTranslations("PriceList");
   const localisedPriceList = flatPriceListData[locale as LocaleT];
 
-  const handleDownload = () => {
-    // PDF file path
-    const pdfPath = "/assets/pricelist.pdf";
-
-    // Create a link element
-    const link = document.createElement("a");
-    link.href = pdfPath;
-    link.download = `cardiolab_pricelist.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // const handleDownload = () => {
+  //   // PDF file path
+  //   const pdfPath = "/assets/pricelist.pdf";
+  //
+  //   // Create a link element
+  //   const link = document.createElement("a");
+  //   link.href = pdfPath;
+  //   link.download = `cardiolab_pricelist.pdf`;
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   // Format price with thousand separator and currency
   const formatPrice = (price: number) => {
@@ -40,15 +40,15 @@ const PriceList = () => {
         {/*<p>{t("description")}</p>*/}
       </div>
 
-      <div className="mb-4 text-right">
-        <button
-          onClick={handleDownload}
-          className="default-btn"
-          aria-label={t("downloadButton")}
-        >
-          <FaDownload className="mr-2" /> {t("downloadButton")}
-        </button>
-      </div>
+      {/*<div className="mb-4 text-right">*/}
+      {/*  <button*/}
+      {/*    onClick={handleDownload}*/}
+      {/*    className="default-btn"*/}
+      {/*    aria-label={t("downloadButton")}*/}
+      {/*  >*/}
+      {/*    <FaDownload className="mr-2" /> {t("downloadButton")}*/}
+      {/*  </button>*/}
+      {/*</div>*/}
       <div className="price-list-content row">
         <div className="w-full">
           <div>
