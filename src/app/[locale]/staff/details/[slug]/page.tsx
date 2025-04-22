@@ -9,24 +9,22 @@ import ImagesDB from "~/constants/ImageDatabase.json";
 
 export default function Page() {
   const tMenu = useTranslations("Menu");
-  const { currentEmployee } = useEmployee();
+  const { employeeDoNotExist, name, role, image } = useEmployee();
   return (
     <>
       <PageBanner
-        pageTitle={currentEmployee?.name ?? tMenu("EmployeeDetails")}
+        pageTitle={name ?? tMenu("EmployeeDetails")}
         homePageUrl="/"
         homePageText={tMenu("Staff")}
         activePageText={tMenu("EmployeeDetails")}
-        // bgImage={`${ImagesDB.AbstractImages.abstract_one}`}
         bgImage={`${ImagesDB.AbstractImages.abstract_two}`}
-        // bgImage={`${ImagesDB.AbstractImages.abstract_three}`}
-        // bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
-        // bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
 
-      {currentEmployee && <DetailsContent employee={currentEmployee} />}
+      {!employeeDoNotExist && (
+        <DetailsContent name={name} role={role} image={image} />
+      )}
 
-      {!currentEmployee && <NotFound />}
+      {employeeDoNotExist && <NotFound />}
 
       {/*<div className="pb-100">*/}
       {/*  <AppointmentFormTwo />*/}

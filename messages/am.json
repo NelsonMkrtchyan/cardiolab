@@ -188,5 +188,10 @@
     "serviceName": "Ծառայություն",
     "price": "Գին",
     "downloadButton": "Ներբեռնել գնացուցակը"
+  },
+  "Staff": {
+    "medicalStaff": " Բժշկական անձնակազմ",
+    "nursingStaff": " Բուժքույրական անձնակազմ",
+    "administrativeStaff": " Ադմինիստրատիվ անձնակազմ"
   }
 }

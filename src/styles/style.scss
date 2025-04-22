@@ -125,6 +125,11 @@ img {
   padding-bottom: 100px;
 }
 
+.ptb-30 {
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
 .pt-100 {
   padding-top: 100px;
 }
@@ -2277,135 +2282,6 @@ button {
 }
 
 /*-- End Page Title --*/
-
-/*-- Doctor Details --*/
-.doctor-details-left {
-  box-shadow: 0 0 10px 0 #ddd;
-  border-radius: 10px;
-}
-
-.doctor-details-item {
-  margin-bottom: 30px;
-
-  img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 50px;
-  }
-
-  .doctor-details-contact {
-    padding: 0 40px;
-    margin-bottom: 50px;
-
-    h3 {
-      font-weight: 600;
-      font-size: 22px;
-      color: $grey-color;
-      margin-bottom: 30px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        display: block;
-        font-weight: 500;
-        font-size: 15px;
-        color: $grey-color;
-        margin-bottom: 25px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        i {
-          display: inline-block;
-          color: $main-color;
-          margin-right: 10px;
-          font-size: 18px;
-          position: relative;
-          top: 2px;
-        }
-      }
-    }
-  }
-
-  .doctor-details-work {
-    padding: 0 40px;
-    padding-bottom: 50px;
-
-    h3 {
-      font-weight: 600;
-      font-size: 22px;
-      color: $grey-color;
-      margin-bottom: 30px;
-    }
-
-    .appointment-item-two-right {
-      background-image: none;
-      padding-top: 0;
-      padding-bottom: 0;
-
-      .appointment-item-content {
-        padding: 0;
-        background-color: transparent;
-        margin: 0;
-
-        ul {
-          li {
-            font-size: 15px;
-            padding: 10px 0;
-
-            &:first-child {
-              border-top: 1px solid #eee;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .doctor-details-biography {
-    padding-left: 30px;
-    margin-bottom: 40px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    h3 {
-      font-weight: 600;
-      font-size: 24px;
-      color: #2f60bd;
-      margin-bottom: 25px;
-    }
-
-    p {
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        display: block;
-        margin-bottom: 15px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-/*-- End Doctor Details --*/
 
 /*-- Appointment --*/
 .appointment-area-three {

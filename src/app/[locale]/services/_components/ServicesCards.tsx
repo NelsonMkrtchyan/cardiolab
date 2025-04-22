@@ -4,11 +4,11 @@ import React from "react";
 import Card from "~/app/[locale]/services/_components/Card";
 import { useLocale } from "next-intl";
 import { type LocaleT } from "~/types";
-import { flatPriceListData } from "~/constants/priceList";
+import { priceListData } from "~/constants/priceList";
 
 const ServicesCards: React.FC = () => {
   const locale: string = useLocale();
-  const localisedPriceList = flatPriceListData[locale as LocaleT];
+  const localisedPriceList = priceListData[locale as LocaleT];
 
   return (
     <>

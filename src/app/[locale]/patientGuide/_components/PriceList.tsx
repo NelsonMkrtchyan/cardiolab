@@ -3,15 +3,14 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import { flatPriceListData } from "~/constants/priceList";
+import { priceListData } from "~/constants/priceList";
 import { type LocaleT } from "~/types";
-import { type ServiceI } from "~/constants/priceList";
 // import { FaDownload } from "react-icons/fa";
 
 const PriceList = () => {
   const locale: string = useLocale();
   const t = useTranslations("PriceList");
-  const localisedPriceList = flatPriceListData[locale as LocaleT];
+  const localisedPriceList = priceListData[locale as LocaleT];
 
   // const handleDownload = () => {
   //   // PDF file path
@@ -82,14 +81,10 @@ const PriceList = () => {
                 </tr>
               </thead>
               <tbody>
-                {localisedPriceList.map((service: ServiceI) => (
+                {localisedPriceList.map((service) => (
                   <tr key={service.id}>
                     <td>{service.name}</td>
-                    <td className="text-right">
-                      {typeof service.price === "number"
-                        ? formatPrice(service.price)
-                        : service.price}
-                    </td>
+                    <td className="text-right">{formatPrice(service.price)}</td>
                   </tr>
                 ))}
               </tbody>

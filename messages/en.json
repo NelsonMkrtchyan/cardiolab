@@ -185,5 +185,10 @@
     "serviceName": "Service",
     "price": "Price",
     "downloadButton": "Download Price List"
+  },
+  "Staff": {
+    "medicalStaff": "Medical Staff",
+    "nursingStaff": "Nursing Staff",
+    "administrativeStaff": "Administrative Staff"
   }
 }

@@ -2,12 +2,12 @@
 
 import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
-import type { employeeI } from "~/constants/staff";
+import type { EmployeeType } from "~/constants/staff";
 import { type LocaleT } from "~/types";
 
 export function useStaffData() {
   const locale = useLocale() as LocaleT;
-  const [staff, setStaff] = useState<employeeI[]>([]);
+  const [staff, setStaff] = useState<EmployeeType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
@@ -22,7 +22,7 @@ export function useStaffData() {
           throw new Error("Failed to fetch staff data");
         }
 
-        const data: employeeI[] = (await response.json()) as employeeI[];
+        const data: EmployeeType[] = (await response.json()) as EmployeeType[];
         setStaff(data);
       } catch (err) {
         setError(err instanceof Error ? err : new Error("Unknown error"));

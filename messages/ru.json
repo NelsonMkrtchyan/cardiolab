@@ -188,5 +188,10 @@
     "serviceName": "Услуга",
     "price": "Цена",
     "downloadButton": "Скачать прайс-лист"
+  },
+  "Staff": {
+    "medicalStaff": "Медицинский персонал",
+    "nursingStaff": "Медсестринский персонал",
+    "administrativeStaff": "Административный персонал"
   }
 }
