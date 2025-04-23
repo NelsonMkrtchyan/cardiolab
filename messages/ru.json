@@ -193,5 +193,16 @@
     "medicalStaff": "Медицинский персонал",
     "nursingStaff": "Медсестринский персонал",
     "administrativeStaff": "Административный персонал"
+  },
+  "Service": {
+    "consultation": "Консультация",
+    "echocardiography": "Эхокардиография",
+    "holterMonitoring": "Холтер-мониторинг",
+    "rhythmDeviceCheck": "Սրտի ռիթմավար սարքերի քննություն",
+    "duplexScan": "Մագիստրալ անոթների դուպլեքս հետազոտություն",
+    "urltraSound": "Ուլտրաձայնային հետազոտություն",
+    "cardiacCare": "Սրտային խնամք",
+    "preventiveScreening": "Տարեկան կանխարգելիչ բուժ․ զննում",
+    "implantation": "Իմպլանտացիա"
   }
 }

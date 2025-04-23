@@ -350,71 +350,6 @@
   }
   /*-- End Newsletter --*/
 
-  /*-- Footer --*/
-  .footer-item {
-    .footer-contact {
-      h3 {
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-
-      ul {
-        li {
-          font-size: $all-size;
-          //padding-left: 55px;
-          margin-bottom: 40px;
-
-          &:last-child {
-            i {
-              top: -1px;
-            }
-          }
-
-          i {
-            top: 2px;
-            font-size: 38px;
-          }
-        }
-      }
-    }
-
-    .footer-quick {
-      h3 {
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-
-      ul {
-        li {
-          margin-bottom: 15px;
-
-          a {
-            font-size: $all-size;
-          }
-        }
-      }
-    }
-
-    .footer-feedback {
-      h3 {
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-
-      .form-group {
-        .form-control {
-          font-size: $all-size;
-        }
-      }
-
-      .feedback-btn {
-        font-size: 13px;
-        padding: 10px 32px;
-      }
-    }
-  }
-  /*-- End Footer --*/
-
   /*-- Copyright --*/
   .copyright-area {
     .copyright-item {
@@ -1982,65 +1917,6 @@
   }
   /*-- End Newsletter --*/
 
-  /*-- Footer --*/
-  .footer-item {
-    .footer-contact {
-      h3 {
-        font-size: 20px;
-        margin-bottom: 30px;
-      }
-
-      ul {
-        li {
-          font-size: $all-size;
-          margin-bottom: 40px;
-
-          &:last-child {
-            i {
-              top: 0;
-            }
-          }
-
-          i {
-            top: 2px;
-            font-size: 38px;
-          }
-        }
-      }
-    }
-
-    .footer-quick {
-      h3 {
-        font-size: 20px;
-        margin-bottom: 30px;
-      }
-
-      ul {
-        li {
-          margin-bottom: 16px;
-        }
-      }
-    }
-
-    .footer-feedback {
-      h3 {
-        font-size: 20px;
-        margin-bottom: 30px;
-      }
-
-      .form-group {
-        .form-control {
-          font-size: $all-size;
-        }
-      }
-
-      .feedback-btn {
-        font-size: 14px;
-        padding: 10px 35px;
-      }
-    }
-  }
-  /*-- End Footer --*/
   /*----- End Home Page One -----*/
 
   /*-- Emergency --*/

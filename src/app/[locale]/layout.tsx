@@ -18,6 +18,7 @@ import "~/styles/responsive.scss";
 import "~/app/_Components/FeedbackSlider/FeedbackSlider.scss";
 import "~/app/_Components/LandingSlider/LandingSlider.scss";
 import "~/app/_Components/VideoIntro/VideoIntro.scss";
+import "~/app/_Disin_components/layout/Footer/Footer.scss";
 
 // Pages styles
 import "~/app/[locale]/staff/staff.scss";

@@ -190,5 +190,16 @@
     "medicalStaff": "Medical Staff",
     "nursingStaff": "Nursing Staff",
     "administrativeStaff": "Administrative Staff"
+  },
+  "Service": {
+    "consultation": "Consultation",
+    "echocardiography": "Echocardiography",
+    "holterMonitoring": "Holter monitoring",
+    "rhythmDeviceCheck": "Սրտի ռիթմավար սարքերի քննություն",
+    "duplexScan": "Մագիստրալ անոթների դուպլեքս հետազոտություն",
+    "urltraSound": "Ուլտրաձայնային հետազոտություն",
+    "cardiacCare": "Սրտային խնամք",
+    "preventiveScreening": "Տարեկան կանխարգելիչ բուժ․ զննում",
+    "implantation": "Իմպլանտացիա"
   }
 }
