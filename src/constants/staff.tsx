@@ -1,7 +1,28 @@
 export type LocaleString = {
-  am: string;
-  en?: string;
-  ru?: string;
+  am: string | string[];
+  en?: string | string[];
+  ru?: string | string[];
+};
+
+export type LocaleComplexString = {
+  am:
+    | string
+    | {
+        title: string;
+        description?: string;
+      }[];
+  en?:
+    | string
+    | {
+        title: string;
+        description?: string;
+      }[];
+  ru?:
+    | string
+    | {
+        title: string;
+        description?: string;
+      }[];
 };
 
 export enum StaffCategory {

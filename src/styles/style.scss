@@ -188,7 +188,8 @@ button {
 
 .page-title-area {
   background-size: cover;
-  background-position: center center;
+  //background-position: center center;
+  background-position: bottom;
   background-repeat: no-repeat;
   height: 400px;
   text-align: center;
@@ -201,7 +202,7 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: .50;
+    opacity: .80;
     background-color: $main-color;
   }
 }
@@ -831,7 +832,9 @@ button {
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 25px 0 $main-color;
+    //box-shadow: 0 0 25px 0 $main-color;
+    box-shadow: -5px 5px 15px $second-color, // left-bottom shadow
+    5px -5px 15px $main-color; // right-top shadow
   }
 
   .service-front {
@@ -890,7 +893,6 @@ button {
 
   &:hover {
     box-shadow: 0 0 25px 0 $main-color;
-    //box-shadow: 0 0 25px 0 $second-color;
 
     .doctor-top {
       box-shadow: 0 25px 25px -20px $second-color;
@@ -1442,6 +1444,8 @@ button {
     padding: 35px;
     margin-bottom: 30px;
 
+    background-color: white;
+
     text-align: justify;
 
     .icon {
@@ -1450,6 +1454,7 @@ button {
 
     &:hover {
       box-shadow: 0 0 20px 0 $main-color;
+      //box-shadow: 0 0 20px 0 $second-color;
 
       i {
         color: $white-color;
@@ -3280,12 +3285,15 @@ button {
 .department-item {
   text-align: center;
   border: 1px solid $main-color;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 5px;
   transition: $transition;
-  margin-bottom: 30px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  height: 100%;
 
   &:before {
     position: absolute;
@@ -3333,19 +3341,13 @@ button {
     }
   }
 
-  i {
-    font-size: 45px;
-    display: block;
-    margin-bottom: 20px;
-    color: $main-color;
-    transition: $transition;
-  }
 
   h3 {
     margin-bottom: 12px;
     font-size: 26px;
     font-weight: 600;
     transition: $transition;
+    word-break: break-word;
   }
 
   p {
@@ -3353,6 +3355,7 @@ button {
     padding-left: 15px;
     padding-right: 15px;
     transition: $transition;
+    word-break: break-word;
   }
 }
 
@@ -4042,7 +4045,9 @@ button {
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 25px 0 $second-color;
+      //box-shadow: 0 0 25px 0 $second-color;
+      box-shadow: -5px 5px 15px $second-color, // left-bottom shadow
+      5px -5px 15px $main-color; // right-top shadow
     }
   }
 
@@ -4120,7 +4125,9 @@ button {
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 25px 0 $main-color;
+      //box-shadow: 0 0 25px 0 $main-color;
+      box-shadow: -5px 5px 15px $second-color, // left-bottom shadow
+      5px -5px 15px $main-color; // right-top shadow
     }
   }
 

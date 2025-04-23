@@ -16,10 +16,10 @@ const Page = () => {
         homePageUrl="/patientGuide"
         homePageText={tMenu("PatientGuide")}
         activePageText={tMenu("Pricelist")}
-        // bgImage={`${ImagesDB.AbstractImages.abstract_one}`}
+        bgImage={`${ImagesDB.AbstractImages.abstract_one}`}
         // bgImage={`${ImagesDB.AbstractImages.abstract_two}`}
         // bgImage={`${ImagesDB.AbstractImages.abstract_three}`}
-        bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
         // bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
       <PriceList />

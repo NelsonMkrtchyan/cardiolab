@@ -16,7 +16,7 @@ const Card = ({ service }: CardI) => {
 
   return (
     <>
-      <div className="col-sm-6 col-lg-3">
+      <div className="col-sm-6 col-lg-4">
         <div className="service-item">
           {/*<Link href={`/services/details/${id}`}>*/}
           <div className="service-front">
