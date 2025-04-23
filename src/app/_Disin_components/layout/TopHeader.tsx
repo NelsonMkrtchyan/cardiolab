@@ -1,3 +1,5 @@
+"use client";
+
 import { IoCall, IoLocation, IoMail } from "react-icons/io5";
 import {
   FaFacebookF,
@@ -92,6 +94,25 @@ const TopHeader = () => {
                       <a
                         href="viber://chat?number=+37444991188"
                         target="_blank"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const isMobile = /iPhone|Android|iPad/i.test(
+                            navigator.userAgent,
+                          );
+                          if (isMobile) {
+                            window.location.href =
+                              "viber://chat?number=+37444991188";
+                          } else {
+                            const confirmed = confirm(
+                              "Do you have Viber installed on this device?",
+                            );
+                            console.log("confirmed ---->", confirmed);
+                            if (confirmed) {
+                              window.location.href =
+                                "viber://chat?number=+37444991188";
+                            }
+                          }
+                        }}
                       >
                         <FaViber className="" />
                       </a>
