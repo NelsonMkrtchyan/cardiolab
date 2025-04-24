@@ -64,7 +64,7 @@ export const staff: StaffType = [
       am: "Տաթևիկ Հովակիմյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubYgYkMldCU4c8A1oViQtsIJW2aZEXeySMgu3",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlueDvPGq4t76bKABNX1vpMyZqWPS43EoxGDlka",
     role: {
       am: "Սրտաբան-Առիթմոլոգ",
     },
@@ -77,7 +77,7 @@ export const staff: StaffType = [
       am: "Կարեն Զոհրաբյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2Fagk13aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluzPJlX1UCJcmH7QjURruLeMoFslfS6nVvkpdN",
     role: {
       am: "Մանկական Ինտերվենցիոն Սրտաբան",
     },
@@ -103,7 +103,7 @@ export const staff: StaffType = [
       am: "Մարիամ Մինասյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluxRiCLFfVspCYkb9tWP0X6eLDhnRHOl7fTjaE",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluIC4DbAEmOVFpZEU45sKoR6bt7NDSv82hyxfg",
     role: {
       am: "Սրտաբան, Էխո-Սգ Մասնագետ, Սրտի Մռտ Մասնագետ",
     },
@@ -116,7 +116,7 @@ export const staff: StaffType = [
       am: "Տաթևիկ Սիմոնյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluLUcM1UFM9GPald3WK8xTLcn5eompzqNkuiFI",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluxjrAPtfVspCYkb9tWP0X6eLDhnRHOl7fTjaE",
     role: {
       am: "Մանկական և Պերինատալ Սրտաբան",
     },
@@ -129,7 +129,7 @@ export const staff: StaffType = [
       am: "Անահիտ Գևորգյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluYgysYQo17ZsjS0g8pKl2JFLv4rURaVyuX3wt",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluT7Vuh0IO67xl130tYVbZmnvuKAkc2dHC9ghD",
     role: {
       am: "Սրտաբան",
     },
@@ -142,7 +142,7 @@ export const staff: StaffType = [
       am: "Գևորգ Պետրոսյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluuGPZnJcGiQfWnFY4hBNrq8zcsHID6ePwJvag",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluf6eVH0Zz5N7IdOAeZ04QFuoWqrbmxjn9MY1P",
     role: {
       am: "Սրտաբան",
     },
@@ -155,7 +155,7 @@ export const staff: StaffType = [
       am: "Տաթևիկ Գաբրիելյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluEdASraJSpZQ36u72Hw8kvD5PiIMdXj9xVnB0",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluX38r1mOa6TkeElYqHKS8hzy4uf7mr9tC0MBv",
     role: {
       am: "Սրտաբան-Առիթմոլոգ",
     },
@@ -181,7 +181,7 @@ export const staff: StaffType = [
       am: "Մարիամ Հովակիմյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluMxGKMRSmxf0AaeIb7tJwXUHG2sKPOWnoQLik",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluM6kftgSmxf0AaeIb7tJwXUHG2sKPOWnoQLik",
     role: {
       am: "Սրտաբան",
     },
@@ -194,7 +194,7 @@ export const staff: StaffType = [
       am: "Քնարիկ Բադեյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlui7rlk8UMdgQAzE8HpcawsFuGDr9USml2KXOR",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluEM5Y9sJSpZQ36u72Hw8kvD5PiIMdXj9xVnB0",
     role: {
       am: "Ներզատաբան",
     },
@@ -220,7 +220,7 @@ export const staff: StaffType = [
       am: "Արփինե Սիմոնյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu1zx6nI2GN8X3FsiITKCzR9wVM5lohEmPqWDv",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluEmku7JSpZQ36u72Hw8kvD5PiIMdXj9xVnB0U",
     role: {
       am: "Թերապևտ, Գաստրոէնտերոլոգ",
     },
@@ -233,7 +233,7 @@ export const staff: StaffType = [
       am: "Կարինե Մկրտչյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluX1HaqkOa6TkeElYqHKS8hzy4uf7mr9tC0MBv",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJk7QajrgHJqI5EuVZFjgRGzykmXKNTw4WcSe",
     role: {
       am: "Բժիշկ-Ռադիոլոգ",
     },
@@ -246,7 +246,7 @@ export const staff: StaffType = [
       am: "Ասղտիկ Ավետիքյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluq8n8oBlhOjyngHXWhEmI6MSGorCe32TBAusL",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluzfsrDYCJcmH7QjURruLeMoFslfS6nVvkpdNb",
     role: {
       am: "Ռադիոլոգ-Դուպլեքսի Մասնագետ",
     },
@@ -272,7 +272,7 @@ export const staff: StaffType = [
       am: "Թամարա Սիմոնյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluRij2QmpwtAKyZqujExl659riehkFnU7WadXQ",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlua0HqbpKeDI891qSZ0fT7zH2wQLEbgPcoRV4J",
     role: {
       am: "Հոգեբան",
     },
@@ -285,7 +285,7 @@ export const staff: StaffType = [
       am: "Մոնիկա Մկրտչյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSPS720nEW7pyXzGrTZQb21kmdgPfAOJ8h3NC",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluilm0PHUMdgQAzE8HpcawsFuGDr9USml2KXOR",
     role: {
       am: "Բուժքույր",
     },
@@ -350,7 +350,7 @@ export const staff: StaffType = [
       am: "Անահիտ Իսաջանյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJBBuhMgHJqI5EuVZFjgRGzykmXKNTw4WcSeQ",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluga5tUTviePapmd4fjRNBXFSt1CEhgvq2b0rM",
     role: {
       am: "Ադմինիստրատոր",
     },
@@ -363,7 +363,7 @@ export const staff: StaffType = [
       am: "Քրիստինա Մկրտչյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2m54Bt3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu7ZZJ3LYxTDGf3YpRJEC1nwk6tWHeNq5xSbUv",
     role: {
       am: "Ադմինիստրատոր",
     },
