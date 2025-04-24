@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Card from "~/app/[locale]/podcasts/_components/Card";
 import { useLocale } from "next-intl";
 import { podcasts } from "~/constants/podcasts";
 import { type LocaleT } from "~/types";
+import Card from "~/app/[locale]/gallery/podcasts/_components/Card";
 
 const PodcastsCards: React.FC = () => {
   const locale: string = useLocale();

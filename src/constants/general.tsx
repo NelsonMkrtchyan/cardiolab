@@ -62,7 +62,7 @@ export type AboutUsContentItemType = {
 };
 export type AboutUsContentType = AboutUsContentItemType[];
 
-export const aboutUsContent = [
+export const aboutUsContent: AboutUsContentType = [
   {
     id: 1,
     name: "Mission",

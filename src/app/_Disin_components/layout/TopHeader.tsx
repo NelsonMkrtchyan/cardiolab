@@ -9,7 +9,6 @@ import {
   FaViber,
   FaWhatsapp,
 } from "react-icons/fa6";
-import { ImWhatsapp } from "react-icons/im";
 import { type LocaleT } from "~/types";
 
 import { CardioLabInfo } from "~/constants/menus";

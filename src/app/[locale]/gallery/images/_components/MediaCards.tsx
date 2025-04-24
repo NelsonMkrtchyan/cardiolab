@@ -2,14 +2,18 @@ import { Link } from "~/i18n/routing";
 import { useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import { useLastViewedPhoto } from "~/app/[locale]/gallery/_hooks/useLastViewedPhoto";
-import { gallery } from "~/constants/Gallery";
 import ImageWithLoader from "~/app/_Components/ImageWithLoader";
+import { type GalleryFolderType } from "~/constants/Gallery";
 
-const MediaCards = () => {
+interface MediaCardsPropsI {
+  folder: GalleryFolderType;
+}
+
+const MediaCards = ({ folder }: MediaCardsPropsI) => {
   const { slug, imageId } = useParams();
-  const galleryFolder = gallery.images.find(
-    (folder) => folder.id === Number(slug),
-  ) ?? { id: 0, title: "", images: [] }; // Provide default value to avoid undefined
+
+  const { list } = folder;
+
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();
 
   const lastViewedPhotoRef = useRef<HTMLAnchorElement>(null);
@@ -23,14 +27,14 @@ const MediaCards = () => {
       });
       setLastViewedPhoto(null);
     }
-  }, [slug, lastViewedPhoto, setLastViewedPhoto]);
+  }, [slug, lastViewedPhoto, setLastViewedPhoto, imageId]);
 
   return (
     <>
       <div className="media-area pt-100 pb-70">
         <div className="container">
           <div className="row g-2 justify-content-center">
-            {galleryFolder.images.map(({ id, url }) => {
+            {list.map(({ id, url }) => {
               return (
                 <div key={id} className="col-sm-6 col-lg-3 media-container">
                   <div

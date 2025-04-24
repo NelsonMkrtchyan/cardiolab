@@ -1,11 +1,5 @@
-import { type nameWithTranslations } from "~/types";
+import { type LocaleString } from "~/constants/staff";
 
-export const images = [
-  {
-    id: 1,
-    url: "/images/podcasts/lab01.jpeg",
-  },
-];
 export const folderOne = [
   {
     id: 1,
@@ -207,83 +201,43 @@ export const folderTwo = [
   },
 ];
 
-export interface ImageI {
+export type GalleryFolderItemType = {
   id: number;
-  name?: string;
   url: string;
-}
+};
 
-export interface VideoI {
+export type GalleryFolderType = {
   id: number;
-  name?: string;
-  url: string;
-}
-
-export interface FolderI {
-  id: number;
-  name: nameWithTranslations;
+  name: LocaleString;
   date: Date;
   bannerUrl: string;
-  images: ImageI[];
-  videos?: VideoI[];
-}
-
-export interface FolderCardI {
-  folder: FolderI;
-}
-
-export type GalleryI = {
-  images: FolderI[];
-  videos: FolderI[];
+  list: GalleryFolderItemType[];
 };
+export type GalleryImagesType = GalleryFolderType[];
+export type GalleryVideosType = GalleryFolderType[];
 
-export const gallery: GalleryI = {
-  images: [
-    {
-      id: 1,
-      name: {
-        en: "First Image Folder",
-        am: "Էխոսրտագրության երկօրյա գիտագործնական դասընթաց (27-28 փետրվարի, 2025)",
-        ru: "Первая папка",
-      },
-      date: new Date("2025-02-27"),
-      bannerUrl: `url(${folderOne[0]?.url})`,
-      images: folderOne,
+export const galleryImages: GalleryImagesType = [
+  {
+    id: 1,
+    name: {
+      en: "First Image Folder",
+      am: "Էխոսրտագրության երկօրյա գիտագործնական դասընթաց (27-28 փետրվարի, 2025)",
+      ru: "Первая папка",
     },
-    {
-      id: 2,
-      name: {
-        en: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
-        am: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
-        ru: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
-      },
-      date: new Date("2025-01-31"),
-      bannerUrl: `url(${folderTwo[0]?.url})`,
-      images: folderTwo,
+    date: new Date("2025-02-27"),
+    bannerUrl: `url(${folderOne[0]?.url})`,
+    list: folderOne,
+  },
+  {
+    id: 2,
+    name: {
+      en: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
+      am: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
+      ru: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
     },
-  ],
-  videos: [
-    {
-      id: 1,
-      name: {
-        en: "First Video Folder",
-        am: "Առաջին թղթապանակ",
-        ru: "Первая папка",
-      },
-      date: new Date(new Date().setDate(new Date().getDate() - 2)),
-      bannerUrl: "url(/images/login-bg.jpg)",
-      images,
-    },
-    {
-      id: 2,
-      name: {
-        en: "Second Video Folder",
-        am: "Երկրորդ թղթապանակ",
-        ru: "Вторая папка",
-      },
-      date: new Date(new Date().setDate(new Date().getDate() - 2)),
-      bannerUrl: "url(/images/about1.jpg)",
-      images,
-    },
-  ],
-};
+    date: new Date("2025-01-31"),
+    bannerUrl: `url(${folderTwo[0]?.url})`,
+    list: folderTwo,
+  },
+];
+export const galleryVideos: GalleryVideosType = [];

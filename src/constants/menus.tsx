@@ -55,7 +55,7 @@ export const Menus = () => {
         // },
         {
           label: `${t("Podcasts")}`,
-          link: "/podcasts",
+          link: "/gallery/podcasts",
         },
       ],
     },

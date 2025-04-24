@@ -29,11 +29,11 @@ const Card = ({ podcast }: CardI) => {
             className="video-area card-video"
             style={{ backgroundImage: posterUrl }}
           />
-          <div className="podcast-item">
-            <div className="podcast-front">
-              <p>{formattingDate({ date, locale })}</p>
-            </div>
-          </div>
+          {/*<div className="podcast-item">*/}
+          {/*  <div className="podcast-front">*/}
+          {/*    <p>{formattingDate({ date, locale })}</p>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
       </div>
     </>

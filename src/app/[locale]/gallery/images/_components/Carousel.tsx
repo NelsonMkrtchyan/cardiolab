@@ -1,11 +1,10 @@
-import Image from "next/image";
 import { type ImageProps } from "~/types";
 import { useRouter } from "~/i18n/routing";
 import { useParams } from "next/navigation";
 import { useLastViewedPhoto } from "~/app/[locale]/gallery/_hooks/useLastViewedPhoto";
-import { gallery } from "~/constants/Gallery";
 import SharedModal from "~/app/[locale]/gallery/images/_components/SharedModal";
 import ImageWithLoader from "~/app/_Components/ImageWithLoader";
+import useGallery from "~/app/[locale]/gallery/_hooks/useGallery";
 
 const Carousel = ({
   index,
@@ -15,25 +14,28 @@ const Carousel = ({
   currentPhoto: ImageProps;
 }) => {
   const router = useRouter();
-  const { slug, imageId } = useParams();
-  const galleryFolder = gallery.images.find(
-    (folder) => folder.id === Number(slug),
-  ) || { id: 0, title: "", images: [] };
-  const images = galleryFolder.images;
+  const { slug } = useParams();
   const [, setLastViewedPhoto] = useLastViewedPhoto();
+
+  const { currentImageFolder } = useGallery();
+
+  if (!currentImageFolder) return null;
+
+  const { list } = currentImageFolder;
 
   function closeModal() {
     // Set the last viewed photo ID to help with scrolling when returning to the gallery
     // Cast the ID to any to avoid type issues
     // This is safe because we know the hook can handle this value
-    setLastViewedPhoto(currentPhoto.id as any);
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    setLastViewedPhoto(currentPhoto.id as never);
     // Navigate back to the gallery page
     router.push(`/gallery/images/${slug as string}`);
   }
 
   function changePhotoId(newVal: number) {
-    if (newVal >= 0 && newVal < images.length) {
-      const imageId = images[newVal]?.id;
+    if (newVal >= 0 && newVal < list.length) {
+      const imageId = list[newVal]?.id;
       if (imageId !== undefined) {
         // Navigate to the new image
         router.push(`/gallery/images/${slug as string}/image/${imageId}`);
@@ -92,7 +94,7 @@ const Carousel = ({
           <SharedModal
             index={index}
             changePhotoId={changePhotoId}
-            images={images}
+            images={list}
             currentPhoto={currentPhoto}
             closeModal={closeModal}
             navigation={true}
