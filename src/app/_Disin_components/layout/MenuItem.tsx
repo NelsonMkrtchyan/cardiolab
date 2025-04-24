@@ -10,20 +10,33 @@ interface MenuItemProps {
   closeMenu?: () => void;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ label, link, submenu, closeMenu }) => {
+const MenuItem: React.FC<MenuItemProps> = ({
+  label,
+  link,
+  submenu,
+  closeMenu,
+}) => {
   const pathname = usePathname();
-  const isActive = pathname == link;
+
+  const match = /^\/([^/]+)/.exec(link);
+
+  const firstWord = match ? match[1] : null;
+
+  const isActive = firstWord ? pathname.includes(firstWord) : pathname == link;
 
   if (submenu) {
     return (
       <li className="nav-item" key={label}>
-        <Link href={link} className="nav-link dropdown-toggle">
+        <Link
+          href={link}
+          className={`nav-link ${isActive ? "active" : ""} dropdown-toggle`}
+        >
           {label}
         </Link>
 
         <ul className="dropdown-menu">
           {submenu.map((subItem) => {
-            const isActive = pathname == subItem.link;
+            const isActive = pathname.includes(subItem.link);
             return (
               <li className="nav-item" key={subItem.label}>
                 <Link

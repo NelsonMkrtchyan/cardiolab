@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     // console.log("Received form data:", formData);
 
     // Extract common fields
-    const { name, email, number, subject, message } = formData;
+    const { name, email, ssn, number, subject, message } = formData;
 
     // Basic validation for appointment form
     if (!name || !email) {
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
       from: "no-reply@cardiolab.am",
       to: ["nelsmkrtchyan@gmail.com", "info@cardiolab.am"],
       subject: `New Form Submission from ${name}`,
-      react: EmailTemplate({ name, email, number, subject, message }),
+      react: EmailTemplate({ name, email, ssn, number, subject, message }),
     });
 
     if (error) {

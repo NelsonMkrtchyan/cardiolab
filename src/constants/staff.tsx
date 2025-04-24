@@ -95,7 +95,7 @@ export const staff: StaffType = [
       am: "Ինտենսիվ Սրտաբան",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: true,
+    visibility: false,
   },
   {
     id: 4,
@@ -118,7 +118,7 @@ export const staff: StaffType = [
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluLUcM1UFM9GPald3WK8xTLcn5eompzqNkuiFI",
     role: {
-      am: "Մանկական Եվ Պերինատալ Սրտաբան",
+      am: "Մանկական և Պերինատալ Սրտաբան",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -173,7 +173,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: true,
+    visibility: false,
   },
   {
     id: 10,
@@ -212,7 +212,7 @@ export const staff: StaffType = [
       am: "Նյարդաբան",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: true,
+    visibility: false,
   },
   {
     id: 13,
@@ -264,7 +264,7 @@ export const staff: StaffType = [
       am: "Անոթային վիրաբույժ",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: true,
+    visibility: false,
   },
   {
     id: 17,
@@ -315,7 +315,7 @@ export const staff: StaffType = [
     role: {
       am: "Առողջության և Առողջ Ապրելակերպի Մասնագետ",
     },
-    category: StaffCategory.AdministrativeStaff,
+    category: StaffCategory.MedicalStaff,
     visibility: true,
   },
   {
@@ -324,7 +324,7 @@ export const staff: StaffType = [
       am: "Քնարիկ Առաքելյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluuWuZA3cGiQfWnFY4hBNrq8zcsHID6ePwJvag",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluamzUHVKeDI891qSZ0fT7zH2wQLEbgPcoRV4J",
     role: {
       am: "Հասարակայնության Հետ Կապերի և Հաղորդակցության Պատասխանատու",
     },
@@ -342,7 +342,7 @@ export const staff: StaffType = [
       am: "Դիզայներ",
     },
     category: StaffCategory.AdministrativeStaff,
-    visibility: true,
+    visibility: false,
   },
   {
     id: 22,

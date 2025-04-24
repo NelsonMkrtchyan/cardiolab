@@ -21,7 +21,7 @@ const Services: React.FC = () => {
           </div>
 
           <div className="row justify-content-center">
-            {localisedServices.slice(0, 4).map((service) => {
+            {localisedServices.slice(0, 3).map((service) => {
               return (
                 <>
                   <Card service={service} />

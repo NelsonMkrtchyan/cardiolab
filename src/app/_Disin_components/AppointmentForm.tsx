@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaUserTie } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
+import { FaIdCard } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
 import { WorkingHours, type WorkingHoursType } from "~/constants/menus";
 import { type LocaleT } from "~/types";
@@ -12,6 +13,7 @@ import { type LocaleT } from "~/types";
 interface FormData {
   name: string;
   email: string;
+  ssn: string;
   number: string;
 }
 
@@ -25,6 +27,7 @@ const AppointmentForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    ssn: "",
     number: "",
   });
   const [status, setStatus] = useState<string>("");
@@ -54,6 +57,7 @@ const AppointmentForm: React.FC = () => {
         setFormData({
           name: "",
           email: "",
+          ssn: "",
           number: "",
         });
       } else {
@@ -136,6 +140,30 @@ const AppointmentForm: React.FC = () => {
                           </div>
                           <div className="icon-container">
                             <MdEmail className="icon largest-icon-size mb-4" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-12">
+                        <div className="form-group">
+                          <div className="input-container">
+                            <label>
+                              {tComponents("Appointments.labels.ssn")}
+                            </label>
+                            <input
+                              type="text"
+                              name="ssn"
+                              className="form-control"
+                              placeholder={tComponents(
+                                "Appointments.placeholders.ssn",
+                              )}
+                              required
+                              value={formData.ssn}
+                              onChange={handleInputChange}
+                            />
+                          </div>
+                          <div className="icon-container">
+                            <FaIdCard className="icon largest-icon-size mb-4" />
                           </div>
                         </div>
                       </div>

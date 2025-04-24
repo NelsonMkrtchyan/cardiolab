@@ -3,6 +3,7 @@ import * as React from "react";
 export interface EmailFormType {
   name?: string;
   email?: string;
+  ssn?: string;
   number?: string;
   subject?: string;
   message?: string;
@@ -11,6 +12,7 @@ export interface EmailFormType {
 export const EmailTemplate: React.FC<Readonly<EmailFormType>> = ({
   name,
   email,
+  ssn,
   number,
   subject,
   message,
@@ -18,6 +20,7 @@ export const EmailTemplate: React.FC<Readonly<EmailFormType>> = ({
   <div>
     {name && <p>{name}</p>}
     {email && <p>{email}</p>}
+    {ssn && <p>{email}</p>}
     {number && <p>{number}</p>}
     {subject && <p>{subject}</p>}
     {message && <p>{message}</p>}

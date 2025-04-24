@@ -48,7 +48,7 @@ const FolderCard = ({ folder }: FolderCardI) => {
                 />
               </div>
               <div className="gallery-text-wrapper">
-                <p>{formattingDate({ date, locale })}</p>
+                <p>{formattingDate({ date, locale, format: "DD.MM.YYYY" })}</p>
               </div>
             </div>
           </Link>

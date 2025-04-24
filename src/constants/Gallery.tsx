@@ -200,6 +200,52 @@ export const folderTwo = [
     url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluIgJbqyzEmOVFpZEU45sKoR6bt7NDSv82hyxf",
   },
 ];
+export const folderThree = [
+  {
+    id: 1,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu19GpuF2GN8X3FsiITKCzR9wVM5lohEmPqWDv",
+  },
+  {
+    id: 2,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlueQALYn4t76bKABNX1vpMyZqWPS43EoxGDlka",
+  },
+  {
+    id: 3,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlufL507aZz5N7IdOAeZ04QFuoWqrbmxjn9MY1P",
+  },
+  {
+    id: 4,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTJrHZ6kIO67xl130tYVbZmnvuKAkc2dHC9gh",
+  },
+  {
+    id: 5,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluZEMMzpraARMXrkUnhxzT0mdNIlYQPEivqbew",
+  },
+  {
+    id: 6,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluCkHnWLdaf8bZiGYOrPwlsj3kyBnh9IME71Ad",
+  },
+  {
+    id: 7,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlub8z7qYldCU4c8A1oViQtsIJW2aZEXeySMgu3",
+  },
+  {
+    id: 8,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubZIYFwldCU4c8A1oViQtsIJW2aZEXeySMgu3",
+  },
+  {
+    id: 9,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlurwfjHQaeYIC83uB6qxw4oELhg1Dmita70Wkz",
+  },
+  {
+    id: 10,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluBV3id7w5MOyvDSgTdfYH9aCVr2FlxiAhRksZ",
+  },
+  {
+    id: 11,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluCDK9Rrdaf8bZiGYOrPwlsj3kyBnh9IME71Ad",
+  },
+];
 
 export type GalleryFolderItemType = {
   id: number;
@@ -238,6 +284,17 @@ export const galleryImages: GalleryImagesType = [
     date: new Date("2025-01-31"),
     bannerUrl: `url(${folderTwo[0]?.url})`,
     list: folderTwo,
+  },
+  {
+    id: 3,
+    name: {
+      en: "«Լիպիդային փոխանակություն և սիրտանոթային ռիսկ» խորագրով սեմինար",
+      am: "«Լիպիդային փոխանակություն և սիրտանոթային ռիսկ» խորագրով սեմինար",
+      ru: "«Լիպիդային փոխանակություն և սիրտանոթային ռիսկ» խորագրով սեմինար",
+    },
+    date: new Date("2025-04-11"),
+    bannerUrl: `url(${folderThree[0]?.url})`,
+    list: folderThree,
   },
 ];
 export const galleryVideos: GalleryVideosType = [];

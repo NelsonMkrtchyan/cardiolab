@@ -84,6 +84,7 @@
       "labels": {
         "name": "Name",
         "email": "Email",
+        "ssn": "SSN",
         "phone": "Phone",
         "services": "Services",
         "doctors": "Doctors",
@@ -92,6 +93,7 @@
       "placeholders": {
         "name": "Enter Your Name",
         "email": "Enter Your Email",
+        "ssn": "Enter Your SSN",
         "phone": "Enter Your Number",
         "services": "Cardio",
         "doctors": "Choose Your Doctor",
@@ -102,7 +104,7 @@
       }
     },
     "VideoSection": {
-      "title": "CardioLab introduction",
+      "title": "Welcome to CardioLab",
       "description": "Welcome to CardioLab, where your heart health is our priority. In this introduction, we provide an overview of our clinic's mission, services, and state-of-the-art technology designed to support cardiovascular care. Learn about our team of experienced specialists, our approach to personalized treatments, and how we aim to improve your well-being with innovative and compassionate healthcare solutions."
     }
   },
