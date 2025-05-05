@@ -846,7 +846,7 @@ button {
     align-items: center;
     overflow: hidden;
     white-space: normal;
-    word-break: break-word;
+    word-break: keep-all;
     overflow-wrap: break-word;
 
     h3 {

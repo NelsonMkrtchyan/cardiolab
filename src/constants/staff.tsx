@@ -259,12 +259,12 @@ export const staff: StaffType = [
       am: "Աղունիկ Զաքարյան",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluhRKhXws9fbejvdio1cKYPT0D5OHW2CzGgBFZ",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu0jircpuB3uh8TEZLPqWjlAOFybHiDawcvdgU",
     role: {
       am: "Անոթային վիրաբույժ",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: false,
+    visibility: true,
   },
   {
     id: 17,

@@ -7,7 +7,7 @@ import useEmployee from "~/app/[locale]/staff/_hooks/useEmployee";
 import NotFound from "~/app/[locale]/not-found";
 import ImagesDB from "~/constants/ImageDatabase.json";
 
-export default function Page() {
+export default function _page() {
   const tMenu = useTranslations("Menu");
   const { employeeDoNotExist, name, role, image } = useEmployee();
   return (
