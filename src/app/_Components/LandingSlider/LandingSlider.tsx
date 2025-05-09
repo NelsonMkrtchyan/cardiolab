@@ -45,54 +45,60 @@ const LandingSlider = () => {
 
   return (
     <>
-      <Swiper
-        slidesPerView={1}
-        navigation={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        modules={[Pagination, Navigation, Autoplay]}
-        className="home-slider"
-      >
-        {sliderData.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className={`slider-item`}>
-              <div
-                className={`slider-item-background ${item.haveBlur ? "blur" : ""}`}
-                style={{ backgroundImage: `url(${item.imageUrl})` }}
-              />
-              <div className={`slider-item-content`}>
-                <div className={`d-table`}>
-                  <div className="d-table-cell">
-                    <div className="container">
-                      <div className="slider-text">
-                        {item.title && <h1>{item.title}</h1>}
-                        {item.description && <p>{item.description}</p>}
+      <div className="landing-section">
+        <Swiper
+          slidesPerView={1}
+          navigation={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          modules={[Pagination, Navigation, Autoplay]}
+          className="home-slider"
+        >
+          {sliderData.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className={`slider-item`}>
+                <div
+                  className={`slider-item-background ${item.haveBlur ? "blur" : ""}`}
+                  style={{ backgroundImage: `url(${item.imageUrl})` }}
+                />
+                <div className={`slider-item-content`}>
+                  <div className={`d-table`}>
+                    <div className="d-table-cell">
+                      <div className="container">
+                        <div className="slider-text">
+                          {item.title && (
+                            <h1 className="font-xl">{item.title}</h1>
+                          )}
+                          {item.description && (
+                            <p className="font-xl">{item.description}</p>
+                          )}
 
-                        {item.link && (
-                          <div className="common-btn">
-                            <Link
-                              href={item.link.buttonLinkUrl}
-                              className="cmn-btn-right"
-                            >
-                              {item.link.buttonText}
-                            </Link>
-                          </div>
-                        )}
+                          {item.link && (
+                            <div className="common-btn">
+                              <Link
+                                href={item.link.buttonLinkUrl}
+                                className="cmn-btn-right font-md"
+                              >
+                                {item.link.buttonText}
+                              </Link>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 };

@@ -17,6 +17,8 @@ import "~/styles/responsive.scss";
 // Components styles
 import "~/app/_Components/FeedbackSlider/FeedbackSlider.scss";
 import "~/app/_Components/LandingSlider/LandingSlider.scss";
+import "~/app/_Components/Landing/AboutUsSection/AboutUsSection.scss";
+import "~/app/_Components/Landing/Landing.scss";
 import "~/app/_Components/VideoIntro/VideoIntro.scss";
 import "~/app/_Disin_components/layout/Footer/Footer.scss";
 
@@ -80,9 +82,9 @@ export default async function RootLayout({
       <body className={montserrat.className}>
         <Providers>
           <NextIntlClientProvider messages={messages}>
-            <TopHeader />
+            {/*<TopHeader />*/}
             <Navbar />
-            <div className="w-full">{children}</div>
+            <div className="container">{children}</div>
             <GoTop />
             <Footer />
           </NextIntlClientProvider>

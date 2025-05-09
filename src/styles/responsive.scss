@@ -383,88 +383,6 @@
   }
   /*-- End Emergency --*/
 
-  /*-- Welcome --*/
-  .welcome-left {
-    //height: auto;
-    //background-image: unset !important;
-    height: 400px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-
-    img {
-      display: inline-block;
-    }
-  }
-  .welcome-item {
-    ul {
-      max-width: 100%;
-
-      li {
-        margin-bottom: 35px;
-
-        &:hover {
-          i {
-            box-shadow: 0 0 0 6px $black-color;;
-          }
-        }
-
-        i {
-          top: 0;
-          font-size: 30px;
-          width: 60px;
-          height: 60px;
-          line-height: 60px;
-          box-shadow: 0 0 0 6px $blue-color;
-        }
-
-        .welcome-inner {
-          padding-left: 75px;
-
-          h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-          }
-        }
-      }
-    }
-  }
-  .welcome-right {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 0;
-
-    ul {
-      li {
-        .icon-wrapper {
-          width: 40px;
-          height: 40px;
-          line-height: 20px;
-          left: 5px;
-          font-size: 10px;
-
-          .icon {
-            font-size: 30px;
-          }
-        }
-      }
-    }
-  }
-  .section-title-two {
-    margin-bottom: 30px;
-    max-width: 100%;
-
-    span {
-      font-size: 13px;
-    }
-
-    h2 {
-      font-size: 22px;
-      line-height: 1.4;
-    }
-  }
-  /*-- End Welcome --*/
-
   /*-- Speciality --*/
   .speciality-area .services {
 
@@ -710,18 +628,6 @@
     }
   }
   /*-- End Speciality --*/
-
-  /*-- Welcome --*/
-  .welcome-left-two {
-    &:before {
-      display: none;
-    }
-
-    &:after {
-      display: none;
-    }
-  }
-  /*-- End Welcome --*/
 
   /*-- Review Slider --*/
   .main {
@@ -1938,83 +1844,6 @@
   }
   /*-- End Emergency --*/
 
-  /*-- Welcome --*/
-  .welcome-item {
-    ul {
-      max-width: 100%;
-
-      li {
-        margin-bottom: 40px;
-
-        &:hover {
-          i {
-            box-shadow: 0 0 0 6px $black-color;
-          }
-        }
-
-        i {
-          top: 0;
-          font-size: 30px;
-          width: 65px;
-          height: 65px;
-          line-height: 65px;
-          box-shadow: 0 0 0 6px $blue-color;
-        }
-
-        .welcome-inner {
-          padding-left: 90px;
-
-          h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-          }
-
-          p {
-            padding-right: 50px;
-          }
-        }
-      }
-    }
-  }
-  .welcome-left {
-    height: 400px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  .welcome-right {
-    padding-left: 25px;
-    padding-top: 0;
-
-    ul {
-      li {
-        .icon-wrapper {
-          width: 55px;
-          height: 55px;
-          line-height: 55px;
-          left: 5px;
-
-          .icon {
-            font-size: 35px;
-          }
-        }
-      }
-    }
-
-  }
-  .section-title-two {
-    max-width: 90%;
-
-    span {
-      font-size: $all-size;
-    }
-
-    h2 {
-      font-size: 26px;
-    }
-  }
-  /*-- End Welcome --*/
-
   /*-- Speciality --*/
   .speciality-item {
     .speciality-inner {
@@ -2227,18 +2056,6 @@
     }
   }
   /*-- End Speciality --*/
-
-  /*-- Welcome --*/
-  .welcome-left-two {
-    &:before {
-      display: none;
-    }
-
-    &:after {
-      display: none;
-    }
-  }
-  /*-- End Welcome --*/
 
   /*-- Review Slider --*/
   .main {
@@ -2969,11 +2786,6 @@
   }
   /*-- End Blog --*/
 
-  /*-- Welcome --*/
-  .welcome-right {
-    padding-left: 40px;
-  }
-  /*-- End Welcome --*/
 
   /*-- Speciality --*/
   .speciality-left {
@@ -3116,22 +2928,6 @@
 
   .faq-area-two {
   }
-
-  /*-- Welcome --*/
-  .section-title-two {
-    margin-bottom: 30px;
-    max-width: 95%;
-
-    span {
-      font-size: 12px;
-    }
-
-    h2 {
-      font-size: 22px;
-      line-height: 1.2;
-    }
-  }
-  /*-- End Welcome --*/
 }
 
 

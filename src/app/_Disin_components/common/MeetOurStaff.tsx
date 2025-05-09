@@ -11,7 +11,7 @@ const MeetOurStaff = () => {
 
   return (
     <>
-      <div className="doctors-area ptb-100">
+      <div className="doctors-area ptb-100 landing-section">
         <div className="container">
           <div className="section-title">
             <h2>{tGeneral("MeetOurStaff")}</h2>

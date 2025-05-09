@@ -76,7 +76,7 @@ const AppointmentForm: React.FC = () => {
 
   return (
     <>
-      <div className="appointment-area-two ptb-100">
+      <div className="appointment-area-two ptb-100 landing-section mt-5">
         <div className="container">
           <div className="row align-items-center appointment-wrap-two">
             <div className="col-lg-6">

@@ -15,11 +15,12 @@ interface ImageWithLoaderProps {
 
 export default function ImageWithLoader({
   src,
-  alt,
-  width,
-  height,
+  alt = "",
+  width = undefined,
+  height = undefined,
+  fill = false,
   className = "",
-  priority,
+  priority = undefined,
   onLoad,
 }: ImageWithLoaderProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +41,7 @@ export default function ImageWithLoader({
         alt={alt}
         width={width}
         height={height}
-        fill={!width}
+        fill={!width || fill}
         priority={priority}
         onLoad={() => {
           setIsLoading(false);

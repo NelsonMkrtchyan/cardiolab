@@ -65,13 +65,21 @@ This files table contents are outlined below>>>>>
     font-family: 'Caveat', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
   }
 
+  max-width: 550px;
+
   p {
     font-family: 'Poqrik', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
     //font-family: 'Tumanian', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
-    font-size: 26px !important;
+    font-size: 22px !important;
     white-space: normal !important;
 
   }
+}
+
+.object-position-top {
+  //object-position: top;
+  object-position: 0% 30%;
+
 }
 
 
@@ -142,6 +150,38 @@ img {
   padding-bottom: 100px;
 }
 
+.w-90 {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+//TEXT SIZES
+// Classes
+.font-xs {
+  @include responsive-font(xs);
+}
+
+.font-sm {
+  @include responsive-font(sm);
+}
+
+.font-md {
+  @include responsive-font(md);
+}
+
+.font-lg {
+  @include responsive-font(lg);
+}
+
+.font-xl {
+  @include responsive-font(xl);
+}
+
+.font-xxl {
+  @include responsive-font(xxl);
+}
+
 /*----- Buttons -----*/
 button {
   &:focus {
@@ -159,10 +199,10 @@ button {
     //color: #232323;
     color: $main-color;
     //color: $second-color;
-    font-size: 18px;
+    font-size: 16px;
     //border: 2px solid $main-color;
     border: 2px solid $second-color;
-    padding: 18px 55px;
+    padding: 12px 36px;
     border-radius: 10px;
 
     &:hover {
@@ -289,27 +329,6 @@ button {
       background-color: $second-color;
       border-radius: 5px;
     }
-  }
-}
-
-.section-title-two {
-  max-width: 550px;
-  margin-left: 0;
-  margin-bottom: 40px;
-  margin-top: -5px;
-
-  span {
-    display: inline-block;
-    color: $main-color;
-    font-size: $all-size;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-
-  h2 {
-    font-size: 34px;
-    font-weight: 700;
-    color: #232323;
   }
 }
 
@@ -1324,114 +1343,6 @@ button {
 }
 
 /*-- End Emergency --*/
-
-/*-- Welcome --*/
-.welcome-area {
-  .about-us-btn {
-    text-align: start;
-
-    a {
-      margin-top: 30px;
-      display: inline-block;
-      font-weight: 600;
-      color: #232323;
-      font-size: 18px;
-      border: 2px solid #386ae6;
-      padding: 18px 55px;
-      border-radius: 10px;
-
-      &:hover {
-        color: $white-color;
-        background-color: #386ae6;
-      }
-    }
-  }
-}
-
-.welcome-left {
-  background-size: cover;
-  background-position: center 25%;
-  background-repeat: no-repeat;
-  border-radius: 0 10px 10px 0;
-  margin-bottom: 30px;
-  width: 100%;
-  height: 100%;
-}
-
-.welcome-item {
-
-  ul {
-    margin: 0;
-    padding: 0;
-    max-width: 430px;
-
-    li {
-      list-style-type: none;
-      display: block;
-      position: relative;
-      margin-bottom: 40px;
-
-      &:hover {
-        i {
-          box-shadow: 0 0 0 10px $black-color;
-        }
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      .icon-wrapper {
-        display: inline-block;
-        position: absolute;
-        top: 9px;
-        left: 0;
-        text-align: center;
-        font-size: 35px;
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        border-radius: 50%;
-        color: $black-color;
-        box-shadow: 0 0 0 10px $main-color;
-        background-color: #f1f1f1;
-        transition: $transition;
-      }
-
-      .welcome-inner {
-        padding-left: 110px;
-
-        h3 {
-          font-weight: 600;
-          font-size: 22px;
-          color: #232323;
-          margin-bottom: 10px;
-        }
-
-        p {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-.welcome-right {
-  height: 100%;
-  padding-left: 70px;
-  padding-top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  p {
-    font-weight: 500;
-    font-size: 16px;
-  }
-
-}
-
-/*-- End Welcome --*/
 
 /*-- Speciality --*/
 .speciality-area {
@@ -3729,145 +3640,6 @@ button {
 
       &:last-child {
         margin-bottom: 0;
-      }
-    }
-  }
-}
-
-/*----- End Home Four CSS -----*/
-
-/*----- Home Five CSS -----*/
-.slider-item-three {
-  overflow: hidden;
-
-  &:before {
-    display: none;
-  }
-
-  .slider-text {
-    margin-top: -30px;
-
-    span {
-      display: inline-block;
-      color: #111111;
-      font-size: 15px;
-      font-weight: 500;
-      position: relative;
-      padding-left: 25px;
-      margin-bottom: 20px;
-
-      &:before {
-        position: absolute;
-        content: '';
-        width: 15px;
-        height: 3px;
-        left: 0;
-        bottom: 10px;
-        background-color: #2459b8;
-        border-radius: 10px;
-      }
-    }
-
-    h1 {
-      font-size: 60px;
-      margin-bottom: 25px;
-      color: #111111;
-    }
-
-    p {
-      font-weight: 500;
-      margin-bottom: 30px;
-      font-size: 22px;
-      color: #111111;
-    }
-
-    .common-btn {
-      a {
-        color: #fff;
-        background-color: $main-color;
-
-        &:hover {
-          border: 2px solid #111111;
-          background-color: #111111;
-        }
-      }
-
-      .cmn-btn-right {
-        background-color: transparent;
-        color: $main-color;
-        border: 2px solid $main-color;
-
-        &:hover {
-          background-color: $main-color;
-          color: #fff;
-          border: 2px solid $main-color;
-        }
-      }
-    }
-  }
-
-  .slider-shape {
-    img {
-      top: -65px;
-      right: 0;
-      animation: item-two-ani 40s infinite linear;
-    }
-  }
-}
-
-.spread-area {
-  .spread-img {
-    margin-bottom: 30px;
-
-    img {
-      border-radius: 10px;
-      width: 100%;
-    }
-  }
-
-  .spread-content {
-    .section-title-two {
-      margin-bottom: 25px;
-      max-width: 100%;
-    }
-
-    p {
-      margin-bottom: 25px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        display: block;
-        position: relative;
-        margin-bottom: 30px;
-        padding-left: 105px;
-
-        &:hover {
-          img {
-            animation: item-two-ani 5s infinite linear;
-          }
-        }
-
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          animation: none;
-          transition: $transition;
-        }
-
-        h3 {
-          font-weight: 600;
-          font-size: 20px;
-        }
-
-        p {
-          margin-bottom: 0;
-        }
       }
     }
   }
