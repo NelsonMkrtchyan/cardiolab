@@ -5,6 +5,8 @@ import { useTranslations } from "next-intl";
 import OurExpertise from "~/app/_Disin_components/common/OurExpertise";
 import Services from "~/app/_Disin_components/common/Services";
 
+import ImagesDB from "~/constants/ImageDatabase.json";
+
 export default function About() {
   const tMenu = useTranslations("Menu");
 
@@ -15,7 +17,11 @@ export default function About() {
         homePageUrl="/"
         homePageText={tMenu("Home")}
         activePageText={tMenu("AboutUs")}
-        bgImage="/images/page-banner2.jpg"
+        // bgImage={`${ImagesDB.AbstractImages.abstract_one}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_two}`}
+        bgImage={`${ImagesDB.AbstractImages.abstract_three}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
 
       <AboutContent />

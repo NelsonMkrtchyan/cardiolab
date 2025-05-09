@@ -3,11 +3,12 @@ import { CardioLabInfo } from "~/constants/menus";
 
 import { IoCall, IoLocation, IoMail } from "react-icons/io5";
 import { useLocale, useTranslations } from "next-intl";
+import { type LocaleT } from "~/types";
 
 const ContactInfo = () => {
   const tGeneral = useTranslations("General");
   const locale: string = useLocale();
-  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
+  const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
   return (
     <>
       <div className="location-area pt-100 pb-70">

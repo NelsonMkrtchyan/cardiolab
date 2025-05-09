@@ -53,26 +53,27 @@ This files table contents are outlined below>>>>>
 ** - Home Five CSS
 */
 
-//NOTE: Default variables from template
-//$main-color: #0046c0;
-//$white-color: #ffffff;
-//$grey-color: #344c5d;
-//$black-color: #111111;
-//$transition: .5s all ease;
-//$all-size: 15px;
+@import './variables';
 
-// NOTE: Custom variables
-$main-color: #1034A6;
-$second-color: #69ba31; // rgba(105, 186, 49, 0.9);
-$white-color: #ffffff;
-$dark-grey: #323232;
-$spanish-grey: #989898;
-$light-grey: #D3D3D3;
+/* Import Caveat font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
 
-$grey-color: #344c5d;
-$black-color: #111111;
-$transition: .5s all ease;
-$all-size: 15px;
+/* Armenian handwriting signature styles */
+.handwriting-signature {
+  /* English text with handwriting style */
+  .english {
+    font-family: 'Caveat', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
+  }
+
+  p {
+    font-family: 'Poqrik', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
+    //font-family: 'Tumanian', 'Arial Armenian', 'Sylfaen', system-ui, sans-serif;
+    font-size: 26px !important;
+    white-space: normal !important;
+
+  }
+}
+
 
 /*-- Default CSS --*/
 body {
@@ -87,6 +88,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   line-height: 1.7;
+  white-space: pre-line
+
 }
 
 a {
@@ -120,6 +123,11 @@ img {
 .ptb-100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.ptb-30 {
+  padding-top: 50px;
+  padding-bottom: 10px;
 }
 
 .pt-100 {
@@ -180,7 +188,8 @@ button {
 
 .page-title-area {
   background-size: cover;
-  background-position: center center;
+  //background-position: center center;
+  background-position: bottom;
   background-repeat: no-repeat;
   height: 400px;
   text-align: center;
@@ -193,7 +202,7 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: .50;
+    opacity: .80;
     background-color: $main-color;
   }
 }
@@ -284,7 +293,7 @@ button {
 }
 
 .section-title-two {
-  max-width: 430px;
+  max-width: 550px;
   margin-left: 0;
   margin-bottom: 40px;
   margin-top: -5px;
@@ -298,7 +307,7 @@ button {
   }
 
   h2 {
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 700;
     color: #232323;
   }
@@ -389,7 +398,8 @@ button {
       li {
         list-style-type: none;
         display: inline-block;
-        margin-right: 10px;
+        //margin-right: 10px;
+        padding: 5px;
 
         &:last-child {
           margin-right: 0;
@@ -492,6 +502,9 @@ button {
         }
       }
     }
+  }
+
+  .logoContainer {
   }
 }
 
@@ -614,161 +627,6 @@ button {
 
 /*-- End Navbar --*/
 
-/*-- Home Slider --*/
-.slider-item {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 500px;
-  position: relative;
-
-  .slider-shape {
-    img {
-      position: absolute;
-      top: -9px;
-      right: -90px;
-      max-width: 730px;
-    }
-  }
-
-  .slider-shape-two {
-    img {
-      position: absolute;
-      top: 20px;
-      right: -60px;
-      max-width: 730px;
-    }
-  }
-
-  .slider-shape-three {
-    img {
-      position: absolute;
-      top: 60px;
-      right: 0;
-      max-width: 730px;
-    }
-  }
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: $main-color;
-    opacity: .80;
-  }
-
-  .slider-text {
-    position: relative;
-    //margin-top: -160px;
-    z-index: 5;
-
-    h1 {
-      font-weight: 700;
-      font-size: 46px;
-      color: $white-color;
-      margin-bottom: 25px;
-      max-width: 600px;
-      margin-left: 0;
-      line-height: 1.4;
-    }
-
-    p {
-      color: $white-color;
-      margin-bottom: 40px;
-      max-width: 575px;
-      margin-left: 0;
-    }
-  }
-}
-
-.common-btn {
-  a {
-    display: inline-block;
-    color: $main-color;
-    background-color: $white-color;
-    font-size: $all-size;
-    font-weight: 500;
-    padding: 12px 18px;
-    border-radius: 5px;
-    margin-right: 20px;
-    border: 2px solid transparent;
-
-    &:hover {
-      background-color: transparent;
-      border: 2px solid $white-color;
-      color: $white-color;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  .cmn-btn-right {
-    background-color: transparent;
-    color: $white-color;
-    border: 2px solid $white-color;
-    padding-left: 25px;
-    padding-right: 25px;
-
-    &:hover {
-      color: $main-color;
-      background-color: $white-color;
-    }
-  }
-}
-
-.home-slider {
-  .swiper-button-prev, .swiper-button-next {
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    border-radius: 50%;
-    background-color: #2459b8;
-    transition: $transition;
-
-    &::after {
-      color: $white-color;
-      font-size: 28px;
-    }
-
-    &:hover {
-      color: $white-color;
-      background-color: $black-color;
-    }
-  }
-
-  .swiper-pagination {
-    bottom: 150px;
-
-    .swiper-pagination-bullet {
-      width: 20px;
-      height: 5px;
-      margin: 5px 4px;
-      background-color: $main-color;
-      transition: $transition;
-      opacity: 1;
-      border-radius: 30px;
-
-      &.swiper-pagination-bullet-active, &:hover {
-        background: $white-color;
-        width: 30px;
-      }
-    }
-  }
-}
-
-.home-slider-five {
-  .swiper-pagination {
-    bottom: 30px;
-  }
-}
-
-/*-- End Home Slider --*/
-
 /*-- Counter --*/
 .counter-bg {
   background-size: cover;
@@ -874,7 +732,10 @@ button {
   position: relative;
 
   img {
+    display: block;
+    object-fit: cover;
     width: 100%;
+    max-height: 750px;
     z-index: 1;
     border-radius: 10px;
     animation: a-seven 10s infinite linear;
@@ -971,7 +832,9 @@ button {
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 25px 0 $main-color;
+    //box-shadow: 0 0 25px 0 $main-color;
+    box-shadow: -5px 5px 15px $second-color, // left-bottom shadow
+    5px -5px 15px $main-color; // right-top shadow
   }
 
   .service-front {
@@ -981,6 +844,10 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 
     h3 {
       font-weight: 600;
@@ -1015,107 +882,6 @@ button {
   }
 }
 
-/*-- Video --*/
-.video-area {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 560px;
-  text-align: center;
-}
-
-.video-item {
-  .popup-youtube {
-    display: inline-block;
-    width: 110px;
-    height: 110px;
-    line-height: 105px;
-    border-radius: 50%;
-    color: $main-color;
-    font-size: 35px;
-    background-color: $white-color;
-    cursor: pointer;
-    transition: $transition;
-
-    .icon {
-      margin-left: 10px;
-    }
-
-    &:hover {
-      color: $white-color;
-      //background-color: $black-color;
-      background-color: $second-color;
-
-      .icon {
-        color: $white-color;
-        //color: $second-color;
-      }
-    }
-  }
-
-  .video-content {
-    margin-top: 90px;
-    text-align: left;
-    padding-left: 30px;
-    position: relative;
-    max-width: 745px;
-    margin-left: 0;
-
-    &:before {
-      position: absolute;
-      content: '';
-      top: 9px;
-      left: 0;
-      width: 5px;
-      height: 130px;
-      background-color: $white-color;
-    }
-
-    h3 {
-      color: $white-color;
-      font-weight: 600;
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-
-    p {
-      color: $white-color;
-      margin-bottom: 0;
-    }
-  }
-
-}
-
-.video-wrap {
-  .react-tabs__tab-list {
-    background-color: $white-color;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 0 15px 0 #ddd;
-    margin: 0;
-    border: none;
-
-    .react-tabs__tab {
-      display: inline-block;
-      color: $main-color;
-      font-size: 16px;
-      font-weight: 600;
-      background-color: transparent;
-      padding: 25px 49.4px 22px 49.3px;
-      border-radius: 0;
-      border: none;
-      bottom: 0;
-
-      &.react-tabs__tab--selected {
-        background-color: $main-color;
-        color: #fff;
-      }
-    }
-  }
-}
-
-/*-- End Video --*/
-
 /*-- Doctors --*/
 .doctor-item {
   margin-bottom: 30px;
@@ -1127,7 +893,6 @@ button {
 
   &:hover {
     box-shadow: 0 0 25px 0 $main-color;
-    //box-shadow: 0 0 25px 0 $second-color;
 
     .doctor-top {
       box-shadow: 0 25px 25px -20px $second-color;
@@ -1160,6 +925,7 @@ button {
   .doctor-top {
     position: relative;
     border-radius: 10px;
+    aspect-ratio: 4/5;
 
     a {
       display: inline-block;
@@ -1187,12 +953,12 @@ button {
     img {
       width: 100%;
       border-radius: 10px;
+      object-fit: cover;
     }
   }
 
   .doctor-bottom {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 10px;
 
     h3 {
       //TODO: Delete in the future START
@@ -1584,21 +1350,15 @@ button {
 
 .welcome-left {
   background-size: cover;
-  background-position: center center;
+  background-position: center 25%;
   background-repeat: no-repeat;
   border-radius: 0 10px 10px 0;
   margin-bottom: 30px;
   width: 100%;
   height: 100%;
-
-  img {
-    display: none;
-  }
 }
 
 .welcome-item {
-  //min-height: 500px;
-  //max-height: 600px;
 
   ul {
     margin: 0;
@@ -1684,6 +1444,8 @@ button {
     padding: 35px;
     margin-bottom: 30px;
 
+    background-color: white;
+
     text-align: justify;
 
     .icon {
@@ -1692,6 +1454,7 @@ button {
 
     &:hover {
       box-shadow: 0 0 20px 0 $main-color;
+      //box-shadow: 0 0 20px 0 $second-color;
 
       i {
         color: $white-color;
@@ -1745,7 +1508,7 @@ button {
   height: 100%;
 
   img {
-    display: none;
+    //display: none;
   }
 
   .speciality-emergency {
@@ -1755,6 +1518,7 @@ button {
     background-color: $main-color;
     padding: 30px 40px 15px 40px;
     border-radius: 10px;
+    z-index: 10;
 
     display: flex;
     justify-content: space-between;
@@ -1859,36 +1623,6 @@ button {
 }
 
 /*-- End Speciality --*/
-
-/*-- Video --*/
-.video-wrap-two {
-  .video-nav {
-    .video-nav-item {
-      a {
-        padding-left: 49.7px;
-        padding-right: 49px;
-      }
-    }
-  }
-
-  .video-item {
-    a {
-      color: $main-color;
-    }
-  }
-
-  .nav-pills .nav-link, .nav-pills .show > .nav-link {
-    border-top: 0;
-  }
-
-  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    border-top: 0;
-    background-color: $main-color;
-    color: $white-color;
-  }
-}
-
-/*-- End Video --*/
 
 /*-- Counter --*/
 .counter-area-two {
@@ -2365,207 +2099,6 @@ button {
 
 /*-- End Counter --*/
 
-/*-- Review Slider --*/
-.review-area {
-  position: relative;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  &:before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    opacity: .8;
-    top: 0;
-    left: 0;
-    background-color: $main-color;
-  }
-}
-
-.main {
-  max-width: 770px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 80px;
-  padding-left: 80px;
-  padding-right: 80px;
-  position: relative;
-
-  &:before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 330px;
-    top: 65px;
-    left: 0;
-    right: 0;
-    background-color: $white-color;
-  }
-}
-
-.slick-dotted.slick-slider {
-  margin-bottom: 25px;
-}
-
-.slider-nav {
-  margin-bottom: 30px;
-  position: relative;
-  max-width: 440px;
-  margin-left: auto;
-  margin-right: auto;
-
-  .slick-dots {
-    bottom: -145px;
-
-    li {
-      margin: 0;
-
-      button {
-        &:before {
-          font-size: 12px;
-          opacity: 1;
-          color: $grey-color;
-        }
-      }
-
-      &.slick-active {
-        button {
-          &:before {
-            opacity: 1;
-            color: $main-color;
-          }
-        }
-      }
-    }
-  }
-
-  .slick-track {
-    padding-top: 2px;
-  }
-
-  div {
-    text-align: center;
-
-    .review-img {
-      position: relative;
-      margin-top: 10px;
-      margin-right: 15px;
-      margin-left: 15px;
-
-      img {
-        display: inline-block;
-        margin-bottom: 45px;
-        width: 90px;
-        height: 90px;
-        border: 3px solid $main-color;
-        border-radius: 50%;
-        transition: $transition;
-        margin-top: 2px;
-        cursor: pointer;
-      }
-    }
-
-    h3 {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    span {
-      display: block;
-      color: #3776d0;
-    }
-  }
-}
-
-.slick-slide .review-details {
-  opacity: 0;
-}
-
-.slick-slide {
-  &:focus {
-    outline: 0;
-  }
-}
-
-.slick-slide.slick-center {
-  .review-details {
-    opacity: 1;
-  }
-
-  .review-img {
-
-    img {
-      transform: scale(1.3);
-    }
-  }
-}
-
-.slider-for {
-  div {
-    p {
-      margin-bottom: 0;
-      color: #000000;
-      font-size: $all-size;
-      text-align: center;
-      max-width: 580px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-
-.feedback-slider {
-  .swiper-button-next, .swiper-button-prev {
-    background-color: #000000;
-    width: 35px;
-    height: 35px;
-
-    &::after {
-      color: #fff;
-      font-size: 20px;
-    }
-  }
-}
-
-.feedback-item {
-  max-width: 770px;
-  width: 100%;
-  background-color: #fff;
-  margin: auto;
-  text-align: center;
-  padding: 60px 30px;
-  border-radius: 10px;
-
-  .client-img {
-    img {
-      width: 90px !important;
-      height: 90px;
-      margin: auto;
-    }
-
-    h3 {
-      margin-top: 20px;
-      font-size: 22px;
-    }
-  }
-
-  p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-/*-- End Review Slider --*/
 /*----- End Home Page Three -----*/
 
 /*----- Doctor Page -----*/
@@ -2754,135 +2287,6 @@ button {
 }
 
 /*-- End Page Title --*/
-
-/*-- Doctor Details --*/
-.doctor-details-left {
-  box-shadow: 0 0 10px 0 #ddd;
-  border-radius: 10px;
-}
-
-.doctor-details-item {
-  margin-bottom: 30px;
-
-  img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 50px;
-  }
-
-  .doctor-details-contact {
-    padding: 0 40px;
-    margin-bottom: 50px;
-
-    h3 {
-      font-weight: 600;
-      font-size: 22px;
-      color: $grey-color;
-      margin-bottom: 30px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        display: block;
-        font-weight: 500;
-        font-size: 15px;
-        color: $grey-color;
-        margin-bottom: 25px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        i {
-          display: inline-block;
-          color: $main-color;
-          margin-right: 10px;
-          font-size: 18px;
-          position: relative;
-          top: 2px;
-        }
-      }
-    }
-  }
-
-  .doctor-details-work {
-    padding: 0 40px;
-    padding-bottom: 50px;
-
-    h3 {
-      font-weight: 600;
-      font-size: 22px;
-      color: $grey-color;
-      margin-bottom: 30px;
-    }
-
-    .appointment-item-two-right {
-      background-image: none;
-      padding-top: 0;
-      padding-bottom: 0;
-
-      .appointment-item-content {
-        padding: 0;
-        background-color: transparent;
-        margin: 0;
-
-        ul {
-          li {
-            font-size: 15px;
-            padding: 10px 0;
-
-            &:first-child {
-              border-top: 1px solid #eee;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .doctor-details-biography {
-    padding-left: 30px;
-    margin-bottom: 40px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    h3 {
-      font-weight: 600;
-      font-size: 24px;
-      color: #2f60bd;
-      margin-bottom: 25px;
-    }
-
-    p {
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        display: block;
-        margin-bottom: 15px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-/*-- End Doctor Details --*/
 
 /*-- Appointment --*/
 .appointment-area-three {
@@ -3344,7 +2748,7 @@ button {
       }
 
       &:last-child {
-        margin-right: 0;
+        //margin-right: 0;
       }
 
       a {
@@ -3881,12 +3285,15 @@ button {
 .department-item {
   text-align: center;
   border: 1px solid $main-color;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 5px;
   transition: $transition;
-  margin-bottom: 30px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  height: 100%;
 
   &:before {
     position: absolute;
@@ -3934,19 +3341,13 @@ button {
     }
   }
 
-  i {
-    font-size: 45px;
-    display: block;
-    margin-bottom: 20px;
-    color: $main-color;
-    transition: $transition;
-  }
 
   h3 {
     margin-bottom: 12px;
     font-size: 26px;
     font-weight: 600;
     transition: $transition;
+    word-break: break-word;
   }
 
   p {
@@ -3954,6 +3355,7 @@ button {
     padding-left: 15px;
     padding-right: 15px;
     transition: $transition;
+    word-break: break-word;
   }
 }
 
@@ -4643,7 +4045,9 @@ button {
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 25px 0 $second-color;
+      //box-shadow: 0 0 25px 0 $second-color;
+      box-shadow: -5px 5px 15px $second-color, // left-bottom shadow
+      5px -5px 15px $main-color; // right-top shadow
     }
   }
 
@@ -4721,7 +4125,9 @@ button {
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 25px 0 $main-color;
+      //box-shadow: 0 0 25px 0 $main-color;
+      box-shadow: -5px 5px 15px $second-color, // left-bottom shadow
+      5px -5px 15px $main-color; // right-top shadow
     }
   }
 
@@ -4756,8 +4162,8 @@ button {
   .media-container {
     //border: 1px solid blue;
     height: 100%;
-    min-height: 250px;
-    max-height: 350px;
+    //min-height: 250px;
+    //max-height: 350px;
 
     &:hover {
       overflow: hidden;
@@ -4912,6 +4318,32 @@ button {
 /*-- Patient Guid section --*/
 /*-- End Patient Guid --*/
 
+/*-- PriceList section --*/
+.price-list {
+  .section-title {
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+
+  .price-list-content {
+    margin: 0 5px;
+    padding: 10px 0;
+    border: 1px solid $light-grey;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px $spanish-grey;
+  }
+
+  .price-list-info {
+    margin: 20px 5px 0 5px;
+  }
+}
+
+
+/*-- End PriceList --*/
+
 /*-- Faq section --*/
 .faq-area-two {
   //background-color: $second-color;
@@ -4937,7 +4369,8 @@ button {
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 300px;
+    max-height: 500px;
     text-align: center;
     position: relative;
 
@@ -5160,194 +4593,6 @@ button {
 }
 
 /*-- End Blue Cards section --*/
-
-
-/*-- Footer --*/
-footer {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: $main-color;
-  position: relative;
-}
-
-.footer-item {
-  margin-bottom: 30px;
-
-  .footer-contact {
-    h3 {
-      color: $white-color;
-      font-weight: 600;
-      font-size: 22px;
-      margin-bottom: 30px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        //display: block;
-        display: flex;
-        flex-wrap: nowrap;
-        color: $white-color;
-        font-weight: 500;
-        font-size: $all-size;
-        //padding-left: 60px;
-        position: relative;
-        margin-bottom: 30px;
-        //text-align: center;
-
-        &:last-child {
-          margin-bottom: 0;
-          margin-left: 0;
-
-          i {
-            top: 2px;
-          }
-        }
-
-        a {
-          display: block;
-          color: $white-color;
-          margin-bottom: 7px;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-
-          &:hover {
-            margin-left: 5px;
-
-            i {
-              left: 5px;
-            }
-          }
-        }
-
-        i {
-          position: absolute;
-          top: 2px;
-          left: 0;
-          font-size: 42px;
-          transition: $transition;
-        }
-
-        .footer-text-container {
-          display: flex;
-          width: 100%;
-          text-align: start;
-          justify-content: start;
-          align-items: center;
-          padding: 0 0 0 10px;
-
-          div {
-            margin-right: 5px;
-
-            &:last-child {
-              margin: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .footer-quick {
-    h3 {
-      color: $white-color;
-      font-weight: 600;
-      font-size: 22px;
-      margin-bottom: 30px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        display: block;
-        margin-bottom: 20px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        a {
-          display: block;
-          font-weight: 500;
-          font-size: $all-size;
-          color: $white-color;
-
-          &:hover {
-            margin-left: 5px;
-          }
-        }
-      }
-    }
-  }
-
-  .footer-feedback {
-    h3 {
-      color: $white-color;
-      font-weight: 600;
-      font-size: 22px;
-      margin-bottom: 30px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-
-      .form-control {
-        font-size: $all-size;
-        background-color: transparent;
-        border-radius: 0;
-        border: 0;
-        border-bottom: 1px solid #ffffffc7;
-        padding-left: 0;
-        padding-top: 0;
-        padding-bottom: 15px;
-        color: $white-color;
-
-        &:focus {
-          box-shadow: none;
-          border-bottom: 1px solid #ffffffc7;
-        }
-      }
-
-      ::placeholder {
-        color: #ffffffc7;
-      }
-    }
-
-    .feedback-btn {
-      font-weight: 600;
-      font-size: 14px;
-      background-color: $white-color;
-      padding: 12px 35px;
-      border-radius: 30px;
-      color: $main-color;
-      transition: $transition;
-
-      &:hover {
-        color: $white-color;
-        background-color: $black-color;
-      }
-    }
-  }
-}
-
-.footer-icon {
-  color: $white-color;
-}
-
-.footer-two {
-  padding-top: 100px;
-}
-
-/*-- End Footer --*/
 
 
 

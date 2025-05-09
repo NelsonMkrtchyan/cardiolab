@@ -1,3 +1,5 @@
+"use client";
+
 import { IoCall, IoLocation, IoMail } from "react-icons/io5";
 import {
   FaFacebookF,
@@ -7,14 +9,14 @@ import {
   FaViber,
   FaWhatsapp,
 } from "react-icons/fa6";
-import { ImWhatsapp } from "react-icons/im";
+import { type LocaleT } from "~/types";
 
 import { CardioLabInfo } from "~/constants/menus";
 import { useLocale } from "next-intl";
 
 const TopHeader = () => {
   const locale: string = useLocale();
-  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
+  const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
   return (
     <>
       <div className="header-top">
@@ -89,14 +91,33 @@ const TopHeader = () => {
                     </li>
                     <li>
                       <a
-                        href="viber://chat?number=+374 44991188"
+                        href="viber://chat?number=+37444991188"
                         target="_blank"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const isMobile = /iPhone|Android|iPad/i.test(
+                            navigator.userAgent,
+                          );
+                          if (isMobile) {
+                            window.location.href =
+                              "viber://chat?number=+37444991188";
+                          } else {
+                            const confirmed = confirm(
+                              "Do you have Viber installed on this device?",
+                            );
+                            console.log("confirmed ---->", confirmed);
+                            if (confirmed) {
+                              window.location.href =
+                                "viber://chat?number=+37444991188";
+                            }
+                          }
+                        }}
                       >
                         <FaViber className="" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://wa.me/+374 44991188" target="_blank">
+                      <a href="https://wa.me/+37444991188" target="_blank">
                         <FaWhatsapp className="" />
                       </a>
                     </li>

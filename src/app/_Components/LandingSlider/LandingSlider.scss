@@ -1,0 +1,281 @@
+@import '~/styles/variables';
+
+.home-slider {
+  .swiper-button-prev, .swiper-button-next {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    background-color: #2459b8;
+    transition: $transition;
+
+    &::after {
+      color: $white-color;
+      font-size: 28px;
+    }
+
+    &:hover {
+      color: $white-color;
+      background-color: $black-color;
+    }
+  }
+
+  .swiper-pagination {
+    //bottom: 150px;
+
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 5px;
+      margin: 5px 4px;
+      background-color: $main-color;
+      transition: $transition;
+      opacity: 1;
+      border-radius: 30px;
+
+      &.swiper-pagination-bullet-active, &:hover {
+        background: $white-color;
+        width: 30px;
+      }
+    }
+  }
+}
+
+.slider-item {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-content: center;
+
+  &::before {
+    display: none;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $main-color;
+    opacity: .80;
+  }
+
+
+  .slider-item-background {
+    background-size: cover;
+    background-position: 80% 25%;
+    background-repeat: no-repeat;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    &.blur {
+      filter: blur(5px);
+    }
+  }
+
+  .slider-item-content {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding-left: 100px;
+
+  }
+
+  .slider-text {
+    position: relative;
+    z-index: 5;
+
+    h1 {
+      font-weight: 700;
+      font-size: 46px;
+      color: $white-color;
+      margin-bottom: 25px;
+      max-width: 600px;
+      margin-left: 0;
+      line-height: 1.4;
+    }
+
+    p {
+      color: $white-color;
+      margin-bottom: 40px;
+      max-width: 575px;
+      margin-left: 0;
+    }
+  }
+}
+
+.common-btn {
+  a {
+    display: inline-block;
+    color: $main-color;
+    background-color: $white-color;
+    font-size: $all-size;
+    font-weight: 500;
+    padding: 12px 18px;
+    border-radius: 5px;
+    margin-right: 20px;
+    border: 2px solid transparent;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $white-color;
+      color: $white-color;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .cmn-btn-right {
+    background-color: transparent;
+    color: $white-color;
+    border: 2px solid $white-color;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    &:hover {
+      color: $main-color;
+      background-color: $white-color;
+    }
+  }
+}
+
+
+/*-- ---------------------------------------- RESPONSIVE ---------------------------------------- --*/
+
+@media only screen and (max-width: 767px) {
+  .home-slider {
+    .swiper-button-prev, .swiper-button-next {
+      display: none;
+    }
+
+    .swiper-pagination {
+      bottom: 20px;
+    }
+  }
+
+  .slider-item {
+    height: 300px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: $blue-color;
+      opacity: .80;
+    }
+
+    .slider-item-background {
+      background-position: center;
+    }
+
+    .slider-item-content {
+      padding-left: 0;
+    }
+
+    .slider-text {
+      h1 {
+        font-size: 26px;
+        margin-bottom: 18px;
+        max-width: 100%;
+      }
+
+      p {
+        margin-bottom: 30px;
+        max-width: 100%;
+      }
+    }
+  }
+  .common-btn {
+    a {
+      font-size: 13px;
+      padding: 13px 14px 12px;
+      border-radius: 5px;
+      margin-right: 8px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .slider-item {
+    height: 500px;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .slider-item-background {
+      background-position: center;
+    }
+
+    .slider-text {
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  .common-btn {
+    a {
+      font-size: $all-size;
+      padding: 14px 18px;
+    }
+
+    .cmn-btn-right {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .home-slider {
+    .swiper-pagination {
+      bottom: 30px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .home-slider {
+    .swiper-button-prev, .swiper-button-next {
+      width: 40px;
+      height: 40px;
+
+      &::after {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .common-btn {
+    a {
+      padding: 16px 22px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .home-slider {
+    .swiper-button-prev, .swiper-button-next {
+      width: 40px;
+      height: 40px;
+
+      &::after {
+        font-size: 20px;
+      }
+    }
+  }
+}

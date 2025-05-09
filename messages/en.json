@@ -11,7 +11,7 @@
     "ContactUs": "Contact us",
     "OurNews": "Our news",
     "OurServices": "Our services",
-    "MeetOurStuff": "Meet our staff",
+    "MeetOurStaff": "Meet our staff",
     "WorkingHours": "Working Hours",
     "Weekdays": {
       "Monday": "Monday",
@@ -19,7 +19,8 @@
       "Wednesday": "Wednesday",
       "Thursday": "Thursday",
       "Friday": "Friday",
-      "Saturday": "Saturday"
+      "Saturday": "Saturday",
+      "Sunday": "Sunday"
     },
     "Stats": {
       "one": "Clinics",
@@ -31,7 +32,7 @@
   "Menu": {
     "Home": "Home",
     "AboutUs": "About us",
-    "Stuff": "Staff",
+    "Staff": "Staff",
     "Services": "Services",
     "Guide": "Manuals",
     "DoctorGuide": "Doctor manual",
@@ -50,6 +51,7 @@
     "Podcasts": "'CardioLab' podcasts",
     "InsuranceInformation": "Insurance information",
     "HealthLibrary": "Health library",
+    "Pricelist": "Price List",
     "UsefulMaterials": "Useful materials",
     "AccreditedTrainings": "Accredited trainings",
     "Seminars": "Seminars",
@@ -58,10 +60,8 @@
   "Components": {
     "Landing": {
       "AboutUs": {
-        "title": "Welcome to CardioLab.  We have...",
-        "one": "Certified Doctors",
-        "two": "Patient-Centered Care",
-        "three": "Modern Technology"
+        "title": "Բարի գալուստ «CardioLab» բժշկական կենտրոնի պաշտոնական կայք",
+        "description": "«CardioLab» բժշկական կենտրոնում մեր առաջնահերթությունը ձեր առողջական բարեկեցությունն է։ Մենք առաջարկում ենք ծառայությունների լայն շրջանակ մեծահասակների և երեխաների համար՝ սկսած սիրտանոթային խորհրդատվություններից և սրտի զննումներից մինչև համապարփակ առողջության ստուգումներ և առաջադեմ մոնիտորինգի լուծումներ:"
       }
     },
     "ContactForm": {
@@ -74,7 +74,9 @@
         "message": "Your message ..."
       },
       "sendMessage": "Send Message",
-      "callNote": "Call"
+      "sending": "Ուղարկվում է ...",
+      "callNote": "Call",
+      "successMessage": "Էլ․ նամակը հաջողությամբ ուղարկվել է"
     },
     "Appointments": {
       "title": "Book your appointment",
@@ -82,6 +84,7 @@
       "labels": {
         "name": "Name",
         "email": "Email",
+        "ssn": "SSN",
         "phone": "Phone",
         "services": "Services",
         "doctors": "Doctors",
@@ -90,6 +93,7 @@
       "placeholders": {
         "name": "Enter Your Name",
         "email": "Enter Your Email",
+        "ssn": "Enter Your SSN",
         "phone": "Enter Your Number",
         "services": "Cardio",
         "doctors": "Choose Your Doctor",
@@ -100,18 +104,22 @@
       }
     },
     "VideoSection": {
-      "title": "CardioLab introduction",
+      "title": "Welcome to CardioLab",
       "description": "Welcome to CardioLab, where your heart health is our priority. In this introduction, we provide an overview of our clinic's mission, services, and state-of-the-art technology designed to support cardiovascular care. Learn about our team of experienced specialists, our approach to personalized treatments, and how we aim to improve your well-being with innovative and compassionate healthcare solutions."
     }
   },
   "HeroSlider": {
     "titleOne": "CardioLab",
-    "descriptionOne": "The Art of Heart Care"
+    "descriptionOne": "The Art of Heart Care",
+    "priceTitle": "Մեր ծառայությունները և գնացուցակը"
   },
   "About": {
     "AboutContent": {
       "title": "About CardioLab",
-      "description": "'CardioLab' Medical Clinic, founded in 2024,\nspecializes in modern heart care that prioritizes your well-being. We\nprovide a range of services for adults and children, from cardiovascular\nconsultations and heart screenings to comprehensive health checks and\nadvanced monitoring solutions."
+      "description": "'CardioLab' Medical Clinic, founded in 2024,\nspecializes in modern heart care that prioritizes your well-being. We\nprovide a range of services for adults and children, from cardiovascular\nconsultations and heart screenings to comprehensive health checks and\nadvanced monitoring solutions.",
+      "signature1": "\n\n Տաթևիկ Հովակիմյան",
+      "signature2": "\n«CardioLab»",
+      "signature3": " բժշկական կենտրոնի համահիմնադիր տնօրեն, սրատաբան-առիթմոլոգ\n"
     },
     "Titles": {
       "Vision": "Vision",
@@ -171,5 +179,29 @@
       "MessagePlaceholder": "Message",
       "Submit": "Submit"
     }
+  },
+  "PriceList": {
+    "title": "Our Services and Prices",
+    "description": "Find detailed information about our cardiology services and their prices. Prices are subject to change, please contact us for the most up-to-date information.",
+    "serviceInfo": "* \"ԿԱՐԴԻՈԼԱԲՈՒՄ\" ամբուլատոր քննությունների տեսակները և կատարման ժամկետները որոշվում են պացիենտի վարող բժշկի կողմից:",
+    "serviceName": "Service",
+    "price": "Price",
+    "downloadButton": "Download Price List"
+  },
+  "Staff": {
+    "medicalStaff": "Medical Staff",
+    "nursingStaff": "Nursing Staff",
+    "administrativeStaff": "Administrative Staff"
+  },
+  "Service": {
+    "consultation": "Consultation",
+    "echocardiography": "Echocardiography",
+    "holterMonitoring": "Holter monitoring",
+    "rhythmDeviceCheck": "Սրտի ռիթմավար սարքերի քննություն",
+    "duplexScan": "Մագիստրալ անոթների դուպլեքս հետազոտություն",
+    "urltraSound": "Ուլտրաձայնային հետազոտություն",
+    "cardiacCare": "Սրտային խնամք",
+    "preventiveScreening": "Տարեկան կանխարգելիչ բուժ․ զննում",
+    "implantation": "Իմպլանտացիա"
   }
 }

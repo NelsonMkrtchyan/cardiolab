@@ -7,6 +7,7 @@ import { useState } from "react";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { FaDownload } from "react-icons/fa";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
 export default function SharedModal({
   index,
@@ -25,7 +26,7 @@ export default function SharedModal({
 
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      if (index < images?.length - 1) {
+      if (images && index < images.length - 1) {
         changePhotoId(index + 1);
       }
     },
@@ -48,133 +49,167 @@ export default function SharedModal({
         <div
           className="media-shared-modal-wrapper position-relative d-flex flex-column align-items-center"
           {...handlers}
+          style={{ zIndex: 10 }} /* Ensure this is above the backdrop */
         >
-          {/* Main image */}
-          <div className="w-100 h-100 d-flex align-items-center justify-content-center overflow-hidden">
-            <div className="media-shared-modal-main-image-wrapper position-relative d-flex align-items-center justify-content-center">
-              <AnimatePresence initial={false} custom={direction}>
-                <motion.div
-                  key={index}
-                  custom={direction}
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  className="absolute"
-                  style={{ overflow: "hidden" }}
-                >
-                  <Image
-                    src={currentPhoto?.url ?? ""}
-                    width={1280}
-                    height={853}
-                    priority={true}
-                    alt="Next.js Conf image"
-                    onLoad={() => setLoaded(true)}
-                    style={{}}
-                  />
-                </motion.div>
-              </AnimatePresence>
+          {/* Main image - simplified structure */}
+          <div
+            className="main-image-container"
+            style={{
+              position: "relative",
+              width: "90vw",
+              maxWidth: "1280px",
+              height: "80vh",
+              maxHeight: "853px",
+              margin: "20px auto",
+              borderRadius: "8px",
+              overflow: "hidden",
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)",
+              zIndex: 50,
+            }}
+          >
+            <div
+              style={{ position: "relative", width: "100%", height: "100%" }}
+            >
+              <ImageWithLoader
+                src={currentPhoto?.url ?? ""}
+                alt="Gallery image"
+                priority={true}
+                fill={true}
+                className="object-fit-contain"
+                onLoad={() => setLoaded(true)}
+              />
             </div>
           </div>
-          {/*Buttons + bottom nav bar*/}
-          <div className="absolute inset-0 mx-auto flex max-w-7xl items-center justify-center">
-            <div className="position-absolute d-flex align-items-center justify-content-center bottom-0 end-0 start-0 top-0 mx-auto">
-              {/* Buttons */}
-              {loaded && (
-                <>
-                  <div className="position-relative w-100 h-100">
-                    <div className="btn-wrapper position-middle position-absolute translate-middle-y">
-                      {index > 0 && (
-                        <div
-                          className="shared-modal-btn left-btn position-absolute"
-                          onClick={() => changePhotoId(index - 1)}
-                        >
-                          <FaArrowLeft className="icon large-icon-size" />
-                        </div>
-                      )}
-                      {index < images.length - 1 && (
-                        <div
-                          className="shared-modal-btn right-btn position-absolute"
-                          onClick={() => changePhotoId(index + 1)}
-                        >
-                          <FaArrowRight className="icon large-icon-size" />
-                        </div>
-                      )}
-                    </div>
-                    <div className="btn-wrapper position-top position-absolute translate-middle-y">
-                      <a
-                        download="cardiolab-sample.jpg"
-                        href={currentPhoto?.url}
-                        className="shared-modal-btn"
-                      >
-                        <FaDownload className="icon" />
-                      </a>
-                      <div
-                        className="shared-modal-btn"
-                        onClick={() => closeModal()}
-                      >
-                        <RiCloseLargeLine className="icon" />
-                      </div>
-                    </div>
-                    {/* Bottom Nav bar */}
-                    {/*<div className="shared-modal-bottom-navigation position-absolute bg-gradient-to-bottom z-40 overflow-hidden">*/}
-                    {/*  <motion.div*/}
-                    {/*    initial={false}*/}
-                    {/*    className="shared-modal-bottom-navigation-container d-flex"*/}
-                    {/*    style={{ height: "2.5 rem" }}*/}
-                    {/*  >*/}
-                    {/*    <AnimatePresence initial={false}>*/}
-                    {/*      {filteredImages.map(({ url, id }) => {*/}
-                    {/*        const newIndex = images.findIndex(*/}
-                    {/*          (obj) => obj.id === id,*/}
-                    {/*        );*/}
-                    {/*        return (*/}
-                    {/*          <motion.button*/}
-                    {/*            initial={*/}
-                    {/*              {*/}
-                    {/*                // width: "0%",*/}
-                    {/*                // x: `${Math.max((index - 1) * -100, 1 * -100)}%`,*/}
-                    {/*              }*/}
-                    {/*            }*/}
-                    {/*            animate={{*/}
-                    {/*              scale: newIndex === index ? 1.25 : 1,*/}
-                    {/*              // width: "100%",*/}
-                    {/*              // x: `${Math.max(index * -100, 3 * -100)}%`,*/}
-                    {/*            }}*/}
-                    {/*            // exit={{ width: "0%" }}*/}
-                    {/*            onClick={() => {*/}
-                    {/*              console.log("on click");*/}
+          {/* Navigation and control buttons */}
+          <div
+            className="navigation-controls"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 60,
+              pointerEvents: "none",
+            }}
+          >
+            {loaded && (
+              <>
+                {/* Left/Right Navigation Buttons */}
+                <div
+                  className="navigation-arrows"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    width: "100%",
+                    transform: "translateY(-50%)",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    padding: "0 20px",
+                    pointerEvents: "none",
+                  }}
+                >
+                  {/* Left arrow */}
+                  {index > 0 && (
+                    <button
+                      className="nav-button left"
+                      onClick={() => changePhotoId(index - 1)}
+                      style={{
+                        background: "rgba(0,0,0,0.5)",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "50%",
+                        width: "50px",
+                        height: "50px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        cursor: "pointer",
+                        pointerEvents: "auto",
+                      }}
+                    >
+                      <FaArrowLeft size={20} />
+                    </button>
+                  )}
 
-                    {/*              changePhotoId(newIndex);*/}
-                    {/*            }}*/}
-                    {/*            key={id}*/}
-                    {/*            className={`${*/}
-                    {/*              newIndex === index*/}
-                    {/*                ? "z-20 rounded-md shadow shadow-black/50"*/}
-                    {/*                : "z-10"*/}
-                    {/*            } ${id === 0 ? "rounded-l-md" : ""} ${*/}
-                    {/*              id === images.length - 1 ? "rounded-r-md" : ""*/}
-                    {/*            } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-none`}*/}
-                    {/*          >*/}
-                    {/*            <Image*/}
-                    {/*              alt="small photos on the bottom"*/}
-                    {/*              width={180}*/}
-                    {/*              height={120}*/}
-                    {/*              className={`${*/}
-                    {/*                newIndex === index ? "bright" : "regular"*/}
-                    {/*              }`}*/}
-                    {/*              src={url}*/}
-                    {/*            />*/}
-                    {/*          </motion.button>*/}
-                    {/*        );*/}
-                    {/*      })}*/}
-                    {/*    </AnimatePresence>*/}
-                    {/*  </motion.div>*/}
-                    {/*</div>*/}
-                  </div>
-                </>
-              )}
-            </div>
+                  {/* Right arrow */}
+                  {images && index < images.length - 1 && (
+                    <button
+                      className="nav-button right"
+                      onClick={() => changePhotoId(index + 1)}
+                      style={{
+                        background: "rgba(0,0,0,0.5)",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "50%",
+                        width: "50px",
+                        height: "50px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        cursor: "pointer",
+                        pointerEvents: "auto",
+                      }}
+                    >
+                      <FaArrowRight size={20} />
+                    </button>
+                  )}
+                </div>
+
+                {/* Top Control Buttons */}
+                <div
+                  className="top-controls"
+                  style={{
+                    position: "absolute",
+                    top: "35px",
+                    right: "35px",
+                    display: "flex",
+                    gap: "10px",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <a
+                    download="cardiolab-sample.jpg"
+                    href={currentPhoto?.url}
+                    style={{
+                      background: "rgba(0,0,0,0.5)",
+                      color: "white",
+                      border: "none",
+                      borderRadius: "50%",
+                      width: "40px",
+                      height: "40px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                      pointerEvents: "auto",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <FaDownload size={16} />
+                  </a>
+                  <button
+                    onClick={() => closeModal()}
+                    style={{
+                      background: "rgba(0,0,0,0.5)",
+                      color: "white",
+                      border: "none",
+                      borderRadius: "50%",
+                      width: "40px",
+                      height: "40px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                      pointerEvents: "auto",
+                    }}
+                  >
+                    <RiCloseLargeLine size={20} />
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </MotionConfig>

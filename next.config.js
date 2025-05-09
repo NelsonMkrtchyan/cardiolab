@@ -11,7 +11,13 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import("next").NextConfig} */
 const config = {
   images: {
-    remotePatterns: [{ hostname: "utfs.io" }],
+    remotePatterns: [
+      { hostname: "utfs.io" },
+      {
+        protocol: "https",
+        hostname: "x41q9wll8l.ufs.sh",
+      },
+    ],
   },
   typescript: {
     ignoreBuildErrors: true,

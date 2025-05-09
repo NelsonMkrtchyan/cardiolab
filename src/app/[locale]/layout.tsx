@@ -14,6 +14,15 @@ import "swiper/css/bundle";
 import "~/styles/style.scss";
 import "~/styles/responsive.scss";
 
+// Components styles
+import "~/app/_Components/FeedbackSlider/FeedbackSlider.scss";
+import "~/app/_Components/LandingSlider/LandingSlider.scss";
+import "~/app/_Components/VideoIntro/VideoIntro.scss";
+import "~/app/_Disin_components/layout/Footer/Footer.scss";
+
+// Pages styles
+import "~/app/[locale]/staff/staff.scss";
+
 import { type Metadata } from "next";
 import React from "react";
 import { Providers } from "~/app/[locale]/providers";

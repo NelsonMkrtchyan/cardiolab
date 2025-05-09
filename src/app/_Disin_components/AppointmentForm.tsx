@@ -5,25 +5,30 @@ import Image from "next/image";
 import { FaUserTie } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
+import { FaIdCard } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
-import { WorkingHours } from "~/constants/menus";
+import { WorkingHours, type WorkingHoursType } from "~/constants/menus";
+import { type LocaleT } from "~/types";
 
 interface FormData {
   name: string;
   email: string;
-  phone: string;
+  ssn: string;
+  number: string;
 }
 
 const AppointmentForm: React.FC = () => {
   const tComponents = useTranslations("Components");
   const tGeneral = useTranslations("General");
   const locale: string = useLocale();
-  const localisedWorkingHours = WorkingHours[locale as "en" | "ru" | "am"];
+  const localisedWorkingHours: WorkingHoursType[0] | undefined =
+    WorkingHours[locale as LocaleT];
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    phone: "",
+    ssn: "",
+    number: "",
   });
   const [status, setStatus] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -52,10 +57,13 @@ const AppointmentForm: React.FC = () => {
         setFormData({
           name: "",
           email: "",
-          phone: "",
+          ssn: "",
+          number: "",
         });
       } else {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { error } = await response.json();
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-argument
         setStatus(error || tComponents("ContactForm.errorMessage"));
       }
     } catch (error) {
@@ -140,17 +148,41 @@ const AppointmentForm: React.FC = () => {
                         <div className="form-group">
                           <div className="input-container">
                             <label>
+                              {tComponents("Appointments.labels.ssn")}
+                            </label>
+                            <input
+                              type="text"
+                              name="ssn"
+                              className="form-control"
+                              placeholder={tComponents(
+                                "Appointments.placeholders.ssn",
+                              )}
+                              required
+                              value={formData.ssn}
+                              onChange={handleInputChange}
+                            />
+                          </div>
+                          <div className="icon-container">
+                            <FaIdCard className="icon largest-icon-size mb-4" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-12">
+                        <div className="form-group">
+                          <div className="input-container">
+                            <label>
                               {tComponents("Appointments.labels.phone")}
                             </label>
                             <input
                               type="text"
-                              name="phone"
+                              name="number"
                               className="form-control"
                               placeholder={tComponents(
                                 "Appointments.placeholders.phone",
                               )}
                               required
-                              value={formData.phone}
+                              value={formData.number}
                               onChange={handleInputChange}
                             />
                           </div>
@@ -169,6 +201,7 @@ const AppointmentForm: React.FC = () => {
                       >
                         {tComponents("Appointments.actions.submit")}
                       </button>
+                      {/*{status && <p>{status}</p>}*/}
                     </div>
                   </form>
                 </div>
@@ -183,30 +216,16 @@ const AppointmentForm: React.FC = () => {
                 <div className="appointment-item-content">
                   <h2>{tGeneral("WorkingHours")}</h2>
                   <ul>
-                    <li>
-                      {tGeneral("Weekdays.Monday")}
-                      <span>{localisedWorkingHours.Monday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Tuesday")}
-                      <span>{localisedWorkingHours.Tuesday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Wednesday")}
-                      <span>{localisedWorkingHours.Wednesday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Thursday")}
-                      <span>{localisedWorkingHours.Thursday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Friday")}
-                      <span>{localisedWorkingHours.Friday}</span>
-                    </li>
-                    <li>
-                      {tGeneral("Weekdays.Saturday")}
-                      <span>{localisedWorkingHours.Saturday}</span>
-                    </li>
+                    {localisedWorkingHours &&
+                      Object.keys(localisedWorkingHours).map((key, index) => {
+                        return (
+                          <li key={index}>
+                            {tGeneral(`Weekdays.${key}`)}
+                            {/* @ts-ignore*/}
+                            <span>{localisedWorkingHours[key]}</span>
+                          </li>
+                        );
+                      })}
                   </ul>
                 </div>
               </div>

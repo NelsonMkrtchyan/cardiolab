@@ -1,4 +1,5 @@
 import { type nameWithTranslations } from "~/types";
+import { type LocaleT } from "~/types";
 
 export const getLocale = (locale: string) => {
   if (locale === "am") {
@@ -14,5 +15,5 @@ export const getLocalisedName = ({
   object: nameWithTranslations;
   locale: string;
 }) => {
-  return object[locale as "en" | "ru" | "am"];
+  return object[locale as LocaleT];
 };

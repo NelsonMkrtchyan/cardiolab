@@ -1,6 +1,7 @@
 import { useLocale } from "next-intl";
 import { usePathname } from "next/dist/client/components/navigation";
 import { patientGuides } from "~/constants/patientGuide";
+import { type LocaleT } from "~/types";
 
 const usePatientGuides = () => {
   const locale: string = useLocale();
@@ -16,7 +17,7 @@ const usePatientGuides = () => {
 
   const pageName = getLastPart(pathname);
 
-  const currentPatientGuidesList = patientGuides[locale as "en" | "ru" | "am"];
+  const currentPatientGuidesList = patientGuides[locale as LocaleT];
 
   const currentPatientGuide = currentPatientGuidesList.find(
     (item) => item.path === pageName,

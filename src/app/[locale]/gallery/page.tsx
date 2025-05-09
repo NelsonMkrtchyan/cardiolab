@@ -2,6 +2,7 @@ import React from "react";
 import PageBanner from "~/app/_Disin_components/common/PageBanner";
 import { useTranslations } from "next-intl";
 import GalleryCards from "~/app/[locale]/gallery/_components/GalleryCards";
+import ImagesDB from "~/constants/ImageDatabase.json";
 
 export default function Page() {
   const tMenu = useTranslations("Menu");
@@ -13,7 +14,7 @@ export default function Page() {
         homePageUrl="/"
         homePageText={tMenu("Home")}
         activePageText={tMenu("Gallery.Gallery")}
-        bgImage="/images/page-banner3.jpg"
+        bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
       />
       <GalleryCards />
     </>

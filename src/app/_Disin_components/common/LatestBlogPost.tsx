@@ -5,10 +5,11 @@ import NewsCard from "~/app/[locale]/news/_components/NewsCard";
 import { useLocale, useTranslations } from "next-intl";
 import { news } from "~/constants/news";
 import { Link } from "~/i18n/routing";
+import { type LocaleT } from "~/types";
 
 const LatestBlogPost: React.FC = () => {
   const locale: string = useLocale();
-  const localisedNews = news[locale as "en" | "ru" | "am"];
+  const localisedNews = news[locale as LocaleT];
   const tGeneral = useTranslations("General");
 
   return (

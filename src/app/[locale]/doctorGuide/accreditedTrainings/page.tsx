@@ -5,6 +5,7 @@ import PageBanner from "~/app/_Disin_components/common/PageBanner";
 import { useTranslations } from "next-intl";
 import useDoctorGuides from "~/app/[locale]/doctorGuide/_hooks/useDoctorGuides";
 import GuideDetails from "~/app/[locale]/doctorGuide/_components/GuideDetails";
+import ImagesDB from "~/constants/ImageDatabase.json";
 
 const Page = () => {
   const tMenu = useTranslations("Menu");
@@ -17,7 +18,11 @@ const Page = () => {
         homePageUrl="/doctorGuide"
         homePageText={tMenu("DoctorGuide")}
         activePageText={tMenu("AccreditedTrainings")}
-        bgImage="/images/page-banner2.jpg"
+        bgImage={`${ImagesDB.AbstractImages.abstract_one}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_two}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_three}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
       {currentDoctorGuide && <GuideDetails currentGuide={currentDoctorGuide} />}
     </>
