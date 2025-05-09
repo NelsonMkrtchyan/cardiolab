@@ -15,6 +15,7 @@ import "~/styles/style.scss";
 import "~/styles/responsive.scss";
 
 // Components styles
+import "~/app/_Components/Navbar/Navbar.scss";
 import "~/app/_Components/FeedbackSlider/FeedbackSlider.scss";
 import "~/app/_Components/LandingSlider/LandingSlider.scss";
 import "~/app/_Components/Landing/AboutUsSection/AboutUsSection.scss";
