@@ -5,23 +5,26 @@ import DetailsContent from "~/app/[locale]/staff/_components/DetailsContent";
 import { useTranslations } from "next-intl";
 import useEmployee from "~/app/[locale]/staff/_hooks/useEmployee";
 import NotFound from "~/app/[locale]/not-found";
+import ImagesDB from "~/constants/ImageDatabase.json";
 
-export default function Page() {
+export default function _page() {
   const tMenu = useTranslations("Menu");
-  const { currentEmployee } = useEmployee();
+  const { employeeDoNotExist, name, role, image } = useEmployee();
   return (
     <>
       <PageBanner
-        pageTitle={currentEmployee?.name ?? tMenu("EmployeeDetails")}
+        pageTitle={name ?? tMenu("EmployeeDetails")}
         homePageUrl="/"
         homePageText={tMenu("Staff")}
         activePageText={tMenu("EmployeeDetails")}
-        bgImage="/images/page-banner2.jpg"
+        bgImage={`${ImagesDB.AbstractImages.abstract_two}`}
       />
 
-      {currentEmployee && <DetailsContent employee={currentEmployee} />}
+      {!employeeDoNotExist && (
+        <DetailsContent name={name} role={role} image={image} />
+      )}
 
-      {!currentEmployee && <NotFound />}
+      {employeeDoNotExist && <NotFound />}
 
       {/*<div className="pb-100">*/}
       {/*  <AppointmentFormTwo />*/}

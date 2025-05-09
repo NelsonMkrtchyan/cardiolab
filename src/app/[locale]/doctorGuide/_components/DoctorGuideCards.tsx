@@ -3,10 +3,11 @@
 import { useLocale } from "next-intl";
 import { doctorGuides } from "~/constants/doctorGuide";
 import BlueCard from "~/app/_Disin_components/cards/BlueCard";
+import { type LocaleT } from "~/types";
 
 const DoctorGuideCards = () => {
   const locale: string = useLocale();
-  const localisedDoctorGuides = doctorGuides[locale as "en" | "ru" | "am"];
+  const localisedDoctorGuides = doctorGuides[locale as LocaleT];
   return (
     <>
       <div className="services-area pt-100 pb-70">

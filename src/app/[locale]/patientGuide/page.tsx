@@ -5,6 +5,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import FaqSection from "~/app/_Disin_components/common/FaqSection";
 import PatientGuideCards from "~/app/[locale]/patientGuide/_components/PatientGuideCards";
+import ImagesDB from "~/constants/ImageDatabase.json";
 
 const Page = () => {
   const tMenu = useTranslations("Menu");
@@ -16,7 +17,11 @@ const Page = () => {
         homePageUrl="/"
         homePageText={tMenu("Home")}
         activePageText={tMenu("PatientGuide")}
-        bgImage="/images/page-banner2.jpg"
+        // bgImage={`${ImagesDB.AbstractImages.abstract_one}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_two}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_three}`}
+        bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
+        // bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
 
       <PatientGuideCards />

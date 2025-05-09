@@ -1,7 +1,13 @@
-$white-color: #fff;
-$grey-color: #4a6f8a;
-$blue-color: #0046c0;
-$black-color: #111111;
+@import '~/styles/variables';
+
+//*-- ---------------------------------------- RESPONSIVE ---------------------------------------- --*/
+
+//@media only screen and (max-width: 767px) {}
+
+//@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+//@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
 
 @media only screen and (max-width: 767px) {
 
@@ -64,97 +70,6 @@ $black-color: #111111;
     }
   }
   /*-- End Header Top --*/
-
-  /*-- Home Slider --*/
-  .slider-item {
-    height: 100%;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    text-align: center;
-
-    .slider-shape {
-      img {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 290px;
-        margin-bottom: 20px;
-      }
-    }
-
-    .slider-shape-two {
-      img {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 290px;
-        margin-bottom: 20px;
-      }
-    }
-
-    .slider-shape-three {
-      img {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 290px;
-        margin-bottom: 20px;
-      }
-    }
-
-    &:before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      background-color: $blue-color;
-      opacity: .80;
-    }
-
-    .slider-text {
-      margin-top: 0px;
-
-      h1 {
-        font-size: 26px;
-        margin-bottom: 18px;
-        max-width: 100%;
-      }
-
-      p {
-        margin-bottom: 30px;
-        max-width: 100%;
-      }
-    }
-  }
-  .common-btn {
-    a {
-      font-size: 13px;
-      padding: 13px 14px 12px;
-      border-radius: 5px;
-      margin-right: 8px;
-    }
-  }
-  .home-slider {
-    .swiper-button-prev, .swiper-button-next {
-      display: none;
-    }
-
-    .swiper-pagination {
-      bottom: 20px;
-    }
-  }
-  /*-- End Home Slider --*/
 
   /*-- Counter --*/
   .counter-bg {
@@ -238,6 +153,8 @@ $black-color: #111111;
   }
   .about-left img {
     animation: unset;
+    max-height: 500px;
+    object-position: top;
   }
   /*-- End About --*/
 
@@ -320,56 +237,6 @@ $black-color: #111111;
   }
   /*-- End Cards --*/
 
-
-  /*-- Video --*/
-  .video-area {
-    height: 490px;
-  }
-  .video-item {
-    a {
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
-      font-size: 25px;
-      position: relative;
-      top: -40px;
-    }
-
-    .video-content {
-      margin-top: 30px;
-      padding-left: 25px;
-
-      &:before {
-        top: 5px;
-        width: 4px;
-        height: 65px;
-      }
-
-      h3 {
-        font-size: 22px;
-        margin-bottom: 16px;
-      }
-    }
-  }
-  .video-wrap .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
-    border-top: 2px solid #4d93e9;
-  }
-  .video-wrap {
-    .video-nav {
-      .video-nav-item {
-        display: block;
-
-        a {
-          font-size: 15px;
-          padding-bottom: 18px;
-          padding-top: 14px;
-          border-bottom: 1px solid #4d93e959;
-          border-top: 2px solid transparent;
-        }
-      }
-    }
-  }
-  /*-- End Video --*/
 
   /*-- Doctors --*/
   .doctor-item {
@@ -483,71 +350,6 @@ $black-color: #111111;
   }
   /*-- End Newsletter --*/
 
-  /*-- Footer --*/
-  .footer-item {
-    .footer-contact {
-      h3 {
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-
-      ul {
-        li {
-          font-size: $all-size;
-          //padding-left: 55px;
-          margin-bottom: 40px;
-
-          &:last-child {
-            i {
-              top: -1px;
-            }
-          }
-
-          i {
-            top: 2px;
-            font-size: 38px;
-          }
-        }
-      }
-    }
-
-    .footer-quick {
-      h3 {
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-
-      ul {
-        li {
-          margin-bottom: 15px;
-
-          a {
-            font-size: $all-size;
-          }
-        }
-      }
-    }
-
-    .footer-feedback {
-      h3 {
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-
-      .form-group {
-        .form-control {
-          font-size: $all-size;
-        }
-      }
-
-      .feedback-btn {
-        font-size: 13px;
-        padding: 10px 32px;
-      }
-    }
-  }
-  /*-- End Footer --*/
-
   /*-- Copyright --*/
   .copyright-area {
     .copyright-item {
@@ -561,28 +363,6 @@ $black-color: #111111;
   }
   /*-- End Copyright --*/
   /*----- End Home Page One -----*/
-
-  /*----- Home Page Two -----*/
-  /*-- Home Slider --*/
-  .home-slider-two {
-    .slider-item {
-      height: 100%;
-      padding-top: 160px;
-      padding-bottom: 150px;
-      position: relative;
-
-      &::before {
-        background-color: #fff;
-      }
-
-      .slider-text {
-        h1 {
-          font-size: 24px;
-        }
-      }
-    }
-  }
-  /*-- End Home Slider --*/
 
   /*-- Emergency --*/
   .emergency-area {
@@ -605,8 +385,9 @@ $black-color: #111111;
 
   /*-- Welcome --*/
   .welcome-left {
-    height: auto;
-    background-image: unset !important;
+    //height: auto;
+    //background-image: unset !important;
+    height: 400px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -685,7 +466,7 @@ $black-color: #111111;
   /*-- End Welcome --*/
 
   /*-- Speciality --*/
-  .speciality-area services {
+  .speciality-area .services {
 
   }
   .speciality-item {
@@ -942,21 +723,6 @@ $black-color: #111111;
   }
   /*-- End Welcome --*/
 
-  /*-- Video --*/
-  .video-wrap-two .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
-    border-top: 0
-  }
-  .video-wrap-two {
-    .video-nav {
-      .video-nav-item {
-        a {
-          border-top: 0;
-        }
-      }
-    }
-  }
-  /*-- End Video --*/
-
   /*-- Review Slider --*/
   .main {
     max-width: 100%;
@@ -1126,65 +892,6 @@ $black-color: #111111;
     }
   }
   /*-- End Page Title --*/
-
-  /*-- Doctor Details --*/
-  .doctor-details-item {
-    img {
-      margin-bottom: 30px;
-    }
-
-    .doctor-details-contact {
-      padding: 0 15px;
-      margin-bottom: 30px;
-
-      h3 {
-        font-size: 20px;
-        margin-bottom: 25px;
-      }
-
-      ul {
-        li {
-          font-size: 14px;
-          margin-bottom: 15px;
-
-          i {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-
-    .doctor-details-work {
-      padding: 0 15px;
-      padding-bottom: 30px;
-
-      h3 {
-        font-size: 20px;
-        margin-bottom: 25px;
-      }
-    }
-
-    .doctor-details-biography {
-      padding-left: 0;
-      margin-bottom: 30px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      h3 {
-        font-size: 20px;
-        margin-bottom: 15px;
-      }
-
-      ul {
-        li {
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
-  /*-- End Doctor Details --*/
 
   /*-- Appointment --*/
   .appointment-area-three {
@@ -1758,20 +1465,6 @@ $black-color: #111111;
     margin-left: 10px;
   }
   /*----- Home Four CSS -----*/
-  .slider-item-two {
-    .slider-shape {
-      img {
-        max-width: 100%;
-      }
-    }
-
-    .slider-text {
-      h1 {
-        line-height: 40px;
-        font-size: 25px;
-      }
-    }
-  }
   .about-area-two {
     text-align: center;
   }
@@ -1817,38 +1510,6 @@ $black-color: #111111;
     right: 5px;
   }
   /*----- End Home Four CSS -----*/
-
-  /*----- Home Five CSS -----*/
-  .slider-item-three {
-    .slider-text {
-      h1 {
-        margin-bottom: 12px;
-      }
-
-      p {
-        margin-bottom: 20px;
-        font-size: 16px;
-      }
-
-      ul {
-        margin-bottom: 35px;
-        text-align: left;
-        margin-left: auto;
-        margin-right: auto;
-
-        li {
-          font-size: 16px;
-        }
-      }
-    }
-
-    .slider-shape {
-      img {
-        margin-bottom: 30px;
-      }
-    }
-  }
-  /*----- End Home Five CSS -----*/
 
   .main-nav {
     nav {
@@ -1909,23 +1570,6 @@ $black-color: #111111;
     padding: 0 20px;
   }
 
-  .video-item {
-    .popup-youtube {
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
-      font-size: 25px;
-    }
-  }
-
-  .video-wrap {
-    .react-tabs__tab-list {
-      .react-tabs__tab {
-        font-size: 15px;
-        padding: 15px 20px;
-      }
-    }
-  }
   .newsletter-wrap {
     padding: 30px 0;
   }
@@ -2005,92 +1649,18 @@ $black-color: #111111;
         }
       }
     }
+
+    .logoContainer {
+      margin-right: 10px;
+
+      a {
+        margin-right: 2rem;
+        //font-size: 2rem;
+      }
+    }
   }
   /*-- End Header Top --*/
 
-
-  /*-- Home Slider --*/
-  .slider-item {
-    height: 100%;
-    padding-top: 140px;
-    padding-bottom: 140px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-
-    .slider-shape {
-      img {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 550px;
-        margin-bottom: 30px;
-      }
-    }
-
-    .slider-shape-two {
-      img {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 550px;
-        margin-bottom: 30px;
-      }
-    }
-
-    .slider-shape-three {
-      img {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 550px;
-        margin-bottom: 30px;
-      }
-    }
-
-    .slider-text {
-      margin-top: 0;
-
-      h1 {
-        font-size: 30px;
-        margin-bottom: 30px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      p {
-        margin-bottom: 35px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  }
-  .common-btn {
-    a {
-      font-size: $all-size;
-      padding: 14px 18px;
-    }
-
-    .cmn-btn-right {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-  .home-slider {
-    .swiper-pagination {
-      bottom: 30px;
-    }
-  }
-  /*-- End Home Slider --*/
 
   /*-- Counter --*/
   .counter-bg {
@@ -2258,55 +1828,6 @@ $black-color: #111111;
     }
   }
   /*-- End Cards --*/
-  /*-- Video --*/
-  .video-area {
-    height: 500px;
-  }
-  .video-item {
-    a {
-      width: 90px;
-      height: 90px;
-      line-height: 90px;
-      font-size: 25px;
-      position: relative;
-      top: -45px;
-    }
-
-    .video-content {
-      margin-top: 30px;
-
-      &:before {
-        top: 5px;
-        left: 0;
-        width: 4px;
-        height: 110px;
-      }
-
-      h3 {
-        font-size: 26px;
-        margin-bottom: 20px;
-      }
-    }
-  }
-  .video-wrap {
-    .video-nav {
-      .video-nav-item {
-        display: block;
-
-        a {
-          font-size: 15px;
-          padding-bottom: 15px;
-          padding-top: 15px;
-          border-bottom: 1px solid #4d93e959;
-          border-top: 3px solid transparent;
-        }
-      }
-    }
-  }
-  .video-wrap .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
-    border-top: 3px solid #4d93e9;
-  }
-  /*-- End Video --*/
 
   /*-- Doctors --*/
   .doctor-item {
@@ -2396,123 +1917,7 @@ $black-color: #111111;
   }
   /*-- End Newsletter --*/
 
-  /*-- Footer --*/
-  .footer-item {
-    .footer-contact {
-      h3 {
-        font-size: 20px;
-        margin-bottom: 30px;
-      }
-
-      ul {
-        li {
-          font-size: $all-size;
-          margin-bottom: 40px;
-
-          &:last-child {
-            i {
-              top: 0;
-            }
-          }
-
-          i {
-            top: 2px;
-            font-size: 38px;
-          }
-        }
-      }
-    }
-
-    .footer-quick {
-      h3 {
-        font-size: 20px;
-        margin-bottom: 30px;
-      }
-
-      ul {
-        li {
-          margin-bottom: 16px;
-        }
-      }
-    }
-
-    .footer-feedback {
-      h3 {
-        font-size: 20px;
-        margin-bottom: 30px;
-      }
-
-      .form-group {
-        .form-control {
-          font-size: $all-size;
-        }
-      }
-
-      .feedback-btn {
-        font-size: 14px;
-        padding: 10px 35px;
-      }
-    }
-  }
-  /*-- End Footer --*/
   /*----- End Home Page One -----*/
-
-  /*----- Home Page Two -----*/
-  /*-- Home Slider --*/
-  .home-slider-two {
-    .slider-item {
-      height: 100%;
-
-      .slider-shape {
-        img {
-          position: absolute;
-          top: -160px;
-          left: 0;
-          width: 525px;
-          animation: a-three 5s infinite linear;
-        }
-      }
-
-      &:before {
-        background-color: #fff;
-      }
-
-      .slider-text {
-        h1 {
-          color: #232323;
-        }
-
-        p {
-          color: #616263;
-        }
-
-        .common-btn {
-          a {
-            border: 2px solid $blue-color;
-            color: $white-color;
-            background-color: $blue-color;
-            position: relative;
-
-            &:hover {
-              color: $blue-color;
-              background-color: transparent;
-            }
-          }
-
-          .cmn-btn-right {
-            background-color: transparent;
-            color: $blue-color;
-
-            &:hover {
-              color: $white-color;
-              background-color: $blue-color;
-            }
-          }
-        }
-      }
-    }
-  }
-  /*-- End Home Slider --*/
 
   /*-- Emergency --*/
   .emergency-area {
@@ -2543,7 +1948,7 @@ $black-color: #111111;
 
         &:hover {
           i {
-            box-shadow: 0px 0px 0px 6px $black-color;
+            box-shadow: 0 0 0 6px $black-color;
           }
         }
 
@@ -2572,15 +1977,10 @@ $black-color: #111111;
     }
   }
   .welcome-left {
-    height: auto;
-    background-image: unset !important;
+    height: 400px;
     display: flex;
     width: 100%;
     justify-content: center;
-
-    img {
-      display: inline-block;
-    }
   }
   .welcome-right {
     padding-left: 25px;
@@ -2603,7 +2003,7 @@ $black-color: #111111;
 
   }
   .section-title-two {
-    max-width: 100%;
+    max-width: 90%;
 
     span {
       font-size: $all-size;
@@ -2664,23 +2064,6 @@ $black-color: #111111;
     padding-right: 0;
   }
   /*-- End Speciality --*/
-
-  /*-- Video --*/
-  .video-wrap-two .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
-    border-top: 0;
-  }
-  .video-wrap-two {
-    .video-nav {
-      .video-nav-item {
-        a {
-          padding-left: 20px;
-          padding-right: 20px;
-          border-top: 0;
-        }
-      }
-    }
-  }
-  /*-- End Video --*/
 
   /*-- Appointment --*/
   .appointment-area {
@@ -3000,50 +2383,6 @@ $black-color: #111111;
     }
   }
   /*-- End Page Title --*/
-
-  /*-- Doctor Details --*/
-  .doctor-details-item {
-    img {
-      margin-bottom: 40px;
-    }
-
-    .doctor-details-contact {
-      margin-bottom: 35px;
-
-      h3 {
-        margin-bottom: 24px;
-      }
-
-      ul {
-        li {
-          font-size: 15px;
-          margin-bottom: 18px;
-
-          i {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-
-    .doctor-details-work {
-      padding-bottom: 50px;
-
-      h3 {
-        margin-bottom: 24px;
-      }
-    }
-
-    .doctor-details-biography {
-      padding-left: 0;
-
-      h3 {
-        font-size: 22px;
-        margin-bottom: 15px;
-      }
-    }
-  }
-  /*-- End Doctor Details --*/
 
   /*-- Appointment --*/
   .appointment-area-three {
@@ -3523,21 +2862,6 @@ $black-color: #111111;
   /*----- END ABOUT PAGE -----*/
 
   /*----- Home Four CSS -----*/
-  .slider-item-two {
-    .slider-shape {
-      img {
-        max-width: 100%;
-      }
-    }
-
-    .slider-text {
-      h1 {
-        line-height: 40px;
-        font-size: 28px;
-        margin-bottom: 16px;
-      }
-    }
-  }
   .about-area-two {
     text-align: center;
   }
@@ -3580,38 +2904,6 @@ $black-color: #111111;
   }
   /*----- End Home Four CSS -----*/
 
-  /*----- Home Five CSS -----*/
-  .slider-item-three {
-    .slider-text {
-      h1 {
-        margin-bottom: 25px;
-        font-size: 45px;
-      }
-
-      p {
-        margin-bottom: 20px;
-        font-size: 16px;
-      }
-
-      ul {
-        margin-bottom: 35px;
-        text-align: left;
-        margin-left: auto;
-        margin-right: auto;
-
-        li {
-          font-size: 16px;
-        }
-      }
-    }
-
-    .slider-shape {
-      img {
-        margin-bottom: 30px;
-      }
-    }
-  }
-  /*----- End Home Five CSS -----*/
   .modal-video-body {
     padding: 0 30px;
   }
@@ -3642,14 +2934,7 @@ $black-color: #111111;
       display: none;
     }
   }
-  .video-wrap {
-    .react-tabs__tab-list {
-      .react-tabs__tab {
-        font-size: 15px;
-        padding: 15px 25px;
-      }
-    }
-  }
+
   .speciality-right {
     padding-right: 15px;
   }
@@ -3660,38 +2945,6 @@ $black-color: #111111;
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
-  /*-- Home Slider --*/
-  .slider-item {
-    .slider-shape {
-      img {
-        top: 115px;
-        right: 0;
-        max-width: 520px;
-      }
-    }
-
-    .slider-shape-two {
-      img {
-        top: 135px;
-        max-width: 520px;
-        right: 0;
-      }
-    }
-
-    .slider-shape-three {
-      img {
-        top: 150px;
-        max-width: 500px;
-      }
-    }
-  }
-  .common-btn {
-    a {
-      padding: 16px 22px;
-    }
-  }
-  /*-- End Home Slider --*/
-
   /*-- About --*/
   .about-right {
     img {
@@ -3700,19 +2953,6 @@ $black-color: #111111;
     }
   }
   /*-- End About --*/
-
-  /*-- Video --*/
-  .video-wrap {
-    .video-nav {
-      .video-nav-item {
-        a {
-          font-size: 16px;
-          padding: 12px 55.4px 12px 56.3px;
-        }
-      }
-    }
-  }
-  /*-- End Video --*/
 
   /*-- Blog --*/
   .blog-item {
@@ -3747,27 +2987,6 @@ $black-color: #111111;
     .appointment-item-content {
       padding: 95px 20px 100px;
       margin: 0 20px;
-    }
-  }
-  /*-- End Appointment --*/
-
-  /*-- Appointment --*/
-  .doctor-details-item {
-    .doctor-details-contact {
-      ul {
-        li {
-          font-size: 16px;
-        }
-      }
-    }
-
-    .doctor-details-biography {
-      padding-left: 0;
-    }
-  }
-  .appointment-area-three {
-    .appointment-item {
-      padding: 80px 15px 80px;
     }
   }
   /*-- End Appointment --*/
@@ -3848,25 +3067,6 @@ $black-color: #111111;
     }
   }
 
-  .slider-item-two .slider-shape img {
-    top: 0;
-    max-width: 365px;
-  }
-  .slider-item-three .slider-shape img {
-    top: 0;
-    max-width: 395px;
-  }
-
-  .home-slider {
-    .swiper-button-prev, .swiper-button-next {
-      width: 40px;
-      height: 40px;
-
-      &::after {
-        font-size: 20px;
-      }
-    }
-  }
   .main-nav {
     nav {
       .navbar-nav {
@@ -3876,6 +3076,14 @@ $black-color: #111111;
             margin-left: 12px;
             margin-right: 12px;
           }
+        }
+      }
+    }
+
+    .logoContainer {
+      a {
+        img {
+          width: 40px;
         }
       }
     }
@@ -3901,33 +3109,29 @@ $black-color: #111111;
       }
     }
   }
-  .video-wrap {
-    .react-tabs__tab-list {
-      .react-tabs__tab {
-        font-size: 15px;
-        padding: 15px 25px;
-      }
-    }
-  }
+
   .newsletter-wrap {
     padding: 40px 30px;
   }
 
   .faq-area-two {
   }
-}
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .home-slider {
-    .swiper-button-prev, .swiper-button-next {
-      width: 40px;
-      height: 40px;
+  /*-- Welcome --*/
+  .section-title-two {
+    margin-bottom: 30px;
+    max-width: 95%;
 
-      &::after {
-        font-size: 20px;
-      }
+    span {
+      font-size: 12px;
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 1.2;
     }
   }
+  /*-- End Welcome --*/
 }
 
 

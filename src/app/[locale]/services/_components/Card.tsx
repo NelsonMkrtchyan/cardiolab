@@ -1,15 +1,17 @@
 "use client";
 
 import React from "react";
-import { type CardI } from "~/constants/services";
+import Image from "next/image";
+import { type CardI } from "~/constants/priceList";
 // import { Link } from "~/i18n/routing";
 
 const Card = ({ service }: CardI) => {
   const {
     // id,
-    title,
+    name,
     description,
-    icon,
+    // price,
+    // icon,
   } = service;
 
   return (
@@ -18,8 +20,15 @@ const Card = ({ service }: CardI) => {
         <div className="service-item">
           {/*<Link href={`/services/details/${id}`}>*/}
           <div className="service-front">
-            {icon}
-            <h3>{title}</h3>
+            {/*{icon}*/}
+            <Image
+              src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluOKOekRNNgi3eV0yDv2z7lICnRwBfZLqj5t8r"
+              alt="CardioLab Logo"
+              width={35}
+              height={35}
+              className="mb-4"
+            />
+            <h3>{name}</h3>
             <p>{description}</p>
           </div>
           {/*</Link>*/}

@@ -21,8 +21,6 @@ interface PodcastsI {
   ru: PodcastI[];
 }
 
-// johPec-7sexni-norpos
-
 export const podcasts: PodcastsI = {
   en: [
     {
@@ -194,16 +192,16 @@ export const podcasts: PodcastsI = {
       posterUrl: "url(/images/podcasts/lab05.jpeg)",
       date: new Date(new Date().setDate(new Date().getDate() - 2)),
     },
-    {
-      id: 6,
-      title: "Կարդիոլաբ 06",
-      description:
-        "Սիրտանոթային հիվանդությունների կանխարգելումն ու ռիսկի գործոնները։",
-      icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
-      url: "https://www.youtube.com/watch?v=09zmigrWKoQ&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=7&ab_channel=CardioLab",
-      posterUrl: "url(/images/feedback-bg.jpg)",
-      date: new Date(new Date().setDate(new Date().getDate() - 2)),
-    },
+    // {
+    //   id: 6,
+    //   title: "Կարդիոլաբ 06",
+    //   description:
+    //     "Սիրտանոթային հիվանդությունների կանխարգելումն ու ռիսկի գործոնները։",
+    //   icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    //   url: "https://www.youtube.com/watch?v=09zmigrWKoQ&list=PLZI6teBY2du2iWrmWHoxTsrMyZjOpUP7T&index=7&ab_channel=CardioLab",
+    //   posterUrl: "url(/images/feedback-bg.jpg)",
+    //   date: new Date(new Date().setDate(new Date().getDate() - 2)),
+    // },
     {
       id: 7,
       title: "Կարդիոլաբ 07",

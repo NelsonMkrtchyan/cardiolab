@@ -2,25 +2,24 @@
 
 import React from "react";
 import { useParams } from "next/navigation";
-import { gallery } from "~/constants/Gallery";
 import { type NextPage } from "next";
 import Carousel from "~/app/[locale]/gallery/images/_components/Carousel";
+import useGallery from "~/app/[locale]/gallery/_hooks/useGallery";
 
 const Page: NextPage = () => {
-  const { slug, imageId } = useParams();
-  const galleryFolder = gallery.images.find(
-    (folder) => folder.id === Number(slug),
-  );
-  const index = galleryFolder.images.findIndex(
-    (obj) => obj.id === Number(imageId),
-  );
-  const currentPhoto = galleryFolder.images.find(
+  const { imageId } = useParams();
+
+  const { currentImageFolder } = useGallery();
+
+  const currentPhoto = currentImageFolder?.list.find(
     (image) => image.id === Number(imageId),
   );
 
   return (
     <>
-      <Carousel index={index} currentPhoto={currentPhoto} />
+      {currentPhoto && (
+        <Carousel index={currentPhoto.id} currentPhoto={currentPhoto} />
+      )}
     </>
   );
 };

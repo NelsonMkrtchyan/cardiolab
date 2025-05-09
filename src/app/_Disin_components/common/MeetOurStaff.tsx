@@ -1,14 +1,12 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { staff } from "~/constants/staff";
 import Card from "~/app/[locale]/staff/_components/Card";
 import React from "react";
 import { Link } from "~/i18n/routing";
 
 const MeetOurStaff = () => {
-  const locale: string = useLocale();
-  const localisedStaff = staff[locale as "en" | "ru" | "am"];
   const tGeneral = useTranslations("General");
 
   return (
@@ -20,9 +18,12 @@ const MeetOurStaff = () => {
           </div>
 
           <div className="row justify-content-center">
-            {localisedStaff.slice(0, 3).map((employee) => {
-              return <Card key={employee.id} employee={employee} />;
-            })}
+            {staff
+              .filter((employee) => employee.visibility)
+              .slice(0, 3)
+              .map((employee) => {
+                return <Card key={employee.id} employee={employee} />;
+              })}
           </div>
 
           <div className="button-type-1">

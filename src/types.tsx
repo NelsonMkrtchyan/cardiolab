@@ -1,3 +1,5 @@
+export type LocaleT = "en" | "am" | "ru";
+
 export interface nameWithTranslations {
   am: string;
   en: string;

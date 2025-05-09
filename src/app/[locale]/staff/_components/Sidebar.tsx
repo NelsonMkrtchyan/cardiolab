@@ -1,20 +1,21 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import type { employeeI } from "~/constants/staff";
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
 interface SidebarI {
-  employee: employeeI;
+  image: string;
 }
 
-const Sidebar = ({ employee }: SidebarI) => {
+const Sidebar = ({ image }: SidebarI) => {
   return (
     <>
       <div className="doctor-details-item doctor-details-left">
-        <Image src={employee.image} alt="Doctor" width={364} height={393} />
+        <div className={"image-container"}>
+          <ImageWithLoader src={image} alt="Doctor" width={364} height={393} />
+        </div>
 
         <div className="doctor-details-contact">
           <h3>Contact info</h3>

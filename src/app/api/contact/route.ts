@@ -1,50 +1,45 @@
-import nodemailer from "nodemailer";
+import { type NextRequest } from "next/server";
 
-export async function POST(req: string) {
+import { Resend } from "resend";
+import {
+  type EmailFormType,
+  EmailTemplate,
+} from "~/app/_Components/EmailTemplate";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST(req: NextRequest) {
   try {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
-    const { name, email, number, subject, message } = await req.json();
+    // Parse the request body
+    const formData: EmailFormType = (await req.json()) as EmailFormType;
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    console.log("req", { name, email, number, subject, message });
+    // Log all received data
+    // console.log("Received form data:", formData);
 
-    if (!name || !email || !number || !subject || !message) {
+    // Extract common fields
+    const { name, email, ssn, number, subject, message } = formData;
+
+    // Basic validation for appointment form
+    if (!name || !email) {
       return new Response(
-        JSON.stringify({ error: "All fields are required." }),
+        JSON.stringify({ error: "Name and email are required." }),
         { status: 400 },
       );
     }
-
-    const transporter = nodemailer.createTransport({
-      sendmail: true, // Use the local sendmail command
-      newline: "unix",
-      path: "/usr/sbin/sendmail", // Default path for sendmail
+    const { data, error } = await resend.emails.send({
+      from: "no-reply@cardiolab.am",
+      to: ["nelsmkrtchyan@gmail.com", "info@cardiolab.am"],
+      subject: `New Form Submission from ${name}`,
+      react: EmailTemplate({ name, email, ssn, number, subject, message }),
     });
 
-    console.log("transporter", transporter);
-    const mailOptions = {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      from: email,
-      // to: process.env.RECIPIENT_EMAIL, // Email to receive the form content
-      to: "nelsonwaterpolo@gmail.com", // Email to receive the form content
-      subject: `New Contact Form Submission: ${subject}`,
-      text: `
-        Name: ${name}
-        Email: ${email}
-        Phone Number: ${number}
-        Message: ${message}
-      `,
-    };
-
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      return Response.json({ error }, { status: 500 });
+    }
 
     return new Response(
-      JSON.stringify({ message: "Email sent successfully!" }),
-      {
-        status: 200,
-      },
+      JSON.stringify({ message: "Email sent successfully!", data }),
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error sending email:", error);

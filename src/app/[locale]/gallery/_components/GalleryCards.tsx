@@ -20,10 +20,11 @@ const GalleryCards = () => {
                 title={tMenu("Gallery.Images")}
                 description={""}
               />
+
               <BlueCard
                 icon={<MdOndemandVideo className="icon largest-icon-size" />}
-                path={"/gallery/videos"}
-                title={tMenu("Gallery.Videos")}
+                path={"/gallery/podcasts"}
+                title={tMenu("Podcasts")}
                 description={""}
               />
             </div>

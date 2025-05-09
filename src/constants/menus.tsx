@@ -20,23 +20,27 @@ export const Menus = () => {
       link: "/services",
     },
     {
-      label: `${t("Guide")}`,
-      link: "#",
-      submenu: [
-        {
-          label: `${t("DoctorGuide")}`,
-          link: "/doctorGuide",
-        },
-        {
-          label: `${t("PatientGuide")}`,
-          link: "/patientGuide",
-        },
-      ],
+      label: `${t("Pricelist")}`,
+      link: "/patientGuide/pricelist",
     },
-    {
-      label: `${t("News")}`,
-      link: "/news",
-    },
+    // {
+    //   label: `${t("Guide")}`,
+    //   link: "#",
+    //   submenu: [
+    //     {
+    //       label: `${t("DoctorGuide")}`,
+    //       link: "/doctorGuide",
+    //     },
+    //     {
+    //       label: `${t("PatientGuide")}`,
+    //       link: "/patientGuide",
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: `${t("News")}`,
+    //   link: "/news",
+    // },
     {
       label: `${t("Gallery.Gallery")}`,
       link: "/gallery",
@@ -45,13 +49,13 @@ export const Menus = () => {
           label: `${t("Gallery.Images")}`,
           link: "/gallery/images",
         },
-        {
-          label: `${t("Gallery.Videos")}`,
-          link: "/gallery/videos",
-        },
+        // {
+        //   label: `${t("Gallery.Videos")}`,
+        //   link: "/gallery/videos",
+        // },
         {
           label: `${t("Podcasts")}`,
-          link: "/podcasts",
+          link: "/gallery/podcasts",
         },
       ],
     },
@@ -83,29 +87,45 @@ export const CardioLabInfo = {
   },
 };
 
-export const WorkingHours = {
+export type WorkingHoursType = Record<
+  string,
+  {
+    Monday: string;
+    Tuesday: string;
+    Wednesday: string;
+    Thursday: string;
+    Friday: string;
+    Saturday: string;
+    Sunday: string;
+  }
+>;
+
+export const WorkingHours: WorkingHoursType = {
   en: {
     Monday: "9:00 AM - 7:00 PM",
     Tuesday: "9:00 AM - 7:00 PM",
     Wednesday: "9:00 AM - 7:00 PM",
     Thursday: "9:00 AM - 7:00 PM",
-    Friday: "9:00 AM - 5:00 PM",
-    Saturday: "Non Working Day",
+    Friday: "9:00 AM - 7:00 PM",
+    Saturday: "9:00 AM - 5:00 PM",
+    Sunday: "Non Working Day",
   },
   ru: {
     Monday: "09:00 - 19:00",
     Tuesday: "09:00 - 19:00",
     Wednesday: "09:00 - 19:00",
     Thursday: "09:00 - 19:00",
-    Friday: "09:00 - 17:00",
-    Saturday: "Выходной день",
+    Friday: "09:00 - 19:00",
+    Saturday: "09:00 - 17:00",
+    Sunday: "Выходной день",
   },
   am: {
     Monday: "09:00 - 19:00",
     Tuesday: "09:00 - 19:00",
     Wednesday: "09:00 - 19:00",
     Thursday: "09:00 - 19:00",
-    Friday: "09:00 - 17:00",
-    Saturday: "Հանգստյան օր",
+    Friday: "09:00 - 19:00",
+    Saturday: "09:00 - 17:00",
+    Sunday: "Հանգստյան օր",
   },
 };

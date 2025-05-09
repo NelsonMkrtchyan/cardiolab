@@ -4,10 +4,11 @@ import React from "react";
 import { useLocale } from "next-intl";
 import { news } from "~/constants/news";
 import NewsCard from "~/app/[locale]/news/_components/NewsCard";
+import { type LocaleT } from "~/types";
 
 const BlogGrid: React.FC = () => {
   const locale: string = useLocale();
-  const localisedNews = news[locale as "en" | "ru" | "am"];
+  const localisedNews = news[locale as LocaleT];
 
   return (
     <>

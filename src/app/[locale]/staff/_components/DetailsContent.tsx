@@ -2,31 +2,34 @@
 
 import React from "react";
 import Sidebar from "./Sidebar";
-import { type employeeI } from "~/constants/staff";
 
 interface DetailsContentI {
-  employee: employeeI;
+  name: string | null;
+  role: string | null;
+  image: string | null;
 }
 
-const DetailsContent = ({ employee }: DetailsContentI) => {
+const DetailsContent = ({ name, role, image }: DetailsContentI) => {
   return (
     <>
       <div className="doctor-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-5">
-              <Sidebar employee={employee} />
-            </div>
+            {image && (
+              <div className="col-lg-5">
+                <Sidebar image={image} />
+              </div>
+            )}
 
             <div className="col-lg-7">
               <div className="doctor-details-item">
                 <div className="doctor-details-right">
                   <div className="doctor-details-biography">
                     <h3>
-                      {employee.name} ({employee.position})
+                      {name} ({role})
                     </h3>
                     <p>
-                      MBBS in {employee.position}, PHD in {employee.position}
+                      MBBS in {role}, PHD in {role}
                     </p>
                   </div>
 

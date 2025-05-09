@@ -5,6 +5,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { CardioLabInfo } from "~/constants/menus";
 import { IoCall } from "react-icons/io5";
 import { type ChangeEvent, type FormEvent, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { type LocaleT } from "~/types";
+import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
 interface FormData {
   name: string;
@@ -16,7 +20,7 @@ interface FormData {
 
 const ContactForm = () => {
   const locale: string = useLocale();
-  const localisedCardioLabInfo = CardioLabInfo[locale as "en" | "ru" | "am"];
+  const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
   const tComponents = useTranslations("Components");
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -188,16 +192,37 @@ const ContactForm = () => {
             </div>
 
             <div className="col-lg-5 p-0">
-              <div
-                className="speciality-item speciality-right speciality-right-two speciality-right-three"
-                style={{ backgroundImage: `url(/images/about4.jpg)` }}
-              >
-                <Image
-                  src="/images/about4.jpg"
-                  alt="Contact"
-                  width={845}
-                  height={850}
-                />
+              <div className="speciality-item speciality-right speciality-right-two speciality-right-three">
+                <Swiper
+                  slidesPerView={1}
+                  autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                  }}
+                  loop={true}
+                  modules={[Pagination, Navigation, Autoplay]}
+                  className="contact-slider"
+                  style={{ height: "100%" }}
+                >
+                  <SwiperSlide>
+                    <ImageWithLoader
+                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJBBuhMgHJqI5EuVZFjgRGzykmXKNTw4WcSeQ"
+                      alt="Contact"
+                      width={600}
+                      height={400}
+                      className="swiper-image"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <ImageWithLoader
+                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2m54Bt3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic"
+                      alt="Contact"
+                      width={600}
+                      height={400}
+                      className="swiper-image"
+                    />
+                  </SwiperSlide>
+                </Swiper>
 
                 <div className="speciality-emergency">
                   <div className="speciality-icon">
@@ -206,14 +231,16 @@ const ContactForm = () => {
                   <div className="speciality-content">
                     <h3>{tComponents("ContactForm.callNote")}</h3>
                     <ul>
-                      {localisedCardioLabInfo.phone.map((phone: string) => (
-                        <li key={phone}>
-                          <a href={`tel:${phone}`}>
-                            <IoCall className="icon" color={"white"} />
-                            {phone}
-                          </a>
-                        </li>
-                      ))}
+                      {
+                        localisedCardioLabInfo.phone.map((phone: string) => (
+                          <li key={phone}>
+                            <a href={`tel:${phone}`}>
+                              <IoCall className="icon" color={"white"} />
+                              {phone}
+                            </a>
+                          </li>
+                        ))[0]
+                      }
                     </ul>
                   </div>
                 </div>

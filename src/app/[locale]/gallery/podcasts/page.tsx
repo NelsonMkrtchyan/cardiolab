@@ -1,7 +1,8 @@
 import React from "react";
 import PageBanner from "~/app/_Disin_components/common/PageBanner";
-import PodcastsCards from "~/app/[locale]/podcasts/_components/PodcastsCards";
 import { useTranslations } from "next-intl";
+import ImagesDB from "~/constants/ImageDatabase.json";
+import PodcastsCards from "./_components/PodcastsCards";
 
 export default function Page() {
   const tMenu = useTranslations("Menu");
@@ -10,10 +11,10 @@ export default function Page() {
     <>
       <PageBanner
         pageTitle={tMenu("Podcasts")}
-        homePageUrl="/"
-        homePageText={tMenu("Home")}
+        homePageUrl="/gallery"
+        homePageText={tMenu("Gallery.Gallery")}
         activePageText={tMenu("Podcasts")}
-        bgImage="/images/page-banner3.jpg"
+        bgImage={`${ImagesDB.AbstractImages.abstract_one}`}
       />
       <PodcastsCards />
     </>

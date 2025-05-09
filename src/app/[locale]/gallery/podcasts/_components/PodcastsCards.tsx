@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
-import Card from "~/app/[locale]/podcasts/_components/Card";
 import { useLocale } from "next-intl";
 import { podcasts } from "~/constants/podcasts";
+import { type LocaleT } from "~/types";
+import Card from "~/app/[locale]/gallery/podcasts/_components/Card";
 
 const PodcastsCards: React.FC = () => {
   const locale: string = useLocale();
-  const localisedPodcasts = podcasts[locale as "en" | "ru" | "am"];
+  const localisedPodcasts = podcasts[locale as LocaleT];
   return (
     <>
       <div className="podcasts-area pt-100 pb-70">
