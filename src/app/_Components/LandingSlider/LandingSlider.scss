@@ -1,6 +1,8 @@
 @import '~/styles/variables';
 
 .home-slider {
+  border-radius: 8px;
+
   .swiper-button-prev, .swiper-button-next {
     width: 55px;
     height: 55px;
@@ -241,6 +243,15 @@
   .home-slider {
     .swiper-pagination {
       bottom: 30px;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      width: 35px;
+      height: 35px;
+
+      &::after {
+        font-size: 20px;
+      }
     }
   }
 

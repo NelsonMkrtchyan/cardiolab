@@ -5,7 +5,7 @@ import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 import { useLocale } from "next-intl";
 import { type LocaleT } from "~/types";
 
-const Card = ({ employee }: CardI) => {
+const Card = ({ employee, className }: CardI) => {
   const locale: string = useLocale();
   const { id, image } = employee;
   const name = employee.name[locale as LocaleT];
@@ -15,7 +15,7 @@ const Card = ({ employee }: CardI) => {
 
   return (
     <>
-      <div className="col-sm-6 col-lg-4">
+      <div className={className ?? "col-sm-6 col-lg-3"}>
         <Link href={employeeDetailPageLink} onClick={(e) => e.preventDefault()}>
           <div className="doctor-item">
             <div className="doctor-top">
@@ -38,7 +38,7 @@ const Card = ({ employee }: CardI) => {
                   </Link>
                 </h3>
               )}
-              {role && <span>{role?.toLowerCase()}</span>}
+              {role && <span>{(role as string)?.toLowerCase()}</span>}
             </div>
           </div>
         </Link>

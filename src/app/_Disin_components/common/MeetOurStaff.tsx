@@ -5,6 +5,8 @@ import { staff } from "~/constants/staff";
 import Card from "~/app/[locale]/staff/_components/Card";
 import React from "react";
 import { Link } from "~/i18n/routing";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
 
 const MeetOurStaff = () => {
   const tGeneral = useTranslations("General");
@@ -17,13 +19,38 @@ const MeetOurStaff = () => {
             <h2>{tGeneral("MeetOurStaff")}</h2>
           </div>
 
-          <div className="row justify-content-center">
-            {staff
-              .filter((employee) => employee.visibility)
-              .slice(0, 3)
-              .map((employee) => {
-                return <Card key={employee.id} employee={employee} />;
-              })}
+          <div className="row">
+            <Swiper
+              className="staff-slider"
+              slidesPerView={1}
+              spaceBetween={20}
+              navigation={false}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              modules={[Navigation, Autoplay]}
+              breakpoints={{
+                500: {
+                  slidesPerView: 1.75,
+                },
+                768: {
+                  slidesPerView: 2.5,
+                },
+                1200: {
+                  slidesPerView: 4.5,
+                },
+              }}
+            >
+              {staff
+                .filter((employee) => employee.visibility)
+                .map((employee) => (
+                  <SwiperSlide key={employee.id}>
+                    <Card employee={employee} className={""} />
+                  </SwiperSlide>
+                ))}
+            </Swiper>
           </div>
 
           <div className="button-type-1">

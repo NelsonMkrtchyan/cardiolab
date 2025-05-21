@@ -47,6 +47,7 @@ export type EmployeeType = {
 
 export interface CardI {
   employee: EmployeeType;
+  className?: string;
 }
 
 type StaffType = EmployeeType[];
@@ -318,19 +319,19 @@ export const staff: StaffType = [
     category: StaffCategory.MedicalStaff,
     visibility: true,
   },
-  {
-    id: 20,
-    name: {
-      am: "Քնարիկ Առաքելյան",
-    },
-    image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluamzUHVKeDI891qSZ0fT7zH2wQLEbgPcoRV4J",
-    role: {
-      am: "Հասարակայնության Հետ Կապերի և Հաղորդակցության Պատասխանատու",
-    },
-    category: StaffCategory.AdministrativeStaff,
-    visibility: true,
-  },
+  // {
+  //   id: 20,
+  //   name: {
+  //     am: "Քնարիկ Առաքելյան",
+  //   },
+  //   image:
+  //     "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluamzUHVKeDI891qSZ0fT7zH2wQLEbgPcoRV4J",
+  //   role: {
+  //     am: "Հասարակայնության Հետ Կապերի և Հաղորդակցության Պատասխանատու",
+  //   },
+  //   category: StaffCategory.AdministrativeStaff,
+  //   visibility: true,
+  // },
   {
     id: 21,
     name: {
