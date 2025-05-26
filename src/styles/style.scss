@@ -193,7 +193,7 @@ button {
   text-align: start;
 
   a {
-    margin-top: 30px;
+    //margin-top: 30px;
     display: inline-block;
     font-weight: 800;
     //color: #232323;
@@ -1351,117 +1351,6 @@ button {
 
 /*-- End Counter --*/
 
-/*-- Appointment --*/
-.appointment-area {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.appointment-item {
-  max-width: 770px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: $white-color;
-  padding: 80px 100px 80px;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  h2 {
-    color: $main-color;
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-
-  span {
-    display: block;
-    color: $grey-color;
-    font-size: $all-size;
-    font-weight: 600;
-    margin-bottom: 50px;
-  }
-
-  .appointment-form {
-    .form-group {
-      padding-left: 70px;
-      position: relative;
-      margin-bottom: 60px;
-      //border: 1px solid red;
-      display: flex;
-      flex-direction: row-reverse;
-
-      .icon-container {
-        display: inline-block;
-        position: absolute;
-        top: 11px;
-        left: 0;
-        font-size: 50px;
-      }
-
-      .input-container {
-        width: 100%;
-
-        &:focus-within {
-          ~ .icon-container .icon {
-            color: $second-color; /* Change icon color when input is focused */
-          }
-
-        }
-
-        label {
-          margin-bottom: 10px;
-          color: $grey-color;
-          font-size: $all-size;
-          font-weight: 500;
-        }
-
-        .form-control {
-          border-radius: 0;
-          border: 0;
-          border-bottom: 1px solid $main-color;
-          font-size: $all-size;
-          padding-left: 0;
-          padding-bottom: 8px;
-          height: 40px;
-          background-color: transparent;
-
-          &:focus {
-            box-shadow: none;
-            border-bottom: 1px solid $second-color;
-
-
-          }
-        }
-
-      }
-
-      ::placeholder {
-        color: $grey-color;
-      }
-    }
-
-    .appointment-btn {
-      color: $white-color;
-      background-color: $main-color;
-      font-weight: 500;
-      font-size: $all-size;
-      border-radius: 5px;
-      padding: 18px 45px;
-      transition: $transition;
-
-      &:hover {
-        color: $white-color;
-        //background-color: $black-color;
-        background-color: $second-color;
-      }
-    }
-  }
-}
-
-/*-- End Appointment --*/
 /*----- End Home Page Two -----*/
 
 /*----- Home Page Three -----*/
@@ -1905,71 +1794,6 @@ button {
 /*-- End Doctor --*/
 /*----- End Doctor Page -----*/
 
-/*----- Apoointment Page -----*/
-
-/*-- Appointment --*/
-.appointment-item-two {
-  background-image: none;
-  margin-bottom: 30px;
-  box-shadow: 0 0 20px 0 #ddd;
-  padding: 80px 65px 80px;
-  position: relative;
-
-  .appointment-shape {
-    position: absolute;
-    bottom: -65px;
-    left: -74px;
-    width: 310px;
-    animation: a-six 5s infinite linear;
-  }
-}
-
-.appointment-item-two-right {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  .appointment-item-content {
-    background-color: #f6f6f6;
-    padding: 95px 40px 100px;
-    //padding: 35px 10px 30px;
-    margin: 0 40px;
-    border-radius: 10px;
-
-    h2 {
-      color: $main-color;
-      font-weight: 600;
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style-type: none;
-        position: relative;
-        color: $grey-color;
-        font-weight: 500;
-        font-size: 14px;
-        border-bottom: 1px solid #eee;
-        padding: 10px 0;
-
-        span {
-          float: right;
-        }
-      }
-    }
-  }
-}
-
-/*-- End Appointment --*/
-/*----- End Apoointment Page -----*/
-
 /*----- Doctor Details Page -----*/
 
 .page-title-item-two {
@@ -2002,24 +1826,7 @@ button {
 
 /*-- End Page Title --*/
 
-/*-- Appointment --*/
-.appointment-area-three {
-  .appointment-item {
-    max-width: 565px;
-    margin-left: auto;
-    margin-right: 80px;
-    margin-top: 50px;
 
-    .appointment-shape {
-      bottom: 0;
-      top: -95px;
-      left: -74px;
-      width: 250px;
-    }
-  }
-}
-
-/*-- End Appointment --*/
 /*----- End Doctor Details Page -----*/
 
 /*----- Blog Details Page -----*/

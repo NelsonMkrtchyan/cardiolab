@@ -456,46 +456,6 @@
   }
   /*-- End Speciality --*/
 
-  /*-- Appointment --*/
-  .appointment-item {
-    padding: 30px 15px 40px;
-
-    h2 {
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    span {
-      font-size: $all-size;
-      margin-bottom: 30px;
-    }
-
-    .appointment-form {
-      .form-group {
-        margin-bottom: 40px;
-
-        i {
-          font-size: 42px;
-        }
-
-        label {
-          margin-bottom: 5px;
-          font-size: $all-size;
-        }
-
-        .form-control {
-          font-size: $all-size;
-          padding-bottom: 10px;
-        }
-      }
-
-      .appointment-btn {
-        font-size: $all-size;
-        padding: 12px 45px;
-      }
-    }
-  }
-  /*-- End Appointment --*/
   /*----- End Home Page Two -----*/
 
   /*----- Home Page Three -----*/
@@ -728,52 +688,6 @@
   /*-- End Doctor Search --*/
   /*----- End Doctor Page -----*/
 
-  /*----- Apoointment Page -----*/
-
-  /*-- Appointment --*/
-  .appointment-item-two {
-    padding: 30px 15px 40px;
-  }
-  .appointment-item-two-right {
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    .appointment-item-content {
-      padding: 20px 15px 30px;
-      margin: 0 10px;
-
-      h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-      }
-
-      .content-one {
-        ul {
-          li {
-            font-size: 13px;
-
-            &:before {
-              width: 20px;
-              left: 84px;
-            }
-          }
-        }
-      }
-
-      .content-two {
-        margin-left: 30px;
-
-        ul {
-          li {
-            font-size: 13px;
-          }
-        }
-      }
-    }
-  }
-  /*-- End Appointment --*/
-  /*----- End Apoointment Page -----*/
-
   /*----- Doctor Details Page -----*/
   /*-- Page Title --*/
   .page-title-three {
@@ -799,27 +713,6 @@
   }
   /*-- End Page Title --*/
 
-  /*-- Appointment --*/
-  .appointment-area-three {
-    .appointment-item {
-      margin-right: 0;
-      margin-top: 0;
-      max-width: 100%;
-
-      .appointment-shape {
-        bottom: 0;
-        top: -95px;
-        left: -74px;
-        width: 250px;
-      }
-    }
-
-    .speciality-right-three {
-      background-image: unset;
-      height: auto;
-    }
-  }
-  /*-- End Appointment --*/
   /*----- End Doctor Details Page -----*/
 
   /*----- Blog Details Page -----*/
@@ -1816,42 +1709,6 @@
   }
   /*-- End Speciality --*/
 
-  /*-- Appointment --*/
-  .appointment-area {
-    padding-top: 140px;
-  }
-  .appointment-item {
-    padding: 50px 60px 50px;
-
-    h2 {
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    span {
-      font-size: $all-size;
-    }
-
-    .appointment-form {
-      .form-group {
-        margin-bottom: 40px;
-
-        label {
-          font-size: $all-size;
-        }
-
-        .form-control {
-          font-size: $all-size;
-        }
-      }
-
-      .appointment-btn {
-        font-size: $all-size;
-        padding: 16px 45px;
-      }
-    }
-  }
-  /*-- End Appointment --*/
   /*----- End Home Page Two -----*/
 
   /*----- Home Page Three -----*/
@@ -2090,16 +1947,6 @@
   /*-- End Doctor --*/
   /*----- End Doctor Page -----*/
 
-  /*----- Apoointment Page -----*/
-
-  /*-- Appointment --*/
-  .appointment-item-two-right {
-    .appointment-item-content {
-      padding: 35px 40px 35px;
-    }
-  }
-  /*-- End Appointment --*/
-  /*----- End Apoointment Page -----*/
 
   /*----- Doctor Details Page -----*/
   /*-- Page Title --*/
@@ -2123,27 +1970,6 @@
   }
   /*-- End Page Title --*/
 
-  /*-- Appointment --*/
-  .appointment-area-three {
-    .appointment-item {
-      max-width: 100%;
-      margin-right: 0;
-      margin-top: 0;
-
-      .appointment-shape {
-        bottom: 0;
-        top: -95px;
-        left: -74px;
-        width: 250px;
-      }
-    }
-
-    .speciality-right-three {
-      background-image: unset;
-      height: auto;
-    }
-  }
-  /*-- End Appointment --*/
   /*----- End Doctor Details Page -----*/
 
   /*----- Blog Details Page -----*/
@@ -2689,14 +2515,6 @@
   }
   /*-- End Speciality --*/
 
-  /*-- Appointment --*/
-  .appointment-item-two-right {
-    .appointment-item-content {
-      padding: 95px 20px 100px;
-      margin: 0 20px;
-    }
-  }
-  /*-- End Appointment --*/
 
   /*-- Blog Details --*/
   .blog-details-item {

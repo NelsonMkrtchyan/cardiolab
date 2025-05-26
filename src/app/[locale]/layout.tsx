@@ -19,6 +19,7 @@ import "~/app/_Components/Navbar/Navbar.scss";
 import "~/app/_Components/FeedbackSlider/FeedbackSlider.scss";
 import "~/app/_Components/LandingSlider/LandingSlider.scss";
 import "~/app/_Components/Landing/AboutUsSection/AboutUsSection.scss";
+import "~/app/_Components/Landing/AppointmentForm/AppointmentForm.scss";
 import "~/app/_Components/Landing/Landing.scss";
 import "~/app/_Components/VideoIntro/VideoIntro.scss";
 import "~/app/_Disin_components/layout/Footer/Footer.scss";
