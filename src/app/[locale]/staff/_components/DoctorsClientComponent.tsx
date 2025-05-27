@@ -42,13 +42,18 @@ export default function DoctorsClientComponent() {
                     </div>
                   </div>
 
-                  {filteredStaff.map((employee) => {
-                    return (
-                      <>
-                        <Card employee={employee} />
-                      </>
-                    );
-                  })}
+                  <div className={"staff-cards-area"}>
+                    {filteredStaff.map((employee) => {
+                      return (
+                        <div
+                          key={employee.id}
+                          className="staff-cards-wrapper col-sm-6 col-lg-3"
+                        >
+                          <Card employee={employee} />
+                        </div>
+                      );
+                    })}
+                  </div>
                 </>
               );
             })}

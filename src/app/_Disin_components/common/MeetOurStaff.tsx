@@ -25,11 +25,11 @@ const MeetOurStaff = () => {
               slidesPerView={1}
               spaceBetween={20}
               navigation={false}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              loop={true}
+              // autoplay={{
+              //   delay: 2500,
+              //   disableOnInteraction: false,
+              // }}
+              // loop={true}
               modules={[Navigation, Autoplay]}
               breakpoints={{
                 500: {
@@ -47,7 +47,10 @@ const MeetOurStaff = () => {
                 .filter((employee) => employee.visibility)
                 .map((employee) => (
                   <SwiperSlide key={employee.id}>
-                    <Card employee={employee} className={""} />
+                    <Card
+                      employee={employee}
+                      className={"landing-meet-our-staff"}
+                    />
                   </SwiperSlide>
                 ))}
             </Swiper>

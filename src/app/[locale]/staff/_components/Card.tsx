@@ -12,11 +12,14 @@ const Card = ({ employee, className }: CardI) => {
   const role = employee.role[locale as LocaleT];
 
   const employeeDetailPageLink = `/staff/details/${id}`;
-
   return (
     <>
-      <div className={className ?? "col-sm-6 col-lg-3"}>
-        <Link href={employeeDetailPageLink} onClick={(e) => e.preventDefault()}>
+      <div className={`doctor-card ${className}`}>
+        <Link
+          className={"doctor-card-link"}
+          href={employeeDetailPageLink}
+          onClick={(e) => e.preventDefault()}
+        >
           <div className="doctor-item">
             <div className="doctor-top">
               <ImageWithLoader
