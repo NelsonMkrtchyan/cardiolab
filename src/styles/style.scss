@@ -2979,7 +2979,8 @@ button {
   right: 10px;
   bottom: 25px;
   cursor: pointer;
-  background-color: $main-color;
+  //background-color: $main-color;
+  background-color: $second-color;
   color: $white-color;
   height: 50px;
   width: 50px;
@@ -2989,7 +2990,8 @@ button {
   border-radius: 50%;
   transition: $transition;
   margin-right: 28px;
-  box-shadow: 0 0 14px 0 $main-color;
+  //box-shadow: 0 0 14px 0 $main-color;
+  box-shadow: 0 0 14px 0 $second-color;
   z-index: 100;
 
   .icon {
@@ -3000,7 +3002,8 @@ button {
 
   &:hover {
     //background-color: $black-color;
-    background-color: $second-color;
+    //background-color: $second-color;
+    background-color: $main-color;
     color: $white-color;
     box-shadow: 0 0 14px 0 $second-color;
   }

@@ -43,6 +43,7 @@ import Navbar from "~/app/_Disin_components/layout/Navbar";
 import TopHeader from "~/app/_Disin_components/layout/TopHeader";
 import Footer from "~/app/_Disin_components/layout/Footer/Footer";
 import GoTop from "~/app/_Disin_components/layout/GoTop";
+import NewFooter from "~/app/_Components/NewFooter/NewFooter";
 
 // const poppins = Poppins({
 //   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -88,7 +89,8 @@ export default async function RootLayout({
             <Navbar />
             <div className="container">{children}</div>
             <GoTop />
-            <Footer />
+            {/*<Footer />*/}
+            <NewFooter />
           </NextIntlClientProvider>
         </Providers>
       </body>
