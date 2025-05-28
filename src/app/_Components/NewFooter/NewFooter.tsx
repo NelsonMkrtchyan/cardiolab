@@ -110,7 +110,7 @@ const NewFooter = () => {
               <div className="col-lg-8 footer-right">
                 <div className="row">
                   {/* Quick Links */}
-                  <div className="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                  <div className="col-12 col-sm-4 col-md-6 col-lg-4 col-xl-4">
                     <h4 className="footer-title">
                       {tFooter("QuickLinks.QuickLinksText")}
                     </h4>
@@ -124,29 +124,29 @@ const NewFooter = () => {
                   </div>
 
                   {/* Working Hours - Smaller */}
-                  <div className="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
-                    <h4 className="footer-title">
-                      {tGeneral("WorkingHours") || "Working Hours"}
-                    </h4>
-                    <div className="working-hours">
-                      {localisedWorkingHours &&
-                        Object.keys(localisedWorkingHours).map((key, index) => (
-                          <div key={index} className="hours-item">
-                            <span className="time">
-                              {tGeneral(`Weekdays.${key}`)}
-                            </span>
-                            <span className="time">
-                              {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                              {/* @ts-expect-error*/}
-                              {localisedWorkingHours[key]}
-                            </span>
-                          </div>
-                        ))}
-                    </div>
-                  </div>
+                  {/*<div className="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">*/}
+                  {/*  <h4 className="footer-title">*/}
+                  {/*    {tGeneral("WorkingHours") || "Working Hours"}*/}
+                  {/*  </h4>*/}
+                  {/*  <div className="working-hours">*/}
+                  {/*    {localisedWorkingHours &&*/}
+                  {/*      Object.keys(localisedWorkingHours).map((key, index) => (*/}
+                  {/*        <div key={index} className="hours-item">*/}
+                  {/*          <span className="time">*/}
+                  {/*            {tGeneral(`Weekdays.${key}`)}*/}
+                  {/*          </span>*/}
+                  {/*          <span className="time">*/}
+                  {/*            /!* eslint-disable-next-line @typescript-eslint/ban-ts-comment *!/*/}
+                  {/*            /!* @ts-expect-error*!/*/}
+                  {/*            {localisedWorkingHours[key]}*/}
+                  {/*          </span>*/}
+                  {/*        </div>*/}
+                  {/*      ))}*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
 
                   {/* Contact Info with more compact phone numbers */}
-                  <div className="col-12 contact-info-area mt-4">
+                  <div className="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-8 contact-info-area">
                     <h4 className="footer-title">{tMenu("ContactUs")}</h4>
                     <div className="contact-info">
                       <div className="row">

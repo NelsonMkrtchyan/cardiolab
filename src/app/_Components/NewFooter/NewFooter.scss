@@ -139,8 +139,11 @@
 
   // Contact info styling
   .contact-info-area {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
+    //border-top: 1px solid rgba(255, 255, 255, 0.1);
+    //padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
 
   }
 
@@ -350,12 +353,12 @@
     .contact-info-area {
       .contact-info {
         .contact-item {
-          justify-content: start;
-          text-align: start;
+          justify-content: center;
+          text-align: center;
         }
 
         .phone-numbers {
-          justify-content: start;
+          justify-content: center;
         }
       }
     }
