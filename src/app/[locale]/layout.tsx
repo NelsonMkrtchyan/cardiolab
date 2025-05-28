@@ -22,7 +22,7 @@ import "~/app/_Components/Landing/AboutUsSection/AboutUsSection.scss";
 import "~/app/_Components/Landing/AppointmentForm/AppointmentForm.scss";
 import "~/app/_Components/Landing/Landing.scss";
 import "~/app/_Components/VideoIntro/VideoIntro.scss";
-import "~/app/_Disin_components/layout/Footer/Footer.scss";
+import "~/app/_Components/Footer/Footer.scss";
 
 // Pages styles
 import "~/app/[locale]/staff/staff.scss";
@@ -40,8 +40,8 @@ import { routing } from "~/i18n/routing";
 import { Montserrat } from "next/font/google";
 
 import Navbar from "~/app/_Disin_components/layout/Navbar";
-import TopHeader from "~/app/_Disin_components/layout/TopHeader";
-import Footer from "~/app/_Disin_components/layout/Footer/Footer";
+// import TopHeader from "~/app/_Disin_components/layout/TopHeader";
+// import Footer from "~/app/_Components/layout/Footer/Footer";
 import GoTop from "~/app/_Disin_components/layout/GoTop";
 import NewFooter from "~/app/_Components/NewFooter/NewFooter";
 
