@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import DetailsContent from "~/app/[locale]/staff/_components/DetailsContent";
 import { useTranslations } from "next-intl";
 import useEmployee from "~/app/[locale]/staff/_hooks/useEmployee";

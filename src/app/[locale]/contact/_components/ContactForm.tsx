@@ -77,7 +77,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="drop-area">
+      <div className="drop-area landing-section">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-7 p-0">

@@ -26,6 +26,7 @@ import "~/app/_Components/Footer/Footer.scss";
 import "~/app/_Components/OurExpertise/OurExpertise.scss";
 import "~/app/_Components/PageBanner/PageBanner.scss";
 import "~/app/[locale]/about/_components/AboutContent/AboutContent.scss";
+import "~/app/[locale]/contact/Contact.scss";
 
 // Pages styles
 import "~/app/[locale]/staff/staff.scss";

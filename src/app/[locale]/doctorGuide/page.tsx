@@ -1,6 +1,6 @@
 "use client";
 
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import React from "react";
 import { useTranslations } from "next-intl";
 import DoctorGuideCards from "~/app/[locale]/doctorGuide/_components/DoctorGuideCards";

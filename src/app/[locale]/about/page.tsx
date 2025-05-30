@@ -1,5 +1,5 @@
 import React from "react";
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import AboutContent from "~/app/[locale]/about/_components/AboutContent/AboutContent";
 import { useTranslations } from "next-intl";
 import OurExpertise from "~/app/_Disin_components/common/OurExpertise";

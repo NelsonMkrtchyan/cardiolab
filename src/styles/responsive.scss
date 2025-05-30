@@ -766,61 +766,6 @@
   }
   /*-- End Location --*/
 
-  /*-- Drop --*/
-  .drop-item {
-    .drop-left {
-      padding-top: 0;
-      padding-bottom: 30px;
-      max-width: 100%;
-      padding-right: 15px;
-      padding-left: 15px;
-
-      h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-        padding-right: 0;
-      }
-
-      .form-group {
-        .form-control {
-          height: 45px;
-          font-size: 14px;
-        }
-      }
-
-      .drop-btn {
-        font-size: $all-size;
-        padding: 12px 30px;
-      }
-
-      .text-danger {
-        margin-top: 15px;
-        font-size: 18px;
-      }
-
-      .text-success {
-        margin-top: 15px;
-        font-size: 18px;
-      }
-    }
-  }
-  .drop-img {
-    height: auto;
-    background-image: unset;
-
-    img {
-      display: inline-block;
-    }
-  }
-  /*-- End Drop --*/
-
-  /*-- Map --*/
-  #map {
-    height: 400px;
-  }
-  /*-- End Map --*/
-  /*----- End Contact Page -----*/
-
   /*----- FAQ PAGE -----*/
   /*-- Faq --*/
   .faq-head {
@@ -1780,73 +1725,6 @@
   /*-- End Blog Details --*/
 
   /*----- End Blog Details Page -----*/
-
-  /*----- Contact Page -----*/
-
-  /*-- Location --*/
-  .location-wrap {
-    .location-item {
-      i {
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 28px;
-        margin-bottom: 18px;
-      }
-
-      h3 {
-        font-size: 22px;
-        margin-bottom: 14px;
-      }
-    }
-  }
-  /*-- End Location --*/
-
-  /*-- Drop --*/
-  .drop-img {
-    height: auto;
-    background-image: unset;
-
-    img {
-      display: inline-block;
-    }
-  }
-  .drop-item {
-    .drop-left {
-      max-width: 100%;
-      padding-top: 0;
-      padding-bottom: 30px;
-      padding-right: 15px;
-      padding-left: 15px;
-
-      h2 {
-        font-size: 22px;
-        margin-bottom: 20px;
-      }
-
-      .drop-btn {
-        font-size: $all-size;
-      }
-
-      .text-danger {
-        margin-top: 20px;
-        font-size: 20px;
-      }
-
-      .text-success {
-        margin-top: 15px;
-        font-size: 18px;
-      }
-    }
-  }
-  /*-- End Drop --*/
-
-  /*-- Map --*/
-  #map {
-    height: 500px;
-  }
-  /*-- End Map --*/
-  /*----- End Contact Page -----*/
 
   /*----- FAQ PAGE -----*/
   /*-- Faq --*/

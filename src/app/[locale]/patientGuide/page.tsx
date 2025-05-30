@@ -1,6 +1,6 @@
 "use client";
 
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import React from "react";
 import { useTranslations } from "next-intl";
 import FaqSection from "~/app/_Disin_components/common/FaqSection";

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import { useLocale, useTranslations } from "next-intl";
 import useGallery from "~/app/[locale]/gallery/_hooks/useGallery";
 import MediaCards from "~/app/[locale]/gallery/images/_components/MediaCards";

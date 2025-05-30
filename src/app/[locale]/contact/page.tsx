@@ -1,6 +1,6 @@
 import React from "react";
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
-import ContactInfo from "~/app/[locale]/contact/_components/ContactInfo";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
+// import ContactInfo from "~/app/[locale]/contact/_components/ContactInfo";
 import { useTranslations } from "next-intl";
 import GoogleMap from "~/app/[locale]/contact/_components/GoogleMap";
 import ContactForm from "~/app/[locale]/contact/_components/ContactForm";
@@ -23,7 +23,7 @@ export default function Page() {
         // bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
 
-      <ContactInfo />
+      {/*<ContactInfo />*/}
 
       <ContactForm />
 

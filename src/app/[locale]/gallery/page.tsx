@@ -1,5 +1,5 @@
 import React from "react";
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import { useTranslations } from "next-intl";
 import GalleryCards from "~/app/[locale]/gallery/_components/GalleryCards";
 import ImagesDB from "~/constants/ImageDatabase.json";

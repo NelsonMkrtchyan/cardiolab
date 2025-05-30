@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import { useTranslations } from "next-intl";
 import PriceList from "../_components/PriceList";
 import ImagesDB from "~/constants/ImageDatabase.json";

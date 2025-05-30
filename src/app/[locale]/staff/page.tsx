@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import PageBanner from "~/app/_Disin_components/common/PageBanner";
+import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import { useTranslations } from "next-intl";
 import DoctorsClientComponent from "~/app/[locale]/staff/_components/DoctorsClientComponent";
 import Loader from "~/app/_Components/Loader";
