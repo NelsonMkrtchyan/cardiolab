@@ -10,6 +10,11 @@
 
 
 @media only screen and (max-width: 767px) {
+  .layout {
+    overflow: hidden;
+    border-radius: 8px;
+
+  }
 
   $all-size: 14px;
 
@@ -93,70 +98,6 @@
     }
   }
   /*-- End Counter --*/
-
-  /*-- About --*/
-  .about-item {
-    h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      margin-bottom: 20px;
-    }
-
-    ul {
-      margin-bottom: 25px;
-
-      li {
-        font-size: 15px;
-        margin-bottom: 10px;
-
-        i {
-          margin-right: 6px;
-          font-size: 18px;
-        }
-      }
-    }
-
-    a {
-      font-size: $all-size;
-      padding: 15px 30px;
-    }
-  }
-  .about-left {
-    &:before {
-      display: none;
-    }
-
-    &:after {
-      display: none;
-    }
-  }
-  @keyframes a-one {
-    50% {
-      transform: translate(-10px, -10px);
-    }
-  }
-  @keyframes a-two {
-    50% {
-      transform: translate(10px, 10px);
-    }
-  }
-  .about-right {
-    padding-left: 0;
-
-    img {
-      right: 2px;
-      width: 270px;
-    }
-  }
-  .about-left img {
-    animation: unset;
-    max-height: 500px;
-    object-position: top;
-  }
-  /*-- End About --*/
 
   /*-- Services --*/
   .section-title {
@@ -1165,9 +1106,6 @@
     margin-left: 10px;
   }
   /*----- Home Four CSS -----*/
-  .about-area-two {
-    text-align: center;
-  }
   .symptoms-content {
     ul {
 
@@ -1222,9 +1160,6 @@
   .faq-area-two {
   }
 
-  .page-title-area {
-    height: 270px;
-  }
   .appointment-item-two {
     .appointment-shape {
       display: none;
@@ -1304,90 +1239,6 @@
     }
   }
   /*-- End Counter --*/
-
-  /*-- About --*/
-  .about-item {
-    h2 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin-bottom: 25px;
-    }
-
-    ul {
-      margin-bottom: 35px;
-
-      li {
-        font-size: 15px;
-        margin-bottom: 12px;
-
-        i {
-          margin-right: 8px;
-          font-size: 20px;
-        }
-      }
-    }
-
-    a {
-      font-size: $all-size;
-      padding: 14px 30px;
-    }
-  }
-  .about-left {
-    position: relative;
-
-    img {
-      width: 100%;
-      z-index: 1;
-    }
-
-    &:before {
-      position: absolute;
-      content: '';
-      top: -10px;
-      left: -10px;
-      width: 430px;
-      height: 375px;
-      border-radius: 10px;
-      z-index: -1;
-      animation: a-one 5s infinite linear;
-      background-color: $blue-color;
-    }
-
-    &:after {
-      position: absolute;
-      content: '';
-      bottom: -10px;
-      right: -10px;
-      width: 430px;
-      height: 375px;
-      border-radius: 10px;
-      z-index: -1;
-      animation: a-two 5s infinite linear;
-      background-color: $blue-color;
-    }
-  }
-  @keyframes a-one {
-    50% {
-      transform: translate(-10px, 10px);
-    }
-  }
-  @keyframes a-two {
-    50% {
-      transform: translate(10px, 10px);
-    }
-  }
-  .about-right {
-    padding-left: 0;
-
-    img {
-      right: 0;
-      width: 390px;
-    }
-  }
-  /*-- End About --*/
 
   /*-- Services --*/
   .section-title {
@@ -2252,9 +2103,6 @@
   /*----- END ABOUT PAGE -----*/
 
   /*----- Home Four CSS -----*/
-  .about-area-two {
-    text-align: center;
-  }
   .symptoms-content {
     ul {
 

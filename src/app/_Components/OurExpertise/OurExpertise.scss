@@ -14,16 +14,16 @@
 }
 
 .background-image {
-  background-size: contain;
+  background-size: auto;
   background-position: center;
   background-repeat: repeat;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px;
   position: absolute;
   z-index: 10;
-  width: 100vw;
-  height: 100%;
-
-  left: -10vw;
+  width: 180%;
+  height: 105%;
+  left: -50%;
+  top: -5%;
 }
 
 .speciality-item {
@@ -64,7 +64,7 @@
 
     p {
       //font-size: 18px;
-      text-align: justify;
+      text-align: start;
       margin-bottom: 0;
     }
   }

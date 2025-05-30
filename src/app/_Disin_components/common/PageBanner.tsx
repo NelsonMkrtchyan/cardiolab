@@ -19,14 +19,15 @@ const PageBanner: React.FC<PageBannerProps> = ({
   bgImage,
 }) => {
   return (
-    <div
-      className="page-title-area"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <div className="page-title-area">
+      <div
+        className={"page-title-background-section"}
+        style={{ backgroundImage: `url(${bgImage})` }}
+      />
       <div className="d-table">
         <div className="d-table-cell">
           <div className="page-title-item">
-            <h2>{pageTitle}</h2>
+            <h1>{pageTitle}</h1>
             <ul>
               <li>
                 <Link href={homePageUrl}>{homePageText}</Link>

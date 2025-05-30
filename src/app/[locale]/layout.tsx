@@ -24,6 +24,8 @@ import "~/app/_Components/Landing/Landing.scss";
 import "~/app/_Components/VideoIntro/VideoIntro.scss";
 import "~/app/_Components/Footer/Footer.scss";
 import "~/app/_Components/OurExpertise/OurExpertise.scss";
+import "~/app/_Components/PageBanner/PageBanner.scss";
+import "~/app/[locale]/about/_components/AboutContent/AboutContent.scss";
 
 // Pages styles
 import "~/app/[locale]/staff/staff.scss";
@@ -88,7 +90,15 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             {/*<TopHeader />*/}
             <Navbar />
-            <div className="container" style={{ overflow: "hidden" }}>
+            <div
+              className="layout container"
+              style={
+                {
+                  // overflow: "hidden",
+                  // border: "1px solid red",
+                }
+              }
+            >
               {children}
             </div>
             <GoTop />

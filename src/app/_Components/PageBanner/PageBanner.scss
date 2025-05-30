@@ -1,0 +1,111 @@
+@import '~/styles/variables';
+
+
+/*-- Page Title --*/
+
+.page-title-area {
+  position: relative;
+  height: 400px;
+
+  text-align: center;
+  //overflow: hidden;
+  border-radius: 8px;
+}
+
+.page-title-background-section {
+  background-size: cover;
+  //background-position: center center;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    //opacity: .80;
+    opacity: 1;
+    background-color: $main-color;
+  }
+}
+
+.page-title-item {
+  position: relative;
+
+  h1 {
+    //font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f8f8f8;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      color: #f8f8f8;
+      font-weight: 600;
+      //font-size: 18px;
+      margin-right: 25px;
+      position: relative;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        display: inline-block;
+        color: #f8f8f8;
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+          //color: $black-color;
+          //color: $main-color;
+          //color: $second-color;
+          font-weight: 600;
+          border-bottom: 3px solid $second-color;
+          //border-bottom: 3px solid $main-color;
+
+        }
+      }
+
+      &::before {
+        content: ">";
+        position: absolute;
+        right: -17px;
+        top: 1px;
+      }
+
+      &:last-child::before {
+        display: none;
+      }
+    }
+  }
+}
+
+/*-- End Page Title --*/
+
+
+//*-- ---------------------------------------- RESPONSIVE ---------------------------------------- --*/
+
+@media only screen and (max-width: 767px) {
+  .page-title-area {
+    height: 270px;
+    overflow: hidden;
+  }
+}
+
+//@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+//@media only screen and (min-width: 992px) and (max-width: 1199px) {}
