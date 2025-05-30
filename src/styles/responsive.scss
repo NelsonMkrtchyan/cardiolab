@@ -383,79 +383,6 @@
   }
   /*-- End Emergency --*/
 
-  /*-- Speciality --*/
-  .speciality-area .services {
-
-  }
-  .speciality-item {
-    .speciality-inner {
-      padding-top: 25px;
-      padding-left: 25px;
-      padding-bottom: 25px;
-      margin-bottom: 20px;
-
-      i {
-        margin-bottom: 15px;
-      }
-
-      h3 {
-        font-size: 18px;
-        margin-bottom: 8px;
-      }
-    }
-  }
-  .speciality-right {
-    height: auto;
-    background-image: unset;
-
-    &:before {
-      display: none;
-    }
-
-    img {
-      display: inline-block;
-    }
-
-    .speciality-emergency {
-      left: 15px;
-      padding: 15px 30px 10px 30px;
-      width: 60%;
-
-      .speciality-icon {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-
-        .large-icon-size {
-          font-size: 20px;
-        }
-
-        i {
-          font-size: 18px;
-        }
-      }
-
-      .speciality-content {
-        h3 {
-          font-size: 16px;
-          //right: 45px;
-        }
-
-        p {
-          //top: 52px;
-          font-size: 12px;
-          //right: 95px;
-        }
-      }
-
-    }
-  }
-  .speciality-left {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /*-- End Speciality --*/
-
   /*----- End Home Page Two -----*/
 
   /*----- Home Page Three -----*/
@@ -581,13 +508,6 @@
   }
   /*-- End About --*/
 
-  /*-- Speciality --*/
-  .speciality-right-two {
-    &:before {
-      top: -2px;
-    }
-  }
-  /*-- End Speciality --*/
 
   /*-- Review Slider --*/
   .main {
@@ -1179,25 +1099,6 @@
   /*-- End Privacy --*/
   /*----- END PRIVACY POLICY PAGE -----*/
 
-  /*----- DEPARTMENTS PAGE -----*/
-  /*-- Department --*/
-  .department-item {
-    padding-top: 25px;
-    padding-bottom: 25px;
-
-    i {
-      font-size: 35px;
-      margin-bottom: 12px;
-    }
-
-    h3 {
-      margin-bottom: 8px;
-      font-size: 20px;
-    }
-  }
-  /*-- End Department --*/
-  /*----- END DEPARTMENTS PAGE -----*/
-
   /*----- SERVICES DETAILS PAGE -----*/
   /*-- Service Details --*/
   .services-details-img {
@@ -1659,56 +1560,6 @@
   }
   /*-- End Emergency --*/
 
-  /*-- Speciality --*/
-  .speciality-item {
-    .speciality-inner {
-      padding-top: 25px;
-      padding-left: 25px;
-      padding-bottom: 25px;
-
-      i {
-        margin-bottom: 15px;
-      }
-
-      h3 {
-        font-size: 20px;
-        margin-bottom: 8px;
-      }
-    }
-  }
-  .speciality-right {
-    height: auto;
-    background-image: unset;
-
-    img {
-      display: inline-block;
-    }
-
-    .speciality-emergency {
-      left: 15px;
-      padding: 30px 20px 15px 20px;
-      width: 60%;
-
-      h3 {
-        font-size: 22px;
-        //right: 80px;
-      }
-
-      p {
-        //margin-bottom: 0;
-        color: $white-color;
-        //position: absolute;
-        //right: 142px;
-        //top: 56px;
-      }
-    }
-  }
-  .speciality-left {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /*-- End Speciality --*/
-
   /*----- End Home Page Two -----*/
 
   /*----- Home Page Three -----*/
@@ -1828,13 +1679,6 @@
   }
   /*-- End About --*/
 
-  /*-- Speciality --*/
-  .speciality-right-two {
-    &:before {
-      display: none;
-    }
-  }
-  /*-- End Speciality --*/
 
   /*-- Review Slider --*/
   .main {
@@ -2349,25 +2193,6 @@
   /*-- End Privacy --*/
   /*----- END PRIVACY POLICY PAGE -----*/
 
-  /*----- DEPARTMENTS PAGE -----*/
-  /*-- Department --*/
-  .department-item {
-    padding-top: 25px;
-    padding-bottom: 25px;
-
-    i {
-      font-size: 40px;
-      margin-bottom: 16px;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-  }
-  /*-- End Department --*/
-  /*----- END DEPARTMENTS PAGE -----*/
-
   /*----- SERVICES DETAILS PAGE -----*/
   /*-- Service Details --*/
   .services-details-img {
@@ -2473,10 +2298,6 @@
     padding: 0 30px;
   }
 
-  .speciality-right {
-    padding-right: 15px;
-  }
-
   .faq-area-two {
   }
 }
@@ -2506,15 +2327,6 @@
     }
   }
   /*-- End Blog --*/
-
-
-  /*-- Speciality --*/
-  .speciality-left {
-    padding-left: 30px;
-    padding-right: 65px;
-  }
-  /*-- End Speciality --*/
-
 
   /*-- Blog Details --*/
   .blog-details-item {
@@ -2579,15 +2391,6 @@
           right: -19px;
           max-width: 380px;
         }
-      }
-    }
-  }
-  .speciality-item {
-    .speciality-inner {
-      padding: 15px;
-
-      h3 {
-        font-size: 20px;
       }
     }
   }

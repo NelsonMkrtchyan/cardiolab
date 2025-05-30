@@ -23,6 +23,7 @@ import "~/app/_Components/Landing/AppointmentForm/AppointmentForm.scss";
 import "~/app/_Components/Landing/Landing.scss";
 import "~/app/_Components/VideoIntro/VideoIntro.scss";
 import "~/app/_Components/Footer/Footer.scss";
+import "~/app/_Components/OurExpertise/OurExpertise.scss";
 
 // Pages styles
 import "~/app/[locale]/staff/staff.scss";
@@ -87,7 +88,9 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             {/*<TopHeader />*/}
             <Navbar />
-            <div className="container">{children}</div>
+            <div className="container" style={{ overflow: "hidden" }}>
+              {children}
+            </div>
             <GoTop />
             {/*<Footer />*/}
             <NewFooter />

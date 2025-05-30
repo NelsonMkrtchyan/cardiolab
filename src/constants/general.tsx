@@ -58,7 +58,9 @@ export type AboutUsContentItemType = {
   id: number;
   name: string;
   title: LocaleString;
-  description?: LocaleComplexString;
+  description: LocaleComplexString;
+  list?: string[];
+  className: string; // Optional className for styling
 };
 export type AboutUsContentType = AboutUsContentItemType[];
 
@@ -72,6 +74,7 @@ export const aboutUsContent: AboutUsContentType = [
     description: {
       am: "Հայաստանում սիրտանոթային հիվանդությունների բեռի նվազեցում՝ գերժամանակակից, բուժառուակենտրոն և հիվանդությանն ուղղված բազմապրոֆիլ խնամքի միջոցով, որն անխափան ապահովվում է ինտեգրված խնամքի ուղիներով՝ ավելի լավ արդյունքների և առողջ կյանքի համար",
     },
+    className: "col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12",
   },
   {
     id: 2,
@@ -82,9 +85,27 @@ export const aboutUsContent: AboutUsContentType = [
     description: {
       am: "CardioLab-ը ձգտում է դառնալ բացառիկ «բուտիկ» սիրտանոթային հիվանդանոց՝ գերազանցության կենտրոն, որը մատուցում է բարձրորակ, նորարարական և անհատականացված խնամք՝ ինչպես մանկական, այնպես էլ մեծահասակ պացիենտների համար։ Հանրային-մասնավոր համագործակցության մտածված ինտեգրված մոդելի միջոցով CardioLab-ը կվերաձևի սիրտանոթային առողջապահությունը Հայաստանում՝ սահմանելով նոր չափանիշներ պացիենտների փորձառության, կլինիկական արդյունքների և առողջապահական համակարգի կայունության համար",
     },
+    className: "d-flex h-100 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12",
   },
   {
     id: 3,
+    name: "OurStrategicDirections",
+    title: {
+      am: "Մեր ռազմավարական ուղղությունները",
+    },
+
+    description: {
+      am: "",
+    },
+    list: [
+      "Կլինիկական սիրտ-անոթային բժշկություն",
+      "Գիտահետազոտական գործունեություն",
+      "Պացիենտի իրազեկվածության բարձրացում",
+    ],
+    className: "col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12",
+  },
+  {
+    id: 4,
     name: "Values",
     title: {
       am: "Մեր Արժեքներ",
@@ -106,30 +127,16 @@ export const aboutUsContent: AboutUsContentType = [
           description:
             "Մենք հավատում ենք, որ լավագույն արդյունքները ծնվում են համատեղ ուժերից։ Մեր բազմապրոֆիլ թիմը գործում է համադրությամբ՝ ապահովելով համակարգված, ամբողջական և շարունակական խնամք բոլոր հիվանդների համար",
         },
-      ],
-    },
-  },
-  {
-    id: 4,
-    name: "OurStrategicDirections",
-    title: {
-      am: "Մեր ռազմավարական ուղղությունները",
-    },
-    description: {
-      am: [
         {
-          title: "Կլինիկական սիրտ-անոթային բժշկություն",
+          title: "Պրոֆեսիոնալիզմ",
           description: "",
         },
         {
-          title: "Գիտահետազոտական գործունեություն",
-          description: "",
-        },
-        {
-          title: "Պացիենտի իրազեկվածության բարձրացում",
+          title: "Շարունակական Ջարգացում",
           description: "",
         },
       ],
     },
+    className: "col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12",
   },
 ];
