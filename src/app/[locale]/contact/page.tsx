@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import GoogleMap from "~/app/[locale]/contact/_components/GoogleMap";
 import ContactForm from "~/app/[locale]/contact/_components/ContactForm";
 import ImagesDB from "~/constants/ImageDatabase.json";
+import SatisfactionSurvey from "~/app/_Components/SatisfactionSurvey/SatisfactionSurvey";
 
 export default function Page() {
   const tMenu = useTranslations("Menu");
@@ -26,6 +27,8 @@ export default function Page() {
       {/*<ContactInfo />*/}
 
       <ContactForm />
+
+      <SatisfactionSurvey />
 
       <GoogleMap />
     </>

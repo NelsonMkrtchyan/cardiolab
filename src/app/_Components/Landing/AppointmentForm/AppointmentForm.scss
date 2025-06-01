@@ -97,6 +97,8 @@
     }
 
     .appointment-btn-wrapper {
+      margin-top: 30px;
+
       .appointment-btn {
         color: $white-color;
         background-color: $main-color;
@@ -135,11 +137,16 @@
 }
 
 .appointment-item-left {
-  box-shadow: 0 0 20px 0 #ddd;
+  box-shadow: 0 0 20px 0 $light-grey;
   position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
+  //background-color: $main-color_with_opacity;
+  //background: linear-gradient(135deg, $second-color_with_opacity, $main-color_with_opacity, $second-color_with_opacity);
+  //background: linear-gradient(135deg, $main-color_with_opacity, $second-color_with_opacity, $main-color_with_opacity);
+  //background: linear-gradient(135deg, $main-color_with_opacity, $second-color_with_opacity);
+
 
   .appointment-shape {
     position: absolute;
@@ -152,7 +159,15 @@
 }
 
 .appointment-item-right {
-  background-color: $light-grey;
+  box-shadow: 0 0 20px 0 $light-grey;
+  //background-color: $light-grey;
+  //background-color: $second-color_with_opacity;
+  //background-color: $main-color_with_opacity;
+  //background-color: $second-color;
+  //background: linear-gradient(45deg, $second-color_with_opacity, $main-color_with_opacity, $second-color_with_opacity);
+  //background: linear-gradient(45deg, $main-color_with_opacity, $second-color_with_opacity, $main-color_with_opacity);
+  //background: linear-gradient(45deg, $main-color_with_opacity, $second-color_with_opacity);
+
   height: 100%;
 
   .appointment-item-content {
@@ -196,6 +211,7 @@
 
   .appointment-item {
     height: unset;
+    padding: 40px 20px;
 
     h2 {
       font-size: 20px;

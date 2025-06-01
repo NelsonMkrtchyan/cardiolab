@@ -6,6 +6,7 @@ import OurExpertise from "~/app/_Disin_components/common/OurExpertise";
 import Services from "~/app/_Disin_components/common/Services";
 
 import ImagesDB from "~/constants/ImageDatabase.json";
+import SatisfactionSurvey from "~/app/_Components/SatisfactionSurvey/SatisfactionSurvey";
 
 export default function About() {
   const tMenu = useTranslations("Menu");
@@ -27,6 +28,8 @@ export default function About() {
       <AboutContent />
 
       <OurExpertise />
+
+      <SatisfactionSurvey />
 
       <Services />
     </>

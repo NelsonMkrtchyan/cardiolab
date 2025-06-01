@@ -6,6 +6,7 @@ import AppointmentForm from "~/app/_Components/Landing/AppointmentForm/Appointme
 import LandingSlider from "~/app/_Components/LandingSlider/LandingSlider";
 // import VideoIntro from "~/app/_Components/VideoIntro/VideoIntro";
 import AboutUsSection from "~/app/_Components/Landing/AboutUsSection/AboutUsSection";
+// import SatisfactionSurvey from "~/app/_Components/SatisfactionSurvey/SatisfactionSurvey";
 
 export const dynamic = "force-dynamic";
 
@@ -23,6 +24,8 @@ const HomePage = async () => {
       {/*<FeedbackSlider />*/}
 
       <AppointmentForm />
+
+      {/*<SatisfactionSurvey />*/}
 
       {/*<LatestBlogPost />*/}
     </>
