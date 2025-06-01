@@ -47,7 +47,7 @@ export default function DoctorsClientComponent() {
                       return (
                         <div
                           key={employee.id}
-                          className="staff-cards-wrapper col-sm-6 col-lg-3"
+                          className="staff-cards-wrapper col-10 col-sm-6 col-lg-3"
                         >
                           <Card employee={employee} />
                         </div>

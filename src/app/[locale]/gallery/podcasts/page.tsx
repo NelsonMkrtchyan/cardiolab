@@ -14,7 +14,7 @@ export default function Page() {
         homePageUrl="/gallery"
         homePageText={tMenu("Gallery.Gallery")}
         activePageText={tMenu("Podcasts")}
-        bgImage={`${ImagesDB.AbstractImages.abstract_one}`}
+        bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
       />
       <PodcastsCards />
     </>

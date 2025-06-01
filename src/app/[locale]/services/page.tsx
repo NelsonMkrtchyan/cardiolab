@@ -3,6 +3,7 @@ import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import ServicesCards from "~/app/[locale]/services/_components/ServicesCards";
 import { useTranslations } from "next-intl";
 import ImagesDB from "~/constants/ImageDatabase.json";
+import ServicesList from "~/app/[locale]/services/_components/ServicesList";
 
 export default function Page() {
   const tMenu = useTranslations("Menu");
@@ -20,7 +21,10 @@ export default function Page() {
         // bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
         // bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
-      <ServicesCards />
+
+      <ServicesList />
+
+      {/*<ServicesCards />*/}
     </>
   );
 }

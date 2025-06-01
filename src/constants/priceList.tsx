@@ -4,7 +4,7 @@ export enum ServicesCategory {
   Echocardiography = "echocardiography", // Էխոսրտագրություն (including stress)
   RhythmDeviceCheck = "rhythmDeviceCheck", // Սրտի ռիթմավար սարքերի քննություն
   DuplexScan = "duplexScan", // Մագիստրալ անոթների դուպլեքս հետազոտություն
-  Ultrasound = "urltraSound", // Ուլտրաձայնային հետազոտություն
+  Ultrasound = "ultraSound", // Ուլտրաձայնային հետազոտություն
   CardiacCare = "cardiacCare", // Սրտային խնամք
   PreventiveScreening = "preventiveScreening", // Տարեկան կանխարգելիչ բուժ․ զննում
   Implantation = "implantation", // Իմպլանտացիա
@@ -16,6 +16,7 @@ export type ServiceType = {
   price: number;
   description?: string;
   category: ServicesCategory;
+  doctorsList?: number[]; // List of doctor IDs associated with the service
 };
 
 export interface CardI {
@@ -48,6 +49,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1],
   },
   {
     id: 35,
@@ -55,6 +57,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2],
   },
   {
     id: 36,
@@ -62,6 +65,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5],
   },
   {
     id: 37,
@@ -69,6 +73,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 38,
@@ -76,6 +81,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5],
   },
   {
     id: 39,
@@ -97,6 +103,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 42,
@@ -104,6 +111,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 43,
@@ -111,6 +119,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 14,
@@ -118,6 +127,7 @@ const services: ServiceType[] = [
     price: 25000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 15,
@@ -125,6 +135,7 @@ const services: ServiceType[] = [
     price: 20000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 1,
@@ -132,6 +143,7 @@ const services: ServiceType[] = [
     price: 20000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   // ######### ######### ######### ######### ######### ######### ######### #########
   {
@@ -140,6 +152,7 @@ const services: ServiceType[] = [
     price: 28000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 8,
@@ -147,6 +160,7 @@ const services: ServiceType[] = [
     price: 3600,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 7,
@@ -154,6 +168,7 @@ const services: ServiceType[] = [
     price: 13000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 6,
@@ -161,6 +176,7 @@ const services: ServiceType[] = [
     price: 13000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 32,
@@ -168,6 +184,7 @@ const services: ServiceType[] = [
     price: 20000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 33,
@@ -175,6 +192,7 @@ const services: ServiceType[] = [
     price: 30000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 13,
@@ -182,6 +200,7 @@ const services: ServiceType[] = [
     price: 25000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 12,
@@ -189,6 +208,7 @@ const services: ServiceType[] = [
     price: 25000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 28,
@@ -196,6 +216,7 @@ const services: ServiceType[] = [
     price: 18000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 47,
@@ -203,6 +224,7 @@ const services: ServiceType[] = [
     price: 22000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
 
   {
@@ -211,6 +233,7 @@ const services: ServiceType[] = [
     price: 32000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 29,
@@ -218,6 +241,7 @@ const services: ServiceType[] = [
     price: 28000,
     description: "",
     category: ServicesCategory.Echocardiography,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   // #################################################################################
   {
@@ -226,6 +250,7 @@ const services: ServiceType[] = [
     price: 22000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 18,
@@ -233,6 +258,7 @@ const services: ServiceType[] = [
     price: 33000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 19,
@@ -240,6 +266,7 @@ const services: ServiceType[] = [
     price: 45000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 21,
@@ -247,6 +274,7 @@ const services: ServiceType[] = [
     price: 60000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 20,
@@ -254,6 +282,7 @@ const services: ServiceType[] = [
     price: 99000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 22,
@@ -261,6 +290,7 @@ const services: ServiceType[] = [
     price: 160000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 17,
@@ -268,6 +298,7 @@ const services: ServiceType[] = [
     price: 32000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   // #################################################################################
   {
@@ -276,6 +307,7 @@ const services: ServiceType[] = [
     price: 12000,
     description: "",
     category: ServicesCategory.CardiacCare,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 31,
@@ -283,6 +315,7 @@ const services: ServiceType[] = [
     price: 12000,
     description: "",
     category: ServicesCategory.RhythmDeviceCheck,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 25,
@@ -290,6 +323,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Ultrasound,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 48,
@@ -297,6 +331,7 @@ const services: ServiceType[] = [
     price: 12000,
     description: "",
     category: ServicesCategory.Ultrasound,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 23,
@@ -304,6 +339,7 @@ const services: ServiceType[] = [
     price: 20000,
     description: "",
     category: ServicesCategory.DuplexScan,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 24,
@@ -311,6 +347,7 @@ const services: ServiceType[] = [
     price: 12000,
     description: "",
     category: ServicesCategory.DuplexScan,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 51,
@@ -318,6 +355,7 @@ const services: ServiceType[] = [
     price: 40000,
     description: "",
     category: ServicesCategory.CardiacCare,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 4,
@@ -325,6 +363,7 @@ const services: ServiceType[] = [
     price: 30000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 2,
@@ -332,6 +371,7 @@ const services: ServiceType[] = [
     price: 35000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 52,
@@ -339,6 +379,7 @@ const services: ServiceType[] = [
     price: 50000,
     description: "",
     category: ServicesCategory.PreventiveScreening,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
     id: 11,
@@ -346,6 +387,7 @@ const services: ServiceType[] = [
     price: 1200000,
     description: "",
     category: ServicesCategory.Implantation,
+    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   // #################################################################################
 ];

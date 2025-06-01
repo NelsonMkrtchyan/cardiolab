@@ -28,7 +28,7 @@ const Card = ({ service }: CardI) => {
               height={35}
               className="mb-4"
             />
-            <h3>{name}</h3>
+            <p>{name}</p>
             <p>{description}</p>
           </div>
           {/*</Link>*/}

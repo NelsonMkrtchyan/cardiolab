@@ -78,7 +78,7 @@ This files table contents are outlined below>>>>>
 
 .object-position-top {
   //object-position: top;
-  object-position: 0% 30%;
+  object-position: 0 30%;
 
 }
 
@@ -420,68 +420,6 @@ button {
 }
 
 /*-- End Counter --*/
-
-/*-- Services --*/
-
-.service-item {
-  margin-bottom: 30px;
-  box-shadow: 0 0 25px 0 #ddddddbf;
-  text-align: center;
-  position: relative;
-  padding: 25px 15px 25px 15px;
-  height: 90%;
-
-  &:hover {
-    cursor: pointer;
-    //box-shadow: 0 0 25px 0 $main-color;
-    box-shadow: -5px 5px 15px $second-color, // left-bottom shadow
-    5px -5px 15px $main-color; // right-top shadow
-  }
-
-  .service-front {
-    transition: $transition;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    white-space: normal;
-    word-break: keep-all;
-    overflow-wrap: break-word;
-
-    h3 {
-      font-weight: 600;
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    p {
-      margin-bottom: 0;
-    }
-
-  }
-
-  &.bg {
-    background-color: #f5f5f5;
-    box-shadow: none;
-    border-bottom: 2px solid #e7e7e7;
-  }
-
-  &.style-3 {
-    background-color: #f5f5f5;
-    box-shadow: none;
-    padding: 30px 25px;
-    border-bottom: 2px solid $main-color;
-  }
-
-  &.style-5 {
-    padding: 30px 25px;
-    box-shadow: none;
-    border: 1px solid #ededed;
-    border-radius: 10px;
-  }
-}
 
 /*-- Doctors --*/
 .doctor-item {

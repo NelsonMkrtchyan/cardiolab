@@ -27,6 +27,7 @@ import "~/app/_Components/OurExpertise/OurExpertise.scss";
 import "~/app/_Components/PageBanner/PageBanner.scss";
 import "~/app/_Components/SatisfactionSurvey/SatisfactionSurvey.scss";
 import "~/app/[locale]/about/_components/AboutContent/AboutContent.scss";
+import "~/app/[locale]/services/services.scss";
 import "~/app/[locale]/contact/Contact.scss";
 
 // Pages styles

@@ -136,11 +136,11 @@
   }
 
   .swiper-image {
-    //max-width: 25vw;
-    border-radius: 8px;
     max-width: 100%;
     height: auto;
-    //max-height: 30vw;
+    object-fit: cover !important;
+    padding: 10px;
+    border-radius: 20px;
   }
 
   .swiper-slide {
