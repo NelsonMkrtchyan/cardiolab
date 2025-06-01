@@ -205,7 +205,7 @@ const ContactForm = () => {
                 >
                   <SwiperSlide>
                     <ImageWithLoader
-                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJBBuhMgHJqI5EuVZFjgRGzykmXKNTw4WcSeQ"
+                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluga5tUTviePapmd4fjRNBXFSt1CEhgvq2b0rM"
                       alt="Contact"
                       width={600}
                       height={400}
@@ -214,7 +214,7 @@ const ContactForm = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <ImageWithLoader
-                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2m54Bt3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic"
+                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu7ZZJ3LYxTDGf3YpRJEC1nwk6tWHeNq5xSbUv"
                       alt="Contact"
                       width={600}
                       height={400}
