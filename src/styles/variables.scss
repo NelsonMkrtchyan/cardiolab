@@ -18,8 +18,32 @@ $footer-all-size: 18px;
 
 $white-color: #fff;
 $grey-color: #4a6f8a;
-$blue-color: #0046c0;
 $black-color: #111111;
+
+
+@keyframes a-one {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes a-two {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 
 /* Import Armenian handwriting font */
 @font-face {

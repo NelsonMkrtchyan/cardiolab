@@ -1256,24 +1256,6 @@ button {
 
 /*-- End About --*/
 
-/*-- Speciality --*/
-.speciality-right-two {
-  position: relative;
-
-  &:before {
-    position: absolute;
-    content: '';
-    top: -25px;
-    right: 0;
-    width: 405px;
-    height: 300px;
-    z-index: -1;
-    background-color: $main-color;
-  }
-}
-
-/*-- End Speciality --*/
-
 /*-- Welcome --*/
 .welcome-left-two {
   position: relative;

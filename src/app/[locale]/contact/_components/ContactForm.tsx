@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { CardioLabInfo } from "~/constants/menus";
 import { IoCall } from "react-icons/io5";
@@ -77,122 +77,121 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="drop-area landing-section">
+      <div className="drop-area">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-lg-7 p-0">
-              <div
-                className="drop-item drop-img"
-                style={{
-                  backgroundImage: `url(/images/contact-form-bg.png)`,
-                }}
-              >
-                <div className="drop-left">
-                  <h2>{tComponents("ContactForm.title")}</h2>
+            <div className="col-lg-7 drop-item">
+              {/*<div*/}
+              {/*  className="drop-img"*/}
+              {/*  style={{*/}
+              {/*    backgroundImage: `url(/images/contact-form-bg.png)`,*/}
+              {/*  }}*/}
+              {/*/>*/}
+              <div className="drop-left">
+                <h2>{tComponents("ContactForm.title")}</h2>
 
-                  <form onSubmit={handleSubmit}>
-                    <div className="row">
-                      <div className="col-lg-6 col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            name="name"
-                            className="form-control"
-                            placeholder={tComponents(
-                              "ContactForm.placeholders.name",
-                            )}
-                            required
-                            value={formData.name}
-                            onChange={handleInputChange}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6 col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            name="email"
-                            className="form-control"
-                            placeholder={tComponents(
-                              "ContactForm.placeholders.email",
-                            )}
-                            required
-                            value={formData.email}
-                            onChange={handleInputChange}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6 col-md-6 col-sm-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            name="number"
-                            className="form-control"
-                            placeholder={tComponents(
-                              "ContactForm.placeholders.phone",
-                            )}
-                            required
-                            value={formData.number}
-                            onChange={handleInputChange}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6 col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            name="subject"
-                            className="form-control"
-                            placeholder={tComponents(
-                              "ContactForm.placeholders.subject",
-                            )}
-                            required
-                            value={formData.subject}
-                            onChange={handleInputChange}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-12 col-md-12 col-sm-12">
-                        <div className="form-group">
-                          <textarea
-                            name="message"
-                            cols={30}
-                            rows={6}
-                            className="form-control"
-                            placeholder={tComponents(
-                              "ContactForm.placeholders.message",
-                            )}
-                            required
-                            value={formData.message}
-                            onChange={handleInputChange}
-                          ></textarea>
-                        </div>
-                      </div>
-
-                      <div className="col-lg-12 col-md-12 col-sm-12">
-                        <button
-                          type="submit"
-                          className="drop-btn"
-                          disabled={isLoading}
-                        >
-                          {isLoading
-                            ? tComponents("ContactForm.sending")
-                            : tComponents("ContactForm.sendMessage")}
-                        </button>
-                        {/*{status && <p>{status}</p>}*/}
+                <form onSubmit={handleSubmit}>
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name="name"
+                          className="form-control"
+                          placeholder={tComponents(
+                            "ContactForm.placeholders.name",
+                          )}
+                          required
+                          value={formData.name}
+                          onChange={handleInputChange}
+                        />
                       </div>
                     </div>
-                  </form>
-                </div>
+
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name="email"
+                          className="form-control"
+                          placeholder={tComponents(
+                            "ContactForm.placeholders.email",
+                          )}
+                          required
+                          value={formData.email}
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-lg-6 col-md-6 col-sm-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name="number"
+                          className="form-control"
+                          placeholder={tComponents(
+                            "ContactForm.placeholders.phone",
+                          )}
+                          required
+                          value={formData.number}
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-lg-6 col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name="subject"
+                          className="form-control"
+                          placeholder={tComponents(
+                            "ContactForm.placeholders.subject",
+                          )}
+                          required
+                          value={formData.subject}
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-lg-12 col-md-12 col-sm-12">
+                      <div className="form-group">
+                        <textarea
+                          name="message"
+                          cols={30}
+                          rows={6}
+                          className="form-control"
+                          placeholder={tComponents(
+                            "ContactForm.placeholders.message",
+                          )}
+                          required
+                          value={formData.message}
+                          onChange={handleInputChange}
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <div className="col-lg-12 col-md-12 col-sm-12">
+                      <button
+                        type="submit"
+                        className="drop-btn"
+                        disabled={isLoading}
+                      >
+                        {isLoading
+                          ? tComponents("ContactForm.sending")
+                          : tComponents("ContactForm.sendMessage")}
+                      </button>
+                      {/*{status && <p>{status}</p>}*/}
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
 
             <div className="col-lg-5 p-0">
-              <div className="speciality-item speciality-right speciality-right-two speciality-right-three">
+              <div className="speciality-right">
                 <Swiper
                   slidesPerView={1}
                   autoplay={{
