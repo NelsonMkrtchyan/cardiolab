@@ -1,0 +1,246 @@
+@import "~/styles/variables";
+
+.services-section {
+  padding: 80px 0;
+  //background-color: #f9f9f9;
+
+  margin: 50px 0;
+  border-radius: 8px;
+
+  &.dark {
+    background-color: #f0f0f0;
+  }
+
+  .services-swiper-container {
+    margin-bottom: 50px;
+    padding: 10px;
+    //box-shadow: 0 0 20px 0 $light-grey;
+
+    //border-radius: 8px;
+
+    .services-swiper {
+      padding: 50px 5px; // Space for pagination dots
+
+      .swiper-pagination {
+        bottom: 0;
+
+        .swiper-pagination-bullet {
+          width: 10px;
+          height: 10px;
+          background-color: rgba($main-color, 0.3);
+          opacity: 1;
+
+          &-active {
+            background-color: $main-color;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: $main-color;
+
+        &:hover {
+          color: $second-color;
+        }
+
+        &:after {
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+
+      .swiper-button-next {
+        right: 10px;
+      }
+
+      .swiper-button-prev {
+        left: 10px;
+      }
+    }
+  }
+
+  .service-category-card {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 8px;
+    //box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 20px 0 $light-grey;
+
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+      .icon-container {
+        //background-color: $second-color;
+
+        i {
+          color: white;
+        }
+      }
+
+      h3 {
+        color: $second-color;
+      }
+    }
+
+    .icon-container {
+      //width: 80px;
+      //height: 80px;
+      border-radius: 50%;
+      //background-color: rgba($main-color, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 32px;
+        color: $main-color;
+        transition: color 0.3s ease;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: $main-color;
+      transition: color 0.3s ease;
+    }
+
+    p {
+      color: $paragraph-color;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+  }
+
+  .signature-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 2px;
+      background-color: rgba($second-color, 0.3);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 2px;
+      background-color: rgba($second-color, 0.3);
+    }
+
+    .signature-text {
+      //font-family: 'Tumanian', 'Dancing Script', cursive;
+      font-size: 24px;
+      color: $main-color;
+      margin-bottom: 0;
+      font-style: italic;
+    }
+  }
+
+  .cta-container {
+    text-align: center;
+    margin-top: 20px;
+
+    .view-all-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: $main-color;
+      color: white;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $second-color;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 767px) {
+  .services-section {
+    padding: 50px 0;
+
+    .section-title {
+      margin-bottom: 30px;
+
+      h2 {
+        font-size: 26px;
+        padding-bottom: 10px;
+      }
+    }
+
+    .services-swiper-container {
+      margin-bottom: 30px;
+
+      .services-swiper {
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none;
+        }
+      }
+    }
+
+    .signature-section {
+      margin: 30px 0;
+
+      .signature-text {
+        font-size: 20px;
+      }
+    }
+
+    .cta-container {
+      .view-all-btn {
+        padding: 10px 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-section {
+    .service-category-card {
+      padding: 25px 20px;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

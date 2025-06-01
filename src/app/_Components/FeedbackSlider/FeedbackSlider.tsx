@@ -36,11 +36,17 @@ const FeedbackSlider: React.FC = () => {
   return (
     <>
       <div
-        className="review-area ptb-100"
+        className="review-area ptb-150"
         style={{
           backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu1vFYqy2GN8X3FsiITKCzR9wVM5lohEmPqWDv)`,
         }}
       >
+        <div
+          className="review-area-background"
+          style={{
+            backgroundImage: `url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu1vFYqy2GN8X3FsiITKCzR9wVM5lohEmPqWDv)`,
+          }}
+        />
         <div className="container">
           <Swiper
             // navigation={true}

@@ -2,11 +2,13 @@ import React from "react";
 import PageBanner from "~/app/_Components/PageBanner/PageBanner";
 import AboutContent from "~/app/[locale]/about/_components/AboutContent/AboutContent";
 import { useTranslations } from "next-intl";
-import OurExpertise from "~/app/_Disin_components/common/OurExpertise";
 import Services from "~/app/_Disin_components/common/Services";
 
 import ImagesDB from "~/constants/ImageDatabase.json";
 import SatisfactionSurvey from "~/app/_Components/SatisfactionSurvey/SatisfactionSurvey";
+import OurExpertise from "~/app/_Components/OurExpertise/OurExpertise";
+import ServicesSection from "~/app/[locale]/services/_components/ServicesSection/ServicesSection";
+import { ServicesCategory } from "~/constants/priceList";
 
 export default function About() {
   const tMenu = useTranslations("Menu");
@@ -24,14 +26,13 @@ export default function About() {
         // bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
         // bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
-
       <AboutContent />
-
       <OurExpertise />
-
       <SatisfactionSurvey />
-
-      <Services />
+      {/*<Services />*/}
+      {/*<ServicesSection />*/}
+      {/*// In your AboutUs component:*/}
+      <ServicesSection />
     </>
   );
 }

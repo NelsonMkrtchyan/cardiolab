@@ -2,8 +2,8 @@
 
 import { useLocale } from "next-intl";
 import { doctorGuides } from "~/constants/doctorGuide";
-import BlueCard from "~/app/_Disin_components/cards/BlueCard";
 import { type LocaleT } from "~/types";
+import BlueCard from "~/app/_Components/cards/BlueCard";
 
 const DoctorGuideCards = () => {
   const locale: string = useLocale();

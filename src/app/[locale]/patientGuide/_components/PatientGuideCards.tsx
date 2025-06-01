@@ -2,7 +2,7 @@
 
 import { useLocale } from "next-intl";
 import { patientGuides } from "~/constants/patientGuide";
-import BlueCard from "~/app/_Disin_components/cards/BlueCard";
+import BlueCard from "~/app/_Components/cards/BlueCard";
 import { type LocaleT } from "~/types";
 
 const PatientGuideCards = () => {

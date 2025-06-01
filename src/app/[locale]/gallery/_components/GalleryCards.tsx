@@ -1,6 +1,6 @@
 "use client";
 
-import BlueCard from "~/app/_Disin_components/cards/BlueCard";
+import BlueCard from "~/app/_Components/cards/BlueCard";
 import type React from "react";
 import { useTranslations } from "next-intl";
 import { IoIosImages } from "react-icons/io";

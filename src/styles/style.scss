@@ -82,7 +82,6 @@ This files table contents are outlined below>>>>>
 
 }
 
-
 /*-- Default CSS --*/
 body {
   color: $grey-color;
@@ -142,6 +141,11 @@ img {
 .ptb-100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.ptb-150 {
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 
 .ptb-30 {
@@ -812,7 +816,7 @@ button {
 
 /*-- Emergency --*/
 .emergency-area {
-  margin-top: -125px;
+  //margin-top: -125px;
   position: relative;
   z-index: 1;
 }
@@ -3020,32 +3024,6 @@ button {
 
 /*-- Patient Guid section --*/
 /*-- End Patient Guid --*/
-
-/*-- PriceList section --*/
-.price-list {
-  .section-title {
-    p {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-  }
-
-  .price-list-content {
-    margin: 0 5px;
-    padding: 10px 0;
-    border: 1px solid $light-grey;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px $spanish-grey;
-  }
-
-  .price-list-info {
-    margin: 20px 5px 0 5px;
-  }
-}
-
-
-/*-- End PriceList --*/
 
 /*-- Faq section --*/
 .faq-area-two {
