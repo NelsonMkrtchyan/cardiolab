@@ -108,7 +108,7 @@ const ServicesSection = ({
           </div>
         )}
 
-        <div className="cta-container">
+        <div className="cta-container button-type-1">
           <Link href={ctaLink} className="view-all-btn">
             {tGeneral("SeeAll")}
           </Link>
