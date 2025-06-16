@@ -17,6 +17,7 @@ export type ServiceType = {
   description?: string;
   category: ServicesCategory;
   doctorsList?: number[]; // List of doctor IDs associated with the service
+  hideInServicesPage?: boolean; // Optional field to hide service in the services page
 };
 
 export interface CardI {
@@ -136,6 +137,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.Consultation,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 1,
@@ -152,7 +154,7 @@ const services: ServiceType[] = [
     price: 28000,
     description: "",
     category: ServicesCategory.Echocardiography,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 8,
@@ -192,7 +194,7 @@ const services: ServiceType[] = [
     price: 30000,
     description: "",
     category: ServicesCategory.Echocardiography,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 13,
@@ -233,7 +235,7 @@ const services: ServiceType[] = [
     price: 32000,
     description: "",
     category: ServicesCategory.Echocardiography,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 29,
@@ -241,7 +243,7 @@ const services: ServiceType[] = [
     price: 28000,
     description: "",
     category: ServicesCategory.Echocardiography,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   // #################################################################################
   {
@@ -250,7 +252,7 @@ const services: ServiceType[] = [
     price: 22000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 18,
@@ -258,7 +260,7 @@ const services: ServiceType[] = [
     price: 33000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 19,
@@ -266,7 +268,7 @@ const services: ServiceType[] = [
     price: 45000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 21,
@@ -274,7 +276,7 @@ const services: ServiceType[] = [
     price: 60000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 20,
@@ -282,7 +284,7 @@ const services: ServiceType[] = [
     price: 99000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 22,
@@ -290,7 +292,7 @@ const services: ServiceType[] = [
     price: 160000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   {
     id: 17,
@@ -298,7 +300,7 @@ const services: ServiceType[] = [
     price: 32000,
     description: "",
     category: ServicesCategory.HolterMonitoring,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
   },
   // #################################################################################
   {

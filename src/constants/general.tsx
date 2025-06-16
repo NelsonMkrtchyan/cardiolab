@@ -108,7 +108,7 @@ export const aboutUsContent: AboutUsContentType = [
     id: 4,
     name: "Values",
     title: {
-      am: "Մեր Արժեքներ",
+      am: "Մեր Արժեքները",
     },
     description: {
       am: [
@@ -129,11 +129,13 @@ export const aboutUsContent: AboutUsContentType = [
         },
         {
           title: "Պրոֆեսիոնալիզմ",
-          description: "",
+          description:
+            "Մենք ծառայություններ ենք մատուցում մեծագույն պատասխանատվությամբ և նվիրումով՝ մեր պացիենտների առողջությունը առաջնահերթ դնելով",
         },
         {
           title: "Շարունակական Ջարգացում",
-          description: "",
+          description:
+            "Մենք միշտ ձգտում ենք աճի՝ հետևելով նորագույն գիտական ձեռքբերումներին և բարելավելով մեր հմտություններն ու ծառայությունները",
         },
       ],
     },
