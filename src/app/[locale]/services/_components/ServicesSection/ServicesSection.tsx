@@ -86,17 +86,19 @@ const ServicesSection = ({
           >
             {serviceCategories.map((category) => (
               <SwiperSlide key={category.id}>
-                <div className="service-category-card">
-                  <div className="icon-container">
-                    <Image
-                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluOKOekRNNgi3eV0yDv2z7lICnRwBfZLqj5t8r"
-                      alt="CardioLab Logo"
-                      width={35}
-                      height={35}
-                    />
+                <Link href={ctaLink}>
+                  <div className="service-category-card">
+                    <div className="icon-container">
+                      <Image
+                        src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluOKOekRNNgi3eV0yDv2z7lICnRwBfZLqj5t8r"
+                        alt="CardioLab Logo"
+                        width={35}
+                        height={35}
+                      />
+                    </div>
+                    <h3>{category.title}</h3>
                   </div>
-                  <h3>{category.title}</h3>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

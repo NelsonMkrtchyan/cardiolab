@@ -244,7 +244,7 @@ export const staff: StaffType = [
   {
     id: 15,
     name: {
-      am: "Ասղտիկ Ավետիքյան",
+      am: "Աստղիկ Ավետիքսյանի",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluzfsrDYCJcmH7QjURruLeMoFslfS6nVvkpdNb",
@@ -301,7 +301,7 @@ export const staff: StaffType = [
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluilm0PHUMdgQAzE8HpcawsFuGDr9USml2KXOR",
     role: {
-      am: "Բուժքույր",
+      am: "Պատասխանատու Բուժքույր",
     },
     category: StaffCategory.NursingStaff,
     visibility: true,
@@ -340,7 +340,7 @@ export const staff: StaffType = [
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluga5tUTviePapmd4fjRNBXFSt1CEhgvq2b0rM",
     role: {
-      am: "Ադմինիստրատոր",
+      am: "Մենեջեր",
     },
     category: StaffCategory.AdministrativeStaff,
     visibility: true,

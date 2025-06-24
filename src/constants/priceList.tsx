@@ -152,7 +152,7 @@ const services: ServiceType[] = [
   {
     id: 8,
     name: "ԷՍԳ – 12Ա",
-    price: 3600,
+    price: 4000,
     description: "",
     category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
