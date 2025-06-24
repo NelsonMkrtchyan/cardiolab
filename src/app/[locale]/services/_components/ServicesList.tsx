@@ -33,22 +33,14 @@ const ServicesList = () => {
     switch (category) {
       case ServicesCategory.Consultation:
         return tService(category) || "Consultations";
-      case ServicesCategory.Echocardiography:
-        return tService(category) || "Echocardiography";
-      case ServicesCategory.HolterMonitoring:
-        return tService(category) || "Holter Monitoring";
       case ServicesCategory.Ultrasound:
         return tService(category) || "Ultrasound";
       case ServicesCategory.DuplexScan:
         return tService(category) || "Duplex Scan";
-      case ServicesCategory.RhythmDeviceCheck:
-        return tService(category) || "Rhythm Device Check";
       case ServicesCategory.CardiacCare:
         return tService(category) || "Cardiac Care";
       case ServicesCategory.PreventiveScreening:
         return tService(category) || "Preventive Screening";
-      case ServicesCategory.Implantation:
-        return tService(category) || "Implantation";
       default:
         return String(category);
     }
@@ -101,7 +93,10 @@ const ServicesList = () => {
 
         <div className="services-accordion">
           {categorizedServicesOrder.map((category) => {
-            const services = servicesByCategory[category] ?? [];
+            const services =
+              servicesByCategory[category]?.filter(
+                (service) => !service.hideInServicesPage,
+              ) ?? [];
             if (services.length === 0) return null;
 
             const isOpen = openCategory === category;

@@ -26,7 +26,7 @@
 .main-nav nav .navbar-nav .nav-item .dropdown-menu {
     -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
-    background: #0d1028;
+    /*background: #0d1028;*/
     position: absolute;
     top: 80px;
     left: 0;
@@ -56,7 +56,7 @@
     padding: 8px 15px;
     margin: 0;
     display: block;
-    color: #ffffff;
+    /*color: #ffffff;*/
 }
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {

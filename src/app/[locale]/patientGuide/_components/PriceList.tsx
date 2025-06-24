@@ -10,7 +10,9 @@ import { type LocaleT } from "~/types";
 const PriceList = () => {
   const locale: string = useLocale();
   const t = useTranslations("PriceList");
-  const localisedPriceList = priceListData[locale as LocaleT];
+  const localisedPriceList = priceListData[locale as LocaleT].filter(
+    (data) => !data.hideInPriceListPage,
+  );
 
   // const handleDownload = () => {
   //   // PDF file path

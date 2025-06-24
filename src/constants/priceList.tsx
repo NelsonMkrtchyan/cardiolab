@@ -1,13 +1,9 @@
 export enum ServicesCategory {
   Consultation = "consultation",
-  HolterMonitoring = "holterMonitoring", // Հոլտեր քննություն
-  Echocardiography = "echocardiography", // Էխոսրտագրություն (including stress)
-  RhythmDeviceCheck = "rhythmDeviceCheck", // Սրտի ռիթմավար սարքերի քննություն
   DuplexScan = "duplexScan", // Մագիստրալ անոթների դուպլեքս հետազոտություն
   Ultrasound = "ultraSound", // Ուլտրաձայնային հետազոտություն
   CardiacCare = "cardiacCare", // Սրտային խնամք
   PreventiveScreening = "preventiveScreening", // Տարեկան կանխարգելիչ բուժ․ զննում
-  Implantation = "implantation", // Իմպլանտացիա
 }
 
 export type ServiceType = {
@@ -18,6 +14,7 @@ export type ServiceType = {
   category: ServicesCategory;
   doctorsList?: number[]; // List of doctor IDs associated with the service
   hideInServicesPage?: boolean; // Optional field to hide service in the services page
+  hideInPriceListPage?: boolean; // Optional field to hide service in the priceList page
 };
 
 export interface CardI {
@@ -32,14 +29,10 @@ interface PriceListI {
 
 export const categorizedServicesOrder = [
   ServicesCategory.Consultation,
-  ServicesCategory.Echocardiography,
-  ServicesCategory.HolterMonitoring,
+  ServicesCategory.CardiacCare,
   ServicesCategory.Ultrasound,
   ServicesCategory.DuplexScan,
-  ServicesCategory.RhythmDeviceCheck,
-  ServicesCategory.CardiacCare,
   ServicesCategory.PreventiveScreening,
-  ServicesCategory.Implantation,
 ];
 
 // Armenian service names used for all languages
@@ -153,7 +146,7 @@ const services: ServiceType[] = [
     name: "ԷՍԳ, ԷխոՍԳ, սրտաբանի խորհրդատվություն",
     price: 28000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -161,7 +154,7 @@ const services: ServiceType[] = [
     name: "ԷՍԳ – 12Ա",
     price: 3600,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -169,7 +162,7 @@ const services: ServiceType[] = [
     name: "Էխոսրտագրություն մեծահասակի",
     price: 13000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -177,7 +170,7 @@ const services: ServiceType[] = [
     name: "Էխոսրտագրություն մանկական",
     price: 13000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -185,7 +178,7 @@ const services: ServiceType[] = [
     name: "Ֆետալ էխոՍԳ",
     price: 20000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -193,7 +186,7 @@ const services: ServiceType[] = [
     name: "Ֆետալ էխոՍԳ + սրտաբանի խորհրդատվություն",
     price: 30000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -201,7 +194,7 @@ const services: ServiceType[] = [
     name: "Կոնտրաստ ԷխոՍԳ (bubble study)",
     price: 25000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -209,7 +202,7 @@ const services: ServiceType[] = [
     name: "Խորացված ԷխոՍԳ",
     price: 25000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -217,7 +210,7 @@ const services: ServiceType[] = [
     name: "Սթրես ԷՍԳ",
     price: 18000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -225,7 +218,7 @@ const services: ServiceType[] = [
     name: "Սթրես ԷխոՍԳ",
     price: 22000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
 
@@ -234,7 +227,7 @@ const services: ServiceType[] = [
     name: "Սթրես ԷխոՍԳ + սրտաբանի խորհրդատվություն",
     price: 32000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -242,7 +235,7 @@ const services: ServiceType[] = [
     name: "Սթրես ԷՍԳ + սրտաբանի խորհրդատվություն",
     price: 28000,
     description: "",
-    category: ServicesCategory.Echocardiography,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   // #################################################################################
@@ -251,7 +244,7 @@ const services: ServiceType[] = [
     name: "Հոլտեր քննություն 24 ժամ",
     price: 22000,
     description: "",
-    category: ServicesCategory.HolterMonitoring,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -259,7 +252,7 @@ const services: ServiceType[] = [
     name: "Հոլտեր քննություն 48 ժամ",
     price: 33000,
     description: "",
-    category: ServicesCategory.HolterMonitoring,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -267,7 +260,7 @@ const services: ServiceType[] = [
     name: "Հոլտեր քննություն 72 ժամ",
     price: 45000,
     description: "",
-    category: ServicesCategory.HolterMonitoring,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -275,7 +268,7 @@ const services: ServiceType[] = [
     name: "Հոլտեր քննություն մինչեւ 7 oր",
     price: 60000,
     description: "",
-    category: ServicesCategory.HolterMonitoring,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -283,7 +276,7 @@ const services: ServiceType[] = [
     name: "Հոլտեր քննություն մինչեւ 14 օր",
     price: 99000,
     description: "",
-    category: ServicesCategory.HolterMonitoring,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -291,7 +284,7 @@ const services: ServiceType[] = [
     name: "Հոլտեր քննություն մինչեւ մինչեւ 30 օր",
     price: 160000,
     description: "",
-    category: ServicesCategory.HolterMonitoring,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
   },
   {
@@ -299,8 +292,17 @@ const services: ServiceType[] = [
     name: "Հոլտեր քննություն 24 ժամ + սրտաբանի խորհրդատվություն",
     price: 32000,
     description: "",
-    category: ServicesCategory.HolterMonitoring,
+    category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+  },
+  {
+    id: 53,
+    name: "Հոլտեր քննություն",
+    price: 0,
+    description: "",
+    category: ServicesCategory.CardiacCare,
+    hideInServicesPage: false,
+    hideInPriceListPage: true,
   },
   // #################################################################################
   {
@@ -316,7 +318,7 @@ const services: ServiceType[] = [
     name: "Սրտի ռիթմավար սարքերի քննություն",
     price: 12000,
     description: "",
-    category: ServicesCategory.RhythmDeviceCheck,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -372,7 +374,7 @@ const services: ServiceType[] = [
     name: "Արտագնա հոլտեր քննություն 24 ժամ",
     price: 35000,
     description: "",
-    category: ServicesCategory.HolterMonitoring,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -382,13 +384,15 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.PreventiveScreening,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    hideInServicesPage: true,
+    hideInPriceListPage: true,
   },
   {
     id: 11,
     name: "Իմպլանտացվող սրտի մոնիտորի իմպլանտացիա",
     price: 1200000,
     description: "",
-    category: ServicesCategory.Implantation,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   // #################################################################################

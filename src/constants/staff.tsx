@@ -283,6 +283,19 @@ export const staff: StaffType = [
   {
     id: 18,
     name: {
+      am: "Գայանե Բաղդասարյան",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlupG8vuW69E0NFskLoCO7QfyXM4AIan2bKlp6J",
+    role: {
+      am: "Առողջության և Առողջ Ապրելակերպի Մասնագետ",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: true,
+  },
+  {
+    id: 19,
+    name: {
       am: "Մոնիկա Մկրտչյան",
     },
     image:
@@ -294,7 +307,7 @@ export const staff: StaffType = [
     visibility: true,
   },
   {
-    id: 19,
+    id: 20,
     name: {
       am: "Քնարիկ Զաքարյան",
     },
@@ -306,32 +319,6 @@ export const staff: StaffType = [
     category: StaffCategory.NursingStaff,
     visibility: false,
   },
-  {
-    id: 24,
-    name: {
-      am: "Գայանե Բաղդասարյան",
-    },
-    image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlupG8vuW69E0NFskLoCO7QfyXM4AIan2bKlp6J",
-    role: {
-      am: "Առողջության և Առողջ Ապրելակերպի Մասնագետ",
-    },
-    category: StaffCategory.MedicalStaff,
-    visibility: true,
-  },
-  // {
-  //   id: 20,
-  //   name: {
-  //     am: "Քնարիկ Առաքելյան",
-  //   },
-  //   image:
-  //     "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluamzUHVKeDI891qSZ0fT7zH2wQLEbgPcoRV4J",
-  //   role: {
-  //     am: "Հասարակայնության Հետ Կապերի և Հաղորդակցության Պատասխանատու",
-  //   },
-  //   category: StaffCategory.AdministrativeStaff,
-  //   visibility: true,
-  // },
   {
     id: 21,
     name: {
