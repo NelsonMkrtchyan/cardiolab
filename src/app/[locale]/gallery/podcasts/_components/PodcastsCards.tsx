@@ -8,7 +8,9 @@ import Card from "~/app/[locale]/gallery/podcasts/_components/Card";
 
 const PodcastsCards: React.FC = () => {
   const locale: string = useLocale();
-  const localisedPodcasts = podcasts[locale as LocaleT];
+  const localisedPodcasts = podcasts[locale as LocaleT].sort(
+    (a, b) => b.id - a.id,
+  );
   return (
     <>
       <div className="podcasts-area pt-100 pb-70">
