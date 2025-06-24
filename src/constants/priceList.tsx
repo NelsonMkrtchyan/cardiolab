@@ -32,8 +32,11 @@ export const categorizedServicesOrder = [
   ServicesCategory.CardiacCare,
   ServicesCategory.Ultrasound,
   ServicesCategory.DuplexScan,
-  ServicesCategory.PreventiveScreening,
+  ServicesCategory.PreventiveScreening, // is not visible
 ];
+
+const cardioDoctorsIds = [1, 3, 7, 25, 4, 24, 2, 27, 8, 9];
+const nursesIds = [19];
 
 // Armenian service names used for all languages
 const services: ServiceType[] = [
@@ -43,7 +46,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1],
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 35,
@@ -51,7 +54,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2],
+    doctorsList: [1],
   },
   {
     id: 36,
@@ -59,7 +62,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5],
+    doctorsList: [5],
   },
   {
     id: 37,
@@ -67,7 +70,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [2],
   },
   {
     id: 38,
@@ -75,7 +78,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5],
+    doctorsList: [1, 3, 24],
   },
   {
     id: 39,
@@ -83,6 +86,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [13],
   },
   {
     id: 40,
@@ -90,6 +94,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
+    doctorsList: [11],
   },
   {
     id: 41,
@@ -97,7 +102,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [],
   },
   {
     id: 42,
@@ -105,7 +110,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [13],
   },
   {
     id: 43,
@@ -113,7 +118,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [16],
   },
   {
     id: 14,
@@ -121,7 +126,7 @@ const services: ServiceType[] = [
     price: 25000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [17],
   },
   {
     id: 15,
@@ -138,7 +143,7 @@ const services: ServiceType[] = [
     price: 20000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [18],
   },
   // ######### ######### ######### ######### ######### ######### ######### #########
   {
@@ -148,6 +153,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 8,
@@ -155,7 +161,7 @@ const services: ServiceType[] = [
     price: 4000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: nursesIds,
   },
   {
     id: 7,
@@ -163,7 +169,7 @@ const services: ServiceType[] = [
     price: 13000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 6,
@@ -171,7 +177,7 @@ const services: ServiceType[] = [
     price: 13000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [5],
   },
   {
     id: 32,
@@ -179,7 +185,7 @@ const services: ServiceType[] = [
     price: 20000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [5],
   },
   {
     id: 33,
@@ -188,6 +194,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: [5],
   },
   {
     id: 13,
@@ -195,7 +202,7 @@ const services: ServiceType[] = [
     price: 25000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [5],
   },
   {
     id: 12,
@@ -203,7 +210,7 @@ const services: ServiceType[] = [
     price: 25000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 28,
@@ -211,7 +218,7 @@ const services: ServiceType[] = [
     price: 18000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 47,
@@ -219,7 +226,7 @@ const services: ServiceType[] = [
     price: 22000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: cardioDoctorsIds,
   },
 
   {
@@ -229,6 +236,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 29,
@@ -237,6 +245,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   // #################################################################################
   {
@@ -246,6 +255,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 18,
@@ -254,6 +264,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 19,
@@ -262,6 +273,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 21,
@@ -270,6 +282,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 20,
@@ -278,6 +291,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 22,
@@ -286,6 +300,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 17,
@@ -294,6 +309,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 53,
@@ -303,6 +319,7 @@ const services: ServiceType[] = [
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: false,
     hideInPriceListPage: true,
+    doctorsList: cardioDoctorsIds,
   },
   // #################################################################################
   {
@@ -311,7 +328,7 @@ const services: ServiceType[] = [
     price: 12000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: cardioDoctorsIds,
   },
   {
     id: 31,
@@ -319,7 +336,7 @@ const services: ServiceType[] = [
     price: 12000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [7],
   },
   {
     id: 25,
@@ -327,7 +344,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Ultrasound,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [11, 14],
   },
   {
     id: 48,
@@ -335,7 +352,7 @@ const services: ServiceType[] = [
     price: 12000,
     description: "",
     category: ServicesCategory.Ultrasound,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [11, 14],
   },
   {
     id: 23,
@@ -343,7 +360,7 @@ const services: ServiceType[] = [
     price: 20000,
     description: "",
     category: ServicesCategory.DuplexScan,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [15],
   },
   {
     id: 24,
@@ -351,7 +368,7 @@ const services: ServiceType[] = [
     price: 12000,
     description: "",
     category: ServicesCategory.DuplexScan,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [15],
   },
   {
     id: 51,
@@ -359,7 +376,7 @@ const services: ServiceType[] = [
     price: 40000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [1, 3, 24],
   },
   {
     id: 4,
@@ -367,7 +384,7 @@ const services: ServiceType[] = [
     price: 30000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [],
   },
   {
     id: 2,
@@ -375,7 +392,7 @@ const services: ServiceType[] = [
     price: 35000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [],
   },
   {
     id: 52,
@@ -393,7 +410,7 @@ const services: ServiceType[] = [
     price: 1200000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [],
   },
   // #################################################################################
 ];

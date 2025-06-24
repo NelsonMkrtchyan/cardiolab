@@ -358,4 +358,71 @@ export const staff: StaffType = [
     category: StaffCategory.AdministrativeStaff,
     visibility: true,
   },
+  //   #######
+  {
+    id: 24,
+    name: {
+      am: "Մարիամ Հովակիմյան",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+    role: {
+      am: "Սրտային Անբավարարության Մասնագետ",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: false,
+  },
+  {
+    id: 25,
+    name: {
+      am: "Մերի Պապիկան",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+    role: {
+      am: "Սրտաբան",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: false,
+  },
+  {
+    id: 26,
+    name: {
+      am: "Նադեժդա Իսկանդարյան",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+    role: {
+      am: "Սրտաբան",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: false,
+  },
+  {
+    id: 27,
+    name: {
+      am: "Աննա Գևորգյան",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+    role: {
+      am: "Սրտաբան",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: false,
+  },
+  // #####
+  {
+    id: 28,
+    name: {
+      am: "Սյուզաննա Թելունց",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+    role: {
+      am: "Սրտաբան",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: false,
+  },
 ];

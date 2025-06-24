@@ -123,40 +123,40 @@ const ServicesList = () => {
                         <li key={service.id} className="service-item">
                           <span className="service-name">{service.name}</span>
 
-                          {/*{service.doctorsList &&*/}
-                          {/*  service.doctorsList.length > 0 && (*/}
-                          {/*    <div className="service-doctors col-6">*/}
-                          {/*      <div className="col-2 doctors-label">*/}
-                          {/*        <span className="">*/}
-                          {/*          {tGeneral("Doctors") || "Doctors"}:{" "}*/}
-                          {/*        </span>*/}
-                          {/*      </div>*/}
-                          {/*      <div className="col-8 doctors-list">*/}
-                          {/*        <span className="">*/}
-                          {/*          {service.doctorsList?.map(*/}
-                          {/*            (doctorId: number, index: number) => {*/}
-                          {/*              const doctor = staff.find(*/}
-                          {/*                (doc: EmployeeType) =>*/}
-                          {/*                  doc.id === doctorId &&*/}
-                          {/*                  doc.visibility,*/}
-                          {/*              );*/}
-                          {/*              if (!doctor) return null;*/}
+                          {service.doctorsList &&
+                            service.doctorsList.length > 0 && (
+                              <div className="service-doctors col-6">
+                                <div className="col-2 doctors-label">
+                                  <span className="">
+                                    {tGeneral("Doctors") || "Doctors"}:{" "}
+                                  </span>
+                                </div>
+                                <div className="col-8 doctors-list">
+                                  <span className="">
+                                    {service.doctorsList?.map(
+                                      (doctorId: number, index: number) => {
+                                        const doctor = staff.find(
+                                          (doc: EmployeeType) =>
+                                            doc.id === doctorId &&
+                                            doc.visibility,
+                                        );
+                                        if (!doctor) return null;
 
-                          {/*              return (*/}
-                          {/*                <Link key={doctorId} href={`/staff`}>*/}
-                          {/*                  {doctor.name.am}*/}
-                          {/*                  {index <*/}
-                          {/*                    (service.doctorsList?.length ??*/}
-                          {/*                      0) -*/}
-                          {/*                      1 && ", "}*/}
-                          {/*                </Link>*/}
-                          {/*              );*/}
-                          {/*            },*/}
-                          {/*          )}*/}
-                          {/*        </span>*/}
-                          {/*      </div>*/}
-                          {/*    </div>*/}
-                          {/*  )}*/}
+                                        return (
+                                          <Link key={doctorId} href={`/staff`}>
+                                            {doctor.name.am}
+                                            {index <
+                                              (service.doctorsList?.length ??
+                                                0) -
+                                                1 && ", "}
+                                          </Link>
+                                        );
+                                      },
+                                    )}
+                                  </span>
+                                </div>
+                              </div>
+                            )}
                         </li>
                       ))}
                     </ul>
