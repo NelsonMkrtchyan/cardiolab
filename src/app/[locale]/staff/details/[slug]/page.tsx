@@ -7,14 +7,14 @@ import useEmployee from "~/app/[locale]/staff/_hooks/useEmployee";
 import NotFound from "~/app/[locale]/not-found";
 import ImagesDB from "~/constants/ImageDatabase.json";
 
-export default function _page() {
+export default function page() {
   const tMenu = useTranslations("Menu");
   const { employeeDoNotExist, name, role, image } = useEmployee();
   return (
     <>
       <PageBanner
         pageTitle={name ?? tMenu("EmployeeDetails")}
-        homePageUrl="/"
+        homePageUrl="/staff"
         homePageText={tMenu("Staff")}
         activePageText={tMenu("EmployeeDetails")}
         bgImage={`${ImagesDB.AbstractImages.abstract_two}`}

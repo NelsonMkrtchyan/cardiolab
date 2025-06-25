@@ -15,11 +15,7 @@ const Card = ({ employee, className }: CardI) => {
   return (
     <>
       <div className={`doctor-card ${className}`}>
-        <Link
-          className={"doctor-card-link"}
-          href={employeeDetailPageLink}
-          onClick={(e) => e.preventDefault()}
-        >
+        <Link className={"doctor-card-link"} href={employeeDetailPageLink}>
           <div className="doctor-item">
             <div className="doctor-top">
               <ImageWithLoader

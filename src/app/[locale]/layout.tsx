@@ -34,6 +34,7 @@ import "~/app/[locale]/contact/Contact.scss";
 
 // Pages styles
 import "~/app/[locale]/staff/staff.scss";
+import "~/app/[locale]/staff//details/[slug]/staffDetails.scss";
 
 import { type Metadata } from "next";
 import React from "react";

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Sidebar from "./Sidebar";
+import { FaGraduationCap, FaBriefcase, FaUsers, FaHeart } from "react-icons/fa";
 
 interface DetailsContentI {
   name: string | null;
@@ -9,93 +10,388 @@ interface DetailsContentI {
   image: string | null;
 }
 
+interface Experience {
+  period: string;
+  title: string;
+  organization: string;
+  description: string;
+}
+
+interface Education {
+  year: string;
+  degree: string;
+  institution: string;
+}
+
+interface PersonalInfo {
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+  // Visibility flags for each section
+  showBio?: boolean;
+  showExperience?: boolean;
+  showEducation?: boolean;
+  showPublications?: boolean;
+  showAchievements?: boolean;
+  showLanguages?: boolean;
+  showMemberships?: boolean;
+  showHobbies?: boolean;
+  // Sidebar visibility flags
+  showContact?: boolean;
+  showSocial?: boolean;
+  showSpecialties?: boolean;
+  // Content data
+  contact: {
+    phone: string;
+    email: string;
+    location: string;
+  };
+  social: {
+    linkedin: string;
+    twitter: string;
+  };
+  specialties: string[];
+  experience: Experience[];
+  education: Education[];
+  memberships: string[];
+  hobbies: string[];
+  achievements: string[];
+  publications: {
+    title: string;
+    journal: string;
+    year: string;
+    url?: string;
+  }[];
+  languages: {
+    language: string;
+    level: string;
+  }[];
+}
+
 const DetailsContent = ({ name, role, image }: DetailsContentI) => {
+  // Mock data for staff member
+  const personalInfo: PersonalInfo = {
+    name: name,
+    role: role,
+    image: image,
+    bio: "Dr. Anna Hakobyan is a board-certified cardiologist with over 15 years of experience in diagnosing and treating cardiovascular conditions. She specializes in interventional cardiology and has performed hundreds of successful cardiac procedures. Her patient-centered approach and commitment to excellence have earned her recognition among peers and patients alike.",
+    // Visibility flags - all set to true by default
+    showBio: false,
+    showExperience: true,
+    showEducation: true,
+    showPublications: false,
+    showAchievements: false,
+    showLanguages: false,
+    showMemberships: true,
+    showHobbies: true,
+    // Sidebar visibility flags
+    showContact: false,
+    showSocial: false,
+    showSpecialties: true,
+    contact: {
+      phone: "+374 10 123 456",
+      email: "info@cardiolab.am",
+      location: "CardioLab Medical Center, Yerevan",
+    },
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+    },
+    specialties: [
+      "Cardiology",
+      "Arrhythmology",
+      "Echocardiography",
+      "Interventional Cardiology",
+    ],
+    experience: [
+      {
+        period: "2018 - Present",
+        title: "Senior Cardiologist",
+        organization: "CardioLab Medical Center",
+        description:
+          "Leading the cardiology department and specializing in interventional procedures.",
+      },
+      {
+        period: "2012 - 2018",
+        title: "Cardiologist",
+        organization: "Central Hospital",
+        description:
+          "Provided comprehensive cardiac care and performed diagnostic procedures.",
+      },
+    ],
+    education: [
+      {
+        year: "2006",
+        degree: "PhD in Cardiology",
+        institution: "University of UCLan School of Medicine, Preston",
+      },
+      {
+        year: "2002",
+        degree: "Master of Cardiology",
+        institution: "University of Exeter Medical School, Exeter",
+      },
+      {
+        year: "1998",
+        degree: "MBBS",
+        institution: "Royal College of Medicine",
+      },
+    ],
+    memberships: [
+      "American College of Cardiology",
+      "European Society of Cardiology",
+      "International Society for Heart Research",
+      "Heart Rhythm Society",
+    ],
+    hobbies: ["Mountain hiking", "Classical music", "Chess", "Photography"],
+    achievements: [
+      "Excellence in Cardiology Award, Armenian Medical Association (2020)",
+      "Best Research Paper, European Society of Cardiology (2018)",
+      "Young Investigator Award, International Cardiology Conference (2015)",
+      "Distinguished Service Award, Central Hospital (2014)",
+    ],
+    publications: [
+      {
+        title: "Novel Approaches to Treating Arrhythmias in Young Adults",
+        journal: "Journal of Cardiovascular Medicine",
+        year: "2022",
+        url: "https://example.com/publication1",
+      },
+      {
+        title: "Long-term Outcomes of Minimally Invasive Cardiac Procedures",
+        journal: "Cardiology Research and Practice",
+        year: "2020",
+        url: "https://example.com/publication2",
+      },
+      {
+        title:
+          "Comparative Analysis of Antiarrhythmic Medications in Elderly Patients",
+        journal: "International Journal of Cardiology",
+        year: "2017",
+      },
+    ],
+    languages: [
+      {
+        language: "Armenian",
+        level: "Native",
+      },
+      {
+        language: "English",
+        level: "Fluent",
+      },
+      {
+        language: "Russian",
+        level: "Fluent",
+      },
+      {
+        language: "French",
+        level: "Intermediate",
+      },
+    ],
+  };
   return (
     <>
       <div className="doctor-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            {image && (
-              <div className="col-lg-5">
-                <Sidebar image={image} />
-              </div>
-            )}
+            <div className="col-lg-4">
+              <Sidebar
+                image={personalInfo.image}
+                name={personalInfo.name}
+                role={personalInfo.role}
+                contact={personalInfo.contact}
+                social={personalInfo.social}
+                specialties={personalInfo.specialties}
+                showContact={personalInfo.showContact}
+                showSocial={personalInfo.showSocial}
+                showSpecialties={personalInfo.showSpecialties}
+              />
+            </div>
 
-            <div className="col-lg-7">
+            <div className="col-lg-8">
               <div className="doctor-details-item">
                 <div className="doctor-details-right">
-                  <div className="doctor-details-biography">
-                    <h3>
-                      {name} ({role})
-                    </h3>
-                    <p>
-                      MBBS in {role}, PHD in {role}
-                    </p>
-                  </div>
+                  {/* Bio Section */}
+                  {personalInfo.showBio && personalInfo.bio && (
+                    <div className="doctor-details-biography">
+                      <div className="section-header">
+                        <h3>
+                          About{" "}
+                          {personalInfo.name
+                            ? personalInfo.name.split(" ").slice(-1)
+                            : "Doctor"}
+                        </h3>
+                      </div>
+                      <div className="bio-content">
+                        <p>{personalInfo.bio}</p>
+                      </div>
+                    </div>
+                  )}
 
-                  <div className="doctor-details-biography">
-                    <h3>Biography</h3>
+                  {/* Experience Section */}
+                  {personalInfo.showExperience &&
+                    personalInfo.experience &&
+                    personalInfo.experience.length > 0 && (
+                      <div className="doctor-details-biography">
+                        <div className="section-header">
+                          <FaBriefcase className="section-icon" />
+                          <h3>Experience</h3>
+                        </div>
+                        <div className="timeline">
+                          {personalInfo.experience.map((exp, index) => (
+                            <div className="timeline-item" key={index}>
+                              <div className="timeline-date">
+                                {exp.period || ""}
+                              </div>
+                              <div className="timeline-content">
+                                <h4>{exp.title || ""}</h4>
+                                {exp.organization && <p>{exp.organization}</p>}
+                                {exp.description && <p>{exp.description}</p>}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
+                  {/* Education Section */}
+                  {personalInfo.showEducation &&
+                    personalInfo.education &&
+                    personalInfo.education.length > 0 && (
+                      <div className="doctor-details-biography">
+                        <div className="section-header">
+                          <FaGraduationCap className="section-icon" />
+                          <h3>Education</h3>
+                        </div>
+                        <div className="timeline">
+                          {personalInfo.education.map((edu, index) => (
+                            <div className="timeline-item" key={index}>
+                              <div className="timeline-date">
+                                {edu.year || ""}
+                              </div>
+                              <div className="timeline-content">
+                                <h4>{edu.degree || ""}</h4>
+                                {edu.institution && <p>{edu.institution}</p>}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
-                    <p>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatis et
-                      quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                      enim ipsam voluptatem quia voluptas sit aspernatur aut
-                      odit aut fugit, sed quia consequuntur magni dolores eos
-                      qui ratione voluptatem sequi nesciunt.
-                    </p>
+                  {/* Publications Section */}
+                  {personalInfo.showPublications &&
+                    personalInfo.publications &&
+                    personalInfo.publications.length > 0 && (
+                      <div className="doctor-details-biography">
+                        <div className="section-header">
+                          <h3>Publications</h3>
+                        </div>
+                        <div className="publications-list">
+                          {personalInfo.publications.map((pub, index) => (
+                            <div className="publication-item" key={index}>
+                              {pub.title && <h4>{pub.title}</h4>}
+                              <p>
+                                {pub.journal && pub.journal}
+                                {pub.journal && pub.year ? ", " : ""}
+                                {pub.year && pub.year}
+                                {pub.url && (
+                                  <a
+                                    href={pub.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="publication-link"
+                                  >
+                                    View Publication
+                                  </a>
+                                )}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
-                    <p>
-                      But I must explain to you how all this mistaken idea of
-                      denouncing pleasure and praising pain was born and I will
-                      give you a complete account of the system, and expound the
-                      actual teachings of the great explorer of the truth, the
-                      master-builder of human happiness. No one rejects,
-                      dislikes, or avoids pleasure itself, because it is
-                      pleasure, but because those who do not know how to pursue
-                      pleasure rationally encounter consequences that are
-                      extremely painful.
-                    </p>
+                  {/* Achievements Section */}
+                  {personalInfo.showAchievements &&
+                    personalInfo.achievements &&
+                    personalInfo.achievements.length > 0 && (
+                      <div className="doctor-details-biography">
+                        <div className="section-header">
+                          <h3>Achievements & Awards</h3>
+                        </div>
+                        <ul className="achievements-list">
+                          {personalInfo.achievements.map(
+                            (achievement, index) => (
+                              <li key={index}>{achievement}</li>
+                            ),
+                          )}
+                        </ul>
+                      </div>
+                    )}
 
-                    <p></p>
-                  </div>
+                  {/* Languages Section */}
+                  {personalInfo.showLanguages &&
+                    personalInfo.languages &&
+                    personalInfo.languages.length > 0 && (
+                      <div className="doctor-details-biography">
+                        <div className="section-header">
+                          <h3>Languages</h3>
+                        </div>
+                        <div className="languages-container">
+                          {personalInfo.languages.map((lang, index) => (
+                            <div className="language-item" key={index}>
+                              {lang.language && (
+                                <span className="language-name">
+                                  {lang.language}
+                                </span>
+                              )}
+                              {lang.level && (
+                                <span className="language-level">
+                                  {lang.level}
+                                </span>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
-                  <div className="doctor-details-biography">
-                    <h3>Education</h3>
-                    <ul>
-                      <li>
-                        PHD Degree in Cardiology at University of UCLan School
-                        of Medicine Preston (2006)
-                      </li>
-                      <li>
-                        Master of Cardiology at University of University of
-                        Exeter Medical School Exeter (2002)
-                      </li>
-                    </ul>
-                  </div>
+                  {/* Membership Section */}
+                  {personalInfo.showMemberships &&
+                    personalInfo.memberships &&
+                    personalInfo.memberships.length > 0 && (
+                      <div className="doctor-details-biography">
+                        <div className="section-header">
+                          <FaUsers className="section-icon" />
+                          <h3>Membership</h3>
+                        </div>
+                        <ul className="membership-list">
+                          {personalInfo.memberships.map((membership, index) => (
+                            <li key={index}>{membership}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
-                  <div className="doctor-details-biography">
-                    <h3>Experience</h3>
-                    <p>
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui blanditiis praesentium voluptatum deleniti atque
-                      corrupti quos dolores et quas molestias excepturi sint
-                      occaecati cupiditate non provident, similique sunt in
-                      culpa.
-                    </p>
-                  </div>
+                  {/* Hobby Section */}
+                  {personalInfo.showHobbies &&
+                    personalInfo.hobbies &&
+                    personalInfo.hobbies.length > 0 && (
+                      <div className="doctor-details-biography">
+                        <div className="section-header">
+                          <FaHeart className="section-icon" />
+                          <h3>Hobbies</h3>
+                        </div>
+                        <div className="hobbies-container">
+                          {personalInfo.hobbies.map((hobby, index) => (
+                            <div className="hobby-item" key={index}>
+                              <p>{hobby || ""}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                 </div>
               </div>
             </div>
