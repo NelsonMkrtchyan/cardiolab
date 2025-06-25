@@ -3,11 +3,13 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import { FaGraduationCap, FaBriefcase, FaUsers, FaHeart } from "react-icons/fa";
+import { type PersonalInfoType } from "~/constants/staff";
 
 interface DetailsContentI {
   name: string | null;
   role: string | null;
   image: string | null;
+  personalInfo?: PersonalInfoType;
 }
 
 interface Experience {
@@ -69,126 +71,169 @@ interface PersonalInfo {
   }[];
 }
 
-const DetailsContent = ({ name, role, image }: DetailsContentI) => {
-  // Mock data for staff member
-  const personalInfo: PersonalInfo = {
-    name: name,
-    role: role,
-    image: image,
-    bio: "Dr. Anna Hakobyan is a board-certified cardiologist with over 15 years of experience in diagnosing and treating cardiovascular conditions. She specializes in interventional cardiology and has performed hundreds of successful cardiac procedures. Her patient-centered approach and commitment to excellence have earned her recognition among peers and patients alike.",
-    // Visibility flags - all set to true by default
-    showBio: false,
-    showExperience: true,
-    showEducation: true,
-    showPublications: false,
-    showAchievements: false,
-    showLanguages: false,
-    showMemberships: true,
-    showHobbies: true,
-    // Sidebar visibility flags
-    showContact: false,
-    showSocial: false,
-    showSpecialties: true,
-    contact: {
-      phone: "+374 10 123 456",
-      email: "info@cardiolab.am",
-      location: "CardioLab Medical Center, Yerevan",
-    },
-    social: {
-      linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
-    },
-    specialties: [
-      "Cardiology",
-      "Arrhythmology",
-      "Echocardiography",
-      "Interventional Cardiology",
-    ],
-    experience: [
-      {
-        period: "2018 - Present",
-        title: "Senior Cardiologist",
-        organization: "CardioLab Medical Center",
-        description:
-          "Leading the cardiology department and specializing in interventional procedures.",
-      },
-      {
-        period: "2012 - 2018",
-        title: "Cardiologist",
-        organization: "Central Hospital",
-        description:
-          "Provided comprehensive cardiac care and performed diagnostic procedures.",
-      },
-    ],
-    education: [
-      {
-        year: "2006",
-        degree: "PhD in Cardiology",
-        institution: "University of UCLan School of Medicine, Preston",
-      },
-      {
-        year: "2002",
-        degree: "Master of Cardiology",
-        institution: "University of Exeter Medical School, Exeter",
-      },
-      {
-        year: "1998",
-        degree: "MBBS",
-        institution: "Royal College of Medicine",
-      },
-    ],
-    memberships: [
-      "American College of Cardiology",
-      "European Society of Cardiology",
-      "International Society for Heart Research",
-      "Heart Rhythm Society",
-    ],
-    hobbies: ["Mountain hiking", "Classical music", "Chess", "Photography"],
-    achievements: [
-      "Excellence in Cardiology Award, Armenian Medical Association (2020)",
-      "Best Research Paper, European Society of Cardiology (2018)",
-      "Young Investigator Award, International Cardiology Conference (2015)",
-      "Distinguished Service Award, Central Hospital (2014)",
-    ],
-    publications: [
-      {
-        title: "Novel Approaches to Treating Arrhythmias in Young Adults",
-        journal: "Journal of Cardiovascular Medicine",
-        year: "2022",
-        url: "https://example.com/publication1",
-      },
-      {
-        title: "Long-term Outcomes of Minimally Invasive Cardiac Procedures",
-        journal: "Cardiology Research and Practice",
-        year: "2020",
-        url: "https://example.com/publication2",
-      },
-      {
-        title:
-          "Comparative Analysis of Antiarrhythmic Medications in Elderly Patients",
-        journal: "International Journal of Cardiology",
-        year: "2017",
-      },
-    ],
-    languages: [
-      {
-        language: "Armenian",
-        level: "Native",
-      },
-      {
-        language: "English",
-        level: "Fluent",
-      },
-      {
-        language: "Russian",
-        level: "Fluent",
-      },
-      {
-        language: "French",
-        level: "Intermediate",
-      },
-    ],
-  };
+const DetailsContent = ({
+  name,
+  role,
+  image,
+  personalInfo: staffPersonalInfo,
+}: DetailsContentI) => {
+  // Use staff personalInfo if available, otherwise use default mock data
+  const personalInfo: PersonalInfo = staffPersonalInfo
+    ? {
+        name: name ?? "",
+        role: role ?? "",
+        image: image ?? "",
+        bio: staffPersonalInfo.bio || "",
+        // Visibility flags
+        showBio: staffPersonalInfo.showBio ?? true,
+        showExperience: staffPersonalInfo.showExperience ?? true,
+        showEducation: staffPersonalInfo.showEducation ?? true,
+        showPublications: staffPersonalInfo.showPublications ?? false,
+        showAchievements: staffPersonalInfo.showAchievements ?? false,
+        showLanguages: staffPersonalInfo.showLanguages ?? false,
+        showMemberships: staffPersonalInfo.showMemberships ?? true,
+        showHobbies: staffPersonalInfo.showHobbies ?? false,
+        // Sidebar visibility flags
+        showContact: staffPersonalInfo.showContact ?? true,
+        showSocial: staffPersonalInfo.showSocial ?? true,
+        showSpecialties: staffPersonalInfo.showSpecialties ?? true,
+        // Content data
+        contact: staffPersonalInfo.contact || {
+          phone: "",
+          email: "",
+          location: "",
+        },
+        social: staffPersonalInfo.social || {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: staffPersonalInfo.specialties || [],
+        experience: staffPersonalInfo.experience || [],
+        education: staffPersonalInfo.education || [],
+        memberships: staffPersonalInfo.memberships || [],
+        hobbies: staffPersonalInfo.hobbies || [],
+        achievements: staffPersonalInfo.achievements || [],
+        publications: staffPersonalInfo.publications || [],
+        languages: staffPersonalInfo.languages || [],
+      }
+    : {
+        // Default mock data if no personalInfo is provided
+        name: name ?? "",
+        role: role ?? "",
+        image: image ?? "",
+        bio: "Dr. Anna Hakobyan is a board-certified cardiologist with over 15 years of experience in diagnosing and treating cardiovascular conditions. She specializes in interventional cardiology and has performed hundreds of successful cardiac procedures. Her patient-centered approach and commitment to excellence have earned her recognition among peers and patients alike.",
+        showBio: false,
+        showExperience: true,
+        showEducation: true,
+        showPublications: false,
+        showAchievements: false,
+        showLanguages: false,
+        showMemberships: true,
+        showHobbies: true,
+        showContact: false,
+        showSocial: false,
+        showSpecialties: true,
+        contact: {
+          phone: "+374 10 123 456",
+          email: "info@cardiolab.am",
+          location: "CardioLab Medical Center, Yerevan",
+        },
+        social: {
+          linkedin: "https://linkedin.com",
+          twitter: "https://twitter.com",
+        },
+        specialties: [
+          "Cardiology",
+          "Arrhythmology",
+          "Echocardiography",
+          "Interventional Cardiology",
+        ],
+        experience: [
+          {
+            period: "2018 - Present",
+            title: "Senior Cardiologist",
+            organization: "CardioLab Medical Center",
+            description:
+              "Leading the cardiology department and specializing in interventional procedures.",
+          },
+          {
+            period: "2012 - 2018",
+            title: "Cardiologist",
+            organization: "Central Hospital",
+            description:
+              "Provided comprehensive cardiac care and performed diagnostic procedures.",
+          },
+        ],
+        education: [
+          {
+            year: "2006",
+            degree: "PhD in Cardiology",
+            institution: "University of UCLan School of Medicine, Preston",
+          },
+          {
+            year: "2002",
+            degree: "Master of Cardiology",
+            institution: "University of Exeter Medical School, Exeter",
+          },
+          {
+            year: "1998",
+            degree: "MBBS",
+            institution: "Royal College of Medicine",
+          },
+        ],
+        memberships: [
+          "American College of Cardiology",
+          "European Society of Cardiology",
+          "International Society for Heart Research",
+          "Heart Rhythm Society",
+        ],
+        hobbies: ["Mountain hiking", "Classical music", "Chess", "Photography"],
+        achievements: [
+          "Excellence in Cardiology Award, Armenian Medical Association (2020)",
+          "Best Research Paper, European Society of Cardiology (2018)",
+          "Young Investigator Award, International Cardiology Conference (2015)",
+          "Distinguished Service Award, Central Hospital (2014)",
+        ],
+        publications: [
+          {
+            title: "Novel Approaches to Treating Arrhythmias in Young Adults",
+            journal: "Journal of Cardiac Electrophysiology",
+            year: "2022",
+            url: "https://example.com/publication1",
+          },
+          {
+            title:
+              "Long-term Outcomes of Minimally Invasive Cardiac Procedures",
+            journal: "Cardiology Research and Practice",
+            year: "2020",
+            url: "https://example.com/publication2",
+          },
+          {
+            title:
+              "Comparative Analysis of Antiarrhythmic Medications in Elderly Patients",
+            journal: "International Journal of Cardiology",
+            year: "2017",
+          },
+        ],
+        languages: [
+          {
+            language: "Armenian",
+            level: "Native",
+          },
+          {
+            language: "English",
+            level: "Fluent",
+          },
+          {
+            language: "Russian",
+            level: "Fluent",
+          },
+          {
+            language: "French",
+            level: "Intermediate",
+          },
+        ],
+      };
   return (
     <>
       <div className="doctor-details-area pt-100 pb-70">

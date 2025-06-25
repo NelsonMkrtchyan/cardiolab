@@ -9,7 +9,7 @@ import ImagesDB from "~/constants/ImageDatabase.json";
 
 export default function page() {
   const tMenu = useTranslations("Menu");
-  const { employeeDoNotExist, name, role, image } = useEmployee();
+  const { employeeDoNotExist, name, role, image, personalInfo } = useEmployee();
   return (
     <>
       <PageBanner
@@ -21,7 +21,7 @@ export default function page() {
       />
 
       {!employeeDoNotExist && (
-        <DetailsContent name={name} role={role} image={image} />
+        <DetailsContent name={name} role={role} image={image} personalInfo={personalInfo} />
       )}
 
       {employeeDoNotExist && <NotFound />}
