@@ -1,5 +1,130 @@
 @import '~/styles/variables';
 
+// Appointment Modal Styling
+.appointment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.appointment-modal {
+  background-color: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: modalFadeIn 0.3s ease-out;
+  overflow: hidden;
+  
+  .modal-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    h3 {
+      margin: 0;
+      color: $main-color;
+      font-weight: 600;
+    }
+    
+    .close-btn {
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        color: $main-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .modal-body {
+    padding: 30px 20px;
+    
+    p {
+      margin-bottom: 15px;
+      color: $grey-color;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .modal-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    
+    button {
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .cancel-btn {
+      background-color: #f1f1f1;
+      color: #666;
+      border: none;
+      
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+    
+    .submit-btn {
+      background-color: $main-color;
+      color: white;
+      border: none;
+      box-shadow: 0 4px 10px rgba(47, 96, 189, 0.2);
+      
+      &:hover {
+        background-color: darken($main-color, 10%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(47, 96, 189, 0.3);
+      }
+      
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba(47, 96, 189, 0.2);
+      }
+    }
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .doctor-details-left {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
@@ -160,6 +285,45 @@
     }
   }
 
+  // Book Appointment Button
+  .book-appointment-container {
+    padding: 25px;
+    text-align: center;
+    
+    .book-appointment-btn {
+      background-color: $main-color;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(47, 96, 189, 0.2);
+      
+      &:hover {
+        background-color: darken($main-color, 10%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(47, 96, 189, 0.3);
+      }
+      
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba(47, 96, 189, 0.2);
+      }
+      
+      .btn-icon {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+  
   // Specialties section
   .doctor-details-specialties {
     padding: 25px;

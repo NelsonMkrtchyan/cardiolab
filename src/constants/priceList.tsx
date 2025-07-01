@@ -35,7 +35,8 @@ export const categorizedServicesOrder = [
   ServicesCategory.PreventiveScreening, // is not visible
 ];
 
-const cardioDoctorsIds = [1, 3, 7, 25, 4, 24, 2, 27, 8, 9];
+const cardioDoctorsIds = [1, 3, 7, 25, 4, 24, 6, 27, 8, 9];
+const cardioDoctorsIdsConsultationTeam = [1, 3, 7, 25, 4, 24, 2, 6, 27, 8, 9];
 const nursesIds = [19];
 
 // Armenian service names used for all languages
@@ -46,7 +47,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: cardioDoctorsIds,
+    doctorsList: cardioDoctorsIdsConsultationTeam,
   },
   {
     id: 35,
@@ -102,7 +103,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [],
+    doctorsList: [12],
   },
   {
     id: 42,
@@ -134,7 +135,7 @@ const services: ServiceType[] = [
     price: 20000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [],
     hideInServicesPage: true,
   },
   {
@@ -153,7 +154,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     hideInServicesPage: true,
-    doctorsList: cardioDoctorsIds,
+    doctorsList: cardioDoctorsIdsConsultationTeam,
   },
   {
     id: 8,
@@ -400,7 +401,7 @@ const services: ServiceType[] = [
     price: 50000,
     description: "",
     category: ServicesCategory.PreventiveScreening,
-    doctorsList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    doctorsList: [],
     hideInServicesPage: true,
     hideInPriceListPage: true,
   },

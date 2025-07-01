@@ -38,7 +38,7 @@
     .footer-social {
       display: flex;
       gap: 15px;
-      margin-top: 20px;
+      margin-top: 10px;
       justify-content: center;
 
       .social-icon {
@@ -175,6 +175,7 @@
       &.phone-numbers {
         width: 100%;
         align-items: center;
+        margin-bottom: 0;
 
         .phone-list {
           display: flex;
@@ -224,7 +225,7 @@
 
 @media only screen and (max-width: 484px) {
   .new-footer {
-    padding: 40px 20px;
+    padding: 30px 20px;
 
     //.footer-i
 
@@ -256,7 +257,7 @@
     }
 
     .footer-left {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
 
       .footer-logo {
         margin: 0 auto 20px;
@@ -297,7 +298,7 @@
 
 @media only screen and (min-width: 485px) and (max-width: 767px) {
   .new-footer {
-    padding: 40px 20px;
+    padding: 30px 20px;
 
     //.footer-i
 

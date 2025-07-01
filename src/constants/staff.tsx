@@ -332,7 +332,7 @@ export const staff: StaffType = [
       am: "Ինտենսիվ Սրտաբան",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: false,
+    visibility: true,
     personalInfo: mockPersonalInfo,
   },
   {
@@ -566,7 +566,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: false,
+    visibility: true,
     personalInfo: {
       bio: "",
       showBio: true,
@@ -607,7 +607,7 @@ export const staff: StaffType = [
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluM6kftgSmxf0AaeIb7tJwXUHG2sKPOWnoQLik",
     role: {
-      am: "Սրտաբան",
+      am: "Սրտային Անբավարարության Մասնագետ",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -698,7 +698,7 @@ export const staff: StaffType = [
       am: "Նյարդաբան",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: false,
+    visibility: true,
     personalInfo: {
       bio: "",
       showBio: true,
@@ -1050,51 +1050,7 @@ export const staff: StaffType = [
       am: "Բուժքույր",
     },
     category: StaffCategory.NursingStaff,
-    visibility: false,
-    personalInfo: {
-      bio: "",
-      showBio: true,
-      showExperience: true,
-      showEducation: true,
-      showPublications: false,
-      showAchievements: false,
-      showLanguages: false,
-      showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
-      contact: {
-        phone: "",
-        email: "",
-        location: "",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-      },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
-      hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
-    },
-  },
-  {
-    id: 21,
-    name: {
-      am: "Մարիաննա Հովհաննիսյան",
-    },
-    image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu7Wff0hxTDGf3YpRJEC1nwk6tWHeNq5xSbUvu",
-    role: {
-      am: "Դիզայներ",
-    },
-    category: StaffCategory.AdministrativeStaff,
-    visibility: false,
+    visibility: true,
     personalInfo: {
       bio: "",
       showBio: true,
@@ -1219,15 +1175,15 @@ export const staff: StaffType = [
   {
     id: 24,
     name: {
-      am: "Մարիամ Հովակիմյան",
+      am: "Մերի Պապիկան",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
     role: {
-      am: "Սրտային Անբավարարության Մասնագետ",
+      am: "Սրտաբան",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: false,
+    visibility: true,
     personalInfo: {
       bio: "",
       showBio: true,
@@ -1263,50 +1219,6 @@ export const staff: StaffType = [
   {
     id: 25,
     name: {
-      am: "Մերի Պապիկան",
-    },
-    image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
-    role: {
-      am: "Սրտաբան",
-    },
-    category: StaffCategory.MedicalStaff,
-    visibility: false,
-    personalInfo: {
-      bio: "",
-      showBio: true,
-      showExperience: true,
-      showEducation: true,
-      showPublications: false,
-      showAchievements: false,
-      showLanguages: false,
-      showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
-      contact: {
-        phone: "",
-        email: "",
-        location: "",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-      },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
-      hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
-    },
-  },
-  {
-    id: 26,
-    name: {
       am: "Նադեժդա Իսկանդարյան",
     },
     image:
@@ -1315,96 +1227,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: false,
-    personalInfo: {
-      bio: "",
-      showBio: true,
-      showExperience: true,
-      showEducation: true,
-      showPublications: false,
-      showAchievements: false,
-      showLanguages: false,
-      showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
-      contact: {
-        phone: "",
-        email: "",
-        location: "",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-      },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
-      hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
-    },
-  },
-  {
-    id: 27,
-    name: {
-      am: "Աննա Գևորգյան",
-    },
-    image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
-    role: {
-      am: "Սրտաբան",
-    },
-    category: StaffCategory.MedicalStaff,
-    visibility: false,
-    personalInfo: {
-      bio: "",
-      showBio: true,
-      showExperience: true,
-      showEducation: true,
-      showPublications: false,
-      showAchievements: false,
-      showLanguages: false,
-      showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
-      contact: {
-        phone: "",
-        email: "",
-        location: "",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-      },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
-      hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
-    },
-  },
-  // #####
-  {
-    id: 28,
-    name: {
-      am: "Սյուզաննա Թելունց",
-    },
-    image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
-    role: {
-      am: "Սրտաբան",
-    },
-    category: StaffCategory.MedicalStaff,
-    visibility: false,
+    visibility: true,
     personalInfo: {
       bio: "",
       showBio: true,
