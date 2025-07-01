@@ -656,7 +656,9 @@ export const staff: StaffType = [
     category: StaffCategory.MedicalStaff,
     visibility: true,
     personalInfo: {
-      bio: "",
+      bio: "Successfully diagnosed and treated over 1,500 patients with endocrine disorders, including diabetes, thyroid diseases, and hormonal imbalances, resulting in a 95% patient satisfaction rate. Successfully diagnosed and treated more than 200 patients with postoperative complications, postoperative hypothyroidism, hypoparathyroidism.",
+
+      // Visibility flags
       showBio: true,
       showExperience: true,
       showEducation: true,
@@ -665,26 +667,110 @@ export const staff: StaffType = [
       showLanguages: false,
       showMemberships: true,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
+
+      // Sidebar visibility flags
+      showContact: false,
+      showSocial: false,
       showSpecialties: true,
+
+      // Content data
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "+374 98585520",
+        email: "knarikbadeyan@mail.ru",
+        location: "Yerevan, Shahamiryan 51/1",
       },
       social: {
-        linkedin: "",
-        twitter: "",
+        linkedin: "", // Not provided
+        twitter: "", // Not provided
       },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
+      specialties: [
+        "Continuous glucose monitoring",
+        "Thyroidectomy Consultation",
+        "Hormone Replacement",
+      ],
+      experience: [
+        {
+          title: "Clinical Ordinator in Department of Endocrinology",
+          organization: "Muratsan University Hospital",
+          period: "2019–2021",
+          description: "",
+        },
+        {
+          title: "Endocrinologist",
+          organization: "New Med Clinic",
+          period: "2021–2022",
+          description: "",
+        },
+        {
+          title: "Endocrinologist",
+          organization: "MedLine Clinic",
+          period: "2022–Present",
+          description: "",
+        },
+        {
+          title: "Endocrinologist, Sonographer of Thyroid Gland",
+          organization: "MedExpress Clinic",
+          period: "2023–Present",
+          description: "",
+        },
+        {
+          title: "Endocrinologist",
+          organization: "Shengavit Medical Centre",
+          period: "2024 Nov – Present",
+          description: "",
+        },
+        {
+          title: "Endocrinologist, Sonographer of Thyroid Gland",
+          organization: "Cardiolab Clinic",
+          period: "2025 Jan – Present",
+          description: "",
+        },
+      ],
+      education: [
+        {
+          degree: "Medical Doctor",
+          institution:
+            "Yerevan State Medical University, Faculty of General Medicine",
+          year: "2013–2019",
+        },
+        {
+          degree: "Resident in Department of Endocrinology",
+          institution: "Yerevan State Medical University",
+          year: "2019–2021",
+        },
+        {
+          degree: "Specializing in Ultrasound Diagnostics",
+          institution: "Yerevan State Medical University",
+          year: "2022 Jan – Aug",
+        },
+        {
+          degree: "Fine-Needle Aspiration of the Thyroid Gland",
+          institution: "", // No institution specified
+          year: "2023 March – July",
+        },
+      ],
+      memberships: [
+        "European Thyroid Association",
+        "The European Society of Endocrinology",
+        "Armenian Thyroid Association",
+      ],
       hobbies: [],
       achievements: [],
       publications: [],
-      languages: [],
+      languages: [
+        {
+          language: "Armenian",
+          level: "Native",
+        },
+        {
+          language: "English",
+          level: "Fluent",
+        },
+        {
+          language: "Russian",
+          level: "Fluent",
+        },
+      ],
     },
   },
   {
