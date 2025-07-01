@@ -62,6 +62,7 @@ export type PersonalInfoType = {
   showLanguages?: boolean;
   showMemberships?: boolean;
   showHobbies?: boolean;
+  showAcademicActivities?: boolean;
   // Sidebar visibility flags
   showContact?: boolean;
   showSocial?: boolean;
@@ -82,6 +83,7 @@ export type PersonalInfoType = {
   memberships: string[];
   hobbies: string[];
   achievements: Achievement[];
+  academicActivities: Achievement[];
   publications: {
     title: string;
     journal: string;
@@ -135,6 +137,7 @@ const mockPersonalInfo: PersonalInfoType & {
   showLanguages: false,
   showMemberships: true,
   showHobbies: true,
+  showAcademicActivities: true,
   showContact: false,
   showSocial: false,
   showSpecialties: true,
@@ -213,6 +216,26 @@ const mockPersonalInfo: PersonalInfoType & {
       title: "Distinguished Service Award",
       organization: "Central Hospital",
       date: "2014",
+    },
+  ],
+  academicActivities: [
+    {
+      title: "Lecture on Cardiovascular Health",
+      organization: "Yerevan State Medical University",
+      date: "2023",
+      description:
+        "Guest lecture on modern approaches to cardiovascular disease prevention",
+    },
+    {
+      title: "Research Workshop",
+      organization: "Armenian Medical Association",
+      date: "2022",
+      description: "Led a workshop on research methodologies in cardiology",
+    },
+    {
+      title: "Medical Conference Speaker",
+      organization: "International Cardiology Summit",
+      date: "2021",
     },
   ],
   publications: [
@@ -298,6 +321,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -342,6 +366,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -400,6 +425,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -444,6 +470,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -488,6 +515,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -532,6 +560,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -576,6 +605,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -620,6 +650,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -664,6 +695,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -794,6 +826,7 @@ export const staff: StaffType = [
           level: "Fluent",
         },
       ],
+      academicActivities: [],
     },
   },
   {
@@ -838,6 +871,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -882,6 +916,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -911,6 +946,7 @@ export const staff: StaffType = [
       showLanguages: false,
       showMemberships: false,
       showHobbies: false,
+      showAcademicActivities: true,
 
       // Sidebar visibility flags
       showContact: false,
@@ -978,61 +1014,71 @@ export const staff: StaffType = [
       hobbies: [],
       publications: [],
 
-      achievements: [
+      achievements: [],
+
+      languages: [],
+      academicActivities: [
         {
           title:
             "Հետդիպլոմային կրթական դասընթաց՝ «Հետազոտությունների և ուսումնառության մենեջմենթ»",
           organization:
             "Գիտելիքների գնահատման միջազգային կենտրոն, Գլազգո քոլեջ",
           date: "09.10.2023",
+          description: "Մասնակցություն և հավաստագրում",
         },
         {
           title: "Դասընթաց՝ «Գինեկոլոգիական ուլտրաձայն»",
           organization: "Գլազգո քոլեջ",
           date: "05.06.2022",
-        },
-        {
-          title:
-            "Ռադիոլոգիայի հայկական ընկերություն, ԱՄԱ, Ռադիոլոգների հայկական ասոցիացիա",
-          organization: "Երևան",
-          date: "05.06.2022",
+          description: "Մասնագիտական դասընթաց",
         },
         {
           title:
             "Դասընթաց՝ «Լյարդի հիվանդությունների դիագնոստիկա և մոնիթորինգ՝ ուլտրաձայնի ժամանակակից մոտեցումներ»",
           organization: "Սոնատո ԲԿ",
           date: "06.05.2022",
+          description: "Մասնագիտական վերապատրաստում",
+        },
+        {
+          title:
+            "Ռադիոլոգիայի հայկական ընկերություն, ԱՄԱ, Ռադիոլոգների հայկական ասոցիացիա",
+          organization: "Երևան",
+          date: "05.06.2022",
+          description: "Մասնակցություն մասնագիտական ասոցիացիայի աշխատանքներին",
         },
         {
           title:
             "Ռադիոլոգիայի հայկական ընկերություն, ԼՂ առողջապահության նախարարություն",
           organization: "Երևան",
           date: "15.06.2019",
+          description: "Մասնագիտական ձեռքբերում ռադիոլոգիայի ոլորտում",
         },
         {
           title: "Դասընթաց՝ «Ռադիոլոգիայի եվրոպական դպրոցի» (ESOR)",
           organization: "Երևան",
           date: "06.29.2018",
+          description: "Միջազգային դասընթաց",
         },
         {
           title: "Կոնֆերանս՝ «Արդիական թեմաներ ռադիոլոգիայում»",
           organization: "ԵՊԲՀ",
           date: "20.11–22.12.2017",
+          description: "Մասնակցություն գիտաժողովին",
         },
         {
           title:
             "Կոնֆերանս՝ «Երեխաների կենտրոնական նյարդային համակարգի պաթոլոգիա գինեկոլոգիայում»",
           organization: "ԵՊԲՀ",
           date: "04.11–20.12.2013",
+          description: "Գիտական զեկույց",
         },
         {
           title: "Սեմինար՝ «Սոնոգրաֆիկ սեմինար»",
           organization: "Հայաստանի դոցենտների ասոցիացիա",
           date: "17.12.2011",
+          description: "Մասնագիտական սեմինար",
         },
       ],
-
-      languages: [],
     },
   },
   {
@@ -1077,6 +1123,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -1121,6 +1168,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -1165,6 +1213,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -1209,6 +1258,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -1253,6 +1303,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -1297,6 +1348,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -1341,6 +1393,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -1385,6 +1438,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   //   #######
@@ -1430,6 +1484,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
   {
@@ -1474,6 +1529,7 @@ export const staff: StaffType = [
       achievements: [],
       publications: [],
       languages: [],
+      academicActivities: [],
     },
   },
 ];

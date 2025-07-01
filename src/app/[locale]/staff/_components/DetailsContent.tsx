@@ -53,6 +53,7 @@ interface PersonalInfo {
   showLanguages?: boolean;
   showMemberships?: boolean;
   showHobbies?: boolean;
+  showAcademicActivities?: boolean;
   // Sidebar visibility flags
   showContact?: boolean;
   showSocial?: boolean;
@@ -73,6 +74,7 @@ interface PersonalInfo {
   memberships: string[];
   hobbies: string[];
   achievements: Achievement[];
+  academicActivities: Achievement[];
   publications: {
     title: string;
     journal: string;
@@ -108,6 +110,7 @@ const DetailsContent = ({
         showLanguages: staffPersonalInfo.showLanguages ?? false,
         showMemberships: staffPersonalInfo.showMemberships ?? true,
         showHobbies: staffPersonalInfo.showHobbies ?? false,
+        showAcademicActivities: staffPersonalInfo.showAcademicActivities ?? false,
         // Sidebar visibility flags
         showContact: staffPersonalInfo.showContact ?? true,
         showSocial: staffPersonalInfo.showSocial ?? true,
@@ -128,6 +131,7 @@ const DetailsContent = ({
         memberships: staffPersonalInfo.memberships || [],
         hobbies: staffPersonalInfo.hobbies || [],
         achievements: staffPersonalInfo.achievements || [],
+        academicActivities: staffPersonalInfo.academicActivities || [],
         publications: staffPersonalInfo.publications || [],
         languages: staffPersonalInfo.languages || [],
       }
@@ -145,6 +149,7 @@ const DetailsContent = ({
         showLanguages: false,
         showMemberships: true,
         showHobbies: true,
+        showAcademicActivities: false,
         showContact: false,
         showSocial: false,
         showSpecialties: true,
@@ -203,6 +208,20 @@ const DetailsContent = ({
           "Heart Rhythm Society",
         ],
         hobbies: ["Mountain hiking", "Classical music", "Chess", "Photography"],
+        academicActivities: [
+          {
+            title: "Lecture on Cardiovascular Health",
+            organization: "Yerevan State Medical University",
+            date: "2023",
+            description: "Guest lecture on modern approaches to cardiovascular disease prevention"
+          },
+          {
+            title: "Research Workshop",
+            organization: "Armenian Medical Association",
+            date: "2022",
+            description: "Led a workshop on research methodologies in cardiology"
+          },
+        ],
         achievements: [
           {
             title: "Excellence in Cardiology Award",
@@ -457,6 +476,38 @@ const DetailsContent = ({
                               )}
                               {achievement.description && (
                                 <p className="achievement-description">{achievement.description}</p>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                  {/* Academic Activities Section */}
+                  {personalInfo.showAcademicActivities &&
+                    personalInfo.academicActivities &&
+                    personalInfo.academicActivities.length > 0 && (
+                      <div className="doctor-details-biography">
+                        <div className="section-header">
+                          <h3>Ակադեմիական ակտիվություն</h3>
+                        </div>
+                        <ul className="achievements-list">
+                          {personalInfo.academicActivities.map((activity, index) => (
+                            <li key={index} className="achievement-item">
+                              <div className="achievement-header">
+                                <h4 className="achievement-title">{activity.title}</h4>
+                                {activity.date && (
+                                  <span className="achievement-date">
+                                    <FaCalendarAlt className="icon-small" />
+                                    {activity.date}
+                                  </span>
+                                )}
+                              </div>
+                              {activity.organization && (
+                                <p className="achievement-organization">{activity.organization}</p>
+                              )}
+                              {activity.description && (
+                                <p className="achievement-description">{activity.description}</p>
                               )}
                             </li>
                           ))}
