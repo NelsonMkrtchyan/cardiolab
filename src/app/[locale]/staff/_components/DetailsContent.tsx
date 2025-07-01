@@ -1,8 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
-import { FaGraduationCap, FaBriefcase, FaUsers, FaHeart } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaBriefcase,
+  FaUsers,
+  FaHeart,
+  FaCalendarAlt,
+  FaTimes,
+} from "react-icons/fa";
 import { type PersonalInfoType } from "~/constants/staff";
 
 interface DetailsContentI {
@@ -23,6 +30,13 @@ interface Education {
   year: string;
   degree: string;
   institution: string;
+}
+
+interface Achievement {
+  title: string;
+  description?: string;
+  organization?: string;
+  date: string;
 }
 
 interface PersonalInfo {
@@ -58,7 +72,7 @@ interface PersonalInfo {
   education: Education[];
   memberships: string[];
   hobbies: string[];
-  achievements: string[];
+  achievements: Achievement[];
   publications: {
     title: string;
     journal: string;
@@ -77,6 +91,7 @@ const DetailsContent = ({
   image,
   personalInfo: staffPersonalInfo,
 }: DetailsContentI) => {
+  const [showModal, setShowModal] = useState(false);
   // Use staff personalInfo if available, otherwise use default mock data
   const personalInfo: PersonalInfo = staffPersonalInfo
     ? {
@@ -189,10 +204,26 @@ const DetailsContent = ({
         ],
         hobbies: ["Mountain hiking", "Classical music", "Chess", "Photography"],
         achievements: [
-          "Excellence in Cardiology Award, Armenian Medical Association (2020)",
-          "Best Research Paper, European Society of Cardiology (2018)",
-          "Young Investigator Award, International Cardiology Conference (2015)",
-          "Distinguished Service Award, Central Hospital (2014)",
+          {
+            title: "Excellence in Cardiology Award",
+            organization: "Armenian Medical Association",
+            date: "2020",
+          },
+          {
+            title: "Best Research Paper",
+            organization: "European Society of Cardiology",
+            date: "2018",
+          },
+          {
+            title: "Young Investigator Award",
+            organization: "International Cardiology Conference",
+            date: "2015",
+          },
+          {
+            title: "Distinguished Service Award",
+            organization: "Central Hospital",
+            date: "2014",
+          },
         ],
         publications: [
           {
@@ -236,21 +267,64 @@ const DetailsContent = ({
       };
   return (
     <>
+      {/* Appointment Booking Modal */}
+      {showModal && (
+        <div className="appointment-modal-overlay">
+          <div className="appointment-modal">
+            <div className="modal-header">
+              <h3>Book an Appointment</h3>
+              <button className="close-btn" onClick={() => setShowModal(false)}>
+                <FaTimes />
+              </button>
+            </div>
+            <div className="modal-body">
+              <p>This is a placeholder for the appointment booking form.</p>
+              <p>
+                In the future, this will contain a form to book an appointment
+                with {personalInfo.name}.
+              </p>
+            </div>
+            <div className="modal-footer">
+              <button
+                className="cancel-btn"
+                onClick={() => setShowModal(false)}
+              >
+                Cancel
+              </button>
+              <button className="submit-btn">Book Appointment</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="doctor-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
-              <Sidebar
-                image={personalInfo.image}
-                name={personalInfo.name}
-                role={personalInfo.role}
-                contact={personalInfo.contact}
-                social={personalInfo.social}
-                specialties={personalInfo.specialties}
-                showContact={personalInfo.showContact}
-                showSocial={personalInfo.showSocial}
-                showSpecialties={personalInfo.showSpecialties}
-              />
+              <div className="doctor-details-item">
+                <Sidebar
+                  image={personalInfo.image}
+                  name={personalInfo.name}
+                  role={personalInfo.role}
+                  contact={personalInfo.contact}
+                  social={personalInfo.social}
+                  specialties={personalInfo.specialties}
+                  showContact={personalInfo.showContact}
+                  showSocial={personalInfo.showSocial}
+                  showSpecialties={personalInfo.showSpecialties}
+                />
+
+                {/* Book Appointment Button */}
+                <div className="book-appointment-container">
+                  <button
+                    className="book-appointment-btn"
+                    onClick={() => setShowModal(true)}
+                  >
+                    <FaCalendarAlt className="btn-icon" />
+                    Book an Appointment
+                  </button>
+                </div>
+              </div>
             </div>
 
             <div className="col-lg-8">
@@ -263,7 +337,8 @@ const DetailsContent = ({
                         <h3>
                           About{" "}
                           {personalInfo.name
-                            ? personalInfo.name.split(" ").slice(-1)
+                            ? // ? personalInfo.name.split(" ").slice(-1)
+                              personalInfo.name
                             : "Doctor"}
                         </h3>
                       </div>
@@ -366,11 +441,25 @@ const DetailsContent = ({
                           <h3>Achievements & Awards</h3>
                         </div>
                         <ul className="achievements-list">
-                          {personalInfo.achievements.map(
-                            (achievement, index) => (
-                              <li key={index}>{achievement}</li>
-                            ),
-                          )}
+                          {personalInfo.achievements.map((achievement, index) => (
+                            <li key={index} className="achievement-item">
+                              <div className="achievement-header">
+                                <h4 className="achievement-title">{achievement.title}</h4>
+                                {achievement.date && (
+                                  <span className="achievement-date">
+                                    <FaCalendarAlt className="icon-small" />
+                                    {achievement.date}
+                                  </span>
+                                )}
+                              </div>
+                              {achievement.organization && (
+                                <p className="achievement-organization">{achievement.organization}</p>
+                              )}
+                              {achievement.description && (
+                                <p className="achievement-description">{achievement.description}</p>
+                              )}
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     )}

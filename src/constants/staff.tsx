@@ -44,6 +44,13 @@ interface Education {
   institution: string;
 }
 
+interface Achievement {
+  title: string;
+  description?: string;
+  organization?: string;
+  date: string;
+}
+
 export type PersonalInfoType = {
   bio: string;
   // Visibility flags for each section
@@ -74,7 +81,7 @@ export type PersonalInfoType = {
   education: Education[];
   memberships: string[];
   hobbies: string[];
-  achievements: string[];
+  achievements: Achievement[];
   publications: {
     title: string;
     journal: string;
@@ -123,8 +130,8 @@ const mockPersonalInfo: PersonalInfoType & {
   showBio: false,
   showExperience: true,
   showEducation: true,
-  showPublications: false,
-  showAchievements: false,
+  showPublications: true,
+  showAchievements: true,
   showLanguages: false,
   showMemberships: true,
   showHobbies: true,
@@ -187,10 +194,26 @@ const mockPersonalInfo: PersonalInfoType & {
   ],
   hobbies: ["Mountain hiking", "Classical music", "Chess", "Photography"],
   achievements: [
-    "Excellence in Cardiology Award, Armenian Medical Association (2020)",
-    "Best Research Paper, European Society of Cardiology (2018)",
-    "Young Investigator Award, International Cardiology Conference (2015)",
-    "Distinguished Service Award, Central Hospital (2014)",
+    {
+      title: "Excellence in Cardiology Award",
+      organization: "Armenian Medical Association",
+      date: "2020",
+    },
+    {
+      title: "Best Research Paper",
+      organization: "European Society of Cardiology",
+      date: "2018",
+    },
+    {
+      title: "Young Investigator Award",
+      organization: "International Cardiology Conference",
+      date: "2015",
+    },
+    {
+      title: "Distinguished Service Award",
+      organization: "Central Hospital",
+      date: "2014",
+    },
   ],
   publications: [
     {
@@ -874,18 +897,27 @@ export const staff: StaffType = [
     category: StaffCategory.MedicalStaff,
     visibility: true,
     personalInfo: {
-      bio: "",
-      showBio: true,
+      name: "Karine Mkrtchyan",
+      role: "Sonographer",
+      image: "", // From image CV, not provided
+      bio: "", // No explicit bio provided
+
+      // Visibility flags
+      showBio: false,
       showExperience: true,
       showEducation: true,
       showPublications: false,
-      showAchievements: false,
+      showAchievements: true,
       showLanguages: false,
-      showMemberships: true,
+      showMemberships: false,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+
+      // Sidebar visibility flags
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
+
+      // Content data
       contact: {
         phone: "",
         email: "",
@@ -896,12 +928,110 @@ export const staff: StaffType = [
         twitter: "",
       },
       specialties: [],
-      experience: [],
-      education: [],
+
+      experience: [
+        {
+          title: "Նորածնային բաժանմունքի բժիշկ-սոնոգրաֆիստ",
+          organization: "Վարդանանց բժշկական կենտրոն",
+          period: "14.04.2025 – Present",
+          description: "",
+        },
+        {
+          title: "ՀՅԿ Կանանց առողջության կլինիկա բժիշկ սոնոգրաֆիստ",
+          organization: "Մեյփլ Լիֆ (Maple Leaf)",
+          period: "01.09.2012 – Present",
+          description: "",
+        },
+        {
+          title: "Սոնոգրաֆիստ",
+          organization: "Սոնատո բժշկական կենտրոն",
+          period: "06.10.2011 – 20.12.2011",
+          description: "",
+        },
+        {
+          title: "Բժիշկ սոնոգրաֆիստ",
+          organization: "Երեխաների «Մուրացան» բժշկական կենտրոն",
+          period: "15.03.2009 – 25.10.2011",
+          description: "",
+        },
+      ],
+
+      education: [
+        {
+          degree: "Բժշկական գիտությունների թեկնածու",
+          institution: "Երևանի Մ. Հերացու անվան պետական բժշկական համալսարան",
+          year: "1991–1997",
+        },
+        {
+          degree: "Մանկաբարձագինեկոլոգիական մասնագիտացում",
+          institution: "Հետդիպլոմային բժշկական կրթություն, ԵՊԲՀ",
+          year: "1997–1998",
+        },
+        {
+          degree: "Ամբողջական աշխատակցի մանկաբարձագինեկոլոգ",
+          institution: "Ու. Ախուրյանի անվան առողջապահության քոլեջ",
+          year: "2006–2008",
+        },
+      ],
+
       memberships: [],
       hobbies: [],
-      achievements: [],
       publications: [],
+
+      achievements: [
+        {
+          title:
+            "Հետդիպլոմային կրթական դասընթաց՝ «Հետազոտությունների և ուսումնառության մենեջմենթ»",
+          organization:
+            "Գիտելիքների գնահատման միջազգային կենտրոն, Գլազգո քոլեջ",
+          date: "09.10.2023",
+        },
+        {
+          title: "Դասընթաց՝ «Գինեկոլոգիական ուլտրաձայն»",
+          organization: "Գլազգո քոլեջ",
+          date: "05.06.2022",
+        },
+        {
+          title:
+            "Ռադիոլոգիայի հայկական ընկերություն, ԱՄԱ, Ռադիոլոգների հայկական ասոցիացիա",
+          organization: "Երևան",
+          date: "05.06.2022",
+        },
+        {
+          title:
+            "Դասընթաց՝ «Լյարդի հիվանդությունների դիագնոստիկա և մոնիթորինգ՝ ուլտրաձայնի ժամանակակից մոտեցումներ»",
+          organization: "Սոնատո ԲԿ",
+          date: "06.05.2022",
+        },
+        {
+          title:
+            "Ռադիոլոգիայի հայկական ընկերություն, ԼՂ առողջապահության նախարարություն",
+          organization: "Երևան",
+          date: "15.06.2019",
+        },
+        {
+          title: "Դասընթաց՝ «Ռադիոլոգիայի եվրոպական դպրոցի» (ESOR)",
+          organization: "Երևան",
+          date: "06.29.2018",
+        },
+        {
+          title: "Կոնֆերանս՝ «Արդիական թեմաներ ռադիոլոգիայում»",
+          organization: "ԵՊԲՀ",
+          date: "20.11–22.12.2017",
+        },
+        {
+          title:
+            "Կոնֆերանս՝ «Երեխաների կենտրոնական նյարդային համակարգի պաթոլոգիա գինեկոլոգիայում»",
+          organization: "ԵՊԲՀ",
+          date: "04.11–20.12.2013",
+        },
+        {
+          title: "Սեմինար՝ «Սոնոգրաֆիկ սեմինար»",
+          organization: "Հայաստանի դոցենտների ասոցիացիա",
+          date: "17.12.2011",
+        },
+      ],
+
       languages: [],
     },
   },
