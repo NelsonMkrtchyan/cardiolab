@@ -293,36 +293,251 @@ export const staff: StaffType = [
     category: StaffCategory.MedicalStaff,
     visibility: true,
     personalInfo: {
-      bio: "",
+      bio: "Clinical Adult and Pediatric Cardiologist, Arrhythmia Specialist, Public Health Specialist",
       showBio: true,
       showExperience: true,
       showEducation: true,
-      showPublications: false,
-      showAchievements: false,
-      showLanguages: false,
+      showPublications: true,
+      showAchievements: true,
+      showLanguages: true,
       showMemberships: true,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
+      showAcademicActivities: true,
+      showContact: false,
+      showSocial: false,
       showSpecialties: true,
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "+37491787632",
+        email: "tatevik_hovakimyan@yahoo.com",
+        location: "Yerevan, Armenia",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
+      specialties: [
+        "Arrhythmology",
+        "Echocardiography",
+        "Cardiac Electrophysiology",
+        "Health Economics",
+        "Cardiovascular Research",
+        "Public Health",
+      ],
+      experience: [
+        {
+          period: "2024 – present",
+          title: "Co-Founder and CEO",
+          organization: "CardioLab Medical Center",
+          description: "",
+        },
+        {
+          period: "2024 – present",
+          title: "EHRA National Cardiac Societies Committee Member",
+          organization: "European Heart Rhythm Association",
+          description: "",
+        },
+        {
+          period: "2017 – 2024",
+          title: "Founder and Head of Arrhythmology Department",
+          organization: "Nork-Marash Medical Center",
+          description: "",
+        },
+        {
+          period: "2022 – present",
+          title:
+            "Expert Member, Cardiovascular Diseases Management Advisory Board",
+          organization: "Ministry of Health",
+          description: "",
+        },
+        {
+          period: "2023 – 2024",
+          title: "Expert Member, Cardiac Arrhythmology Cases Revision",
+          organization: "State Health Agency",
+          description: "",
+        },
+        {
+          period: "2022",
+          title: "Expert Member, Quality Improvement Advisory Board",
+          organization: "Ministry of Health",
+          description: "",
+        },
+        {
+          period: "2021",
+          title:
+            "Project Expert (Cardiovascular Diseases for National Diabetes Strategy)",
+          organization: "Armenian Eyecare Project",
+          description: "",
+        },
+        {
+          period: "2020 – 2022",
+          title: "Cardiologist",
+          organization: "Wigmore Clinic",
+          description: "",
+        },
+        {
+          period: "2012 – 2017",
+          title: "Arrhythmologist",
+          organization: "Astghik Medical Center",
+          description: "",
+        },
+        {
+          period: "2009 – 2012",
+          title: "Junior Adult and Pediatric Cardiologist",
+          organization: "Arrhythmology Cardiology Center of Armenia",
+          description: "",
+        },
+        {
+          period: "2007 – 2009",
+          title: "Fellowship in Adult Cardiology",
+          organization: "Nork-Marash Medical Center",
+          description: "",
+        },
+        {
+          period: "2004 – 2007",
+          title: "Residency in Pediatric Cardiology",
+          organization: "Nork-Marash Medical Center",
+          description: "",
+        },
+      ],
+      education: [
+        {
+          year: "2021 – 2023",
+          degree:
+            "Diploma of Advanced Studies in Cardiac Arrhythmia Management",
+          institution: "Maastricht University",
+        },
+        {
+          year: "2017 – 2019",
+          degree:
+            "Executive MSc in Health Economics, Outcomes and Management in Cardiovascular Sciences",
+          institution: "London School of Economics and Political Science",
+        },
+        {
+          year: "2017",
+          degree: "Observership in Electrophysiology",
+          institution: "Medical University of Vienna",
+        },
+        {
+          year: "2015 – 2017",
+          degree: "Master of Public Health",
+          institution: "American University of Armenia",
+        },
+        {
+          year: "2011",
+          degree: "Observership in Pediatric Cardiology",
+          institution: "Cleveland Clinic Children’s Hospital",
+        },
+        {
+          year: "2008",
+          degree: "Observership in Adult Cardiology",
+          institution: "Medical University of Vienna",
+        },
+        {
+          year: "2007 − 2009",
+          degree: "Clinical Fellowship in Adult Cardiology",
+          institution: "Nork-Marash Medical Center",
+        },
+        {
+          year: "2004 − 2007",
+          degree: "Clinical Residency in Pediatric Cardiology",
+          institution: "Nork-Marash Medical Center",
+        },
+        {
+          year: "1998 − 2004",
+          degree: "MD (Department of Pediatrics)",
+          institution: "Yerevan State Medical University",
+        },
+      ],
+      memberships: [
+        "ESC Professional Member (since 2018)",
+        "European Heart Rhythm Association (since 2010)",
+        "ESC Women in Cardiology Initiative (since 2017)",
+        "ESC Working Group on Grown-up Congenital Heart Disease (since 2014)",
+        "European Society of Cardiology (since 2010)",
+        "European Heart Failure Association (ESC HFA) (since 2019)",
+      ],
       hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
-      academicActivities: [],
+      achievements: [
+        {
+          title: "ESC Scholarship",
+          description:
+            "Supported education at the London School of Economics and Political Science",
+          organization: "European Society of Cardiology",
+          date: "2017",
+        },
+        {
+          title: "AGBU Scholarship",
+          description:
+            "Supported education at the London School of Economics and Political Science",
+          organization: "Armenian General Benevolent Union",
+          date: "2017",
+        },
+        {
+          title: "AUA/MoES Merit-based Scholarship",
+          description: "Supported education at American University of Armenia",
+          organization: "AUA/Ministry of Education and Science",
+          date: "2015",
+        },
+      ],
+      academicActivities: [
+        {
+          title: "Annual and Semiannual Arrhythmia Seminars",
+          organization: "Various medical centers",
+          date: "2010 – 2024",
+        },
+        {
+          title: "Arrhythmology Rotation (Teaching)",
+          organization: "Nork-Marash, Astghik Medical Center",
+          date: "2010 – 2024",
+        },
+        {
+          title: "Fellowship Training and Journal Clubs",
+          organization: "Multiple Centers",
+          date: "2010 – 2024",
+        },
+      ],
+      publications: [
+        {
+          title: "Electrophysiological findings during re-do procedures...",
+          journal: "Journal of Interventional Cardiac Electrophysiology",
+          year: "2023",
+        },
+        {
+          title:
+            "Perceptions and barriers to deceased organ donation in Armenia",
+          journal: "European Journal of Heart Failure",
+          year: "2020",
+        },
+        {
+          title:
+            "Syncope in a pregnant woman with repaired Tetralogy of Fallot",
+          journal: "European Heart Journal-Case Reports",
+          year: "2022",
+        },
+        {
+          title:
+            "Successful management of bidirectional ventricular tachycardia in child with COVID-19",
+          journal: "European Heart Journal-Case Reports",
+          year: "2023",
+        },
+        {
+          title:
+            "Uncommon case of incessant tachycardia-induced cardiomyopathy in a child",
+          journal: "Journal of Innovations in Cardiac Rhythm Management",
+          year: "2018",
+        },
+        {
+          title:
+            "Cardiogenic anorexia and underweighting in a child: case report",
+          journal: "European Heart Journal-Case Reports",
+          year: "2018",
+        },
+      ],
+      languages: [
+        { language: "Armenian", level: "Native" },
+        { language: "English", level: "Fluent" },
+        { language: "Russian", level: "Fluent" },
+      ],
     },
   },
   {
@@ -1115,35 +1330,185 @@ export const staff: StaffType = [
     visibility: true,
     personalInfo: {
       bio: "",
-      showBio: true,
+
+      showBio: false,
       showExperience: true,
       showEducation: true,
-      showPublications: false,
+      showPublications: true,
       showAchievements: false,
-      showLanguages: false,
+      showLanguages: true,
       showMemberships: true,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+      showAcademicActivities: false,
+
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
+
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "(+374) 94065058",
+        email: "doctorvoskanyan@yahoo.com",
+        location: "33th street of Erebuni, 16, 0020, Yerevan, Armenia",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
       specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
+      experience: [
+        {
+          period: "Mar 2015 – Apr 2016",
+          title: "Medical Doctor – Neurologist",
+          organization: "8th Polyclinic, Yerevan",
+          description: "",
+        },
+        {
+          period: "May 2014 – Jun 2021",
+          title: "Medical Doctor – Neurology & Neurorehabilitation",
+          organization: "Sirmed Medical Center, Yerevan",
+          description: "",
+        },
+        {
+          period: "May 2017 – Nov 2017",
+          title: "Neurologist",
+          organization: "2nd Hospital, Yerevan",
+          description: "",
+        },
+        {
+          period: "Nov 2017 – Jan 2021",
+          title: "Vice-President",
+          organization: "Sirmed Medical Center",
+          description: "",
+        },
+        {
+          period: "Mar 2021 – Present",
+          title: "Neurologist",
+          organization:
+            "Support for Wounded Soldiers and Disabled Military NGO",
+          description: "",
+        },
+      ],
+      education: [
+        {
+          year: "1994 – 2004",
+          degree: "High School",
+          institution: "Spitak",
+        },
+        {
+          year: "2004 – 2010",
+          degree: "M.D.",
+          institution: "Yerevan State Medical University",
+        },
+        {
+          year: "2010 – 2013",
+          degree: "Neurology Residency",
+          institution: "YSMU, Neurology Department",
+        },
+        {
+          year: "2021 – Present",
+          degree: "PhD Student",
+          institution: "KU Leuven, Belgium",
+        },
+      ],
+      memberships: [
+        "Member of Armenian Association of Neurologists (AAN)",
+        "Member of Movement Disorder Society",
+        "Member of Armenian Speech Therapists Association",
+        "Resident and Research Member of the European Academy of Neurology (EAN)",
+      ],
       hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
+      achievements: [
+        {
+          title: "Poster Presenter – PiLoT1 Exposition 'Chaos'",
+          organization: "KU Leuven / SLAC FineArts",
+          date: "May 2017",
+        },
+        {
+          title: "OMI Observership",
+          organization:
+            "Christian Doppler Klinik, American Austrian Foundation",
+          date: "Oct 2017",
+        },
+        {
+          title: "Observership",
+          organization:
+            "Christian Doppler Klinik, American Austrian Foundation",
+          date: "Jan 2018",
+        },
+        {
+          title: "Rehabilitation Medicine Seminar",
+          organization: "Salzburg, Austria",
+          date: "Feb 2016",
+        },
+      ],
       academicActivities: [],
+      publications: [
+        {
+          title: `"PARKINSON'S DISEASE OR SYMPTOMATIC PARKINSONISM? CAN THEY BE COMBINED?"`,
+          journal:
+            "21st World Congress on Parkinson’s Disease and Related Disorders",
+          year: "2015",
+        },
+        {
+          title:
+            "Increase L-dopa dosage for rest tremor or think about essential tremor?",
+          journal:
+            "20th International Congress of Parkinson’s Disease and Movement Disorders, Berlin",
+          year: "2016",
+        },
+        {
+          title: "A case of misdiagnosed Parkinson’s disease (PD)",
+          year: "2016",
+        },
+        {
+          title: "Insulin dependent diabetes and hand tremor",
+          journal: "MOVEMENT DISORDERS, Vol. 31",
+          year: "2016",
+        },
+        {
+          title: "A case of misdiagnosed essential tremor (ET)",
+          journal: "MOVEMENT DISORDERS, Vol. 30",
+          year: "2015",
+        },
+        {
+          title:
+            "Early Parkinson’s disease with family history of essential tremor",
+          journal:
+            "19th International Congress of Parkinson’s Disease and Movement Disorders",
+          year: "2015",
+        },
+        {
+          title: "Worst side effect of drugs – Parkinsonism",
+          journal: "MOVEMENT DISORDERS, Vol. 30",
+          year: "2015",
+        },
+        {
+          title: "Isolated facial nerve palsy: Bells palsy?",
+          journal: "CEREBROVASCULAR DISEASES, Vol. 39",
+          year: "2015",
+        },
+        {
+          title: "Non-motor symptoms in Parkinson’s disease",
+          journal: "MOVEMENT DISORDERS, Vol. 29",
+          year: "2014",
+        },
+        {
+          title: "Drug-induced dystonia",
+          journal: "MOVEMENT DISORDERS, Vol. 29",
+          year: "2014",
+        },
+        {
+          title: "Guam syndrome in four Armenian patients",
+          journal: "MOVEMENT DISORDERS, Vol. 29",
+          year: "2014",
+        },
+      ],
+      languages: [
+        { language: "Armenian", level: "native" },
+        { language: "English", level: "C1" },
+        { language: "Russian", level: "C2" },
+        { language: "Italian", level: "A2" },
+      ],
     },
   },
   {
