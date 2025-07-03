@@ -744,35 +744,156 @@ export const staff: StaffType = [
     visibility: true,
     personalInfo: {
       bio: "",
-      showBio: true,
+      showBio: false,
       showExperience: true,
       showEducation: true,
       showPublications: false,
-      showAchievements: false,
+      showAchievements: true,
       showLanguages: false,
-      showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
+      showMemberships: false,
+      showHobbies: true,
+      showAcademicActivities: true,
+      showContact: false,
+      showSocial: false,
       showSpecialties: true,
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "+374-55-99-09-92",
+        email: "tateviksimonyan1994@gmail.com",
+        location: "ՀՀ, մարզ Կոտայք, ք. Նոր Հաճն, Չարենցի 16 փողոց, բն. 14",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
-      specialties: [],
-      experience: [],
-      education: [],
+      specialties: [
+        "Մանկական սրտաբանություն",
+        "Պերինատալ սրտաբանություն",
+        "Քլինիկական ռեզիդենտուրա",
+        "Բժշկական ներկայացումներ",
+        "Գիտաժողովային մասնակցություն",
+      ],
+      experience: [
+        {
+          period: "2024թ.- առ այսօր",
+          title: "Մանկական և պերինատալ սրտաբան",
+          organization: "‹‹Նորք-Մարաշ›› ԲԿ",
+          description: "",
+        },
+        {
+          period: "2023-2024թթ.",
+          title: "Պերինատալ սրտաբան-ֆելոու",
+          organization: "‹‹Նորք-Մարաշ›› ԲԿ",
+          description: "",
+        },
+        {
+          period: "2021թ. հուլիս - 2021թ. դեկտեմբեր",
+          title: "Մանկական սրտաբան",
+          organization: "‹‹Սուրբ Աստվածամայր›› ԲԿ",
+          description: "",
+        },
+        {
+          period: "2020թ. նոյեմբեր - դեկտեմբեր",
+          title: "Մանկական սրտաբան",
+          organization: "‹‹Արաբկիր›› ԲԿ",
+          description: "",
+        },
+        {
+          period: "2018-2020թթ.",
+          title: "Ռեզիդենտ-մանկական սրտաբան",
+          organization: "‹‹Նորք-Մարաշ›› բժշկական կենտրոն",
+          description: "",
+        },
+        {
+          period: "2020-2021թթ.",
+          title: "Պերինատալ սրտաբանության ֆելոուշիփ",
+          organization: "‹‹Նորք-Մարաշ›› բժշկական կենտրոն",
+          description: "",
+        },
+      ],
+      education: [
+        {
+          year: "2023-2024թթ.",
+          degree: "Պերինատալ սրտաբանության ֆելոուշիփ",
+          institution: "‹‹Նորք-Մարաշ›› բժշկական կենտրոն",
+        },
+        {
+          year: "2017-2020թթ.",
+          degree: "Մանկական սրտաբանության կլինիկական օրդինատուրա",
+          institution: "‹‹Նորք-Մարաշ›› բժշկական կենտրոն",
+        },
+        {
+          year: "2015-2017թթ.",
+          degree:
+            "Մագիստրոսի աստիճան, բժշկի որակավորում, գերազանցության դիպլոմ",
+          institution:
+            "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան",
+        },
+        {
+          year: "2010-2015թթ.",
+          degree: "Բակալավրի աստիճան",
+          institution:
+            "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան",
+        },
+        {
+          year: "2000-2010թթ.",
+          degree: "Միջնակարգ կրթություն",
+          institution: "N 2 միջնակարգ դպրոց, ք. Նոր Հաճն",
+        },
+      ],
       memberships: [],
-      hobbies: [],
-      achievements: [],
+      hobbies: [
+        "Կարդալ",
+        "Ճանապարհորդել",
+        "Երաժշտություն լսել",
+        "Դաշնամուր նվագել",
+      ],
+      achievements: [
+        {
+          title: "Խոսնակ",
+          description:
+            "‹‹Սպորտը և պատվաստումները սրտի բնածին արատով երեխաների մոտ››",
+          organization: "ՆՄԲԿ սիրտ-անոթային գիտաժողով",
+          date: "2021թ. հունիս",
+        },
+        {
+          title: "Խոսնակ",
+          description:
+            "‹‹Ֆիզիկական ակտիվությունը սրտի բնածին արատով երեխաների շրջանում››",
+          organization: "‹‹Սիրո և նվիրումի 30 տարին›› գիտաժողով",
+          date: "2024թ. նոյեմբեր",
+        },
+        {
+          title: "Մասնակից",
+          description:
+            "Նորածնային սիրտ-թոքային հեմոդինամիկային նվիրված վեբինար",
+          date: "2021թ. մարտ",
+        },
+        {
+          title: "Մասնակից",
+          description: "‹‹Առիթմոլոգիական մաստեր–կլաս››",
+          date: "2023թ. հոկտեմբեր",
+        },
+        {
+          title: "Խոսնակ",
+          description:
+            "‹‹Ամբողջական նախասիրտ-փորոքային հաղորդակցություն ախտորոշմամբ հիվանդների վարման փորձը ‹‹Նորք-Մարաշ›› ԲԿ-ում››",
+          organization: "Հայաստանի 5-րդ միջազգային բժշկական համագումար",
+          date: "2019թ. հուլիս",
+        },
+      ],
+      academicActivities: [
+        {
+          title: "Գիտաժողովային խոսնակ և մասնակից",
+          organization: "Հայաստանյան և միջազգային համագումարներ",
+          date: "2019–2024թթ.",
+        },
+      ],
       publications: [],
-      languages: [],
-      academicActivities: [],
+      languages: [
+        { language: "Հայերեն", level: "մայրենի" },
+        { language: "Ռուսերեն", level: "սահուն" },
+        { language: "Անգլերեն", level: "սահուն" },
+      ],
     },
   },
   {
