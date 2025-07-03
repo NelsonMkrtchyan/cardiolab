@@ -82,12 +82,13 @@ export type PersonalInfoType = {
   education: Education[];
   memberships: string[];
   hobbies: string[];
-  achievements: Achievement[];
+  achievements: Achievement[] | string[];
   academicActivities: Achievement[];
   publications: {
     title: string;
-    journal: string;
-    year: string;
+    journal?: string;
+    description?: string;
+    year?: string;
     url?: string;
   }[];
   languages: {
@@ -829,6 +830,98 @@ export const staff: StaffType = [
       academicActivities: [],
     },
   },
+  //   #######
+  {
+    id: 24,
+    name: {
+      am: "Մերի Պապիկան",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+    role: {
+      am: "Սրտաբան",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: true,
+    personalInfo: {
+      bio: "",
+      showBio: true,
+      showExperience: true,
+      showEducation: true,
+      showPublications: false,
+      showAchievements: false,
+      showLanguages: false,
+      showMemberships: true,
+      showHobbies: false,
+      showContact: true,
+      showSocial: true,
+      showSpecialties: true,
+      contact: {
+        phone: "",
+        email: "",
+        location: "",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+      },
+      specialties: [],
+      experience: [],
+      education: [],
+      memberships: [],
+      hobbies: [],
+      achievements: [],
+      publications: [],
+      languages: [],
+      academicActivities: [],
+    },
+  },
+  {
+    id: 25,
+    name: {
+      am: "Նադեժդա Իսկանդարյան",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+    role: {
+      am: "Սրտաբան",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: true,
+    personalInfo: {
+      bio: "",
+      showBio: true,
+      showExperience: true,
+      showEducation: true,
+      showPublications: false,
+      showAchievements: false,
+      showLanguages: false,
+      showMemberships: true,
+      showHobbies: false,
+      showContact: true,
+      showSocial: true,
+      showSpecialties: true,
+      contact: {
+        phone: "",
+        email: "",
+        location: "",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+      },
+      specialties: [],
+      experience: [],
+      education: [],
+      memberships: [],
+      hobbies: [],
+      achievements: [],
+      publications: [],
+      languages: [],
+      academicActivities: [],
+    },
+  },
+  //   #######
   {
     id: 12,
     name: {
@@ -888,35 +981,167 @@ export const staff: StaffType = [
     visibility: true,
     personalInfo: {
       bio: "",
-      showBio: true,
+
+      // Visibility flags
+      showBio: false,
       showExperience: true,
       showEducation: true,
-      showPublications: false,
+      showPublications: true,
       showAchievements: false,
       showLanguages: false,
       showMemberships: true,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+
+      // Sidebar visibility flags
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
+
       contact: {
         phone: "",
-        email: "",
-        location: "",
+        email: "simonyan.arpiner@gmail.com",
+        location: "ք․ Երևան, Պուշկինի 50, բն․8",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
+
+      specialties: [
+        "MAFLD/MASLD",
+        "NASH",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Overlap syndrome",
+        "Hepatic Dysfunction",
+        "Neurogastroenterology",
+        "DGBI",
+      ],
+
+      experience: [
+        {
+          title: "Ասիստենտ",
+          organization: "ԵՊԲՀ Թերապիայի թիվ 3 ամբիոն",
+          period: "2017թ․ սեպտեմբեր – 2019թ․",
+          description: "",
+        },
+        {
+          title: "Հերթապահող բժիշկ`հիվանդ վարելու իրավունքով",
+          organization:
+            "Սուրբ Գրիգոր Լուսավորիչ ԲԿ, ընդհանուր թերապիայի բաժանմունք",
+          period: "2018թ․ մարտ – 2018թ․ օգոստոս",
+          description: "",
+        },
+        {
+          title: "Դասախոս",
+          organization:
+            "Ներքին հիվանդությունների (պուլմոնոլոգիա և նեֆրոլոգիա) ամբիոն",
+          period: "2019թ․ սեպտեմբեր 18 – մինչ օրս",
+          description: "",
+        },
+        {
+          title: "Ուս․մասի պատասխանատու",
+          organization:
+            "Ներքին հիվանդությունների (պուլմոնոլոգիա և նեֆրոլոգիա) ամբիոն",
+          period: "2021թ․ մարտ – 2022թ․ ապրիլ",
+          description: "",
+        },
+        {
+          title: "Գաստրոէնտերոլոգ-կոնսուլտանտ",
+          organization: "Աջափնյակ ԲԿ",
+          period: "2020թ․ մարտ – 2021թ․ ապրիլ",
+          description: "",
+        },
+        {
+          title: "Գաստրոէնտերոլոգ-թերապևտ",
+          organization: "ՈՒիգմոր Կլինիկ",
+          period: "2021թ․ ապրիլից – մինչ օրս",
+          description: "",
+        },
+        {
+          title: "Ներքին հիվանդությունների կլինիկայի ղեկավար",
+          organization: "Քանաքեռ-Զեյթուն ԲԿ",
+          period: "2022թ․ ապրիլ – 2023թ․ մարտ",
+          description: "",
+        },
+        {
+          title: "Գաստրոէնտերոլոգ-թերապևտ",
+          organization: "Գաստրո Կլինիկ",
+          period: "2024թ․ նոյեմբեր – մինչ օրս",
+          description: "",
+        },
+      ],
+
+      education: [
+        {
+          degree: "Բուժական գործ",
+          institution: "Երևանի Մ. Հերացու անվան պետական բժշկական համալսարան",
+          year: "2008–2013",
+        },
+        {
+          degree: "Բուժական գործ",
+          institution: "ԵՊԲՀ",
+          year: "2013–2015",
+        },
+        {
+          degree: "Գաստրոէնտերոլոգիա",
+          institution: "ԵՊԲՀ",
+          year: "2015–2017",
+        },
+        {
+          degree: "Ներքին բժշկություն",
+          institution: "ԵՊԲՀ",
+          year: "2020–2022",
+        },
+      ],
+
+      memberships: [
+        "Գաստրոէնտերոլոգների հայկական ասոցիացիայի անդամ (2017–2020թթ․)",
+        "Թերապևտների եվրասիական ասոցիացիայի անդամ (2017թ․–մինչ օրս)",
+        "Ճարպակալման կանխարգելման հայկական ասոցիացիայի անդամ (2023թ․–մինչ օրս)",
+      ],
+
       hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
+      achievements: [
+        "2017թ․ Կատարելագործում Թոքաբանություն մասնագիտությամբ (ԵՊԲՀ Թերապիայի թիվ 3 ամբիոն)",
+        "2018թ․ Անգլալեզու խմբերի ուսուցման կատարելագործման ատեստացիա (ԵՊԲՀ Օտար Լեզուների ամբիոն)",
+        "2018թ․ Վերապատրաստում ԵՊԲՀ դասախոսների որակավորման բարձրացման բաժնում",
+        "2021թ․ Վերապատրաստում ԵՊԲՀ դասախոսների որակավորման բարձրացման բաժնում",
+      ],
+
+      publications: [
+        {
+          title: "«Թոքաբանություն» ուսումնական ձեռնարկ",
+          description:
+            "2021թ․, համահեղինակ՝ ըստ Գ.Ե. Ռոյտբերգի և Ա.Վ. Ստրուտինսկու <<Ներքին հիվանդություններ. Շնչառական համակարգ>> (2018) և Ջ.Ա. Ֆիշմանի <<Թոքային հիվանդություններ և ախտահարումներ>> գրքի V հր․ (2015)",
+        },
+        {
+          title:
+            "«Լյարդի ոչ ալկոհոլային ճարպային հիվանդությունը Covid-19 վիրուսային վարակի ժամանակ»",
+          journal:
+            "Բժշկություն Գիտություն և Կրթություն, ISSN 1829-1775, Թ. 32, Նոյեմբեր 2021թ․",
+        },
+        {
+          title:
+            "«Լյարդային դրսևորումները COVID-19 վիրուսային վարակի դեպքում և ռեմդեսիվիրի ազդեցությունը լյարդի ֆունկցիայի վրա այդ հիվանդների շրջանում»",
+          journal:
+            "Բժշկություն Գիտություն և Կրթություն, ISSN 1829-1775, Թ. 34, Նոյեմբեր 2022թ․",
+        },
+        {
+          title:
+            "Drug Development: From Design To Customer (DDDC-2022) միջազգային համաժողով",
+          description:
+            "ԵՊԲՀ Դեղագործական ֆակուլտետի 50-ամյակի կապակցությամբ, 2022թ․, սեպտեմբերի 26–28, Երևան",
+        },
+        {
+          title:
+            "Comparative Analysis of Self-Medication For Acute Upper Respiratory Tract Infections and Headache Symptoms",
+          journal:
+            "Թեզ, UDC:616.211/.231:616.857, Բժշկություն Գիտություն և Կրթություն, 2023թ․ մայիս",
+        },
+      ],
       academicActivities: [],
+      languages: [],
     },
   },
   {
@@ -1084,7 +1309,7 @@ export const staff: StaffType = [
   {
     id: 15,
     name: {
-      am: "Աստղիկ Ավետիքսյանի",
+      am: "Աստղիկ Ավետիքսյան",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluzfsrDYCJcmH7QjURruLeMoFslfS6nVvkpdNb",
@@ -1407,97 +1632,6 @@ export const staff: StaffType = [
       am: "Ադմինիստրատոր",
     },
     category: StaffCategory.AdministrativeStaff,
-    visibility: true,
-    personalInfo: {
-      bio: "",
-      showBio: true,
-      showExperience: true,
-      showEducation: true,
-      showPublications: false,
-      showAchievements: false,
-      showLanguages: false,
-      showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
-      contact: {
-        phone: "",
-        email: "",
-        location: "",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-      },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
-      hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
-      academicActivities: [],
-    },
-  },
-  //   #######
-  {
-    id: 24,
-    name: {
-      am: "Մերի Պապիկան",
-    },
-    image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
-    role: {
-      am: "Սրտաբան",
-    },
-    category: StaffCategory.MedicalStaff,
-    visibility: true,
-    personalInfo: {
-      bio: "",
-      showBio: true,
-      showExperience: true,
-      showEducation: true,
-      showPublications: false,
-      showAchievements: false,
-      showLanguages: false,
-      showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
-      contact: {
-        phone: "",
-        email: "",
-        location: "",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-      },
-      specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
-      hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
-      academicActivities: [],
-    },
-  },
-  {
-    id: 25,
-    name: {
-      am: "Նադեժդա Իսկանդարյան",
-    },
-    image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
-    role: {
-      am: "Սրտաբան",
-    },
-    category: StaffCategory.MedicalStaff,
     visibility: true,
     personalInfo: {
       bio: "",
