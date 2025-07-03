@@ -299,7 +299,7 @@ export const staff: StaffType = [
       showEducation: true,
       showPublications: true,
       showAchievements: true,
-      showLanguages: true,
+      showLanguages: false,
       showMemberships: true,
       showHobbies: false,
       showAcademicActivities: true,

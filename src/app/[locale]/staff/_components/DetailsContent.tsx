@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Sidebar from "./Sidebar";
+import BookAppointmentButton from "./BookAppointmentButton";
 import {
   FaGraduationCap,
   FaBriefcase,
   FaUsers,
   FaHeart,
   FaCalendarAlt,
-  FaTimes,
 } from "react-icons/fa";
 import { type PersonalInfoType } from "~/constants/staff";
 
@@ -73,12 +73,13 @@ interface PersonalInfo {
   education: Education[];
   memberships: string[];
   hobbies: string[];
-  achievements: Achievement[];
+  achievements: Achievement[] | string[]; // Match the type from PersonalInfoType
   academicActivities: Achievement[];
   publications: {
     title: string;
-    journal: string;
-    year: string;
+    journal?: string;
+    description?: string;
+    year?: string;
     url?: string;
   }[];
   languages: {
@@ -93,7 +94,6 @@ const DetailsContent = ({
   image,
   personalInfo: staffPersonalInfo,
 }: DetailsContentI) => {
-  const [showModal, setShowModal] = useState(false);
   // Use staff personalInfo if available, otherwise use default mock data
   const personalInfo: PersonalInfo = staffPersonalInfo
     ? {
@@ -130,7 +130,7 @@ const DetailsContent = ({
         education: staffPersonalInfo.education || [],
         memberships: staffPersonalInfo.memberships || [],
         hobbies: staffPersonalInfo.hobbies || [],
-        achievements: staffPersonalInfo.achievements || [],
+        achievements: staffPersonalInfo.achievements || [] as Achievement[],
         academicActivities: staffPersonalInfo.academicActivities || [],
         publications: staffPersonalInfo.publications || [],
         languages: staffPersonalInfo.languages || [],
@@ -243,7 +243,7 @@ const DetailsContent = ({
             organization: "Central Hospital",
             date: "2014",
           },
-        ],
+        ] as Achievement[],
         publications: [
           {
             title: "Novel Approaches to Treating Arrhythmias in Young Adults",
@@ -286,35 +286,6 @@ const DetailsContent = ({
       };
   return (
     <>
-      {/* Appointment Booking Modal */}
-      {showModal && (
-        <div className="appointment-modal-overlay">
-          <div className="appointment-modal">
-            <div className="modal-header">
-              <h3>Book an Appointment</h3>
-              <button className="close-btn" onClick={() => setShowModal(false)}>
-                <FaTimes />
-              </button>
-            </div>
-            <div className="modal-body">
-              <p>This is a placeholder for the appointment booking form.</p>
-              <p>
-                In the future, this will contain a form to book an appointment
-                with {personalInfo.name}.
-              </p>
-            </div>
-            <div className="modal-footer">
-              <button
-                className="cancel-btn"
-                onClick={() => setShowModal(false)}
-              >
-                Cancel
-              </button>
-              <button className="submit-btn">Book Appointment</button>
-            </div>
-          </div>
-        </div>
-      )}
 
       <div className="doctor-details-area pt-100 pb-70">
         <div className="container">
@@ -334,15 +305,7 @@ const DetailsContent = ({
                 />
 
                 {/* Book Appointment Button */}
-                <div className="book-appointment-container">
-                  <button
-                    className="book-appointment-btn"
-                    onClick={() => setShowModal(true)}
-                  >
-                    <FaCalendarAlt className="btn-icon" />
-                    Book an Appointment
-                  </button>
-                </div>
+                <BookAppointmentButton doctorName={personalInfo.name} />
               </div>
             </div>
 
@@ -460,25 +423,37 @@ const DetailsContent = ({
                           <h3>Achievements & Awards</h3>
                         </div>
                         <ul className="achievements-list">
-                          {personalInfo.achievements.map((achievement, index) => (
-                            <li key={index} className="achievement-item">
-                              <div className="achievement-header">
-                                <h4 className="achievement-title">{achievement.title}</h4>
-                                {achievement.date && (
-                                  <span className="achievement-date">
-                                    <FaCalendarAlt className="icon-small" />
-                                    {achievement.date}
-                                  </span>
-                                )}
-                              </div>
-                              {achievement.organization && (
-                                <p className="achievement-organization">{achievement.organization}</p>
-                              )}
-                              {achievement.description && (
-                                <p className="achievement-description">{achievement.description}</p>
-                              )}
-                            </li>
-                          ))}
+                          {personalInfo.achievements.map((achievement, index) => {
+                            if (typeof achievement === 'string') {
+                              return (
+                                <li key={index} className="achievement-item">
+                                  <div className="achievement-header">
+                                    <h4 className="achievement-title">{achievement}</h4>
+                                  </div>
+                                </li>
+                              );
+                            } else {
+                              return (
+                                <li key={index} className="achievement-item">
+                                  <div className="achievement-header">
+                                    <h4 className="achievement-title">{achievement.title}</h4>
+                                    {achievement.date && (
+                                      <span className="achievement-date">
+                                        <FaCalendarAlt className="icon-small" />
+                                        {achievement.date}
+                                      </span>
+                                    )}
+                                  </div>
+                                  {achievement.organization && (
+                                    <p className="achievement-organization">{achievement.organization}</p>
+                                  )}
+                                  {achievement.description && (
+                                    <p className="achievement-description">{achievement.description}</p>
+                                  )}
+                                </li>
+                              );
+                            }
+                          })}
                         </ul>
                       </div>
                     )}
