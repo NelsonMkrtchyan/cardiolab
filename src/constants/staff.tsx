@@ -1597,35 +1597,107 @@ export const staff: StaffType = [
     visibility: true,
     personalInfo: {
       bio: "",
-      showBio: true,
+
+      showBio: false,
       showExperience: true,
       showEducation: true,
       showPublications: false,
-      showAchievements: false,
+      showAchievements: true,
       showLanguages: false,
       showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+      showHobbies: true,
+      showAcademicActivities: false,
+
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
+
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "(+374 55) 056117",
+        email: "aghunikzakaryan@gmail.com",
+        location: "Gyumri, Shirak, Armenia",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
       specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
-      hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
+      experience: [
+        {
+          period: "November 2024 – Present",
+          title: "Vascular Surgeon",
+          organization: "Sonomax Diagnostic Center (Gyumri, Armenia)",
+          description: "",
+        },
+        {
+          period: "February 2024 – December 2024",
+          title: "Doctor of Women Under 17 Armenian National Football Team",
+          organization: "Football Federation of Armenia",
+          description: "",
+        },
+        {
+          period: "February 2021 – June 2024",
+          title: "Vascular Surgeon",
+          organization: "Gyumri Medical Center",
+          description:
+            "This is a community hospital in the city of Gyumri, the second largest city in Armenia",
+        },
+        {
+          period: "November 2020 – Present",
+          title: "Vascular Surgeon",
+          organization: "Nork Marash Medical Center (NMMC), Yerevan, Armenia",
+          description:
+            "NMMC is a regional academic center with American-style cardiac surgery residency programs, established by US-trained Dr. Hrayr Hovaguimyan.",
+        },
+        {
+          period: "September 2020 – September 2021",
+          title: "Vascular Surgeon",
+          organization: "Wigmore Clinic, Yerevan, Armenia",
+          description: "",
+        },
+      ],
+      education: [
+        {
+          year: "2017–2020",
+          degree: "Clinical Residency in Vascular Surgery",
+          institution: "Yerevan State Medical University (YSMU)",
+        },
+        {
+          year: "2015–2017",
+          degree: "Doctor of Medicine (M.D.)",
+          institution: "YSMU",
+        },
+        {
+          year: "2010–2015",
+          degree: "Bachelor’s Degree in Medical Sciences",
+          institution: "YSMU",
+        },
+      ],
+      memberships: [
+        "ESVS trainee member (2017 - present)",
+        "Armenian Association for Vascular Surgeons (2019 - present)",
+        "CLI (Critical Limb Ischemia) Global Society (2024 - present)",
+      ],
+      hobbies: [
+        "Aspiring Female Entrepreneurs (FAST), 2019 Feb–May – Leadership and creativity program for young females",
+        "Leadership in Healthcare Program, 2022 Apr–Sept – Focused on research, healthcare communication, and burnout prevention",
+      ],
+      achievements: [
+        {
+          title: "Kickstarter Escalator Award",
+          description:
+            "Awarded by Women As One – an organization supporting female cardiovascular specialists in career development and advocacy",
+          organization: "Women As One",
+          date: "12 December 2022",
+        },
+      ],
       academicActivities: [],
+      publications: [],
+      languages: [
+        { language: "Armenian", level: "native" },
+        { language: "English", level: "fluent" },
+        { language: "Russian", level: "fluent" },
+      ],
     },
   },
   {
