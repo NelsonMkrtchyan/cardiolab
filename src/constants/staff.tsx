@@ -382,7 +382,93 @@ export const staff: StaffType = [
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
-    personalInfo: mockPersonalInfo,
+    personalInfo: {
+      bio: "",
+
+      showBio: false,
+      showExperience: true,
+      showEducation: true,
+      showPublications: true,
+      showAchievements: false,
+      showLanguages: false,
+      showMemberships: true,
+      showHobbies: false,
+      showAcademicActivities: false,
+
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
+
+      contact: {
+        phone: "(+374) 95885773",
+        email: "katarinevardanyan@gmail.com",
+        location: "Yerevan, Armenia",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+      },
+      specialties: [],
+      experience: [
+        {
+          period: "November 2015 – Present",
+          title: "Adult Cardiologist-Intensivist",
+          organization: "Nork Marash Medical Center, Intensive Care Unit",
+          description: "",
+        },
+        {
+          period: "June 2024 – Present",
+          title: "Cardiologist",
+          organization: "EcoSense Medical Center",
+          description: "",
+        },
+        {
+          period: "August 2016 – September 2017",
+          title: "Cardiologist",
+          organization: "SlavMed Medical Center",
+          description: "",
+        },
+      ],
+      education: [
+        {
+          year: "2003 – 2009",
+          degree: "M.D. Degree",
+          institution: "Yerevan State Medical University",
+        },
+      ],
+      memberships: [
+        "ACCA Ambassador to Armenia",
+        "Young ACCA representative in Armenia",
+        "European Society of Cardiology",
+        "Armenian Association of Cardiologists",
+        "Acute Cardiovascular Care Association",
+        "European Association of Cardiovascular Imaging",
+        "Acute Cardiovascular Care Working Group",
+        "European Heart Failure Association",
+      ],
+      hobbies: [],
+      achievements: [],
+      academicActivities: [],
+      publications: [
+        {
+          title: "Tricuspid Chordae Rupture",
+          journal: "Acute Cardiovascular Congress, Athens",
+          year: "2024",
+        },
+        {
+          title:
+            "Treatment of patients with ST-elevation myocardial infarction from 2006 to 2011 at the N1 University Clinic",
+          journal: "Armenian Association of Cardiology XII Congress, Yerevan",
+          year: "2019",
+        },
+        {
+          title: "Repair of Giant Pulmonary Artery Aneurysm",
+          journal: "5th International Medical Congress of Armenia",
+          year: "2019",
+        },
+      ],
+      languages: [],
+    },
   },
   {
     id: 4,
@@ -1250,9 +1336,6 @@ export const staff: StaffType = [
     category: StaffCategory.MedicalStaff,
     visibility: true,
     personalInfo: {
-      name: "Karine Mkrtchyan",
-      role: "Sonographer",
-      image: "", // From image CV, not provided
       bio: "", // No explicit bio provided
 
       // Visibility flags
@@ -1413,17 +1496,23 @@ export const staff: StaffType = [
     visibility: true,
     personalInfo: {
       bio: "",
-      showBio: true,
+
+      // Visibility flags
+      showBio: false,
       showExperience: true,
       showEducation: true,
-      showPublications: false,
-      showAchievements: false,
+      showPublications: true,
+      showAchievements: true,
       showLanguages: false,
       showMemberships: true,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+      showAcademicActivities: true,
+
+      // Sidebar visibility
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
+
       contact: {
         phone: "",
         email: "",
@@ -1433,15 +1522,65 @@ export const staff: StaffType = [
         linkedin: "",
         twitter: "",
       },
+
       specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
+
+      experience: [
+        {
+          title:
+            "Դոպլեր-դուպլեքս հետազոտության և հոդերի սոնոգրաֆիայի բժիշկ-մասնագետ",
+          organization: "Վլադիմիր Ավագյանի անվան ԲԿ",
+          period: "2008թ․ – առ այսօր",
+          description:
+            "Համատեղելիությամբ աշխատում է Պլանտա-Սանա ԲԿ-ում, Ցիտո ԲԿ-ում, Կարդիոլաբ ԲԿ-ում և Ավանտա կենտրոնում",
+        },
+      ],
+
+      education: [
+        {
+          degree: "Օրդինատուրա, ճառագայթային ախտորոշման մասնագետ",
+          institution:
+            "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան",
+          year: "2006 – 2008",
+        },
+        {
+          degree: "Բժիշկ, բուժական գործ մասնագիտություն",
+          institution:
+            "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան",
+          year: "2000 – 2006",
+        },
+      ],
+
+      memberships: [
+        "Հայաստանի ռադիոլոգիայի և անոթային վիրաբուժության ասոցիացիաների անդամ",
+      ],
+
       hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
+      achievements: [
+        "Մասնակցել է բազմաթիվ վերապատրաստումների (գիտական և գործնական) ՀՀ-ում և արտերկրում",
+      ],
+
       academicActivities: [],
+
+      publications: [
+        {
+          title:
+            "Վարիկոզ հիվանդության ժամանակ էնդովազալ լազերային կոագուլյացիայի գնահատումը դուպլեքս հետազոտության միջոցով",
+          journal: "«Радиология и практика» №3, Մոսկվա",
+          year: "2009",
+          description: "էջ 9-10",
+        },
+        {
+          title:
+            "Լազերային կոագուլյացիայից հետո վարիկոզ հիվանդության կրկնության հսկողությունը դուպլեքս հետազոտության միջոցով",
+          journal:
+            "Հայաստանի բժշկական միջազգային 3-րդ կոնգրեսի նյութերի ժողովածու",
+          year: "2011",
+          description: "հուլիս 7-9, Երևան, էջ 431-432",
+        },
+      ],
+
+      languages: [],
     },
   },
   {
