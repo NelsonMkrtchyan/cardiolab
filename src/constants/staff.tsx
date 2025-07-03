@@ -623,35 +623,128 @@ export const staff: StaffType = [
     visibility: true,
     personalInfo: {
       bio: "",
-      showBio: true,
+
+      // Visibility flags
+      showBio: false,
       showExperience: true,
       showEducation: true,
-      showPublications: false,
+      showPublications: true,
       showAchievements: false,
       showLanguages: false,
-      showMemberships: true,
+      showMemberships: false,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+      showAcademicActivities: false,
+
+      // Sidebar visibility
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
+
+      // Contact Info
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "+37494226363",
+        email: "izabellabarekan@gmail.com",
+        location: "Yerevan, Armenia",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
       specialties: [],
-      experience: [],
-      education: [],
+
+      experience: [
+        {
+          title: "Cardiology Consultant",
+          organization: "Haematology Center after Prof. R. Yeolyan MI",
+          period: "Feb 2023 – Present",
+          description: "",
+        },
+        {
+          title: "Cardiologist and Arrhythmologist Fellow",
+          organization: "Nork-Marash Medical Center",
+          period: "Sep 2022 – Present",
+          description: "",
+        },
+        {
+          title: "Cardiologist",
+          organization: "Mikaelyan University Hospital",
+          period: "2020 – Present",
+          description: "",
+        },
+        {
+          title: "Cardiologist",
+          organization: "Nork-Marash Medical Center",
+          period: "2019 – 2021",
+          description: "",
+        },
+        {
+          title: "Cardiologist",
+          organization: "Ambulance CJSC",
+          period: "2016 – 2018",
+          description: "",
+        },
+        {
+          title: "Cardiologist",
+          organization: "Republican Anti-Tuberculosis Dispensary",
+          period: "Jun 2018 – Dec 2018",
+          description: "",
+        },
+      ],
+
+      education: [
+        {
+          degree: "Medical Specialist in the Field of Cardiology",
+          institution: "Yerevan State Medical University after Mkhitar Heratsi",
+          year: "2015 – 2018",
+        },
+        {
+          degree: "Medical Doctor",
+          institution: "Belgorod State University",
+          year: "2009 – 2015",
+        },
+      ],
+
       memberships: [],
       hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
+      achievements: [
+        "Member of the organizational committee of the first Cardio-Oncology Forum in Armenia (April 2023)",
+        "Delivered a lecture on Sudden Cardiac Death within the first Patient School at NMMC (May 2023)",
+      ],
       academicActivities: [],
+      publications: [
+        {
+          title:
+            "Analysis of the Frequency of Detection of Precancerous Diseases of the Cervix",
+          journal:
+            'Collection of Scientific Papers – "Education and Science: Current Status and Development Prospects"',
+          description: "Supervisor: Prof. Speransky S.L.",
+          year: "2013",
+        },
+        {
+          title: "Liver Transplantation",
+          journal: "Forum on Surgical Diseases",
+          description: "Supervisor: Ph.D., Assoc. Volkov D.V.",
+          year: "2013",
+        },
+        {
+          title: "Syndrome of Ovarian Hyperstimulation",
+          journal: "Forum of Obstetrics and Gynecology",
+          description: "Supervisor: Prof. Pakhomov S.P.",
+          year: "2013",
+        },
+        {
+          title: "Religion as an Element of the National Social System",
+          journal:
+            "Belgorod State National Research University – Philosophy and Science over Barriers: VI All-Russian Scientific Conference",
+          description: "",
+          year: "2012",
+        },
+      ],
+      languages: [
+        { language: "Armenian", level: "Native" },
+        { language: "Russian", level: "Native" },
+        { language: "English", level: "C1" },
+      ],
     },
   },
   {
