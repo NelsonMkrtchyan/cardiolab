@@ -1454,36 +1454,106 @@ export const staff: StaffType = [
     category: StaffCategory.MedicalStaff,
     visibility: true,
     personalInfo: {
-      bio: "",
+      bio: `As part of my certification in Health and Nutrition Coaching, I developed a deep understanding of evidence-based nutrition principles, behavior change techniques, and holistic wellness strategies. My training focused on helping individuals create sustainable lifestyle changes through personalized nutrition guidance, goal setting, and motivational support. I gained practical experience in client assessment, meal planning, and coaching methodologies grounded in science and empathy. This education laid the foundation for my mission to empower others to live healthier, more balanced lives.`,
+
+      // Visibility flags
       showBio: true,
       showExperience: true,
       showEducation: true,
       showPublications: false,
       showAchievements: false,
       showLanguages: false,
-      showMemberships: true,
+      showMemberships: false,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
+      showAcademicActivities: false,
+
+      // Sidebar visibility
+      showContact: false,
+      showSocial: false,
       showSpecialties: true,
+
+      // Contact
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "+37477065995",
+        email: "baghdasaryan.gayane99@gmail.com",
+        location: "Yerevan, Armenia",
       },
+
       social: {
         linkedin: "",
         twitter: "",
       },
-      specialties: [],
-      experience: [],
-      education: [],
+
+      specialties: [
+        "Health and Wellness Nutrition",
+        "Human Resources (HR) Recruiting",
+      ],
+
+      experience: [
+        {
+          title: "Health and Wellness Specialist",
+          organization: "CardioLab",
+          period: "April 2025 — Present",
+          description: "",
+        },
+        {
+          title: "Technical Recruiter",
+          organization: "DataArt LLC",
+          period: "Sep 2021 — May 2025",
+          description: "",
+        },
+        {
+          title: "Human Resources Specialist",
+          organization: "DataArt LLC",
+          period: "Jul 2019 — May 2025",
+          description: "",
+        },
+      ],
+
+      education: [
+        {
+          degree:
+            "Health and Wellness Coach (Diplomate & Certified Specialist)",
+          institution: "CNM College of Naturopathic Medicine in London, UK",
+          year: "2023 — 2025",
+        },
+        {
+          degree: "Bachelor's degree, Psychology",
+          institution: "Yerevan State University",
+          year: "2018 — 2022",
+        },
+        {
+          degree: "Bachelor's degree, Law (Not completed)",
+          institution: "French University in Armenia (UFAR)",
+          year: "2016 — 2018",
+        },
+      ],
+
       memberships: [],
       hobbies: [],
       achievements: [],
-      publications: [],
-      languages: [],
       academicActivities: [],
+
+      publications: [],
+
+      languages: [
+        {
+          language: "Armenian",
+          level: "Native",
+        },
+        {
+          language: "Russian",
+          level: "Native",
+        },
+        {
+          language: "English",
+          level: "Advanced",
+        },
+        {
+          language: "French",
+          level: "Intermediate",
+        },
+      ],
     },
   },
   {
