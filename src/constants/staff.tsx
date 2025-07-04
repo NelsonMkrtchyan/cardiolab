@@ -958,32 +958,167 @@ export const staff: StaffType = [
       showBio: true,
       showExperience: true,
       showEducation: true,
-      showPublications: false,
-      showAchievements: false,
+      showPublications: true,
+      showAchievements: true,
       showLanguages: false,
       showMemberships: true,
-      showHobbies: false,
-      showContact: true,
-      showSocial: true,
+      showHobbies: true,
+      showAcademicActivities: true,
+      showContact: false,
+      showSocial: false,
       showSpecialties: true,
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "+37498572768",
+        email: "gevorgpetrosyan2805@gmail.com",
+        location: "Yerevan, Armenia",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
       specialties: [],
-      experience: [],
-      education: [],
+      experience: [
+        {
+          period: "01.2025-present",
+          title: "Arrhythmology fellow",
+          organization: '"Cardiolab" MC, Yerevan',
+          description: "",
+        },
+        {
+          period: "11.2024-present",
+          title: "Cardiologist",
+          organization: '"Astghik" MC, Yerevan',
+          description: "",
+        },
+        {
+          period: "09.2021-03.2025",
+          title: "Emergency physician",
+          organization: '"Ambulance" CJSC, N2 substation',
+          description: "",
+        },
+        {
+          period: "09.2016-present",
+          title: "Head of Biology Olympiad Club",
+          organization:
+            '"Shirakatsy Lyceum" International Scientific-Educational Complex',
+          description: "",
+        },
+        {
+          period: "2023- present",
+          title: "Member of the Republican Committee on Biology Olympiad",
+          organization: "",
+          description: "",
+        },
+        {
+          period: "2019-2021",
+          title: "Patient Care Assistant",
+          organization: '"Heratsi" No. 1 hospital complexe',
+          description: "",
+        },
+      ],
+      education: [
+        {
+          year: "11.2024-03.2025",
+          degree: "Short-term specialization and licensing in Echocardiography",
+          institution:
+            '"National Institute of Health named after Academician S. Avdalbekyan" Ministry of Health. RA',
+        },
+        {
+          year: "2021-2024",
+          degree: "Residency in Cardiology",
+          institution:
+            '"Heratsi" No. 1 hospital complexe, YSMU, Department of General & Invasive Cardiology',
+        },
+        {
+          year: "2015-2021",
+          degree: "Doctor of Medicine",
+          institution:
+            "Yerevan State Medical University (YSMU), Faculty of General Medicine.",
+        },
+        {
+          year: "2010-2015",
+          degree: "Secondary Education",
+          institution:
+            '"Shirakatsy Lyceum" International Scientific-Educational Complex',
+        },
+      ],
       memberships: [],
-      hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
+      hobbies: ["Chess", "Hiking", "Gardening", "Swimming"],
+      achievements: [
+        {
+          title: "EHRA CIED Course",
+          organization: "European Society of Cardiology",
+          date: "June 19-21, 2025",
+        },
+        {
+          title: "POCUS ultarasound course",
+          date: "March 09-10, 2025",
+        },
+        {
+          title: "Echocardiography Workshop",
+          organization: '"Cardiolab" MC, Yerevan',
+          date: "February 27-28, 2025",
+        },
+        {
+          title: "ACLS training",
+          organization: '"Traveling Doctors" Health NGO',
+          date: "03.05.23",
+        },
+        {
+          title: "Leadership Map assessment program",
+          organization: "Grow Edutainment, Yerevan",
+          date: "2019",
+        },
+        {
+          title: "Online Eurocamp 2020",
+          organization: "Magdeburg, Auslandsgesellschaft Sachsen-Anhalt e. V.",
+          date: "from 25.05.2020 to 05.06.2020",
+        },
+      ],
       academicActivities: [],
+      publications: [
+        {
+          title: 'Review "mTOR as a possible target for ASD pharmacotherapy"',
+          journal:
+            "The New Armenian Medical Journal, Vol.11, No3, 2017, page 156",
+          description:
+            "Khamperyan A.Kh., Hakobyan A.H., Kehyan V.S., Petrosyan G.V. (Scientific supervisor- .S.Fereshetyan, Departament of Biochemistry, YSMU)",
+          year: "2017",
+        },
+        {
+          title:
+            'Impact of Ararat Cement and Zangezur Copper and Molybdenum Factories Emissiones on Population Health" research work',
+          description:
+            "3rd International Conference on Non-Communicable Diseases, Chi inău, Republic of Moldova",
+          year: "2019",
+        },
+        {
+          title:
+            "Comparative Characteristics of Idiopathic Inflammatory Bowel Diseases",
+          journal:
+            "V International Scientific and Practical Conference of Students and Young Scientists, Dorokhov Readings - Russia, 2018, pp. 202-213.",
+          description: "Petrosyan G.V., Gevorgyan N.V., Karalyan N.Yu.",
+          year: "2018",
+        },
+      ],
+      languages: [
+        {
+          language: "Armenian",
+          level: "mother tongue",
+        },
+        {
+          language: "English",
+          level: "B2",
+        },
+        {
+          language: "Russian",
+          level: "B2",
+        },
+        {
+          language: "German",
+          level: "A1",
+        },
+      ],
     },
   },
   {
@@ -1008,8 +1143,8 @@ export const staff: StaffType = [
       showLanguages: false,
       showMemberships: true,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
+      showContact: false,
+      showSocial: false,
       showSpecialties: true,
       contact: {
         phone: "",
