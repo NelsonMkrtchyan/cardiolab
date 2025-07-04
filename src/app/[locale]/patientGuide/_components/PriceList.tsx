@@ -38,18 +38,8 @@ const PriceList = () => {
     <div className="pt-100 pb-70 price-list container">
       <div className="section-title">
         <h2>{t("title")}</h2>
-        {/*<p>{t("description")}</p>*/}
       </div>
 
-      {/*<div className="mb-4 text-right">*/}
-      {/*  <button*/}
-      {/*    onClick={handleDownload}*/}
-      {/*    className="default-btn"*/}
-      {/*    aria-label={t("downloadButton")}*/}
-      {/*  >*/}
-      {/*    <FaDownload className="mr-2" /> {t("downloadButton")}*/}
-      {/*  </button>*/}
-      {/*</div>*/}
       <div className="price-list-content row">
         <div className="w-full">
           <div>

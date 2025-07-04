@@ -18,7 +18,7 @@ interface FormData {
 }
 
 const AppointmentForm: React.FC = () => {
-  const tComponents = useTranslations("Components");
+  const tForms = useTranslations("Forms");
   const tGeneral = useTranslations("General");
   const locale: string = useLocale();
   const localisedWorkingHours: WorkingHoursType[0] | undefined =
@@ -53,7 +53,7 @@ const AppointmentForm: React.FC = () => {
       });
 
       if (response.ok) {
-        setStatus(tComponents("ContactForm.successMessage"));
+        setStatus(tForms("ContactForm.successMessage"));
         setFormData({
           name: "",
           email: "",
@@ -64,11 +64,11 @@ const AppointmentForm: React.FC = () => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { error } = await response.json();
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-argument
-        setStatus(error || tComponents("ContactForm.errorMessage"));
+        setStatus(error || tForms("ContactForm.errorMessage"));
       }
     } catch (error) {
       console.error(error);
-      setStatus(tComponents("ContactForm.errorMessage"));
+      setStatus(tForms("ContactForm.errorMessage"));
     } finally {
       setIsLoading(false);
     }
@@ -89,8 +89,8 @@ const AppointmentForm: React.FC = () => {
             </div>
 
             <div>
-              <h2>{tComponents("Appointments.title")}</h2>
-              {/*<span>{tComponents("Appointments.description")}</span>*/}
+              <h2>{tForms("Appointments.title")}</h2>
+              {/*<span>{tForms("Appointments.description")}</span>*/}
             </div>
 
             <div className="appointment-form">
@@ -99,15 +99,13 @@ const AppointmentForm: React.FC = () => {
                   <div className="col-lg-12">
                     <div className="form-group">
                       <div className="input-container">
-                        <label>{tComponents("Appointments.labels.name")}</label>
+                        <label>{tForms("Appointments.labels.name")}</label>
                         <input
                           type="text"
                           name="name"
                           className="form-control"
                           required
-                          placeholder={tComponents(
-                            "Appointments.placeholders.name",
-                          )}
+                          placeholder={tForms("Appointments.placeholders.name")}
                           value={formData.name}
                           onChange={handleInputChange}
                         />
@@ -121,14 +119,12 @@ const AppointmentForm: React.FC = () => {
                   <div className="col-lg-12">
                     <div className="form-group">
                       <div className="input-container">
-                        <label>
-                          {tComponents("Appointments.labels.email")}
-                        </label>
+                        <label>{tForms("Appointments.labels.email")}</label>
                         <input
                           type="text"
                           name="email"
                           className="form-control"
-                          placeholder={tComponents(
+                          placeholder={tForms(
                             "Appointments.placeholders.email",
                           )}
                           required
@@ -145,14 +141,12 @@ const AppointmentForm: React.FC = () => {
                   <div className="col-lg-12">
                     <div className="form-group">
                       <div className="input-container">
-                        <label>{tComponents("Appointments.labels.ssn")}</label>
+                        <label>{tForms("Appointments.labels.ssn")}</label>
                         <input
                           type="text"
                           name="ssn"
                           className="form-control"
-                          placeholder={tComponents(
-                            "Appointments.placeholders.ssn",
-                          )}
+                          placeholder={tForms("Appointments.placeholders.ssn")}
                           required
                           value={formData.ssn}
                           onChange={handleInputChange}
@@ -167,14 +161,12 @@ const AppointmentForm: React.FC = () => {
                   <div className="col-lg-12">
                     <div className="form-group">
                       <div className="input-container">
-                        <label>
-                          {tComponents("Appointments.labels.phone")}
-                        </label>
+                        <label>{tForms("Appointments.labels.phone")}</label>
                         <input
                           type="text"
                           name="number"
                           className="form-control"
-                          placeholder={tComponents(
+                          placeholder={tForms(
                             "Appointments.placeholders.phone",
                           )}
                           required
@@ -195,7 +187,7 @@ const AppointmentForm: React.FC = () => {
                     className="btn appointment-btn"
                     disabled={isLoading}
                   >
-                    {tComponents("Appointments.actions.submit")}
+                    {tForms("Appointments.actions.submit")}
                   </button>
                 </div>
               </form>

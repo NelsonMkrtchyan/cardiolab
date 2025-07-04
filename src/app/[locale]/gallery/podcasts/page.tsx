@@ -10,10 +10,10 @@ export default function Page() {
   return (
     <>
       <PageBanner
-        pageTitle={tMenu("Podcasts")}
+        pageTitle={tMenu("Gallery.Podcasts")}
         homePageUrl="/gallery"
         homePageText={tMenu("Gallery.Gallery")}
-        activePageText={tMenu("Podcasts")}
+        activePageText={tMenu("Gallery.Podcasts")}
         bgImage={`${ImagesDB.AbstractImages.abstract_four}`}
       />
       <PodcastsCards />

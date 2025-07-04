@@ -2,12 +2,9 @@
 
 // import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import { CardioLabInfo } from "~/constants/menus";
-import { IoCall } from "react-icons/io5";
 import { type ChangeEvent, type FormEvent, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { type LocaleT } from "~/types";
 import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
 interface FormData {
@@ -20,8 +17,7 @@ interface FormData {
 
 const ContactForm = () => {
   const locale: string = useLocale();
-  const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
-  const tComponents = useTranslations("Components");
+  const tForms = useTranslations("Forms");
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -53,7 +49,7 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        setStatus(tComponents("ContactForm.successMessage"));
+        setStatus(tForms("ContactForm.successMessage"));
         setFormData({
           name: "",
           email: "",
@@ -65,11 +61,11 @@ const ContactForm = () => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { error } = await response.json();
         // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        setStatus(error || tComponents("ContactForm.errorMessage"));
+        setStatus(error || tForms("ContactForm.errorMessage"));
       }
     } catch (error) {
       console.error(error);
-      setStatus(tComponents("ContactForm.errorMessage"));
+      setStatus(tForms("ContactForm.errorMessage"));
     } finally {
       setIsLoading(false);
     }
@@ -88,7 +84,7 @@ const ContactForm = () => {
               {/*  }}*/}
               {/*/>*/}
               <div className="drop-left">
-                <h2>{tComponents("ContactForm.title")}</h2>
+                <h2>{tForms("ContactForm.title")}</h2>
 
                 <form onSubmit={handleSubmit}>
                   <div className="row">
@@ -98,9 +94,7 @@ const ContactForm = () => {
                           type="text"
                           name="name"
                           className="form-control"
-                          placeholder={tComponents(
-                            "ContactForm.placeholders.name",
-                          )}
+                          placeholder={tForms("ContactForm.placeholders.name")}
                           required
                           value={formData.name}
                           onChange={handleInputChange}
@@ -114,9 +108,7 @@ const ContactForm = () => {
                           type="text"
                           name="email"
                           className="form-control"
-                          placeholder={tComponents(
-                            "ContactForm.placeholders.email",
-                          )}
+                          placeholder={tForms("ContactForm.placeholders.email")}
                           required
                           value={formData.email}
                           onChange={handleInputChange}
@@ -130,9 +122,7 @@ const ContactForm = () => {
                           type="text"
                           name="number"
                           className="form-control"
-                          placeholder={tComponents(
-                            "ContactForm.placeholders.phone",
-                          )}
+                          placeholder={tForms("ContactForm.placeholders.phone")}
                           required
                           value={formData.number}
                           onChange={handleInputChange}
@@ -146,7 +136,7 @@ const ContactForm = () => {
                           type="text"
                           name="subject"
                           className="form-control"
-                          placeholder={tComponents(
+                          placeholder={tForms(
                             "ContactForm.placeholders.subject",
                           )}
                           required
@@ -163,7 +153,7 @@ const ContactForm = () => {
                           cols={30}
                           rows={6}
                           className="form-control"
-                          placeholder={tComponents(
+                          placeholder={tForms(
                             "ContactForm.placeholders.message",
                           )}
                           required
@@ -180,8 +170,8 @@ const ContactForm = () => {
                         disabled={isLoading}
                       >
                         {isLoading
-                          ? tComponents("ContactForm.sending")
-                          : tComponents("ContactForm.sendMessage")}
+                          ? tForms("ContactForm.sending")
+                          : tForms("ContactForm.sendMessage")}
                       </button>
                       {/*{status && <p>{status}</p>}*/}
                     </div>
@@ -222,27 +212,6 @@ const ContactForm = () => {
                     />
                   </SwiperSlide>
                 </Swiper>
-
-                <div className="speciality-emergency">
-                  <div className="speciality-icon">
-                    <IoCall className="icon large-icon-size" />
-                  </div>
-                  <div className="speciality-content">
-                    <h3>{tComponents("ContactForm.callNote")}</h3>
-                    <ul>
-                      {
-                        localisedCardioLabInfo.phone.map((phone: string) => (
-                          <li key={phone}>
-                            <a href={`tel:${phone}`}>
-                              <IoCall className="icon" color={"white"} />
-                              {phone}
-                            </a>
-                          </li>
-                        ))[0]
-                      }
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

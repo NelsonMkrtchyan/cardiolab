@@ -50,9 +50,8 @@ import { Montserrat } from "next/font/google";
 
 import Navbar from "~/app/_Disin_components/layout/Navbar";
 // import TopHeader from "~/app/_Disin_components/layout/TopHeader";
-// import Footer from "~/app/_Components/layout/Footer/Footer";
 import GoTop from "~/app/_Disin_components/layout/GoTop";
-import NewFooter from "~/app/_Components/NewFooter/NewFooter";
+import Footer from "~/app/_Components/Footer/Footer";
 
 // const poppins = Poppins({
 //   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -108,8 +107,7 @@ export default async function RootLayout({
               {children}
             </div>
             <GoTop />
-            {/*<Footer />*/}
-            <NewFooter />
+            <Footer />
           </NextIntlClientProvider>
         </Providers>
       </body>

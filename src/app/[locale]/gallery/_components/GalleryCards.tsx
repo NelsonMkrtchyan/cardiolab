@@ -24,7 +24,7 @@ const GalleryCards = () => {
               <BlueCard
                 icon={<MdOndemandVideo className="icon largest-icon-size" />}
                 path={"/gallery/podcasts"}
-                title={tMenu("Podcasts")}
+                title={tMenu("Gallery.Podcasts")}
                 description={""}
               />
             </div>

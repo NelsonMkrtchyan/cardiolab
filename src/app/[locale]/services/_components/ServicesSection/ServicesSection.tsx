@@ -16,13 +16,9 @@ import { priceListData } from "~/constants/priceList";
 import type { LocaleT } from "~/types";
 
 type ServicesSectionProps = {
-  // Background color (default: light)
   variant?: "light" | "dark";
-  // Custom CTA link
   ctaLink?: string;
-  // Show signature
   showSignature?: boolean;
-  // Auto slide interval in ms (default: 3000)
   autoplayDelay?: number;
 };
 
@@ -34,7 +30,6 @@ const ServicesSection = ({
 }: ServicesSectionProps) => {
   const tGeneral = useTranslations("General");
   const tService = useTranslations("Service");
-  const tCommon = useTranslations("Common");
   const locale: string = useLocale();
   const localisedPriceList = priceListData[locale as LocaleT];
 
@@ -106,7 +101,7 @@ const ServicesSection = ({
 
         {showSignature && (
           <div className="signature-section">
-            <p className="signature-text">{tCommon("slogan")}</p>
+            <p className="signature-text">{tGeneral("Slogan")}</p>
           </div>
         )}
 

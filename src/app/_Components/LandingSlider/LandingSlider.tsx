@@ -21,7 +21,7 @@ type SliderDataItemType = {
 type SliderDataType = SliderDataItemType[];
 
 const LandingSlider = () => {
-  const t = useTranslations("HeroSlider");
+  const tHeroSlider = useTranslations("HeroSlider");
   const tGeneral = useTranslations("General");
 
   const sliderData: SliderDataType = [
@@ -32,7 +32,7 @@ const LandingSlider = () => {
     },
     {
       id: 2,
-      title: t("priceTitle"),
+      title: tHeroSlider("priceTitle"),
       imageUrl:
         "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu1HrSPG2GN8X3FsiITKCzR9wVM5lohEmPqWDv",
       link: {

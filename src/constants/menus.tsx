@@ -1,66 +1,66 @@
 import { useTranslations } from "next-intl";
 // TODO change all staff to staff
 export const Menus = () => {
-  const t = useTranslations("Menu");
+  const tMenu = useTranslations("Menu");
   return [
     // {
-    //   label: `${t("Home")}`,
+    //   label: `${tMenu("Home")}`,
     //   link: "/",
     // },
     {
-      label: `${t("AboutUs")}`,
+      label: `${tMenu("AboutUs")}`,
       link: "/about",
     },
     {
-      label: `${t("Staff")}`,
+      label: `${tMenu("Staff")}`,
       link: "/staff",
     },
     {
-      label: `${t("Services")}`,
+      label: `${tMenu("Services")}`,
       link: "/services",
     },
     {
-      label: `${t("Pricelist")}`,
+      label: `${tMenu("Pricelist")}`,
       link: "/patientGuide/pricelist",
     },
     // {
-    //   label: `${t("Guide")}`,
+    //   label: `${tMenu("Guide")}`,
     //   link: "#",
     //   submenu: [
     //     {
-    //       label: `${t("DoctorGuide")}`,
+    //       label: `${tMenu("DoctorGuide")}`,
     //       link: "/doctorGuide",
     //     },
     //     {
-    //       label: `${t("PatientGuide")}`,
+    //       label: `${tMenu("PatientGuide")}`,
     //       link: "/patientGuide",
     //     },
     //   ],
     // },
     // {
-    //   label: `${t("News")}`,
+    //   label: `${tMenu("News")}`,
     //   link: "/news",
     // },
     {
-      label: `${t("Gallery.Gallery")}`,
+      label: `${tMenu("Gallery.Gallery")}`,
       link: "/gallery",
       submenu: [
         {
-          label: `${t("Gallery.Images")}`,
+          label: `${tMenu("Gallery.Images")}`,
           link: "/gallery/images",
         },
         // {
-        //   label: `${t("Gallery.Videos")}`,
+        //   label: `${tMenu("Gallery.Videos")}`,
         //   link: "/gallery/videos",
         // },
         {
-          label: `${t("Podcasts")}`,
+          label: `${tMenu("Gallery.Podcasts")}`,
           link: "/gallery/podcasts",
         },
       ],
     },
     {
-      label: `${t("ContactUs")}`,
+      label: `${tMenu("ContactUs")}`,
       link: "/contact",
     },
   ];
