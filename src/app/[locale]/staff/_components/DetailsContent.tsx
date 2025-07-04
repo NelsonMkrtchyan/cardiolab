@@ -11,12 +11,14 @@ import {
   FaCalendarAlt,
 } from "react-icons/fa";
 import { type PersonalInfoType } from "~/constants/staff";
+import DoctorAppointmentForm from "~/app/_Components/DoctorAppointmentForm/DoctorAppointmentForm";
 
 interface DetailsContentI {
   name: string | null;
   role: string | null;
   image: string | null;
   personalInfo?: PersonalInfoType;
+  staffId?: number;
 }
 
 interface Experience {
@@ -93,6 +95,7 @@ const DetailsContent = ({
   role,
   image,
   personalInfo: staffPersonalInfo,
+  staffId,
 }: DetailsContentI) => {
   // Use staff personalInfo if available, otherwise use default mock data
   const personalInfo: PersonalInfo = staffPersonalInfo
@@ -110,7 +113,8 @@ const DetailsContent = ({
         showLanguages: staffPersonalInfo.showLanguages ?? false,
         showMemberships: staffPersonalInfo.showMemberships ?? true,
         showHobbies: staffPersonalInfo.showHobbies ?? false,
-        showAcademicActivities: staffPersonalInfo.showAcademicActivities ?? false,
+        showAcademicActivities:
+          staffPersonalInfo.showAcademicActivities ?? false,
         // Sidebar visibility flags
         showContact: staffPersonalInfo.showContact ?? true,
         showSocial: staffPersonalInfo.showSocial ?? true,
@@ -130,7 +134,7 @@ const DetailsContent = ({
         education: staffPersonalInfo.education || [],
         memberships: staffPersonalInfo.memberships || [],
         hobbies: staffPersonalInfo.hobbies || [],
-        achievements: staffPersonalInfo.achievements || [] as Achievement[],
+        achievements: staffPersonalInfo.achievements || ([] as Achievement[]),
         academicActivities: staffPersonalInfo.academicActivities || [],
         publications: staffPersonalInfo.publications || [],
         languages: staffPersonalInfo.languages || [],
@@ -213,13 +217,15 @@ const DetailsContent = ({
             title: "Lecture on Cardiovascular Health",
             organization: "Yerevan State Medical University",
             date: "2023",
-            description: "Guest lecture on modern approaches to cardiovascular disease prevention"
+            description:
+              "Guest lecture on modern approaches to cardiovascular disease prevention",
           },
           {
             title: "Research Workshop",
             organization: "Armenian Medical Association",
             date: "2022",
-            description: "Led a workshop on research methodologies in cardiology"
+            description:
+              "Led a workshop on research methodologies in cardiology",
           },
         ],
         achievements: [
@@ -286,7 +292,6 @@ const DetailsContent = ({
       };
   return (
     <>
-
       <div className="doctor-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
@@ -305,7 +310,7 @@ const DetailsContent = ({
                 />
 
                 {/* Book Appointment Button */}
-                <BookAppointmentButton doctorName={personalInfo.name} />
+                {/*<BookAppointmentButton doctorName={personalInfo.name} doctorId={staffId} />*/}
               </div>
             </div>
 
@@ -423,37 +428,47 @@ const DetailsContent = ({
                           <h3>Achievements & Awards</h3>
                         </div>
                         <ul className="achievements-list">
-                          {personalInfo.achievements.map((achievement, index) => {
-                            if (typeof achievement === 'string') {
-                              return (
-                                <li key={index} className="achievement-item">
-                                  <div className="achievement-header">
-                                    <h4 className="achievement-title">{achievement}</h4>
-                                  </div>
-                                </li>
-                              );
-                            } else {
-                              return (
-                                <li key={index} className="achievement-item">
-                                  <div className="achievement-header">
-                                    <h4 className="achievement-title">{achievement.title}</h4>
-                                    {achievement.date && (
-                                      <span className="achievement-date">
-                                        <FaCalendarAlt className="icon-small" />
-                                        {achievement.date}
-                                      </span>
+                          {personalInfo.achievements.map(
+                            (achievement, index) => {
+                              if (typeof achievement === "string") {
+                                return (
+                                  <li key={index} className="achievement-item">
+                                    <div className="achievement-header">
+                                      <h4 className="achievement-title">
+                                        {achievement}
+                                      </h4>
+                                    </div>
+                                  </li>
+                                );
+                              } else {
+                                return (
+                                  <li key={index} className="achievement-item">
+                                    <div className="achievement-header">
+                                      <h4 className="achievement-title">
+                                        {achievement.title}
+                                      </h4>
+                                      {achievement.date && (
+                                        <span className="achievement-date">
+                                          <FaCalendarAlt className="icon-small" />
+                                          {achievement.date}
+                                        </span>
+                                      )}
+                                    </div>
+                                    {achievement.organization && (
+                                      <p className="achievement-organization">
+                                        {achievement.organization}
+                                      </p>
                                     )}
-                                  </div>
-                                  {achievement.organization && (
-                                    <p className="achievement-organization">{achievement.organization}</p>
-                                  )}
-                                  {achievement.description && (
-                                    <p className="achievement-description">{achievement.description}</p>
-                                  )}
-                                </li>
-                              );
-                            }
-                          })}
+                                    {achievement.description && (
+                                      <p className="achievement-description">
+                                        {achievement.description}
+                                      </p>
+                                    )}
+                                  </li>
+                                );
+                              }
+                            },
+                          )}
                         </ul>
                       </div>
                     )}
@@ -467,25 +482,33 @@ const DetailsContent = ({
                           <h3>Ակադեմիական ակտիվություն</h3>
                         </div>
                         <ul className="achievements-list">
-                          {personalInfo.academicActivities.map((activity, index) => (
-                            <li key={index} className="achievement-item">
-                              <div className="achievement-header">
-                                <h4 className="achievement-title">{activity.title}</h4>
-                                {activity.date && (
-                                  <span className="achievement-date">
-                                    <FaCalendarAlt className="icon-small" />
-                                    {activity.date}
-                                  </span>
+                          {personalInfo.academicActivities.map(
+                            (activity, index) => (
+                              <li key={index} className="achievement-item">
+                                <div className="achievement-header">
+                                  <h4 className="achievement-title">
+                                    {activity.title}
+                                  </h4>
+                                  {activity.date && (
+                                    <span className="achievement-date">
+                                      <FaCalendarAlt className="icon-small" />
+                                      {activity.date}
+                                    </span>
+                                  )}
+                                </div>
+                                {activity.organization && (
+                                  <p className="achievement-organization">
+                                    {activity.organization}
+                                  </p>
                                 )}
-                              </div>
-                              {activity.organization && (
-                                <p className="achievement-organization">{activity.organization}</p>
-                              )}
-                              {activity.description && (
-                                <p className="achievement-description">{activity.description}</p>
-                              )}
-                            </li>
-                          ))}
+                                {activity.description && (
+                                  <p className="achievement-description">
+                                    {activity.description}
+                                  </p>
+                                )}
+                              </li>
+                            ),
+                          )}
                         </ul>
                       </div>
                     )}
