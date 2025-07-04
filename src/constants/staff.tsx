@@ -707,27 +707,89 @@ export const staff: StaffType = [
       showLanguages: false,
       showMemberships: true,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+      showAcademicActivities: false,
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "096-205012",
+        email: "mariamminasyan@yahoo.com",
+        location: "ՀՀ, Երևան-0011, Արմենակյան 108/4 , ՆորքՄարաշԲԿ",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
       specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
+      experience: [
+        {
+          period: "2014թ. մինչևայժմ",
+          title: "սրտաբան",
+          organization: "Նորք Մարաշ բժշկական կենտրոնի",
+          description: "",
+        },
+        {
+          period: "2024թ. մինչևայժմ",
+          title: "բժիշկ-ճառագայթաբան, սրտի ՄՌՏ մասնագետ",
+          organization: "Պրոտոն ախտորոշիչ և գիտական կենտրոնում",
+          description: "",
+        },
+        {
+          period: "2025թ. մինչ այժմ",
+          title: "",
+          organization: "Կարդիոլաբ բժշկական կենտրոն",
+          description: "",
+        },
+      ],
+      education: [
+        {
+          year: "2005թ.",
+          degree: "Ավարտել է Անանիա Շիրակացու անվան ճեմարանը",
+          institution: "Անանիա Շիրակացու անվան ճեմարան",
+        },
+        {
+          year: "2011թ.",
+          degree:
+            "Ավարտել է Երևանի պետական բժշկական համալսարանի <<Ընդհանուր բժշկություն>> ֆակուլտետը",
+          institution: "Երևանի պետական բժշկական համալսարան",
+        },
+        {
+          year: "2011-2014թթ.",
+          degree:
+            "Հետդիպլոմային կրթություն է ստացել «Սրտաբանություն» մասնագիտությամբ",
+          institution:
+            "Երևանի Մխիթար Հերացու անվ. Պետական բժշկական համալսարանի Հետբուհական և շարունակական կրթության ֆակուլտետի Անհետաձգելի և Ընդհանուր Սրտաբանության ամբիոն",
+        },
+        {
+          year: "2021-2022թթ.",
+          degree:
+            "Հետդիպլոմային կրթություն է ստացել «Ճառագայթայինախտորոշում» մասնագիտությամբ",
+          institution:
+            "Երևանի Մխիթար Հերացու անվ. Պետական բժշկական համալսարանի Հետբուհական և շարունակական կրթության ֆակուլտետի Ճառագայթային ախտորոշման բաժանմունք",
+        },
+      ],
+      memberships: [
+        "«Հայաստանի երիտասարդ սրտաբանների խմբի» անդամ",
+        "Սրտաբանության եվրոպական ընկերության պրոֆեսիոնալ անդամ",
+      ],
       hobbies: [],
       achievements: [],
-      publications: [],
-      languages: [],
       academicActivities: [],
+      publications: [],
+      languages: [
+        {
+          language: "հայերեն",
+          level: "",
+        },
+        {
+          language: "ռուսերեն",
+          level: "",
+        },
+        {
+          language: "անգլերեն",
+          level: "",
+        },
+      ],
     },
   },
   {
@@ -1321,32 +1383,183 @@ export const staff: StaffType = [
       showBio: true,
       showExperience: true,
       showEducation: true,
-      showPublications: false,
-      showAchievements: false,
+      showPublications: true,
+      showAchievements: true,
       showLanguages: false,
       showMemberships: true,
       showHobbies: false,
-      showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+      showAcademicActivities: false,
+      showContact: false,
+      showSocial: false,
+      showSpecialties: false,
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "(+374) 093130414",
+        email: "hovakimyanmariam@gmail.com",
+        location: "2nd Aghyusagortsner street, 56, 0018, Yerevan, Armenia",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
       specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
+      experience: [
+        {
+          period: "01/04/2025 - CURRENT",
+          title: "CARDIOLOGIST",
+          organization: "CARDIOLAB - YEREVAN, ARMENIA",
+          description: "",
+        },
+        {
+          period: "01/10/2022 - CURRENT",
+          title: "CARDIOLOGIST, ATTENDING PHYSICIAN",
+          organization:
+            "HERATSI HOSPITAL COMPLEX, EMERGENCY DEPARTMENT - YEREVAN, ARMENIA",
+          description: "",
+        },
+        {
+          period: "01/04/2022 - CURRENT",
+          title: "CARDIOLOGIST, PART-TIME",
+          organization:
+            'NEW-MED" CENTER OF UROLOGY CLOSED JOINT-STOCK COMPANY (CJSC) - YEREVAN, ARMENIA',
+          description:
+            "-consultation of patients with cardiovascular diseases, -diagnostic evaluation of cardiovascular diseases. -treatment and follow-up.",
+        },
+        {
+          period: "17/09/2022 - CURRENT",
+          title: "CARDIOLOGIST, PART-TIME",
+          organization:
+            "HOSPITAL AND POLYCLINIC N 2 CLOSED JOINT-STOCK COMPANY (CJSC) - YEREVAN, ARMENIA",
+          description:
+            "-consultation of patients with cardiovascular diseases, -diagnostic evaluation of cardiovascular diseases. -in-hospital and outpatient treatment, and follow-up.",
+        },
+        {
+          period: "01/09/2019-09/09/2022",
+          title: "CARDIOLOGY RESIDENT",
+          organization:
+            "HERATSI HOSPITAL COMPLEX, DEPARTMENT OF GENERAL AND INVASIVE CARDIOLOGY - YEREVAN, ARMENΙΑ",
+          description: "",
+        },
+        {
+          period: "27/06/2020 - 19/02/2021",
+          title: "ATTENDING PHISICIAN",
+          organization:
+            "RESEARCH INSTITUTE OF CARDIOLOGY NAMED AFTER LEVON HOVHANNISYAN - YEREVAN, ARMENIA",
+          description: "",
+        },
+        {
+          period: "02/09/2016- 10/04/2018",
+          title: "PHARMACEUTICAL ASSISTANT",
+          organization: "MAGTONI PHARMACY CHAIN - YEREVAN, ARMENIA",
+          description:
+            "• giving advice on how to use medicines correctly, including the amount to use (dosage) and any risk checking dosage and ensuring that medicines are correctly and safely supplied and labelled advising patients of any adverse side-effects of medicines or potential interactions with other medicines/ treatments",
+        },
+      ],
+      education: [
+        {
+          year: "11/03/2024-04/05/2024",
+          degree: "CLINICAL AND RESEARCH INTERNSHIP",
+          institution:
+            "Erasme academic hospital, Cardiac Insufficiency and Pulmonary Vascular Disease Clinic",
+        },
+        {
+          year: "20/04/2025-20/06/2025",
+          degree: "CERTIFICATE OF TRAINING FELLOWSHIP",
+          institution: "CHU de Nice Hopital Pasteur, Cardiology Department",
+        },
+        {
+          year: "26/09/2021-02/10/2021",
+          degree:
+            "CERTIFICATE OF ATTENDANCE IN SALZBURG WEILL CORNELL SEMINAR IN LIPID METABOLISM AND CARDIOVASCULAR RISK",
+          institution: "open medical institute",
+        },
+        {
+          year: "10/10/2021-16/10/2021",
+          degree:
+            "CERTIFICATE OF ATTENDANCE IN SALZBURG WEILL CORNELL SEMINAR IN CARDIOLOGY",
+          institution: "open medical institute",
+        },
+        {
+          year: "04/01/2023-04/05/2023",
+          degree: "ECHOCARDIOGRAPHY, PROFESSIONAL TRAINING COURSE, CERTIFICATE",
+          institution: "Yerevan State Medical University after Mkhitar Heratsi",
+        },
+        {
+          year: "01/09/2013-01/07/2019",
+          degree: "DOCTOR OF MEDICINE",
+          institution: "Yerevan State Medical University",
+        },
+      ],
+      memberships: [
+        "Armenian Cardiologists Association",
+        "ESC Professional Member",
+        "HFA Silver Member",
+        "Working Group on Pulmonary Circulation & Right Ventricular Function Membership",
+        "WG on Thrombosis Member",
+        "European Association of Cardiovascular Imaging Regular Membership",
+        "WG on Cardiovascular Pharmacotherapy Member",
+        "Council on Basic Cardiovascular Science Member",
+      ],
       hobbies: [],
-      achievements: [],
-      publications: [],
-      languages: [],
+      achievements: [
+        {
+          title: "Scholarship grant",
+          organization:
+            "THE HRAIR and ANNA HOVNANIAN FOUNDATION - THE HIRAIR and ANNA HOVNANIAN FOUNDATION, INC",
+          date: "18/01/2019",
+          description:
+            "Scholarship grant covering the tuition for spring 2019 term in the Yerevan state Medical university after M. Heratsi.",
+        },
+        {
+          title:
+            "The complex case of a Stemi infarction complicated by atrial fibrillation, cardiogenic shock and thromboembolic complications.",
+          organization: "ESC Heart Failure 2023, Prague, Czech Republic",
+          date: "May 2023",
+          description:
+            "Martirosyan G. E., Hovakimyan M.H. The clinical case was presented at ESC Heart Failure 2023, in May 2023 in Prague, Czech Republic.",
+        },
+      ],
       academicActivities: [],
+      publications: [
+        {
+          title:
+            "Pacemaker lead-associated pulmonary embolism in patient with covid- 19 infection",
+          journal:
+            "The New Armenian Medical Journal Vol.15 (2021), No 2, . 42-45",
+          year: "2021",
+          description:
+            "Sisakian H.S. *, Harutyunyan G.H., Hovakimyan M.H., Hovhannisyan M.R., Aghayan S.Y.",
+        },
+        {
+          title:
+            "Clinical and Therapeutic assesment of patients with acute pulmonary embolism. Two years of observation in the Herasi Hospital complex No 1",
+          journal: "Medicine, Science and Education",
+          year: "2024",
+          description:
+            "Malkhasyan I. E., Hovakimyan M. H., Terteryan A. M., Martirosyan G. E., Avetisyan Q. A., Vardanyan A. K., Hovhannisyan M. R. Sisakian H.S.",
+        },
+      ],
+      languages: [
+        {
+          language: "Armenian",
+          level: "Mother tongue",
+        },
+        {
+          language: "Russian",
+          level: "C1",
+        },
+        {
+          language: "English",
+          level: "C1",
+        },
+        {
+          language: "German",
+          level: "A2",
+        },
+        {
+          language: "French",
+          level: "B1",
+        },
+      ],
     },
   },
   {
