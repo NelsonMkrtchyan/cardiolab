@@ -143,7 +143,10 @@ const ServicesList = () => {
                                         if (!doctor) return null;
 
                                         return (
-                                          <Link key={doctorId} href={`/staff`}>
+                                          <Link
+                                            key={doctorId}
+                                            href={`/staff/details/${doctor.id}`}
+                                          >
                                             {doctor.name.am}
                                             {index <
                                               (service.doctorsList?.length ??

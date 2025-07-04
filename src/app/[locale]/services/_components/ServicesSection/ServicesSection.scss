@@ -168,22 +168,6 @@
   .cta-container {
     text-align: center;
     margin-top: 20px;
-
-    .view-all-btn {
-      display: inline-block;
-      padding: 12px 30px;
-      background-color: $main-color;
-      color: white;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      text-decoration: none;
-
-      &:hover {
-        background-color: $second-color;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-    }
   }
 }
 

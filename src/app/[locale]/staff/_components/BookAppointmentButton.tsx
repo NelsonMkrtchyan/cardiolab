@@ -2,13 +2,17 @@
 
 import React, { useState } from "react";
 import { FaCalendarAlt, FaTimes } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+import DoctorAppointmentForm from "~/app/_Components/DoctorAppointmentForm";
 
 interface BookAppointmentButtonProps {
   doctorName: string;
+  doctorId?: number;
 }
 
-const BookAppointmentButton = ({ doctorName }: BookAppointmentButtonProps) => {
+const BookAppointmentButton = ({ doctorName, doctorId }: BookAppointmentButtonProps) => {
   const [showModal, setShowModal] = useState(false);
+  const tComponents = useTranslations("Components");
 
   return (
     <>
@@ -17,26 +21,22 @@ const BookAppointmentButton = ({ doctorName }: BookAppointmentButtonProps) => {
         <div className="appointment-modal-overlay">
           <div className="appointment-modal">
             <div className="modal-header">
-              <h3>Book an Appointment</h3>
-              <button className="close-btn" onClick={() => setShowModal(false)}>
+              <h3>{tComponents("Appointments.title") || "Book an Appointment"}</h3>
+              <button 
+                className="close-btn" 
+                onClick={() => setShowModal(false)}
+                aria-label="Close modal"
+              >
                 <FaTimes />
               </button>
             </div>
             <div className="modal-body">
-              <p>This is a placeholder for the appointment booking form.</p>
-              <p>
-                In the future, this will contain a form to book an appointment
-                with {doctorName}.
-              </p>
-            </div>
-            <div className="modal-footer">
-              <button
-                className="cancel-btn"
-                onClick={() => setShowModal(false)}
-              >
-                Cancel
-              </button>
-              <button className="submit-btn">Book Appointment</button>
+              <div className="doctor-appointment-form-container">
+                <DoctorAppointmentForm 
+                  preselectedDoctorId={doctorId} 
+                  onComplete={() => setShowModal(false)}
+                />
+              </div>
             </div>
           </div>
         </div>

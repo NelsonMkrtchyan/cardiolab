@@ -13,7 +13,7 @@ const SatisfactionSurvey = () => {
             <h1>{tGeneral("PatientSatisfactionSurvey")}</h1>
           </div>
           <div className="survey-btn">
-            <div className="button-type-1">
+            <div className="button-type-2">
               <a
                 target="_blank"
                 href="https://docs.google.com/forms/d/16_lgUIGke1yXgtyiMcAfZYuUj1Ugb50EIfxU67MH7_A/edit?pli=1"
