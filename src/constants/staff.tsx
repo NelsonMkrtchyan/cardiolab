@@ -1711,32 +1711,182 @@ export const staff: StaffType = [
       showBio: true,
       showExperience: true,
       showEducation: true,
-      showPublications: false,
-      showAchievements: false,
-      showLanguages: false,
+      showPublications: true,
+      showAchievements: true,
+      showLanguages: true,
       showMemberships: true,
-      showHobbies: false,
+      showHobbies: true,
+      showAcademicActivities: true,
       showContact: true,
-      showSocial: true,
-      showSpecialties: true,
+      showSocial: false,
+      showSpecialties: false,
       contact: {
-        phone: "",
-        email: "",
-        location: "",
+        phone: "+37494501113",
+        email: "marypapikyan1318@gmail.com",
+        location: "Գ.Լուսավորիչ 12; բն.#50; 0015; Երևան [cite: 4]",
       },
       social: {
         linkedin: "",
         twitter: "",
       },
       specialties: [],
-      experience: [],
-      education: [],
-      memberships: [],
-      hobbies: [],
-      achievements: [],
+      experience: [
+        {
+          period: "04.2024-ներկա",
+          title: "Մեծահասակների և մանկական սրտաբան",
+          organization: "«Ուիգմոր հիվանդանոց» [cite: 6]",
+          description: "",
+        },
+        {
+          period: "04.2024-ներկա",
+          title: "Մեծահասակի բնածին արատներով զբաղվող մասնագետ",
+          organization: "«Ուիգմոր հիվանդանոց» [cite: 6]",
+          description: "",
+        },
+        {
+          period: "10.2019-ներկա",
+          title: "Ինտենսիվ սրտաբան",
+          organization: "«Նորք-Մարաշ» ԲԿ [cite: 6]",
+          description: "",
+        },
+        {
+          period: "10.2019-ներկա",
+          title: "ԷԽՈՍԳ և ՍթրեսսԷխոՍԳ մասնագետ",
+          organization: "«Նորք-Մարաշ» ԲԿ [cite: 6]",
+          description: "",
+        },
+      ],
+      education: [
+        {
+          year: "2024-ներկա",
+          degree:
+            "Հետդիպլոմային կրթություն ԱԱԻ «Հանրային առողջապահության կազմակերպում և կառավարում» [cite: 14]",
+          institution: "ԱԱԻ",
+        },
+        {
+          year: "2021-2023",
+          degree:
+            "Հետդիպլոմային կրթություն ԵՊԲՀ «Մանկական սրտաբանություն» մասնագիտությամբ [cite: 14]",
+          institution: "ԵՊԲՀ",
+        },
+        {
+          year: "2011-2016",
+          degree:
+            "Հետդիպլոմային կրթություն ԵՊԲՀ «Սրտաբանություն» մասնագիտությամբ [cite: 14]",
+          institution: "ԵՊԲՀ",
+        },
+        {
+          year: "2005-2011",
+          degree:
+            "«Ընդհանուր բժշկության ֆակուլտետ»՝ գերազանցության դիպլոմով [cite: 14]",
+          institution: "ԵՊԲՀ",
+        },
+      ],
+      memberships: [
+        "ESC «պրոֆեսիոնալ» անդամ [cite: 20]",
+        "EACVI «արծաթե» անդամ [cite: 21]",
+        "HFA «արծաթե» անդամ [cite: 22]",
+        "ACVC, EAPCI, EHRA [cite: 23]",
+        "Հայաստանի Սրտաբանների Ասոցիացիայի անդամ [cite: 24]",
+        "Հայաստանի Երիտասարդ Սրտաբանների Խմբի կորիզի անդամ [cite: 25]",
+      ],
+      hobbies: [
+        "Առողջ սննդակարգ, հեծանիվ [cite: 37]",
+        "Ֆուտբոլի, օլիմպիական խաղերի դիտում և երկրպագություն [cite: 38]",
+        "Կինո, պոէզիա [cite: 39]",
+      ],
+      achievements: [
+        {
+          title:
+            "Մեծահասակ տրանսթորակալ ԷխոՍԳ ESC/EACVI սերտիֆիկացիա [cite: 8]",
+          date: "12.2024 [cite: 8]",
+        },
+        {
+          title:
+            "«Սրտային անբավարարության մասնագետ» ESC/HFA սերտիֆիկացիա [cite: 8]",
+          date: "10.2024 [cite: 8]",
+        },
+        {
+          title:
+            "Ակադեմիկոս Ադամյանի անվան՝ «Տարվա լավագույն երիտասարդ սրտաբան 2023թ» Խրախուսական մրցանակ [cite: 10]",
+          organization: "Հայաստանի Սրտաբանների Ասոցիացիայի կողմից [cite: 10]",
+          date: "2023",
+        },
+      ],
+      academicActivities: [
+        {
+          title: "Առիթմոլոգիական Մաստեր Կլաս [cite: 16]",
+          organization: "Երևան [cite: 16]",
+          date: "10.2023 [cite: 16]",
+        },
+        {
+          title: "Եվրոպական սրտաբանների ասոցիացիայի ESC կոնգրես [cite: 16]",
+          organization: "Ամստերդամ [cite: 16]",
+          date: "08.2023 [cite: 16]",
+        },
+        {
+          title:
+            "Սիրտանոթային սիմպոզիում; Հայաստանի 6րդ միջազգային բժշկական համագումար [cite: 16]",
+          date: "07.2023 [cite: 16]",
+        },
+        {
+          title: "Եվրոկովկասյան սրտաբանության կոնգրես [cite: 16]",
+          organization: "Երևան [cite: 16]",
+          date: "05.2023 [cite: 16]",
+        },
+        {
+          title:
+            "«Ինֆեկցիոն էնդոկարդիտի դեպքի ներկայացում»Էնդոկարդիտների ուղեցույց, վեբինար [cite: 18]",
+          organization: "Երևան-Փարիզ [cite: 18]",
+          date: "10.2024 [cite: 18]",
+        },
+        {
+          title:
+            "«Թոքային հիպերտենզիայի ԷխոՍԳ» ԷԽՈՍԳ ամառային դպրոց [cite: 18]",
+          organization: "Ջեֆերսոն կենտրոն, Երևան [cite: 18]",
+          date: "07.2024 [cite: 18]",
+        },
+        {
+          title: "«Հղիություն և ՍԱ հիվանդություններ» [cite: 18]",
+          organization: "Մոր և մանկան առողջության պահպանման կենտրոն [cite: 18]",
+          date: "04.2024 [cite: 18]",
+        },
+        {
+          title:
+            "«ՁՓԱՖ-ի, երկայնաձիգ գլոբալ սթրեյնի և դիաստոլիկ ֆունկցիայի լավացումը աորտալ փականի պրոթեզավորումից հետո համակցված աորտալ արատով պացիենտի մոտ» [cite: 18]",
+          date: "11.2023 [cite: 18]",
+        },
+        {
+          title:
+            "«ՍԱ նշաններով քողարկված պլևրայի հազվագյուտ ուռուցք» [cite: 18]",
+          organization: "Կարդիոօնկոլոգիական ֆորում [cite: 18]",
+          date: "04.2023 [cite: 18]",
+        },
+        {
+          title: "«Հղիություն և հիպերտենզիա» [cite: 18]",
+          organization: "Նորք-Մարաշ Սիրտանոթային Գիտաժողով [cite: 18]",
+          date: "06.2021 [cite: 18]",
+        },
+      ],
       publications: [],
-      languages: [],
-      academicActivities: [],
+      languages: [
+        {
+          language: "Հայերեն",
+          level: "մայրենի լեզու [cite: 28]",
+        },
+        {
+          language: "Անգլերեն",
+          level: "վարժ [cite: 28]",
+        },
+        {
+          language: "Ռուսերեն",
+          level: "վարժ [cite: 33]",
+        },
+        {
+          language: "Ֆրանսերեն",
+          level: "սկսնակ [cite: 34]",
+        },
+      ],
     },
   },
   {
