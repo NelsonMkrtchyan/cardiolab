@@ -290,7 +290,7 @@ export const staff: StaffType = [
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlueDvPGq4t76bKABNX1vpMyZqWPS43EoxGDlka",
     role: {
       am: "Սրտաբան-Առիթմոլոգ",
-      en: "Սրտաբան-Առիթմոլոգ",
+      en: "Cardiologist-Arrhythmologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -546,11 +546,13 @@ export const staff: StaffType = [
     id: 2,
     name: {
       am: "Կարեն Զոհրաբյան",
+      en: "Karen Zohrabyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluzPJlX1UCJcmH7QjURruLeMoFslfS6nVvkpdN",
     role: {
       am: "Մանկական Ինտերվենցիոն Սրտաբան",
+      en: "Pediatric Interventional Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -591,11 +593,13 @@ export const staff: StaffType = [
     id: 3,
     name: {
       am: "Կատարինե Վարդանյան",
+      en: "Katarine Vardanyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu3h1g5Y7N5s3FUueQwgdhBEa4x1ScGkiXJAzp",
     role: {
       am: "Ինտենսիվ Սրտաբան",
+      en: "Intensive Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -691,11 +695,13 @@ export const staff: StaffType = [
     id: 4,
     name: {
       am: "Մարիամ Մինասյան",
+      en: "Mariam Minasyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluIC4DbAEmOVFpZEU45sKoR6bt7NDSv82hyxfg",
     role: {
       am: "Սրտաբան, Էխո-Սգ Մասնագետ, Սրտի Մռտ Մասնագետ",
+      en: "Cardiologist, Echo Specialist, Cardiac MRI Specialist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -798,11 +804,13 @@ export const staff: StaffType = [
     id: 5,
     name: {
       am: "Տաթևիկ Սիմոնյան",
+      en: "Tatevik Simonyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluxjrAPtfVspCYkb9tWP0X6eLDhnRHOl7fTjaE",
     role: {
       am: "Մանկական և Պերինատալ Սրտաբան",
+      en: "Pediatric and Perinatal Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -964,11 +972,13 @@ export const staff: StaffType = [
     id: 6,
     name: {
       am: "Անահիտ Գևորգյան",
+      en: "Anahit Gevorgyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluT7Vuh0IO67xl130tYVbZmnvuKAkc2dHC9ghD",
     role: {
       am: "Սրտաբան",
+      en: "Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1009,11 +1019,13 @@ export const staff: StaffType = [
     id: 7,
     name: {
       am: "Գևորգ Պետրոսյան",
+      en: "Gevorg Petrosyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluf6eVH0Zz5N7IdOAeZ04QFuoWqrbmxjn9MY1P",
     role: {
       am: "Սրտաբան",
+      en: "Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1189,11 +1201,13 @@ export const staff: StaffType = [
     id: 8,
     name: {
       am: "Տաթևիկ Գաբրիելյան",
+      en: "Tatevik Gabrielyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluX38r1mOa6TkeElYqHKS8hzy4uf7mr9tC0MBv",
     role: {
       am: "Սրտաբան-Առիթմոլոգ",
+      en: "Cardiologist-Arrhythmologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1234,11 +1248,13 @@ export const staff: StaffType = [
     id: 9,
     name: {
       am: "Իզաբելլա Բարեկյան",
+      en: "Izabella Barekyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluv7GAuykBOredpWR2N9YyhZbqVn4KCwD15mIt",
     role: {
       am: "Սրտաբան",
+      en: "Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1372,11 +1388,13 @@ export const staff: StaffType = [
     id: 10,
     name: {
       am: "Մարիամ Հովակիմյան",
+      en: "Mariam Hovakimyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluM6kftgSmxf0AaeIb7tJwXUHG2sKPOWnoQLik",
     role: {
       am: "Սրտային Անբավարարության Մասնագետ",
+      en: "Heart Failure Specialist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1568,11 +1586,13 @@ export const staff: StaffType = [
     id: 11,
     name: {
       am: "Քնարիկ Բադեյան",
+      en: "Knarik Badeyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluEM5Y9sJSpZQ36u72Hw8kvD5PiIMdXj9xVnB0",
     role: {
       am: "Ներզատաբան",
+      en: "Endocrinologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1700,11 +1720,13 @@ export const staff: StaffType = [
     id: 24,
     name: {
       am: "Մերի Պապիկան",
+      en: "Meri Papikyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
     role: {
       am: "Սրտաբան",
+      en: "Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1890,11 +1912,13 @@ export const staff: StaffType = [
     id: 25,
     name: {
       am: "Նադեժդա Իսկանդարյան",
+      en: "Nadezhda Iskandaryan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
     role: {
       am: "Սրտաբան",
+      en: "Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1936,11 +1960,13 @@ export const staff: StaffType = [
     id: 12,
     name: {
       am: "Անահիտ Ոսկանյան",
+      en: "Anahit Voskanyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu24lCbw3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
     role: {
       am: "Նյարդաբան",
+      en: "Neurologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -2131,11 +2157,13 @@ export const staff: StaffType = [
     id: 13,
     name: {
       am: "Արփինե Սիմոնյան",
+      en: "Arpine Simonyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluEmku7JSpZQ36u72Hw8kvD5PiIMdXj9xVnB0U",
     role: {
       am: "Թերապևտ, Գաստրոէնտերոլոգ",
+      en: "Therapist, Gastroenterologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -2308,11 +2336,13 @@ export const staff: StaffType = [
     id: 14,
     name: {
       am: "Կարինե Մկրտչյան",
+      en: "Karine Mkrtchyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJk7QajrgHJqI5EuVZFjgRGzykmXKNTw4WcSe",
     role: {
       am: "Բժիշկ-Ռադիոլոգ",
+      en: "Radiologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -2467,11 +2497,13 @@ export const staff: StaffType = [
     id: 15,
     name: {
       am: "Աստղիկ Ավետիքսյան",
+      en: "Astghik Avetiqsyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluzfsrDYCJcmH7QjURruLeMoFslfS6nVvkpdNb",
     role: {
       am: "Ռադիոլոգ-Դուպլեքսի Մասնագետ",
+      en: "Radiologist-Duplex Specialist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -2568,11 +2600,13 @@ export const staff: StaffType = [
     id: 16,
     name: {
       am: "Աղունիկ Զաքարյան",
+      en: "Aghunik Zakaryan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu0jircpuB3uh8TEZLPqWjlAOFybHiDawcvdgU",
     role: {
       am: "Անոթային վիրաբույժ",
+      en: "Vascular Surgeon",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -2685,11 +2719,13 @@ export const staff: StaffType = [
     id: 17,
     name: {
       am: "Թամարա Սիմոնյան",
+      en: "Tamara Simonyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlua0HqbpKeDI891qSZ0fT7zH2wQLEbgPcoRV4J",
     role: {
       am: "Հոգեբան",
+      en: "Psychologist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -2730,11 +2766,13 @@ export const staff: StaffType = [
     id: 18,
     name: {
       am: "Գայանե Բաղդասարյան",
+      en: "Gayane Baghdasaryan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlupG8vuW69E0NFskLoCO7QfyXM4AIan2bKlp6J",
     role: {
       am: "Առողջության և Առողջ Ապրելակերպի Մասնագետ",
+      en: "Health and Wellness Specialist",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -2845,11 +2883,13 @@ export const staff: StaffType = [
     id: 19,
     name: {
       am: "Մոնիկա Մկրտչյան",
+      en: "Monika Mkrtchyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluilm0PHUMdgQAzE8HpcawsFuGDr9USml2KXOR",
     role: {
       am: "Պատասխանատու Բուժքույր",
+      en: "Head Nurse",
     },
     category: StaffCategory.NursingStaff,
     visibility: true,
@@ -2890,11 +2930,13 @@ export const staff: StaffType = [
     id: 20,
     name: {
       am: "Քնարիկ Զաքարյան",
+      en: "Knarik Zakaryan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu17fAqMV2GN8X3FsiITKCzR9wVM5lohEmPqWD",
     role: {
       am: "Բուժքույր",
+      en: "Nurse",
     },
     category: StaffCategory.NursingStaff,
     visibility: true,
@@ -3013,11 +3055,13 @@ export const staff: StaffType = [
     id: 22,
     name: {
       am: "Անահիտ Իսաջանյան",
+      en: "Anahit Isajanyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluga5tUTviePapmd4fjRNBXFSt1CEhgvq2b0rM",
     role: {
       am: "Մենեջեր",
+      en: "Manager",
     },
     category: StaffCategory.AdministrativeStaff,
     visibility: true,
@@ -3058,11 +3102,13 @@ export const staff: StaffType = [
     id: 23,
     name: {
       am: "Քրիստինա Մկրտչյան",
+      en: "Kristina Mkrtchyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu7ZZJ3LYxTDGf3YpRJEC1nwk6tWHeNq5xSbUv",
     role: {
       am: "Ադմինիստրատոր",
+      en: "Administrator",
     },
     category: StaffCategory.AdministrativeStaff,
     visibility: true,
