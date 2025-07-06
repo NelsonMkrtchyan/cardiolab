@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import { type PersonalInfoType } from "~/constants/staff";
 import DoctorAppointmentForm from "~/app/_Components/DoctorAppointmentForm/DoctorAppointmentForm";
+import { useTranslations } from "next-intl";
 
 interface DetailsContentI {
   name: string | null;
@@ -97,6 +98,7 @@ const DetailsContent = ({
   personalInfo: staffPersonalInfo,
   staffId,
 }: DetailsContentI) => {
+  const t = useTranslations("CV");
   // Use staff personalInfo if available, otherwise use default mock data
   const personalInfo: PersonalInfo = staffPersonalInfo
     ? {
@@ -322,7 +324,7 @@ const DetailsContent = ({
                     <div className="doctor-details-biography">
                       <div className="section-header">
                         <h3>
-                          About{" "}
+                          {t("About")}
                           {personalInfo.name
                             ? // ? personalInfo.name.split(" ").slice(-1)
                               personalInfo.name
@@ -342,7 +344,7 @@ const DetailsContent = ({
                       <div className="doctor-details-biography">
                         <div className="section-header">
                           <FaBriefcase className="section-icon" />
-                          <h3>Experience</h3>
+                          <h3>{t("Experience")}</h3>
                         </div>
                         <div className="timeline">
                           {personalInfo.experience.map((exp, index) => (
@@ -368,7 +370,7 @@ const DetailsContent = ({
                       <div className="doctor-details-biography">
                         <div className="section-header">
                           <FaGraduationCap className="section-icon" />
-                          <h3>Education</h3>
+                          <h3>{t("Education")}</h3>
                         </div>
                         <div className="timeline">
                           {personalInfo.education.map((edu, index) => (
@@ -392,7 +394,7 @@ const DetailsContent = ({
                     personalInfo.publications.length > 0 && (
                       <div className="doctor-details-biography">
                         <div className="section-header">
-                          <h3>Publications</h3>
+                          <h3>{t("Publications")}</h3>
                         </div>
                         <div className="publications-list">
                           {personalInfo.publications.map((pub, index) => (
@@ -409,7 +411,7 @@ const DetailsContent = ({
                                     rel="noopener noreferrer"
                                     className="publication-link"
                                   >
-                                    View Publication
+                                    {t("ViewPublication")}
                                   </a>
                                 )}
                               </p>
@@ -425,7 +427,7 @@ const DetailsContent = ({
                     personalInfo.achievements.length > 0 && (
                       <div className="doctor-details-biography">
                         <div className="section-header">
-                          <h3>Achievements & Awards</h3>
+                          <h3>{t("Achievements")}</h3>
                         </div>
                         <ul className="achievements-list">
                           {personalInfo.achievements.map(
@@ -479,7 +481,7 @@ const DetailsContent = ({
                     personalInfo.academicActivities.length > 0 && (
                       <div className="doctor-details-biography">
                         <div className="section-header">
-                          <h3>Ակադեմիական ակտիվություն</h3>
+                          <h3>{t("AcademicActivities")}</h3>
                         </div>
                         <ul className="achievements-list">
                           {personalInfo.academicActivities.map(
@@ -519,7 +521,7 @@ const DetailsContent = ({
                     personalInfo.languages.length > 0 && (
                       <div className="doctor-details-biography">
                         <div className="section-header">
-                          <h3>Languages</h3>
+                          <h3>{t("Languages")}</h3>
                         </div>
                         <div className="languages-container">
                           {personalInfo.languages.map((lang, index) => (
@@ -547,7 +549,7 @@ const DetailsContent = ({
                       <div className="doctor-details-biography">
                         <div className="section-header">
                           <FaUsers className="section-icon" />
-                          <h3>Membership</h3>
+                          <h3>{t("Membership")}</h3>
                         </div>
                         <ul className="membership-list">
                           {personalInfo.memberships.map((membership, index) => (
@@ -564,7 +566,7 @@ const DetailsContent = ({
                       <div className="doctor-details-biography">
                         <div className="section-header">
                           <FaHeart className="section-icon" />
-                          <h3>Hobbies</h3>
+                          <h3>{t("Hobbies")}</h3>
                         </div>
                         <div className="hobbies-container">
                           {personalInfo.hobbies.map((hobby, index) => (

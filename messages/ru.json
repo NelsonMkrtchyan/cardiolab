@@ -105,6 +105,18 @@
     "cardiacCare": "Cardiac Care",
     "preventiveScreening": "Annual Preventive Check-up"
   },
+  "CV": {
+    "About": "О специалисте",
+    "Experience": "Опыт работы",
+    "Education": "Образование",
+    "Publications": "Публикации",
+    "ViewPublication": "Просмотреть публикацию",
+    "Achievements": "Достижения и награды",
+    "AcademicActivities": "Академическая деятельность",
+    "Languages": "Языки",
+    "Membership": "Членство",
+    "Hobbies": "Хобби"
+  },
   "Forms": {
     "ContactForm": {
       "title": "Send your message for any information or inquiry",

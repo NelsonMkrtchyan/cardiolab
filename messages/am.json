@@ -105,6 +105,18 @@
     "cardiacCare": "Սրտային խնամք",
     "preventiveScreening": "Տարեկան կանխարգելիչ բուժ․ զննում"
   },
+  "CV": {
+    "About": "Մասին",
+    "Experience": "Աշխատանքային փորձ",
+    "Education": "Կրթություն",
+    "Publications": "Հրապարակումներ",
+    "ViewPublication": "Դիտել հրապարակումը",
+    "Achievements": "Նվաճումներ և մրցանակներ",
+    "AcademicActivities": "Ակադեմիական ակտիվություն",
+    "Languages": "Լեզուներ",
+    "Membership": "Անդամակցություններ",
+    "Hobbies": "Հոբբիներ"
+  },
   "Forms": {
     "ContactForm": {
       "title": "Ուղարկեք ձեր հաղորդագրությունը՝ ցանկացած տեղեկության կամ հարցի համար",

@@ -105,6 +105,18 @@
     "cardiacCare": "Cardiac Care",
     "preventiveScreening": "Annual Preventive Check-up"
   },
+  "CV": {
+    "About": "About",
+    "Experience": "Experience",
+    "Education": "Education",
+    "Publications": "Publications",
+    "ViewPublication": "View Publication",
+    "Achievements": "Achievements & Awards",
+    "AcademicActivities": "Academic Activities",
+    "Languages": "Languages",
+    "Membership": "Membership",
+    "Hobbies": "Hobbies"
+  },
   "Forms": {
     "ContactForm": {
       "title": "Send your message for any information or inquiry",
