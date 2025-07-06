@@ -7,12 +7,18 @@
     "Next": "Next",
     "Previous": "Previous",
     "SeeAll": "See all",
-    "KnowMore": "Read more",
+    "Fill": "Fill in",
+    "PatientSatisfactionSurvey": "Patient Satisfaction Survey",
+    "Slogan": "The art of heart care",
+    "KnowMore": "Learn more",
+    "Doctors": "Doctors",
     "ContactUs": "Contact us",
-    "OurNews": "Our news",
-    "OurServices": "Our services",
+    "QuickLinks": "Quick links",
+    "OurNews": "Our News",
+    "OurServices": "Our Services",
     "MeetOurStaff": "Meet our staff",
-    "WorkingHours": "Working Hours",
+    "FindUsOnMap": "Find us on the map",
+    "WorkingHours": "Working hours",
     "Weekdays": {
       "Monday": "Monday",
       "Tuesday": "Tuesday",
@@ -24,169 +30,68 @@
     },
     "Stats": {
       "one": "Clinics",
-      "two": "Happy Patients",
-      "three": "Doctors & Nurse",
-      "four": "Year experience"
+      "two": "Satisfied Patients",
+      "three": "Doctors and Nurses",
+      "four": "Years of Experience"
     }
   },
   "Menu": {
     "Home": "Home",
-    "AboutUs": "About us",
+    "AboutUs": "About Us",
     "Staff": "Staff",
     "Services": "Services",
-    "Guide": "Manuals",
-    "DoctorGuide": "Doctor manual",
-    "PatientGuide": "Patient manual",
-    "News": "News",
-    "NewsDetails": "News Details",
     "Gallery": {
       "Gallery": "Gallery",
       "Folder": "Folder",
-      "Images": "Photos",
-      "Videos": "Videos"
+      "Images": "Images",
+      "Videos": "Videos",
+      "Podcasts": "CardioLab Podcast"
     },
-    "ContactUs": "Contact us",
-    "EmployeeDetails": "Employee details",
-    "ServiceDetails": "Service details",
-    "Podcasts": "'CardioLab' podcasts",
-    "InsuranceInformation": "Insurance information",
-    "HealthLibrary": "Health library",
+    "EmployeeDetails": "Employee Details",
+    "ContactUs": "Contact Us",
     "Pricelist": "Price List",
-    "UsefulMaterials": "Useful materials",
-    "AccreditedTrainings": "Accredited trainings",
+    "ServiceDetails": "Service Details",
+    "Guide": "Guides",
+    "DoctorGuide": "Doctor's Guide",
+    "PatientGuide": "Patient Guide",
+    "News": "News",
+    "NewsDetails": "News Details",
+    "InsuranceInformation": "Insurance Information",
+    "HealthLibrary": "Health Library",
+    "UsefulMaterials": "Useful Materials",
+    "AccreditedTrainings": "Accredited Trainings",
     "Seminars": "Seminars",
-    "JobOpenings": "Job openings"
+    "JobOpenings": "Job Openings"
   },
   "Components": {
     "Landing": {
       "AboutUs": {
-        "title": "Բարի գալուստ «CardioLab» բժշկական կենտրոնի պաշտոնական կայք",
-        "description": "«CardioLab» բժշկական կենտրոնում մեր առաջնահերթությունը ձեր առողջական բարեկեցությունն է։ Մենք առաջարկում ենք ծառայությունների լայն շրջանակ մեծահասակների և երեխաների համար՝ սկսած սիրտանոթային խորհրդատվություններից և սրտի զննումներից մինչև համապարփակ առողջության ստուգումներ և առաջադեմ մոնիտորինգի լուծումներ:"
-      }
-    },
-    "ContactForm": {
-      "title": "Drop your message for any info or question",
-      "placeholders": {
-        "name": "Your name",
-        "email": "Your email",
-        "phone": "Your phone",
-        "subject": "Your subject",
-        "message": "Your message ..."
-      },
-      "sendMessage": "Send Message",
-      "sending": "Ուղարկվում է ...",
-      "callNote": "Call",
-      "successMessage": "Էլ․ նամակը հաջողությամբ ուղարկվել է"
-    },
-    "Appointments": {
-      "title": "Book your appointment",
-      "description": "Our specialist will confirm your visit within 1 hour.",
-      "labels": {
-        "name": "Name",
-        "email": "Email",
-        "ssn": "SSN",
-        "phone": "Phone",
-        "services": "Services",
-        "doctors": "Doctors",
-        "age": "Age"
-      },
-      "placeholders": {
-        "name": "Enter Your Name",
-        "email": "Enter Your Email",
-        "ssn": "Enter Your SSN",
-        "phone": "Enter Your Number",
-        "services": "Cardio",
-        "doctors": "Choose Your Doctor",
-        "age": "Your Age"
-      },
-      "actions": {
-        "submit": "submit"
+        "title": "Welcome to the official website of CardioLab Medical Center",
+        "description": "At CardioLab Medical Center, your health and well-being are our top priorities. We offer a wide range of services for both adults and children, from cardiovascular consultations and heart screenings to comprehensive health check-ups and advanced monitoring solutions."
       }
     },
     "VideoSection": {
       "title": "Welcome to CardioLab",
-      "description": "Welcome to CardioLab, where your heart health is our priority. In this introduction, we provide an overview of our clinic's mission, services, and state-of-the-art technology designed to support cardiovascular care. Learn about our team of experienced specialists, our approach to personalized treatments, and how we aim to improve your well-being with innovative and compassionate healthcare solutions."
+      "description": "Welcome to CardioLab, where your heart’s health is our top priority. In this introduction, we present our clinic’s mission, services, and advanced technologies designed for cardiovascular care. Learn about our team of experienced professionals, our personalized treatment approach, and our goal to improve your well-being with innovative and compassionate healthcare solutions."
     }
   },
   "HeroSlider": {
-    "titleOne": "CardioLab",
-    "descriptionOne": "The Art of Heart Care",
-    "priceTitle": "Մեր ծառայությունները և գնացուցակը"
+    "priceTitle": "Our Services and Price List"
   },
   "About": {
     "AboutContent": {
-      "title": "About CardioLab",
-      "description": "'CardioLab' Medical Clinic, founded in 2024,\nspecializes in modern heart care that prioritizes your well-being. We\nprovide a range of services for adults and children, from cardiovascular\nconsultations and heart screenings to comprehensive health checks and\nadvanced monitoring solutions.",
-      "signature1": "\n\n Տաթևիկ Հովակիմյան",
-      "signature2": "\n«CardioLab»",
-      "signature3": " բժշկական կենտրոնի համահիմնադիր տնօրեն, սրատաբան-առիթմոլոգ\n"
-    },
-    "Titles": {
-      "Vision": "Vision",
-      "Values": "Values",
-      "Mission": "Mission",
-      "OurStrategicDirections": "Our Strategic Directions"
-    },
-    "Vision": "Our vision is to provide the highest quality cardiovascular care in Armenia through innovative approaches, holistic care, and comprehensive solutions.",
-    "Values": "Quality, professionalism, innovation, patient-centered approach, compassion, personalized care, collaboration and teamwork, responsibility, integrity, inclusivity, knowledge, and continuous professional development.",
-    "Mission": "Our mission is to offer innovative, evidence-based, and personalized care to all patients with cardiovascular diseases. We strive to improve each patient's treatment journey by providing compassionate care, raising awareness, and contributing to reducing the burden of cardiovascular diseases in Armenia.",
-    "OurStrategicDirections": {
-      "one": "Clinical cardiovascular medicine.",
-      "two": "Research and scientific activities.",
-      "three": "Raising patient awareness."
-    }
-  },
-  "News": {
-    "Form": {
-      "DropComment": "Drop your comment",
-      "PostComment": "Post A Comment",
-      "Placeholders": {
-        "YourComment": "Your Comment",
-        "Name": "Name",
-        "Phone": "Phone",
-        "Email": "Email",
-        "Subject": "Subject"
-      }
-    }
-  },
-  "Footer": {
-    "QuickLinks": {
-      "QuickLinksText": "Quick links",
-      "Links": {
-        "News": "News",
-        "AboutUs": "About us",
-        "ContactUs": "Contact us",
-        "Doctors": "Doctors",
-        "Services": "Services",
-        "Faq": "Faq"
-      }
-    },
-    "OurServices": {
-      "OurServicesText": "Our services",
-      "Links": {
-        "DentalCare": "Dental Care",
-        "Cardiology": "Cardiology",
-        "HijamaTherapy": "Hijama Therapy",
-        "MassageTherapy": "Massage Therapy",
-        "AmbluanceSevices": "Ambluance Sevices",
-        "Medicine": "Medicine"
-      }
-    },
-    "Form": {
-      "Feedback": "Feedback",
-      "NamePlaceholder": "Name",
-      "PhonePlaceholder": "Phone",
-      "MessagePlaceholder": "Message",
-      "Submit": "Submit"
+      "title": "Welcome to the official website of CardioLab Medical Center",
+      "description": "CardioLab Medical Center, founded in 2024, specializes in modern cardiac care with a strong focus on your health and well-being.\nWe are a comprehensive, integrated, patient-centered cardiology center where each patient can undergo all necessary cardiovascular examinations in a single visit.\nOur wide range of services is available for both adults and children—from cardiovascular consultations and heart check-ups to comprehensive health screenings and advanced monitoring solutions.\nOur team is composed of leading specialists in the field, who are dedicated to providing compassionate, high-quality cardiac care. We strive to ensure your complete satisfaction with every medical service we offer.\n Be healthy — in every sense of the word.\n",
+      "signature1": "\n\nTatevik Hovakimyan",
+      "signature2": "\nCardioLab",
+      "signature3": "Co-founder and Director of CardioLab Medical Center, Cardiologist-Electrophysiologist"
     }
   },
   "PriceList": {
-    "title": "Our Services and Prices",
-    "description": "Find detailed information about our cardiology services and their prices. Prices are subject to change, please contact us for the most up-to-date information.",
-    "serviceInfo": "* \"ԿԱՐԴԻՈԼԱԲՈՒՄ\" ամբուլատոր քննությունների տեսակները և կատարման ժամկետները որոշվում են պացիենտի վարող բժշկի կողմից:",
+    "title": "Our Services and Price List",
     "serviceName": "Service",
     "price": "Price",
-    "downloadButton": "Download Price List"
+    "serviceInfo": "* The types and timing of outpatient examinations at 'CardioLab' are determined by the patient’s attending physician."
   },
   "Staff": {
     "medicalStaff": "Medical Staff",
@@ -195,13 +100,57 @@
   },
   "Service": {
     "consultation": "Consultation",
-    "echocardiography": "Echocardiography",
-    "holterMonitoring": "Holter monitoring",
-    "rhythmDeviceCheck": "Սրտի ռիթմավար սարքերի քննություն",
-    "duplexScan": "Մագիստրալ անոթների դուպլեքս հետազոտություն",
-    "urltraSound": "Ուլտրաձայնային հետազոտություն",
-    "cardiacCare": "Սրտային խնամք",
-    "preventiveScreening": "Տարեկան կանխարգելիչ բուժ․ զննում",
-    "implantation": "Իմպլանտացիա"
+    "duplexScan": "Duplex Scan of Major Vessels",
+    "ultraSound": "Ultrasound Examination",
+    "cardiacCare": "Cardiac Care",
+    "preventiveScreening": "Annual Preventive Check-up"
+  },
+  "Forms": {
+    "ContactForm": {
+      "title": "Send your message for any information or inquiry",
+      "placeholders": {
+        "name": "Your name",
+        "email": "Your email address",
+        "phone": "Your phone number",
+        "subject": "Your subject",
+        "message": "Your message ..."
+      },
+      "sendMessage": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Email sent successfully",
+      "errorMessage": "Email was not sent successfully"
+    },
+    "Appointments": {
+      "title": "Book your appointment",
+      "description": "Our specialist will confirm your appointment within 1 hour",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "ssn": "Social Security Number",
+        "phone": "Phone number"
+      },
+      "placeholders": {
+        "name": "Enter your name",
+        "email": "Enter your email",
+        "ssn": "Enter your SSN",
+        "phone": "Enter your phone number"
+      },
+      "actions": {
+        "submit": "Confirm"
+      }
+    }
+  },
+  "News": {
+    "Form": {
+      "DropComment": "Leave your comment",
+      "PostComment": "Post comment",
+      "Placeholders": {
+        "YourComment": "Your comment",
+        "Name": "Name",
+        "Phone": "Phone number",
+        "Email": "Email",
+        "Subject": "Subject"
+      }
+    }
   }
 }

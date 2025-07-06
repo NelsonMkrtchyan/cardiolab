@@ -2,10 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const AboutContent: React.FC = () => {
   const tAbout = useTranslations("About");
+  const locale: string = useLocale();
 
   return (
     <>
@@ -37,11 +38,15 @@ const AboutContent: React.FC = () => {
                 <p>{tAbout("AboutContent.description")}</p>
                 <div className="handwriting-signature">
                   <p>
-                    <span> {tAbout("AboutContent.signature1")}</span>
+                    <span className={`${locale === "en" && "english"}`}>
+                      {tAbout("AboutContent.signature1")}
+                    </span>
                     <span className="english">
                       {tAbout("AboutContent.signature2")}
                     </span>
-                    <span> {tAbout("AboutContent.signature3")}</span>
+                    <span className={`${locale === "en" && "english"}`}>
+                      {tAbout("AboutContent.signature3")}
+                    </span>
                   </p>
                 </div>
               </div>

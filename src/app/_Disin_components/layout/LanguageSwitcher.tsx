@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocale } from "next-intl";
 import { excludeKeys, Languages } from "~/constants/general";
 import { usePathname, useRouter } from "~/i18n/routing";
-import { LocaleT } from "~/types";
+import { type LocaleT } from "~/types";
 
 const LanguageSwitcher = () => {
   const locale: string = useLocale();
@@ -28,33 +28,33 @@ const LanguageSwitcher = () => {
           <div className="wrapper">
             {/*Active locale*/}
             <div
-              // className="currentLanguage nav-link dropdown-toggle"
-              className="currentLanguage nav-link"
+              className="currentLanguage nav-link dropdown-toggle"
+              // className="currentLanguage nav-link"
               onClick={() => {
                 console.log(pathname);
                 setIsVisible(!isVisible);
               }}
             >
-              {/*{Languages[`${locale as LocaleT}`].icon}*/}
-              {Languages[`${locale as "am"}`].icon}
+              {Languages[`${locale as LocaleT}`].icon}
+              {/*{Languages[`${locale as "am"}`].icon}*/}
 
-              {/*<ul className="language-dropdown-menu">*/}
-              {/*  {Object.keys(otherFlags).map((flagKey) => {*/}
-              {/*    return (*/}
-              {/*      <li className="language" key={flagKey}>*/}
-              {/*        <div*/}
-              {/*          className={"nav-link"}*/}
-              {/*          onClick={(e) => {*/}
-              {/*            e.preventDefault();*/}
-              {/*            changeLocale(flagKey);*/}
-              {/*          }}*/}
-              {/*        >*/}
-              {/*          {Languages[`${flagKey as LocaleT}`].icon}*/}
-              {/*        </div>*/}
-              {/*      </li>*/}
-              {/*    );*/}
-              {/*  })}*/}
-              {/*</ul>*/}
+              <ul className="language-dropdown-menu">
+                {Object.keys(otherFlags).map((flagKey) => {
+                  return (
+                    <li className="language" key={flagKey}>
+                      <div
+                        className={"nav-link"}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          changeLocale(flagKey);
+                        }}
+                      >
+                        {Languages[`${flagKey as LocaleT}`].icon}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>

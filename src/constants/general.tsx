@@ -8,9 +8,9 @@ export type LanguageT = {
 };
 
 export type LanguagesT = {
-  en: LanguageT;
-  ru: LanguageT;
   am: LanguageT;
+  en?: LanguageT;
+  ru?: LanguageT;
 };
 
 export const Languages: LanguagesT = {
@@ -22,14 +22,14 @@ export const Languages: LanguagesT = {
       </>
     ),
   },
-  ru: {
-    id: 2,
-    icon: (
-      <>
-        <RU title="Russian" className="languageFlagIcon" />
-      </>
-    ),
-  },
+  // ru: {
+  //   id: 2,
+  //   icon: (
+  //     <>
+  //       <RU title="Russian" className="languageFlagIcon" />
+  //     </>
+  //   ),
+  // },
   am: {
     id: 3,
     icon: (
@@ -59,7 +59,11 @@ export type AboutUsContentItemType = {
   name: string;
   title: LocaleString;
   description: LocaleComplexString;
-  list?: string[];
+  list?: {
+    am: string[];
+    en?: string[];
+    ru?: string[];
+  };
   className: string; // Optional className for styling
 };
 export type AboutUsContentType = AboutUsContentItemType[];
@@ -70,9 +74,11 @@ export const aboutUsContent: AboutUsContentType = [
     name: "Mission",
     title: {
       am: "Առաքելություն",
+      en: "Mission",
     },
     description: {
       am: "Հայաստանում սիրտանոթային հիվանդությունների բեռի նվազեցում՝ գերժամանակակից, բուժառուակենտրոն և հիվանդությանն ուղղված բազմապրոֆիլ խնամքի միջոցով, որն անխափան ապահովվում է ինտեգրված խնամքի ուղիներով՝ ավելի լավ արդյունքների և առողջ կյանքի համար",
+      en: "To reduce the burden of cardiovascular diseases in Armenia through cutting-edge, patient-centered, and disease-focused multidisciplinary care—seamlessly delivered via integrated care pathways—for better outcomes and healthier lives.\n",
     },
     className: "col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12",
   },
@@ -81,9 +87,11 @@ export const aboutUsContent: AboutUsContentType = [
     name: "Vision",
     title: {
       am: "Տեսլական",
+      en: "Vision",
     },
     description: {
       am: "CardioLab-ը ձգտում է դառնալ բացառիկ «բուտիկ» սիրտանոթային հիվանդանոց՝ գերազանցության կենտրոն, որը մատուցում է բարձրորակ, նորարարական և անհատականացված խնամք՝ ինչպես մանկական, այնպես էլ մեծահասակ պացիենտների համար։ Հանրային-մասնավոր համագործակցության մտածված ինտեգրված մոդելի միջոցով CardioLab-ը կվերաձևի սիրտանոթային առողջապահությունը Հայաստանում՝ սահմանելով նոր չափանիշներ պացիենտների փորձառության, կլինիկական արդյունքների և առողջապահական համակարգի կայունության համար",
+      en: "CardioLab aspires to become a premier “boutique” cardiovascular hospital—a true center of excellence that delivers high-quality, innovative, and personalized care for both pediatric and adult patients.\n Through a thoughtfully integrated public-private partnership model, CardioLab aims to reshape cardiovascular healthcare in Armenia by setting new standards in patient experience, clinical outcomes, and healthcare system sustainability.",
     },
     className: "d-flex h-100 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12",
   },
@@ -92,16 +100,24 @@ export const aboutUsContent: AboutUsContentType = [
     name: "OurStrategicDirections",
     title: {
       am: "Մեր ռազմավարական ուղղությունները",
+      en: "Our Strategic Priorities",
     },
 
     description: {
       am: "",
     },
-    list: [
-      "Կլինիկական սիրտ-անոթային բժշկություն",
-      "Գիտահետազոտական գործունեություն",
-      "Պացիենտի իրազեկվածության բարձրացում",
-    ],
+    list: {
+      am: [
+        "Կլինիկական սիրտ-անոթային բժշկություն",
+        "Գիտահետազոտական գործունեություն",
+        "Պացիենտի իրազեկվածության բարձրացում",
+      ],
+      en: [
+        "Clinical Cardiovascular Medicine",
+        "Scientific Research and Innovation",
+        "Enhancing Patient Awareness",
+      ],
+    },
     className: "col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12",
   },
   {
@@ -109,6 +125,7 @@ export const aboutUsContent: AboutUsContentType = [
     name: "Values",
     title: {
       am: "Մեր Արժեքները",
+      en: "Our Core Values",
     },
     description: {
       am: [
@@ -136,6 +153,33 @@ export const aboutUsContent: AboutUsContentType = [
           title: "Շարունակական Ջարգացում",
           description:
             "Մենք միշտ ձգտում ենք աճի՝ հետևելով նորագույն գիտական ձեռքբերումներին և բարելավելով մեր հմտություններն ու ծառայությունները",
+        },
+      ],
+      en: [
+        {
+          title: "Integrity and Honesty",
+          description:
+            "We uphold the highest standards of transparency and ethics in all our interactions—with patients, families, partners, and affiliated institutions. Trust is the foundation upon which our care is built.",
+        },
+        {
+          title: "Compassion and Respect",
+          description:
+            "We treat every individual with dignity and empathy, ensuring respectful and patient-centered cardiovascular care for people of all ages.",
+        },
+        {
+          title: "Collaboration",
+          description:
+            "We believe that the best outcomes are achieved through teamwork. Our multidisciplinary team works in unison to provide coordinated, comprehensive, and continuous care to every patient.",
+        },
+        {
+          title: "Professionalism",
+          description:
+            "We deliver our services with utmost responsibility and dedication, always prioritizing the health and well-being of our patients.",
+        },
+        {
+          title: "Continuous Improvement",
+          description:
+            "We are committed to ongoing growth by staying at the forefront of scientific advancements and constantly enhancing our skills and services.",
         },
       ],
     },

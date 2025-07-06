@@ -10,7 +10,7 @@ const SingleExpertise = ({
 }) => {
   const locale: string = useLocale();
 
-  const { className, name, list } = expertise ?? {};
+  const { className, name } = expertise ?? {};
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const title: string | string[] =
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -23,7 +23,11 @@ const SingleExpertise = ({
     // @ts-expect-error
     expertise?.description[locale] ?? expertise.description.am;
 
-  console.log("description", description);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const list: string[] =
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    expertise?.list ? expertise?.list[locale] : expertise.list?.am;
 
   return (
     <div

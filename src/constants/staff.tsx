@@ -284,11 +284,13 @@ export const staff: StaffType = [
     id: 1,
     name: {
       am: "Տաթևիկ Հովակիմյան",
+      en: "Tatevik Hovakimyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlueDvPGq4t76bKABNX1vpMyZqWPS43EoxGDlka",
     role: {
       am: "Սրտաբան-Առիթմոլոգ",
+      en: "Սրտաբան-Առիթմոլոգ",
     },
     category: StaffCategory.MedicalStaff,
     visibility: true,
@@ -1950,7 +1952,7 @@ export const staff: StaffType = [
       showEducation: true,
       showPublications: true,
       showAchievements: false,
-      showLanguages: true,
+      showLanguages: false,
       showMemberships: true,
       showHobbies: false,
       showAcademicActivities: false,
