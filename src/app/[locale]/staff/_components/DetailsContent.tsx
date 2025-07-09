@@ -324,7 +324,7 @@ const DetailsContent = ({
                     <div className="doctor-details-biography">
                       <div className="section-header">
                         <h3>
-                          {t("About")}
+                          {t("About")}{" "}
                           {personalInfo.name
                             ? // ? personalInfo.name.split(" ").slice(-1)
                               personalInfo.name
