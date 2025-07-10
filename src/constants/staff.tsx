@@ -120,11 +120,12 @@ export const categorizedStaffOrder = [
   StaffCategory.AdministrativeStaff,
 ];
 
-const mockPersonalInfo: PersonalInfoType & {
+export type MockPersonalInfoType = PersonalInfoType & {
   name: string;
   role: string;
   image: string;
-} = {
+};
+const mockPersonalInfo: MockPersonalInfoType = {
   // Default mock data if no personalInfo is provided
   name: "Dr. Anna Hakobyan",
   role: "Senior Cardiologist",

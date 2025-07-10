@@ -2,7 +2,6 @@
 
 import React from "react";
 import Sidebar from "./Sidebar";
-import BookAppointmentButton from "./BookAppointmentButton";
 import {
   FaGraduationCap,
   FaBriefcase,
@@ -11,7 +10,6 @@ import {
   FaCalendarAlt,
 } from "react-icons/fa";
 import { type PersonalInfoType } from "~/constants/staff";
-import DoctorAppointmentForm from "~/app/_Components/DoctorAppointmentForm/DoctorAppointmentForm";
 import { useTranslations } from "next-intl";
 
 interface DetailsContentI {
@@ -20,75 +18,6 @@ interface DetailsContentI {
   image: string | null;
   personalInfo?: PersonalInfoType;
   staffId?: number;
-}
-
-interface Experience {
-  period: string;
-  title: string;
-  organization: string;
-  description: string;
-}
-
-interface Education {
-  year: string;
-  degree: string;
-  institution: string;
-}
-
-interface Achievement {
-  title: string;
-  description?: string;
-  organization?: string;
-  date: string;
-}
-
-interface PersonalInfo {
-  name: string;
-  role: string;
-  image: string;
-  bio: string;
-  // Visibility flags for each section
-  showBio?: boolean;
-  showExperience?: boolean;
-  showEducation?: boolean;
-  showPublications?: boolean;
-  showAchievements?: boolean;
-  showLanguages?: boolean;
-  showMemberships?: boolean;
-  showHobbies?: boolean;
-  showAcademicActivities?: boolean;
-  // Sidebar visibility flags
-  showContact?: boolean;
-  showSocial?: boolean;
-  showSpecialties?: boolean;
-  // Content data
-  contact: {
-    phone: string;
-    email: string;
-    location: string;
-  };
-  social: {
-    linkedin: string;
-    twitter: string;
-  };
-  specialties: string[];
-  experience: Experience[];
-  education: Education[];
-  memberships: string[];
-  hobbies: string[];
-  achievements: Achievement[] | string[]; // Match the type from PersonalInfoType
-  academicActivities: Achievement[];
-  publications: {
-    title: string;
-    journal?: string;
-    description?: string;
-    year?: string;
-    url?: string;
-  }[];
-  languages: {
-    language: string;
-    level: string;
-  }[];
 }
 
 const DetailsContent = ({
@@ -100,198 +29,42 @@ const DetailsContent = ({
 }: DetailsContentI) => {
   const t = useTranslations("CV");
   // Use staff personalInfo if available, otherwise use default mock data
-  const personalInfo: PersonalInfo = staffPersonalInfo
-    ? {
-        name: name ?? "",
-        role: role ?? "",
-        image: image ?? "",
-        bio: staffPersonalInfo.bio || "",
-        // Visibility flags
-        showBio: staffPersonalInfo.showBio ?? true,
-        showExperience: staffPersonalInfo.showExperience ?? true,
-        showEducation: staffPersonalInfo.showEducation ?? true,
-        showPublications: staffPersonalInfo.showPublications ?? false,
-        showAchievements: staffPersonalInfo.showAchievements ?? false,
-        showLanguages: staffPersonalInfo.showLanguages ?? false,
-        showMemberships: staffPersonalInfo.showMemberships ?? true,
-        showHobbies: staffPersonalInfo.showHobbies ?? false,
-        showAcademicActivities:
-          staffPersonalInfo.showAcademicActivities ?? false,
-        // Sidebar visibility flags
-        showContact: staffPersonalInfo.showContact ?? true,
-        showSocial: staffPersonalInfo.showSocial ?? true,
-        showSpecialties: staffPersonalInfo.showSpecialties ?? true,
-        // Content data
-        contact: staffPersonalInfo.contact || {
-          phone: "",
-          email: "",
-          location: "",
-        },
-        social: staffPersonalInfo.social || {
-          linkedin: "",
-          twitter: "",
-        },
-        specialties: staffPersonalInfo.specialties || [],
-        experience: staffPersonalInfo.experience || [],
-        education: staffPersonalInfo.education || [],
-        memberships: staffPersonalInfo.memberships || [],
-        hobbies: staffPersonalInfo.hobbies || [],
-        achievements: staffPersonalInfo.achievements || ([] as Achievement[]),
-        academicActivities: staffPersonalInfo.academicActivities || [],
-        publications: staffPersonalInfo.publications || [],
-        languages: staffPersonalInfo.languages || [],
-      }
-    : {
-        // Default mock data if no personalInfo is provided
-        name: name ?? "",
-        role: role ?? "",
-        image: image ?? "",
-        bio: "Dr. Anna Hakobyan is a board-certified cardiologist with over 15 years of experience in diagnosing and treating cardiovascular conditions. She specializes in interventional cardiology and has performed hundreds of successful cardiac procedures. Her patient-centered approach and commitment to excellence have earned her recognition among peers and patients alike.",
-        showBio: false,
-        showExperience: true,
-        showEducation: true,
-        showPublications: false,
-        showAchievements: false,
-        showLanguages: false,
-        showMemberships: true,
-        showHobbies: true,
-        showAcademicActivities: false,
-        showContact: false,
-        showSocial: false,
-        showSpecialties: true,
-        contact: {
-          phone: "+374 10 123 456",
-          email: "info@cardiolab.am",
-          location: "CardioLab Medical Center, Yerevan",
-        },
-        social: {
-          linkedin: "https://linkedin.com",
-          twitter: "https://twitter.com",
-        },
-        specialties: [
-          "Cardiology",
-          "Arrhythmology",
-          "Echocardiography",
-          "Interventional Cardiology",
-        ],
-        experience: [
-          {
-            period: "2018 - Present",
-            title: "Senior Cardiologist",
-            organization: "CardioLab Medical Center",
-            description:
-              "Leading the cardiology department and specializing in interventional procedures.",
-          },
-          {
-            period: "2012 - 2018",
-            title: "Cardiologist",
-            organization: "Central Hospital",
-            description:
-              "Provided comprehensive cardiac care and performed diagnostic procedures.",
-          },
-        ],
-        education: [
-          {
-            year: "2006",
-            degree: "PhD in Cardiology",
-            institution: "University of UCLan School of Medicine, Preston",
-          },
-          {
-            year: "2002",
-            degree: "Master of Cardiology",
-            institution: "University of Exeter Medical School, Exeter",
-          },
-          {
-            year: "1998",
-            degree: "MBBS",
-            institution: "Royal College of Medicine",
-          },
-        ],
-        memberships: [
-          "American College of Cardiology",
-          "European Society of Cardiology",
-          "International Society for Heart Research",
-          "Heart Rhythm Society",
-        ],
-        hobbies: ["Mountain hiking", "Classical music", "Chess", "Photography"],
-        academicActivities: [
-          {
-            title: "Lecture on Cardiovascular Health",
-            organization: "Yerevan State Medical University",
-            date: "2023",
-            description:
-              "Guest lecture on modern approaches to cardiovascular disease prevention",
-          },
-          {
-            title: "Research Workshop",
-            organization: "Armenian Medical Association",
-            date: "2022",
-            description:
-              "Led a workshop on research methodologies in cardiology",
-          },
-        ],
-        achievements: [
-          {
-            title: "Excellence in Cardiology Award",
-            organization: "Armenian Medical Association",
-            date: "2020",
-          },
-          {
-            title: "Best Research Paper",
-            organization: "European Society of Cardiology",
-            date: "2018",
-          },
-          {
-            title: "Young Investigator Award",
-            organization: "International Cardiology Conference",
-            date: "2015",
-          },
-          {
-            title: "Distinguished Service Award",
-            organization: "Central Hospital",
-            date: "2014",
-          },
-        ] as Achievement[],
-        publications: [
-          {
-            title: "Novel Approaches to Treating Arrhythmias in Young Adults",
-            journal: "Journal of Cardiac Electrophysiology",
-            year: "2022",
-            url: "https://example.com/publication1",
-          },
-          {
-            title:
-              "Long-term Outcomes of Minimally Invasive Cardiac Procedures",
-            journal: "Cardiology Research and Practice",
-            year: "2020",
-            url: "https://example.com/publication2",
-          },
-          {
-            title:
-              "Comparative Analysis of Antiarrhythmic Medications in Elderly Patients",
-            journal: "International Journal of Cardiology",
-            year: "2017",
-          },
-        ],
-        languages: [
-          {
-            language: "Armenian",
-            level: "Native",
-          },
-          {
-            language: "English",
-            level: "Fluent",
-          },
-          {
-            language: "Russian",
-            level: "Fluent",
-          },
-          {
-            language: "French",
-            level: "Intermediate",
-          },
-        ],
-      };
+  const personalInfo: PersonalInfoType = staffPersonalInfo ?? {
+    bio: "",
+    // Visibility flags
+    showBio: true,
+    showExperience: true,
+    showEducation: true,
+    showPublications: false,
+    showAchievements: false,
+    showLanguages: false,
+    showMemberships: true,
+    showHobbies: false,
+    showAcademicActivities: false,
+    // Sidebar visibility flags
+    showContact: true,
+    showSocial: true,
+    showSpecialties: true,
+    // Content data
+    contact: {
+      phone: "",
+      email: "",
+      location: "",
+    },
+    social: {
+      linkedin: "",
+      twitter: "",
+    },
+    specialties: [],
+    experience: [],
+    education: [],
+    memberships: [],
+    hobbies: [],
+    achievements: [],
+    academicActivities: [],
+    publications: [],
+    languages: [],
+  };
   return (
     <>
       <div className="doctor-details-area pt-100 pb-70">
@@ -300,9 +73,9 @@ const DetailsContent = ({
             <div className="col-lg-4">
               <div className="doctor-details-item">
                 <Sidebar
-                  image={personalInfo.image}
-                  name={personalInfo.name}
-                  role={personalInfo.role}
+                  image={image ?? ""}
+                  name={name ?? ""}
+                  role={role ?? ""}
                   contact={personalInfo.contact}
                   social={personalInfo.social}
                   specialties={personalInfo.specialties}
@@ -324,11 +97,7 @@ const DetailsContent = ({
                     <div className="doctor-details-biography">
                       <div className="section-header">
                         <h3>
-                          {t("About")}{" "}
-                          {personalInfo.name
-                            ? // ? personalInfo.name.split(" ").slice(-1)
-                              personalInfo.name
-                            : "Doctor"}
+                          {t("About") + " "} {name ? name : "Doctor"}
                         </h3>
                       </div>
                       <div className="bio-content">
@@ -483,28 +252,31 @@ const DetailsContent = ({
                         <div className="section-header">
                           <h3>{t("AcademicActivities")}</h3>
                         </div>
-                        <ul className="achievements-list">
+                        <ul className="academic-activities-list">
                           {personalInfo.academicActivities.map(
                             (activity, index) => (
-                              <li key={index} className="achievement-item">
-                                <div className="achievement-header">
-                                  <h4 className="achievement-title">
+                              <li
+                                key={index}
+                                className="academic-activities-item"
+                              >
+                                <div className="academic-activities-header">
+                                  <h4 className="academic-activities-title">
                                     {activity.title}
                                   </h4>
                                   {activity.date && (
-                                    <span className="achievement-date">
+                                    <span className="academic-activities-date">
                                       <FaCalendarAlt className="icon-small" />
                                       {activity.date}
                                     </span>
                                   )}
                                 </div>
                                 {activity.organization && (
-                                  <p className="achievement-organization">
+                                  <p className="academic-activities-organization">
                                     {activity.organization}
                                   </p>
                                 )}
                                 {activity.description && (
-                                  <p className="achievement-description">
+                                  <p className="academic-activities-description">
                                     {activity.description}
                                   </p>
                                 )}

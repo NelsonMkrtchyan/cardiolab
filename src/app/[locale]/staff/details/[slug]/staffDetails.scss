@@ -23,20 +23,20 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   animation: modalFadeIn 0.3s ease-out;
   overflow: hidden;
-  
+
   .modal-header {
     padding: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     h3 {
       margin: 0;
       color: $main-color;
       font-weight: 600;
     }
-    
+
     .close-btn {
       background: none;
       border: none;
@@ -48,34 +48,34 @@
       align-items: center;
       justify-content: center;
       transition: all 0.2s ease;
-      
+
       &:hover {
         color: $main-color;
         transform: scale(1.1);
       }
     }
   }
-  
+
   .modal-body {
     padding: 30px 20px;
-    
+
     p {
       margin-bottom: 15px;
       color: $grey-color;
-      
+
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
-  
+
   .modal-footer {
     padding: 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: flex-end;
     gap: 15px;
-    
+
     button {
       padding: 10px 20px;
       border-radius: 30px;
@@ -83,29 +83,29 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    
+
     .cancel-btn {
       background-color: #f1f1f1;
       color: #666;
       border: none;
-      
+
       &:hover {
         background-color: #e0e0e0;
       }
     }
-    
+
     .submit-btn {
       background-color: $main-color;
       color: white;
       border: none;
       box-shadow: 0 4px 10px rgba(47, 96, 189, 0.2);
-      
+
       &:hover {
-        background-color: darken($main-color, 10%);
+        background-color: $main-color;
         transform: translateY(-2px);
         box-shadow: 0 6px 15px rgba(47, 96, 189, 0.3);
       }
-      
+
       &:active {
         transform: translateY(0);
         box-shadow: 0 2px 5px rgba(47, 96, 189, 0.2);
@@ -289,7 +289,7 @@
   .book-appointment-container {
     padding: 25px;
     text-align: center;
-    
+
     .book-appointment-btn {
       background-color: $main-color;
       color: white;
@@ -305,25 +305,25 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 10px rgba(47, 96, 189, 0.2);
-      
+
       &:hover {
-        background-color: darken($main-color, 10%);
+        background-color: $main-color;
         transform: translateY(-2px);
         box-shadow: 0 6px 15px rgba(47, 96, 189, 0.3);
       }
-      
+
       &:active {
         transform: translateY(0);
         box-shadow: 0 2px 5px rgba(47, 96, 189, 0.2);
       }
-      
+
       .btn-icon {
         margin-right: 10px;
         font-size: 18px;
       }
     }
   }
-  
+
   // Specialties section
   .doctor-details-specialties {
     padding: 25px;
@@ -561,7 +561,7 @@
           transition: all 0.3s ease;
 
           &:hover {
-            color: darken($main-color, 10%);
+            color: $main-color;
             text-decoration: underline;
           }
         }
@@ -574,6 +574,12 @@
       padding-left: 5px;
       margin-top: 15px;
 
+      .achievement-date {
+        .icon-small {
+          margin-right: 5px;
+        }
+      }
+
       li {
         position: relative;
         padding-left: 25px;
@@ -583,6 +589,38 @@
 
         &:before {
           content: '🏆';
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // Academic Activities list styling
+    .academic-activities-list {
+      list-style-type: none;
+      padding-left: 5px;
+      margin-top: 15px;
+
+      .academic-activities-date {
+        .icon-small {
+          margin-right: 5px;
+        }
+      }
+
+      li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+        color: $grey-color;
+
+        &:before {
+          content: '🎓';
           position: absolute;
           left: 0;
           top: 0;

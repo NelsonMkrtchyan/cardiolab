@@ -4,7 +4,9 @@ import React from "react";
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
-import ImageWithLoader from "~/app/_Components/ImageWithLoader";
+import ImageWithCache from "~/components/ImageWithCache";
+// Keep the old import as a fallback in case we need to revert
+// import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
 interface SidebarI {
   image: string;
@@ -43,12 +45,14 @@ const Sidebar = ({
       <div className="doctor-details-item doctor-details-left">
         <div className="profile-header">
           <div className="image-container">
-            <ImageWithLoader 
+            <ImageWithCache 
               src={image || "/images/doctors/placeholder.jpg"} 
               alt={name || "Doctor"} 
               width={400} 
               height={400} 
               className="profile-image"
+              cacheKey={`staff-${name?.replace(/\s+/g, '-').toLowerCase() || 'doctor'}`}
+              priority={true}
             />
           </div>
           <div className="profile-info">
