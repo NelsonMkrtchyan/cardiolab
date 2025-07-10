@@ -120,166 +120,6 @@ export const categorizedStaffOrder = [
   StaffCategory.AdministrativeStaff,
 ];
 
-export type MockPersonalInfoType = PersonalInfoType & {
-  name: string;
-  role: string;
-  image: string;
-};
-const mockPersonalInfo: MockPersonalInfoType = {
-  // Default mock data if no personalInfo is provided
-  name: "Dr. Anna Hakobyan",
-  role: "Senior Cardiologist",
-  image: "https://example.com/doctor-image.jpg",
-  bio: "Dr. Anna Hakobyan is a board-certified cardiologist with over 15 years of experience in diagnosing and treating cardiovascular conditions. She specializes in interventional cardiology and has performed hundreds of successful cardiac procedures. Her patient-centered approach and commitment to excellence have earned her recognition among peers and patients alike.",
-  showBio: false,
-  showExperience: true,
-  showEducation: true,
-  showPublications: true,
-  showAchievements: true,
-  showLanguages: false,
-  showMemberships: true,
-  showHobbies: true,
-  showAcademicActivities: true,
-  showContact: false,
-  showSocial: false,
-  showSpecialties: true,
-  contact: {
-    phone: "+374 10 123 456",
-    email: "info@cardiolab.am",
-    location: "CardioLab Medical Center, Yerevan",
-  },
-  social: {
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-  },
-  specialties: [
-    "Cardiology",
-    "Arrhythmology",
-    "Echocardiography",
-    "Interventional Cardiology",
-  ],
-  experience: [
-    {
-      period: "2018 - Present",
-      title: "Senior Cardiologist",
-      organization: "CardioLab Medical Center",
-      description:
-        "Leading the cardiology department and specializing in interventional procedures.",
-    },
-    {
-      period: "2012 - 2018",
-      title: "Cardiologist",
-      organization: "Central Hospital",
-      description:
-        "Provided comprehensive cardiac care and performed diagnostic procedures.",
-    },
-  ],
-  education: [
-    {
-      year: "2006",
-      degree: "PhD in Cardiology",
-      institution: "University of UCLan School of Medicine, Preston",
-    },
-    {
-      year: "2002",
-      degree: "Master of Cardiology",
-      institution: "University of Exeter Medical School, Exeter",
-    },
-    {
-      year: "1998",
-      degree: "MBBS",
-      institution: "Royal College of Medicine",
-    },
-  ],
-  memberships: [
-    "American College of Cardiology",
-    "European Society of Cardiology",
-    "International Society for Heart Research",
-    "Heart Rhythm Society",
-  ],
-  hobbies: ["Mountain hiking", "Classical music", "Chess", "Photography"],
-  achievements: [
-    {
-      title: "Excellence in Cardiology Award",
-      organization: "Armenian Medical Association",
-      date: "2020",
-    },
-    {
-      title: "Best Research Paper",
-      organization: "European Society of Cardiology",
-      date: "2018",
-    },
-    {
-      title: "Young Investigator Award",
-      organization: "International Cardiology Conference",
-      date: "2015",
-    },
-    {
-      title: "Distinguished Service Award",
-      organization: "Central Hospital",
-      date: "2014",
-    },
-  ],
-  academicActivities: [
-    {
-      title: "Lecture on Cardiovascular Health",
-      organization: "Yerevan State Medical University",
-      date: "2023",
-      description:
-        "Guest lecture on modern approaches to cardiovascular disease prevention",
-    },
-    {
-      title: "Research Workshop",
-      organization: "Armenian Medical Association",
-      date: "2022",
-      description: "Led a workshop on research methodologies in cardiology",
-    },
-    {
-      title: "Medical Conference Speaker",
-      organization: "International Cardiology Summit",
-      date: "2021",
-    },
-  ],
-  publications: [
-    {
-      title: "Novel Approaches to Treating Arrhythmias in Young Adults",
-      journal: "Journal of Cardiac Electrophysiology",
-      year: "2022",
-      url: "https://example.com/publication1",
-    },
-    {
-      title: "Long-term Outcomes of Minimally Invasive Cardiac Procedures",
-      journal: "Cardiology Research and Practice",
-      year: "2020",
-      url: "https://example.com/publication2",
-    },
-    {
-      title:
-        "Comparative Analysis of Antiarrhythmic Medications in Elderly Patients",
-      journal: "International Journal of Cardiology",
-      year: "2017",
-    },
-  ],
-  languages: [
-    {
-      language: "Armenian",
-      level: "Native",
-    },
-    {
-      language: "English",
-      level: "Fluent",
-    },
-    {
-      language: "Russian",
-      level: "Fluent",
-    },
-    {
-      language: "French",
-      level: "Intermediate",
-    },
-  ],
-};
-
 export const staff: StaffType = [
   {
     id: 1,
@@ -1775,7 +1615,7 @@ export const staff: StaffType = [
       en: "Meri Papikyan",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu015eaHB3uh8TEZLPqWjlAOFybHiDawcvdgUp",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluXp5BaFOa6TkeElYqHKS8hzy4uf7mr9tC0MBv",
     role: {
       am: "Սրտաբան",
       en: "Cardiologist",
@@ -2781,7 +2621,7 @@ export const staff: StaffType = [
       en: "Tamara Simonyan",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlua0HqbpKeDI891qSZ0fT7zH2wQLEbgPcoRV4J",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSCWBQYcnEW7pyXzGrTZQb21kmdgPfAOJ8h3N",
     role: {
       am: "Հոգեբան",
       en: "Psychologist",
