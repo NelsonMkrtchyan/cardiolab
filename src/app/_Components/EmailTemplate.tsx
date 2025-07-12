@@ -18,11 +18,11 @@ export const EmailTemplate: React.FC<Readonly<EmailFormType>> = ({
   message,
 }) => (
   <div>
-    {name && <p>{name}</p>}
-    {email && <p>{email}</p>}
-    {ssn && <p>{email}</p>}
-    {number && <p>{number}</p>}
-    {subject && <p>{subject}</p>}
-    {message && <p>{message}</p>}
+    {name && <p>Name: {name}</p>}
+    {email && <p>Email: {email}</p>}
+    {ssn && <p>Social Security Number: {ssn}</p>}
+    {number && <p>Number: {number}</p>}
+    {subject && <p>Subject: {subject}</p>}
+    {message && <p>Message: {message}</p>}
   </div>
 );

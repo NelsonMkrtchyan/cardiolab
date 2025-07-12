@@ -9,14 +9,20 @@ import {
   FaHeart,
   FaCalendarAlt,
 } from "react-icons/fa";
-import { type PersonalInfoType } from "~/constants/staff";
-import { useTranslations } from "next-intl";
+import {
+  defaultPersonalInfoFlags,
+  defaultPersonalSingleInfo,
+  type PersonalInfoSingleType,
+  type PersonalInfoType,
+} from "~/constants/staff";
+import { useLocale, useTranslations } from "next-intl";
+import { type LocaleT } from "~/types";
 
 interface DetailsContentI {
   name: string | null;
   role: string | null;
   image: string | null;
-  personalInfo?: PersonalInfoType;
+  personalInfo: PersonalInfoType;
   staffId?: number;
 }
 
@@ -28,43 +34,14 @@ const DetailsContent = ({
   staffId,
 }: DetailsContentI) => {
   const t = useTranslations("CV");
-  // Use staff personalInfo if available, otherwise use default mock data
-  const personalInfo: PersonalInfoType = staffPersonalInfo ?? {
-    bio: "",
-    // Visibility flags
-    showBio: true,
-    showExperience: true,
-    showEducation: true,
-    showPublications: false,
-    showAchievements: false,
-    showLanguages: false,
-    showMemberships: true,
-    showHobbies: false,
-    showAcademicActivities: false,
-    // Sidebar visibility flags
-    showContact: true,
-    showSocial: true,
-    showSpecialties: true,
-    // Content data
-    contact: {
-      phone: "",
-      email: "",
-      location: "",
-    },
-    social: {
-      linkedin: "",
-      twitter: "",
-    },
-    specialties: [],
-    experience: [],
-    education: [],
-    memberships: [],
-    hobbies: [],
-    achievements: [],
-    academicActivities: [],
-    publications: [],
-    languages: [],
-  };
+  const locale: string = useLocale();
+
+  const flags = staffPersonalInfo?.flags ?? defaultPersonalInfoFlags;
+
+  const personalInfo: PersonalInfoSingleType = staffPersonalInfo
+    ? (staffPersonalInfo?.[locale as LocaleT] ?? staffPersonalInfo.am)
+    : defaultPersonalSingleInfo;
+
   return (
     <>
       <div className="doctor-details-area pt-100 pb-70">
@@ -79,9 +56,9 @@ const DetailsContent = ({
                   contact={personalInfo.contact}
                   social={personalInfo.social}
                   specialties={personalInfo.specialties}
-                  showContact={personalInfo.showContact}
-                  showSocial={personalInfo.showSocial}
-                  showSpecialties={personalInfo.showSpecialties}
+                  showContact={flags.showContact}
+                  showSocial={flags.showSocial}
+                  showSpecialties={flags.showSpecialties}
                 />
 
                 {/* Book Appointment Button */}
@@ -93,7 +70,7 @@ const DetailsContent = ({
               <div className="doctor-details-item">
                 <div className="doctor-details-right">
                   {/* Bio Section */}
-                  {personalInfo.showBio && personalInfo.bio && (
+                  {flags.showBio && personalInfo.bio && (
                     <div className="doctor-details-biography">
                       <div className="section-header">
                         <h3>
@@ -107,7 +84,7 @@ const DetailsContent = ({
                   )}
 
                   {/* Experience Section */}
-                  {personalInfo.showExperience &&
+                  {flags.showExperience &&
                     personalInfo.experience &&
                     personalInfo.experience.length > 0 && (
                       <div className="doctor-details-biography">
@@ -133,7 +110,7 @@ const DetailsContent = ({
                     )}
 
                   {/* Education Section */}
-                  {personalInfo.showEducation &&
+                  {flags.showEducation &&
                     personalInfo.education &&
                     personalInfo.education.length > 0 && (
                       <div className="doctor-details-biography">
@@ -158,7 +135,7 @@ const DetailsContent = ({
                     )}
 
                   {/* Publications Section */}
-                  {personalInfo.showPublications &&
+                  {flags.showPublications &&
                     personalInfo.publications &&
                     personalInfo.publications.length > 0 && (
                       <div className="doctor-details-biography">
@@ -191,7 +168,7 @@ const DetailsContent = ({
                     )}
 
                   {/* Achievements Section */}
-                  {personalInfo.showAchievements &&
+                  {flags.showAchievements &&
                     personalInfo.achievements &&
                     personalInfo.achievements.length > 0 && (
                       <div className="doctor-details-biography">
@@ -245,7 +222,7 @@ const DetailsContent = ({
                     )}
 
                   {/* Academic Activities Section */}
-                  {personalInfo.showAcademicActivities &&
+                  {flags.showAcademicActivities &&
                     personalInfo.academicActivities &&
                     personalInfo.academicActivities.length > 0 && (
                       <div className="doctor-details-biography">
@@ -288,7 +265,7 @@ const DetailsContent = ({
                     )}
 
                   {/* Languages Section */}
-                  {personalInfo.showLanguages &&
+                  {flags.showLanguages &&
                     personalInfo.languages &&
                     personalInfo.languages.length > 0 && (
                       <div className="doctor-details-biography">
@@ -315,7 +292,7 @@ const DetailsContent = ({
                     )}
 
                   {/* Membership Section */}
-                  {personalInfo.showMemberships &&
+                  {flags.showMemberships &&
                     personalInfo.memberships &&
                     personalInfo.memberships.length > 0 && (
                       <div className="doctor-details-biography">
@@ -332,7 +309,7 @@ const DetailsContent = ({
                     )}
 
                   {/* Hobby Section */}
-                  {personalInfo.showHobbies &&
+                  {flags.showHobbies &&
                     personalInfo.hobbies &&
                     personalInfo.hobbies.length > 0 && (
                       <div className="doctor-details-biography">

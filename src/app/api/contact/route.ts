@@ -27,9 +27,9 @@ export async function POST(req: NextRequest) {
       );
     }
     const { data, error } = await resend.emails.send({
-      from: "no-reply@cardiolab.am",
+      from: "website@cardiolab.am",
       to: ["nelsmkrtchyan@gmail.com", "info@cardiolab.am"],
-      subject: `New Form Submission from ${name}`,
+      subject: `Այցի գրանցում կայքից ${name}`,
       react: EmailTemplate({ name, email, ssn, number, subject, message }),
     });
 
