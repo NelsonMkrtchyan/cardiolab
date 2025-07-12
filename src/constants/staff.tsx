@@ -721,13 +721,13 @@ export const staff: StaffType = [
         showExperience: true,
         showEducation: true,
         showPublications: false,
-        showAchievements: false,
+        showAchievements: true,
         showLanguages: false,
         showMemberships: true,
         showHobbies: false,
-        showContact: true,
-        showSocial: true,
-        showSpecialties: true,
+        showContact: false,
+        showSocial: false,
+        showSpecialties: false,
       },
       am: {
         bio: "Որակավորում՝ բժշկական գիտությունների թեկնածու, մանկական սրտաբան, ինտերվենցիոն սրտաբան։ Դիրքեր՝ «ԿարդիոԼաբ» կլինիկայի համահիմնադիր։ Նորք Մարաշ բժշկական կենտրոնի մանկական բաժանմունքի ավագ սրտաբան։",
@@ -1700,7 +1700,381 @@ export const staff: StaffType = [
         showSocial: true,
         showSpecialties: true,
       },
-      am: defaultPersonalSingleInfo,
+      en: {
+        bio: "Clinical Cardiologist, Anti-Age Medicine Consultant, Echocardiography and Holter Specialist",
+        contact: {
+          phone: "+37494611777",
+          email: "anna_dr29@yahoo.com",
+          location: "Yerevan, Armenia",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [
+          "Cardiology",
+          "Anti-Age Medicine",
+          "Echocardiography (transthoracic, transesophageal)",
+          "Holter Monitoring",
+          "Stress Testing (Treadmill, Veloergometry, Stress-Echo)",
+          "Invasive Cardiology",
+        ],
+        experience: [
+          {
+            period: "Feb 2025 - Present",
+            title: "Cardiologist",
+            organization: "CardioLab Armenia medical center",
+            description:
+              "Clinical cardiology, echocardiography, treadmill test",
+          },
+          {
+            period: "2024 - Present",
+            title: "Cardiologist & Anti-Age Consultant",
+            organization: "Davidyants Polyclinic",
+            description:
+              "Clinical cardiology, echocardiography, treadmill test, Holter monitoring, Anti-Age consultations",
+          },
+          {
+            period: "2011 - 2024",
+            title: "Cardiologist",
+            organization: "Cardiological Private Clinic",
+            description:
+              "Clinical cardiology, echocardiography, treadmill test, Holter monitoring",
+          },
+          {
+            period: "2008 - 2011",
+            title: "Cardiologist",
+            organization: "Ultra Lab medical center",
+            description:
+              "Clinical cardiology, echocardiography, treadmill test",
+          },
+          {
+            period: "Sep 2005 - Jun 2007",
+            title: "Cardiologist",
+            organization: "Abou-Jaoude Hospital",
+            description:
+              "General cardiology practice in a clinical hospital setting",
+          },
+          {
+            period: "Sep 2005 - Jun 2007",
+            title: "Cardiologist & General Practitioner",
+            organization: "Private Clinic, Beirut",
+            description: "General cardiology and primary healthcare",
+          },
+          {
+            period: "Sep 2003 - Sep 2004",
+            title: "Fellow",
+            organization: "Nork-Marash Medical Center",
+            description: "Fellowship of Invasive Cardiology",
+          },
+          {
+            period: "Oct 2002 - Sep 2003",
+            title: "Volunteer Assistant Cardiologist",
+            organization: "Nork-Marash Medical Center",
+            description: "Assisting fellow cardiologists",
+          },
+          {
+            period: "Mar 2002 - Aug 2002",
+            title: "Medical Representative",
+            organization: "Hipp Company",
+            description: "Promotion of infant food products",
+          },
+          {
+            period: "Sep 2001 - Oct 2002",
+            title: "Assistant Lecturer",
+            organization: "National Institute of Health of Armenia",
+            description:
+              "Taught topics related to rational drug use, coronary disease, Alzheimer’s, hypertension, etc.",
+          },
+          {
+            period: "Sep 2000 - Oct 2002",
+            title: "Expert in Clinical Trials & Drug Evaluation",
+            organization: "Armenian Drug and Medical Technology Agency",
+            description:
+              "Worked in clinical trials and drug registration departments",
+          },
+          {
+            period: "Sep 2000 - Oct 2002",
+            title: "Secretary of Ethics Committee",
+            organization: "Knowledge Society",
+            description: "Oversight of clinical trials in accordance with GCP",
+          },
+          {
+            period: "1998 - 2000",
+            title: "Resident Doctor on Duty",
+            organization: "Scientific Research Institute of Cardiology",
+            description:
+              "Departments of Heart Failure, Arrhythmias, Cardiac Care",
+          },
+          {
+            period: "1997 - 1998",
+            title: "Resident Doctor on Duty",
+            organization: "Erebouni Medical Center",
+            description: "Cardiac Care Unit",
+          },
+        ],
+        education: [
+          {
+            year: "2021 - Present",
+            degree: "Anti-Age Expert",
+            institution: "Swiss Group AG, Anti-Age Medicine",
+          },
+          {
+            year: "2008",
+            degree: "24-hour ECG Monitoring (Holter)",
+            institution: "Astghik Medical Center",
+          },
+          {
+            year: "2002 - 2003",
+            degree: "Clinical Echocardiography",
+            institution: "Nork Marash Medical Center",
+          },
+          {
+            year: "1997 - 2000",
+            degree: "Clinical Residency of Cardiology",
+            institution:
+              "National Institute of Health of Armenia and Erebouni Medical Center",
+          },
+          {
+            year: "1991 - 1997",
+            degree: "Diploma in General Medicine (with honors)",
+            institution: "Yerevan State Medical University",
+          },
+          {
+            year: "1981 - 1991",
+            degree: "Secondary Education Certificate (with honors)",
+            institution: "Secondary school N 55 named after A.P. Chekhov",
+          },
+        ],
+        memberships: [
+          "Republic of Armenia Medical License in Cardiology (2000)",
+          "Lebanese Medical Colloquium (July 2005)",
+        ],
+        hobbies: ["Sports", "Theater", "Literature", "Music", "Arts"],
+        achievements: [],
+        academicActivities: [
+          {
+            title: "Assistant Lecturer on Clinical Pharmacology Topics",
+            description:
+              "Covered topics such as rational drug use, essential medicines, quality of life, and diseases like Alzheimer's and coronary disease.",
+            organization: "National Institute of Health of Armenia",
+            date: "2001 - 2002",
+          },
+          {
+            title: "Secretary of Ethics Committee for Clinical Trials",
+            description: "Oversaw clinical trials following GCP standards",
+            organization: "Knowledge Society",
+            date: "2000 - 2002",
+          },
+          {
+            title:
+              "Participant in Euro Heart Survey of Adult Congenital Heart Disease",
+            date: "n/a",
+          },
+          {
+            title: "Frequent Medical Conference Participant",
+            date: "n/a",
+          },
+        ],
+        publications: [],
+        languages: [
+          { language: "Armenian", level: "Fluent" },
+          { language: "Russian", level: "Fluent" },
+          { language: "English", level: "Fluent" },
+          { language: "Arabic", level: "Fair" },
+          { language: "French", level: "Fair" },
+          { language: "Greek", level: "Fair" },
+        ],
+      },
+      am: {
+        bio: "Կլինիկական սրտաբույժ, հակատարիքային բժշկության խորհրդատու, Էխոսրտագրության և Հոլտեր մոնիթորինգի մասնագետ",
+        contact: {
+          phone: "+37494611777",
+          email: "anna_dr29@yahoo.com",
+          location: "Երևան, Հայաստան",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [
+          "Սրտաբանություն",
+          "Հակատարիքային բժշկություն",
+          "Էխոսրտագրություն (տրանցթորակալ, տրանզեզոֆագեալ)",
+          "Հոլտեր մոնիթորինգ",
+          "Սթրես թեստեր (ավանդական գորգ, վելոերգոմետրիա, սթրես-էխո)",
+          "Ինվազիվ սրտաբանություն",
+        ],
+        experience: [
+          {
+            period: "Փետրվար 2025 - Մինչ օրս",
+            title: "Սրտաբույժ",
+            organization: "CardioLab Armenia բժշկական կենտրոն",
+            description:
+              "Կլինիկական սրտաբանություն, էխոսրտագրություն, վարժանքի թեստավորում (տրեդմիլ)",
+          },
+          {
+            period: "2024 - Մինչ օրս",
+            title: "Սրտաբույժ և հակատարիքային խորհրդատու",
+            organization: "Դավիթյանց պոլիկլինիկա",
+            description:
+              "Սրտաբանություն, էխոսրտագրություն, սթրես թեստ, Հոլտեր մոնիթորինգ, հակատարիքային բժշկություն",
+          },
+          {
+            period: "2011 - 2024",
+            title: "Սրտաբույժ",
+            organization: "Սրտաբանական մասնավոր կլինիկա",
+            description:
+              "Սրտաբանություն, էխոսրտագրություն, սթրես թեստեր, Հոլտեր մոնիթորինգ",
+          },
+          {
+            period: "2008 - 2011",
+            title: "Սրտաբույժ",
+            organization: "Ուլտրա Լաբ բժշկական կենտրոն",
+            description:
+              "Սրտաբանական ծառայություններ, էխոսրտագրություն, վարժանքի թեստեր",
+          },
+          {
+            period: "Սեպտեմբեր 2005 - Հունիս 2007",
+            title: "Սրտաբույժ",
+            organization: "Abou-Jaoude հիվանդանոց, Բեյրութ",
+            description: "Ընդհանուր սրտաբանական պրակտիկա հիվանդանոցում",
+          },
+          {
+            period: "Սեպտեմբեր 2005 - Հունիս 2007",
+            title: "Սրտաբույժ և Ընդհանուր բժշկի գործառույթ",
+            organization: "Մասնավոր կլինիկա, Բեյրութ",
+            description:
+              "Ընդհանուր սրտաբանական և առաջնային բուժօգնության ծառայություններ",
+          },
+          {
+            period: "Սեպտեմբեր 2003 - Սեպտեմբեր 2004",
+            title: "Ինվազիվ սրտաբանության ֆելոու",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            description: "Ինվազիվ սրտաբանության ոլորտում մասնագիտացում",
+          },
+          {
+            period: "Հոկտեմբեր 2002 - Սեպտեմբեր 2003",
+            title: "Կամավոր օգնական սրտաբան",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            description:
+              "Օգնում էր սրտաբույժներին կլինիկական գործունեության ընթացքում",
+          },
+          {
+            period: "Մարտ 2002 - Օգոստոս 2002",
+            title: "Բժշկական ներկայացուցիչ",
+            organization: "Hipp ընկերություն",
+            description: "Մանկական սննդի արտադրանքի առաջխաղացում",
+          },
+          {
+            period: "Սեպտեմբեր 2001 - Հոկտեմբեր 2002",
+            title: "Օգնական դասախոս",
+            organization: "ՀՀ ԱՆ Առողջապահության ազգային ինստիտուտ",
+            description:
+              "Դասավանդել է դեղագործության և սրտաբանության թեմաներով",
+          },
+          {
+            period: "Սեպտեմբեր 2000 - Հոկտեմբեր 2002",
+            title: "Կլինիկական փորձարկումների փորձագետ",
+            organization:
+              "Հայկական դեղերի և բժշկական տեխնոլոգիաների գործակալություն",
+            description: "Կլինիկական փորձարկումներ և դեղերի գրանցում",
+          },
+          {
+            period: "Սեպտեմբեր 2000 - Հոկտեմբեր 2002",
+            title: "Էթիկայի կոմիտեի քարտուղար",
+            organization: "«Գիտելիք» հասարակություն",
+            description:
+              "Հետևում էր կլինիկական փորձարկումների էթիկական չափանիշներին (GCP)",
+          },
+          {
+            period: "1998 - 2000",
+            title: "Ռեզիդենտ, հերթապահ բժիշկ",
+            organization: "Սրտաբանության գիտահետազոտական ինստիտուտ",
+            description:
+              "«Սրտային անբավարարություն», «Առիթմիաներ», «Սրտային խնամք» բաժանմունքներում",
+          },
+          {
+            period: "1997 - 1998",
+            title: "Ռեզիդենտ, հերթապահ բժիշկ",
+            organization: "Էրեբունի բժշկական կենտրոն",
+            description: "Սրտային խնամքի բաժանմունք",
+          },
+        ],
+        education: [
+          {
+            year: "2021 - Մինչ օրս",
+            degree: "Հակատարիքային բժշկության մասնագետ",
+            institution: "Swiss Group AG, Anti-Age Medicine",
+          },
+          {
+            year: "2008",
+            degree: "24-ժամյա ԷԿԳ մոնիթորինգ (Հոլտեր)",
+            institution: "Աստղիկ բժշկական կենտրոն",
+          },
+          {
+            year: "2002 - 2003",
+            degree: "Կլինիկական էխոսրտագրություն",
+            institution: "Նորք Մարաշ բժշկական կենտրոն",
+          },
+          {
+            year: "1997 - 2000",
+            degree: "Սրտաբանության կլինիկական ռեզիդենտուրա",
+            institution: "ԱԱԻ և Էրեբունի ԲԿ",
+          },
+          {
+            year: "1991 - 1997",
+            degree: "Բժշկական դիպլոմ (պատվով)",
+            institution: "Երևանի պետական բժշկական համալսարան",
+          },
+        ],
+        memberships: [
+          "ՀՀ Սրտաբանի արտոնագիր (2000-ից)",
+          "Լիբանանի բժշկական քոլոքվիում (Հուլիս 2005)",
+        ],
+        hobbies: [
+          "Սպորտ",
+          "Թատրոն",
+          "Գրականություն",
+          "Երաժշտություն",
+          "Արվեստ",
+        ],
+        achievements: [],
+        academicActivities: [
+          {
+            title: "Օգնական դասախոս կլինիկական դեղագիտության թեմաներով",
+            description:
+              "Դասավանդել է՝ դեղերի խելամիտ օգտագործում, Ալցհեյմերի հիվանդություն, սրտային հիվանդություններ և այլն",
+            organization: "ՀՀ ԱՆ Առողջապահության ազգային ինստիտուտ",
+            date: "2001 - 2002",
+          },
+          {
+            title:
+              "Էթիկայի կոմիտեի քարտուղար կլինիկական փորձարկումների վերահսկման համար",
+            description:
+              "Վերահսկել է կլինիկական փորձարկումների համապատասխանությունը GCP-ին",
+            organization: "«Գիտելիք» հասարակություն",
+            date: "2000 - 2002",
+          },
+          {
+            title: "Մասնակցել է Euro Heart Survey նախագծին",
+            date: "չնշված",
+          },
+          {
+            title: "Պարբերաբար մասնակցել է բժշկական գիտաժողովների",
+            date: "չնշված",
+          },
+        ],
+        publications: [],
+        languages: [
+          { language: "Հայերեն", level: "Արտահայտիչ" },
+          { language: "Ռուսերեն", level: "Արտահայտիչ" },
+          { language: "Անգլերեն", level: "Արտահայտիչ" },
+          { language: "Արաբերեն", level: "Միջին" },
+          { language: "Ֆրանսերեն", level: "Միջին" },
+          { language: "Հունարեն", level: "Միջին" },
+        ],
+      },
     },
   },
   {
