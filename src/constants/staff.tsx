@@ -53,7 +53,6 @@ interface Achievement {
 
 export type PersonalInfoSingleType = {
   bio: string;
-  // Content data
   contact: {
     phone: string;
     email: string;
@@ -731,25 +730,294 @@ export const staff: StaffType = [
         showSpecialties: true,
       },
       am: {
-        bio: "",
+        bio: "Որակավորում՝ բժշկական գիտությունների թեկնածու, մանկական սրտաբան, ինտերվենցիոն սրտաբան։ Դիրքեր՝ «ԿարդիոԼաբ» կլինիկայի համահիմնադիր։ Նորք Մարաշ բժշկական կենտրոնի մանկական բաժանմունքի ավագ սրտաբան։",
         contact: {
-          phone: "",
-          email: "",
-          location: "",
+          phone: "(+374 10) 65 59 60 գրասենյակ, (+374 91) 49 05 26 բջջային",
+          email: "karenzohrabyan@yahoo.com",
+          location:
+            "Այգեձորի 1-ին փողոց 28/1, Երևան 0019, Հայաստանի Հանրապետություն",
         },
         social: {
           linkedin: "",
           twitter: "",
         },
         specialties: [],
-        experience: [],
-        education: [],
-        memberships: [],
+        experience: [
+          {
+            period: "2024 թվականի հոկտեմբերից մինչ օրս",
+            title: "Համահիմնադիր",
+            organization: "«ԿարդիոԼաբ» կլինիկա",
+            description: "",
+          },
+          {
+            period: "2018 թվականի սեպտեմբերից մինչև 2023 թվականի սեպտեմբեր",
+            title:
+              "Առողջապահության նախարարի խորհրդական մանկական սրտաբանության ոլորտում",
+            organization:
+              "Հայաստանի Հանրապետության առողջապահության նախարարություն",
+            description: "",
+          },
+          {
+            period: "2017 թվականի փետրվարից մինչև 2020 թվականի մարտ",
+            title: "Փոխտնօրեն",
+            organization: "Նորք Մարաշ բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2010 թվականի նոյեմբերից մինչև 2013 թվականի փետրվար",
+            title: "Բժշկական անձնակազմի ղեկավար",
+            organization: "Նորք Մարաշ բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2007 թվականի դեկտեմբերից մինչ օրս",
+            title: "Անձնակազմի բժիշկ, մանկական ինտերվենցիոն սրտաբան",
+            organization: "Նորք Մարաշ բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2005 թվականի դեկտեմբերից մինչև 2007 թվականի նոյեմբեր",
+            title:
+              "Կլինիկական գիտաշխատող մանկական ինտերվենցիոն սրտաբանության գծով",
+            organization: "Նորք Մարաշ բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2002 թվականի սեպտեմբերից մինչև 2005 թվականի նոյեմբեր",
+            title: "Մանկական սրտաբանության ռեզիդենտ",
+            organization: "Նորք Մարաշ բժշկական կենտրոն",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "2018 թվականի փետրվարից մինչև 2018 թվականի մարտ",
+            degree: "Կլինիկական դիտորդ մանկական սրտաբանության բաժանմունքում",
+            institution: "Վիեննայի բժշկական համալսարան, AKH",
+          },
+          {
+            year: "2017 թվականի նոյեմբեր",
+            degree: "Կլինիկական պրակտիկանտ ինտերվենցիոն առիթմոլոգիայում",
+            institution:
+              "Սրտաբանության և ներքին հիվանդությունների գիտական ինստիտուտ",
+          },
+          {
+            year: "2011 թվականի նոյեմբեր",
+            degree:
+              "Միջազգային դիտորդ մանկական սրտաբանության և մանկական բնածին սրտի վիրահատությունների բաժանմունքում",
+            institution: "Քլիվլենդի կլինիկա",
+          },
+          {
+            year: "2006 թվականի հունվարից մինչև 2006 թվականի ապրիլ",
+            degree: "Կլինիկական դիտորդ մանկական ինտերվենցիոն սրտաբանության մեջ",
+            institution: "Սուրբ Սրտի մանկական հիվանդանոց",
+          },
+          {
+            year: "2005 թվականի ապրիլից մինչև 2005 թվականի հուլիս",
+            degree:
+              "Կլինիկական պրակտիկանտ մանկական ինտերվենցիոն սրտաբանության մեջ",
+            institution:
+              "Ռուսաստանի բժշկական գիտությունների ակադեմիայի սիրտանոթային վիրաբուժության Բակուլևի գիտական կենտրոն",
+          },
+          {
+            year: "2005 թվականի հոկտեմբերից մինչև 2008 թվականի հոկտեմբեր",
+            degree: "Հետբուհական ուսումնասիրություն մանկական սրտաբանության մեջ",
+            institution:
+              "Ակադեմիկոս Ս. Ավդալբեկյանի անվան առողջապահության ազգային ինստիտուտ",
+          },
+          {
+            year: "2002 թվականի սեպտեմբերից մինչև 2005 թվականի հոկտեմբեր",
+            degree: "Մանկական սրտաբան",
+            institution:
+              "Ակադեմիկոս Ս. Ավդալբեկյանի անվան առողջապահության ազգային ինստիտուտ",
+          },
+          {
+            year: "1996 թվականի սեպտեմբերից մինչև 2002 թվականի հուլիս",
+            degree: "Բժշկական գիտությունների թեկնածու, մանկաբույժ",
+            institution:
+              "Մխիթար Հերացու անվան Երևանի պետական բժշկական համալսարան",
+          },
+        ],
+        memberships: [
+          "Եվրոպական պերկուտան սրտանոթային միջամտությունների ասոցիացիայի անդամ",
+          "Եվրոպական սրտաբանության միության անդամ ID 409978",
+        ],
         hobbies: [],
-        achievements: [],
-        publications: [],
-        languages: [],
+        achievements: [
+          {
+            title:
+              "Երևանի քաղաքապետարանի շնորհակալագիր առողջապահության ոլորտում ձեռքբերումների համար",
+            date: "2014",
+          },
+          {
+            title:
+              "Շնորհակալագիր Նորք Մարաշ բժշկական կենտրոնի բժշկական անձնակազմից՝ Հայաստանում մանկական ինտերվենցիոն սրտաբանության զարգացման համար",
+            date: "2013",
+          },
+        ],
         academicActivities: [],
+        publications: [],
+        languages: [
+          {
+            language: "Հայերեն",
+            level: "մայրենի",
+          },
+          {
+            language: "Ռուսերեն",
+            level: "ազատ",
+          },
+          {
+            language: "Անգլերեն",
+            level: "լավ (բավականին ծանոթ է մասնագիտական տերմինաբանությանը)",
+          },
+          {
+            language: "Ֆրանսերեն",
+            level: "բավարար",
+          },
+        ],
+      },
+      en: {
+        bio: "Qualification MD, Pediatric Cardiologist, Interventional Cardiologist. Positions Co-Founder at CardioLab Clinic. Senior Staff Cardiologist at Pediatric Department of Nork Marash Medical Center.",
+        contact: {
+          phone: "(+37410) 65 59 60 office, (+37491) 49 05 26 mobile",
+          email: "karenzohrabyan@yahoo.com",
+          location: "Aygedzor 1st line 28/1, Yerevan 0019, Republic of Armenia",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            period: "October 2024 till Now",
+            title: "Co-Founder",
+            organization: "CardioLab Clinic",
+            description: "",
+          },
+          {
+            period: "September 2018 till September 2023",
+            title:
+              "Health Ministry Advisor in the field of Pediatric Cardiology",
+            organization: "Ministry of Health of the Republic of Armenia",
+            description: "",
+          },
+          {
+            period: "February 2017 till March 2020",
+            title: "Deputy Director",
+            organization: "Nork Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "November 2010 till February 2013",
+            title: "Chief of the Medical Staff",
+            organization: "Nork Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "December 2007 till now",
+            title: "Staff Physician, Pediatric Interventional Cardiologist",
+            organization: "Nork Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "December 2005 till November 2007",
+            title: "Clinical Fellow in Pediatric Interventional Cardiology",
+            organization: "Nork Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "September 2002 till November 2005",
+            title: "Pediatric Cardiology Resident",
+            organization: "Nork Marash Medical Center",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "February 2018 till March 2018",
+            degree: "Clinical Observer at Division of Pediatric Cardiology",
+            institution: "Medical University of Vienna, AKH",
+          },
+          {
+            year: "November 2017",
+            degree: "Clinical Trainee in Interventional Arrhythmology",
+            institution:
+              "Scientific Institute of Cardiology and Internal Diseases",
+          },
+          {
+            year: "November 2011",
+            degree:
+              "International Observer at Department of Pediatric Cardiology and Pediatric Congenital Heart Surgery",
+            institution: "Cleveland Clinic",
+          },
+          {
+            year: "January 2006 till April 2006",
+            degree: "Clinical Observer in Pediatric Interventional Cardiology",
+            institution: "Sacred Heart Childrens Hospital",
+          },
+          {
+            year: "April 2005 till July 2005",
+            degree: "Clinical Trainee in Pediatric Interventional Cardiology",
+            institution:
+              "Bakulev Scientific Center for Cardiovascular Surgery of Russian Academy of Medical Sciences",
+          },
+          {
+            year: "October 2005 till October 2008",
+            degree: "Postgraduate Study in Pediatric Cardiology",
+            institution:
+              "National Institute of Health named after ac. S. Avdalbekyan",
+          },
+          {
+            year: "September 2002 till October 2005",
+            degree: "Pediatric Cardiologist",
+            institution:
+              "National Institute of Health named after ac. S. Avdalbekyan",
+          },
+          {
+            year: "September 1996 till July 2002",
+            degree: "MD, Pediatrician",
+            institution:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+          },
+        ],
+        memberships: [
+          "Member of European Association of Percutaneous Cardiovascular Interventions",
+          "European Society of Cardiology ID 409978",
+        ],
+        hobbies: [],
+        achievements: [
+          {
+            title:
+              "Yerevan Municipality Аcknowledgment of Achievements in Health Care",
+            date: "2014",
+          },
+          {
+            title:
+              "Аcknowledgment from Medical Staff of Nork Marash Medical Center for Development of Pediatric Interventional Cardiology in Armenia",
+            date: "2013",
+          },
+        ],
+        academicActivities: [],
+        publications: [],
+        languages: [
+          {
+            language: "Armenian",
+            level: "native",
+          },
+          {
+            language: "Russian",
+            level: "fluent",
+          },
+          {
+            language: "English",
+            level: "good (quiet familiar with professional terminology)",
+          },
+          {
+            language: "French",
+            level: "satisfactory",
+          },
+        ],
       },
     },
   },
@@ -2801,7 +3069,7 @@ export const staff: StaffType = [
         contact: {
           phone: "+37494501113",
           email: "marypapikyan1318@gmail.com",
-          location: "Գ.Լուսավորիչ 12; բն.#50; 0015; Երևան [cite: 4]",
+          location: "Գ.Լուսավորիչ 12; բն.#50; 0015; Երևան",
         },
         social: {
           linkedin: "",
@@ -3896,10 +4164,7 @@ export const staff: StaffType = [
         showSpecialties: false,
       },
       am: {
-        bio: "", // No explicit bio provided
-        // Sidebar visibility flags
-
-        // Content data
+        bio: "",
         contact: {
           phone: "",
           email: "",
@@ -3910,7 +4175,6 @@ export const staff: StaffType = [
           twitter: "",
         },
         specialties: [],
-
         experience: [
           {
             title: "Սոնոգրաֆիստ",
@@ -3938,7 +4202,6 @@ export const staff: StaffType = [
             description: "",
           },
         ],
-
         education: [
           {
             degree: "Ճառագայթային ախտորոշում",
@@ -3957,13 +4220,10 @@ export const staff: StaffType = [
             year: "1991–1997",
           },
         ],
-
         memberships: [],
         hobbies: [],
         publications: [],
-
         achievements: [],
-
         languages: [],
         academicActivities: [
           {
