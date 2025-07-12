@@ -196,7 +196,7 @@ export const staff: StaffType = [
         showSocial: false,
         showSpecialties: true,
       },
-      am: {
+      en: {
         bio: "Clinical Adult and Pediatric Cardiologist, Arrhythmia Specialist, Public Health Specialist",
         contact: {
           phone: "+37491787632",
@@ -447,6 +447,257 @@ export const staff: StaffType = [
           { language: "Armenian", level: "Native" },
           { language: "English", level: "Fluent" },
           { language: "Russian", level: "Fluent" },
+        ],
+      },
+      am: {
+        bio: "Մեծահասակների և մանկական սրտաբան, արիթմոլոգիայի մասնագետ, հանրային առողջության մասնագետ",
+        contact: {
+          phone: "+37491787632",
+          email: "tatevik_hovakimyan@yahoo.com",
+          location: "Երևան, Հայաստան",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [
+          "Արիթմոլոգիա",
+          "Էխոկարդիոգրաֆիա",
+          "Սրտային էլեկտրոֆիզիոլոգիա",
+          "Առողջապահական տնտեսագիտություն",
+          "Սրտանոթային հետազոտություններ",
+          "Հանրային առողջություն",
+        ],
+        experience: [
+          {
+            period: "2024 – այժմ",
+            title: "Հիմնադիր և Գլխավոր Մասնաճյուղի Նախագահ",
+            organization: "CardioLab բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2024 – այժմ",
+            title: "EHRA Ազգային սրտային ընկերությունների հանձնաժողովի անդամ",
+            organization: "Եվրոպական սրտի ռիթմի ասոցիացիա",
+            description: "",
+          },
+          {
+            period: "2017 – 2024",
+            title: "Արիթմոլոգիայի բաժնի հիմնադիր և ղեկավար",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2022 – այժմ",
+            title:
+              "Մասնագիտական խորհրդի անդամ, սրտանոթային հիվանդությունների կառավարման ոլորտում",
+            organization: "Առողջապահության նախարարություն",
+            description: "",
+          },
+          {
+            period: "2023 – 2024",
+            title:
+              "Սրտային արիթմոլոգիայի դեպքերի փորձագիտական հանձնաժողովի անդամ",
+            organization: "Պետական առողջապահական գործակալություն",
+            description: "",
+          },
+          {
+            period: "2022",
+            title: "Որակի բարելավման խորհրդատվական խորհրդի փորձագիտական անդամ",
+            organization: "Առողջապահության նախարարություն",
+            description: "",
+          },
+          {
+            period: "2021",
+            title:
+              "Սրտանոթային հիվանդությունների ազգային դիաբետի ռազմավարության նախագծի փորձագետ",
+            organization: "Հայկական ակնհաշվառման ծրագիր",
+            description: "",
+          },
+          {
+            period: "2020 – 2022",
+            title: "Սրտաբան",
+            organization: "Wigmore կլինիկա",
+            description: "",
+          },
+          {
+            period: "2012 – 2017",
+            title: "Արիթմոլոգ",
+            organization: "Աստղիկ բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2009 – 2012",
+            title: "Մանկական և մեծահասակների կրտսեր սրտաբան",
+            organization: "Հայաստանի Արիթմոլոգիայի սրտաբուժության կենտրոն",
+            description: "",
+          },
+          {
+            period: "2007 – 2009",
+            title: "Մեծահասակների սրտաբուժության ֆելլոուշիպ",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2004 – 2007",
+            title: "Մանկական սրտաբուժության ռեզիդենտուրա",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "2021 – 2023",
+            degree: "Սրտային արիթմիայի կառավարման առաջադեմ ուսուցման դիպլոմ",
+            institution: "Մաստրիխտի համալսարան",
+          },
+          {
+            year: "2017 – 2019",
+            degree:
+              "Առողջապահական տնտեսագիտության, արդյունքների և կառավարման գործադիր մագիստրոս",
+            institution:
+              "Լոնդոնի տնտեսագիտության և քաղաքական գիտությունների դպրոց",
+          },
+          {
+            year: "2017",
+            degree: "Էլեկտրոֆիզիոլոգիայի դիտորդական ուսուցում",
+            institution: "Վիեննայի բժշկական համալսարան",
+          },
+          {
+            year: "2015 – 2017",
+            degree: "Հանրային առողջության մագիստրոս",
+            institution: "Հայ-ամերիկյան համալսարան",
+          },
+          {
+            year: "2011",
+            degree: "Մանկական սրտաբուժության դիտորդական ուսուցում",
+            institution: "Կլիվլենդի կլինիկի մանկական հիվանդանոց",
+          },
+          {
+            year: "2008",
+            degree: "Մեծահասակների սրտաբուժության դիտորդական ուսուցում",
+            institution: "Վիեննայի բժշկական համալսարան",
+          },
+          {
+            year: "2007 − 2009",
+            degree: "Մեծահասակների սրտաբուժության կլինիկական ֆելլոուշիպ",
+            institution: "Նորք-Մարաշ բժշկական կենտրոն",
+          },
+          {
+            year: "2004 − 2007",
+            degree: "Մանկական սրտաբուժության կլինիկական ռեզիդենտուրա",
+            institution: "Նորք-Մարաշ բժշկական կենտրոն",
+          },
+          {
+            year: "1998 − 2004",
+            degree: "Ուսանող, մանկաբուժության բաժին",
+            institution: "Երևանի պետական բժշկական համալսարան",
+          },
+        ],
+        memberships: [
+          "ESC պրոֆեսիոնալ անդամ (2018-ից)",
+          "Եվրոպական սրտի ռիթմի ասոցիացիա (2010-ից)",
+          "ESC կանանց սրտաբանության նախաձեռնություն (2017-ից)",
+          "ESC մեծահասակ կոնգենիտալ սրտային հիվանդությունների աշխատանքային խումբ (2014-ից)",
+          "Եվրոպական սրտաբուժական ընկերություն (2010-ից)",
+          "Եվրոպական սրտի անբավարարության ասոցիացիա (ESC HFA) (2019-ից)",
+        ],
+        hobbies: [],
+        achievements: [
+          {
+            title: "ESC կրթաթոշակ",
+            description:
+              "Ուսուցման աջակցություն Լոնդոնի տնտեսագիտության և քաղաքական գիտությունների դպրոցում",
+            organization: "Եվրոպական սրտաբուժական ընկերություն",
+            date: "2017",
+          },
+          {
+            title: "AGBU կրթաթոշակ",
+            description:
+              "Ուսուցման աջակցություն Լոնդոնի տնտեսագիտության և քաղաքական գիտությունների դպրոցում",
+            organization: "Հայկական ընդհանուր բարեգործական միություն",
+            date: "2017",
+          },
+          {
+            title: "AUA/MoES կրթաթոշակ` ըստ արժանվույնության",
+            description: "Ուսուցման աջակցություն Հայ-Ամերիկյան համալսարանում",
+            organization: "AUA/Կրթության և գիտության նախարարություն",
+            date: "2015",
+          },
+        ],
+        academicActivities: [
+          {
+            title:
+              "Արիթմոլոգիայի ռոտացիա սրտաբանների ուսանողների և ռեզիդենտների համար",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            date: "2020 – 2024",
+          },
+          {
+            title: "Տարեկան արիթմիայի սեմինարներ",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            date: "2019 – 2024",
+          },
+          {
+            title:
+              "Արիթմոլոգիայի ռոտացիա սրտաբանների ուսանողների և ռեզիդենտների համար",
+            organization:
+              "Աստղիկ բժշկական կենտրոն, Հայաստանի Արիթմոլոգիայի սրտաբուժության կենտրոն",
+            date: "2010 – 2017",
+          },
+          {
+            title: "Արիթմոլոգիայի կլինիկական ֆելլոուշիպ",
+            organization:
+              "Աստղիկ բժշկական կենտրոն, Հայաստանի Արիթմոլոգիայի սրտաբուժության կենտրոն",
+            date: "2010 – 2017",
+          },
+          {
+            title: "Կեսամյակային արիթմիայի սեմինարներ",
+            organization: "Հայաստանի Արիթմոլոգիայի սրտաբուժության կենտրոն",
+            date: "2010 – 2017",
+          },
+        ],
+        publications: [
+          {
+            title:
+              "Էլեկտրոֆիզիոլոգիական արդյունքներ ռիդո ընթացակարգերի ժամանակ՝ միայնակ թիրախային թոքային անոթների იზոլյացիայի (PFA) համար ատրիայի ֆիբրիլյացիայի բուժման նպատակով",
+            journal: "Journal of Interventional Cardiac Electrophysiology",
+            year: "2023",
+          },
+          {
+            title:
+              "Հայաստանում օրգանների տրոհման ընկալումները և խոչընդոտները՝ որակական հետազոտություն",
+            journal: "European Journal of Heart Failure",
+            year: "2020",
+          },
+          {
+            title:
+              "Տեղաշարժ` վերականգնված Ֆալլո թետրալոգի հետաքննության ընթացքում հղի կնոջ մոտ՝ դեպքի զեկույց",
+            journal: "European Heart Journal-Case Reports",
+            year: "2022",
+          },
+          {
+            title:
+              "COVID-19-ով վարակված մեկ տարեկանի մոտ գրեթե շարունակական երկակողմանի փորոքային տախիկարդիայի հաջող կառավարում՝ դեպքի զեկույց",
+            journal: "European Heart Journal-Case Reports",
+            year: "2023",
+          },
+          {
+            title:
+              "Հաճախ չտեսնված դեպք՝ շարունակական տախիկարդիայի սրտամկանի հիվանդություն երեխանում",
+            journal: "Journal of Innovations in Cardiac Rhythm Management",
+            year: "2018",
+          },
+          {
+            title:
+              "Կարդիոգենիկ անորեքսիա և քաշի կորուստ երեխայի մոտ՝ դեպքի զեկույց",
+            journal: "European Heart Journal-Case Reports",
+            year: "2018",
+          },
+        ],
+        languages: [
+          { language: "Հայերեն", level: "Մայրենի" },
+          { language: "Անգլերեն", level: "Անգլերենի գերազանց իմացություն" },
+          { language: "Ռուսերեն", level: "Ռուսերենի գերազանց իմացություն" },
         ],
       },
     },
@@ -723,6 +974,12 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
+            period: "2025թ. մինչ այժմ",
+            title: "Սրտաբան, Էխո-Սգ Մասնագետ, Սրտի Մռտ Մասնագետ",
+            organization: "Կարդիոլաբ բժշկական կենտրոն",
+            description: "",
+          },
+          {
             period: "2014թ. մինչևայժմ",
             title: "սրտաբան",
             organization: "Նորք Մարաշ բժշկական կենտրոնի",
@@ -732,12 +989,6 @@ export const staff: StaffType = [
             period: "2024թ. մինչևայժմ",
             title: "բժիշկ-ճառագայթաբան, սրտի ՄՌՏ մասնագետ",
             organization: "Պրոտոն ախտորոշիչ և գիտական կենտրոնում",
-            description: "",
-          },
-          {
-            period: "2025թ. մինչ այժմ",
-            title: "Սրտաբան, Էխո-Սգ Մասնագետ, Սրտի Մռտ Մասնագետ",
-            organization: "Կարդիոլաբ բժշկական կենտրոն",
             description: "",
           },
         ],
@@ -780,6 +1031,81 @@ export const staff: StaffType = [
           },
           {
             language: "անգլերեն",
+            level: "",
+          },
+        ],
+      },
+      en: {
+        bio: "",
+        contact: {
+          phone: "096-205012",
+          email: "mariamminasyan@yahoo.com",
+          location:
+            "108/4 Armenakyan St., Nork Marash MC, Yerevan 0011, Armenia",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            period: "Since 2025",
+            title: "Cardiologist, Echo-CG Specialist, Cardiac MRI Specialist",
+            organization: "Cardiolab Medical Center",
+            description: "",
+          },
+          {
+            period: "Since 2014",
+            title: "Cardiologist",
+            organization: "Nork Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "Since 2024",
+            title: "Radiologist, Cardiac MRI Specialist",
+            organization: "Proton Diagnostic and Scientific Center",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "2021–2022",
+            degree: "Postgraduate education in Radiological Diagnostics",
+            institution:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+          },
+          {
+            year: "2011–2014",
+            degree: "Postgraduate education in Cardiology",
+            institution:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+          },
+          {
+            year: "2011",
+            degree: "Faculty of General Medicine",
+            institution: "Yerevan State Medical University",
+          },
+        ],
+        memberships: [
+          "Member of the Young Cardiologists Group of Armenia",
+          "Professional Member of the European Society of Cardiology",
+        ],
+        hobbies: [],
+        achievements: [],
+        academicActivities: [],
+        publications: [],
+        languages: [
+          {
+            language: "Armenian",
+            level: "",
+          },
+          {
+            language: "Russian",
+            level: "",
+          },
+          {
+            language: "English",
             level: "",
           },
         ],
@@ -945,6 +1271,137 @@ export const staff: StaffType = [
           { language: "Անգլերեն", level: "սահուն" },
         ],
       },
+      en: {
+        bio: "",
+        contact: {
+          phone: "+374-55-99-09-92",
+          email: "tateviksimonyan1994@gmail.com",
+          location:
+            "16 Charents St., Apt. 14, Nor Hachn, Kotayk Province, Armenia",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [
+          "Pediatric Cardiology",
+          "Perinatal Cardiology",
+          "Clinical Residency",
+          "Medical Presentations",
+          "Conference Participation",
+        ],
+        experience: [
+          {
+            period: "2024 – Present",
+            title: "Pediatric and Perinatal Cardiologist",
+            organization: "Nork-Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "2023–2024",
+            title: "Perinatal Cardiology Fellow",
+            organization: "Nork-Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "July 2021 – December 2021",
+            title: "Pediatric Cardiologist",
+            organization: "Surb Astvatsamayr Medical Center",
+            description: "",
+          },
+          {
+            period: "2020–2021",
+            title: "Perinatal Cardiology Fellowship",
+            organization: "Nork-Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "November – December 2020",
+            title: "Pediatric Cardiologist",
+            organization: "Arabkir Medical Center",
+            description: "",
+          },
+          {
+            period: "2018–2020",
+            title: "Resident – Pediatric Cardiologist",
+            organization: "Nork-Marash Medical Center",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "2023–2024",
+            degree: "Perinatal Cardiology Fellowship",
+            institution: "Nork-Marash Medical Center",
+          },
+          {
+            year: "2017–2020",
+            degree: "Clinical Residency in Pediatric Cardiology",
+            institution: "Nork-Marash Medical Center",
+          },
+          {
+            year: "2015–2017",
+            degree:
+              "Master’s Degree, Medical Qualification, Diploma with Honors",
+            institution:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+          },
+          {
+            year: "2010–2015",
+            degree: "Bachelor’s Degree",
+            institution:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+          },
+        ],
+        memberships: [],
+        hobbies: [
+          "Reading",
+          "Traveling",
+          "Listening to music",
+          "Playing piano",
+        ],
+        achievements: [
+          {
+            title: "Speaker",
+            description:
+              "“Physical activity among children with congenital heart defects”",
+            organization: "“30 Years of Love and Devotion” Conference",
+            date: "November 2024",
+          },
+          {
+            title: "Participant",
+            description: "“Arrhythmology Master Class”",
+            date: "October 2023",
+          },
+          {
+            title: "Participant",
+            description:
+              "Webinar dedicated to neonatal cardio-pulmonary hemodynamics",
+            date: "March 2021",
+          },
+          {
+            title: "Speaker",
+            description:
+              "“Sports and Vaccinations in Children with Congenital Heart Defects”",
+            organization: "NMCC Cardiovascular Conference",
+            date: "June 2021",
+          },
+          {
+            title: "Speaker",
+            description:
+              "“Experience in managing patients diagnosed with complete atrioventricular communication at Nork-Marash Medical Center”",
+            organization: "5th International Medical Congress of Armenia",
+            date: "July 2019",
+          },
+        ],
+        academicActivities: [],
+        publications: [],
+        languages: [
+          { language: "Armenian", level: "native" },
+          { language: "Russian", level: "fluent" },
+          { language: "English", level: "fluent" },
+        ],
+      },
     },
   },
   {
@@ -975,27 +1432,7 @@ export const staff: StaffType = [
         showSocial: true,
         showSpecialties: true,
       },
-      am: {
-        bio: "",
-        contact: {
-          phone: "",
-          email: "",
-          location: "",
-        },
-        social: {
-          linkedin: "",
-          twitter: "",
-        },
-        specialties: [],
-        experience: [],
-        education: [],
-        memberships: [],
-        hobbies: [],
-        achievements: [],
-        publications: [],
-        languages: [],
-        academicActivities: [],
-      },
+      am: defaultPersonalSingleInfo,
     },
   },
   {
@@ -1027,7 +1464,7 @@ export const staff: StaffType = [
         showSocial: false,
         showSpecialties: true,
       },
-      am: {
+      en: {
         bio: "",
         contact: {
           phone: "+37498572768",
@@ -1178,6 +1615,156 @@ export const staff: StaffType = [
           },
         ],
       },
+      am: {
+        bio: "",
+        contact: {
+          phone: "+37498572768",
+          email: "gevorgpetrosyan2805@gmail.com",
+          location: "Երևան, Հայաստան",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            period: "01.2025–մինչ օրս",
+            title: "Առիթմոլոգիայի ֆելոու",
+            organization: "«Կարդիոլաբ» ԲԿ, Երևան",
+            description: "",
+          },
+          {
+            period: "11.2024–մինչ օրս",
+            title: "Սրտաբան",
+            organization: "«Աստղիկ» ԲԿ, Երևան",
+            description: "",
+          },
+          {
+            period: "09.2021–03.2025",
+            title: "Շտապ բժշկական օգնության բժիշկ",
+            organization: "«Շտապ օգնություն» ՓԲԸ, N2 ենթակայան",
+            description: "",
+          },
+          {
+            period: "09.2016–մինչ օրս",
+            title: "Կենսաբանության օլիմպիադայի խմբակի ղեկավար",
+            organization: "«Շիրակացու լիցեյ» միջազգային գիտակրթական համալիր",
+            description: "",
+          },
+          {
+            period: "2023–մինչ օրս",
+            title: "Կենսաբանության հանրապետական օլիմպիադայի հանձնաժողովի անդամ",
+            organization: "",
+            description: "",
+          },
+          {
+            period: "2019–2021",
+            title: "Հիվանդների խնամքի օգնական",
+            organization: "«Հերացու» թիվ 1 հիվանդանոցային համալիրը",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "11.2024–03.2025",
+            degree:
+              "Կարճաժամկետ մասնագիտացում և արտոնագրում էխոկարդիոգրաֆիայում",
+            institution:
+              "ՀՀ Առողջապահության նախարարության «Ս. Ավդալբեկյանի անվան Առողջապահության ազգային ինստիտուտ»",
+          },
+          {
+            year: "2021–2024",
+            degree: "Սրտաբանության ռեզիդենտուրա",
+            institution:
+              "«Հերացու» թիվ 1 հիվանդանոցային համալիր, ԵՊԲՀ, Ընդհանուր և միջամտային սրտաբանության ամբիոն",
+          },
+          {
+            year: "2015–2021",
+            degree: "Բժշկի դիպլոմ",
+            institution:
+              "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան, Ընդհանուր բժշկության ֆակուլտետ",
+          },
+        ],
+        memberships: [],
+        hobbies: ["Շախմատ", "Արևելք", "Այգեգործություն", "Լող"],
+        achievements: [
+          {
+            title: "EHRA CIED դասընթաց",
+            organization: "Եվրոպական Սրտաբանական Ընկերություն",
+            date: "2025թ․ հունիսի 19–21",
+          },
+          {
+            title: "POCUS ուլտրաձայնային դասընթաց",
+            date: "2025թ․ մարտի 9–10",
+          },
+          {
+            title: "Էխոկարդիոգրաֆիայի աշխատարան",
+            organization: "«Կարդիոլաբ» ԲԿ, Երևան",
+            date: "2025թ․ փետրվարի 27–28",
+          },
+          {
+            title: "ACLS վերապատրաստում",
+            organization: "«Ճամփորդող բժիշկներ» առողջապահական ՀԿ",
+            date: "2023թ․ մայիսի 3",
+          },
+          {
+            title: "Leadership Map գնահատման ծրագիր",
+            organization: "Grow Edutainment, Երևան",
+            date: "2019թ․",
+          },
+          {
+            title: "Online Eurocamp 2020",
+            organization:
+              "Մագդեբուրգ, Auslandsgesellschaft Sachsen-Anhalt e. V.",
+            date: "25.05.2020 – 05.06.2020",
+          },
+        ],
+        academicActivities: [],
+        publications: [
+          {
+            title: "Վերանայում «mTOR-ը՝ որպես ԱՍԴ դեղաբուժման հնարավոր թիրախ»",
+            journal:
+              "The New Armenian Medical Journal, Հատոր 11, Թիվ 3, 2017, էջ 156",
+            description:
+              "Խամփերյան Ա.Խ., Հակոբյան Ա.Հ., Քեհյան Վ.Ս., Պետրոսյան Գ.Վ. (Գիտական ղեկավար՝ Ս. Ֆերեշեթյան, ԵՊԲՀ Կենսաքիմիայի ամբիոն)",
+            year: "2017",
+          },
+          {
+            title:
+              "Արարատի ցեմենտի և Զանգեզուրի պղնձամոլիբդենային գործարանների արտանետումների ազդեցությունը բնակչության առողջության վրա",
+            description:
+              "Ոչ վարակիչ հիվանդությունների վերաբերյալ 3-րդ միջազգային գիտաժողով, Քիշինև, Մոլդովայի Հանրապետություն",
+            year: "2019",
+          },
+          {
+            title:
+              "Իդիոպաթիկ բորբոքային աղիքային հիվանդությունների համեմատական բնութագրումը",
+            journal:
+              "Ուսանողների և երիտասարդ գիտնականների V միջազգային գիտագործնական կոնֆերանս, Դորոխովյան ընթերցումներ – Ռուսաստան, 2018, էջ 202–213",
+            description: "Պետրոսյան Գ.Վ., Գևորգյան Ն.Վ., Կարալյան Ն.Յու.",
+            year: "2018",
+          },
+        ],
+        languages: [
+          {
+            language: "Հայերեն",
+            level: "մայրենի",
+          },
+          {
+            language: "Անգլերեն",
+            level: "B2",
+          },
+          {
+            language: "Ռուսերեն",
+            level: "B2",
+          },
+          {
+            language: "Գերմաներեն",
+            level: "A1",
+          },
+        ],
+      },
     },
   },
   {
@@ -1208,27 +1795,7 @@ export const staff: StaffType = [
         showSocial: false,
         showSpecialties: true,
       },
-      am: {
-        bio: "",
-        contact: {
-          phone: "",
-          email: "",
-          location: "",
-        },
-        social: {
-          linkedin: "",
-          twitter: "",
-        },
-        specialties: [],
-        experience: [],
-        education: [],
-        memberships: [],
-        hobbies: [],
-        achievements: [],
-        publications: [],
-        languages: [],
-        academicActivities: [],
-      },
+      am: defaultPersonalSingleInfo,
     },
   },
   {
@@ -1262,7 +1829,7 @@ export const staff: StaffType = [
         showSocial: false,
         showSpecialties: false,
       },
-      am: {
+      en: {
         bio: "",
         contact: {
           phone: "+37494226363",
@@ -1367,6 +1934,111 @@ export const staff: StaffType = [
           { language: "English", level: "C1" },
         ],
       },
+      am: {
+        bio: "",
+        contact: {
+          phone: "+37494226363",
+          email: "izabellabarekan@gmail.com",
+          location: "Երևան, Հայաստան",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            title: "Սրտաբան խորհրդատու",
+            organization: "Պրոֆ. Ռ. Եոլյանի անվան Արյունաբանական կենտրոն",
+            period: "2023թ. փետրվար – մինչ օրս",
+            description: "",
+          },
+          {
+            title: "Սրտաբան և առիթմոլոգ ֆելոու",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            period: "2022թ. սեպտեմբեր – մինչ օրս",
+            description: "",
+          },
+          {
+            title: "Սրտաբան",
+            organization: "Միքայելյան համալսարանական հիվանդանոց",
+            period: "2020 – մինչ օրս",
+            description: "",
+          },
+          {
+            title: "Սրտաբան",
+            organization: "Նորք-Մարաշ բժշկական կենտրոն",
+            period: "2019 – 2021",
+            description: "",
+          },
+          {
+            title: "Սրտաբան",
+            organization: "«Շտապ օգնություն» ՓԲԸ",
+            period: "2016 – 2018",
+            description: "",
+          },
+          {
+            title: "Սրտաբան",
+            organization: "Հանրապետական հակատուբերկուլոզային դիսպանսեր",
+            period: "2018թ. հունիս – 2018թ. դեկտեմբեր",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            degree: "Սրտաբանության մասնագետ",
+            institution:
+              "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան",
+            year: "2015 – 2018",
+          },
+          {
+            degree: "Բժիշկ",
+            institution: "Բելգորոդի Պետական Համալսարան",
+            year: "2009 – 2015",
+          },
+        ],
+        memberships: [],
+        hobbies: [],
+        achievements: [
+          "Հայաստանում առաջին Կարդիո-օնկոլոգիայի ֆորումի կազմակերպչական խմբի անդամ (2023թ. ապրիլ)",
+          "Դասախոսություն «Հանկարծամահության» վերաբերյալ ՆՄԲԿ-ում անցկացված առաջին Հիվանդների դպրոցում (2023թ. մայիս)",
+        ],
+        academicActivities: [],
+        publications: [
+          {
+            title:
+              "Պարանոցի նախաքաղցկեղային հիվանդությունների հայտնաբերման հաճախականության վերլուծություն",
+            journal:
+              "Գիտական աշխատանքների ժողովածու – «Կրթություն և գիտություն. Ներկայիս վիճակն ու զարգացման հեռանկարները»",
+            description: "Գիտական ղեկավար՝ պրոֆ. Սպերանսկի Ս.Լ.",
+            year: "2013",
+          },
+          {
+            title: "Լյարդի փոխպատվաստում",
+            journal: "Վիրաբուժական հիվանդությունների ֆորում",
+            description: "Գիտական ղեկավար՝ բ.գ.թ., դոցենտ Վոլկով Դ.Վ.",
+            year: "2013",
+          },
+          {
+            title: "Ձվարանների գերազգայունացման համախտանիշ",
+            journal: "Մայրաբուծության և գինեկոլոգիայի ֆորում",
+            description: "Գիտական ղեկավար՝ պրոֆ. Պախոմով Ս.Պ.",
+            year: "2013",
+          },
+          {
+            title: "Կրոնն՝ որպես ազգային սոցիալական համակարգի տարր",
+            journal:
+              "Բելգորոդի Պետական Ազգային Հետազոտական Համալսարան – Փիլիսոփայություն և գիտություն առանց սահմանների՝ VI համառուսական գիտաժողով",
+            description: "",
+            year: "2012",
+          },
+        ],
+        languages: [
+          { language: "Հայերեն", level: "մայրենի" },
+          { language: "Ռուսերեն", level: "մայրենի" },
+          { language: "Անգլերեն", level: "C1" },
+        ],
+      },
     },
   },
   {
@@ -1398,7 +2070,7 @@ export const staff: StaffType = [
         showSocial: false,
         showSpecialties: false,
       },
-      am: {
+      en: {
         bio: "",
         contact: {
           phone: "(+374) 093130414",
@@ -1629,6 +2301,228 @@ export const staff: StaffType = [
           },
         ],
       },
+      am: {
+        bio: "",
+        contact: {
+          phone: "(+374) 093130414",
+          email: "hovakimyanmariam@gmail.com",
+          location: "Երևան, Հայաստան, Աղյուսագործների 2-րդ փողոց, շ. 56, 0018",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            period: "01/04/2025 - Մինչ օրս",
+            title: "Սրտաբան",
+            organization: "Կարդիոլաբ",
+            description: "",
+          },
+          {
+            period: "01/10/2022 - Մինչ օրս",
+            title: "Սրտաբան, հերթապահ բժիշկ",
+            organization:
+              "Հերացի հիվանդանոցային համալիր, շտապ օգնության բաժանմունք",
+            description: "",
+          },
+          {
+            period: "01/04/2022 - Մինչ օրս",
+            title: "Սրտաբան, կիսաաշխատաժամյա",
+            organization: "Նյու-Մեդ ուրոլոգիայի կենտրոն ՓԲԸ",
+            description: "",
+          },
+          {
+            period: "17/09/2022 - Մինչ օրս",
+            title: "Սրտաբան, կիսաաշխատաժամյա",
+            organization: "Հիվանդանոց և պոլիկլինիկա թիվ 2 ՓԲԸ",
+            description: "",
+          },
+          {
+            period: "01/09/2019 - 09/09/2022",
+            title: "Սրտաբանության ռեզիդենտ",
+            organization:
+              "Հերացի հիվանդանոցային համալիր, Ընդհանուր և ինտերվենցիոն սրտաբանության բաժին",
+            description: "",
+          },
+          {
+            period: "27/06/2020 - 19/02/2021",
+            title: "Հերթապահ բժիշկ",
+            organization:
+              "Լևոն Հովհաննիսյանի անվան սրտաբանության գիտահետազոտական ինստիտուտ",
+            description: "",
+          },
+          {
+            period: "02/09/2016 - 10/04/2018",
+            title: "Դեղատան օգնական",
+            organization: "Մագտոնի դեղատների ցանց",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "20/04/2025 - 20/06/2025",
+            degree: "Ֆելոուշիփի սերտիֆիկատ",
+            institution: "Նիս քաղաքի Pasteur հիվանդանոց, Սրտաբանության բաժին",
+          },
+          {
+            year: "11/03/2024 - 04/05/2024",
+            degree: "Կլինիկական և հետազոտական փորձառություն",
+            institution:
+              "Erasme ակադեմիական հիվանդանոց, Սրտային անբավարարության և թոքային անոթային հիվանդությունների կլինիկա",
+          },
+          {
+            year: "04/01/2023 - 04/05/2023",
+            degree: "Էխոկարդիոգրաֆիա, մասնագիտական դասընթացի սերտիֆիկատ",
+            institution:
+              "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան",
+          },
+          {
+            year: "26/05/2023",
+            degree:
+              "Մասնակցման վկայագիր՝ «Հիպերտրոֆիկ կարդիոմիոպաթիան՝ հիվանդի տեսանկյունից» միջոցառում",
+            institution:
+              "Եվրոպական շարունակական բժշկական կրթության հավատարմագրման խորհուրդ (ESC աշխատախմբեր)",
+          },
+          {
+            year: "10/06/2023",
+            degree:
+              "Մասնակցման վկայագիր՝ «Թոքային հիպերտենզիայի ախտորոշման և բուժման ESC-ERS ուղեցույցներ»",
+            institution:
+              "Եվրոպական շարունակական բժշկական կրթության խորհուրդ (ESC աշխատախմբեր)",
+          },
+          {
+            year: "26/06/2023",
+            degree: "Մասնակցման վկայագիր՝ «Միջսրտային ինֆարկտ» թեմայով նյութ",
+            institution: "Ցյուրիխի համալսարան",
+          },
+          {
+            year: "26/09/2021 - 02/10/2021",
+            degree:
+              "Մասնակցություն՝ Սալցբուրգի Weill Cornell սեմինար՝ Լիպիդային մետաբոլիզմ և սրտանոթային ռիսկ",
+            institution: "Բաց բժշկական ինստիտուտ",
+          },
+          {
+            year: "10/10/2021 - 16/10/2021",
+            degree:
+              "Մասնակցություն՝ Սալցբուրգի Weill Cornell սեմինար՝ Սրտաբանություն",
+            institution: "Բաց բժշկական ինստիտուտ",
+          },
+          {
+            year: "28/04/2020",
+            degree:
+              "Մասնակցություն՝ «Ատրիումի ֆիբրիլացիայի կառավարում» թեմայով նյութ",
+            institution: "Սթենֆորդի շարունակական բժշկական կրթության կենտրոն",
+          },
+          {
+            year: "16/05/2020",
+            degree:
+              "Մասնակցություն՝ «Առաջնային խնամքում արյան բարձր ճնշում – հսկողության բարելավում և ռիսկի նվազեցում» թեմայով նյութ",
+            institution: "Սթենֆորդի շարունակական բժշկական կրթության կենտրոն",
+          },
+          {
+            year: "16/05/2020",
+            degree:
+              "Մասնակցություն՝ «Հակամանրէային թերապիայի օպտիմալացում` դադարների միջոցով» նյութի վերաբերյալ",
+            institution: "Սթենֆորդի շարունակական բժշկական կրթության կենտրոն",
+          },
+          {
+            year: "30/05/2020",
+            degree:
+              "Մասնակցություն՝ «Տիպ 2 շաքարախտի կառավարում» թեմայով նյութ",
+            institution: "Սթենֆորդի շարունակական բժշկական կրթության կենտրոն",
+          },
+          {
+            year: "30/05/2020",
+            degree:
+              "Մասնակցություն՝ «Թոքային էմբոլիայի պերկուտան բուժում. ժամանակակից մոտեցում» միջոցառում",
+            institution:
+              "Եվրոպական շարունակական բժշկական կրթության խորհուրդ (ESC աշխատախմբեր)",
+          },
+          {
+            year: "09/07/2020",
+            degree:
+              "Մասնակցություն՝ «COVID-19 և սրտանոթային բարդություններ» նյութի վերաբերյալ",
+            institution: "Սթենֆորդի շարունակական բժշկական կրթության կենտրոն",
+          },
+          {
+            year: "01/09/2013 - 01/07/2019",
+            degree: "Բժշկի որակավորում",
+            institution: "Երևանի պետական բժշկական համալսարան",
+          },
+        ],
+        memberships: [
+          "Հայաստանի սրտաբանների ասոցիացիա",
+          "ESC մասնագիտական անդամ",
+          "HFA արծաթե անդամ",
+          "Թոքային շրջանառության և աջ փորոքի ֆունկցիայի աշխատանքային խմբի անդամ",
+          "Թրոմբոզի աշխատանքային խմբի անդամ",
+          "Եվրոպական սրտանոթային պատկերացման ասոցիացիայի սովորական անդամ",
+          "Սրտանոթային դեղաբանական թերապիայի աշխատանքային խմբի անդամ",
+          "Հիմնական սրտանոթային գիտության խորհրդի անդամ",
+        ],
+        hobbies: [],
+        achievements: [
+          {
+            title: "Կրթաթոշակի աջակցություն",
+            organization: "ՀԻՐԱՅՐ և ԱՆՆԱ ՀՈՎՆԱՆՅԱՆ հիմնադրամ",
+            date: "18/01/2019",
+            description:
+              "Կրթաթոշակ՝ 2019 թվականի գարնանային կիսամյակի ուսման վարձը վճարելու համար Երևանի պետական բժշկական համալսարանում",
+          },
+          {
+            title:
+              "ՍտԵՄԻ ինֆարկտի բարդ դեպք՝ ուղեկցվող արտրիումի ֆիբրիլացիայով, կարդիոգեն շոկով և թրոմբոէմբոլիկ բարդություններով",
+            organization: "ESC Սրտային անբավարարություն 2023, Պրահա, Չեխիա",
+            date: "2023թ. մայիս",
+            description:
+              "Գայանե Մարտիրոսյան, Մարիամ Հովակիմյան. կլինիկական դեպքը ներկայացվել է ESC Սրտային անբավարարություն 2023 միջոցառման ժամանակ",
+          },
+        ],
+        academicActivities: [],
+        publications: [
+          {
+            title:
+              "Սրտի ստիմուլյատորի էլեկտրոդի հետ կապված թոքային էմբոլիա՝ COVID-19 վարակով հիվանդի մոտ",
+            journal:
+              "The New Armenian Medical Journal, Հատոր 15 (2021), No 2, էջ 42-45",
+            year: "2021",
+            description:
+              "Հ.Ս. Սիսակյան, Գ.Հ. Հարությունյան, Մ.Հ. Հովակիմյան, Մ.Ռ. Հովհաննիսյան, Ս.Յ. Աղայան",
+          },
+          {
+            title:
+              "Սուր թոքային էմբոլիայով հիվանդների կլինիկական և թերապևտիկ գնահատում․ երկամյա դիտարկում Հերացի թիվ 1 հիվանդանոցային համալիրում",
+            journal: "Բժշկություն, Գիտություն և Կրթություն",
+            year: "2024",
+            description:
+              "Ի.Ե. Մալխասյան, Մ.Հ. Հովակիմյան, Ա.Մ. Տերտերյան, Գ.Ե. Մարտիրոսյան, Ք.Ա. Ավետիսյան, Ա.Կ. Վարդանյան, Մ.Ռ. Հովհաննիսյան, Հ.Ս. Սիսակյան",
+          },
+        ],
+        languages: [
+          {
+            language: "Հայերեն",
+            level: "Մայրենի",
+          },
+          {
+            language: "Ռուսերեն",
+            level: "C1",
+          },
+          {
+            language: "Անգլերեն",
+            level: "C1",
+          },
+          {
+            language: "Գերմաներեն",
+            level: "A2",
+          },
+          {
+            language: "Ֆրանսերեն",
+            level: "B1",
+          },
+        ],
+      },
     },
   },
   {
@@ -1662,7 +2556,7 @@ export const staff: StaffType = [
         showSocial: false,
         showSpecialties: true,
       },
-      am: {
+      en: {
         bio: "Successfully diagnosed and treated over 1,500 patients with endocrine disorders, including diabetes, thyroid diseases, and hormonal imbalances, resulting in a 95% patient satisfaction rate. Successfully diagnosed and treated more than 200 patients with postoperative complications, postoperative hypothyroidism, hypoparathyroidism.",
         // Content data
         contact: {
@@ -1762,6 +2656,109 @@ export const staff: StaffType = [
           {
             language: "Russian",
             level: "Fluent",
+          },
+        ],
+        academicActivities: [],
+      },
+      am: {
+        bio: "Հաջողությամբ ախտորոշել և բուժել ավելի քան 1500 հիվանդ էնդոկրին խնդիրներով՝ ներառյալ շաքարային դիաբետը, վահանաձև գեղձի հիվանդությունները և հորմոնալ անհավասարակշռությունները, ինչի արդյունքում հիվանդների  գոհունակության մակարդակը կազմել է 95%։ Հաջողությամբ ախտորոշել և բուժել ավելի քան 200 հիվանդ հետօպերացիոն բարդություններով, հետօպերացիոն հիպոթիրեոզով, հիպոպարաթիրեոզով։",
+        contact: {
+          phone: "+374 98585520",
+          email: "knarikbadeyan@mail.ru",
+          location: "Երևան, Շահամիրյան 51/1",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [
+          "Ուլտրաձայնային հետազոտություն",
+          "Վահանաձև գեղձի նիհար ասպիրացիա",
+          "Շաքարի շարունակական մոնիտորինգ",
+          "Վահանաձև գեղձի տիրեոեկտոմիայի խորհրդատվություն",
+          "Հորմոնալ փոխարինող թերապիա",
+        ],
+        experience: [
+          {
+            title: "Էնդոկրինոլոգ, վահանաձև գեղձի սոնոգրաֆիստ",
+            organization: "Կարդիոլաբ կլինիկա",
+            period: "2025 հունվար - մինչ օրս",
+            description: "",
+          },
+          {
+            title: "Էնդոկրինոլոգ",
+            organization: "Շենգավիթ բժշկական կենտրոն",
+            period: "2024 նոյեմբեր - մինչ օրս",
+            description: "",
+          },
+          {
+            title: "Էնդոկրինոլոգ, վահանաձև գեղձի սոնոգրաֆիստ",
+            organization: "MedExpress կլինիկա",
+            period: "2023 - մինչ օրս",
+            description: "",
+          },
+          {
+            title: "Էնդոկրինոլոգ",
+            organization: "MedLine կլինիկա",
+            period: "2022 - մինչ օրս",
+            description: "",
+          },
+          {
+            title: "Էնդոկրինոլոգ",
+            organization: "Նյու Մեդ կլինիկա",
+            period: "2021 - 2022",
+            description: "",
+          },
+          {
+            title: "Կլինիկական օրդինատոր, էնդոկրինոլոգիայի բաժին",
+            organization: "Մուրացան համալսարանական հիվանդանոց",
+            period: "2019 - 2021",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            degree: "Վահանաձև գեղձի նիհար ասպիրացիա",
+            institution: "",
+            year: "2023 մարտ - հուլիս",
+          },
+          {
+            degree: "Ուլտրաձայնային ախտորոշման մասնագիտացում",
+            institution: "Երևանի պետական բժշկական համալսարան",
+            year: "2022 հունվար - օգոստոս",
+          },
+          {
+            degree: "Էնդոկրինոլոգիայի բաժնի ռեզիդենտուրա",
+            institution: "Երևանի պետական բժշկական համալսարան",
+            year: "2019 - 2021",
+          },
+          {
+            degree: "Բժշկական դոկտոր",
+            institution:
+              "Երևանի պետական բժշկական համալսարան, ընդհանուր բժշկության ֆակուլտետ",
+            year: "2013 - 2019",
+          },
+        ],
+        memberships: [
+          "Եվրոպական վահանաձև գեղձի ասոցիացիա",
+          "Եվրոպական էնդոկրինոլոգիայի ընկերություն",
+          "Հայկական վահանաձև գեղձի ասոցիացիա",
+        ],
+        hobbies: [],
+        achievements: [],
+        publications: [],
+        languages: [
+          {
+            language: "Հայերեն",
+            level: "Մայրենի",
+          },
+          {
+            language: "Անգլերեն",
+            level: "Սահուն",
+          },
+          {
+            language: "Ռուսերեն",
+            level: "Սահուն",
           },
         ],
         academicActivities: [],
@@ -1961,6 +2958,172 @@ export const staff: StaffType = [
           },
         ],
       },
+      en: {
+        bio: "",
+
+        contact: {
+          phone: "+37494501113",
+          email: "marypapikyan1318@gmail.com",
+          location: "12 Grigor Lusavorich St., Apt. 50, 0015, Yerevan, Armenia",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            period: "04.2024–Present",
+            title: "Adult and Pediatric Cardiologist",
+            organization: "Wigmore Hospital",
+            description: "",
+          },
+          {
+            period: "04.2024–Present",
+            title: "Specialist in Adult Congenital Heart Disease",
+            organization: "Wigmore Hospital",
+            description: "",
+          },
+          {
+            period: "10.2019–Present",
+            title: "Intensive Care Cardiologist",
+            organization: "Nork-Marash Medical Center",
+            description: "",
+          },
+          {
+            period: "10.2019–Present",
+            title: "Echocardiography and Stress-Echo Specialist",
+            organization: "Nork-Marash Medical Center",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "2024–Present",
+            degree: "Public Health Organization and Management",
+            institution: "National Institute of Health, Postgraduate Education",
+          },
+          {
+            year: "2021–2023",
+            degree: "Pediatric Cardiology",
+            institution:
+              "Yerevan State Medical University, Postgraduate Studies",
+          },
+          {
+            year: "2011–2016",
+            degree: "Cardiology",
+            institution:
+              "Yerevan State Medical University, Postgraduate Studies",
+          },
+          {
+            year: "2005–2011",
+            degree: "General Medicine",
+            institution: "Yerevan State Medical University",
+          },
+        ],
+        memberships: [
+          "ESC Professional Member",
+          "EACVI Silver Member",
+          "HFA Silver Member",
+          "Member of ACVC, EAPCI, EHRA",
+          "Member of the Armenian Cardiologists Association",
+          "Core Member of the Armenian Young Cardiologists Group",
+        ],
+        hobbies: [
+          "Healthy eating, cycling",
+          "Watching and supporting football and Olympic Games",
+          "Cinema, poetry",
+        ],
+        achievements: [
+          {
+            title:
+              "ESC/EACVI Certification in Adult Transthoracic Echocardiography",
+            date: "12.2024",
+          },
+          {
+            title: "ESC/HFA Certified Heart Failure Specialist",
+            date: "10.2024",
+          },
+          {
+            title:
+              "Academician Adamyan Award – 'Best Young Cardiologist of the Year 2023' (Encouragement Prize)",
+            organization: "Armenian Cardiologists Association",
+            date: "2023",
+          },
+        ],
+        academicActivities: [
+          {
+            title: "Arrhythmology Masterclass",
+            organization: "Yerevan",
+            date: "10.2023",
+          },
+          {
+            title: "ESC Congress of the European Society of Cardiology",
+            organization: "Amsterdam",
+            date: "08.2023",
+          },
+          {
+            title: "Cardiovascular Symposium",
+            organization: "6th International Medical Congress of Armenia",
+            date: "07.2023",
+          },
+          {
+            title: "Euro-Caucasus Congress of Cardiology",
+            organization: "Yerevan",
+            date: "05.2023",
+          },
+        ],
+        publications: [
+          {
+            title: "Case Presentation of Infective Endocarditis",
+            description: "Endocarditis Guidelines Webinar",
+            year: "10.2024",
+          },
+          {
+            title: "Echocardiography in Pulmonary Hypertension",
+            description: "Echo Summer School, Jefferson Center, Yerevan",
+            year: "07.2024",
+          },
+          {
+            title: "Pregnancy and Cardiovascular Diseases",
+            description: "Mother and Child Health Protection Center",
+            year: "04.2024",
+          },
+          {
+            title:
+              "Improvement of LVEF, longitudinal global strain, and diastolic function after aortic valve replacement in a patient with combined aortic defect",
+            year: "11.2023",
+          },
+          {
+            title: "Rare Pleural Tumor Mimicking Cardiac Symptoms",
+            description: "Cardio-Oncology Forum",
+            year: "04.2023",
+          },
+          {
+            title: "Pregnancy and Hypertension",
+            description: "Nork-Marash Cardiovascular Conference",
+            year: "06.2021",
+          },
+        ],
+        languages: [
+          {
+            language: "Armenian",
+            level: "Native language",
+          },
+          {
+            language: "English",
+            level: "Fluent",
+          },
+          {
+            language: "Russian",
+            level: "Fluent",
+          },
+          {
+            language: "French",
+            level: "Beginner",
+          },
+        ],
+      },
     },
   },
   {
@@ -1991,28 +3154,8 @@ export const staff: StaffType = [
         showSocial: true,
         showSpecialties: true,
       },
-      am: {
-        bio: "",
-
-        contact: {
-          phone: "",
-          email: "",
-          location: "",
-        },
-        social: {
-          linkedin: "",
-          twitter: "",
-        },
-        specialties: [],
-        experience: [],
-        education: [],
-        memberships: [],
-        hobbies: [],
-        achievements: [],
-        publications: [],
-        languages: [],
-        academicActivities: [],
-      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
     },
   },
   //   #######
@@ -2023,7 +3166,7 @@ export const staff: StaffType = [
       en: "Anahit Voskanyan",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu24lCbw3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluZPNUNfraARMXrkUnhxzT0mdNIlYQPEivqbew",
     role: {
       am: "Նյարդաբան",
       en: "Neurologist",
@@ -2046,7 +3189,7 @@ export const staff: StaffType = [
         showSocial: false,
         showSpecialties: false,
       },
-      am: {
+      en: {
         bio: "",
         contact: {
           phone: "(+374) 94065058",
@@ -2222,6 +3365,177 @@ export const staff: StaffType = [
           { language: "English", level: "C1" },
           { language: "Russian", level: "C2" },
           { language: "Italian", level: "A2" },
+        ],
+      },
+      am: {
+        bio: "",
+        contact: {
+          phone: "(+374) 94065058",
+          email: "doctorvoskanyan@yahoo.com",
+          location: "Երևան, Էրեբունու 33-րդ փողոց, շ. 16, 0020 Հայաստան",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            period: "2021 Մարտ – ներկա",
+            title: "Նյարդաբան",
+            organization:
+              "Վիրավոր զինվորների և հաշմանդամ զինծառայողների աջակցման ՀԿ",
+            description: "",
+          },
+          {
+            period: "2017 Նոյեմբեր – 2021 Հունվար",
+            title: "Փոխնախագահ",
+            organization: "Սիրմեդ Բժշկական Կենտրոն",
+            description: "",
+          },
+          {
+            period: "2017 Մայիս – 2017 Նոյեմբեր",
+            title: "Նյարդաբան",
+            organization: "Երևանի թիվ 2 հիվանդանոց",
+            description: "",
+          },
+          {
+            period: "2014 Մայիս – 2021 Հունիս",
+            title: "Բժիշկ – Նյարդաբան և Նեյրոռեաբիլիտացիա մասնագետ",
+            organization: "Սիրմեդ Բժշկական Կենտրոն, Երևան",
+            description: "",
+          },
+          {
+            period: "2015 Մարտ – 2016 Ապրիլ",
+            title: "Բժիշկ – Նյարդաբան",
+            organization: "Երևանի թիվ 8 պոլիկլինիկա",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "2021 – ներկա",
+            degree: "Ասպիրանտուրա",
+            institution: "Լյովենի Կաթոլիկ Համալսարան (KU Leuven), Բելգիա",
+          },
+          {
+            year: "2016 – 2017",
+            degree: "Փոխանակման ուսանող, KU Leuven՝ Erasmus+ ծրագրով",
+            institution: "ԵՊԲՀ և KU Leuven համագործակցության ծրագրի շրջանակում",
+          },
+          {
+            year: "2010 – 2013",
+            degree: "Նյարդաբանության ռեզիդենտուրա",
+            institution: "ԵՊԲՀ, Նյարդաբանության ամբիոն",
+          },
+          {
+            year: "2004 – 2010",
+            degree: "Բժշկական կրթություն (ՄԴ)",
+            institution: "Երևանի Պետական Բժշկական Համալսարան",
+          },
+        ],
+        memberships: [
+          "Հայ Նյարդաբանների Ասոցիացիայի անդամ",
+          "Շարժողական խանգարումների միջազգային ընկերության անդամ",
+          "EFNS ուսուցման դասընթացի կազմակերպչական կոմիտեի անդամ",
+          "Սկլերոզ մուլտիպլայի բաժանմունքի անդամ",
+          "Հայ Մարդաբանախոսների Ասոցիացիայի անդամ",
+          "Եվրոպական Նյարդաբանության Ակադեմիայի (EAN) ռեզիդենտ և հետազոտական անդամ",
+        ],
+        hobbies: [],
+        achievements: [
+          {
+            title: "Փաստաթղթով ներկայացում – PiLoT1 ցուցահանդես 'Խառնաշփոթ'",
+            organization: "Լյովենի Կաթոլիկ Համալսարան / SLAC FineArts",
+            date: "2017 Մայիս",
+          },
+          {
+            title: "OMI Դիտարկում",
+            organization:
+              "Քրիստիան Դոպլեր կլինիկա, Ամերիկյան Ավստրիական Հիմնադրամ",
+            date: "2017 Հոկտեմբեր",
+          },
+          {
+            title: "Դիտարկում",
+            organization:
+              "Քրիստիան Դոպլեր կլինիկա, Ամերիկյան Ավստրիական Հիմնադրամ",
+            date: "2018 Հունվար",
+          },
+          {
+            title: "Վերականգնողական բժշկության սեմինար",
+            organization: "Զալցբուրգ, Ավստրիա",
+            date: "2016 Փետրվար",
+          },
+        ],
+        academicActivities: [],
+        publications: [
+          {
+            title: "Ինսուլինից կախված շաքարախտ և ձեռքի դող",
+            journal: "MOVEMENT DISORDERS, Հատոր 31",
+            year: "2016",
+          },
+          {
+            title:
+              "Ամենակիչ դոզայի բարձրացումը՝ հանգստյան դողի դեպքում, թե՞ էական դողը դիտարկել",
+            journal:
+              "Պարկինսոնի Հիվանդության և Շարժողական խանգարումների 20-րդ միջազգային կոնգրես, Բեռլին",
+            year: "2016",
+          },
+          {
+            title: "Պարկինսոնի հիվանդության սխալ ախտորոշման դեպք",
+            year: "2016",
+          },
+          {
+            title:
+              "Պարկինսոնի Հիվանդությո՞ւն, թե՞ ախտանշանային պարկինսոնիզմ․ հնարավո՞ր է համադրություն",
+            journal:
+              "Պարկինսոնի Հիվանդության և Հարակից խանգարումների 21-րդ համաշխարհային կոնգրես",
+            year: "2015",
+          },
+          {
+            title: "Էական դողի սխալ ախտորոշման դեպք",
+            journal: "MOVEMENT DISORDERS, Հատոր 30",
+            year: "2015",
+          },
+          {
+            title:
+              "Վաղ փուլում գտնվող Պարկինսոնի հիվանդություն՝ էական դողի ընտանեկան պատմությամբ",
+            journal:
+              "Movement Disorders, vol. 30, 19-րդ Միջազգային Կոնգրես, Կալիֆորնիա",
+            year: "2015",
+          },
+          {
+            title: "Դեղորայքի ամենավատ կողմնակի ազդեցությունը՝ պարկինսոնիզմ",
+            journal: "MOVEMENT DISORDERS, Հատոր 30, 18-րդ Կոնգրես, Կալիֆորնիա",
+            year: "2015",
+          },
+          {
+            title:
+              "Մեկուսացված դիմային նյարդի կաթված․ բոլո՞ր դեպքերը Bells palsy են",
+            journal: "MOVEMENT DISORDERS, Հատոր 39, 24-րդ Կոնգրես, Ավստրիա",
+            year: "2015",
+          },
+          {
+            title: "Պարկինսոնի հիվանդության ոչ շարժողական ախտանիշներ",
+            journal: "MOVEMENT DISORDERS, Հատոր 29, 18-րդ Կոնգրես, Շվեդիա",
+            year: "2014",
+          },
+          {
+            title: "Դեղորայքով առաջացած դիստոնիա",
+            journal: "MOVEMENT DISORDERS, Հատոր 29, 18-րդ Կոնգրես, Շվեդիա",
+            year: "2014",
+          },
+          {
+            title: "Գուամ համախտանիշ՝ չորս հայ հիվանդների մոտ",
+            journal: "MOVEMENT DISORDERS, Հատոր 29, 18-րդ Կոնգրես, Շվեդիա",
+            year: "2014",
+          },
+        ],
+        languages: [
+          { language: "Հայերեն", level: "մայրենի" },
+          { language: "Անգլերեն", level: "C1" },
+          { language: "Ռուսերեն", level: "C2" },
+          { language: "Իտալերեն", level: "A2" },
         ],
       },
     },
@@ -2406,6 +3720,149 @@ export const staff: StaffType = [
         academicActivities: [],
         languages: [],
       },
+      en: {
+        bio: "",
+        contact: {
+          phone: "",
+          email: "simonyan.arpiner@gmail.com",
+          location: "Yerevan, Pushkin 50, Apt. 8",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [
+          "MAFLD/MASLD",
+          "NASH",
+          "Metabolic Syndrome",
+          "Obesity",
+          "Overlap syndrome",
+          "Hepatic Dysfunction",
+          "Neurogastroenterology",
+          "DGBI",
+        ],
+        experience: [
+          {
+            title: "Gastroenterologist-Therapist",
+            organization: "Gastro Clinic",
+            period: "Nov 2024 – Present",
+            description: "",
+          },
+          {
+            title: "Head of Internal Medicine Clinic",
+            organization: "Kanaker-Zeytun MC",
+            period: "Apr 2022 – Mar 2023",
+            description: "",
+          },
+          {
+            title: "Gastroenterologist-Therapist",
+            organization: "Wigmore Clinic",
+            period: "Apr 2021 – Present",
+            description: "",
+          },
+          {
+            title: "Head of Educational Department",
+            organization:
+              "Department of Internal Medicine (Pulmonology and Nephrology)",
+            period: "Mar 2021 – Apr 2022",
+            description: "",
+          },
+          {
+            title: "Gastroenterologist-Consultant",
+            organization: "Ajapnyak MC",
+            period: "Mar 2020 – Apr 2021",
+            description: "",
+          },
+          {
+            title: "Lecturer",
+            organization:
+              "Department of Internal Medicine (Pulmonology and Nephrology)",
+            period: "Sep 18, 2019 – Present",
+            description: "",
+          },
+          {
+            title: "On-duty Doctor (with right to manage patients)",
+            organization:
+              "St. Gregory the Illuminator MC, General Therapy Department",
+            period: "Mar 2018 – Aug 2018",
+            description: "",
+          },
+          {
+            title: "Assistant",
+            organization: "YSMU, 3rd Department of Therapy",
+            period: "Sep 2017 – 2019",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            degree: "Internal Medicine",
+            institution: "YSMU",
+            year: "2020–2022",
+          },
+          {
+            degree: "Gastroenterology",
+            institution: "YSMU",
+            year: "2015–2017",
+          },
+          {
+            degree: "General Medicine",
+            institution: "YSMU",
+            year: "2013–2015",
+          },
+          {
+            degree: "General Medicine",
+            institution:
+              "Yerevan State Medical University named after Mkhitar Heratsi",
+            year: "2008–2013",
+          },
+        ],
+        memberships: [
+          "Member of Armenian Association of Gastroenterologists (2017–2020)",
+          "Member of Eurasian Association of Therapists (2017–Present)",
+          "Member of Armenian Association for the Prevention of Obesity (2023–Present)",
+        ],
+        hobbies: [],
+        achievements: [
+          "2021 – Training at the YSMU Faculty Development Department",
+          "2018 – English-language teaching certification (YSMU Department of Foreign Languages)",
+          "2018 – Training at the YSMU Faculty Development Department",
+          "2017 – Advanced Training in Pulmonology (YSMU 3rd Department of Therapy)",
+        ],
+        publications: [
+          {
+            title: "“Pulmonology” Educational Manual",
+            description:
+              "2021, co-author; based on G.Ye. Roytberg & A.V. Strutinsky's ‘Internal Diseases: Respiratory System’ (2018) and J.A. Fishman's ‘Pulmonary Diseases and Disorders’ 5th Ed. (2015)",
+          },
+          {
+            title:
+              "“Non-Alcoholic Fatty Liver Disease During Covid-19 Viral Infection”",
+            journal:
+              "Medicine Science and Education, ISSN 1829-1775, Vol. 32, Nov 2021",
+          },
+          {
+            title:
+              "“Hepatic Manifestations During COVID-19 and the Effect of Remdesivir on Liver Function in These Patients”",
+            journal:
+              "Medicine Science and Education, ISSN 1829-1775, Vol. 34, Nov 2022",
+          },
+          {
+            title:
+              "Drug Development: From Design To Customer (DDDC-2022) International Conference",
+            description:
+              "Dedicated to the 50th anniversary of the Faculty of Pharmacy, YSMU, Sep 26–28, 2022, Yerevan",
+          },
+          {
+            title:
+              "Comparative Analysis of Self-Medication For Acute Upper Respiratory Tract Infections and Headache Symptoms",
+            journal:
+              "Thesis, UDC:616.211/.231:616.857, Medicine Science and Education, May 2023",
+          },
+        ],
+        academicActivities: [],
+        languages: [],
+      },
     },
   },
   {
@@ -2570,6 +4027,136 @@ export const staff: StaffType = [
           },
         ],
       },
+      en: {
+        bio: "",
+
+        contact: {
+          phone: "",
+          email: "",
+          location: "",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+
+        experience: [
+          {
+            title: "Sonographer",
+            organization: "Vardanants Innovative Medical Center",
+            period: "14.04.2025 – Present",
+            description: "",
+          },
+          {
+            title: "Sonographer",
+            organization: "Maple Leaf Armenian-Canadian Medical Clinic",
+            period: "01.09.2012 – Present",
+            description: "",
+          },
+          {
+            title: "Sonographer",
+            organization: "Sonato Men's Health Medical Center",
+            period: "06.10.2011 – 20.12.2011",
+            description: "",
+          },
+          {
+            title: "Sonographer",
+            organization: "Yeghvard 'Nairi' Medical Center",
+            period: "15.03.2009 – 25.10.2011",
+            description: "",
+          },
+        ],
+
+        education: [
+          {
+            degree: "Radiological Diagnostics",
+            institution: "National Institute of Health after S. Avdalbekyan",
+            year: "2006–2008",
+          },
+          {
+            degree: "Pediatrics Internship",
+            institution: "Yerevan Children's Hospital No. 3",
+            year: "1997–1998",
+          },
+          {
+            degree: "Pediatrics",
+            institution:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+            year: "1991–1997",
+          },
+        ],
+
+        memberships: [],
+        hobbies: [],
+        publications: [],
+        achievements: [],
+        languages: [],
+
+        academicActivities: [
+          {
+            title:
+              "Gynecology Masterclass: Hysteroscopy and Ultrasound in the Treatment of Uterine Cavity Pathologies",
+            organization: "Glasbo Clinic",
+            date: "09.10.2023",
+            description: "",
+          },
+          {
+            title: "Masterclass: 'Gynecological Ultrasound'",
+            organization: "Glasbo Clinic",
+            date: "05.06.2022",
+            description: "",
+          },
+          {
+            title: "4th Armenian Congress of Radiology",
+            organization:
+              "Ministry of Health of RA, Armenian Radiology Association",
+            date: "05.06.2022",
+            description: "",
+          },
+          {
+            title:
+              "Scientific-Practical Seminar: 'Diagnosis and Modern Surgical Approaches to Liver Diseases'",
+            organization: "Astghik Medical Center",
+            date: "06.05.2022",
+            description: "",
+          },
+          {
+            title: "Armenian Congress of Radiology",
+            organization: "Ministry of Health of RA",
+            date: "15.06.2019",
+            description: "",
+          },
+          {
+            title: "Conference: 'Diagnosis of Abdominal Oncological Imaging'",
+            organization: "European School of Radiology (ESOR)",
+            date: "29.06.2018",
+            description: "",
+          },
+          {
+            title:
+              "Advanced Training Course: 'Organization of Medical Aid in Emergency Situations'",
+            organization:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+            date: "20.11–22.12.2017",
+            description: "",
+          },
+          {
+            title:
+              "Advanced Training Course: 'Ultrasound Diagnostics in Gynecology'",
+            organization:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+            date: "04.11–20.12.2013",
+            description: "",
+          },
+          {
+            title: "2nd Annual Conference on Men's Health",
+            organization: "Armenian Association of Urologists",
+            date: "17.12.2011",
+            description: "",
+          },
+        ],
+      },
     },
   },
   {
@@ -2662,6 +4249,69 @@ export const staff: StaffType = [
               "Հայաստանի բժշկական միջազգային 3-րդ կոնգրեսի նյութերի ժողովածու",
             year: "2011",
             description: "հուլիս 7-9, Երևան, էջ 431-432",
+          },
+        ],
+        languages: [],
+      },
+      en: {
+        bio: "",
+        contact: {
+          phone: "",
+          email: "",
+          location: "",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            title: "Specialist Doctor in Doppler-Duplex and Joint Sonography",
+            organization: "Vladimir Avagyan Medical Center",
+            period: "2008 – Present",
+            description:
+              "Also working at Planta-Sana Medical Center, Tsito Medical Center, Cardiolab Medical Center, and Avanta Center",
+          },
+        ],
+        education: [
+          {
+            degree:
+              "Clinical Residency, Specialist in Radiological Diagnostics",
+            institution:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+            year: "2006 – 2008",
+          },
+          {
+            degree: "Doctor, General Medicine",
+            institution:
+              "Yerevan State Medical University after Mkhitar Heratsi",
+            year: "2000 – 2006",
+          },
+        ],
+        memberships: [
+          "Member of the Armenian Association of Radiology and Vascular Surgery",
+        ],
+        hobbies: [],
+        achievements: [
+          "Participated in numerous trainings (both scientific and practical) in Armenia and abroad",
+        ],
+        academicActivities: [],
+        publications: [
+          {
+            title:
+              "Evaluation of Endovenous Laser Coagulation in Varicose Disease via Duplex Examination",
+            journal: "‘Radiology and Practice’ No. 3, Moscow",
+            year: "2009",
+            description: "pp. 9–10",
+          },
+          {
+            title:
+              "Monitoring Recurrence of Varicose Disease After Laser Coagulation via Duplex Examination",
+            journal:
+              "Proceedings of the 3rd International Armenian Medical Congress",
+            year: "2011",
+            description: "July 7–9, Yerevan, pp. 431–432",
           },
         ],
         languages: [],
@@ -2788,6 +4438,95 @@ export const staff: StaffType = [
           { language: "Russian", level: "fluent" },
         ],
       },
+      en: {
+        bio: "",
+        contact: {
+          phone: "(+374 55) 056117",
+          email: "aghunikzakaryan@gmail.com",
+          location: "Gyumri, Shirak, Armenia",
+        },
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+        specialties: [],
+        experience: [
+          {
+            period: "November 2024 – Present",
+            title: "Vascular Surgeon",
+            organization: "Sonomax Diagnostic Center",
+            description: "",
+          },
+          {
+            period: "February 2024 – December 2024",
+            title: "Doctor of Women Under 17 Armenian National Football Team",
+            organization: "Football Federation of Armenia",
+            description: "",
+          },
+          {
+            period: "February 2021 – June 2024",
+            title: "Vascular Surgeon",
+            organization: "Gyumri Medical Center",
+            description:
+              "This is a community hospital in the city of Gyumri, the second largest city in Armenia",
+          },
+          {
+            period: "November 2020 – Present",
+            title: "Vascular Surgeon",
+            organization: "Nork Marash Medical Center (NMMC)",
+            description:
+              "NMMC is a regional academic center with American-style cardiac surgery residency programs, established by US-trained Dr. Hrayr Hovaguimyan.",
+          },
+          {
+            period: "September 2020 – September 2021",
+            title: "Vascular Surgeon",
+            organization: "Wigmore Clinic",
+            description: "",
+          },
+        ],
+        education: [
+          {
+            year: "2017–2020",
+            degree: "Clinical Residency in Vascular Surgery",
+            institution: "Yerevan State Medical University (YSMU)",
+          },
+          {
+            year: "2015–2017",
+            degree: "Doctor of Medicine Program (M.D.)",
+            institution: "YSMU",
+          },
+          {
+            year: "2010–2015",
+            degree: "Bachelor’s Degree in Medical Sciences",
+            institution: "YSMU",
+          },
+        ],
+        memberships: [
+          "ESVS trainee member (2017 - present)",
+          "Armenian Association for Vascular Surgeons (2019 - present)",
+          "CLI (Critical Limb Ischemia) Global Society (2024 - present)",
+        ],
+        hobbies: [
+          "Aspiring Female Entrepreneurs (FAST), 2019 Feb–May – Leadership and creativity program for young females",
+          "Leadership in Healthcare Program, 2022 Apr–Sept – Focused on research, healthcare communication, and burnout prevention",
+        ],
+        achievements: [
+          {
+            title: "Kickstarter Escalator Award",
+            description:
+              "Awarded by Women As One – an organization supporting female cardiovascular specialists in career development and advocacy",
+            organization: "Women As One",
+            date: "12 December 2022",
+          },
+        ],
+        academicActivities: [],
+        publications: [],
+        languages: [
+          { language: "Armenian", level: "native" },
+          { language: "English", level: "fluent" },
+          { language: "Russian", level: "fluent" },
+        ],
+      },
     },
   },
   {
@@ -2818,28 +4557,8 @@ export const staff: StaffType = [
         showSocial: true,
         showSpecialties: true,
       },
-      am: {
-        bio: "",
-
-        contact: {
-          phone: "",
-          email: "",
-          location: "",
-        },
-        social: {
-          linkedin: "",
-          twitter: "",
-        },
-        specialties: [],
-        experience: [],
-        education: [],
-        memberships: [],
-        hobbies: [],
-        achievements: [],
-        publications: [],
-        languages: [],
-        academicActivities: [],
-      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
     },
   },
   {
@@ -2874,7 +4593,7 @@ export const staff: StaffType = [
         showSocial: false,
         showSpecialties: true,
       },
-      am: {
+      en: {
         bio: `As part of my certification in Health and Nutrition Coaching, I developed a deep understanding of evidence-based nutrition principles, behavior change techniques, and holistic wellness strategies. My training focused on helping individuals create sustainable lifestyle changes through personalized nutrition guidance, goal setting, and motivational support. I gained practical experience in client assessment, meal planning, and coaching methodologies grounded in science and empathy. This education laid the foundation for my mission to empower others to live healthier, more balanced lives.`,
 
         // Contact
@@ -2960,6 +4679,79 @@ export const staff: StaffType = [
           },
         ],
       },
+      am: {
+        bio: `Իմ առողջության և սննդակարգի կոուչինգի սերտիֆիկացման շրջանակում ձեռք եմ բերել խորիմաստ գիտելիքներ ապացուցված սննդակարգի սկզբունքների, վարքաբանական փոփոխությունների տեխնիկաների և հոլիստիկ բարեկեցության ռազմավարությունների վերաբերյալ։ Իմ ուսուցումը կենտրոնացած է եղել անհատներին օգնելու վրա կայուն կենսակերպի փոփոխություններ ստեղծելու համար՝ անհատականացված սննդային խորհրդատվության, նպատակների սահմանման և մոտիվացնող աջակցման միջոցով։ Ես ստացել եմ պրակտիկ փորձ հաճախորդների գնահատման, սննդի պլանավորման և գիտական և էմպատիկ մոտեցումների վրա հիմնված կոուչինգի մեթոդոլոգիաների մեջ։ Այս կրթությունը հիմք դրեց իմ առաքելությանը՝ ուժեղացնելու ուրիշներին առողջ և հավասարակշռված կյանք ապրելու համար։`,
+
+        contact: {
+          phone: "+37477065995",
+          email: "baghdasaryan.gayane99@gmail.com",
+          location: "Երևան, Հայաստան",
+        },
+
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+
+        specialties: [
+          "Առողջություն և բարեկեցություն՝ սննդակարգի ոլորտում",
+          "Մարդկային ռեսուրսներ (HR) հավաքագրում",
+        ],
+
+        experience: [
+          {
+            title: "Առողջության և բարեկեցության մասնագետ",
+            organization: "CardioLab",
+            period: "2025 թվականի ապրիլ — ներկայում",
+            description: "",
+          },
+          {
+            title: "Տեխնիկական հավաքագրող",
+            organization: "DataArt ՍՊԸ",
+            period: "2021 թվականի սեպտեմբեր — 2025 թվականի մայիս",
+            description: "",
+          },
+          {
+            title: "Մարդկային ռեսուրսների մասնագետ",
+            organization: "DataArt ՍՊԸ",
+            period: "2019 թվականի հուլիս — 2025 թվականի մայիս",
+            description: "",
+          },
+        ],
+
+        education: [
+          {
+            degree:
+              "Առողջության և բարեկեցության կոուչ (Դիպլոմատ և սերտիֆիկացված մասնագետ)",
+            institution:
+              "CNM, Նատուրապաթիկ բժշկության քոլեջ, Լոնդոն, Մեծ Բրիտանիա",
+            year: "2023 — 2025",
+          },
+          {
+            degree: "Բակալավրի աստիճան, հոգեբանություն",
+            institution: "Երևանի պետական համալսարան",
+            year: "2018 — 2022",
+          },
+          {
+            degree: "Բակալավրի աստիճան, իրավագիտություն (չի ավարտվել)",
+            institution: "Հայաստանում Ֆրանսիական համալսարան (UFAR)",
+            year: "2016 — 2018",
+          },
+        ],
+
+        memberships: [],
+        hobbies: [],
+        achievements: [],
+        academicActivities: [],
+        publications: [],
+
+        languages: [
+          { language: "Հայերեն", level: "Մայրենի" },
+          { language: "Ռուսերեն", level: "Մայրենի" },
+          { language: "Անգլերեն", level: "Առաջադեմ" },
+          { language: "Ֆրանսերեն", level: "Միջին" },
+        ],
+      },
     },
   },
   {
@@ -2990,28 +4782,8 @@ export const staff: StaffType = [
         showSocial: true,
         showSpecialties: true,
       },
-      am: {
-        bio: "",
-
-        contact: {
-          phone: "",
-          email: "",
-          location: "",
-        },
-        social: {
-          linkedin: "",
-          twitter: "",
-        },
-        specialties: [],
-        experience: [],
-        education: [],
-        memberships: [],
-        hobbies: [],
-        achievements: [],
-        publications: [],
-        languages: [],
-        academicActivities: [],
-      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
     },
   },
   {
@@ -3137,6 +4909,107 @@ export const staff: StaffType = [
         publications: [],
         languages: [],
       },
+      en: {
+        bio: "",
+
+        contact: {
+          phone: "+37491-789-867",
+          email: "qnarikzaqarian@gmail.com",
+          location: "Yerevan, Armenia",
+        },
+
+        social: {
+          linkedin: "",
+          twitter: "",
+        },
+
+        specialties: [
+          "eHealth Systems (Armed eHealth)",
+          "Medical Data Entry",
+          "Patient Coordination",
+          "Basic CPR and AED",
+          "Microsoft Office",
+          "1C",
+          "Web Hospital",
+          "Adobe Illustrator",
+        ],
+
+        experience: [
+          {
+            period: "Feb 2023 – Nov 2023",
+            title: "Operator, Physician Assistant",
+            organization: "Erebuni Medical Center",
+            description: "",
+          },
+          {
+            period: "Oct 2022 – Dec 2022",
+            title: "Nurse-Registrar",
+            organization: "Urgent Care LLC",
+            description: "",
+          },
+          {
+            period: "Aug 2022 – Dec 2022",
+            title: "Armed eHealth Electronic Health Operator",
+            organization: "Urgent Care LLC",
+            description: "",
+          },
+          {
+            period: "Jun 2020 – Jun 2022",
+            title: "Patient Data Entry Specialist",
+            organization:
+              "Ministry of Health of Armenia COVID-19 Positive Patients Triage Center",
+            description: "",
+          },
+          {
+            period: "Aug 2021 – Apr 2022",
+            title: "Armed eHealth Electronic Health Operator",
+            organization:
+              "Ministry of Health of Armenia 80-33 Emergency Service",
+            description: "",
+          },
+          {
+            period: "Jun 2021 – Jan 2022",
+            title: "Specialist in Services within State Order",
+            organization:
+              "Ministry of Health of Armenia Scientific Center of Traumatology and Orthopedics",
+            description: "",
+          },
+          {
+            period: "Apr 2020 – May 2020",
+            title: "Armed eHealth Operator",
+            organization:
+              "Ministry of Health of Armenia COVID-19 Positive Patients Quarantine Nairi Hotel",
+            description: "",
+          },
+          {
+            period: "Aug 2021 – Feb 2022",
+            title: "Nurse (volunteer basis)",
+            organization: "Ministry of Health of Armenia Emergency Service",
+            description: "",
+          },
+        ],
+
+        education: [
+          {
+            year: "2022 – 2025",
+            degree: "Nursing",
+            institution: "Erebuni Medical Academy",
+          },
+          {
+            year: "2015 – 2019",
+            degree: "Bachelor’s Degree, Fine Arts Education",
+            institution:
+              "Khachatur Abovyan Armenian State Pedagogical University",
+          },
+        ],
+
+        memberships: [],
+        hobbies: ["Sports (Swimming, Cycling)", "Leatherworking"],
+        achievements: [],
+        academicActivities: [],
+        publications: [],
+        languages: [],
+      },
     },
   },
   {
@@ -3167,28 +5040,8 @@ export const staff: StaffType = [
         showSocial: true,
         showSpecialties: true,
       },
-      am: {
-        bio: "",
-
-        contact: {
-          phone: "",
-          email: "",
-          location: "",
-        },
-        social: {
-          linkedin: "",
-          twitter: "",
-        },
-        specialties: [],
-        experience: [],
-        education: [],
-        memberships: [],
-        hobbies: [],
-        achievements: [],
-        publications: [],
-        languages: [],
-        academicActivities: [],
-      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
     },
   },
   {
@@ -3219,28 +5072,8 @@ export const staff: StaffType = [
         showSocial: true,
         showSpecialties: true,
       },
-      am: {
-        bio: "",
-
-        contact: {
-          phone: "",
-          email: "",
-          location: "",
-        },
-        social: {
-          linkedin: "",
-          twitter: "",
-        },
-        specialties: [],
-        experience: [],
-        education: [],
-        memberships: [],
-        hobbies: [],
-        achievements: [],
-        publications: [],
-        languages: [],
-        academicActivities: [],
-      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
     },
   },
 ];
