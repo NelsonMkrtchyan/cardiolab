@@ -255,7 +255,7 @@ export const staff: StaffType = [
           {
             period: "2021",
             title:
-              "Project Expert of Cardiovascular Diseases for National Diabetes Strategy for Diabetes Management in Armenia)",
+              "Project Expert of Cardiovascular Diseases for National Diabetes Strategy for Diabetes Management in Armenia",
             organization: "Armenian Eyecare Project",
             description: "",
           },
@@ -335,7 +335,7 @@ export const staff: StaffType = [
           },
           {
             year: "1998 − 2004",
-            degree: "Student at Department of Pediatrics)",
+            degree: "Student at Department of Pediatrics",
             institution: "Yerevan State Medical University",
           },
         ],
@@ -374,7 +374,7 @@ export const staff: StaffType = [
         academicActivities: [
           {
             title:
-              "Arrhythmology Rotation of Cardiology Students and Residents ",
+              "Arrhythmology Rotation of Cardiology Students and Residents",
             organization: "Nork-Marash Medical Center",
             date: "2020 – 2024",
           },
@@ -405,15 +405,13 @@ export const staff: StaffType = [
         publications: [
           {
             title:
-              "Electrophysiological findings during re-do procedures after single-shot pulmonary vein isolation for atrial\n" +
-              "fibrillation with pulsed field ablation",
+              "Electrophysiological findings during re-do procedures after single-shot pulmonary vein isolation for atrial fibrillation with pulsed field ablation",
             journal: "Journal of Interventional Cardiac Electrophysiology",
             year: "2023",
           },
           {
             title:
-              "Perceptions and barriers to deceased organ donation in Armenia: a\n" +
-              "qualitative research",
+              "Perceptions and barriers to deceased organ donation in Armenia: a qualitative research",
             journal: "European Journal of Heart Failure",
             year: "2020",
           },
@@ -449,7 +447,7 @@ export const staff: StaffType = [
         ],
       },
       am: {
-        bio: "Մեծահասակների և մանկական սրտաբան, արիթմոլոգիայի մասնագետ, հանրային առողջության մասնագետ",
+        bio: "Մեծահասակների և Մանկական Սրտաբան, Արիթմոլոգիայի Մասնագետ, Հանրային Առողջության Մասնագետ",
         contact: {
           phone: "+37491787632",
           email: "tatevik_hovakimyan@yahoo.com",
@@ -469,15 +467,15 @@ export const staff: StaffType = [
         ],
         experience: [
           {
-            period: "2024 – այժմ",
-            title: "Հիմնադիր և Գլխավոր Մասնաճյուղի Նախագահ",
+            period: "2024 – մինչ օրս",
+            title: "Համահիմնադիր և Գործադիր Տնօրեն",
             organization: "CardioLab բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2024 – այժմ",
-            title: "EHRA Ազգային սրտային ընկերությունների հանձնաժողովի անդամ",
-            organization: "Եվրոպական սրտի ռիթմի ասոցիացիա",
+            period: "2024 – մինչ օրս",
+            title: "EHRA Ազգային սրտաբանական ընկերությունների կոմիտե",
+            organization: "Եվրոպական Սրտի Ռիթմի Ասոցիացիա",
             description: "",
           },
           {
@@ -487,9 +485,9 @@ export const staff: StaffType = [
             description: "",
           },
           {
-            period: "2022 – այժմ",
+            period: "2022 – մինչ օրս",
             title:
-              "Մասնագիտական խորհրդի անդամ, սրտանոթային հիվանդությունների կառավարման ոլորտում",
+              "Սրտանոթային հիվանդությունների կառավարման խորհրդատվական խորհրդի փորձագետ անդամ",
             organization: "Առողջապահության նախարարություն",
             description: "",
           },
@@ -502,15 +500,15 @@ export const staff: StaffType = [
           },
           {
             period: "2022",
-            title: "Որակի բարելավման խորհրդատվական խորհրդի փորձագիտական անդամ",
+            title: "Որակի բարելավման խորհրդատվական խորհրդի փորձագետ անդամ",
             organization: "Առողջապահության նախարարություն",
             description: "",
           },
           {
             period: "2021",
             title:
-              "Սրտանոթային հիվանդությունների ազգային դիաբետի ռազմավարության նախագծի փորձագետ",
-            organization: "Հայկական ակնհաշվառման ծրագիր",
+              "Սրտանոթային հիվանդությունների նախագծի փորձագետ՝ Հայաստանում շաքարախտի կառավարման ազգային ռազմավարության համար",
+            organization: "Հայկական ակնաբուժության նախագիծ",
             description: "",
           },
           {
@@ -533,7 +531,7 @@ export const staff: StaffType = [
           },
           {
             period: "2007 – 2009",
-            title: "Մեծահասակների սրտաբուժության ֆելլոուշիպ",
+            title: "Ասպիրանտուրա մեծահասակների սրտաբանության ոլորտում",
             organization: "Նորք-Մարաշ բժշկական կենտրոն",
             description: "",
           },
@@ -547,13 +545,14 @@ export const staff: StaffType = [
         education: [
           {
             year: "2021 – 2023",
-            degree: "Սրտային արիթմիայի կառավարման առաջադեմ ուսուցման դիպլոմ",
+            degree:
+              "Սրտային առիթմիայի կառավարման առաջադեմ ուսումնասիրությունների դիպլոմ",
             institution: "Մաստրիխտի համալսարան",
           },
           {
             year: "2017 – 2019",
             degree:
-              "Առողջապահական տնտեսագիտության, արդյունքների և կառավարման գործադիր մագիստրոս",
+              "Գործադիր գիտությունների մագիստրոս՝ առողջապահության, տնտեսագիտության, արդյունքների ուսումնասիրության և սրտանոթային գիտությունների կառավարման ոլորտում",
             institution:
               "Լոնդոնի տնտեսագիտության և քաղաքական գիտությունների դպրոց",
           },
@@ -579,17 +578,18 @@ export const staff: StaffType = [
           },
           {
             year: "2007 − 2009",
-            degree: "Մեծահասակների սրտաբուժության կլինիկական ֆելլոուշիպ",
+            degree:
+              "Կլինիկական կրթական ծրագիր մեծահասակների սրտաբանության բնագավառում",
             institution: "Նորք-Մարաշ բժշկական կենտրոն",
           },
           {
             year: "2004 − 2007",
-            degree: "Մանկական սրտաբուժության կլինիկական ռեզիդենտուրա",
+            degree: "Մանկական սրտաբուժության ռեզիդենտուրա",
             institution: "Նորք-Մարաշ բժշկական կենտրոն",
           },
           {
             year: "1998 − 2004",
-            degree: "Ուսանող, մանկաբուժության բաժին",
+            degree: "Մանկաբուժության ամբիոնի ուսանող",
             institution: "Երևանի պետական բժշկական համալսարան",
           },
         ],
@@ -618,7 +618,7 @@ export const staff: StaffType = [
             date: "2017",
           },
           {
-            title: "AUA/MoES կրթաթոշակ` ըստ արժանվույնության",
+            title: "AUA/MoES կրթաթոշակ` ակադեմիական ցուցանիշների հիման վրա",
             description: "Ուսուցման աջակցություն Հայ-Ամերիկյան համալսարանում",
             organization: "AUA/Կրթության և գիտության նախարարություն",
             date: "2015",
@@ -658,37 +658,37 @@ export const staff: StaffType = [
         publications: [
           {
             title:
-              "Էլեկտրոֆիզիոլոգիական արդյունքներ ռիդո ընթացակարգերի ժամանակ՝ միայնակ թիրախային թոքային անոթների იზոլյացիայի (PFA) համար ատրիայի ֆիբրիլյացիայի բուժման նպատակով",
+              "Էլեկտրաֆիզիոլոգիական արդյունքներ կրկնվող միջամտությունների ժամանակ՝ նախասրտերի ֆիբրիլյացիայի դեպքում միանվագ թոքային երակի մեկուսացումից հետո՝ իմպուլսային դաշտի աբլյացիայով։",
             journal: "Journal of Interventional Cardiac Electrophysiology",
             year: "2023",
           },
           {
             title:
-              "Հայաստանում օրգանների տրոհման ընկալումները և խոչընդոտները՝ որակական հետազոտություն",
+              "Մահացածների օրգանների նվիրատվության ընկալումները և խոչընդոտները Հայաստանում. որակական հետազոտություն",
             journal: "European Journal of Heart Failure",
             year: "2020",
           },
           {
             title:
-              "Տեղաշարժ` վերականգնված Ֆալլո թետրալոգի հետաքննության ընթացքում հղի կնոջ մոտ՝ դեպքի զեկույց",
+              "Ֆալոյի տետրալոգիայի վերականգնմամբ հղի կնոջ մոտ սինկոպե. դեպքի նկարագրություն",
             journal: "European Heart Journal-Case Reports",
             year: "2022",
           },
           {
             title:
-              "COVID-19-ով վարակված մեկ տարեկանի մոտ գրեթե շարունակական երկակողմանի փորոքային տախիկարդիայի հաջող կառավարում՝ դեպքի զեկույց",
+              "COVID-19 վարակով մեկ տարեկան երեխայի մոտ գրեթե անընդհատ երկկողմանի փորոքային տախիկարդիայի հաջող կառավարում. դեպքի զեկույց",
             journal: "European Heart Journal-Case Reports",
             year: "2023",
           },
           {
             title:
-              "Հաճախ չտեսնված դեպք՝ շարունակական տախիկարդիայի սրտամկանի հիվանդություն երեխանում",
+              "Երեխայի մոտ անդադար տախիկարդիայի հետևանքով առաջացած կարդիոմիոպաթիայի հազվադեպ դեպք",
             journal: "Journal of Innovations in Cardiac Rhythm Management",
             year: "2018",
           },
           {
             title:
-              "Կարդիոգենիկ անորեքսիա և քաշի կորուստ երեխայի մոտ՝ դեպքի զեկույց",
+              "Կարդիոգեն անորեքսիա և թերքաշություն երեխայի մոտ. դեպքի նկարագրություն",
             journal: "European Heart Journal-Case Reports",
             year: "2018",
           },
@@ -730,7 +730,7 @@ export const staff: StaffType = [
         showSpecialties: false,
       },
       am: {
-        bio: "Որակավորում՝ բժշկական գիտությունների թեկնածու, մանկական սրտաբան, ինտերվենցիոն սրտաբան։ Դիրքեր՝ «ԿարդիոԼաբ» կլինիկայի համահիմնադիր։ Նորք Մարաշ բժշկական կենտրոնի մանկական բաժանմունքի ավագ սրտաբան։",
+        bio: "Բժշկական գիտությունների դոկտոր, մանկական և ինտերվենցիոն սրտաբան։ CardioLab կլինիկայի համահիմնադիր։ Ավագ սրտաբան՝ Նորք Մարաշ բժշկական կենտրոնի մանկական բաժանմունքում։ Մասնագիտացած է սրտի բնածին արատների ախտորոշման և միջամտական բուժման մեջ։",
         contact: {
           phone: "(+374 10) 65 59 60 գրասենյակ, (+374 91) 49 05 26 բջջային",
           email: "karenzohrabyan@yahoo.com",
@@ -744,46 +744,46 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
-            period: "2024 թվականի հոկտեմբերից մինչ օրս",
+            period: "2024 - մինչ օրս",
             title: "Համահիմնադիր",
-            organization: "«ԿարդիոԼաբ» կլինիկա",
+            organization: "CardioLab բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2018 թվականի սեպտեմբերից մինչև 2023 թվականի սեպտեմբեր",
+            period: "2018 - 2023",
             title:
-              "Առողջապահության նախարարի խորհրդական մանկական սրտաբանության ոլորտում",
+              "Առողջապահության նախարարի խորհրդական՝ մանկական սրտաբանության ոլորտում",
             organization:
               "Հայաստանի Հանրապետության առողջապահության նախարարություն",
             description: "",
           },
           {
-            period: "2017 թվականի փետրվարից մինչև 2020 թվականի մարտ",
+            period: "2017 - 2020",
             title: "Փոխտնօրեն",
             organization: "Նորք Մարաշ բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2010 թվականի նոյեմբերից մինչև 2013 թվականի փետրվար",
+            period: "2010 - 2013",
             title: "Բժշկական անձնակազմի ղեկավար",
             organization: "Նորք Մարաշ բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2007 թվականի դեկտեմբերից մինչ օրս",
+            period: "2007 - մինչ օրս",
             title: "Անձնակազմի բժիշկ, մանկական ինտերվենցիոն սրտաբան",
             organization: "Նորք Մարաշ բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2005 թվականի դեկտեմբերից մինչև 2007 թվականի նոյեմբեր",
+            period: "2005 - 2007",
             title:
               "Կլինիկական գիտաշխատող մանկական ինտերվենցիոն սրտաբանության գծով",
             organization: "Նորք Մարաշ բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2002 թվականի սեպտեմբերից մինչև 2005 թվականի նոյեմբեր",
+            period: "2002 - 2005",
             title: "Մանկական սրտաբանության ռեզիդենտ",
             organization: "Նորք Մարաշ բժշկական կենտրոն",
             description: "",
@@ -791,48 +791,48 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "2018 թվականի փետրվարից մինչև 2018 թվականի մարտ",
+            year: "2018 - 2018",
             degree: "Կլինիկական դիտորդ մանկական սրտաբանության բաժանմունքում",
             institution: "Վիեննայի բժշկական համալսարան, AKH",
           },
           {
-            year: "2017 թվականի նոյեմբեր",
+            year: "2017",
             degree: "Կլինիկական պրակտիկանտ ինտերվենցիոն առիթմոլոգիայում",
             institution:
               "Սրտաբանության և ներքին հիվանդությունների գիտական ինստիտուտ",
           },
           {
-            year: "2011 թվականի նոյեմբեր",
+            year: "2011",
             degree:
               "Միջազգային դիտորդ մանկական սրտաբանության և մանկական բնածին սրտի վիրահատությունների բաժանմունքում",
             institution: "Քլիվլենդի կլինիկա",
           },
           {
-            year: "2006 թվականի հունվարից մինչև 2006 թվականի ապրիլ",
+            year: "2006",
             degree: "Կլինիկական դիտորդ մանկական ինտերվենցիոն սրտաբանության մեջ",
             institution: "Սուրբ Սրտի մանկական հիվանդանոց",
           },
           {
-            year: "2005 թվականի ապրիլից մինչև 2005 թվականի հուլիս",
+            year: "2005",
             degree:
               "Կլինիկական պրակտիկանտ մանկական ինտերվենցիոն սրտաբանության մեջ",
             institution:
               "Ռուսաստանի բժշկական գիտությունների ակադեմիայի սիրտանոթային վիրաբուժության Բակուլևի գիտական կենտրոն",
           },
           {
-            year: "2005 թվականի հոկտեմբերից մինչև 2008 թվականի հոկտեմբեր",
-            degree: "Հետբուհական ուսումնասիրություն մանկական սրտաբանության մեջ",
+            year: "2005 - 2008",
+            degree: "Մանկական սրտաբանության ասպիրանտուրա",
             institution:
               "Ակադեմիկոս Ս. Ավդալբեկյանի անվան առողջապահության ազգային ինստիտուտ",
           },
           {
-            year: "2002 թվականի սեպտեմբերից մինչև 2005 թվականի հոկտեմբեր",
+            year: "2002 - 2005",
             degree: "Մանկական սրտաբան",
             institution:
               "Ակադեմիկոս Ս. Ավդալբեկյանի անվան առողջապահության ազգային ինստիտուտ",
           },
           {
-            year: "1996 թվականի սեպտեմբերից մինչև 2002 թվականի հուլիս",
+            year: "1996 - 2002",
             degree: "Բժշկական գիտությունների թեկնածու, մանկաբույժ",
             institution:
               "Մխիթար Հերացու անվան Երևանի պետական բժշկական համալսարան",
@@ -890,44 +890,44 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
-            period: "October 2024 till Now",
+            period: "2024 - present",
             title: "Co-Founder",
             organization: "CardioLab Clinic",
             description: "",
           },
           {
-            period: "September 2018 till September 2023",
+            period: "2018 - 2023",
             title:
               "Health Ministry Advisor in the field of Pediatric Cardiology",
             organization: "Ministry of Health of the Republic of Armenia",
             description: "",
           },
           {
-            period: "February 2017 till March 2020",
+            period: "2017 - 2020",
             title: "Deputy Director",
             organization: "Nork Marash Medical Center",
             description: "",
           },
           {
-            period: "November 2010 till February 2013",
+            period: "2010 - 2013",
             title: "Chief of the Medical Staff",
             organization: "Nork Marash Medical Center",
             description: "",
           },
           {
-            period: "December 2007 till now",
+            period: "2007 - present",
             title: "Staff Physician, Pediatric Interventional Cardiologist",
             organization: "Nork Marash Medical Center",
             description: "",
           },
           {
-            period: "December 2005 till November 2007",
+            period: "2005 - 2007",
             title: "Clinical Fellow in Pediatric Interventional Cardiology",
             organization: "Nork Marash Medical Center",
             description: "",
           },
           {
-            period: "September 2002 till November 2005",
+            period: "2002 - 2005",
             title: "Pediatric Cardiology Resident",
             organization: "Nork Marash Medical Center",
             description: "",
@@ -935,47 +935,47 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "February 2018 till March 2018",
+            year: "2018 - 2018",
             degree: "Clinical Observer at Division of Pediatric Cardiology",
             institution: "Medical University of Vienna, AKH",
           },
           {
-            year: "November 2017",
+            year: "2017",
             degree: "Clinical Trainee in Interventional Arrhythmology",
             institution:
               "Scientific Institute of Cardiology and Internal Diseases",
           },
           {
-            year: "November 2011",
+            year: "2011",
             degree:
               "International Observer at Department of Pediatric Cardiology and Pediatric Congenital Heart Surgery",
             institution: "Cleveland Clinic",
           },
           {
-            year: "January 2006 till April 2006",
+            year: "2006",
             degree: "Clinical Observer in Pediatric Interventional Cardiology",
             institution: "Sacred Heart Childrens Hospital",
           },
           {
-            year: "April 2005 till July 2005",
+            year: "2005",
             degree: "Clinical Trainee in Pediatric Interventional Cardiology",
             institution:
               "Bakulev Scientific Center for Cardiovascular Surgery of Russian Academy of Medical Sciences",
           },
           {
-            year: "October 2005 till October 2008",
+            year: "2005 - 2008",
             degree: "Postgraduate Study in Pediatric Cardiology",
             institution:
               "National Institute of Health named after ac. S. Avdalbekyan",
           },
           {
-            year: "September 2002 till October 2005",
+            year: "2002 - 2005",
             degree: "Pediatric Cardiologist",
             institution:
               "National Institute of Health named after ac. S. Avdalbekyan",
           },
           {
-            year: "September 1996 till July 2002",
+            year: "1996 - 2002",
             degree: "MD, Pediatrician",
             institution:
               "Yerevan State Medical University after Mkhitar Heratsi",
@@ -1064,22 +1064,28 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
-            period: "2015թ. նոյեմբեր – մինչ օրս",
-            title: "Սրտաբան ինտենսիվիստ",
-            organization:
-              "«Նորք Մարաշ» բժշկական կենտրոն, վերակենդանացման բաժանմունք",
-            description: "",
-          },
-          {
-            period: "2024թ. հունիս – մինչ օրս",
+            period: "2025 – մինչ օրս",
             title: "Սրտաբան",
-            organization: "«ԷկոՍենս» բժշկական կենտրոն",
+            organization: "CardioLab բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2016թ. օգոստոս – 2017թ. սեպտեմբեր",
+            period: "2024 – մինչ օրս",
+            title: "Սրտաբան",
+            organization: "ԷկոՍենս բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2016 – 2017",
             title: "Սրտաբան",
             organization: "«ՍլավՄեդ» բժշկական կենտրոն",
+            description: "",
+          },
+          {
+            period: "2015 – մինչ օրս",
+            title: "Ավագ Սրտաբան ինտենսիվիստ",
+            organization:
+              "Նորք Մարաշ բժշկական կենտրոն, վերակենդանացման բաժանմունք",
             description: "",
           },
         ],
@@ -1139,9 +1145,9 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
-            period: "November 2015 – Present",
-            title: "Adult Cardiologist-Intensivist",
-            organization: "Nork Marash Medical Center, Intensive Care Unit",
+            period: "2025 – մինչ օրս",
+            title: "Cardiologist",
+            organization: "CardioLab Medical Center",
             description: "",
           },
           {
@@ -1154,6 +1160,12 @@ export const staff: StaffType = [
             period: "August 2016 – September 2017",
             title: "Cardiologist",
             organization: "SlavMed Medical Center",
+            description: "",
+          },
+          {
+            period: "2015 – Present",
+            title: "Adult Cardiologist-Intensivist",
+            organization: "Nork Marash Medical Center, Intensive Care Unit",
             description: "",
           },
         ],
@@ -1242,40 +1254,39 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
-            period: "2025թ. մինչ այժմ",
+            period: "2025. - մինչ օրս",
             title: "Սրտաբան, Էխո-Սգ Մասնագետ, Սրտի Մռտ Մասնագետ",
             organization: "Կարդիոլաբ բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2014թ. մինչևայժմ",
-            title: "սրտաբան",
-            organization: "Նորք Մարաշ բժշկական կենտրոնի",
+            period: "2024 - մինչ օրս",
+            title: "Բժիշկ-ճառագայթաբան, սրտի ՄՌՏ մասնագետ",
+            organization: "Պրոտոն ախտորոշիչ և գիտական կենտրոնում",
             description: "",
           },
           {
-            period: "2024թ. մինչևայժմ",
-            title: "բժիշկ-ճառագայթաբան, սրտի ՄՌՏ մասնագետ",
-            organization: "Պրոտոն ախտորոշիչ և գիտական կենտրոնում",
+            period: "2014 - մինչ օրս",
+            title: "Սրտաբան",
+            organization: "Նորք Մարաշ բժշկական կենտրոնի",
             description: "",
           },
         ],
         education: [
           {
-            year: "2021-2022թթ.",
-            degree:
-              "Հետբուհական կրթության «Ճառագայթայինախտորոշում» մասնագիտությամբ",
+            year: "2021-2022",
+            degree: "Հետդիպլոմային կրթություն ճառագայթային ախտորոշման ոլորտում",
             institution:
               "Երևանի Մխիթար Հերացու անվ. Պետական բժշկական համալսարանի",
           },
           {
-            year: "2011-2014թթ.",
-            degree: "Հետդիպլոմային կրթություն «Սրտաբանություն» մասնագիտությամբ",
+            year: "2011-2014",
+            degree: "Հետդիպլոմային կրթություն սրտաբանության ոլորտում",
             institution:
               "Երևանի Մխիթար Հերացու անվ. Պետական բժշկական համալսարանի",
           },
           {
-            year: "2011թ.",
+            year: "2011",
             degree: "Ընդհանուր բժշկության ֆակուլտետ",
             institution: "Երևանի պետական բժշկական համալսարան",
           },
@@ -1318,21 +1329,21 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
-            period: "Since 2025",
+            period: "2025 - present",
             title: "Cardiologist, Echo-CG Specialist, Cardiac MRI Specialist",
             organization: "Cardiolab Medical Center",
             description: "",
           },
           {
-            period: "Since 2014",
-            title: "Cardiologist",
-            organization: "Nork Marash Medical Center",
+            period: "2024 - present",
+            title: "Radiologist, Cardiac MRI Specialist",
+            organization: "Proton Diagnostic and Scientific Center",
             description: "",
           },
           {
-            period: "Since 2024",
-            title: "Radiologist, Cardiac MRI Specialist",
-            organization: "Proton Diagnostic and Scientific Center",
+            period: "2014 - present",
+            title: "Cardiologist",
+            organization: "Nork Marash Medical Center",
             description: "",
           },
         ],
@@ -1420,46 +1431,40 @@ export const staff: StaffType = [
           linkedin: "",
           twitter: "",
         },
-        specialties: [
-          "Մանկական սրտաբանություն",
-          "Պերինատալ սրտաբանություն",
-          "Քլինիկական ռեզիդենտուրա",
-          "Բժշկական ներկայացումներ",
-          "Գիտաժողովային մասնակցություն",
-        ],
+        specialties: ["Մանկական սրտաբանություն", "Պերինատալ սրտաբանություն"],
         experience: [
           {
-            period: "2024թ.- առ այսօր",
+            period: "2024 - մինչ օրս",
             title: "Մանկական և պերինատալ սրտաբան",
             organization: "Նորք-Մարաշ ԲԿ",
             description: "",
           },
           {
-            period: "2023-2024թթ.",
-            title: "Պերինատալ սրտաբան-ֆելոու",
+            period: "2023 - 2024",
+            title: "Պերինատալ սրտաբանության ֆելոու",
             organization: "Նորք-Մարաշ ԲԿ",
             description: "",
           },
           {
-            period: "2021թ. հուլիս - 2021թ. դեկտեմբեր",
+            period: "2021 - 2021",
             title: "Մանկական սրտաբան",
             organization: "Սուրբ Աստվածամայր ԲԿ",
             description: "",
           },
           {
-            period: "2020-2021թթ.",
+            period: "2020 - 2021",
             title: "Պերինատալ սրտաբանության ֆելոուշիփ",
             organization: "Նորք-Մարաշ բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "2020թ. նոյեմբեր - դեկտեմբեր",
+            period: "2020",
             title: "Մանկական սրտաբան",
             organization: "Արաբկիր ԲԿ",
             description: "",
           },
           {
-            period: "2018-2020թթ.",
+            period: "2018 - 2020",
             title: "Ռեզիդենտ-մանկական սրտաբան",
             organization: "Նորք-Մարաշ բժշկական կենտրոն",
             description: "",
@@ -1467,24 +1472,24 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "2023-2024թթ.",
+            year: "2023 - 2024",
             degree: "Պերինատալ սրտաբանության ֆելոուշիփ",
             institution: "‹‹Նորք-Մարաշ›› բժշկական կենտրոն",
           },
           {
-            year: "2017-2020թթ.",
+            year: "2017 - 2020",
             degree: "Մանկական սրտաբանության կլինիկական օրդինատուրա",
             institution: "‹‹Նորք-Մարաշ›› բժշկական կենտրոն",
           },
           {
-            year: "2015-2017թթ.",
+            year: "2015 - 2017",
             degree:
               "Մագիստրոսի աստիճան, բժշկի որակավորում, գերազանցության դիպլոմ",
             institution:
               "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան",
           },
           {
-            year: "2010-2015թթ.",
+            year: "2010 - 2015",
             degree: "Բակալավրի աստիճան",
             institution:
               "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան",
@@ -1503,32 +1508,32 @@ export const staff: StaffType = [
             description:
               "‹‹Ֆիզիկական ակտիվությունը սրտի բնածին արատով երեխաների շրջանում››",
             organization: "‹‹Սիրո և նվիրումի 30 տարին›› գիտաժողով",
-            date: "2024թ. նոյեմբեր",
+            date: "2024",
           },
           {
             title: "Մասնակից",
             description: "‹‹Առիթմոլոգիական մաստեր–կլաս››",
-            date: "2023թ. հոկտեմբեր",
+            date: "2023",
           },
           {
             title: "Մասնակից",
             description:
               "Նորածնային սիրտ-թոքային հեմոդինամիկային նվիրված վեբինար",
-            date: "2021թ. մարտ",
+            date: "2021",
           },
           {
             title: "Խոսնակ",
             description:
               "‹‹Սպորտը և պատվաստումները սրտի բնածին արատով երեխաների մոտ››",
             organization: "ՆՄԲԿ սիրտ-անոթային գիտաժողով",
-            date: "2021թ. հունիս",
+            date: "2021",
           },
           {
             title: "Խոսնակ",
             description:
               "‹‹Ամբողջական նախասիրտ-փորոքային հաղորդակցություն ախտորոշմամբ հիվանդների վարման փորձը ‹‹Նորք-Մարաշ›› ԲԿ-ում››",
             organization: "Հայաստանի 5-րդ միջազգային բժշկական համագումար",
-            date: "2019թ. հուլիս",
+            date: "2019",
           },
         ],
         academicActivities: [],
@@ -1551,46 +1556,40 @@ export const staff: StaffType = [
           linkedin: "",
           twitter: "",
         },
-        specialties: [
-          "Pediatric Cardiology",
-          "Perinatal Cardiology",
-          "Clinical Residency",
-          "Medical Presentations",
-          "Conference Participation",
-        ],
+        specialties: ["Pediatric Cardiology", "Perinatal Cardiology"],
         experience: [
           {
-            period: "2024 – Present",
+            period: "2024 – present",
             title: "Pediatric and Perinatal Cardiologist",
             organization: "Nork-Marash Medical Center",
             description: "",
           },
           {
-            period: "2023–2024",
+            period: "2023 – 2024",
             title: "Perinatal Cardiology Fellow",
             organization: "Nork-Marash Medical Center",
             description: "",
           },
           {
-            period: "July 2021 – December 2021",
+            period: "2021 – 2021",
             title: "Pediatric Cardiologist",
             organization: "Surb Astvatsamayr Medical Center",
             description: "",
           },
           {
-            period: "2020–2021",
+            period: "2020 – 2021",
             title: "Perinatal Cardiology Fellowship",
             organization: "Nork-Marash Medical Center",
             description: "",
           },
           {
-            period: "November – December 2020",
+            period: "2020",
             title: "Pediatric Cardiologist",
             organization: "Arabkir Medical Center",
             description: "",
           },
           {
-            period: "2018–2020",
+            period: "2018 – 2020",
             title: "Resident – Pediatric Cardiologist",
             organization: "Nork-Marash Medical Center",
             description: "",
@@ -1598,24 +1597,24 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "2023–2024",
+            year: "2023 – 2024",
             degree: "Perinatal Cardiology Fellowship",
             institution: "Nork-Marash Medical Center",
           },
           {
-            year: "2017–2020",
+            year: "2017 – 2020",
             degree: "Clinical Residency in Pediatric Cardiology",
             institution: "Nork-Marash Medical Center",
           },
           {
-            year: "2015–2017",
+            year: "2015 – 2017",
             degree:
               "Master’s Degree, Medical Qualification, Diploma with Honors",
             institution:
               "Yerevan State Medical University after Mkhitar Heratsi",
           },
           {
-            year: "2010–2015",
+            year: "2010 – 2015",
             degree: "Bachelor’s Degree",
             institution:
               "Yerevan State Medical University after Mkhitar Heratsi",
@@ -1634,32 +1633,32 @@ export const staff: StaffType = [
             description:
               "“Physical activity among children with congenital heart defects”",
             organization: "“30 Years of Love and Devotion” Conference",
-            date: "November 2024",
+            date: "2024",
           },
           {
             title: "Participant",
             description: "“Arrhythmology Master Class”",
-            date: "October 2023",
+            date: "2023",
           },
           {
             title: "Participant",
             description:
               "Webinar dedicated to neonatal cardio-pulmonary hemodynamics",
-            date: "March 2021",
+            date: "2021",
           },
           {
             title: "Speaker",
             description:
               "“Sports and Vaccinations in Children with Congenital Heart Defects”",
             organization: "NMCC Cardiovascular Conference",
-            date: "June 2021",
+            date: "2021",
           },
           {
             title: "Speaker",
             description:
               "“Experience in managing patients diagnosed with complete atrioventricular communication at Nork-Marash Medical Center”",
             organization: "5th International Medical Congress of Armenia",
-            date: "July 2019",
+            date: "2019",
           },
         ],
         academicActivities: [],
@@ -1721,9 +1720,9 @@ export const staff: StaffType = [
         ],
         experience: [
           {
-            period: "Feb 2025 - Present",
+            period: "2025 - present",
             title: "Cardiologist",
-            organization: "CardioLab Armenia medical center",
+            organization: "CardioLab medical center",
             description:
               "Clinical cardiology, echocardiography, treadmill test",
           },
@@ -1749,52 +1748,52 @@ export const staff: StaffType = [
               "Clinical cardiology, echocardiography, treadmill test",
           },
           {
-            period: "Sep 2005 - Jun 2007",
+            period: "2005 - 2007",
             title: "Cardiologist",
             organization: "Abou-Jaoude Hospital",
             description:
               "General cardiology practice in a clinical hospital setting",
           },
           {
-            period: "Sep 2005 - Jun 2007",
+            period: "2005 - 2007",
             title: "Cardiologist & General Practitioner",
             organization: "Private Clinic, Beirut",
             description: "General cardiology and primary healthcare",
           },
           {
-            period: "Sep 2003 - Sep 2004",
+            period: "2003 - 2004",
             title: "Fellow",
             organization: "Nork-Marash Medical Center",
             description: "Fellowship of Invasive Cardiology",
           },
           {
-            period: "Oct 2002 - Sep 2003",
+            period: "2002 - 2003",
             title: "Volunteer Assistant Cardiologist",
             organization: "Nork-Marash Medical Center",
             description: "Assisting fellow cardiologists",
           },
           {
-            period: "Mar 2002 - Aug 2002",
+            period: "2002 - 2002",
             title: "Medical Representative",
             organization: "Hipp Company",
             description: "Promotion of infant food products",
           },
           {
-            period: "Sep 2001 - Oct 2002",
+            period: "2001 - 2002",
             title: "Assistant Lecturer",
             organization: "National Institute of Health of Armenia",
             description:
               "Taught topics related to rational drug use, coronary disease, Alzheimer’s, hypertension, etc.",
           },
           {
-            period: "Sep 2000 - Oct 2002",
+            period: "2000 - 2002",
             title: "Expert in Clinical Trials & Drug Evaluation",
             organization: "Armenian Drug and Medical Technology Agency",
             description:
               "Worked in clinical trials and drug registration departments",
           },
           {
-            period: "Sep 2000 - Oct 2002",
+            period: "2000 - 2002",
             title: "Secretary of Ethics Committee",
             organization: "Knowledge Society",
             description: "Oversight of clinical trials in accordance with GCP",
@@ -1815,7 +1814,7 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "2021 - Present",
+            year: "2021 - present",
             degree: "Anti-Age Expert",
             institution: "Swiss Group AG, Anti-Age Medicine",
           },
@@ -1839,11 +1838,6 @@ export const staff: StaffType = [
             year: "1991 - 1997",
             degree: "Diploma in General Medicine (with honors)",
             institution: "Yerevan State Medical University",
-          },
-          {
-            year: "1981 - 1991",
-            degree: "Secondary Education Certificate (with honors)",
-            institution: "Secondary school N 55 named after A.P. Chekhov",
           },
         ],
         memberships: [
@@ -1907,81 +1901,82 @@ export const staff: StaffType = [
         ],
         experience: [
           {
-            period: "Փետրվար 2025 - Մինչ օրս",
-            title: "Սրտաբույժ",
-            organization: "CardioLab Armenia բժշկական կենտրոն",
+            period: "2025 - մինչ օրս",
+            title: "Սրտաբան",
+            organization: "CardioLab բժշկական կենտրոն",
             description:
-              "Կլինիկական սրտաբանություն, էխոսրտագրություն, վարժանքի թեստավորում (տրեդմիլ)",
+              "Կլինիկական սրտաբանություն, էխոկարդիոգրաֆիա, վազքուղու թեստ",
           },
           {
-            period: "2024 - Մինչ օրս",
-            title: "Սրտաբույժ և հակատարիքային խորհրդատու",
-            organization: "Դավիթյանց պոլիկլինիկա",
+            period: "2024 - մինչ օրս",
+            title: "Սրտաբան և հակատարիքային խորհրդատու",
+            organization: "Դավիդյանց պոլիկլինիկա",
             description:
               "Սրտաբանություն, էխոսրտագրություն, սթրես թեստ, Հոլտեր մոնիթորինգ, հակատարիքային բժշկություն",
           },
           {
             period: "2011 - 2024",
-            title: "Սրտաբույժ",
+            title: "Սրտաբան",
             organization: "Սրտաբանական մասնավոր կլինիկա",
             description:
               "Սրտաբանություն, էխոսրտագրություն, սթրես թեստեր, Հոլտեր մոնիթորինգ",
           },
           {
             period: "2008 - 2011",
-            title: "Սրտաբույժ",
+            title: "Սրտաբան",
             organization: "Ուլտրա Լաբ բժշկական կենտրոն",
             description:
-              "Սրտաբանական ծառայություններ, էխոսրտագրություն, վարժանքի թեստեր",
+              "Սրտաբանական ծառայություններ, էխոսրտագրություն,  վազքուղու թեստ",
           },
           {
-            period: "Սեպտեմբեր 2005 - Հունիս 2007",
-            title: "Սրտաբույժ",
+            period: "2005 - 2007",
+            title: "Սրտաբան",
             organization: "Abou-Jaoude հիվանդանոց, Բեյրութ",
             description: "Ընդհանուր սրտաբանական պրակտիկա հիվանդանոցում",
           },
           {
-            period: "Սեպտեմբեր 2005 - Հունիս 2007",
-            title: "Սրտաբույժ և Ընդհանուր բժշկի գործառույթ",
+            period: "2005 - 2007",
+            title: "Սրտաբան և Ընդհանուր բժշկի գործառույթ",
             organization: "Մասնավոր կլինիկա, Բեյրութ",
             description:
               "Ընդհանուր սրտաբանական և առաջնային բուժօգնության ծառայություններ",
           },
           {
-            period: "Սեպտեմբեր 2003 - Սեպտեմբեր 2004",
+            period: "2003 - 2004",
             title: "Ինվազիվ սրտաբանության ֆելոու",
             organization: "Նորք-Մարաշ բժշկական կենտրոն",
             description: "Ինվազիվ սրտաբանության ոլորտում մասնագիտացում",
           },
           {
-            period: "Հոկտեմբեր 2002 - Սեպտեմբեր 2003",
+            period: "2002 - 2003",
             title: "Կամավոր օգնական սրտաբան",
             organization: "Նորք-Մարաշ բժշկական կենտրոն",
             description:
               "Օգնում էր սրտաբույժներին կլինիկական գործունեության ընթացքում",
           },
           {
-            period: "Մարտ 2002 - Օգոստոս 2002",
+            period: "2002 - 2002",
             title: "Բժշկական ներկայացուցիչ",
             organization: "Hipp ընկերություն",
             description: "Մանկական սննդի արտադրանքի առաջխաղացում",
           },
           {
-            period: "Սեպտեմբեր 2001 - Հոկտեմբեր 2002",
+            period: "2001 - 2002",
             title: "Օգնական դասախոս",
             organization: "ՀՀ ԱՆ Առողջապահության ազգային ինստիտուտ",
             description:
               "Դասավանդել է դեղագործության և սրտաբանության թեմաներով",
           },
           {
-            period: "Սեպտեմբեր 2000 - Հոկտեմբեր 2002",
-            title: "Կլինիկական փորձարկումների փորձագետ",
+            period: "2000 - 2002",
+            title: "Կլինիկական փորձարկումների և դեղերի գնահատման մասնագետ",
             organization:
               "Հայկական դեղերի և բժշկական տեխնոլոգիաների գործակալություն",
-            description: "Կլինիկական փորձարկումներ և դեղերի գրանցում",
+            description:
+              "Աշխատել է կլինիկական փորձարկումների և դեղերի գրանցման բաժիններում",
           },
           {
-            period: "Սեպտեմբեր 2000 - Հոկտեմբեր 2002",
+            period: "2000 - 2002",
             title: "Էթիկայի կոմիտեի քարտուղար",
             organization: "«Գիտելիք» հասարակություն",
             description:
@@ -2003,7 +1998,7 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "2021 - Մինչ օրս",
+            year: "2021 - մինչ օրս",
             degree: "Հակատարիքային բժշկության մասնագետ",
             institution: "Swiss Group AG, Anti-Age Medicine",
           },
@@ -2020,7 +2015,8 @@ export const staff: StaffType = [
           {
             year: "1997 - 2000",
             degree: "Սրտաբանության կլինիկական ռեզիդենտուրա",
-            institution: "ԱԱԻ և Էրեբունի ԲԿ",
+            institution:
+              "Հայաստանի Առողջապահության Ազգային Ինստիտուտ և Էրեբունի բժշկական կենտրոն",
           },
           {
             year: "1991 - 1997",
@@ -2053,26 +2049,26 @@ export const staff: StaffType = [
               "Էթիկայի կոմիտեի քարտուղար կլինիկական փորձարկումների վերահսկման համար",
             description:
               "Վերահսկել է կլինիկական փորձարկումների համապատասխանությունը GCP-ին",
-            organization: "«Գիտելիք» հասարակություն",
+            organization: "Գիտելիք հասարակություն",
             date: "2000 - 2002",
           },
           {
             title: "Մասնակցել է Euro Heart Survey նախագծին",
-            date: "չնշված",
+            date: "նշված չէ",
           },
           {
             title: "Պարբերաբար մասնակցել է բժշկական գիտաժողովների",
-            date: "չնշված",
+            date: "նշված չէ",
           },
         ],
         publications: [],
         languages: [
-          { language: "Հայերեն", level: "Արտահայտիչ" },
-          { language: "Ռուսերեն", level: "Արտահայտիչ" },
-          { language: "Անգլերեն", level: "Արտահայտիչ" },
-          { language: "Արաբերեն", level: "Միջին" },
-          { language: "Ֆրանսերեն", level: "Միջին" },
-          { language: "Հունարեն", level: "Միջին" },
+          { language: "Հայերեն", level: "Սահուն" },
+          { language: "Ռուսերեն", level: "Սահուն" },
+          { language: "Անգլերեն", level: "Սահուն" },
+          { language: "Արաբերեն", level: "Բավարար" },
+          { language: "Ֆրանսերեն", level: "Բավարար" },
+          { language: "Հունարեն", level: "Բավարար" },
         ],
       },
     },
@@ -2120,38 +2116,38 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
-            period: "01.2025-present",
+            period: "2025 - present",
             title: "Arrhythmology fellow",
-            organization: '"Cardiolab" MC, Yerevan',
+            organization: "Cardiolab Medical Center",
             description: "",
           },
           {
-            period: "11.2024-present",
+            period: "2024 - present",
             title: "Cardiologist",
             organization: '"Astghik" MC, Yerevan',
             description: "",
           },
           {
-            period: "09.2021-03.2025",
+            period: "2021 - 2025",
             title: "Emergency physician",
             organization: '"Ambulance" CJSC, N2 substation',
             description: "",
           },
           {
-            period: "09.2016-present",
+            period: "2016 - present",
             title: "Head of Biology Olympiad Club",
             organization:
               '"Shirakatsy Lyceum" International Scientific-Educational Complex',
             description: "",
           },
           {
-            period: "2023- present",
+            period: "2023 - present",
             title: "Member of the Republican Committee on Biology Olympiad",
             organization: "",
             description: "",
           },
           {
-            period: "2019-2021",
+            period: "2019 - 2021",
             title: "Patient Care Assistant",
             organization: '"Heratsi" No. 1 hospital complexe',
             description: "",
@@ -2159,20 +2155,20 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "11.2024-03.2025",
+            year: "2024 - 2025",
             degree:
               "Short-term specialization and licensing in Echocardiography",
             institution:
               '"National Institute of Health named after Academician S. Avdalbekyan" Ministry of Health. RA',
           },
           {
-            year: "2021-2024",
+            year: "2021 - 2024",
             degree: "Residency in Cardiology",
             institution:
               '"Heratsi" No. 1 hospital complexe, YSMU, Department of General & Invasive Cardiology',
           },
           {
-            year: "2015-2021",
+            year: "2015 - 2021",
             degree: "Doctor of Medicine",
             institution:
               "Yerevan State Medical University (YSMU), Faculty of General Medicine.",
@@ -2271,37 +2267,37 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
-            period: "01.2025–մինչ օրս",
+            period: "2025 – մինչ օրս",
             title: "Առիթմոլոգիայի ֆելոու",
-            organization: "«Կարդիոլաբ» ԲԿ, Երևան",
+            organization: "CardioLab բժշկական կենտրոն",
             description: "",
           },
           {
-            period: "11.2024–մինչ օրս",
+            period: "2024 – մինչ օրս",
             title: "Սրտաբան",
             organization: "«Աստղիկ» ԲԿ, Երևան",
             description: "",
           },
           {
-            period: "09.2021–03.2025",
+            period: "2021 – 2025",
             title: "Շտապ բժշկական օգնության բժիշկ",
             organization: "«Շտապ օգնություն» ՓԲԸ, N2 ենթակայան",
             description: "",
           },
           {
-            period: "09.2016–մինչ օրս",
+            period: "2016 – մինչ օրս",
             title: "Կենսաբանության օլիմպիադայի խմբակի ղեկավար",
             organization: "«Շիրակացու լիցեյ» միջազգային գիտակրթական համալիր",
             description: "",
           },
           {
-            period: "2023–մինչ օրս",
+            period: "2023 – մինչ օրս",
             title: "Կենսաբանության հանրապետական օլիմպիադայի հանձնաժողովի անդամ",
             organization: "",
             description: "",
           },
           {
-            period: "2019–2021",
+            period: "2019 – 2021",
             title: "Հիվանդների խնամքի օգնական",
             organization: "«Հերացու» թիվ 1 հիվանդանոցային համալիրը",
             description: "",
@@ -2309,27 +2305,27 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "11.2024–03.2025",
+            year: "2024 – 2025",
             degree:
               "Կարճաժամկետ մասնագիտացում և արտոնագրում էխոկարդիոգրաֆիայում",
             institution:
               "ՀՀ Առողջապահության նախարարության «Ս. Ավդալբեկյանի անվան Առողջապահության ազգային ինստիտուտ»",
           },
           {
-            year: "2021–2024",
+            year: "2021 – 2024",
             degree: "Սրտաբանության ռեզիդենտուրա",
             institution:
               "«Հերացու» թիվ 1 հիվանդանոցային համալիր, ԵՊԲՀ, Ընդհանուր և միջամտային սրտաբանության ամբիոն",
           },
           {
-            year: "2015–2021",
-            degree: "Բժշկի դիպլոմ",
+            year: "2015 – 2021",
+            degree: "Բժշկության դոկտոր",
             institution:
               "Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարան, Ընդհանուր բժշկության ֆակուլտետ",
           },
         ],
         memberships: [],
-        hobbies: ["Շախմատ", "Արևելք", "Այգեգործություն", "Լող"],
+        hobbies: ["Շախմատ", "Արշավել", "Այգեգործություն", "Լող"],
         achievements: [
           {
             title: "EHRA CIED դասընթաց",
@@ -2365,7 +2361,8 @@ export const staff: StaffType = [
         academicActivities: [],
         publications: [
           {
-            title: "Վերանայում «mTOR-ը՝ որպես ԱՍԴ դեղաբուժման հնարավոր թիրախ»",
+            title:
+              "«mTOR-ը որպես ԱՍԽ դեղորայքային թերապիայի հնարավոր թիրախ» գրախոսություն",
             journal:
               "The New Armenian Medical Journal, Հատոր 11, Թիվ 3, 2017, էջ 156",
             description:
