@@ -1,11 +1,16 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import MenuItem from "./MenuItem";
 import { Menus } from "~/constants/menus";
 import Image from "next/image";
 import LanguageSwitcher from "~/app/_Disin_components/layout/LanguageSwitcher";
 import { Link, usePathname } from "~/i18n/routing";
+
+const mainLogoSrc =
+  "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2JVMoX3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic";
+const mobileLogoSrc =
+  "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluOKOekRNNgi3eV0yDv2z7lICnRwBfZLqj5t8r";
 
 // Custom hook for media query
 const useMediaQuery = (query: string): boolean => {
@@ -50,16 +55,18 @@ const Navbar: React.FC = () => {
   }, [pathname]);
 
   // Check if screen width is at least 767px , 1199, 991
-  const isMobile = useMediaQuery("(max-width: 767px)");
-  const isLargeDesktop = useMediaQuery("(min-width: 1199px)");
+  const isMediumScreen = useMediaQuery(
+    "(min-width: 768px) and (max-width: 1198px)",
+  );
 
+  const [logoSrc, setLogoSrc] = useState(mainLogoSrc);
+
+  useEffect(() => {
+    const newLogoSrc = !isMediumScreen ? mainLogoSrc : mobileLogoSrc;
+    console.log("isMediumScreen ---->", !isMediumScreen);
+    setLogoSrc(newLogoSrc);
+  }, [isMediumScreen]);
   // Logo should change for medium screens (between 767px and 1199px)
-  const shouldShowMainLogo = isMobile || isLargeDesktop;
-
-  // Set logo source based on screen size
-  const logoSrc = shouldShowMainLogo
-    ? "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2JVMoX3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic"
-    : "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluOKOekRNNgi3eV0yDv2z7lICnRwBfZLqj5t8r";
 
   const classOne = menu
     ? "collapse navbar-collapse mean-menu"
@@ -98,9 +105,9 @@ const Navbar: React.FC = () => {
               <div className={classOne} id="navbarSupportedContent">
                 <ul className="navbar-nav">
                   {Menus().map((menuItem) => (
-                    <MenuItem 
-                      key={menuItem.label} 
-                      {...menuItem} 
+                    <MenuItem
+                      key={menuItem.label}
+                      {...menuItem}
                       closeMenu={toggleNavbar}
                     />
                   ))}
