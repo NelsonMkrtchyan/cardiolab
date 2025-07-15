@@ -36,8 +36,8 @@ const Sidebar = ({
   contact,
   social,
   specialties,
-  showContact = true,
-  showSocial = true,
+  showContact = false,
+  showSocial = false,
   showSpecialties = true,
 }: SidebarI) => {
   return (
