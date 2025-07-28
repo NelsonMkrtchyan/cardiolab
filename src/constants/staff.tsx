@@ -1446,7 +1446,7 @@ export const staff: StaffType = [
             description: "",
           },
           {
-            period: "2021 - 2021",
+            period: "2021",
             title: "Մանկական սրտաբան",
             organization: "Սուրբ Աստվածամայր ԲԿ",
             description: "",
@@ -1472,8 +1472,8 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "2023 - 2024",
-            degree: "Պերինատալ սրտաբանության ֆելոուշիփ",
+            year: "202ճ - 2024",
+            degree: "Մանկական և Պերինատալ սրտաբանության ֆելոուշիփ",
             institution: "‹‹Նորք-Մարաշ›› բժշկական կենտրոն",
           },
           {
@@ -1571,7 +1571,7 @@ export const staff: StaffType = [
             description: "",
           },
           {
-            period: "2021 – 2021",
+            period: "2021",
             title: "Pediatric Cardiologist",
             organization: "Surb Astvatsamayr Medical Center",
             description: "",
@@ -1597,8 +1597,8 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "2023 – 2024",
-            degree: "Perinatal Cardiology Fellowship",
+            year: "202ճ – 2024",
+            degree: "Pediatric and Perinatal Cardiology Fellowship",
             institution: "Nork-Marash Medical Center",
           },
           {
@@ -2490,7 +2490,7 @@ export const staff: StaffType = [
           {
             title: "Cardiologist and Arrhythmologist Fellow",
             organization: "Nork-Marash Medical Center",
-            period: "2022 – Present",
+            period: "2022 – 2023",
             description: "",
           },
           {
@@ -2595,7 +2595,7 @@ export const staff: StaffType = [
           {
             title: "Սրտաբան և առիթմոլոգիայի կլինիկական ռեզիդենտ",
             organization: "Նորք-Մարաշ բժշկական կենտրոն",
-            period: "2022 – մինչ օրս",
+            period: "2022 – 2023",
             description: "",
           },
           {
@@ -2777,7 +2777,7 @@ export const staff: StaffType = [
           },
           {
             year: "2024",
-            degree: "Clinical and research internship",
+            degree: "Clinical and research internship – Brussels, Belgium",
             institution:
               "Erasme academic hospital, cardiac insufficiency and pulmonary vascular disease clinic",
           },
@@ -3001,7 +3001,7 @@ export const staff: StaffType = [
           },
           {
             year: "2024",
-            degree: "Կլինիկական և հետազոտական փորձառություն",
+            degree: "Կլինիկական և հետազոտական փորձառություն - Բրյուսել, Բելգիա",
             institution:
               "Erasme ակադեմիական հիվանդանոց, Սրտային անբավարարության և թոքային անոթային հիվանդությունների կլինիկա",
           },
@@ -3045,7 +3045,7 @@ export const staff: StaffType = [
           {
             year: "2020",
             degree:
-              "Մասնակցություն՝ «Ատրիումի ֆիբրիլացիայի կառավարում» թեմայով նյութ",
+              "Մասնակցություն՝ Նախասրտերի ֆիբրիլացիայի կառավարում» թեմայով նյութ",
             institution: "Սթենֆորդի շարունակական բժշկական կրթության կենտրոն",
           },
           {
@@ -3106,11 +3106,11 @@ export const staff: StaffType = [
           },
           {
             title:
-              "Ստեմի ինֆարկտի բարդ դեպք՝ ուղեկցվող արտրիումի ֆիբրիլացիայով, կարդիոգեն շոկով և թրոմբոէմբոլիկ բարդություններով",
+              "Ստեմի ինֆարկտի բարդ դեպք՝ ուղեկցվող ֆիբրիլացիայով, կարդիոգեն շոկով և թրոմբոէմբոլիկ բարդություններով",
             organization: "ESC Սրտային անբավարարություն 2023, Պրահա, Չեխիա",
             date: "2023",
             description:
-              "Գայանե Մարտիրոսյան, Մարիամ Հովակիմյան. կլինիկական դեպքը ներկայացվել է ESC Սրտային անբավարարություն 2023 միջոցառման ժամանակ",
+              "Գոռ Մարտիրոսյան, Մարիամ Հովակիմյան. կլինիկական դեպքը ներկայացվել է ESC Սրտային անբավարարություն 2023 միջոցառման ժամանակ",
           },
         ],
         academicActivities: [],
@@ -3202,11 +3202,7 @@ export const staff: StaffType = [
           twitter: "", // Not provided
         },
         specialties: [
-          "Ultrasonography",
-          "Fine-Needle Aspiration of the Thyroid Gland",
-          "Continuous glucose monitoring",
-          "Thyroidectomy Consultation",
-          "Hormone Replacement",
+          "Endocrinologist, Thyroid Ultrasound and FNAB Specialist",
         ],
         experience: [
           {
@@ -3305,11 +3301,7 @@ export const staff: StaffType = [
           twitter: "",
         },
         specialties: [
-          "Ուլտրաձայնային հետազոտություն",
-          "Վահանաձև գեղձի նիհար ասպիրացիա",
-          "Շաքարի շարունակական մոնիտորինգ",
-          "Վահանաձև գեղձի տիրեոեկտոմիայի խորհրդատվություն",
-          "Հորմոնալ փոխարինող թերապիա",
+          "Էնդոկրինոլոգ, վահանաձև գեղձի ՈւՁՀ և բարակ ասեղային ասպիրացիոն բիոպսիայի մասնագետ",
         ],
         experience: [
           {
@@ -5001,6 +4993,12 @@ export const staff: StaffType = [
         specialties: [],
         experience: [
           {
+            period: "2025 – մինչ օրս",
+            title: "Անոթային վիրաբույժ",
+            organization: "CardioLab բժշկական կենտրոն",
+            description: "",
+          },
+          {
             period: "2024 – մինչ օրս",
             title: "Անոթային վիրաբույժ",
             organization: "Sonomax ախտորոշիչ կենտրոն",
@@ -5086,6 +5084,12 @@ export const staff: StaffType = [
         },
         specialties: [],
         experience: [
+          {
+            period: "2025 – present",
+            title: "Vascular Surgeon",
+            organization: "CardioLab Medical Center",
+            description: "",
+          },
           {
             period: "2024 – present",
             title: "Vascular Surgeon",
