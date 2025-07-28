@@ -1434,6 +1434,12 @@ export const staff: StaffType = [
         specialties: ["Մանկական սրտաբանություն", "Պերինատալ սրտաբանություն"],
         experience: [
           {
+            period: "2025 - մինչ օրս",
+            title: "Մանկական և պերինատալ սրտաբան",
+            organization: "CardioLab բժշկական կենտրոն",
+            description: "",
+          },
+          {
             period: "2024 - մինչ օրս",
             title: "Մանկական և պերինատալ սրտաբան",
             organization: "Նորք-Մարաշ ԲԿ",
@@ -1472,7 +1478,7 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "202ճ - 2024",
+            year: "2020 - 2024",
             degree: "Մանկական և Պերինատալ սրտաբանության ֆելոուշիփ",
             institution: "‹‹Նորք-Մարաշ›› բժշկական կենտրոն",
           },
@@ -1561,6 +1567,12 @@ export const staff: StaffType = [
           {
             period: "2024 – present",
             title: "Pediatric and Perinatal Cardiologist",
+            organization: "CardioLab Medical Center",
+            description: "",
+          },
+          {
+            period: "2024 – present",
+            title: "Pediatric and Perinatal Cardiologist",
             organization: "Nork-Marash Medical Center",
             description: "",
           },
@@ -1597,7 +1609,7 @@ export const staff: StaffType = [
         ],
         education: [
           {
-            year: "202ճ – 2024",
+            year: "2020 – 2024",
             degree: "Pediatric and Perinatal Cardiology Fellowship",
             institution: "Nork-Marash Medical Center",
           },
