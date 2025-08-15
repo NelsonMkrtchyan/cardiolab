@@ -1565,7 +1565,7 @@ export const staff: StaffType = [
         specialties: ["Pediatric Cardiology", "Perinatal Cardiology"],
         experience: [
           {
-            period: "2024 – present",
+            period: "2025 – present",
             title: "Pediatric and Perinatal Cardiologist",
             organization: "CardioLab Medical Center",
             description: "",
@@ -3301,101 +3301,201 @@ export const staff: StaffType = [
         ],
         academicActivities: [],
       },
+      // am: {
+      //   bio: "Հաջողությամբ ախտորոշել և բուժել ավելի քան 1500 հիվանդ էնդոկրին խնդիրներով՝ ներառյալ շաքարային դիաբետը, վահանաձև գեղձի հիվանդությունները և հորմոնալ անհավասարակշռությունները, ինչի արդյունքում հիվանդների  գոհունակության մակարդակը կազմել է 95%։ Հաջողությամբ ախտորոշել և բուժել ավելի քան 200 հիվանդ հետօպերացիոն բարդություններով, հետօպերացիոն հիպոթիրեոզով, հիպոպարաթիրեոզով։",
+      //   contact: {
+      //     phone: "+374 98585520",
+      //     email: "knarikbadeyan@mail.ru",
+      //     location: "Երևան, Շահամիրյան 51/1",
+      //   },
+      //   social: {
+      //     linkedin: "",
+      //     twitter: "",
+      //   },
+      //   specialties: [
+      //     "Էնդոկրինոլոգ, վահանաձև գեղձի ՈւՁՀ և բարակ ասեղային ասպիրացիոն բիոպսիայի մասնագետ",
+      //   ],
+      //   experience: [
+      //     {
+      //       title: "Էնդոկրինոլոգ, վահանաձև գեղձի սոնոգրաֆիստ",
+      //       organization: "Կարդիոլաբ",
+      //       period: "2025 - մինչ օրս",
+      //       description: "",
+      //     },
+      //     {
+      //       title: "Էնդոկրինոլոգ",
+      //       organization: "Շենգավիթ բժշկական կենտրոն",
+      //       period: "2024 - մինչ օրս",
+      //       description: "",
+      //     },
+      //     {
+      //       title: "Էնդոկրինոլոգ, վահանաձև գեղձի սոնոգրաֆիստ",
+      //       organization: "MedExpress կլինիկա",
+      //       period: "2023 - մինչ օրս",
+      //       description: "",
+      //     },
+      //     {
+      //       title: "Էնդոկրինոլոգ",
+      //       organization: "MedLine կլինիկա",
+      //       period: "2022 - մինչ օրս",
+      //       description: "",
+      //     },
+      //     {
+      //       title: "Էնդոկրինոլոգ",
+      //       organization: "Նյու Մեդ կլինիկա",
+      //       period: "2021 - 2022",
+      //       description: "",
+      //     },
+      //     {
+      //       title: "Կլինիկական օրդինատոր, էնդոկրինոլոգիայի բաժին",
+      //       organization: "Մուրացան համալսարանական հիվանդանոց",
+      //       period: "2019 - 2021",
+      //       description: "",
+      //     },
+      //   ],
+      //   education: [
+      //     {
+      //       degree: "Վահանաձև գեղձի նիհար ասպիրացիա",
+      //       institution: "",
+      //       year: "2023",
+      //     },
+      //     {
+      //       degree: "Ուլտրաձայնային ախտորոշման մասնագիտացում",
+      //       institution: "Երևանի պետական բժշկական համալսարան",
+      //       year: "2022 հունվար - օգոստոս",
+      //     },
+      //     {
+      //       degree: "Էնդոկրինոլոգիայի բաժնի ռեզիդենտուրա",
+      //       institution: "Երևանի պետական բժշկական համալսարան",
+      //       year: "2019 - 2021",
+      //     },
+      //     {
+      //       degree: "Բժիշկ",
+      //       institution:
+      //         "Երևանի պետական բժշկական համալսարան, ընդհանուր բժշկության ֆակուլտետ",
+      //       year: "2013 - 2019",
+      //     },
+      //   ],
+      //   memberships: [
+      //     "Եվրոպական վահանաձև գեղձի ասոցիացիա",
+      //     "Եվրոպական էնդոկրինոլոգիայի ընկերություն",
+      //     "Հայկական վահանաձև գեղձի ասոցիացիա",
+      //   ],
+      //   hobbies: [],
+      //   achievements: [],
+      //   publications: [],
+      //   languages: [
+      //     {
+      //       language: "Հայերեն",
+      //       level: "Մայրենի",
+      //     },
+      //     {
+      //       language: "Անգլերեն",
+      //       level: "Սահուն",
+      //     },
+      //     {
+      //       language: "Ռուսերեն",
+      //       level: "Սահուն",
+      //     },
+      //   ],
+      //   academicActivities: [],
+      // },
       am: {
-        bio: "Հաջողությամբ ախտորոշել և բուժել ավելի քան 1500 հիվանդ էնդոկրին խնդիրներով՝ ներառյալ շաքարային դիաբետը, վահանաձև գեղձի հիվանդությունները և հորմոնալ անհավասարակշռությունները, ինչի արդյունքում հիվանդների  գոհունակության մակարդակը կազմել է 95%։ Հաջողությամբ ախտորոշել և բուժել ավելի քան 200 հիվանդ հետօպերացիոն բարդություններով, հետօպերացիոն հիպոթիրեոզով, հիպոպարաթիրեոզով։",
+        bio: "Successfully diagnosed and treated over 1,500 patients with endocrine disorders, including diabetes, thyroid diseases, and hormonal imbalances, resulting in a 95% patient satisfaction rate. Successfully diagnosed and treated more than 200 patients with postoperative complications, postoperative hypothyroidism, hypoparathyroidism.",
+        // Content data
         contact: {
           phone: "+374 98585520",
           email: "knarikbadeyan@mail.ru",
-          location: "Երևան, Շահամիրյան 51/1",
+          location: "Yerevan, Shahamiryan 51/1",
         },
         social: {
-          linkedin: "",
-          twitter: "",
+          linkedin: "", // Not provided
+          twitter: "", // Not provided
         },
         specialties: [
-          "Էնդոկրինոլոգ, վահանաձև գեղձի ՈւՁՀ և բարակ ասեղային ասպիրացիոն բիոպսիայի մասնագետ",
+          "Endocrinologist, Thyroid Ultrasound and FNAB Specialist",
         ],
         experience: [
           {
-            title: "Էնդոկրինոլոգ, վահանաձև գեղձի սոնոգրաֆիստ",
-            organization: "Կարդիոլաբ",
-            period: "2025 - մինչ օրս",
+            title: "Endocrinologist, Sonographer of Thyroid Gland",
+            organization: "Cardiolab",
+            period: "2025 – present",
             description: "",
           },
           {
-            title: "Էնդոկրինոլոգ",
-            organization: "Շենգավիթ բժշկական կենտրոն",
-            period: "2024 - մինչ օրս",
+            title: "Endocrinologist",
+            organization: "Shengavit Medical Centre",
+            period: "2024 – present",
             description: "",
           },
           {
-            title: "Էնդոկրինոլոգ, վահանաձև գեղձի սոնոգրաֆիստ",
-            organization: "MedExpress կլինիկա",
-            period: "2023 - մինչ օրս",
+            title: "Endocrinologist, Sonographer of Thyroid Gland",
+            organization: "MedExpress Clinic",
+            period: "2023 – present",
             description: "",
           },
           {
-            title: "Էնդոկրինոլոգ",
-            organization: "MedLine կլինիկա",
-            period: "2022 - մինչ օրս",
+            title: "Endocrinologist",
+            organization: "MedLine Clinic",
+            period: "2022 – present",
             description: "",
           },
           {
-            title: "Էնդոկրինոլոգ",
-            organization: "Նյու Մեդ կլինիկա",
-            period: "2021 - 2022",
+            title: "Endocrinologist",
+            organization: "New Med Clinic",
+            period: "2021 – 2022",
             description: "",
           },
           {
-            title: "Կլինիկական օրդինատոր, էնդոկրինոլոգիայի բաժին",
-            organization: "Մուրացան համալսարանական հիվանդանոց",
-            period: "2019 - 2021",
+            title: "Clinical Ordinator in Department of Endocrinology",
+            organization: "Muratsan University Hospital",
+            period: "2019 – 2021",
             description: "",
           },
         ],
         education: [
           {
-            degree: "Վահանաձև գեղձի նիհար ասպիրացիա",
-            institution: "",
+            degree: "Fine-Needle Aspiration of the Thyroid Gland",
+            institution: "", // No institution specified
             year: "2023",
           },
           {
-            degree: "Ուլտրաձայնային ախտորոշման մասնագիտացում",
-            institution: "Երևանի պետական բժշկական համալսարան",
-            year: "2022 հունվար - օգոստոս",
+            degree: "Specializing in Ultrasound Diagnostics",
+            institution: "Yerevan State Medical University",
+            year: "2022",
           },
           {
-            degree: "Էնդոկրինոլոգիայի բաժնի ռեզիդենտուրա",
-            institution: "Երևանի պետական բժշկական համալսարան",
-            year: "2019 - 2021",
+            degree: "Resident in Department of Endocrinology",
+            institution: "Yerevan State Medical University",
+            year: "2019 – 2021",
           },
           {
-            degree: "Բժիշկ",
+            degree: "Medical Doctor",
             institution:
-              "Երևանի պետական բժշկական համալսարան, ընդհանուր բժշկության ֆակուլտետ",
-            year: "2013 - 2019",
+              "Yerevan State Medical University, Faculty of General Medicine",
+            year: "2013 – 2019",
           },
         ],
         memberships: [
-          "Եվրոպական վահանաձև գեղձի ասոցիացիա",
-          "Եվրոպական էնդոկրինոլոգիայի ընկերություն",
-          "Հայկական վահանաձև գեղձի ասոցիացիա",
+          "European Thyroid Association",
+          "The European Society of Endocrinology",
+          "Armenian Thyroid Association",
         ],
         hobbies: [],
         achievements: [],
         publications: [],
         languages: [
           {
-            language: "Հայերեն",
-            level: "Մայրենի",
+            language: "Armenian",
+            level: "Native",
           },
           {
-            language: "Անգլերեն",
-            level: "Սահուն",
+            language: "English",
+            level: "Fluent",
           },
           {
-            language: "Ռուսերեն",
-            level: "Սահուն",
+            language: "Russian",
+            level: "Fluent",
           },
         ],
         academicActivities: [],
@@ -4793,8 +4893,8 @@ export const staff: StaffType = [
   {
     id: 15,
     name: {
-      am: "Աստղիկ Ավոտիքյան",
-      en: "Astghik Avotiqyan",
+      am: "Աստղիկ Ավետիքյան",
+      en: "Astghik Avetiqyan",
     },
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluzfsrDYCJcmH7QjURruLeMoFslfS6nVvkpdNb",

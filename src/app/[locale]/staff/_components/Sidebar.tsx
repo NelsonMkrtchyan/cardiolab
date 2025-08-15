@@ -5,6 +5,7 @@ import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import ImageWithCache from "~/components/ImageWithCache";
+import { useTranslations } from "next-intl";
 // Keep the old import as a fallback in case we need to revert
 // import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
@@ -40,6 +41,8 @@ const Sidebar = ({
   showSocial = false,
   showSpecialties = true,
 }: SidebarI) => {
+  const t = useTranslations("CV");
+
   return (
     <>
       <div className="doctor-details-item doctor-details-left">
@@ -124,7 +127,7 @@ const Sidebar = ({
           specialties.length > 0 &&
           specialties.some((specialty) => specialty) && (
             <div className="doctor-details-specialties">
-              <h3>Specialties</h3>
+              <h3>{t("Specialties")}</h3>
               <div className="specialty-tags">
                 {specialties.map(
                   (specialty, index) =>

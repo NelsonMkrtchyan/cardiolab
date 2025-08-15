@@ -115,7 +115,8 @@
     "AcademicActivities": "Академическая деятельность",
     "Languages": "Языки",
     "Membership": "Членство",
-    "Hobbies": "Хобби"
+    "Hobbies": "Хобби",
+    "Specialties": "Специализации"
   },
   "Forms": {
     "ContactForm": {
