@@ -2784,12 +2784,13 @@ export const staff: StaffType = [
         education: [
           {
             year: "2025",
-            degree: "Certificate of training fellowship",
+            degree: "Training fellowship - Nice, France",
             institution: "Chu de nice hopital pasteur, cardiology department",
           },
           {
             year: "2024",
-            degree: "Clinical and research internship – Brussels, Belgium",
+            degree:
+              "Clinical and research internship in Heart failure and Pulmonary hipertension – Brussels, Belgium",
             institution:
               "Erasme academic hospital, cardiac insufficiency and pulmonary vascular disease clinic",
           },
@@ -2823,7 +2824,7 @@ export const staff: StaffType = [
           {
             year: "2021",
             degree:
-              "Certificate of attendance in salzburg weill cornell seminar in lipid metabolism and cardiovascular risk",
+              "Certificate of attendance in salzburg weill cornell seminar in lipid metabolism and cardiovascular risk - Salzburg, Austria",
             institution: "Open medical institute",
           },
           {
@@ -2922,6 +2923,14 @@ export const staff: StaffType = [
             description:
               "Malkhasyan I. E., Hovakimyan M. H., Terteryan A. M., Martirosyan G. E., Avetisyan Q. A., Vardanyan A. K., Hovhannisyan M. R. Sisakian H.S.",
           },
+          {
+            title:
+              "On the problem of processing statistical data of clinical analysis",
+            journal:
+              "Proceedings of engineering academy of Armenia ISSN 1829-0043",
+            year: "2025",
+            description: "M.H. Hovakimyan, H.H. Hovakimyan",
+          },
         ],
         languages: [
           {
@@ -3008,12 +3017,13 @@ export const staff: StaffType = [
         education: [
           {
             year: "2025",
-            degree: "Ֆելոուշիփի սերտիֆիկատ",
+            degree: "Կլինիկական վերապատրաստում - Նիս, Ֆրանսիա",
             institution: "Նիս քաղաքի Pasteur հիվանդանոց, Սրտաբանության բաժին",
           },
           {
             year: "2024",
-            degree: "Կլինիկական և հետազոտական փորձառություն - Բրյուսել, Բելգիա",
+            degree:
+              "Սրտային անբավարարության եվ Թոքային հիպերտենզիայի Կլինիկական եվ գիտահետազոտական վերապատրաստում - Բրյուսել, Բելգիա",
             institution:
               "Erasme ակադեմիական հիվանդանոց, Սրտային անբավարարության և թոքային անոթային հիվանդությունների կլինիկա",
           },
@@ -3045,7 +3055,7 @@ export const staff: StaffType = [
           {
             year: "2021",
             degree:
-              "Մասնակցություն՝ Սալցբուրգի Weill Cornell սեմինար՝ Լիպիդային մետաբոլիզմ և սրտանոթային ռիսկ",
+              "Մասնակցություն՝ Սալցբուրգի Weill Cornell սեմինար՝ Լիպիդային մետաբոլիզմ և սրտանոթային ռիսկ - Զալցբուրգ, Ավստրիա",
             institution: "Բաց բժշկական ինստիտուտ",
           },
           {
@@ -3143,6 +3153,13 @@ export const staff: StaffType = [
             year: "2024",
             description:
               "Ի.Ե. Մալխասյան, Մ.Հ. Հովակիմյան, Ա.Մ. Տերտերյան, Գ.Ե. Մարտիրոսյան, Ք.Ա. Ավետիսյան, Ա.Կ. Վարդանյան, Մ.Ռ. Հովհաննիսյան, Հ.Ս. Սիսակյան",
+          },
+          {
+            title:
+              "Կլինիկական Վերլուծության վիճակագրական տվյալների մշակման հարցի մասին",
+            journal: "Հայաստանի Ճարտարագիտական ակադեմիայի լրաբեր",
+            year: "2025",
+            description: "Մ.Հ. Հովակիմյան, Հ.Հ. Հովակիմյան",
           },
         ],
         languages: [
