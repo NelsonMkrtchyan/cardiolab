@@ -266,6 +266,61 @@ const armenianPodcasts = [
       "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlum83LyDGaVxeR9o1ihQPJszYySDklZFETMgqw)",
     date: new Date(new Date().setDate(new Date().getDate() - 2)),
   },
+  //   ##############
+  {
+    id: 25,
+    title: "Կարդիոլաբ 25",
+    description:
+      "Բժշկական պահովագրություն, հիվանդանոցային մահեր, սրտի փոխպատվաստում",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=9NS4lMU2hxc",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluvYncjhkBOredpWR2N9YyhZbqVn4KCwD15mIt)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
+  {
+    id: 26,
+    title: "Կարդիոլաբ 26",
+    description:
+      "Սնունդը և դրա հետևանքը սրտի աշխատանքի վրա, գաստրոէնտերոլոգիան ՀՀ-ում ",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=w2BkyPSw1kc",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluMI626FSmxf0AaeIb7tJwXUHG2sKPOWnoQLik)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
+  {
+    id: 27,
+    title: "Կարդիոլաբ 27",
+    description:
+      "Էֆթանազիա, Մեծ Բրիտանիայի և Հայաստանի առողջապահական համակարգերի տարբերությունները",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=mm8sCQAwL8o",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu1sniHh2GN8X3FsiITKCzR9wVM5lohEmPqWDv)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
+  {
+    id: 28,
+    title: "Կարդիոլաբ 28",
+    description:
+      "Բնական ու կեսարյան հատումով ծննդաբերության խնդիրները, նեոնատոլոգիա",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=L_-X1QA5Zic",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2x7fVHS3aYOs6XAhJVHKowrlz1WfdjyPxt0I)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
+  {
+    id: 29,
+    title: "Կարդիոլաբ 29",
+    description: "Ինչպես չհիվանդանալ սիրտանոթային հիվանդություններով",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=VH7tyvuHDBk",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTN3aaaIO67xl130tYVbZmnvuKAkc2dHC9ghD)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
 ];
 
 export const podcasts: PodcastsI = {
