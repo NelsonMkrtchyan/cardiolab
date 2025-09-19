@@ -2434,19 +2434,150 @@ export const staff: StaffType = [
     visibility: true,
     personalInfo: {
       flags: {
-        showBio: true,
+        showBio: false,
         showExperience: true,
         showEducation: true,
         showPublications: false,
         showAchievements: false,
         showLanguages: false,
-        showMemberships: true,
-        showHobbies: false,
+        showMemberships: false,
+        showHobbies: true,
         showContact: false,
         showSocial: false,
         showSpecialties: true,
       },
-      am: defaultPersonalSingleInfo,
+      am: {
+        ...defaultPersonalSingleInfo,
+        specialties: [
+          "Բազմաթիվ ընթացիկ խնդիրների արդյունավետ լուծելու կարողություն",
+          "Թիմային աշխատանքի ընդունակություն",
+          "Թվային և կոմունիկացիոն տեխնոլոգիաների հմուտ օգտատեր",
+          "Նոր միջավայրում արագ ադապտացում",
+        ],
+        hobbies: [
+          "Բազմաթիվ մասնագիտական սեմինարների և ֆորումների մասնակցություն և դասավանդում",
+          "Մասնագիտական և գեղարվեստական գրքերի շարունակական ընթերցանություն",
+          "Մասնագիտական և գեղարվեստական գրքերի շարունակական ընթերցանություն",
+        ],
+        experience: [
+          {
+            period: "2025 – մինչ օրս",
+            title: "Ֆունկցիոնալ ախտորոշման արտաբան",
+            organization: "CardioLab Բ/Կ - Երևան",
+            description: "ԷՍԳ/Հոլտեր հետազոտության վերլուծում և ախտորոշում",
+          },
+          {
+            period: "2017 – մինչ օրս",
+            title: "Ֆունկցիոնալ ախտորոշման արտաբան",
+            organization: "«Նորք-Մարաշ» Բ/Կ - Երևան",
+            description: "ԷՍԳ/Հոլտեր հետազոտության վերլուծում և ախտորոշում",
+          },
+          {
+            period: "2012 – 2017",
+            title: "Ֆունկցիոնալ ախտորոշման արտաբան",
+            organization: "«Աստղիկ» Բ/Կ - Երևան",
+            description: "Հոլտեր հետազոտության վերլուծում և ախտորոշում",
+          },
+          {
+            period: "2008 – 2013",
+            title: "Ֆունկցիոնալ ախտորոշման արտաբան",
+            organization: "Առիթմոլոգիական սրտաբանական կենտրոն - Երևան",
+            description: "Հոլտեր հետազոտության վերլուծում և ախտորոշում",
+          },
+          {
+            period: "2002 – 2017",
+            title: "Դասախոս",
+            organization: "Երևանի Պետական Տնտեսագիտական Համալսարան - Երևան",
+            description: "Առաջին բուժօգնության դասավանդում",
+          },
+          {
+            period: "2002 – 2008",
+            title: "Ֆունկցիոնալ ախտորոշման արտաբան",
+            organization: "«Դիագնոստիկա» Բ/Կ - Երևան",
+            description:
+              "Հոլտեր հետազոտության վերլուծում և ախտորոշում, ԷՍԳ հետազոտության վերլուծում",
+          },
+        ],
+        education: [
+          {
+            year: "1997 - 2000",
+            degree: "Կլինիկական օրդինատոր սրտաբանություն մասնագիտությամբ",
+            institution:
+              "Հերացու անվան Պետական Բժշկական Համալսարանի Ներքին հիվանդությունների պրոպեդևտիկայի ամբիոն－Երևան",
+          },
+          {
+            year: "1991 - 1997",
+            degree: "Բակալավր",
+            institution: "Երևանի Պետական Բժշկական Համալսարան－Երևան",
+          },
+        ],
+      },
+      en: {
+        ...defaultPersonalSingleInfo,
+        specialties: [
+          "Ability to effectively solve multiple ongoing issues",
+          "Ability to work in a team",
+          "Proficient user of digital and communication technologies",
+          "Quick adaptation to new environments",
+        ],
+        hobbies: [
+          "Participation in and teaching at numerous professional seminars and forums",
+          "Continuous reading of professional and artistic books",
+          "Continuous reading of professional and artistic books",
+        ],
+        experience: [
+          {
+            period: "2025 – present",
+            title: "Functional Diagnostics Specialist",
+            organization: "CardioLab Medical Center - Yerevan",
+            description: "Analysis and diagnosis of ECG/Holter examinations",
+          },
+          {
+            period: "2017 – present",
+            title: "Functional Diagnostics Specialist",
+            organization: "Nork-Marash Medical Center - Yerevan",
+            description: "Analysis and diagnosis of ECG/Holter examinations",
+          },
+          {
+            period: "2012 – 2017",
+            title: "Functional Diagnostics Specialist",
+            organization: "Astghik Medical Center - Yerevan",
+            description: "Analysis and diagnosis of Holter examinations",
+          },
+          {
+            period: "2008 – 2013",
+            title: "Functional Diagnostics Specialist",
+            organization: "Arrhythmology Cardiology Center - Yerevan",
+            description: "Analysis and diagnosis of Holter examinations",
+          },
+          {
+            period: "2002 – 2017",
+            title: "Lecturer",
+            organization: "Yerevan State University of Economics - Yerevan",
+            description: "Teaching first aid",
+          },
+          {
+            period: "2002 – 2008",
+            title: "Functional Diagnostics Specialist",
+            organization: "Diagnostica Medical Center - Yerevan",
+            description:
+              "Analysis of Holter examinations, analysis of ECG examinations",
+          },
+        ],
+        education: [
+          {
+            year: "1997 - 2000",
+            degree: "Clinical Residency in Cardiology",
+            institution:
+              "Department of Propaedeutics of Internal Diseases, Yerevan State Medical University named after Heratsi – Yerevan",
+          },
+          {
+            year: "1991 - 1997",
+            degree: "Bachelor’s Degree",
+            institution: "Yerevan State Medical University – Yerevan",
+          },
+        ],
+      },
     },
   },
   {
