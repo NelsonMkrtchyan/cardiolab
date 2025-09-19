@@ -202,15 +202,15 @@ const ContactForm = () => {
                       className="swiper-image"
                     />
                   </SwiperSlide>
-                  <SwiperSlide>
-                    <ImageWithLoader
-                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu7ZZJ3LYxTDGf3YpRJEC1nwk6tWHeNq5xSbUv"
-                      alt="Contact"
-                      width={600}
-                      height={400}
-                      className="swiper-image"
-                    />
-                  </SwiperSlide>
+                  {/*<SwiperSlide>*/}
+                  {/*  <ImageWithLoader*/}
+                  {/*    src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu7ZZJ3LYxTDGf3YpRJEC1nwk6tWHeNq5xSbUv"*/}
+                  {/*    alt="Contact"*/}
+                  {/*    width={600}*/}
+                  {/*    height={400}*/}
+                  {/*    className="swiper-image"*/}
+                  {/*  />*/}
+                  {/*</SwiperSlide>*/}
                 </Swiper>
               </div>
             </div>

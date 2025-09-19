@@ -246,6 +246,88 @@ export const folderThree = [
     url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluCDK9Rrdaf8bZiGYOrPwlsj3kyBnh9IME71Ad",
   },
 ];
+export const ECG_Summer_School = [
+  {
+    id: 1,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu4Evl89ZTf7FiK13PNukgH8nRVZomx2jIXGJ0",
+  },
+  {
+    id: 2,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluUGJkdhyKH8iq9JfWbMhmzve5Dcts4drwOu3a",
+  },
+  {
+    id: 3,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu4i6o7GTf7FiK13PNukgH8nRVZomx2jIXGJ0T",
+  },
+  {
+    id: 4,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlukEdCw818CWlutzVsAX5GYHg2UMFhrJwcpLD1",
+  },
+  {
+    id: 5,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluX0Mch5yOa6TkeElYqHKS8hzy4uf7mr9tC0MB",
+  },
+  {
+    id: 6,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu1XCNmd2GN8X3FsiITKCzR9wVM5lohEmPqWDv",
+  },
+  {
+    id: 7,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlumRNmtcGaVxeR9o1ihQPJszYySDklZFETMgqw",
+  },
+  {
+    id: 8,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlufmUqhQZz5N7IdOAeZ04QFuoWqrbmxjn9MY1P",
+  },
+  {
+    id: 9,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlukkn7Vc18CWlutzVsAX5GYHg2UMFhrJwcpLD1",
+  },
+  {
+    id: 10,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluliqG6uMlwLGxNyrzmhHCndEJXZ3UWqbTPseR",
+  },
+  {
+    id: 11,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlurhnF0EaeYIC83uB6qxw4oELhg1Dmita70Wkz",
+  },
+  {
+    id: 12,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlug13eb8fviePapmd4fjRNBXFSt1CEhgvq2b0r",
+  },
+  {
+    id: 13,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJNh2GZgHJqI5EuVZFjgRGzykmXKNTw4WcSeQ",
+  },
+  {
+    id: 14,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluJYkeUTgHJqI5EuVZFjgRGzykmXKNTw4WcSeQ",
+  },
+  {
+    id: 15,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlundusProz8iXtIHULns6k3RoJDbzQgEqF9Vf7",
+  },
+  {
+    id: 16,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlugyqSkyviePapmd4fjRNBXFSt1CEhgvq2b0rM",
+  },
+  {
+    id: 17,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlufapkqk8Zz5N7IdOAeZ04QFuoWqrbmxjn9MY1",
+  },
+  {
+    id: 18,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlusOjen018WicdTAJnxzvMXoFQljg5qw7fEkbR",
+  },
+  {
+    id: 19,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluUoO7sgyKH8iq9JfWbMhmzve5Dcts4drwOu3a",
+  },
+  {
+    id: 20,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluxmpgJDfVspCYkb9tWP0X6eLDhnRHOl7fTjaE",
+  },
+];
 
 export type GalleryFolderItemType = {
   id: number;
@@ -266,7 +348,7 @@ export const galleryImages: GalleryImagesType = [
   {
     id: 1,
     name: {
-      en: "First Image Folder",
+      en: "Two-day practical training course in echocardiography (February 27-28, 2025)",
       am: "Էխոսրտագրության երկօրյա գիտագործնական դասընթաց (27-28 փետրվարի, 2025)",
       ru: "Первая папка",
     },
@@ -277,7 +359,7 @@ export const galleryImages: GalleryImagesType = [
   {
     id: 2,
     name: {
-      en: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
+      en: "Official opening of CardioLab (January 31, 2025)",
       am: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
       ru: "ԿարդիոԼաբ-ի պաշտոնական բացումը (31 հունվարի, 2025)",
     },
@@ -288,13 +370,24 @@ export const galleryImages: GalleryImagesType = [
   {
     id: 3,
     name: {
-      en: "«Լիպիդային փոխանակություն և սիրտանոթային ռիսկ» խորագրով սեմինար",
+      en: 'Seminar on "Lipid Metabolism and Cardiovascular Risk"',
       am: "«Լիպիդային փոխանակություն և սիրտանոթային ռիսկ» խորագրով սեմինար",
       ru: "«Լիպիդային փոխանակություն և սիրտանոթային ռիսկ» խորագրով սեմինար",
     },
     date: new Date("2025-04-11"),
     bannerUrl: `url(${folderThree[0]?.url})`,
     list: folderThree,
+  },
+  {
+    id: 4,
+    name: {
+      en: 'CardioLab ECG Summer school"',
+      am: "ԿարդիոԼաբ-ի ԷՍԳ ամառային դպրոց",
+      ru: "«Լիպիդային փոխանակություն և սիրտանոթային ռիսկ» խորագրով սեմինար",
+    },
+    date: new Date("2025-08-31"),
+    bannerUrl: `url(${ECG_Summer_School[0]?.url})`,
+    list: ECG_Summer_School,
   },
 ];
 export const galleryVideos: GalleryVideosType = [];
