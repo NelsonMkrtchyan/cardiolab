@@ -147,7 +147,7 @@ const ServicesList = () => {
                                             key={doctorId}
                                             href={`/staff/details/${doctor.id}`}
                                           >
-                                            {doctor.name.am}
+                                            {doctor.name[locale]}
                                             {index <
                                               (service.doctorsList?.length ??
                                                 0) -
