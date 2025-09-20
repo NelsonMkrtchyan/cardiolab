@@ -121,7 +121,10 @@ const ServicesList = () => {
                     <ul className="services-list">
                       {services.map((service: ServiceType) => (
                         <li key={service.id} className="service-item">
-                          <span className="service-name">{service.name}</span>
+                          {/*<span className="service-name">{service.name}</span>*/}
+                          <span className="service-name">
+                            {service.name[locale]}
+                          </span>
 
                           {service.doctorsList &&
                             service.doctorsList.length > 0 && (

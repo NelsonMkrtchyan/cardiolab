@@ -1,3 +1,5 @@
+import { type LocaleString } from "~/constants/staff";
+
 export enum ServicesCategory {
   Consultation = "consultation",
   DuplexScan = "duplexScan", // Մագիստրալ անոթների դուպլեքս հետազոտություն
@@ -8,7 +10,8 @@ export enum ServicesCategory {
 
 export type ServiceType = {
   id: number;
-  name: string;
+  // name: string;
+  name: LocaleString;
   price: number;
   description?: string;
   category: ServicesCategory;
@@ -40,388 +43,13 @@ const cardioDoctorsIdsConsultationTeam = [1, 3, 7, 25, 4, 24, 2, 6, 27, 8, 9];
 const nursesIds = [19];
 
 // Armenian service names used for all languages
-// OLD ONE
-// const services: ServiceType[] = [
-//   {
-//     id: 34,
-//     name: "Սրտաբանի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: cardioDoctorsIdsConsultationTeam,
-//   },
-//   {
-//     id: 35,
-//     name: "Սրտաբան-առիթմոլոգի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [1],
-//   },
-//   {
-//     id: 36,
-//     name: "Մանկական սրտաբանի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [5],
-//   },
-//   {
-//     id: 37,
-//     name: "Ինվազիվ մանկական սրտաբանի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [2],
-//   },
-//   {
-//     id: 38,
-//     name: "Սրտային անբավարարության մասնագետի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [1, 3, 24],
-//   },
-//   {
-//     id: 39,
-//     name: "Աղեստամոքսաբանի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [13],
-//   },
-//   {
-//     id: 40,
-//     name: "Ներզատաբանի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [11],
-//   },
-//   {
-//     id: 41,
-//     name: "Նյարդաբանի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [12],
-//   },
-//   {
-//     id: 42,
-//     name: "Թերապևտի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [13],
-//   },
-//   {
-//     id: 43,
-//     name: "Անոթային վիրաբույժի խորհրդատվություն",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [16],
-//   },
-//   {
-//     id: 14,
-//     name: "Հոգեբանական խորհրդատվություն",
-//     price: 25000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [17],
-//   },
-//   {
-//     id: 15,
-//     name: "Հոգեբանական կրկնակի խորհրդատվություն",
-//     price: 20000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [],
-//     hideInServicesPage: true,
-//   },
-//   {
-//     id: 1,
-//     name: "Առողջ ապրելակերպի մասնագետի խորհրդատվություն",
-//     price: 20000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [18],
-//   },
-//   // ######### ######### ######### ######### ######### ######### ######### #########
-//   {
-//     id: 9,
-//     name: "ԷՍԳ, ԷխոՍԳ, սրտաբանի խորհրդատվություն",
-//     price: 28000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIdsConsultationTeam,
-//   },
-//   {
-//     id: 8,
-//     name: "ԷՍԳ – 12Ա",
-//     price: 4000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: nursesIds,
-//   },
-//   {
-//     id: 7,
-//     name: "Էխոսրտագրություն մեծահասակի",
-//     price: 13000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 6,
-//     name: "Էխոսրտագրություն մանկական",
-//     price: 13000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: [5],
-//   },
-//   {
-//     id: 32,
-//     name: "Ֆետալ էխոՍԳ",
-//     price: 20000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: [5],
-//   },
-//   {
-//     id: 33,
-//     name: "Ֆետալ էխոՍԳ + սրտաբանի խորհրդատվություն",
-//     price: 30000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: [5],
-//   },
-//   {
-//     id: 13,
-//     name: "Կոնտրաստ ԷխոՍԳ (bubble study)",
-//     price: 25000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: [5],
-//   },
-//   {
-//     id: 12,
-//     name: "Խորացված ԷխոՍԳ",
-//     price: 25000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 28,
-//     name: "Սթրես ԷՍԳ",
-//     price: 18000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 47,
-//     name: "Սթրես ԷխոՍԳ",
-//     price: 22000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//
-//   {
-//     id: 26,
-//     name: "Սթրես ԷխոՍԳ + սրտաբանի խորհրդատվություն",
-//     price: 32000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 29,
-//     name: "Սթրես ԷՍԳ + սրտաբանի խորհրդատվություն",
-//     price: 28000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   // #################################################################################
-//   {
-//     id: 16,
-//     name: "Հոլտեր քննություն 24 ժամ",
-//     price: 22000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 18,
-//     name: "Հոլտեր քննություն 48 ժամ",
-//     price: 33000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 19,
-//     name: "Հոլտեր քննություն 72 ժամ",
-//     price: 45000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 21,
-//     name: "Հոլտեր քննություն մինչեւ 7 oր",
-//     price: 60000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 20,
-//     name: "Հոլտեր քննություն մինչեւ 14 օր",
-//     price: 99000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 22,
-//     name: "Հոլտեր քննություն մինչեւ մինչեւ 30 օր",
-//     price: 160000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 17,
-//     name: "Հոլտեր քննություն 24 ժամ + սրտաբանի խորհրդատվություն",
-//     price: 32000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 53,
-//     name: "Հոլտեր քննություն",
-//     price: 0,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     hideInServicesPage: false,
-//     hideInPriceListPage: true,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   // #################################################################################
-//   {
-//     id: 5,
-//     name: "ԶՃ ամբուլատոր մոնիտորինգ 24 ժամ",
-//     price: 12000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: cardioDoctorsIds,
-//   },
-//   {
-//     id: 31,
-//     name: "Սրտի ռիթմավար սարքերի քննություն",
-//     price: 12000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: [7],
-//   },
-//   {
-//     id: 25,
-//     name: "Ուլտրաձայնային հետազոտություն ",
-//     price: 15000,
-//     description: "",
-//     category: ServicesCategory.Ultrasound,
-//     doctorsList: [11, 14],
-//   },
-//   {
-//     id: 48,
-//     name: "Ուլտրաձայնային հետազոտություն (յուրաքանչյուր հաջորդ հավելյալ հատված)",
-//     price: 12000,
-//     description: "",
-//     category: ServicesCategory.Ultrasound,
-//     doctorsList: [11, 14],
-//   },
-//   {
-//     id: 23,
-//     name: "Մագիստրալ անոթների դուպլեքս հետազոտություն(1 հատված)",
-//     price: 20000,
-//     description: "",
-//     category: ServicesCategory.DuplexScan,
-//     doctorsList: [15],
-//   },
-//   {
-//     id: 24,
-//     name: "Մագիստրալ անոթների դուպլեքս հետազոտություն (յուրաքանչյուր հաջորդ հավելյալ հատված)",
-//     price: 12000,
-//     description: "",
-//     category: ServicesCategory.DuplexScan,
-//     doctorsList: [15],
-//   },
-//   {
-//     id: 51,
-//     name: "Սրտային անբավարարության ամբուլատոր խնամք (օրավարձային)",
-//     price: 40000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: [1, 3, 24],
-//   },
-//   {
-//     id: 4,
-//     name: "Բժիշկ-մասնագետի հեռավար խորհրդատվություն",
-//     price: 30000,
-//     description: "",
-//     category: ServicesCategory.Consultation,
-//     doctorsList: [],
-//   },
-//   {
-//     id: 2,
-//     name: "Արտագնա հոլտեր քննություն 24 ժամ",
-//     price: 35000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: [],
-//   },
-//   {
-//     id: 52,
-//     name: "Տարեկան կանխարգելիչ բուժ․ զննում",
-//     price: 50000,
-//     description: "",
-//     category: ServicesCategory.PreventiveScreening,
-//     doctorsList: [],
-//     hideInServicesPage: true,
-//     hideInPriceListPage: true,
-//   },
-//   {
-//     id: 11,
-//     name: "Իմպլանտացվող սրտի մոնիտորի իմպլանտացիա",
-//     price: 1200000,
-//     description: "",
-//     category: ServicesCategory.CardiacCare,
-//     doctorsList: [],
-//   },
-//   // #################################################################################
-// ];
-
-// Armenian service names used for all languages
 const services: ServiceType[] = [
   {
     id: 1,
-    name: "Էխոսրտագրություն մեծահասակի",
+    name: {
+      am: "Էխոսրտագրություն մեծահասակի",
+      en: "Adult Echocardiography",
+    },
     price: 13000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -429,7 +57,10 @@ const services: ServiceType[] = [
   },
   {
     id: 2,
-    name: "Էխոսրտագրություն մանկական",
+    name: {
+      am: "Էխոսրտագրություն մանկական",
+      en: "Child Echocardiography",
+    },
     price: 13000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -437,7 +68,10 @@ const services: ServiceType[] = [
   },
   {
     id: 3,
-    name: "Ֆետալ էխոՍԳ",
+    name: {
+      am: "Ֆետալ էխոՍԳ",
+      en: "Fetal echocardiography",
+    },
     price: 20000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -445,7 +79,10 @@ const services: ServiceType[] = [
   },
   {
     id: 4,
-    name: "Կոնտրաստ ԷխոՍԳ (bubble study)",
+    name: {
+      am: "Կոնտրաստ ԷխոՍԳ (bubble study)",
+      en: "Contrast Echocardiography (bubble study)",
+    },
     price: 25000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -453,7 +90,10 @@ const services: ServiceType[] = [
   },
   {
     id: 37,
-    name: "Մագիստրալ անոթների դուպլեքս հետազոտություն",
+    name: {
+      am: "Մագիստրալ անոթների դուպլեքս հետազոտություն",
+      en: "Duplex examination of major vessels",
+    },
     price: 20000,
     description: "",
     category: ServicesCategory.DuplexScan,
@@ -461,7 +101,10 @@ const services: ServiceType[] = [
   },
   {
     id: 38,
-    name: "Ուլտրաձայնային հետազոտություն",
+    name: {
+      am: "Ուլտրաձայնային հետազոտություն",
+      en: "Ultrasound examination",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Ultrasound,
@@ -469,7 +112,10 @@ const services: ServiceType[] = [
   },
   {
     id: 5,
-    name: "Սթրես էխոսրտագրություն",
+    name: {
+      am: "Սթրես էխոսրտագրություն",
+      en: "Stress echocardiography",
+    },
     price: 22000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -477,7 +123,10 @@ const services: ServiceType[] = [
   },
   {
     id: 6,
-    name: "ԷՍԳ – 12Ա",
+    name: {
+      am: "ԷՍԳ – 12Ա",
+      en: "ECG – 12A",
+    },
     price: 4000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -485,7 +134,10 @@ const services: ServiceType[] = [
   },
   {
     id: 60,
-    name: "Սկլերոթերապիա",
+    name: {
+      am: "Սկլերոթերապիա",
+      en: "Sclerotherapy",
+    },
     price: 25000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -493,7 +145,10 @@ const services: ServiceType[] = [
   },
   {
     id: 8,
-    name: "Հոլտեր քննություն 24 ժամ",
+    name: {
+      am: "Հոլտեր քննություն 24 ժամ",
+      en: "Holter exam 24 hours",
+    },
     price: 22000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -501,7 +156,10 @@ const services: ServiceType[] = [
   },
   {
     id: 9,
-    name: "Հոլտեր քննություն 48 ժամ",
+    name: {
+      am: "Հոլտեր քննություն 48 ժամ",
+      en: "Holter exam 48 hours",
+    },
     price: 33000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -509,7 +167,10 @@ const services: ServiceType[] = [
   },
   {
     id: 34,
-    name: "Հոլտեր քննություն մինչև 7 oր",
+    name: {
+      am: "Հոլտեր քննություն մինչև 7 oր",
+      en: "Holter exam up to 7 days",
+    },
     price: 60000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -517,7 +178,10 @@ const services: ServiceType[] = [
   },
   {
     id: 35,
-    name: "Հոլտեր քննություն մինչև 14 օր",
+    name: {
+      am: "Հոլտեր քննություն մինչև 14 օր",
+      en: "Holter exam up to 14 days",
+    },
     price: 99000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -525,7 +189,10 @@ const services: ServiceType[] = [
   },
   {
     id: 12,
-    name: "Հոլտեր քննություն մինչև մինչև 30 օր",
+    name: {
+      am: "Հոլտեր քննություն մինչև մինչև 30 օր",
+      en: "Holter exam up to 30 days",
+    },
     price: 160000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -533,7 +200,10 @@ const services: ServiceType[] = [
   },
   {
     id: 13,
-    name: "ԶՃ ամբուլատոր մոնիտորինգ 24 ժամ",
+    name: {
+      am: "ԶՃ ամբուլատոր մոնիտորինգ 24 ժամ",
+      en: "24-hour ambulatory cardiac monitoring",
+    },
     price: 12000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -541,7 +211,10 @@ const services: ServiceType[] = [
   },
   {
     id: 14,
-    name: "Սրտի ռիթմավար սարքերի քննություն",
+    name: {
+      am: "Սրտի ռիթմավար սարքերի քննություն",
+      en: "Cardiac pacemaker examination",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -549,7 +222,10 @@ const services: ServiceType[] = [
   },
   {
     id: 15,
-    name: "Սրտային անբավարարության ամբուլատոր խնամք",
+    name: {
+      am: "Սրտային անբավարարության ամբուլատոր խնամք",
+      en: "Outpatient care for heart failure",
+    },
     price: 10000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -557,7 +233,10 @@ const services: ServiceType[] = [
   },
   {
     id: 16,
-    name: "Իմպլանտացվող սրտի մոնիտորի իմպլանտացիա",
+    name: {
+      am: "Իմպլանտացվող սրտի մոնիտորի իմպլանտացիա",
+      en: "Implantable cardiac monitor implantation",
+    },
     price: 1200000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -565,7 +244,10 @@ const services: ServiceType[] = [
   },
   {
     id: 39,
-    name: "Բժիշկ-մասնագետի խորհրդատվություն",
+    name: {
+      am: "Բժիշկ-մասնագետի խորհրդատվություն",
+      en: "Consultation with a doctor",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -573,7 +255,10 @@ const services: ServiceType[] = [
   },
   {
     id: 41,
-    name: "Բժիշկ-մասնագետի հեռավար խորհրդատվություն",
+    name: {
+      am: "Բժիշկ-մասնագետի հեռավար խորհրդատվություն",
+      en: "Remote consultation with a doctor",
+    },
     price: 30000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -581,7 +266,10 @@ const services: ServiceType[] = [
   },
   {
     id: 29,
-    name: "Հոգեբանական խորհրդատվություն",
+    name: {
+      am: "Հոգեբանական խորհրդատվություն",
+      en: "Psychological counseling",
+    },
     price: 25000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -589,7 +277,10 @@ const services: ServiceType[] = [
   },
   {
     id: 30,
-    name: "ԷՍԳ, ԷխոՍԳ, սրտաբանի խորհրդատվություն",
+    name: {
+      am: "ԷՍԳ, ԷխոՍԳ, սրտաբանի խորհրդատվություն",
+      en: "ECG, Echocardiogram, cardiologist consultation",
+    },
     price: 28000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -597,7 +288,10 @@ const services: ServiceType[] = [
   },
   {
     id: 32,
-    name: "Սթրես ԷխոՍԳ + սրտաբանի խորհրդատվություն",
+    name: {
+      am: "Սթրես ԷխոՍԳ + սրտաբանի խորհրդատվություն",
+      en: "Stress Echocardiography + cardiologist consultation",
+    },
     price: 32000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -605,7 +299,10 @@ const services: ServiceType[] = [
   },
   {
     id: 42,
-    name: "ԷՍԳ, ԷխոՍԳ, սրտաբանի խորհրդատվություն, 24ժ.Հոլտեր քննություն",
+    name: {
+      am: "ԷՍԳ, ԷխոՍԳ, սրտաբանի խորհրդատվություն, 24ժ.Հոլտեր քննություն",
+      en: "ECG, Echocardiogram, cardiologist consultation, 24-hour Holter exam",
+    },
     price: 45000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -613,7 +310,10 @@ const services: ServiceType[] = [
   },
   {
     id: 43,
-    name: "Մագիստրալ անոթների դուպլեքս հետազոտություն(յուրաքանչյուր հաջորդ հավելյալ հատված)",
+    name: {
+      am: "Մագիստրալ անոթների դուպլեքս հետազոտություն(յուրաքանչյուր հաջորդ հավելյալ հատված)",
+      en: "Duplex examination of the main vessels (each additional segment)",
+    },
     price: 12000,
     description: "",
     category: ServicesCategory.DuplexScan,
@@ -621,7 +321,10 @@ const services: ServiceType[] = [
   },
   {
     id: 44,
-    name: "Արտագնա հոլտեր քննություն 24 ժամ",
+    name: {
+      am: "Արտագնա հոլտեր քննություն 24 ժամ",
+      en: "Outpatient Holter exam 24 hours",
+    },
     price: 35000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -629,7 +332,10 @@ const services: ServiceType[] = [
   },
   {
     id: 45,
-    name: "Հոլտեր քննություն 24 ժամ  + սրտաբանի խորհրդատվություն",
+    name: {
+      am: "Հոլտեր քննություն 24 ժամ  + սրտաբանի խորհրդատվություն",
+      en: "Holter exam 24 hours + cardiologist consultation",
+    },
     price: 32000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -637,7 +343,10 @@ const services: ServiceType[] = [
   },
   {
     id: 46,
-    name: "Սթրես ԷՍԳ  + սրտաբանի խորհրդատվություն",
+    name: {
+      am: "Սթրես ԷՍԳ  + սրտաբանի խորհրդատվություն",
+      en: "Stress ECG + cardiologist consultation",
+    },
     price: 28000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -645,7 +354,10 @@ const services: ServiceType[] = [
   },
   {
     id: 47,
-    name: "Ֆետալ էխոՍԳ + սրտաբանի խորհրդատվություն",
+    name: {
+      am: "Ֆետալ էխոՍԳ + սրտաբանի խորհրդատվություն",
+      en: "Fetal echocardiography + cardiologist consultation",
+    },
     price: 30000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -653,7 +365,10 @@ const services: ServiceType[] = [
   },
   {
     id: 51,
-    name: "Կրկնակի հոգեբանական խորհրդատվություն",
+    name: {
+      am: "Կրկնակի հոգեբանական խորհրդատվություն",
+      en: "Double psychological consultation",
+    },
     price: 20000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -662,7 +377,10 @@ const services: ServiceType[] = [
   },
   {
     id: 54,
-    name: "Հոլտեր քննություն 72 ժամ",
+    name: {
+      am: "Հոլտեր քննություն 72 ժամ",
+      en: "Holter exam 72 hours",
+    },
     price: 45000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -670,7 +388,10 @@ const services: ServiceType[] = [
   },
   {
     id: 55,
-    name: "Առողջ ապրելակերպի հերթական խորհրդատվություն",
+    name: {
+      am: "Առողջ ապրելակերպի հերթական խորհրդատվություն",
+      en: "Regular healthy lifestyle consultation",
+    },
     price: 20000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -678,7 +399,10 @@ const services: ServiceType[] = [
   },
   {
     id: 56,
-    name: "Խորացված ԷխոՍԳ",
+    name: {
+      am: "Խորացված ԷխոՍԳ",
+      en: "Deep Echocardiography",
+    },
     price: 25000,
     description: "",
     category: ServicesCategory.CardiacCare,
@@ -686,7 +410,10 @@ const services: ServiceType[] = [
   },
   {
     id: 63,
-    name: "Մագիստրալ անոթների դուպլեքս հետազոտություն (4 հատված)",
+    name: {
+      am: "Մագիստրալ անոթների դուպլեքս հետազոտություն (4 հատված)",
+      en: "Duplex examination of the main vessels (4 sections)",
+    },
     price: 56000,
     description: "",
     category: ServicesCategory.DuplexScan,
@@ -694,7 +421,10 @@ const services: ServiceType[] = [
   },
   {
     id: 64,
-    name: "Ուլտրաձայնային հետազոտություն (2 հատված)",
+    name: {
+      am: "Ուլտրաձայնային հետազոտություն (2 հատված)",
+      en: "Ultrasound examination (2 sections)",
+    },
     price: 20000,
     description: "",
     category: ServicesCategory.Ultrasound,
@@ -702,7 +432,10 @@ const services: ServiceType[] = [
   },
   {
     id: 67,
-    name: "Տ․Հովակիմյան Բժիշկ-մասնագետի խորհրդատվություն ",
+    name: {
+      am: "Տ․Հովակիմյան Բժիշկ-մասնագետի խորհրդատվություն ",
+      en: "T. Hovakimyan Specialist consultation",
+    },
     price: 32000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -710,7 +443,10 @@ const services: ServiceType[] = [
   },
   {
     id: 7,
-    name: "Սթրես ԷՍԳ",
+    name: {
+      am: "Սթրես ԷՍԳ",
+      en: "Stress ECG",
+    },
     price: 18000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -718,7 +454,10 @@ const services: ServiceType[] = [
   },
   {
     id: 66,
-    name: "Թարգմանված տեղեկանքի տրամադրում",
+    name: {
+      am: "Թարգմանված տեղեկանքի տրամադրում",
+      en: "Providing a translated reference",
+    },
     price: 30000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -726,7 +465,10 @@ const services: ServiceType[] = [
   },
   {
     id: 62,
-    name: "Մագիստրալ անոթների դուպլեքս հետազոտություն (3 հատված)",
+    name: {
+      am: "Մագիստրալ անոթների դուպլեքս հետազոտություն (3 հատված)",
+      en: "Duplex examination of the main vessels (3 sections)",
+    },
     price: 44000,
     description: "",
     category: ServicesCategory.DuplexScan,
@@ -734,7 +476,10 @@ const services: ServiceType[] = [
   },
   {
     id: 57,
-    name: "Ուլտրաձայնային հետազոտություն (յուրաքանչյուր հաջորդ հավելյալ հատված)",
+    name: {
+      am: "Ուլտրաձայնային հետազոտություն (յուրաքանչյուր հաջորդ հավելյալ հատված)",
+      en: "Ultrasound examination (each subsequent additional segment)",
+    },
     price: 5000,
     description: "",
     category: ServicesCategory.Ultrasound,
@@ -742,7 +487,10 @@ const services: ServiceType[] = [
   },
   {
     id: 65,
-    name: "Ուլտրաձայնային հետազոտություն (3 հատված)",
+    name: {
+      am: "Ուլտրաձայնային հետազոտություն (3 հատված)",
+      en: "Ultrasound examination (3 sections)",
+    },
     price: 25000,
     description: "",
     category: ServicesCategory.Ultrasound,
@@ -750,7 +498,10 @@ const services: ServiceType[] = [
   },
   {
     id: 68,
-    name: "Տաթևիկ Հովակիմյան խորհրդատվություն",
+    name: {
+      am: "Տաթևիկ Հովակիմյան խորհրդատվություն",
+      en: "Tatevik Hovakimyan Consulting",
+    },
     price: 20000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -758,7 +509,10 @@ const services: ServiceType[] = [
   },
   {
     id: 69,
-    name: "Արփինե Սիմոնյան խորհրդատվություն",
+    name: {
+      am: "Արփինե Սիմոնյան խորհրդատվություն",
+      en: "Arpine Simonyan Consulting",
+    },
     price: 20000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -766,7 +520,10 @@ const services: ServiceType[] = [
   },
   {
     id: 70,
-    name: "Կատարինե Վարդանյան խորհրդատվություն",
+    name: {
+      am: "Կատարինե Վարդանյան խորհրդատվություն",
+      en: "Katarine Vardanyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -774,7 +531,10 @@ const services: ServiceType[] = [
   },
   {
     id: 71,
-    name: "Մարիամ Մինասյան խորհրդատվություն",
+    name: {
+      am: "Մարիամ Մինասյան խորհրդատվություն",
+      en: "Mariam Minasyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -782,7 +542,10 @@ const services: ServiceType[] = [
   },
   {
     id: 72,
-    name: "Աննա Գևորգյան խորհրդատվություն",
+    name: {
+      am: "Աննա Գևորգյան խորհրդատվություն",
+      en: "Anna Gevorgyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -790,7 +553,10 @@ const services: ServiceType[] = [
   },
   {
     id: 73,
-    name: "Մարիամ Հովակիմյան խորհրդատվություն",
+    name: {
+      am: "Մարիամ Հովակիմյան խորհրդատվություն",
+      en: "Mariam Hovakimyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -798,7 +564,10 @@ const services: ServiceType[] = [
   },
   {
     id: 74,
-    name: "Նադեժդա Իսկանդարյան խորհրդատվություն",
+    name: {
+      am: "Նադեժդա Իսկանդարյան խորհրդատվություն",
+      en: "Nadezhda Iskandaryan consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -806,7 +575,10 @@ const services: ServiceType[] = [
   },
   {
     id: 75,
-    name: "Գևորգ Պետրոսյան խորհրդատվություն",
+    name: {
+      am: "Գևորգ Պետրոսյան խորհրդատվություն",
+      en: "Gevorg Petrosyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -814,7 +586,10 @@ const services: ServiceType[] = [
   },
   {
     id: 76,
-    name: "Իզաբելլա Բարեկյան խորհրդատվություն",
+    name: {
+      am: "Իզաբելլա Բարեկյան խորհրդատվություն",
+      en: "Isabella Barekyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -822,7 +597,10 @@ const services: ServiceType[] = [
   },
   {
     id: 77,
-    name: "Մերի Պապիկյան խորհրդատվություն",
+    name: {
+      am: "Մերի Պապիկյան խորհրդատվություն",
+      en: "Mery Papikyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -830,7 +608,10 @@ const services: ServiceType[] = [
   },
   {
     id: 78,
-    name: "Տաթևիկ Սիմոնյան խորհրդատվություն",
+    name: {
+      am: "Տաթևիկ Սիմոնյան խորհրդատվություն",
+      en: "Tatevik Simonyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -838,7 +619,10 @@ const services: ServiceType[] = [
   },
   {
     id: 79,
-    name: "Քնարիկ Բադեյան խորհրդատվություն",
+    name: {
+      am: "Քնարիկ Բադեյան խորհրդատվություն",
+      en: "Knarik Badeyan consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -846,7 +630,10 @@ const services: ServiceType[] = [
   },
   {
     id: 80,
-    name: "Անահիտ Ոսկանյան խորհրդատվություն",
+    name: {
+      am: "Անահիտ Ոսկանյան խորհրդատվություն",
+      en: "Anahit Voskanyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -854,7 +641,10 @@ const services: ServiceType[] = [
   },
   {
     id: 81,
-    name: "Կարինե Մկրտչյան խորհրդատվություն",
+    name: {
+      am: "Կարինե Մկրտչյան խորհրդատվություն",
+      en: "Karine Mkrtchyan consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -862,7 +652,10 @@ const services: ServiceType[] = [
   },
   {
     id: 82,
-    name: "Աստղիկ Ավետիքյան խորհրդատվություն",
+    name: {
+      am: "Աստղիկ Ավետիքյան խորհրդատվություն",
+      en: "Astghik Avetikyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -870,7 +663,10 @@ const services: ServiceType[] = [
   },
   {
     id: 83,
-    name: "Աղունիկ Զաքարյան խորհրդատվություն",
+    name: {
+      am: "Աղունիկ Զաքարյան խորհրդատվություն",
+      en: "Aghunik Zakaryan consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
@@ -878,7 +674,10 @@ const services: ServiceType[] = [
   },
   {
     id: 84,
-    name: "Արթուր Հակոբյան խորհրդատվություն",
+    name: {
+      am: "Արթուր Հակոբյան խորհրդատվություն",
+      en: "Arthur Hakobyan Consulting",
+    },
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
