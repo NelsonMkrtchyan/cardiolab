@@ -5840,4 +5840,101 @@ export const staff: StaffType = [
       en: defaultPersonalSingleInfo,
     },
   },
+  //   #######
+  {
+    id: 23,
+    name: {
+      am: "Արթուր Հակոբյան",
+      en: "Arthur Hakobyan",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSH3gZgnEW7pyXzGrTZQb21kmdgPfAOJ8h3NC",
+    role: {
+      am: "Աանոթային վիրաբույժ",
+      en: "Vascular surgeon",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: true,
+    personalInfo: {
+      flags: {
+        showBio: false,
+        showExperience: false,
+        showEducation: false,
+        showPublications: false,
+        showAchievements: false,
+        showLanguages: false,
+        showMemberships: false,
+        showHobbies: false,
+        showContact: false,
+        showSocial: false,
+        showSpecialties: false,
+      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
+    },
+  },
+  {
+    id: 26,
+    name: {
+      am: "Լիլիթ Բարսեղյան",
+      en: "Lilit Barseghyan",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2r81oR3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+    role: {
+      am: "Ադմինիստրատոր",
+      en: "Administrator",
+    },
+    category: StaffCategory.AdministrativeStaff,
+    visibility: true,
+    personalInfo: {
+      flags: {
+        showBio: false,
+        showExperience: false,
+        showEducation: false,
+        showPublications: false,
+        showAchievements: false,
+        showLanguages: false,
+        showMemberships: false,
+        showHobbies: false,
+        showContact: false,
+        showSocial: false,
+        showSpecialties: false,
+      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
+    },
+  },
+  {
+    id: 27,
+    name: {
+      am: "Ռոզա Մարտիրոսյան",
+      en: "Roza Martirosyan",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2r81oR3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+    role: {
+      am: "Բուժքույր",
+      en: "Nurse",
+    },
+    category: StaffCategory.NursingStaff,
+    visibility: true,
+    personalInfo: {
+      flags: {
+        showBio: false,
+        showExperience: false,
+        showEducation: false,
+        showPublications: false,
+        showAchievements: false,
+        showLanguages: false,
+        showMemberships: false,
+        showHobbies: false,
+        showContact: false,
+        showSocial: false,
+        showSpecialties: false,
+      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
+    },
+  },
 ];
