@@ -75,7 +75,7 @@ const PriceList = () => {
               <tbody>
                 {localisedPriceList.map((service) => (
                   <tr key={service.id}>
-                    <td>{service.name}</td>
+                    <td>{service.name[locale]}</td>
                     <td className="text-right">{formatPrice(service.price)}</td>
                   </tr>
                 ))}
