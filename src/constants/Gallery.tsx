@@ -328,6 +328,88 @@ export const ECG_Summer_School = [
     url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluxmpgJDfVspCYkb9tWP0X6eLDhnRHOl7fTjaE",
   },
 ];
+export const SEPTEMBER_SEMINAR = [
+  {
+    id: 1,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluq80ydvwhOjyngHXWhEmI6MSGorCe32TBAusL",
+  },
+  {
+    id: 2,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluUeXrTAyKH8iq9JfWbMhmzve5Dcts4drwOu3a",
+  },
+  {
+    id: 3,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu3dNjum7N5s3FUueQwgdhBEa4x1ScGkiXJAzp",
+  },
+  {
+    id: 4,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlucpJbtSYMJsNvHm3UGC8DrElSOQopFL5AWiI0",
+  },
+  {
+    id: 5,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluZKRA95GraARMXrkUnhxzT0mdNIlYQPEivqbe",
+  },
+  {
+    id: 6,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluKijuT9RdDYjSWptezyXaocLl2MNEinROhP1C",
+  },
+  {
+    id: 7,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWludWY7fSPMTpgRZJcf6019kl5PLQv3SueECwxo",
+  },
+  {
+    id: 8,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu0jwClxqB3uh8TEZLPqWjlAOFybHiDawcvdgU",
+  },
+  {
+    id: 9,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlueITIN2c4t76bKABNX1vpMyZqWPS43EoxGDlk",
+  },
+  {
+    id: 10,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluIO9oL2EmOVFpZEU45sKoR6bt7NDSv82hyxfg",
+  },
+  {
+    id: 11,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu3nszpw7N5s3FUueQwgdhBEa4x1ScGkiXJAzp",
+  },
+  {
+    id: 12,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluwUzIXa2jTqyj7EoU2fdW9Z6mkaYKp0IhvM3H",
+  },
+  {
+    id: 13,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluIe0Ia9EmOVFpZEU45sKoR6bt7NDSv82hyxfg",
+  },
+  {
+    id: 14,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlupGX8e2t9E0NFskLoCO7QfyXM4AIan2bKlp6J",
+  },
+  {
+    id: 15,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlucXZQmdYMJsNvHm3UGC8DrElSOQopFL5AWiI0",
+  },
+  {
+    id: 16,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSaqY0jnEW7pyXzGrTZQb21kmdgPfAOJ8h3NC",
+  },
+  {
+    id: 17,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluEYLZZiJSpZQ36u72Hw8kvD5PiIMdXj9xVnB0",
+  },
+  {
+    id: 18,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluIYTweDEmOVFpZEU45sKoR6bt7NDSv82hyxfg",
+  },
+  {
+    id: 19,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubSz18DXldCU4c8A1oViQtsIJW2aZEXeySMgu",
+  },
+  {
+    id: 20,
+    url: "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu1cKylD2GN8X3FsiITKCzR9wVM5lohEmPqWDv",
+  },
+];
 
 export type GalleryFolderItemType = {
   id: number;
@@ -388,6 +470,17 @@ export const galleryImages: GalleryImagesType = [
     date: new Date("2025-08-31"),
     bannerUrl: `url(${ECG_Summer_School[0]?.url})`,
     list: ECG_Summer_School,
+  },
+  {
+    id: 5,
+    name: {
+      en: "September Seminar",
+      am: "Սեպտեմբերյան սեմինար",
+      ru: "Սեպտեմբերյան սեմինար",
+    },
+    date: new Date("2025-09-27"),
+    bannerUrl: `url(${SEPTEMBER_SEMINAR[0]?.url})`,
+    list: SEPTEMBER_SEMINAR,
   },
 ];
 export const galleryVideos: GalleryVideosType = [];
