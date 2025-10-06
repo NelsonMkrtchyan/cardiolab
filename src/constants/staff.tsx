@@ -5850,7 +5850,7 @@ export const staff: StaffType = [
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSH3gZgnEW7pyXzGrTZQb21kmdgPfAOJ8h3NC",
     role: {
-      am: "Աանոթային վիրաբույժ",
+      am: "Անոթային վիրաբույժ",
       en: "Vascular surgeon",
     },
     category: StaffCategory.MedicalStaff,
@@ -5880,7 +5880,7 @@ export const staff: StaffType = [
       en: "Lilit Barseghyan",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2r81oR3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluv9m7GKkBOredpWR2N9YyhZbqVn4KCwD15mIt",
     role: {
       am: "Ադմինիստրատոր",
       en: "Administrator",
@@ -5912,13 +5912,78 @@ export const staff: StaffType = [
       en: "Roza Martirosyan",
     },
     image:
-      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2r81oR3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluyiwU67b6zXn5IYo7kQ219avgmj3i8hJrKlsw",
     role: {
       am: "Բուժքույր",
       en: "Nurse",
     },
     category: StaffCategory.NursingStaff,
     visibility: true,
+    personalInfo: {
+      flags: {
+        showBio: false,
+        showExperience: false,
+        showEducation: false,
+        showPublications: false,
+        showAchievements: false,
+        showLanguages: false,
+        showMemberships: false,
+        showHobbies: false,
+        showContact: false,
+        showSocial: false,
+        showSpecialties: false,
+      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
+    },
+  },
+  //   ####### 06.10.2025
+  {
+    id: 28,
+    name: {
+      am: "Մանե Բադալյան",
+      en: "Mane Badalyan",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTipEO8IO67xl130tYVbZmnvuKAkc2dHC9ghD",
+    role: {
+      am: "",
+      en: "",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: false,
+    personalInfo: {
+      flags: {
+        showBio: false,
+        showExperience: false,
+        showEducation: false,
+        showPublications: false,
+        showAchievements: false,
+        showLanguages: false,
+        showMemberships: false,
+        showHobbies: false,
+        showContact: false,
+        showSocial: false,
+        showSpecialties: false,
+      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
+    },
+  },
+  {
+    id: 29,
+    name: {
+      am: "Վիկտորյա Մելոյան",
+      en: "Victoria Meloyan",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluubbBjJcGiQfWnFY4hBNrq8zcsHID6ePwJvag",
+    role: {
+      am: "",
+      en: "",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: false,
     personalInfo: {
       flags: {
         showBio: false,

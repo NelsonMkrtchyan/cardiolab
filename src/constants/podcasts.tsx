@@ -322,6 +322,18 @@ const armenianPodcasts = [
       "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTN3aaaIO67xl130tYVbZmnvuKAkc2dHC9ghD)",
     date: new Date(new Date().setDate(new Date().getDate() - 2)),
   },
+  //   ##############
+  {
+    id: 30,
+    title: "Կարդիոլաբ 30",
+    description:
+      "Ինտերվեցիոն ռադիոլոգիայի միջամտություններ, բժշկական ոլորտի զարգացում",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=4etocJun59o",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTiUyOaIO67xl130tYVbZmnvuKAkc2dHC9ghD)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
 ];
 
 const englishPodcasts = [
@@ -615,6 +627,18 @@ const englishPodcasts = [
     url: "https://www.youtube.com/watch?v=VH7tyvuHDBk",
     posterUrl:
       "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTN3aaaIO67xl130tYVbZmnvuKAkc2dHC9ghD)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
+  //   ##############
+  {
+    id: 30,
+    title: "CardioLab 30",
+    description:
+      "Interventional radiology interventions, medical field development",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=4etocJun59o",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTiUyOaIO67xl130tYVbZmnvuKAkc2dHC9ghD)",
     date: new Date(new Date().setDate(new Date().getDate() - 2)),
   },
 ];

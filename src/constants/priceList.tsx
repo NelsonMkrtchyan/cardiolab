@@ -38,8 +38,8 @@ export const categorizedServicesOrder = [
   ServicesCategory.PreventiveScreening, // is not visible
 ];
 
-const cardioDoctorsIds = [1, 3, 7, 25, 4, 24, 6, 27, 8, 9];
-const cardioDoctorsIdsConsultationTeam = [1, 3, 7, 25, 4, 24, 2, 6, 27, 8, 9];
+const cardioDoctorsIds = [1, 3, 7, 25, 4, 24, 6, 8, 9];
+const cardioDoctorsIdsConsultationTeam = [1, 3, 7, 25, 4, 24, 2, 6, 8, 9];
 const nursesIds = [19];
 
 // Armenian service names used for all languages
@@ -119,7 +119,8 @@ const services: ServiceType[] = [
     price: 22000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [...nursesIds],
+    // doctorsList: [...nursesIds],
+    doctorsList: [],
   },
   {
     id: 6,
@@ -130,7 +131,8 @@ const services: ServiceType[] = [
     price: 4000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    doctorsList: [...nursesIds],
+    // doctorsList: [...nursesIds],
+    doctorsList: [],
   },
   {
     id: 60,
@@ -430,17 +432,17 @@ const services: ServiceType[] = [
     category: ServicesCategory.Ultrasound,
     doctorsList: [11, 14],
   },
-  {
-    id: 67,
-    name: {
-      am: "Տ․Հովակիմյան Բժիշկ-մասնագետի խորհրդատվություն ",
-      en: "T. Hovakimyan Specialist consultation",
-    },
-    price: 32000,
-    description: "",
-    category: ServicesCategory.Consultation,
-    doctorsList: [1],
-  },
+  // {
+  //   id: 67,
+  //   name: {
+  //     am: "Տ․Հովակիմյան Բժիշկ-մասնագետի խորհրդատվություն ",
+  //     en: "T. Hovakimyan Specialist consultation",
+  //   },
+  //   price: 32000,
+  //   description: "",
+  //   category: ServicesCategory.Consultation,
+  //   doctorsList: [1],
+  // },
   {
     id: 7,
     name: {
@@ -549,7 +551,7 @@ const services: ServiceType[] = [
     price: 15000,
     description: "",
     category: ServicesCategory.Consultation,
-    doctorsList: [],
+    doctorsList: [6],
   },
   {
     id: 73,
