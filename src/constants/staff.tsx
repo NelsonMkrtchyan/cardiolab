@@ -5950,8 +5950,8 @@ export const staff: StaffType = [
       am: "",
       en: "",
     },
-    category: StaffCategory.MedicalStaff,
-    visibility: false,
+    category: StaffCategory.NursingStaff,
+    visibility: true,
     personalInfo: {
       flags: {
         showBio: false,
@@ -5979,11 +5979,44 @@ export const staff: StaffType = [
     image:
       "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluubbBjJcGiQfWnFY4hBNrq8zcsHID6ePwJvag",
     role: {
-      am: "",
-      en: "",
+      am: "Սրտաբան",
+      en: "Cardiologist",
     },
     category: StaffCategory.MedicalStaff,
-    visibility: false,
+    visibility: true,
+    personalInfo: {
+      flags: {
+        showBio: false,
+        showExperience: false,
+        showEducation: false,
+        showPublications: false,
+        showAchievements: false,
+        showLanguages: false,
+        showMemberships: false,
+        showHobbies: false,
+        showContact: false,
+        showSocial: false,
+        showSpecialties: false,
+      },
+      am: defaultPersonalSingleInfo,
+      en: defaultPersonalSingleInfo,
+    },
+  },
+  //   ####### 09.10.2025
+  {
+    id: 30,
+    name: {
+      am: "Նաիրա Գոգյան",
+      en: "Naira Gogyan",
+    },
+    image:
+      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu2r81oR3aYOs6XAhJVHKowrlz1WfdjyPxt0Ic",
+    role: {
+      am: "Ներզատաբան",
+      en: "Endocrinologist",
+    },
+    category: StaffCategory.MedicalStaff,
+    visibility: true,
     personalInfo: {
       flags: {
         showBio: false,

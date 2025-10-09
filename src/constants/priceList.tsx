@@ -18,6 +18,7 @@ export type ServiceType = {
   doctorsList?: number[]; // List of doctor IDs associated with the service
   hideInServicesPage?: boolean; // Optional field to hide service in the services page
   hideInPriceListPage?: boolean; // Optional field to hide service in the priceList page
+  doneByNurses?: boolean; // Optional field to show nurses as alist of doctors
 };
 
 export interface CardI {
@@ -40,7 +41,7 @@ export const categorizedServicesOrder = [
 
 const cardioDoctorsIds = [1, 3, 7, 25, 4, 24, 6, 8, 9];
 const cardioDoctorsIdsConsultationTeam = [1, 3, 7, 25, 4, 24, 2, 6, 8, 9];
-const nursesIds = [19];
+const nursesIds = [19, 27, 28];
 
 // Armenian service names used for all languages
 const services: ServiceType[] = [
@@ -120,7 +121,7 @@ const services: ServiceType[] = [
     description: "",
     category: ServicesCategory.CardiacCare,
     // doctorsList: [...nursesIds],
-    doctorsList: [],
+    doctorsList: [...cardioDoctorsIds],
   },
   {
     id: 6,
@@ -131,8 +132,8 @@ const services: ServiceType[] = [
     price: 4000,
     description: "",
     category: ServicesCategory.CardiacCare,
-    // doctorsList: [...nursesIds],
-    doctorsList: [],
+    doctorsList: [...nursesIds],
+    doneByNurses: true,
   },
   {
     id: 60,
@@ -313,7 +314,7 @@ const services: ServiceType[] = [
   {
     id: 43,
     name: {
-      am: "Մագիստրալ անոթների դուպլեքս հետազոտություն(յուրաքանչյուր հաջորդ հավելյալ հատված)",
+      am: "Մագիստրալ անոթների դուպլեքս հետազոտություն (յուրաքանչյուր հաջորդ հավելյալ հատված)",
       en: "Duplex examination of the main vessels (each additional segment)",
     },
     price: 12000,
@@ -451,7 +452,7 @@ const services: ServiceType[] = [
     },
     price: 18000,
     description: "",
-    category: ServicesCategory.Consultation,
+    category: ServicesCategory.CardiacCare,
     doctorsList: [...cardioDoctorsIds],
   },
   {

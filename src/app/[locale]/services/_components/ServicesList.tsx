@@ -122,16 +122,21 @@ const ServicesList = () => {
                       {services.map((service: ServiceType) => (
                         <li key={service.id} className="service-item">
                           {/*<span className="service-name">{service.name}</span>*/}
-                          <span className="service-name">
-                            {service.name[locale]}
-                          </span>
+                          <div className="col-6">
+                            <span className="service-name">
+                              {service.name[locale]}
+                            </span>
+                          </div>
 
                           {service.doctorsList &&
                             service.doctorsList.length > 0 && (
                               <div className="service-doctors col-6">
                                 <div className="col-2 doctors-label">
                                   <span className="">
-                                    {tGeneral("Doctors") || "Doctors"}:{" "}
+                                    {service.doneByNurses
+                                      ? tGeneral("Nurses")
+                                      : tGeneral("Doctors") || "Doctors"}
+                                    :{" "}
                                   </span>
                                 </div>
                                 <div className="col-8 doctors-list">
