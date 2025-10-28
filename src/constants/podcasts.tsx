@@ -334,6 +334,18 @@ const armenianPodcasts = [
       "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTiUyOaIO67xl130tYVbZmnvuKAkc2dHC9ghD)",
     date: new Date(new Date().setDate(new Date().getDate() - 2)),
   },
+  //   ##############
+  {
+    id: 31,
+    title: "Կարդիոլաբ 31",
+    description:
+      "Միջամտական սրտաբանություն, ներանոթային վիրահատություններ, AI-ի դերը բժշկության մեջ",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=LDS5XjEmc8s",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluP9H22IuI6WAbuR912pJOCqoksxfdhDYag8wy)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
 ];
 
 const englishPodcasts = [
@@ -639,6 +651,18 @@ const englishPodcasts = [
     url: "https://www.youtube.com/watch?v=4etocJun59o",
     posterUrl:
       "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluTiUyOaIO67xl130tYVbZmnvuKAkc2dHC9ghD)",
+    date: new Date(new Date().setDate(new Date().getDate() - 2)),
+  },
+  //   ##############
+  {
+    id: 31,
+    title: "CardioLab 31",
+    description:
+      "Interventional cardiology, endovascular surgery, the role of AI in medicine",
+    icon: <FaHeartbeat className="icon largest-icon-size mb-4" />,
+    url: "https://www.youtube.com/watch?v=LDS5XjEmc8s",
+    posterUrl:
+      "url(https://x41q9wll8l.ufs.sh/f/kPqN7718CWluP9H22IuI6WAbuR912pJOCqoksxfdhDYag8wy)",
     date: new Date(new Date().setDate(new Date().getDate() - 2)),
   },
 ];
