@@ -1,32 +1,54 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
-import {
-  type ServiceType,
-  ServicesCategory,
-  categorizedServicesOrder,
-  priceListData,
-} from "~/constants/priceList";
+import { useState, useEffect } from "react";
+import { ServicesCategory } from "~/constants/priceList";
 import type { LocaleT } from "~/types";
-import { staff, type EmployeeType } from "~/constants/staff";
 import { Link } from "~/i18n/routing";
+import { getAllServices } from "~/lib/sanity/queries";
+import { getLocalizedValue } from "~/lib/sanity/utils";
 
 const ServicesList = () => {
   const tService = useTranslations("Service");
   const tGeneral = useTranslations("General");
   const locale: string = useLocale();
-  const localisedPriceList = priceListData[locale as LocaleT];
+  const [services, setServices] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const [openCategory, setOpenCategory] = useState<string | null>(null);
 
+  const categorizedServicesOrder = [
+    ServicesCategory.Consultation,
+    ServicesCategory.CardiacCare,
+    ServicesCategory.Ultrasound,
+    ServicesCategory.DuplexScan,
+    ServicesCategory.PreventiveScreening,
+  ];
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const data = await getAllServices();
+        setServices(data || []);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+        setServices([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchServices();
+  }, []);
+
   // Group services by category
-  const servicesByCategory = categorizedServicesOrder.reduce<
-    Record<string, ServiceType[]>
-  >((acc: Record<string, ServiceType[]>, category: string) => {
-    acc[category] = localisedPriceList.filter(
-      (service: ServiceType) => service.category === category,
-    );
-    return acc;
-  }, {});
+  const servicesByCategory = categorizedServicesOrder.reduce<Record<string, any[]>>(
+    (acc: Record<string, any[]>, category: string) => {
+      acc[category] = services.filter(
+        (service: any) => service.category === category && !service.hideInServicesPage
+      );
+      return acc;
+    },
+    {}
+  );
 
   // Function to get category name from enum
   const getCategoryName = (category: ServicesCategory): string => {
@@ -92,12 +114,12 @@ const ServicesList = () => {
         </div>
 
         <div className="services-accordion">
-          {categorizedServicesOrder.map((category) => {
-            const services =
-              servicesByCategory[category]?.filter(
-                (service) => !service.hideInServicesPage,
-              ) ?? [];
-            if (services.length === 0) return null;
+          {loading ? (
+            <div className="text-center py-5">Loading services...</div>
+          ) : (
+            categorizedServicesOrder.map((category) => {
+              const categoryServices = servicesByCategory[category] ?? [];
+              if (categoryServices.length === 0) return null;
 
             const isOpen = openCategory === category;
             // const isOpen = true;
@@ -119,17 +141,16 @@ const ServicesList = () => {
                 {isOpen && (
                   <div className="accordion-content">
                     <ul className="services-list">
-                      {services.map((service: ServiceType) => (
-                        <li key={service.id} className="service-item">
-                          {/*<span className="service-name">{service.name}</span>*/}
+                      {servicesByCategory[category]?.map((service: any) => (
+                        <li key={service._id || service.id} className="service-item">
                           <div className="col-6">
                             <span className="service-name">
-                              {service.name[locale]}
+                              {getLocalizedValue(service.name, locale as LocaleT)}
                             </span>
                           </div>
 
-                          {service.doctorsList &&
-                            service.doctorsList.length > 0 && (
+                          {service.doctors &&
+                            service.doctors.length > 0 && (
                               <div className="service-doctors col-6">
                                 <div className="col-2 doctors-label">
                                   <span className="">
@@ -141,25 +162,17 @@ const ServicesList = () => {
                                 </div>
                                 <div className="col-8 doctors-list">
                                   <span className="">
-                                    {service.doctorsList?.map(
-                                      (doctorId: number, index: number) => {
-                                        const doctor = staff.find(
-                                          (doc: EmployeeType) =>
-                                            doc.id === doctorId &&
-                                            doc.visibility,
-                                        );
-                                        if (!doctor) return null;
+                                    {service.doctors?.map(
+                                      (doctor: any, index: number) => {
+                                        if (!doctor || !doctor.visibility) return null;
 
                                         return (
                                           <Link
-                                            key={doctorId}
+                                            key={doctor._id || doctor.id}
                                             href={`/staff/details/${doctor.id}`}
                                           >
-                                            {doctor.name[locale]}
-                                            {index <
-                                              (service.doctorsList?.length ??
-                                                0) -
-                                                1 && ", "}
+                                            {getLocalizedValue(doctor.name, locale as LocaleT)}
+                                            {index < service.doctors.length - 1 && ", "}
                                           </Link>
                                         );
                                       },
@@ -175,7 +188,8 @@ const ServicesList = () => {
                 )}
               </div>
             );
-          })}
+            })
+          )}
         </div>
       </div>
     </div>

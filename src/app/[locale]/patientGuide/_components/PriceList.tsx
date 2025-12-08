@@ -1,18 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import { priceListData } from "~/constants/priceList";
 import { type LocaleT } from "~/types";
+import { getServicesForPriceList } from "~/lib/sanity/queries";
+import { getLocalizedValue } from "~/lib/sanity/utils";
 // import { FaDownload } from "react-icons/fa";
 
 const PriceList = () => {
   const locale: string = useLocale();
   const t = useTranslations("PriceList");
-  const localisedPriceList = priceListData[locale as LocaleT].filter(
-    (data) => !data.hideInPriceListPage,
-  );
+  const [services, setServices] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const data = await getServicesForPriceList();
+        setServices(data || []);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+        setServices([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchServices();
+  }, []);
 
   // const handleDownload = () => {
   //   // PDF file path
@@ -73,12 +89,20 @@ const PriceList = () => {
                 </tr>
               </thead>
               <tbody>
-                {localisedPriceList.map((service) => (
-                  <tr key={service.id}>
-                    <td>{service.name[locale]}</td>
-                    <td className="text-right">{formatPrice(service.price)}</td>
+                {loading ? (
+                  <tr>
+                    <td colSpan={2} className="text-center py-5">
+                      Loading...
+                    </td>
                   </tr>
-                ))}
+                ) : (
+                  services.map((service) => (
+                    <tr key={service._id || service.id}>
+                      <td>{getLocalizedValue(service.name, locale as LocaleT)}</td>
+                      <td className="text-right">{formatPrice(service.price)}</td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { type ChangeEvent, type FormEvent, useState } from "react";
+import React, { type ChangeEvent, type FormEvent, useState, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { FaUserTie } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -8,8 +8,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaIdCard } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaUserMd } from "react-icons/fa";
-import { staff, StaffCategory } from "~/constants/staff";
 import { type LocaleT } from "~/types";
+import { getAllStaff } from "~/lib/sanity/queries";
 
 import "./DoctorAppointmentForm.css";
 
@@ -33,13 +33,29 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
 }) => {
   const tComponents = useTranslations("Components");
   const locale: string = useLocale();
+  const [medicalStaff, setMedicalStaff] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Filter only medical staff
-  const medicalStaff = staff.filter(
-    (member) => 
-      member.category === StaffCategory.MedicalStaff && 
-      member.visibility === true
-  );
+  useEffect(() => {
+    const fetchStaff = async () => {
+      try {
+        const data = await getAllStaff();
+        const medical = data.filter(
+          (member: any) =>
+            member.category === "medical" &&
+            member.visibility === true
+        );
+        setMedicalStaff(medical);
+      } catch (error) {
+        console.error("Error fetching staff:", error);
+        setMedicalStaff([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStaff();
+  }, []);
 
   const [formData, setFormData] = useState<FormData>({
     doctorId: preselectedDoctorId ? preselectedDoctorId.toString() : "",
