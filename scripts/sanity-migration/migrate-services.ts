@@ -4,8 +4,9 @@
  * Usage: npx tsx scripts/sanity-migration/migrate-services.ts
  */
 
+import './load-env';
 import { createClient } from '@sanity/client';
-import { priceList } from '../../src/constants/priceList';
+import { priceListData } from '../../src/constants/priceList';
 
 const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
@@ -14,6 +15,9 @@ const client = createClient({
   token: process.env.SANITY_API_TOKEN,
   useCdn: false,
 });
+
+// Get the services array (same for all locales)
+const services = priceListData.en;
 
 function createSlug(text: string): string {
   return text
@@ -24,14 +28,14 @@ function createSlug(text: string): string {
 
 async function migrateServices() {
   console.log('Starting services migration...');
-  console.log(`Total services to migrate: ${priceList.length}`);
+  console.log(`Total services to migrate: ${services.length}`);
 
-  for (const service of priceList) {
+  for (const service of services) {
     try {
       const slug = createSlug(service.name.en || service.name.am || '');
 
       // Map doctor IDs to references
-      const doctorReferences = service.doctorsIds?.map((doctorId) => ({
+      const doctorReferences = service.doctorsList?.map((doctorId) => ({
         _type: 'reference',
         _ref: `staff-${doctorId}`,
         _key: `doctor-${doctorId}`,

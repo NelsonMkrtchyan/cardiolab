@@ -14,7 +14,10 @@
     "start": "next start",
     "sanity:migrate:staff": "tsx scripts/sanity-migration/migrate-staff.ts",
     "sanity:migrate:services": "tsx scripts/sanity-migration/migrate-services.ts",
-    "sanity:migrate:all": "npm run sanity:migrate:staff && npm run sanity:migrate:services"
+    "sanity:migrate:gallery": "tsx scripts/sanity-migration/migrate-gallery.ts",
+    "sanity:migrate:all": "npm run sanity:migrate:staff && npm run sanity:migrate:services && npm run sanity:migrate:gallery",
+    "sanity:cleanup": "tsx scripts/sanity-migration/cleanup-all.ts",
+    "sanity:cleanup:single": "tsx scripts/sanity-migration/cleanup-single.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
@@ -49,6 +52,7 @@
     "resend": "^4.2.0",
     "sanity": "^4.20.3",
     "sass": "^1.80.7",
+    "styled-components": "^6.1.19",
     "sweetalert2": "^11.23.0",
     "swiper": "^11.1.14",
     "zod": "^3.23.3"

@@ -11,9 +11,9 @@
  * const doctors = await getStaffByCategory('medical');
  */
 
-import { getAllStaff, getStaffByCategory } from '@/lib/sanity/queries';
-import { getLocalizedValue } from '@/lib/sanity/utils';
-import { type Locale } from '@/lib/i18n/types';
+import { getAllStaff, getStaffByCategory } from '~/lib/sanity/queries';
+import { getLocalizedValue } from '~/lib/sanity/utils';
+import { type Locale } from '~/lib/i18n/types';
 
 interface StaffListProps {
   locale: Locale;

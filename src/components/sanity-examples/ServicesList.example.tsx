@@ -9,9 +9,9 @@
  * const services = await getServicesByCategory('consultation');
  */
 
-import { getAllServices, getServicesByCategory, getServicesForPriceList } from '@/lib/sanity/queries';
-import { getLocalizedValue } from '@/lib/sanity/utils';
-import { type Locale } from '@/lib/i18n/types';
+import { getAllServices, getServicesByCategory, getServicesForPriceList } from '~/lib/sanity/queries';
+import { getLocalizedValue } from '~/lib/sanity/utils';
+import { type Locale } from '~/lib/i18n/types';
 
 interface ServicesListProps {
   locale: Locale;

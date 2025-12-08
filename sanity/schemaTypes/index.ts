@@ -1,10 +1,10 @@
-import staff from './staff';
-import service from './service';
-import podcast from './podcast';
-import news from './news';
-import gallery from './gallery';
-import patientGuide from './patientGuide';
-import doctorGuide from './doctorGuide';
+import staff from '../schemas/staff';
+import service from '../schemas/service';
+import podcast from '../schemas/podcast';
+import news from '../schemas/news';
+import gallery from '../schemas/gallery';
+import patientGuide from '../schemas/patientGuide';
+import doctorGuide from '../schemas/doctorGuide';
 
 export const schemaTypes = [
   staff,
