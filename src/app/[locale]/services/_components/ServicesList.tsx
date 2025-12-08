@@ -164,7 +164,7 @@ const ServicesList = () => {
                                   <span className="">
                                     {service.doctors?.map(
                                       (doctor: any, index: number) => {
-                                        if (!doctor || !doctor.visibility) return null;
+                                        if (!doctor || doctor.visibility?.showInStaffPage !== true) return null;
 
                                         return (
                                           <Link

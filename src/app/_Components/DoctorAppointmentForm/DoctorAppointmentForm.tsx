@@ -43,7 +43,7 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
         const medical = data.filter(
           (member: any) =>
             member.category === "medical" &&
-            member.visibility === true
+            member.visibility?.showInStaffPage === true
         );
         setMedicalStaff(medical);
       } catch (error) {

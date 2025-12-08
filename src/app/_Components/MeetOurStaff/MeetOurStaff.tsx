@@ -65,7 +65,7 @@ const MeetOurStaff = () => {
                 <div className="text-center py-5">Loading...</div>
               ) : (
                 staff
-                  .filter((employee) => employee.visibility === true)
+                  .filter((employee) => employee.visibility?.showInLandingPage === true)
                   .map((employee) => (
                     <SwiperSlide key={employee._id || employee.id}>
                       <Card

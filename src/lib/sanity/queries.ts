@@ -79,7 +79,7 @@ export async function getAllServices() {
       hideInServicesPage,
       hideInPriceListPage,
       doneByNurses,
-      "doctors": doctors[]->{ id, name, role, "image": image.asset->url }
+      "doctors": doctors[]->{ id, name, role, "image": image.asset->url, visibility }
     }
   `);
 }
@@ -95,7 +95,7 @@ export async function getServicesByCategory(category: string) {
       description,
       category,
       price,
-      "doctors": doctors[]->{ id, name, role, "image": image.asset->url }
+      "doctors": doctors[]->{ id, name, role, "image": image.asset->url, visibility }
     }
   `,
     { category }
@@ -114,7 +114,7 @@ export async function getServiceBySlug(slug: string) {
       category,
       price,
       doneByNurses,
-      "doctors": doctors[]->{ id, name, role, "image": image.asset->url }
+      "doctors": doctors[]->{ id, name, role, "image": image.asset->url, visibility }
     }
   `,
     { slug }
