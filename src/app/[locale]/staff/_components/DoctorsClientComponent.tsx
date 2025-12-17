@@ -8,6 +8,8 @@ import ErrorMessage from "~/app/_Components/ErrorMessage";
 import { categorizedStaffOrder } from "~/constants/staff";
 import { useTranslations } from "next-intl";
 
+const PLACEHOLDER_IMAGE = "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSH3gZgnEW7pyXzGrTZQb21kmdgPfAOJ8h3NC";
+
 export default function DoctorsClientComponent() {
   const tStaff = useTranslations("Staff");
 
@@ -29,13 +31,13 @@ export default function DoctorsClientComponent() {
             {categorizedStaffOrder.map((category) => {
               const filteredStaff = staff.filter(
                 (employee) =>
-                  employee.category === category && employee.visibility,
+                  employee.category === category && employee.visibility?.showInStaffPage,
               );
 
               if (filteredStaff.length === 0) return null;
 
               return (
-                <>
+                <React.Fragment key={category}>
                   <div className="ptb-30 container">
                     <div className="section-title">
                       <h2>{tStaff(category)}</h2>
@@ -44,17 +46,21 @@ export default function DoctorsClientComponent() {
 
                   <div className={"staff-cards-area"}>
                     {filteredStaff.map((employee) => {
+                      const employeeWithPlaceholder = {
+                        ...employee,
+                        image: employee.image || PLACEHOLDER_IMAGE,
+                      };
                       return (
                         <div
-                          key={employee.id}
+                          key={`${category}-${employee.id}`}
                           className="staff-cards-wrapper col-10 col-sm-6 col-lg-3"
                         >
-                          <Card employee={employee} />
+                          <Card employee={employeeWithPlaceholder} />
                         </div>
                       );
                     })}
                   </div>
-                </>
+                </React.Fragment>
               );
             })}
           </div>

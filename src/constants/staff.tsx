@@ -111,7 +111,10 @@ export type EmployeeType = {
   image: string;
   role: LocaleString;
   category: StaffCategory;
-  visibility: boolean;
+  visibility: {
+    showInStaffPage?: boolean;
+    showInLandingPage?: boolean;
+  };
   personalInfo?: PersonalInfoType;
 };
 

@@ -2,32 +2,15 @@
 
 import { useTranslations } from "next-intl";
 import Card from "~/app/[locale]/staff/_components/Card";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "~/i18n/routing";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { getAllStaff } from "~/lib/sanity/queries";
+import { useStaffContext } from "~/app/_Components/providers/StaffProvider";
 
 const MeetOurStaff = () => {
   const tGeneral = useTranslations("General");
-  const [staff, setStaff] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchStaff = async () => {
-      try {
-        const data = await getAllStaff();
-        setStaff(data || []);
-      } catch (error) {
-        console.error("Error fetching staff:", error);
-        setStaff([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchStaff();
-  }, []);
+  const { staff, isLoading: loading } = useStaffContext();
 
   return (
     <>

@@ -6,6 +6,7 @@ import LandingSlider from "~/app/_Components/LandingSlider/LandingSlider";
 // import VideoIntro from "~/app/_Components/VideoIntro/VideoIntro";
 import AboutUsSection from "~/app/_Components/Landing/AboutUsSection/AboutUsSection";
 import MeetOurStaff from "~/app/_Components/MeetOurStaff/MeetOurStaff";
+import { StaffProvider } from "~/app/_Components/providers/StaffProvider";
 // import ContactInfo from "~/app/_Disin_components/common/ContactInfo";
 // import SatisfactionSurvey from "~/app/_Components/SatisfactionSurvey/SatisfactionSurvey";
 
@@ -13,7 +14,7 @@ export const dynamic = "force-dynamic";
 
 const HomePage = async () => {
   return (
-    <>
+    <StaffProvider>
       <LandingSlider />
 
       <AboutUsSection />
@@ -33,7 +34,7 @@ const HomePage = async () => {
       {/*<SatisfactionSurvey />*/}
 
       {/*<LatestBlogPost />*/}
-    </>
+    </StaffProvider>
   );
 };
 

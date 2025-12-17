@@ -18,13 +18,13 @@ const Card = ({ employee, className }: CardI) => {
         <Link className={"doctor-card-link"} href={employeeDetailPageLink}>
           <div className="doctor-item">
             <div className="doctor-top">
-              <ImageWithLoader
-                src={image}
-                alt="Doctor"
-                className="object-fit-cover"
-              />
-              {/*TODO: Uncomment in the future*/}
-              {/*<Link href="/appointment">Get Appointment</Link>*/}
+              {/*  <ImageWithLoader*/}
+              {/*    src={image}*/}
+              {/*    alt="Doctor"*/}
+              {/*    className="object-fit-cover"*/}
+              {/*  />*/}
+              {/*  /!*TODO: Uncomment in the future*!/*/}
+              {/*  /!*<Link href="/appointment">Get Appointment</Link>*!/*/}
             </div>
             <div className="doctor-bottom">
               {name && (
