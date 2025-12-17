@@ -21,7 +21,7 @@ const Carousel = ({
 
   if (!currentImageFolder) return null;
 
-  const { list } = currentImageFolder;
+  const images = currentImageFolder.images ?? [];
 
   function closeModal() {
     // Set the last viewed photo ID to help with scrolling when returning to the gallery
@@ -34,12 +34,10 @@ const Carousel = ({
   }
 
   function changePhotoId(newVal: number) {
-    if (newVal >= 0 && newVal < list.length) {
-      const imageId = list[newVal]?.id;
-      if (imageId !== undefined) {
-        // Navigate to the new image
-        router.push(`/gallery/images/${slug as string}/image/${imageId}`);
-      }
+    if (newVal >= 0 && newVal < images.length) {
+      const imageId = newVal + 1;
+      // Navigate to the new image
+      router.push(`/gallery/images/${slug as string}/image/${imageId}`);
     }
   }
 
@@ -94,7 +92,7 @@ const Carousel = ({
           <SharedModal
             index={index}
             changePhotoId={changePhotoId}
-            images={list}
+            images={images.map((img, idx) => ({ id: idx + 1, url: img.url }))}
             currentPhoto={currentPhoto}
             closeModal={closeModal}
             navigation={true}

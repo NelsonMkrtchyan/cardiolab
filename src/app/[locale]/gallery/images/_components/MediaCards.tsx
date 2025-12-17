@@ -3,16 +3,16 @@ import { useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import { useLastViewedPhoto } from "~/app/[locale]/gallery/_hooks/useLastViewedPhoto";
 import ImageWithLoader from "~/app/_Components/ImageWithLoader";
-import { type GalleryFolderType } from "~/constants/Gallery";
+import { type AppGalleryType } from "~/types/gallery";
 
 interface MediaCardsPropsI {
-  folder: GalleryFolderType;
+  folder: AppGalleryType;
 }
 
 const MediaCards = ({ folder }: MediaCardsPropsI) => {
   const { slug, imageId } = useParams();
 
-  const { list } = folder;
+  const images = folder.images ?? [];
 
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();
 
@@ -34,9 +34,10 @@ const MediaCards = ({ folder }: MediaCardsPropsI) => {
       <div className="media-area pt-100 pb-70">
         <div className="container">
           <div className="row g-2 justify-content-center">
-            {list.map(({ id, url }) => {
+            {images.map((image, index) => {
+              const imageIndex = index + 1;
               return (
-                <div key={id} className="col-sm-6 col-lg-3 media-container">
+                <div key={imageIndex} className="col-sm-6 col-lg-3 media-container">
                   <div
                     className="card-container"
                     style={{
@@ -49,9 +50,9 @@ const MediaCards = ({ folder }: MediaCardsPropsI) => {
                     }}
                   >
                     <Link
-                      href={`/gallery/images/${slug as string}/image/${id}`}
+                      href={`/gallery/images/${slug as string}/image/${imageIndex}`}
                       ref={
-                        id === Number(lastViewedPhoto)
+                        imageIndex === Number(lastViewedPhoto)
                           ? lastViewedPhotoRef
                           : null
                       }
@@ -72,8 +73,8 @@ const MediaCards = ({ folder }: MediaCardsPropsI) => {
                         }}
                       >
                         <ImageWithLoader
-                          src={`${url}`}
-                          alt={`Gallery image ${id}`}
+                          src={image.url}
+                          alt={image.caption ?? `Gallery image ${imageIndex}`}
                           className="gallery-image"
                           fill={true}
                         />

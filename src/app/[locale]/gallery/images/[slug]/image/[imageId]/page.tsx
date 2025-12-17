@@ -11,14 +11,21 @@ const Page: NextPage = () => {
 
   const { currentImageFolder } = useGallery();
 
-  const currentPhoto = currentImageFolder?.list.find(
-    (image) => image.id === Number(imageId),
-  );
+  const images = currentImageFolder?.images ?? [];
+  const imageIndex = Number(imageId) - 1;
+  const currentImage = images[imageIndex];
+
+  const currentPhoto = currentImage
+    ? {
+        id: Number(imageId),
+        url: currentImage.url,
+      }
+    : null;
 
   return (
     <>
       {currentPhoto && (
-        <Carousel index={currentPhoto.id} currentPhoto={currentPhoto} />
+        <Carousel index={imageIndex} currentPhoto={currentPhoto} />
       )}
     </>
   );

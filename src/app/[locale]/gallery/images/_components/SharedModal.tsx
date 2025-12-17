@@ -19,11 +19,6 @@ export default function SharedModal({
 }: SharedModalProps) {
   const [loaded, setLoaded] = useState(false);
 
-  // const filteredImages = images?.filter((img: any) => {
-  //   const newIndex = images.findIndex((obj) => obj.id === img.id);
-  //   return range(index - 6, index + 6).includes(newIndex);
-  // });
-
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       if (images && index < images.length - 1) {

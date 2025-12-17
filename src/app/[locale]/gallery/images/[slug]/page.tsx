@@ -2,29 +2,42 @@
 
 import React from "react";
 import PageBanner from "~/app/_Components/PageBanner/PageBanner";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import useGallery from "~/app/[locale]/gallery/_hooks/useGallery";
 import MediaCards from "~/app/[locale]/gallery/images/_components/MediaCards";
 import ImagesDB from "~/constants/ImageDatabase.json";
-import { type LocaleT } from "~/types";
 
 export default function Page() {
-  const locale: string = useLocale();
-
   const tMenu = useTranslations("Menu");
-  const { currentImageFolder } = useGallery();
+  const { currentImageFolder, loading } = useGallery();
+
+  if (loading) {
+    return (
+      <div className="container pt-100 pb-70">
+        <p className="text-center">Loading gallery...</p>
+      </div>
+    );
+  }
+
+  if (!currentImageFolder) {
+    return (
+      <div className="container pt-100 pb-70">
+        <p className="text-center">Gallery not found.</p>
+      </div>
+    );
+  }
 
   return (
     <>
       <PageBanner
-        pageTitle={currentImageFolder?.name[locale as LocaleT] as string}
+        pageTitle={currentImageFolder.title}
         homePageUrl="/gallery/images"
         homePageText={tMenu("Gallery.Gallery")}
         activePageText={tMenu("Gallery.Folder")}
         bgImage={`${ImagesDB.AbstractImages.abstract_five}`}
       />
 
-      {currentImageFolder && <MediaCards folder={currentImageFolder} />}
+      <MediaCards folder={currentImageFolder} />
     </>
   );
 }

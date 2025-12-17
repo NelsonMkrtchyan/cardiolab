@@ -1,31 +1,33 @@
 "use client";
 
 import React from "react";
-import { type GalleryFolderType } from "~/constants/Gallery";
+import { type AppGalleryType } from "~/types/gallery";
 import { useLocale } from "next-intl";
 import { formattingDate } from "~/utils/workingWithDates";
-import "dayjs/locale/ru"; // Import the Russian locale
+import "dayjs/locale/ru";
 import "dayjs/locale/hy-am";
 import { Link } from "~/i18n/routing";
 import ImageWithLoader from "~/app/_Components/ImageWithLoader";
-import { type LocaleT } from "~/types";
 
 interface FolderCardI {
-  folder: GalleryFolderType;
+  folder: AppGalleryType;
 }
 
 const FolderCard = ({ folder }: FolderCardI) => {
   const locale: string = useLocale();
-  const { id, name, date, bannerUrl } = folder;
+  const { slug, title, publishedAt, coverImage, images } = folder;
+
+  const bannerUrl = coverImage?.url ?? images?.[0]?.url ?? "";
+  const date = publishedAt ? new Date(publishedAt) : new Date();
 
   return (
     <>
       <div className="col-sm-6 col-lg-4 gallery-card">
         <div className="gallery-card-content-container">
-          <Link href={`/gallery/images/${id}`}>
+          <Link href={`/gallery/images/${slug}`}>
             <div className="gallery-item">
               <div className="gallery-text-wrapper">
-                <h3>{name[locale as LocaleT] as string}</h3>
+                <h3>{title}</h3>
               </div>
               <div
                 className="banner"
@@ -38,11 +40,8 @@ const FolderCard = ({ folder }: FolderCardI) => {
                 }}
               >
                 <ImageWithLoader
-                  src={bannerUrl
-                    .replace("url(", "")
-                    .replace(")", "")
-                    .replace(/["']/g, "")}
-                  alt={name[locale as LocaleT] as string}
+                  src={bannerUrl}
+                  alt={title}
                   fill={true}
                   className="object-fit-cover"
                 />
