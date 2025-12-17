@@ -152,7 +152,7 @@ async function migratePodcasts() {
         ...(thumbnailAsset && { thumbnail: thumbnailAsset }),
         // Primary video URL from YouTube
         videoUrl: englishPodcast.url,
-        // Published date converted to ISO string
+        // Published date from constants
         publishedAt: englishPodcast.date.toISOString(),
         // Tags can be populated later
         tags: [],
