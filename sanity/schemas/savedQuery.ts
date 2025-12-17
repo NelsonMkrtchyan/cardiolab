@@ -46,11 +46,9 @@ export default defineType({
     defineField({
       name: 'query',
       title: 'GROQ Query',
-      type: 'code',
-      options: {
-        language: 'groq',
-        highlightedLines: [],
-      },
+      type: 'text',
+      rows: 10,
+      description: 'Write your GROQ query here',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
