@@ -121,10 +121,10 @@ export interface CardI {
 
 type StaffType = EmployeeType[];
 
-export const defaultPersonalInfoFlags = {
+export const defaultPersonalInfoFlags: PersonalInfoFlags = {
   showBio: true,
-  showExperience: true,
-  showEducation: true,
+  showExperience: false,
+  showEducation: false,
   showPublications: false,
   showAchievements: false,
   showLanguages: false,
@@ -132,7 +132,8 @@ export const defaultPersonalInfoFlags = {
   showHobbies: false,
   showContact: false,
   showSocial: false,
-  showSpecialties: true,
+  showAcademicActivities: false,
+  showSpecialties: false,
 };
 
 export const defaultPersonalSingleInfo = {

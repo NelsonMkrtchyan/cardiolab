@@ -13,10 +13,9 @@ import {
   defaultPersonalInfoFlags,
   defaultPersonalSingleInfo,
   type PersonalInfoSingleType,
-  type PersonalInfoFlags,
 } from "~/constants/staff";
-import { useLocale, useTranslations } from "next-intl";
-import { type LocaleT } from "~/types";
+import { useTranslations } from "next-intl";
+import { type PersonalInfoFlags } from "~/types/staff";
 
 export interface DetailsContentProps {
   name: string | null;

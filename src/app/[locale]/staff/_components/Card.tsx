@@ -7,6 +7,10 @@ const Card: React.FC<CardProps> = ({ employee, className }) => {
   const { id, image, name, role } = employee;
 
   const employeeDetailPageLink = `/staff/details/${id}`;
+  const PLACEHOLDER_IMAGE =
+    "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSH3gZgnEW7pyXzGrTZQb21kmdgPfAOJ8h3NC";
+
+  console.log("employee", employee);
   return (
     <>
       <div className={`doctor-card ${className}`}>
@@ -14,7 +18,7 @@ const Card: React.FC<CardProps> = ({ employee, className }) => {
           <div className="doctor-item">
             <div className="doctor-top">
               <ImageWithLoader
-                src={image}
+                src={image || PLACEHOLDER_IMAGE}
                 alt="Doctor"
                 className="object-fit-cover"
               />

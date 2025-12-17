@@ -45,12 +45,15 @@ const MeetOurStaff = () => {
               }}
             >
               {loading ? (
-                <div className="text-center py-5">Loading...</div>
+                <div className="py-5 text-center">Loading...</div>
               ) : (
                 staff
-                  .filter((employee) => employee.visibility?.showInLandingPage === true)
+                  .filter(
+                    (employee) =>
+                      employee.visibility?.showInLandingPage === true,
+                  )
                   .map((employee) => (
-                    <SwiperSlide key={employee._id || employee.id}>
+                    <SwiperSlide key={employee.id}>
                       <Card
                         employee={employee}
                         className={"landing-meet-our-staff"}
