@@ -159,6 +159,7 @@ export async function getPodcastById(podcastId: number) {
     *[_type == "podcast" && id == $podcastId][0] {
       _id,
       id,
+      slug,
       title,
       description,
       "thumbnail": thumbnail.asset->url,
@@ -171,6 +172,28 @@ export async function getPodcastById(podcastId: number) {
     }
   `,
     { podcastId }
+  );
+}
+
+export async function getPodcastBySlug(slug: string) {
+  return client.fetch(
+    `
+    *[_type == "podcast" && slug.current == $slug][0] {
+      _id,
+      id,
+      slug,
+      title,
+      description,
+      "thumbnail": thumbnail.asset->url,
+      audioUrl,
+      videoUrl,
+      publishedAt,
+      duration,
+      "hosts": hosts[]->{ id, name, role, "image": image.asset->url },
+      tags
+    }
+  `,
+    { slug }
   );
 }
 

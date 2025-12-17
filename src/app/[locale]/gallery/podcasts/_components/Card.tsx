@@ -1,39 +1,65 @@
 "use client";
 
 import React, { useState } from "react";
-import { type CardI } from "~/constants/podcasts";
 import FsLightbox from "fslightbox-react";
-import { formattingDate } from "~/utils/workingWithDates";
-import { useLocale } from "next-intl";
+import type { AppPodcastType } from "~/types/podcasts";
+import {
+  getPodcastDisplayTitle,
+  getPodcastDisplayDescription,
+  formatPodcastDate,
+  getYouTubeThumbnail,
+} from "~/types/podcasts";
 
-const Card = ({ podcast }: CardI) => {
-  const locale: string = useLocale();
-  const { id, title, description, icon, url, posterUrl, date } = podcast;
+interface CardProps {
+  podcast: AppPodcastType;
+  locale: "am" | "en" | "ru";
+}
+
+const Card = ({ podcast, locale }: CardProps) => {
   const [toggler, setToggler] = useState(false);
+
+  const title = getPodcastDisplayTitle(podcast.title, locale);
+  const description = getPodcastDisplayDescription(podcast.description, locale);
+  const formattedDate = formatPodcastDate(podcast.publishedAt, locale);
+
+  // Use thumbnail if available, otherwise generate from YouTube URL
+  const thumbnailUrl =
+    podcast.thumbnail || getYouTubeThumbnail(podcast.videoUrl);
 
   return (
     <>
-      {url && <FsLightbox toggler={toggler} sources={[url]} />}
+      {podcast.videoUrl && (
+        <FsLightbox toggler={toggler} sources={[podcast.videoUrl]} />
+      )}
       <div
         className="col-sm-6 col-lg-4 podcast-card"
         onClick={() => setToggler(!toggler)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            setToggler(!toggler);
+          }
+        }}
       >
         <div className="podcast-card-content-container">
           <div className="podcast-item">
             <div className="podcast-front">
               <h3>{title}</h3>
-              <p>{description}</p>
+              {description && <p>{description}</p>}
             </div>
           </div>
-          <div
-            className="video-area card-video"
-            style={{ backgroundImage: posterUrl }}
-          />
-          {/*<div className="podcast-item">*/}
-          {/*  <div className="podcast-front">*/}
-          {/*    <p>{formattingDate({ date, locale })}</p>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
+          {thumbnailUrl && (
+            <div
+              className="video-area card-video"
+              style={{ backgroundImage: `url(${thumbnailUrl})` }}
+            />
+          )}
+          <div className="podcast-item">
+            <div className="podcast-front">
+              <p className="text-muted text-small">{formattedDate}</p>
+            </div>
+          </div>
         </div>
       </div>
     </>

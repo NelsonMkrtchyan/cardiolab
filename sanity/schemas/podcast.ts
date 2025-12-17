@@ -12,12 +12,22 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title.en',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'title',
       title: 'Title',
       type: 'object',
       fields: [
-        { name: 'am', title: 'Armenian', type: 'string' },
-        { name: 'en', title: 'English', type: 'string' },
+        { name: 'am', title: 'Armenian', type: 'string', validation: (Rule) => Rule.required() },
+        { name: 'en', title: 'English', type: 'string', validation: (Rule) => Rule.required() },
         { name: 'ru', title: 'Russian', type: 'string' },
       ],
       validation: (Rule) => Rule.required(),
@@ -51,6 +61,7 @@ export default defineType({
       title: 'Video URL',
       type: 'url',
       description: 'YouTube or Vimeo URL',
+      validation: (Rule) => Rule.required().uri({ scheme: ['http', 'https'] }),
     }),
     defineField({
       name: 'publishedAt',
