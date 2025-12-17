@@ -73,10 +73,8 @@ const PodcastsCards: React.FC = () => {
     );
   }
 
-  // Sort by date descending (newest first)
-  const sortedPodcasts = [...podcasts].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-  );
+  // Sort by ID descending (largest first)
+  const sortedPodcasts = [...podcasts].sort((a, b) => b.id - a.id);
 
   return (
     <div className="podcasts-area pt-100 pb-70">
