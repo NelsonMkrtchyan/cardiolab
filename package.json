@@ -16,6 +16,7 @@
     "sanity:migrate:services": "tsx scripts/sanity-migration/migrate-services.ts",
     "sanity:migrate:gallery": "tsx scripts/sanity-migration/migrate-gallery.ts",
     "sanity:migrate:all": "npm run sanity:migrate:staff && npm run sanity:migrate:services && npm run sanity:migrate:gallery",
+    "sanity:migrate:queries": "tsx scripts/sanity-migration/migrate-saved-queries.ts",
     "sanity:fix:visibility": "tsx scripts/sanity-migration/fix-staff-visibility.ts",
     "sanity:cleanup": "tsx scripts/sanity-migration/cleanup-all.ts",
     "sanity:cleanup:single": "tsx scripts/sanity-migration/cleanup-single.ts"

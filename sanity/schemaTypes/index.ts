@@ -5,6 +5,7 @@ import news from '../schemas/news';
 import gallery from '../schemas/gallery';
 import patientGuide from '../schemas/patientGuide';
 import doctorGuide from '../schemas/doctorGuide';
+import savedQuery from '../schemas/savedQuery';
 
 export const schemaTypes = [
   staff,
@@ -14,4 +15,5 @@ export const schemaTypes = [
   gallery,
   patientGuide,
   doctorGuide,
+  savedQuery,
 ];
