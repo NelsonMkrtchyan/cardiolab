@@ -51,6 +51,7 @@ export default defineType({
           { title: 'Administrative', value: 'administrative' },
         ],
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'visibility',

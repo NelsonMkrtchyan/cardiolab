@@ -26,9 +26,9 @@ export type LocaleComplexString = {
 };
 
 export enum StaffCategory {
-  AdministrativeStaff = "administrativeStaff",
-  MedicalStaff = "medicalStaff",
-  NursingStaff = "nursingStaff",
+  Medical = "medical",
+  Nursing = "nursing",
+  Administrative = "administrative",
 }
 
 interface Experience {
@@ -163,9 +163,9 @@ export const defaultPersonalSingleInfo = {
 };
 
 export const categorizedStaffOrder = [
-  StaffCategory.MedicalStaff,
-  StaffCategory.NursingStaff,
-  StaffCategory.AdministrativeStaff,
+  StaffCategory.Medical,
+  StaffCategory.Nursing,
+  StaffCategory.Administrative,
 ];
 
 export const staff: StaffType = [

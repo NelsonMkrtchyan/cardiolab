@@ -51,6 +51,8 @@ const useEmployee = () => {
 
   const employeeDoNotExist = !currentEmployee && !loading;
 
+  console.log("currentEmployee", currentEmployee);
+
   return {
     employeeDoNotExist,
     name: currentEmployee?.name ?? null,

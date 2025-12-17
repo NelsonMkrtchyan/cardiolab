@@ -13,6 +13,7 @@ export default function page() {
   const { slug } = useParams();
   const { employeeDoNotExist, name, role, image, personalInfo } = useEmployee();
   const staffId = slug ? parseInt(slug as string, 10) : undefined;
+  console.log("image", image);
   return (
     <>
       <PageBanner
@@ -24,7 +25,13 @@ export default function page() {
       />
 
       {!employeeDoNotExist && (
-        <DetailsContent name={name} role={role} image={image} personalInfo={personalInfo} staffId={staffId} />
+        <DetailsContent
+          name={name}
+          role={role}
+          image={image}
+          personalInfo={personalInfo}
+          staffId={staffId}
+        />
       )}
 
       {employeeDoNotExist && <NotFound />}

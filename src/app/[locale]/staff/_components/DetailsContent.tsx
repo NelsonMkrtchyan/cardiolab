@@ -34,10 +34,8 @@ const DetailsContent: React.FC<DetailsContentProps> = ({
   role,
   image,
   personalInfo: staffPersonalInfo,
-  staffId,
 }): JSX.Element => {
   const t = useTranslations("CV");
-  const locale = useLocale() as LocaleT;
 
   const flags = staffPersonalInfo?.flags ?? defaultPersonalInfoFlags;
   const personalInfo: PersonalInfoSingleType =
