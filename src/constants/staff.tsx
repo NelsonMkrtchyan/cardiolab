@@ -82,7 +82,7 @@ export type PersonalInfoSingleType = {
   }[];
 };
 
-export type personalInfoFlags = {
+export type PersonalInfoFlags = {
   // Visibility flags for each section
   showBio?: boolean;
   showExperience?: boolean;
@@ -99,7 +99,7 @@ export type personalInfoFlags = {
   showSpecialties?: boolean;
 };
 export type PersonalInfoType = {
-  flags: personalInfoFlags;
+  flags: PersonalInfoFlags;
   am: PersonalInfoSingleType;
   en?: PersonalInfoSingleType;
   ru?: PersonalInfoSingleType;

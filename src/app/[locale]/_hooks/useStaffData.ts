@@ -31,7 +31,7 @@ export function useStaffData() {
       }
     }
 
-    void fetchStaffData().then();
+    void fetchStaffData();
   }, [locale]);
 
   return { staff, isLoading, error };

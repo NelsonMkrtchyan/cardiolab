@@ -54,9 +54,28 @@ export default defineType({
     }),
     defineField({
       name: 'visibility',
-      title: 'Visibility',
-      type: 'boolean',
-      initialValue: true,
+      title: 'Visibility Settings',
+      type: 'object',
+      fields: [
+        {
+          name: 'showInStaffPage',
+          title: 'Show in Staff Page',
+          type: 'boolean',
+          initialValue: true,
+          description: 'Display this staff member in the staff listing page',
+        },
+        {
+          name: 'showInLandingPage',
+          title: 'Show in Landing Page',
+          type: 'boolean',
+          initialValue: true,
+          description: 'Display this staff member in the landing page "Meet Our Staff" section',
+        },
+      ],
+      initialValue: {
+        showInStaffPage: true,
+        showInLandingPage: true,
+      },
     }),
     defineField({
       name: 'personalInfo',
