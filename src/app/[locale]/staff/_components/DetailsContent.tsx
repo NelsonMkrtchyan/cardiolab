@@ -13,34 +13,35 @@ import {
   defaultPersonalInfoFlags,
   defaultPersonalSingleInfo,
   type PersonalInfoSingleType,
-  type PersonalInfoType,
+  type PersonalInfoFlags,
 } from "~/constants/staff";
 import { useLocale, useTranslations } from "next-intl";
 import { type LocaleT } from "~/types";
 
-interface DetailsContentI {
+export interface DetailsContentProps {
   name: string | null;
   role: string | null;
   image: string | null;
-  personalInfo: PersonalInfoType;
+  personalInfo?: {
+    flags: PersonalInfoFlags;
+    data: PersonalInfoSingleType;
+  };
   staffId?: number;
 }
 
-const DetailsContent = ({
+const DetailsContent: React.FC<DetailsContentProps> = ({
   name,
   role,
   image,
   personalInfo: staffPersonalInfo,
   staffId,
-}: DetailsContentI) => {
+}): JSX.Element => {
   const t = useTranslations("CV");
-  const locale: string = useLocale();
+  const locale = useLocale() as LocaleT;
 
   const flags = staffPersonalInfo?.flags ?? defaultPersonalInfoFlags;
-
-  const personalInfo: PersonalInfoSingleType = staffPersonalInfo
-    ? (staffPersonalInfo?.[locale as LocaleT] ?? staffPersonalInfo.am)
-    : defaultPersonalSingleInfo;
+  const personalInfo: PersonalInfoSingleType =
+    staffPersonalInfo?.data ?? defaultPersonalSingleInfo;
 
   return (
     <>

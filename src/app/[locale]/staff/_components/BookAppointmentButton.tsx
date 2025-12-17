@@ -5,12 +5,15 @@ import { FaCalendarAlt, FaTimes } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import DoctorAppointmentForm from "~/app/_Components/DoctorAppointmentForm";
 
-interface BookAppointmentButtonProps {
+export interface BookAppointmentButtonProps {
   doctorName: string;
   doctorId?: number;
 }
 
-const BookAppointmentButton = ({ doctorName, doctorId }: BookAppointmentButtonProps) => {
+const BookAppointmentButton: React.FC<BookAppointmentButtonProps> = ({
+  doctorName,
+  doctorId,
+}): JSX.Element => {
   const [showModal, setShowModal] = useState(false);
   const tComponents = useTranslations("Components");
 

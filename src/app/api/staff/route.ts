@@ -1,6 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { getAllStaff } from "~/lib/sanity/queries";
 import { type LocaleT } from "~/types";
+import { type APIStaffResponse } from "~/types/staff";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -17,18 +18,18 @@ export async function GET(request: NextRequest) {
     }
 
     // Localize the response to only include requested locale content
-    const localizedStaff = staff.map((member) => ({
+    const localizedStaff: APIStaffResponse[] = staff.map((member) => ({
       id: member.id,
-      name: member.name[locale] || member.name.en || member.name.am,
+      name: (member.name[locale] || member.name.en || member.name.am) as string,
       image: member.image,
-      role: member.role[locale] || member.role.en || member.role.am,
+      role: (member.role[locale] || member.role.en || member.role.am) as string,
       category: member.category,
       visibility: member.visibility,
       personalInfo: member.personalInfo
         ? {
             flags: member.personalInfo.flags,
             // Include only requested locale's content
-            [locale]: member.personalInfo[locale],
+            data: member.personalInfo[locale] || member.personalInfo.am,
           }
         : undefined,
     }));

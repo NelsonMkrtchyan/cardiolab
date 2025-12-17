@@ -1,7 +1,8 @@
 import { client } from './client';
+import { type SanityStaff } from '~/types/staff';
 
 // Staff Queries
-export async function getAllStaff() {
+export async function getAllStaff(): Promise<SanityStaff[]> {
   return client.fetch(`
     *[_type == "staff"] | order(id asc) {
       _id,
@@ -16,7 +17,7 @@ export async function getAllStaff() {
   `);
 }
 
-export async function getStaffByCategory(category: string) {
+export async function getStaffByCategory(category: string): Promise<SanityStaff[]> {
   return client.fetch(
     `
     *[_type == "staff" && category == $category && visibility.showInStaffPage == true] | order(id asc) {
@@ -34,7 +35,7 @@ export async function getStaffByCategory(category: string) {
   );
 }
 
-export async function getStaffById(staffId: number) {
+export async function getStaffById(staffId: number): Promise<SanityStaff | null> {
   return client.fetch(
     `
     *[_type == "staff" && id == $staffId][0] {
@@ -52,7 +53,7 @@ export async function getStaffById(staffId: number) {
   );
 }
 
-export async function getStaffForLanding() {
+export async function getStaffForLanding(): Promise<SanityStaff[]> {
   return client.fetch(`
     *[_type == "staff" && visibility.showInLandingPage == true] | order(id asc) {
       _id,

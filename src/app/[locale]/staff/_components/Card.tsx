@@ -1,15 +1,10 @@
 import React from "react";
-import { type CardI } from "~/constants/staff";
+import { type CardProps } from "~/types/staff";
 import { Link } from "~/i18n/routing";
 import ImageWithLoader from "~/app/_Components/ImageWithLoader";
-import { useLocale } from "next-intl";
-import { type LocaleT } from "~/types";
 
-const Card = ({ employee, className }: CardI) => {
-  const locale: string = useLocale();
-  const { id, image } = employee;
-  const name = employee.name[locale as LocaleT];
-  const role = employee.role[locale as LocaleT];
+const Card: React.FC<CardProps> = ({ employee, className }) => {
+  const { id, image, name, role } = employee;
 
   const employeeDetailPageLink = `/staff/details/${id}`;
   return (
@@ -18,11 +13,11 @@ const Card = ({ employee, className }: CardI) => {
         <Link className={"doctor-card-link"} href={employeeDetailPageLink}>
           <div className="doctor-item">
             <div className="doctor-top">
-              {/*  <ImageWithLoader*/}
-              {/*    src={image}*/}
-              {/*    alt="Doctor"*/}
-              {/*    className="object-fit-cover"*/}
-              {/*  />*/}
+              <ImageWithLoader
+                src={image}
+                alt="Doctor"
+                className="object-fit-cover"
+              />
               {/*  /!*TODO: Uncomment in the future*!/*/}
               {/*  /!*<Link href="/appointment">Get Appointment</Link>*!/*/}
             </div>
@@ -37,7 +32,7 @@ const Card = ({ employee, className }: CardI) => {
                   </Link>
                 </h3>
               )}
-              {role && <span>{(role as string)?.toLowerCase()}</span>}
+              {role && <span>{role.toLowerCase()}</span>}
             </div>
           </div>
         </Link>

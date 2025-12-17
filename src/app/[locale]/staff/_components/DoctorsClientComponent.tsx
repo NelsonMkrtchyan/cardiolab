@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 
 const PLACEHOLDER_IMAGE = "https://x41q9wll8l.ufs.sh/f/kPqN7718CWluSH3gZgnEW7pyXzGrTZQb21kmdgPfAOJ8h3NC";
 
-export default function DoctorsClientComponent() {
+export default function DoctorsClientComponent(): JSX.Element {
   const tStaff = useTranslations("Staff");
 
   const { staff, isLoading, error } = useStaffData();

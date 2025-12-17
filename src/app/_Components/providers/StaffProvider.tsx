@@ -1,11 +1,12 @@
 "use client";
 
-import React, { createContext, useState, useEffect, useCallback } from "react";
-import { getAllStaff } from "~/lib/sanity/queries";
-import { type EmployeeType } from "~/constants/staff";
+import React, { createContext, useState, useEffect } from "react";
+import { useLocale } from "next-intl";
+import { type AppStaffType } from "~/types/staff";
+import { type LocaleT } from "~/types";
 
 export interface StaffContextType {
-  staff: EmployeeType[];
+  staff: AppStaffType[];
   isLoading: boolean;
   error: Error | null;
 }
@@ -17,7 +18,8 @@ interface StaffProviderProps {
 }
 
 export function StaffProvider({ children }: StaffProviderProps) {
-  const [staff, setStaff] = useState<EmployeeType[]>([]);
+  const locale = useLocale() as LocaleT;
+  const [staff, setStaff] = useState<AppStaffType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
@@ -26,17 +28,24 @@ export function StaffProvider({ children }: StaffProviderProps) {
       try {
         setIsLoading(true);
         setError(null);
-        const data = await getAllStaff();
+        // Use API endpoint to get localized staff data
+        const response = await fetch(`/api/staff?locale=${locale}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch staff data");
+        }
+        const data: AppStaffType[] = (await response.json()) as AppStaffType[];
         setStaff(data || []);
       } catch (err) {
-        setError(err instanceof Error ? err : new Error("Failed to fetch staff"));
+        setError(
+          err instanceof Error ? err : new Error("Failed to fetch staff"),
+        );
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchStaff();
-  }, []);
+  }, [locale]);
 
   const value: StaffContextType = {
     staff,
@@ -45,9 +54,7 @@ export function StaffProvider({ children }: StaffProviderProps) {
   };
 
   return (
-    <StaffContext.Provider value={value}>
-      {children}
-    </StaffContext.Provider>
+    <StaffContext.Provider value={value}>{children}</StaffContext.Provider>
   );
 }
 

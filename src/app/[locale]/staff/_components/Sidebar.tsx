@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 // Keep the old import as a fallback in case we need to revert
 // import ImageWithLoader from "~/app/_Components/ImageWithLoader";
 
-interface SidebarI {
+export interface SidebarProps {
   image: string;
   name: string | null;
   role: string | null;
@@ -30,7 +30,7 @@ interface SidebarI {
   specialties?: string[];
 }
 
-const Sidebar = ({
+const Sidebar: React.FC<SidebarProps> = ({
   image,
   name,
   role,
@@ -40,7 +40,7 @@ const Sidebar = ({
   showContact = false,
   showSocial = false,
   showSpecialties = true,
-}: SidebarI) => {
+}): JSX.Element => {
   const t = useTranslations("CV");
 
   return (
