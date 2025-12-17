@@ -94,9 +94,9 @@
     "serviceInfo": "* The types and timing of outpatient examinations at 'CardioLab' are determined by the patient’s attending physician."
   },
   "Staff": {
-    "medicalStaff": "Medical Staff",
-    "nursingStaff": "Nursing Staff",
-    "administrativeStaff": "Administrative Staff"
+    "medical": "Medical Staff",
+    "nursing": "Nursing Staff",
+    "administrative": "Administrative Staff"
   },
   "Service": {
     "consultation": "Consultation",

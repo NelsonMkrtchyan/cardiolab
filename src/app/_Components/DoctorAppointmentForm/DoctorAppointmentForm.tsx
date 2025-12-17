@@ -1,6 +1,11 @@
 "use client";
 
-import React, { type ChangeEvent, type FormEvent, useState, useMemo } from "react";
+import React, {
+  type ChangeEvent,
+  type FormEvent,
+  useState,
+  useMemo,
+} from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { FaUserTie } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -8,10 +13,10 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaIdCard } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaUserMd } from "react-icons/fa";
-import { type LocaleT } from "~/types";
 import { useStaffContext } from "~/app/_Components/providers/StaffProvider";
 
 import "./DoctorAppointmentForm.css";
+import { StaffCategory } from "~/types/staff";
 
 interface DoctorAppointmentFormProps {
   preselectedDoctorId?: number;
@@ -40,10 +45,10 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
     () =>
       staff.filter(
         (member) =>
-          member.category === "medicalStaff" &&
-          member.visibility?.showInStaffPage === true
+          member.category === StaffCategory.Medical &&
+          member.visibility?.showInStaffPage === true,
       ),
-    [staff]
+    [staff],
   );
 
   const [formData, setFormData] = useState<FormData>({
@@ -71,12 +76,10 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
 
     // Get doctor name for the email subject
     const selectedDoctor = medicalStaff.find(
-      (doctor) => doctor.id.toString() === formData.doctorId
+      (doctor) => doctor.id.toString() === formData.doctorId,
     );
-    
-    const doctorName = selectedDoctor
-      ? selectedDoctor.name[locale as LocaleT]
-      : "Unknown Doctor";
+
+    const doctorName = selectedDoctor ? selectedDoctor.name : "Unknown Doctor";
 
     try {
       // Prepare data to send to API
@@ -102,7 +105,7 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
           ssn: "",
           number: "",
         });
-        
+
         // Call onComplete callback if provided
         if (onComplete) {
           setTimeout(() => onComplete(), 1500); // Give user time to see success message
@@ -123,7 +126,7 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
 
   // Format today's date for the min date attribute
   const today = new Date();
-  const formattedToday = today.toISOString().split('T')[0];
+  const formattedToday = today.toISOString().split("T")[0];
 
   return (
     <div className="doctor-details-biography appointment-form-wrapper">
@@ -136,7 +139,9 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
 
       <div className="appointment-form card-style">
         {status && (
-          <div className={`alert ${status.includes("successfully") ? "alert-success" : "alert-danger"} fade-in`}>
+          <div
+            className={`alert ${status.includes("successfully") ? "alert-success" : "alert-danger"} fade-in`}
+          >
             {status}
           </div>
         )}
@@ -151,7 +156,8 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
                   </div>
                   <div className="input-container">
                     <label className="floating-label">
-                      {tComponents("Appointments.labels.doctor") || "Select Doctor"}
+                      {tComponents("Appointments.labels.doctor") ||
+                        "Select Doctor"}
                     </label>
                     <select
                       name="doctorId"
@@ -166,7 +172,7 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
                       </option>
                       {medicalStaff.map((doctor) => (
                         <option key={doctor.id} value={doctor.id}>
-                          {doctor.name[locale as LocaleT] || doctor.name.en}
+                          {doctor.name}
                         </option>
                       ))}
                     </select>
@@ -181,7 +187,8 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
                   </div>
                   <div className="input-container">
                     <label className="floating-label">
-                      {tComponents("Appointments.labels.date") || "Preferred Date"}
+                      {tComponents("Appointments.labels.date") ||
+                        "Preferred Date"}
                     </label>
                     <input
                       type="date"
@@ -257,7 +264,8 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
                   </div>
                   <div className="input-container">
                     <label className="floating-label">
-                      {tComponents("Appointments.labels.phone") || "Phone Number"}
+                      {tComponents("Appointments.labels.phone") ||
+                        "Phone Number"}
                     </label>
                     <input
                       type="text"
@@ -310,7 +318,8 @@ const DoctorAppointmentForm: React.FC<DoctorAppointmentFormProps> = ({
             >
               {isLoading
                 ? tComponents("ContactForm.sending") || "Sending..."
-                : tComponents("Appointments.actions.submit") || "Book Appointment"}
+                : tComponents("Appointments.actions.submit") ||
+                  "Book Appointment"}
             </button>
           </div>
         </form>

@@ -25,11 +25,7 @@ export type LocaleComplexString = {
       }[];
 };
 
-export enum StaffCategory {
-  Medical = "medical",
-  Nursing = "nursing",
-  Administrative = "administrative",
-}
+import { StaffCategory } from "~/types/staff";
 
 interface Experience {
   period: string;
@@ -181,7 +177,7 @@ export const staff: StaffType = [
       am: "Սրտաբան-Առիթմոլոգ",
       en: "Cardiologist-Arrhythmologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -716,7 +712,7 @@ export const staff: StaffType = [
       am: "Մանկական Ինտերվենցիոն Սրտաբան",
       en: "Pediatric Interventional Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -1036,7 +1032,7 @@ export const staff: StaffType = [
       am: "Ինտենսիվ Սրտաբան",
       en: "Intensive Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -1226,7 +1222,7 @@ export const staff: StaffType = [
       am: "Սրտաբան, Էխո-Սգ Մասնագետ, Սրտի Մռտ Մասնագետ",
       en: "Cardiologist, Echo Specialist, Cardiac MRI Specialist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -1406,7 +1402,7 @@ export const staff: StaffType = [
       am: "Մանկական և Պերինատալ Սրտաբան",
       en: "Pediatric and Perinatal Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -1698,7 +1694,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
       en: "Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -2100,7 +2096,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
       en: "Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -2433,7 +2429,7 @@ export const staff: StaffType = [
       am: "Սրտաբան-Առիթմոլոգ",
       en: "Cardiologist-Arrhythmologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -2595,7 +2591,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
       en: "Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -2838,7 +2834,7 @@ export const staff: StaffType = [
       am: "Սրտային Անբավարարության Մասնագետ",
       en: "Heart Failure Specialist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -3333,7 +3329,7 @@ export const staff: StaffType = [
       am: "Ներզատաբան",
       en: "Endocrinologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -3666,7 +3662,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
       en: "Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -4024,7 +4020,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
       en: "Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -4057,7 +4053,7 @@ export const staff: StaffType = [
       am: "Նյարդաբան",
       en: "Neurologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -4448,7 +4444,7 @@ export const staff: StaffType = [
       am: "Թերապևտ, Գաստրոէնտերոլոգ",
       en: "Therapist, Gastroenterologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -4760,7 +4756,7 @@ export const staff: StaffType = [
       am: "Բժիշկ-Ռադիոլոգ",
       en: "Radiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5053,7 +5049,7 @@ export const staff: StaffType = [
       am: "Ռադիոլոգ-Դուպլեքսի Մասնագետ",
       en: "Radiologist-Duplex Specialist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5224,7 +5220,7 @@ export const staff: StaffType = [
       am: "Անոթային վիրաբույժ",
       en: "Vascular Surgeon",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5440,7 +5436,7 @@ export const staff: StaffType = [
       am: "Հոգեբան",
       en: "Psychologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5612,7 +5608,7 @@ export const staff: StaffType = [
       am: "Առողջության և Առողջ Ապրելակերպի Մասնագետ",
       en: "Health and Wellness Specialist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5791,7 +5787,7 @@ export const staff: StaffType = [
       am: "Պատասխանատու Բուժքույր",
       en: "Head Nurse",
     },
-    category: StaffCategory.NursingStaff,
+    category: StaffCategory.Nursing,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5823,7 +5819,7 @@ export const staff: StaffType = [
       am: "Մենեջեր",
       en: "Manager",
     },
-    category: StaffCategory.AdministrativeStaff,
+    category: StaffCategory.Administrative,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5856,7 +5852,7 @@ export const staff: StaffType = [
       am: "Անոթային վիրաբույժ",
       en: "Vascular surgeon",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5888,7 +5884,7 @@ export const staff: StaffType = [
       am: "Ադմինիստրատոր",
       en: "Administrator",
     },
-    category: StaffCategory.AdministrativeStaff,
+    category: StaffCategory.Administrative,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5920,7 +5916,7 @@ export const staff: StaffType = [
       am: "Բուժքույր",
       en: "Nurse",
     },
-    category: StaffCategory.NursingStaff,
+    category: StaffCategory.Nursing,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5953,7 +5949,7 @@ export const staff: StaffType = [
       am: "",
       en: "",
     },
-    category: StaffCategory.NursingStaff,
+    category: StaffCategory.Nursing,
     visibility: true,
     personalInfo: {
       flags: {
@@ -5985,7 +5981,7 @@ export const staff: StaffType = [
       am: "Սրտաբան",
       en: "Cardiologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {
@@ -6018,7 +6014,7 @@ export const staff: StaffType = [
       am: "Ներզատաբան",
       en: "Endocrinologist",
     },
-    category: StaffCategory.MedicalStaff,
+    category: StaffCategory.Medical,
     visibility: true,
     personalInfo: {
       flags: {

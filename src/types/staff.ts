@@ -7,8 +7,11 @@
  * - AppStaffType: Type used throughout the app (matches API response)
  */
 
-import { type StaffCategory } from "~/constants/staff";
-
+export enum StaffCategory {
+  Medical = "medical",
+  Nursing = "nursing",
+  Administrative = "administrative",
+}
 /**
  * LocaleString - Text with multiple language versions
  * Used in Sanity for storing multilingual content
@@ -48,12 +51,14 @@ export type PersonalInfoSingleType = {
   }>;
   memberships: string[];
   hobbies: string[];
-  achievements: Array<{
-    title: string;
-    description?: string;
-    organization?: string;
-    date: string;
-  }> | string[];
+  achievements:
+    | Array<{
+        title: string;
+        description?: string;
+        organization?: string;
+        date: string;
+      }>
+    | string[];
   academicActivities: Array<{
     title: string;
     description?: string;
