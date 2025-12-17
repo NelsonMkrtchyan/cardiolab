@@ -1,10 +1,60 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa6";
+import { useParams } from "next/navigation";
+import { getServiceBySlug } from "~/lib/sanity/queries";
+import type { AppServiceType } from "~/types/services";
+import { formatPrice } from "~/types/services";
 
 const ServiceDetailsContent: React.FC = () => {
+  const params = useParams();
+  const slug = params?.slug as string;
+  const [service, setService] = useState<AppServiceType | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchService = async () => {
+      if (!slug) {
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const data = await getServiceBySlug(slug);
+        setService(data || null);
+      } catch (error) {
+        console.error("Error fetching service:", error);
+        setService(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchService();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="service-details-area ptb-100">
+        <div className="container">
+          <div className="text-center py-5">Loading service details...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!service) {
+    return (
+      <div className="service-details-area ptb-100">
+        <div className="container">
+          <div className="text-center py-5">Service not found</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="service-details-area ptb-100">
@@ -17,41 +67,22 @@ const ServiceDetailsContent: React.FC = () => {
               height={1000}
             />
 
-            <h2>CardioLab Provide Good Services</h2>
+            <h2>{service.name}</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              {service.description ||
+                "CardioLab provides professional medical services with experienced healthcare professionals."}
             </p>
 
-            <blockquote>
-              <FaQuoteLeft className="icon largest-icon-size" />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              optio rem magni, dolorum aut vel nostrum quae, fugit
-              necessitatibus eius perferendis. Quia optio tenetur pariatur
-              aliquam obcaecati enim quam eum?Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Sint optio rem magni, dolorum aut
-              vel nostrum quae, fugit necessitatibus eius perferendis. Quia
-              optio tenetur pariatur aliquam obcaecati enim quam eum?
-            </blockquote>
+            {service.doctors && service.doctors.length > 0 && (
+              <blockquote>
+                <FaQuoteLeft className="icon largest-icon-size" />
+                {service.doctors.map((doctor) => doctor.name).join(", ")} provide
+                this service with expertise and care.
+              </blockquote>
+            )}
+
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Service Price: <strong>{formatPrice(service.price)}</strong>
             </p>
           </div>
 
@@ -59,7 +90,6 @@ const ServiceDetailsContent: React.FC = () => {
             <div className="col-lg-5">
               <div
                 className="service-details-inner-left"
-                // style={{ backgroundImage: `url(/images/signup-bg.jpg)` }}
                 style={{ backgroundImage: `url(/images/signup-bg.jpg)` }}
               >
                 <Image
@@ -72,22 +102,27 @@ const ServiceDetailsContent: React.FC = () => {
             </div>
             <div className="col-lg-7">
               <div className="service-details-inner">
-                <h2>We Always Take Care Our Patient</h2>
+                <h2>Professional Medical Service</h2>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Architecto blanditiis obcaecati veritatis magnam pariatur
-                  molestiae in maxime. Animi quae vitae in inventore. Totam
-                  mollitia aspernatur provident veniam aperiam placeat impedit!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Saepe rem natus nobis, dolorum nam excepturi iure autem nemo
-                  ducimus temporibus facere, est eum voluptatem, culpa optio
-                  fugit assumenda quod? Praesentium.
+                  <strong>Category:</strong> {service.category}
                 </p>
+                {service.doctors && service.doctors.length > 0 && (
+                  <div>
+                    <p>
+                      <strong>Healthcare Professionals:</strong>
+                    </p>
+                    <ul>
+                      {service.doctors.map((doctor) => (
+                        <li key={`doctor-${doctor.id}`}>
+                          {doctor.name} - {doctor.role}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-                  laudantium ullam, iure distinctio officia libero voluptatem
-                  obcaecati vero deleniti minima nemo itaque alias nisi eveniet
-                  soluta architecto quae laboriosam unde.
+                  <strong>Service Type:</strong>{" "}
+                  {service.doneByNurses ? "Performed by Nurses" : "Medical Service"}
                 </p>
               </div>
             </div>

@@ -11,9 +11,19 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import Image from "next/image";
-import React from "react";
-import { priceListData } from "~/constants/priceList";
-import type { LocaleT } from "~/types";
+import React, { useState, useEffect } from "react";
+import type { AppServiceType, ServiceCategoryType } from "~/types/services";
+import { ServiceCategory } from "~/types/services";
+import { getAllServices } from "~/lib/sanity/queries";
+
+// Category order for consistent display
+const categorizedServicesOrder: ServiceCategoryType[] = [
+  ServiceCategory.Consultation,
+  ServiceCategory.PreventiveScreening,
+  ServiceCategory.DuplexScan,
+  ServiceCategory.Ultrasound,
+  ServiceCategory.CardiacCare,
+];
 
 type ServicesSectionProps = {
   variant?: "light" | "dark";
@@ -31,13 +41,36 @@ const ServicesSection = ({
   const tGeneral = useTranslations("General");
   const tService = useTranslations("Service");
   const locale: string = useLocale();
-  const localisedPriceList = priceListData[locale as LocaleT];
+  const [services, setServices] = useState<AppServiceType[]>([]);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const data = await getAllServices();
+        setServices(data || []);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+        setServices([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchServices();
+  }, []);
+
+  // Get unique categories from services
   const categories = Array.from(
-    new Set(localisedPriceList.map((service) => service.category)),
+    new Set(services.map((service) => service.category)),
   );
 
-  const serviceCategories = categories.map((category, index) => {
+  // Ensure categories follow the defined order
+  const sortedCategories = categorizedServicesOrder.filter((cat) =>
+    categories.includes(cat),
+  );
+
+  const serviceCategories = sortedCategories.map((category, index) => {
     return {
       id: index,
       title: tService(category),

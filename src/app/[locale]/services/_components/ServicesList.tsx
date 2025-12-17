@@ -1,35 +1,41 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
-import { ServicesCategory } from "~/constants/priceList";
-import type { LocaleT } from "~/types";
+import type { AppServiceType, ServiceCategoryType } from "~/types/services";
+import { ServiceCategory } from "~/types/services";
 import { Link } from "~/i18n/routing";
 import { getAllServices } from "~/lib/sanity/queries";
-import { getLocalizedValue } from "~/lib/sanity/utils";
+import { getServiceDisplayName } from "~/types/services";
+
+// Category order for consistent display
+const categorizedServicesOrder: ServiceCategoryType[] = [
+  ServiceCategory.Consultation,
+  ServiceCategory.PreventiveScreening,
+  ServiceCategory.DuplexScan,
+  ServiceCategory.Ultrasound,
+  ServiceCategory.CardiacCare,
+];
 
 const ServicesList = () => {
   const tService = useTranslations("Service");
   const tGeneral = useTranslations("General");
-  const locale: string = useLocale();
-  const [services, setServices] = useState<any[]>([]);
+  const locale = useLocale() as "am" | "en" | "ru";
+  const [services, setServices] = useState<AppServiceType[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [openCategory, setOpenCategory] = useState<string | null>(null);
-
-  const categorizedServicesOrder = [
-    ServicesCategory.Consultation,
-    ServicesCategory.CardiacCare,
-    ServicesCategory.Ultrasound,
-    ServicesCategory.DuplexScan,
-    ServicesCategory.PreventiveScreening,
-  ];
 
   useEffect(() => {
     const fetchServices = async () => {
       try {
+        setError(null);
         const data = await getAllServices();
         setServices(data || []);
-      } catch (error) {
-        console.error("Error fetching services:", error);
+      } catch (err) {
+        const errorMessage =
+          err instanceof Error ? err.message : "Failed to load services";
+        console.error("Error fetching services:", err);
+        setError("Unable to load services. Please refresh the page.");
         setServices([]);
       } finally {
         setLoading(false);
@@ -40,32 +46,25 @@ const ServicesList = () => {
   }, []);
 
   // Group services by category
-  const servicesByCategory = categorizedServicesOrder.reduce<Record<string, any[]>>(
-    (acc: Record<string, any[]>, category: string) => {
+  const servicesByCategory = categorizedServicesOrder.reduce<
+    Record<ServiceCategory, AppServiceType[]>
+  >(
+    (
+      acc: Record<ServiceCategory, AppServiceType[]>,
+      category: ServiceCategory,
+    ) => {
       acc[category] = services.filter(
-        (service: any) => service.category === category && !service.hideInServicesPage
+        (service) =>
+          service.category === category && !service.hideInServicesPage,
       );
       return acc;
     },
-    {}
+    {} as Record<ServiceCategory, AppServiceType[]>,
   );
 
-  // Function to get category name from enum
-  const getCategoryName = (category: ServicesCategory): string => {
-    switch (category) {
-      case ServicesCategory.Consultation:
-        return tService(category) || "Consultations";
-      case ServicesCategory.Ultrasound:
-        return tService(category) || "Ultrasound";
-      case ServicesCategory.DuplexScan:
-        return tService(category) || "Duplex Scan";
-      case ServicesCategory.CardiacCare:
-        return tService(category) || "Cardiac Care";
-      case ServicesCategory.PreventiveScreening:
-        return tService(category) || "Preventive Screening";
-      default:
-        return String(category);
-    }
+  // Function to get category name - uses translation key
+  const getCategoryName = (category: ServiceCategory): string => {
+    return tService(category) || category;
   };
 
   const toggleCategory = (category: string) => {
@@ -74,8 +73,8 @@ const ServicesList = () => {
       // Set the category first
       setOpenCategory(category);
 
-      // Use setTimeout to ensure the DOM has updated before scrolling
-      setTimeout(() => {
+      // Use requestAnimationFrame to ensure the DOM has updated before scrolling
+      requestAnimationFrame(() => {
         // Find the accordion item that was just opened
         const accordionItem = document.querySelector(
           `.accordion-item[data-category="${category}"]`,
@@ -86,7 +85,7 @@ const ServicesList = () => {
           const scrollTop =
             window.pageYOffset || document.documentElement.scrollTop;
 
-          // Calculate position with offset to show the header (subtract 80px to show the header)
+          // Calculate position with offset to show the header
           const targetPosition = rect.top + scrollTop - 90;
 
           // Scroll to the calculated position with smooth behavior
@@ -95,7 +94,7 @@ const ServicesList = () => {
             behavior: "smooth",
           });
         }
-      }, 100);
+      });
     } else {
       // Just close the category if it's already open
       setOpenCategory(null);
@@ -107,50 +106,65 @@ const ServicesList = () => {
       <div className="container">
         <div className="section-title">
           <h2>{tGeneral("OurServices") || "Our Services"}</h2>
-          {/*<p>*/}
-          {/*  {tService("servicesListDescription") ||*/}
-          {/*    "Comprehensive cardiac care services for all your needs"}*/}
-          {/*</p>*/}
         </div>
+
+        {error && (
+          <div
+            style={{
+              backgroundColor: "#f8d7da",
+              color: "#721c24",
+              padding: "15px 20px",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              border: "1px solid #f5c6cb",
+            }}
+          >
+            {error}
+          </div>
+        )}
 
         <div className="services-accordion">
           {loading ? (
-            <div className="text-center py-5">Loading services...</div>
+            <div className="py-5 text-center">Loading services...</div>
+          ) : services.length === 0 ? (
+            <div className="py-5 text-center">No services available</div>
           ) : (
             categorizedServicesOrder.map((category) => {
               const categoryServices = servicesByCategory[category] ?? [];
               if (categoryServices.length === 0) return null;
 
-            const isOpen = openCategory === category;
-            // const isOpen = true;
+              const isOpen = openCategory === category;
+              // const isOpen = true;
 
-            return (
-              <div
-                key={category}
-                data-category={category}
-                className={`accordion-item ${isOpen ? "active" : ""}`}
-              >
+              return (
                 <div
-                  className="accordion-header"
-                  onClick={() => toggleCategory(category)}
+                  key={category}
+                  data-category={category}
+                  className={`accordion-item ${isOpen ? "active" : ""}`}
                 >
-                  <h3>{getCategoryName(category)}</h3>
-                  <span className="accordion-icon">{isOpen ? "−" : "+"}</span>
-                </div>
+                  <div
+                    className="accordion-header"
+                    onClick={() => toggleCategory(category)}
+                  >
+                    <h3>{getCategoryName(category)}</h3>
+                    <span className="accordion-icon">{isOpen ? "−" : "+"}</span>
+                  </div>
 
-                {isOpen && (
-                  <div className="accordion-content">
-                    <ul className="services-list">
-                      {servicesByCategory[category]?.map((service: any) => (
-                        <li key={service._id || service.id} className="service-item">
-                          <div className="col-6">
-                            <span className="service-name">
-                              {getLocalizedValue(service.name, locale as LocaleT)}
-                            </span>
-                          </div>
+                  {isOpen && (
+                    <div className="accordion-content">
+                      <ul className="services-list">
+                        {servicesByCategory[category]?.map((service) => (
+                          <li
+                            key={`service-${service.id}`}
+                            className="service-item"
+                          >
+                            <div className="col-6">
+                              <span className="service-name">
+                                {getServiceDisplayName(service.name, locale)}
+                              </span>
+                            </div>
 
-                          {service.doctors &&
-                            service.doctors.length > 0 && (
+                            {service.doctors && service.doctors.length > 0 && (
                               <div className="service-doctors col-6">
                                 <div className="col-2 doctors-label">
                                   <span className="">
@@ -163,31 +177,32 @@ const ServicesList = () => {
                                 <div className="col-8 doctors-list">
                                   <span className="">
                                     {service.doctors?.map(
-                                      (doctor: any, index: number) => {
-                                        if (!doctor || doctor.visibility?.showInStaffPage !== true) return null;
-
-                                        return (
-                                          <Link
-                                            key={doctor._id || doctor.id}
-                                            href={`/staff/details/${doctor.id}`}
-                                          >
-                                            {getLocalizedValue(doctor.name, locale as LocaleT)}
-                                            {index < service.doctors.length - 1 && ", "}
-                                          </Link>
-                                        );
-                                      },
+                                      (doctor, index: number) => (
+                                        <Link
+                                          key={`doctor-${doctor.id}`}
+                                          href={`/staff/details/${doctor.id}`}
+                                        >
+                                          {getServiceDisplayName(
+                                            doctor.name,
+                                            locale,
+                                          )}
+                                          {index <
+                                            (service.doctors?.length ?? 0) -
+                                              1 && ", "}
+                                        </Link>
+                                      ),
                                     )}
                                   </span>
                                 </div>
                               </div>
                             )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            );
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              );
             })
           )}
         </div>

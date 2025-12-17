@@ -41,6 +41,7 @@ export default defineType({
         { name: 'en', title: 'English', type: 'text' },
         { name: 'ru', title: 'Russian', type: 'text' },
       ],
+      description: 'Optional multilingual service description',
     }),
     defineField({
       name: 'category',

@@ -1,12 +1,20 @@
 "use client";
 
 import React from "react";
+import { useLocale } from "next-intl";
 // import Image from "next/image";
 import ImageWithCache from "~/components/ImageWithCache";
-import { type CardI } from "~/constants/priceList";
+import type { AppServiceType } from "~/types/services";
+import { getLocalizedServiceValue } from "~/types/services";
+import type { LocaleString } from "~/types/services";
 // import { Link } from "~/i18n/routing";
 
-const Card = ({ service }: CardI) => {
+interface CardProps {
+  service: AppServiceType;
+}
+
+const Card = ({ service }: CardProps) => {
+  const locale = useLocale();
   const {
     // id,
     name,
@@ -14,6 +22,17 @@ const Card = ({ service }: CardI) => {
     // price,
     // icon,
   } = service;
+
+  // Handle both LocaleString (from Sanity) and string (from API)
+  const serviceName = typeof name === "string"
+    ? name
+    : getLocalizedServiceValue(name as LocaleString, locale as "am" | "en" | "ru");
+
+  const serviceDescription = typeof description === "string"
+    ? description
+    : description
+    ? getLocalizedServiceValue(description as LocaleString, locale as "am" | "en" | "ru")
+    : "";
 
   return (
     <>
@@ -31,8 +50,8 @@ const Card = ({ service }: CardI) => {
               cacheKey="cardiolab-service-logo"
               disableOptimization={false}
             />
-            <p>{name}</p>
-            <p>{description}</p>
+            <p>{serviceName}</p>
+            {serviceDescription && <p>{serviceDescription}</p>}
           </div>
           {/*</Link>*/}
         </div>

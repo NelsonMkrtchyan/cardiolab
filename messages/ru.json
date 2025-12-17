@@ -100,10 +100,10 @@
   },
   "Service": {
     "consultation": "Consultation",
-    "duplexScan": "Duplex Scan of Major Vessels",
-    "ultraSound": "Ultrasound Examination",
-    "cardiacCare": "Cardiac Care",
-    "preventiveScreening": "Annual Preventive Check-up"
+    "duplex-scan": "Duplex Scan of Major Vessels",
+    "ultra-sound": "Ultrasound Examination",
+    "cardiac-care": "Cardiac Care",
+    "preventive-screening": "Annual Preventive Check-up"
   },
   "CV": {
     "About": "О специалисте",
