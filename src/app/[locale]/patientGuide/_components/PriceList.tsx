@@ -21,7 +21,8 @@ const PriceList = () => {
         const data = await getServicesForPriceList();
         setServices(data || []);
       } catch (err) {
-        const errorMessage = err instanceof Error ? err.message : "Failed to load services";
+        const errorMessage =
+          err instanceof Error ? err.message : "Failed to load services";
         console.error("Error fetching services:", err);
         setError("Unable to load price list. Please refresh the page.");
         setServices([]);
@@ -33,7 +34,9 @@ const PriceList = () => {
     fetchServices();
   }, []);
 
-  const visibleServices = services.filter((service) => !service.hideInPriceListPage);
+  const visibleServices = services.filter(
+    (service) => !service.hideInPriceListPage,
+  );
 
   return (
     <div className="pt-100 pb-70 price-list container">
@@ -89,13 +92,13 @@ const PriceList = () => {
               <tbody>
                 {loading ? (
                   <tr>
-                    <td colSpan={2} className="text-center py-5">
+                    <td colSpan={2} className="py-5 text-center">
                       Loading services...
                     </td>
                   </tr>
                 ) : visibleServices.length === 0 ? (
                   <tr>
-                    <td colSpan={2} className="text-center py-5">
+                    <td colSpan={2} className="py-5 text-center">
                       No services available
                     </td>
                   </tr>
@@ -103,7 +106,9 @@ const PriceList = () => {
                   visibleServices.map((service) => (
                     <tr key={`service-${service.id}`}>
                       <td>{getServiceDisplayName(service.name, locale)}</td>
-                      <td className="text-right">{formatPrice(service.price)}</td>
+                      <td className="text-right">
+                        {formatPrice(service.price)}
+                      </td>
                     </tr>
                   ))
                 )}
@@ -117,6 +122,7 @@ const PriceList = () => {
         <div className="w-full">
           <div className="section-title">
             <p>{t("serviceInfo")}</p>
+            <p>{t("foreignPassportInfo")}</p>
           </div>
         </div>
       </div>

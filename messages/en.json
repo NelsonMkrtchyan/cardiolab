@@ -92,7 +92,8 @@
     "title": "Our Services and Price List",
     "serviceName": "Service",
     "price": "Price",
-    "serviceInfo": "* The types and timing of outpatient examinations at 'CardioLab' are determined by the patient’s attending physician."
+    "serviceInfo": "* The types and timing of outpatient examinations at 'CardioLab' are determined by the patient's attending physician.",
+    "foreignPassportInfo": "* At 'CardioLab', prices for holders of foreign passports are doubled."
   },
   "Staff": {
     "medical": "Medical Staff",
