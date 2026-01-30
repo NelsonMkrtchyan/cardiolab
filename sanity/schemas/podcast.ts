@@ -9,12 +9,22 @@ export default defineType({
       name: 'id',
       title: 'Podcast ID',
       type: 'number',
+      hidden: true, // Hide from editors
+      readOnly: true, // Prevent manual editing
       validation: (Rule) => Rule.required(),
+      initialValue: async (_, context) => {
+        // Auto-generate next available ID
+        const client = context.getClient({ apiVersion: '2024-01-01' });
+        const query = '*[_type == "podcast"] | order(id desc) [0].id';
+        const maxId = await client.fetch(query);
+        return (maxId || 0) + 1;
+      },
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      hidden: true, // Hide from editors
       options: {
         source: 'title.en',
         maxLength: 96,
@@ -73,6 +83,7 @@ export default defineType({
       name: 'duration',
       title: 'Duration',
       type: 'string',
+      hidden: true, // Hide from editors
       description: 'e.g., "45:30"',
     }),
     defineField({
