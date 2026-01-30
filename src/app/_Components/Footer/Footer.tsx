@@ -9,13 +9,18 @@ import { LogoHorizontal } from "~/app/_Components/Svgs/LogoHorizontal";
 import { CardioLabInfo } from "~/constants/menus";
 import type { LocaleT } from "~/types";
 import { FaViber, FaWhatsapp, FaYoutube } from "react-icons/fa6";
+import { type ContactInfo, getLocalizedValue } from "~/types/contactPage";
 
-const Footer = () => {
+interface FooterProps {
+  contactInfo?: ContactInfo;
+}
+
+const Footer: React.FC<FooterProps> = ({ contactInfo }) => {
   const currentYear = new Date().getFullYear();
   const tMenu = useTranslations("Menu");
   const tGeneral = useTranslations("General");
 
-  const locale = useLocale();
+  const locale = useLocale() as "am" | "en" | "ru";
 
   // Quick links
   const quickLinks = [
@@ -26,8 +31,13 @@ const Footer = () => {
     { title: tMenu("ContactUs"), path: "/contact" },
   ];
 
-  // Contact info
+  // Contact info - use Sanity data if available, otherwise fallback to constants
   const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
+  const email = contactInfo?.email || localisedCardioLabInfo.email;
+  const address = contactInfo
+    ? getLocalizedValue(contactInfo.address, locale)
+    : localisedCardioLabInfo.address;
+  const phoneNumbers = contactInfo?.phoneNumbers || localisedCardioLabInfo.phone;
 
   // Social media links
   const socialLinks = [
@@ -119,21 +129,21 @@ const Footer = () => {
                         <div className="col-12 col-sm-12 col-md-7">
                           <div className="contact-item">
                             <IoMail className="contact-icon" />
-                            <a href={`mailto:${localisedCardioLabInfo.email}`}>
-                              {localisedCardioLabInfo.email}
+                            <a href={`mailto:${email}`}>
+                              {email}
                             </a>
                           </div>
 
                           <div className="contact-item">
                             <IoLocation className="contact-icon" />
-                            <span>{localisedCardioLabInfo.address}</span>
+                            <span>{address}</span>
                           </div>
                         </div>
 
                         <div className="col-12 col-sm-12 col-md-5">
                           <div className="contact-item phone-numbers">
                             <div className="phone-list">
-                              {localisedCardioLabInfo?.phone.map(
+                              {phoneNumbers.map(
                                 (number, index) => (
                                   <div className="phone-number-row" key={index}>
                                     <IoCall className="contact-icon" />

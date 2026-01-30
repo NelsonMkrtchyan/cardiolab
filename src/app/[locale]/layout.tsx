@@ -52,6 +52,7 @@ import Navbar from "~/app/_Disin_components/layout/Navbar";
 // import TopHeader from "~/app/_Disin_components/layout/TopHeader";
 import GoTop from "~/app/_Disin_components/layout/GoTop";
 import Footer from "~/app/_Components/Footer/Footer";
+import { getContactPage } from "~/lib/sanity/queries";
 
 // const poppins = Poppins({
 //   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -87,6 +88,7 @@ export default async function RootLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const contactPage = await getContactPage();
 
   return (
     <html suppressHydrationWarning lang="am">
@@ -107,7 +109,7 @@ export default async function RootLayout({
               {children}
             </div>
             <GoTop />
-            <Footer />
+            <Footer contactInfo={contactPage?.contactInfo} />
           </NextIntlClientProvider>
         </Providers>
       </body>
