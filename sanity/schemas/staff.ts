@@ -9,7 +9,16 @@ export default defineType({
       name: 'id',
       title: 'Staff ID',
       type: 'number',
+      hidden: true, // Hide from editors
+      readOnly: true, // Prevent manual editing
       validation: (Rule) => Rule.required(),
+      initialValue: async (_, context) => {
+        // Auto-generate next available ID
+        const client = context.getClient({ apiVersion: '2024-01-01' });
+        const query = '*[_type == "staff"] | order(id desc) [0].id';
+        const maxId = await client.fetch(query);
+        return (maxId || 0) + 1;
+      },
     }),
     defineField({
       name: 'name',
