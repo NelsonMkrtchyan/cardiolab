@@ -24,7 +24,7 @@ export default defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      hidden: true,
+      description: 'Click "Generate" after entering the title',
       options: {
         source: (doc: any) => doc?.title?.en || doc?.title?.am || 'gallery',
         maxLength: 96,
@@ -35,11 +35,6 @@ export default defineType({
             .replace(/[^\w\-]+/g, '')
             .slice(0, 96),
       },
-      validation: (Rule) => Rule.required(),
-      initialValue: (_, context) => ({
-        _type: 'slug',
-        current: `gallery-${Date.now()}`,
-      }),
     }),
     defineField({
       name: 'title',

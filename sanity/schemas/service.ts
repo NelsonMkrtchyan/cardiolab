@@ -24,12 +24,17 @@ export default defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      hidden: true, // Hide from editors
+      description: 'Click "Generate" after entering the service name',
       options: {
-        source: 'name.en',
+        source: (doc: any) => doc?.name?.en || doc?.name?.am || 'service',
         maxLength: 96,
+        slugify: (input) =>
+          input
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w\-]+/g, '')
+            .slice(0, 96),
       },
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'name',
