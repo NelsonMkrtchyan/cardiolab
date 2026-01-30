@@ -81,6 +81,7 @@ export default defineType({
       title: 'Published Date',
       type: 'datetime',
       validation: (Rule) => Rule.required(),
+      initialValue: () => new Date().toISOString(),
     }),
     defineField({
       name: 'duration',
