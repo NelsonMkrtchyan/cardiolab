@@ -139,7 +139,7 @@ export async function getServicesForPriceList() {
 // Podcast Queries
 export async function getAllPodcasts() {
   return client.fetch(`
-    *[_type == "podcast"] | order(id desc) {
+    *[_type == "podcast"] | order(id desc, publishedAt desc) {
       _id,
       id,
       title,
