@@ -1,16 +1,11 @@
 import { useEffect } from 'react';
-import { set, unset } from 'sanity';
-import { StringInputProps } from 'sanity';
+import { set } from 'sanity';
+import { SlugInputProps } from 'sanity';
 
-interface AutoSlugInputProps extends StringInputProps {
-  source?: string | ((doc: any) => string);
-}
+export function AutoSlugInput(props: SlugInputProps) {
+  const { onChange, value, schemaType, document } = props;
 
-export function AutoSlugInput(props: AutoSlugInputProps) {
-  const { onChange, value, schemaType } = props;
-  const document = props.document;
-
-  // Generate slug from source field
+  // Generate slug from text
   const generateSlug = (text: string): string => {
     if (!text) return '';
     return text
@@ -28,20 +23,25 @@ export function AutoSlugInput(props: AutoSlugInputProps) {
   const getSourceValue = (): string => {
     if (!document) return '';
 
-    const sourceConfig = (schemaType.options as any)?.source;
+    const sourceConfig = schemaType.options?.source;
 
     if (typeof sourceConfig === 'function') {
-      return sourceConfig(document);
+      try {
+        return sourceConfig(document) || '';
+      } catch (error) {
+        console.error('Error getting source value:', error);
+        return '';
+      }
     }
 
     if (typeof sourceConfig === 'string') {
       const keys = sourceConfig.split('.');
-      let value: any = document;
+      let val: any = document;
       for (const key of keys) {
-        value = value?.[key];
-        if (!value) return '';
+        val = val?.[key];
+        if (!val) return '';
       }
-      return value;
+      return String(val);
     }
 
     return '';
@@ -49,22 +49,21 @@ export function AutoSlugInput(props: AutoSlugInputProps) {
 
   useEffect(() => {
     const sourceValue = getSourceValue();
+    const currentSlug = value?.current || '';
+
     if (sourceValue) {
       const newSlug = generateSlug(sourceValue);
-      const currentSlug = typeof value === 'object' && value?._type === 'slug'
-        ? value.current
-        : value;
 
       // Only update if the slug has changed
-      if (currentSlug !== newSlug) {
+      if (currentSlug !== newSlug && newSlug) {
         onChange(set({ _type: 'slug', current: newSlug }));
       }
-    } else if (!value) {
+    } else if (!currentSlug) {
       // Set initial timestamp-based slug if no source value yet
       const initialSlug = `draft-${Date.now()}`;
       onChange(set({ _type: 'slug', current: initialSlug }));
     }
-  }, [document, onChange, value, schemaType]);
+  }, [document?.title, document?.name, value, onChange]);
 
   // Return null to hide the input completely
   return null;
