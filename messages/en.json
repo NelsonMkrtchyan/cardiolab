@@ -103,7 +103,7 @@
   "Service": {
     "consultation": "Consultation",
     "duplex-scan": "Duplex Scan of Major Vessels",
-    "ultra-sound": "Ultrasound Examination",
+    "ultrasound": "Ultrasound Examination",
     "cardiac-care": "Cardiac Care",
     "preventive-screening": "Annual Preventive Check-up"
   },

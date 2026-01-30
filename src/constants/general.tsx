@@ -1,4 +1,4 @@
-import { AM, US } from "country-flag-icons/react/3x2";
+import { AM, RU, US } from "country-flag-icons/react/3x2";
 import React from "react";
 import { type LocaleComplexString, type LocaleString } from "~/constants/staff";
 
@@ -22,14 +22,14 @@ export const Languages: LanguagesT = {
       </>
     ),
   },
-  // ru: {
-  //   id: 2,
-  //   icon: (
-  //     <>
-  //       <RU title="Russian" className="languageFlagIcon" />
-  //     </>
-  //   ),
-  // },
+  ru: {
+    id: 2,
+    icon: (
+      <>
+        <RU title="Russian" className="languageFlagIcon" />
+      </>
+    ),
+  },
   am: {
     id: 3,
     icon: (

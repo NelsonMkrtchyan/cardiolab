@@ -1,90 +1,91 @@
 {
   "General": {
-    "Phone": "Phone",
-    "Email": "Email",
-    "Address": "Address",
-    "ReadMore": "Read more",
-    "Next": "Next",
-    "Previous": "Previous",
-    "SeeAll": "See all",
-    "Fill": "Fill in",
-    "PatientSatisfactionSurvey": "Patient Satisfaction Survey",
-    "Slogan": "The art of heart care",
-    "KnowMore": "Learn more",
-    "Doctors": "Doctors",
-    "ContactUs": "Contact us",
-    "QuickLinks": "Quick links",
-    "OurNews": "Our News",
-    "OurServices": "Our Services",
-    "MeetOurStaff": "Meet our staff",
-    "FindUsOnMap": "Find us on the map",
-    "WorkingHours": "Working hours",
+    "Phone": "Телефон",
+    "Email": "Эл. почта",
+    "Address": "Адрес",
+    "ReadMore": "Читать далее",
+    "Next": "Следующий",
+    "Previous": "Предыдущий",
+    "SeeAll": "Посмотреть все",
+    "Fill": "Заполнить",
+    "PatientSatisfactionSurvey": "Анкета удовлетворенности пациентов",
+    "Slogan": "Искусство заботы о сердце",
+    "KnowMore": "Подробнее",
+    "Doctors": "Врачи",
+    "Nurses": "Медсестры",
+    "ContactUs": "Обратная связь",
+    "QuickLinks": "Быстрые ссылки",
+    "OurNews": "Наши новости",
+    "OurServices": "Наши услуги",
+    "MeetOurStaff": "Познакомьтесь с нашим персоналом",
+    "FindUsOnMap": "Найдите нас на карте",
+    "WorkingHours": "Рабочие часы",
     "Weekdays": {
-      "Monday": "Monday",
-      "Tuesday": "Tuesday",
-      "Wednesday": "Wednesday",
-      "Thursday": "Thursday",
-      "Friday": "Friday",
-      "Saturday": "Saturday",
-      "Sunday": "Sunday"
+      "Monday": "Понедельник",
+      "Tuesday": "Вторник",
+      "Wednesday": "Среда",
+      "Thursday": "Четверг",
+      "Friday": "Пятница",
+      "Saturday": "Суббота",
+      "Sunday": "Воскресенье"
     },
     "Stats": {
-      "one": "Clinics",
-      "two": "Satisfied Patients",
-      "three": "Doctors and Nurses",
-      "four": "Years of Experience"
+      "one": "Клиники",
+      "two": "Довольных пациентов",
+      "three": "Врачи и медсестры",
+      "four": "Лет опыта"
     }
   },
   "Menu": {
-    "Home": "Home",
-    "AboutUs": "About Us",
-    "Staff": "Staff",
-    "Services": "Services",
+    "Home": "Главная",
+    "AboutUs": "О нас",
+    "Staff": "Персонал",
+    "Services": "Услуги",
     "Gallery": {
-      "Gallery": "Gallery",
-      "Folder": "Folder",
-      "Images": "Images",
-      "Videos": "Videos",
-      "Podcasts": "CardioLab Podcast"
+      "Gallery": "Галерея",
+      "Folder": "Папка",
+      "Images": "Изображения",
+      "Videos": "Видео",
+      "Podcasts": "Подкаст «CardioLab»"
     },
-    "EmployeeDetails": "Employee Details",
-    "ContactUs": "Contact Us",
-    "Pricelist": "Price List",
-    "ServiceDetails": "Service Details",
-    "Guide": "Guides",
-    "DoctorGuide": "Doctor's Guide",
-    "PatientGuide": "Patient Guide",
-    "News": "News",
-    "NewsDetails": "News Details",
-    "InsuranceInformation": "Insurance Information",
-    "HealthLibrary": "Health Library",
-    "UsefulMaterials": "Useful Materials",
-    "AccreditedTrainings": "Accredited Trainings",
-    "Seminars": "Seminars",
-    "JobOpenings": "Job Openings"
+    "EmployeeDetails": "Детали сотрудника",
+    "ContactUs": "Обратная связь",
+    "Pricelist": "Прайс-лист",
+    "ServiceDetails": "Детали услуги",
+    "Guide": "Руководства",
+    "DoctorGuide": "Руководство врача",
+    "PatientGuide": "Руководство пациента",
+    "News": "Новости",
+    "NewsDetails": "Детали новостей",
+    "InsuranceInformation": "Страховая информация",
+    "HealthLibrary": "Библиотека здоровья",
+    "UsefulMaterials": "Полезные материалы",
+    "AccreditedTrainings": "Аккредитованные тренинги",
+    "Seminars": "Семинары",
+    "JobOpenings": "Вакансии"
   },
   "Components": {
     "Landing": {
       "AboutUs": {
-        "title": "Welcome to the official website of CardioLab Medical Center",
-        "description": "At CardioLab Medical Center, your health and well-being are our top priorities. We offer a wide range of services for both adults and children, from cardiovascular consultations and heart screenings to comprehensive health check-ups and advanced monitoring solutions."
+        "title": "Добро пожаловать на официальный сайт медицинского центра «CardioLab»",
+        "description": "В медицинском центре «CardioLab» ваше здоровье и благополучие являются нашими главными приоритетами. Мы предлагаем широкий спектр услуг как для взрослых, так и для детей: от кардиологических консультаций и обследований сердца до комплексных медосмотров и передовых решений для мониторинга."
       }
     },
     "VideoSection": {
-      "title": "Welcome to CardioLab",
-      "description": "Welcome to CardioLab, where your heart’s health is our top priority. In this introduction, we present our clinic’s mission, services, and advanced technologies designed for cardiovascular care. Learn about our team of experienced professionals, our personalized treatment approach, and our goal to improve your well-being with innovative and compassionate healthcare solutions."
+      "title": "Добро пожаловать в «CardioLab»",
+      "description": "Добро пожаловать в «CardioLab», где здоровье вашего сердца является нашим главным приоритетом. В этом вступлении мы представляем миссию нашей клиники, услуги и передовые технологии, предназначенные для кардиологической помощи. Узнайте о нашей команде опытных специалистов, нашем индивидуальном подходе к лечению и нашей цели улучшить ваше благополучие с помощью инновационных и заботливых медицинских решений."
     }
   },
   "HeroSlider": {
-    "priceTitle": "Our Services and Price List"
+    "priceTitle": "Наши услуги и прайс-лист"
   },
   "About": {
     "AboutContent": {
-      "title": "Welcome to the official website of CardioLab Medical Center",
-      "description": "CardioLab Medical Center, established in 2024, specializes in modern heart care, prioritizing your health and well-being. Our center is a comprehensive, integrated, patient-centered cardiology facility, where patients can undergo all necessary cardiovascular examinations in a single visit.\nWe offer a wide range of services for both adults and children, from cardiovascular consultations and heart screenings to comprehensive health check-ups and advanced monitoring solutions.\nOur team consists of top professionals in the field, who will take exceptional care of your heart health and do their utmost to ensure you are satisfied with the medical services provided.\nBe healthy — in every sense of the word.",
-      "signature1": "\n\nTatevik Hovakimyan",
-      "signature2": "\nCardioLab",
-      "signature3": " Co-founder and Director of the Medical Center, Cardiologist-Arrhythmologist\n"
+      "title": "Добро пожаловать на официальный сайт медицинского центра «CardioLab»",
+      "description": "Медицинский центр «CardioLab», основанный в 2024 году, специализируется на современной кардиологической помощи, уделяя приоритетное внимание вашему здоровью и благополучию. Наш центр представляет собой комплексный, интегрированный, пациент-ориентированный кардиологический центр, где каждый пациент может пройти все необходимые сердечно-сосудистые обследования за один визит.\nМы предлагаем широкий спектр услуг как для взрослых, так и для детей: от кардиологических консультаций и обследований сердца до комплексных медосмотров и передовых решений для мониторинга.\nНаша команда состоит из ведущих специалистов в этой области, которые с особой заботой позаботятся о здоровье вашего сердца и сделают все возможное, чтобы вы остались довольны предоставленными медицинскими услугами.\nБудьте здоровы в лучшем смысле этого слова.",
+      "signature1": "\n\nТатевик Овакимян",
+      "signature2": "\n«CardioLab»",
+      "signature3": " Сооснователь и директор медицинского центра, кардиолог-аритмолог\n"
     }
   },
   "PriceList": {
@@ -95,16 +96,16 @@
     "foreignPassportInfo": "* В 'КардиоЛаб' цены для держателей иностранных паспортов удваиваются."
   },
   "Staff": {
-    "medical": "Medical Staff",
-    "nursing": "Nursing Staff",
-    "administrative": "Administrative Staff"
+    "medical": "Медицинский персонал",
+    "nursing": "Медсестринский персонал",
+    "administrative": "Административный персонал"
   },
   "Service": {
-    "consultation": "Consultation",
-    "duplex-scan": "Duplex Scan of Major Vessels",
-    "ultra-sound": "Ultrasound Examination",
-    "cardiac-care": "Cardiac Care",
-    "preventive-screening": "Annual Preventive Check-up"
+    "consultation": "Консультация",
+    "duplex-scan": "Дуплексное исследование магистральных сосудов",
+    "ultrasound": "Ультразвуковое исследование",
+    "cardiac-care": "Кардиологическая помощь",
+    "preventive-screening": "Ежегодное профилактическое медицинское обследование"
   },
   "CV": {
     "About": "О специалисте",
@@ -121,49 +122,49 @@
   },
   "Forms": {
     "ContactForm": {
-      "title": "Send your message for any information or inquiry",
+      "title": "Отправьте ваше сообщение для получения информации или запроса",
       "placeholders": {
-        "name": "Your name",
-        "email": "Your email address",
-        "phone": "Your phone number",
-        "subject": "Your subject",
-        "message": "Your message ..."
+        "name": "Ваше имя",
+        "email": "Ваш адрес электронной почты",
+        "phone": "Ваш номер телефона",
+        "subject": "Ваша тема",
+        "message": "Ваше сообщение ..."
       },
-      "sendMessage": "Send Message",
-      "sending": "Sending...",
-      "successMessage": "Email sent successfully",
-      "errorMessage": "Email was not sent successfully"
+      "sendMessage": "Отправить сообщение",
+      "sending": "Отправка...",
+      "successMessage": "Письмо успешно отправлено",
+      "errorMessage": "Письмо не было успешно отправлено"
     },
     "Appointments": {
-      "title": "Book your appointment",
-      "description": "Our specialist will confirm your appointment within 1 hour",
+      "title": "Запишитесь на прием",
+      "description": "Наш специалист подтвердит ваш прием в течение 1 часа",
       "labels": {
-        "name": "Name",
-        "email": "Email",
-        "ssn": "Social Security Number",
-        "phone": "Phone number"
+        "name": "Имя",
+        "email": "Эл. почта",
+        "ssn": "Номер социального страхования",
+        "phone": "Номер телефона"
       },
       "placeholders": {
-        "name": "Enter your name",
-        "email": "Enter your email",
-        "ssn": "Enter your SSN",
-        "phone": "Enter your phone number"
+        "name": "Введите ваше имя",
+        "email": "Введите вашу эл. почту",
+        "ssn": "Введите ваш номер социального страхования",
+        "phone": "Введите ваш номер телефона"
       },
       "actions": {
-        "submit": "Confirm"
+        "submit": "Подтвердить"
       }
     }
   },
   "News": {
     "Form": {
-      "DropComment": "Leave your comment",
-      "PostComment": "Post comment",
+      "DropComment": "Оставьте ваш комментарий",
+      "PostComment": "Опубликовать комментарий",
       "Placeholders": {
-        "YourComment": "Your comment",
-        "Name": "Name",
-        "Phone": "Phone number",
-        "Email": "Email",
-        "Subject": "Subject"
+        "YourComment": "Ваш комментарий",
+        "Name": "Имя",
+        "Phone": "Номер телефона",
+        "Email": "Эл. почта",
+        "Subject": "Тема"
       }
     }
   }
