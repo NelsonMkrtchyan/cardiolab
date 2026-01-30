@@ -1,4 +1,5 @@
 import { defineType, defineField } from 'sanity';
+import { AutoSlugInput } from '../components/AutoSlugInput';
 
 export default defineType({
   name: 'service',
@@ -24,16 +25,12 @@ export default defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'Click "Generate" after entering the service name',
+      components: {
+        input: AutoSlugInput,
+      },
       options: {
         source: (doc: any) => doc?.name?.en || doc?.name?.am || 'service',
         maxLength: 96,
-        slugify: (input) =>
-          input
-            .toLowerCase()
-            .replace(/\s+/g, '-')
-            .replace(/[^\w\-]+/g, '')
-            .slice(0, 96),
       },
     }),
     defineField({
