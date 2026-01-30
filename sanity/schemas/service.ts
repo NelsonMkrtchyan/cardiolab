@@ -24,6 +24,7 @@ export default defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      hidden: true, // Hide from editors
       options: {
         source: 'name.en',
         maxLength: 96,
