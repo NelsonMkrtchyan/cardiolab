@@ -73,8 +73,8 @@ const PodcastsCards: React.FC = () => {
     );
   }
 
-  // Sort by ID descending (largest first)
-  const sortedPodcasts = [...podcasts].sort((a, b) => b.id - a.id);
+  // Already sorted by publishedAt desc from Sanity query
+  const sortedPodcasts = podcasts;
 
   return (
     <div className="podcasts-area pt-100 pb-70">
