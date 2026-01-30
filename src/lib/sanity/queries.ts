@@ -1,5 +1,6 @@
 import { client } from './client';
 import { type SanityStaff } from '~/types/staff';
+import { type SanityAboutPage } from '~/types/aboutPage';
 
 // Staff Queries
 export async function getAllStaff(): Promise<SanityStaff[]> {
@@ -425,4 +426,46 @@ export async function getDoctorGuideBySlug(slug: string) {
   `,
     { slug }
   );
+}
+
+// About Page Queries
+export async function getAboutPage(): Promise<SanityAboutPage | null> {
+  return client.fetch(`
+    *[_type == "aboutPage"][0] {
+      _id,
+      _type,
+      mainSection {
+        title,
+        description,
+        "image": image.asset->url,
+        signature
+      },
+      mission {
+        title,
+        description,
+        order
+      },
+      vision {
+        title,
+        description,
+        order
+      },
+      strategicPriorities {
+        title,
+        items,
+        order
+      },
+      coreValues {
+        title,
+        values,
+        order
+      },
+      satisfactionSurvey {
+        title,
+        buttonText,
+        surveyUrl,
+        showSection
+      }
+    }
+  `);
 }

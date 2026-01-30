@@ -2,11 +2,27 @@
 
 import React from "react";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { type MainSection, getLocalizedValue } from "~/types/aboutPage";
 
-const AboutContent: React.FC = () => {
-  const tAbout = useTranslations("About");
-  const locale: string = useLocale();
+interface AboutContentProps {
+  mainSection: MainSection;
+}
+
+const AboutContent: React.FC<AboutContentProps> = ({ mainSection }) => {
+  const locale = useLocale() as "am" | "en" | "ru";
+
+  const title = getLocalizedValue(mainSection.title, locale);
+  const description = getLocalizedValue(mainSection.description, locale);
+  const signatureName = getLocalizedValue(mainSection.signature.name, locale);
+  const signatureOrganization = getLocalizedValue(
+    mainSection.signature.organization,
+    locale,
+  );
+  const signaturePosition = getLocalizedValue(
+    mainSection.signature.position,
+    locale,
+  );
 
   return (
     <>
@@ -17,7 +33,10 @@ const AboutContent: React.FC = () => {
               <div className="about-item">
                 <div className="about-left">
                   <Image
-                    src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubD8SFgldCU4c8A1oViQtsIJW2aZEXeySMgu3"
+                    src={
+                      mainSection.image ??
+                      "https://x41q9wll8l.ufs.sh/f/kPqN7718CWlubD8SFgldCU4c8A1oViQtsIJW2aZEXeySMgu3"
+                    }
                     alt="About"
                     width={626}
                     height={552}
@@ -34,18 +53,16 @@ const AboutContent: React.FC = () => {
                   width={556}
                   height={712}
                 />
-                <h2>{tAbout("AboutContent.title")}</h2>
-                <p>{tAbout("AboutContent.description")}</p>
+                <h2>{title}</h2>
+                <p>{description}</p>
                 <div className="handwriting-signature">
                   <p>
                     <span className={`${locale === "en" && "english"}`}>
-                      {tAbout("AboutContent.signature1")}
+                      {signatureName}
                     </span>
-                    <span className="english">
-                      {tAbout("AboutContent.signature2")}
-                    </span>
+                    <span className="english">{signatureOrganization}</span>
                     <span className={`${locale === "en" && "english"}`}>
-                      {tAbout("AboutContent.signature3")}
+                      {signaturePosition}
                     </span>
                   </p>
                 </div>
