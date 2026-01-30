@@ -1,14 +1,19 @@
 "use client";
-import { CardioLabInfo } from "~/constants/menus";
 
 import { IoCall, IoLocation, IoMail } from "react-icons/io5";
 import { useLocale, useTranslations } from "next-intl";
-import { type LocaleT } from "~/types";
+import { type ContactInfo as ContactInfoType, getLocalizedValue } from "~/types/contactPage";
 
-const ContactInfo = () => {
+interface ContactInfoProps {
+  contactInfo: ContactInfoType;
+}
+
+const ContactInfo: React.FC<ContactInfoProps> = ({ contactInfo }) => {
   const tGeneral = useTranslations("General");
-  const locale: string = useLocale();
-  const localisedCardioLabInfo = CardioLabInfo[locale as LocaleT];
+  const locale = useLocale() as "am" | "en" | "ru";
+
+  const address = getLocalizedValue(contactInfo.address, locale);
+
   return (
     <>
       <div className="location-area pt-100 pb-70">
@@ -18,7 +23,7 @@ const ContactInfo = () => {
               <div className="location-item">
                 <IoLocation className="icon large-icon-size mb-4 mt-2" />
                 <h3>{tGeneral("Address")}</h3>
-                <p>{localisedCardioLabInfo.address}</p>
+                <p>{address}</p>
               </div>
             </div>
 
@@ -26,7 +31,7 @@ const ContactInfo = () => {
               <div className="location-item">
                 <IoMail className="icon large-icon-size mb-4 mt-2" />
                 <h3>{tGeneral("Email")}</h3>
-                <p>{localisedCardioLabInfo.email}</p>
+                <p>{contactInfo.email}</p>
               </div>
             </div>
 
@@ -35,7 +40,7 @@ const ContactInfo = () => {
                 <IoCall className="icon large-icon-size mb-4 mt-2" />
                 <h3>{tGeneral("Phone")}</h3>
                 <ul>
-                  {localisedCardioLabInfo.phone.map((phone: string) => (
+                  {contactInfo.phoneNumbers.map((phone: string) => (
                     <li key={phone}>
                       <a href={`tel:${phone}`}>
                         <IoCall className="icon" />

@@ -7,6 +7,7 @@ import { type ChangeEvent, type FormEvent, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import ImageWithLoader from "~/app/_Components/ImageWithLoader";
+import { type ContactFormSettings, getLocalizedValue } from "~/types/contactPage";
 
 interface FormData {
   name: string;
@@ -16,8 +17,12 @@ interface FormData {
   message: string;
 }
 
-const ContactForm = () => {
-  const locale: string = useLocale();
+interface ContactFormProps {
+  contactForm: ContactFormSettings;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ contactForm }) => {
+  const locale = useLocale() as "am" | "en" | "ru";
   const tForms = useTranslations("Forms");
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -58,28 +63,21 @@ const ContactForm = () => {
           subject: "",
           message: "",
         });
-        if (locale === "am") {
-          await Swal.fire({
-            title:
-              "✅ Շնորհակալ ենք «ԿարդիոԼաբ» Բժշկական Կենտրոնին վստահելու համար։",
-            html:
-              "Ձեր գրանցման հայտը հաջողությամբ ուղարկվել է։ Մեր օպերատորները կապ կհաստատեն Ձեզ հետ հնարավորինս շուտ՝ այցի օրն ու ժամը հաստատելու համար։<br/>" +
-              "<br/>📞 Եթե ցանկանում եք ավելի շուտ կապ հաստատել կամ ունեք հարցեր, կարող եք զանգահարել մեզ հետևյալ համարներով՝<br/> <b>044 99 11 88, 033 99 11 88, 011 99 11 80</b>",
-            icon: "success",
-            confirmButtonText: "Փակել",
-            confirmButtonColor: "#1034A6", // Tailwind's blue-600
-          });
-        } else {
-          await Swal.fire({
-            title: "✅ Thank you for trusting CardioLab Medical Center.",
-            html:
-              "Your registration request has been successfully submitted. Our operators will contact you as soon as possible to confirm the date and time of your visit.<br/>" +
-              "<br/>📞 If you would like to get in touch sooner or have any questions, you can call us at:<br/> <b>044 99 11 88, 033 99 11 88, 011 99 11 80</b>",
-            icon: "success",
-            confirmButtonText: "Close",
-            confirmButtonColor: "#1034A6", // Tailwind's blue-600
-          });
-        }
+
+        // Get localized success message from Sanity
+        const successMessage = getLocalizedValue(contactForm.successMessage, locale);
+        const messageTitle = locale === "am"
+          ? "✅ Շնորհակալ ենք «ԿարդիոԼաբ» Բժշկական Կենտրոնին վստահելու համար։"
+          : "✅ Thank you for trusting CardioLab Medical Center.";
+        const confirmText = locale === "am" ? "Փակել" : "Close";
+
+        await Swal.fire({
+          title: messageTitle,
+          html: successMessage.replace(/\n/g, '<br/>'),
+          icon: "success",
+          confirmButtonText: confirmText,
+          confirmButtonColor: "#1034A6",
+        });
       } else {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { error } = await response.json();
@@ -211,29 +209,34 @@ const ContactForm = () => {
                     delay: 5000,
                     disableOnInteraction: false,
                   }}
-                  loop={true}
+                  loop={contactForm.sliderImages.length > 1}
                   modules={[Pagination, Navigation, Autoplay]}
                   className="contact-slider"
                   style={{ height: "100%" }}
                 >
-                  <SwiperSlide>
-                    <ImageWithLoader
-                      src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluga5tUTviePapmd4fjRNBXFSt1CEhgvq2b0rM"
-                      alt="Contact"
-                      width={600}
-                      height={400}
-                      className="swiper-image"
-                    />
-                  </SwiperSlide>
-                  {/*<SwiperSlide>*/}
-                  {/*  <ImageWithLoader*/}
-                  {/*    src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWlu7ZZJ3LYxTDGf3YpRJEC1nwk6tWHeNq5xSbUv"*/}
-                  {/*    alt="Contact"*/}
-                  {/*    width={600}*/}
-                  {/*    height={400}*/}
-                  {/*    className="swiper-image"*/}
-                  {/*  />*/}
-                  {/*</SwiperSlide>*/}
+                  {contactForm.sliderImages.length > 0 ? (
+                    contactForm.sliderImages.map((image, index) => (
+                      <SwiperSlide key={index}>
+                        <ImageWithLoader
+                          src={image.url}
+                          alt={image.alt || "Contact"}
+                          width={600}
+                          height={400}
+                          className="swiper-image"
+                        />
+                      </SwiperSlide>
+                    ))
+                  ) : (
+                    <SwiperSlide>
+                      <ImageWithLoader
+                        src="https://x41q9wll8l.ufs.sh/f/kPqN7718CWluga5tUTviePapmd4fjRNBXFSt1CEhgvq2b0rM"
+                        alt="Contact"
+                        width={600}
+                        height={400}
+                        className="swiper-image"
+                      />
+                    </SwiperSlide>
+                  )}
                 </Swiper>
               </div>
             </div>

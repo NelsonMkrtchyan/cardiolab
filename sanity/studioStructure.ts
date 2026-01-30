@@ -34,6 +34,15 @@ export const structure: StructureResolver = (S) =>
             .documentId('aboutPage')
         ),
 
+      S.listItem()
+        .title('Contact Us Page')
+        .schemaType('contactPage')
+        .child(
+          S.document()
+            .schemaType('contactPage')
+            .documentId('contactPage')
+        ),
+
       // Divider
       S.divider(),
 

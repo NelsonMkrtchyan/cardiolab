@@ -1,6 +1,7 @@
 import { client } from './client';
 import { type SanityStaff } from '~/types/staff';
 import { type SanityAboutPage } from '~/types/aboutPage';
+import { type SanityContactPage } from '~/types/contactPage';
 
 // Staff Queries
 export async function getAllStaff(): Promise<SanityStaff[]> {
@@ -465,6 +466,29 @@ export async function getAboutPage(): Promise<SanityAboutPage | null> {
         buttonText,
         surveyUrl,
         showSection
+      }
+    }
+  `);
+}
+
+// Contact Page Queries
+export async function getContactPage(): Promise<SanityContactPage | null> {
+  return client.fetch(`
+    *[_type == "contactPage"][0] {
+      _id,
+      _type,
+      contactInfo {
+        address,
+        email,
+        phoneNumbers
+      },
+      contactForm {
+        successMessage,
+        "sliderImages": sliderImages[]{ "url": asset->url, alt }
+      },
+      mapSection {
+        title,
+        googleMapsEmbedUrl
       }
     }
   `);

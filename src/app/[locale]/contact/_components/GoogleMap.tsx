@@ -1,20 +1,25 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { type MapSection, getLocalizedValue } from "~/types/contactPage";
 
-const GoogleMap = () => {
-  const tGeneral = useTranslations("General");
+interface GoogleMapProps {
+  mapSection: MapSection;
+}
+
+const GoogleMap: React.FC<GoogleMapProps> = ({ mapSection }) => {
+  const locale = useLocale() as "am" | "en" | "ru";
+  const title = getLocalizedValue(mapSection.title, locale);
 
   return (
     <>
       <div className="landing-section map-area">
         <div className="section-title">
-          <h2>{tGeneral("FindUsOnMap")}</h2>
+          <h2>{title}</h2>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1011.1713805387996!2d44.4892700995798!3d40.178709741018636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406ab92d0a44c263%3A0xa55dafc31955e32c!2sCardioLab%20Medical%20Center!5e0!3m2!1sen!2sam!4v1744544127491!5m2!1sen!2sam"
-          // width="600"
+          src={mapSection.googleMapsEmbedUrl}
           height="550"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
