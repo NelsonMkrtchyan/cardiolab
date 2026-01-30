@@ -232,7 +232,20 @@ export default defineType({
                 type: 'object',
                 fields: [
                   { name: 'language', title: 'Language', type: 'string' },
-                  { name: 'level', title: 'Level', type: 'string' },
+                  {
+                    name: 'level',
+                    title: 'Proficiency Level',
+                    type: 'string',
+                    options: {
+                      list: [
+                        { title: 'Beginner', value: 'beginner' },
+                        { title: 'Intermediate', value: 'intermediate' },
+                        { title: 'Expert', value: 'expert' }
+                      ]
+                    },
+                    initialValue: 'expert',
+                    validation: (Rule) => Rule.required()
+                  },
                 ],
               }],
             },
@@ -359,7 +372,20 @@ export default defineType({
                 type: 'object',
                 fields: [
                   { name: 'language', title: 'Language', type: 'string' },
-                  { name: 'level', title: 'Level', type: 'string' },
+                  {
+                    name: 'level',
+                    title: 'Proficiency Level',
+                    type: 'string',
+                    options: {
+                      list: [
+                        { title: 'Beginner', value: 'beginner' },
+                        { title: 'Intermediate', value: 'intermediate' },
+                        { title: 'Expert', value: 'expert' }
+                      ]
+                    },
+                    initialValue: 'expert',
+                    validation: (Rule) => Rule.required()
+                  },
                 ],
               }],
             },
@@ -486,7 +512,20 @@ export default defineType({
                 type: 'object',
                 fields: [
                   { name: 'language', title: 'Language', type: 'string' },
-                  { name: 'level', title: 'Level', type: 'string' },
+                  {
+                    name: 'level',
+                    title: 'Proficiency Level',
+                    type: 'string',
+                    options: {
+                      list: [
+                        { title: 'Beginner', value: 'beginner' },
+                        { title: 'Intermediate', value: 'intermediate' },
+                        { title: 'Expert', value: 'expert' }
+                      ]
+                    },
+                    initialValue: 'expert',
+                    validation: (Rule) => Rule.required()
+                  },
                 ],
               }],
             },
