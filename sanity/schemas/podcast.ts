@@ -8,10 +8,11 @@ export default defineType({
   fields: [
     defineField({
       name: 'id',
-      title: 'Podcast ID',
+      title: 'Podcast ID (Auto-incrementing)',
       type: 'number',
-      hidden: true, // Hide from editors
-      readOnly: true, // Prevent manual editing
+      description: 'Auto-generated. Highest ID + 1',
+      // hidden: true, // Temporarily visible to fix podcast 34
+      readOnly: false, // Temporarily editable to fix podcast 34
       validation: (Rule) => Rule.required(),
       initialValue: async (_, context) => {
         // Auto-generate next available ID
