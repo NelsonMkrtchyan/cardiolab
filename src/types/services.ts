@@ -198,44 +198,58 @@ export function isAppServiceType(value: unknown): value is AppServiceType {
 
 /**
  * Get localized value from LocaleString
- * @param content - LocaleString object
+ * Fallback chain: Requested locale → English → Armenian → Empty string
+ * @param content - LocaleString object with am, en, ru fields
  * @param locale - Desired locale (am, en, ru)
- * @param fallback - Fallback locale if desired locale not available
- * @returns Localized string or undefined
+ * @param fallback - Fallback locale (default: "en")
+ * @returns Localized string with fallback applied
  */
 export function getLocalizedServiceValue(
   content: LocaleString | undefined,
   locale: "am" | "en" | "ru" = "am",
-  fallback: "am" | "en" | "ru" = "am",
+  fallback: "am" | "en" | "ru" = "en",
 ): string {
   if (!content) return "";
 
-  if (locale === "am") return content.am || "";
-  if (locale === "en") return content.en || content.am || "";
-  if (locale === "ru") return content.ru || content.en || content.am || "";
+  // Try requested locale first
+  const requestedValue = content[locale];
+  if (requestedValue) return requestedValue;
 
-  return content.am || "";
+  // Fall back to English
+  if (content.en) return content.en;
+
+  // Last resort: Armenian
+  if (content.am) return content.am;
+
+  return "";
 }
 
 /**
  * Get localized value from ServiceDescription
- * @param content - ServiceDescription object
+ * Fallback chain: Requested locale → English → Armenian → Empty string
+ * @param content - ServiceDescription object with am, en, ru fields
  * @param locale - Desired locale (am, en, ru)
- * @param fallback - Fallback locale if desired locale not available
- * @returns Localized string or undefined
+ * @param fallback - Fallback locale (default: "en")
+ * @returns Localized string with fallback applied
  */
 export function getLocalizedDescription(
   content: ServiceDescription | undefined,
   locale: "am" | "en" | "ru" = "am",
-  fallback: "am" | "en" | "ru" = "am",
+  fallback: "am" | "en" | "ru" = "en",
 ): string {
   if (!content) return "";
 
-  if (locale === "am") return content.am || "";
-  if (locale === "en") return content.en || content.am || "";
-  if (locale === "ru") return content.ru || content.en || content.am || "";
+  // Try requested locale first
+  const requestedValue = content[locale];
+  if (requestedValue) return requestedValue;
 
-  return content.am || "";
+  // Fall back to English
+  if (content.en) return content.en;
+
+  // Last resort: Armenian
+  if (content.am) return content.am;
+
+  return "";
 }
 
 /**

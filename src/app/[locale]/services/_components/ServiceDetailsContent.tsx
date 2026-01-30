@@ -4,13 +4,19 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa6";
 import { useParams } from "next/navigation";
+import { useLocale } from "next-intl";
 import { getServiceBySlug } from "~/lib/sanity/queries";
 import type { AppServiceType } from "~/types/services";
-import { formatPrice } from "~/types/services";
+import {
+  formatPrice,
+  getServiceDisplayName,
+  getLocalizedDescription,
+} from "~/types/services";
 
 const ServiceDetailsContent: React.FC = () => {
   const params = useParams();
   const slug = params?.slug as string;
+  const locale = useLocale();
   const [service, setService] = useState<AppServiceType | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -67,17 +73,26 @@ const ServiceDetailsContent: React.FC = () => {
               height={1000}
             />
 
-            <h2>{service.name}</h2>
+            <h2>{getServiceDisplayName(service.name, locale)}</h2>
             <p>
-              {service.description ||
+              {getLocalizedDescription(
+                service.description,
+                locale as "am" | "en" | "ru",
+              ) ||
                 "CardioLab provides professional medical services with experienced healthcare professionals."}
             </p>
 
             {service.doctors && service.doctors.length > 0 && (
               <blockquote>
                 <FaQuoteLeft className="icon largest-icon-size" />
-                {service.doctors.map((doctor) => doctor.name).join(", ")} provide
-                this service with expertise and care.
+                {service.doctors
+                  .map((doctor) =>
+                    typeof doctor.name === "string"
+                      ? doctor.name
+                      : getServiceDisplayName(doctor.name, locale),
+                  )
+                  .join(", ")}{" "}
+                provide this service with expertise and care.
               </blockquote>
             )}
 
