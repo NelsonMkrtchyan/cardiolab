@@ -25,6 +25,7 @@ export default defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      hidden: true,
       components: {
         input: AutoSlugInput,
       },
